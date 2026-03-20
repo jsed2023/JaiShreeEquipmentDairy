@@ -29,6 +29,8 @@ export const rajasthanLocations = [
   "kolayat",
   "lunkaransar",
   "khajuwala",
+  "Shri-Dungargarh",
+  "Chhatargarh",
 
   // Jaipur District
   "jaipur",
