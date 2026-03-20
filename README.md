@@ -1,2 +1,35 @@
-# JaiShreeEquipmentDairy
-JAI SHREE EQUIPMENT DAIRY, Established in 2020, is a premier provider of dairy farm equipment and repair services in Sri Ganganagar, Rajasthan. With its state-of-the-art facility and extensive range of products, including Milk Analysers Machines, Data Processing Units, Milking Machines, Cream.
+
+# Next.js & NextUI Template
+
+This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+
+## Technologies Used
+- Next.js 14
+- NextUI v2
+- Tailwind CSS
+- Tailwind Variants
+- TypeScript
+- Framer Motion
+- next-themes
+
+## How to Use
+
+### Install dependencies
+```
+npm install
+```
+
+### Run development server
+```
+npm run dev
+```
+
+### Build
+```
+npm run build
+```
+
+### Start (Production)
+```
+npm start
+```
