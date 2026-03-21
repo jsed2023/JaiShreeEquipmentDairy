@@ -718,6 +718,90 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Guarantee", value: "1 Years" },
     { label: "Unit Weight", value: "5 – 10 kg" },]
 },
+{
+  id: 10,
+  name: "Advance Milk Analyzer with Stirrer (Combination Unit)",
+  slug: "advance-milk-analyzer-with-stirrer",
+  category: "automatic-milk-collection-system",
+
+  smallDesc:
+    "Advance Milk Analyzer with Stirrer for dairy farms and milk collection centers in Ganganagar, Bikaner, Hanumangarh & Anupgarh. Fast and accurate FAT & SNF testing.",
+
+  images: [
+    {
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png"),
+      alt: "Advance Milk Analyzer with Stirrer Combo Machine"
+    }
+  ],
+
+  price: 58000,
+  currency: "INR",
+  inStock: true,
+
+  moreDetails:
+    "High-performance milk analyzer with inbuilt stirrer for uniform sample mixing and precise milk testing. Ideal for dairy farms, cooperatives, and milk collection centers.",
+
+  features: [
+    { id: "10A", key: "Capacity", value: "90 samples/hour" },
+    { id: "10B", key: "Brand", value: "Advance" },
+    { id: "10C", key: "Equipment Type", value: "Milk Analyzer with Inbuilt Stirrer" },
+    { id: "10D", key: "Display", value: "16x2 LCD" },
+    { id: "10E", key: "Power Supply", value: "220V AC / 12V DC" },
+    { id: "10F", key: "Country of Origin", value: "Made in India" },
+    { id: "10G", key: "Application", value: "Milk Collection Center, Dairy Farm, Cooperative" },
+    { id: "10H", key: "Phase", value: "Single Phase" },
+    { id: "10I", key: "Body Material", value: "Stainless Steel" },
+    { id: "10J", key: "Dimensions", value: "190 × 300 × 250 mm" },
+    { id: "10K", key: "Weight", value: "5 – 18 kg" }
+  ],
+
+  description:
+    "Advance Milk Analyzer with Stirrer is a reliable milk testing machine designed for dairy farms and milk collection centers. It features an inbuilt stirrer that ensures uniform mixing of milk samples, delivering accurate results for FAT, SNF, density, added water, protein, and lactose. With fast analysis time, durable stainless steel body, and automated calculations, it improves efficiency and transparency in milk procurement.",
+
+  keywords: [
+    "milk analyzer with stirrer",
+    "advance milk analyzer combo",
+    "milk testing machine india",
+    "dairy milk analyzer price",
+    "milk fat testing machine",
+    "automatic milk collection system",
+    "milk analyzer for dairy farm",
+    "milk analyzer machine price india"
+  ],
+
+  specifications: [
+    { label: "Model", value: "AMAS-Combo" },
+    { label: "Use Case", value: "Milk Collection Center, Dairy Booth, Cooperative" },
+    { label: "Fat Range", value: "0.5% – 12%" },
+    { label: "SNF Range", value: "6% – 12%" },
+    { label: "Added Water", value: "0% – 60%" },
+    { label: "Density", value: "1.020 – 1.040 g/cm³" },
+    { label: "Optional Tests", value: "Protein, Lactose" },
+    { label: "Fat Accuracy", value: "±0.1%" },
+    { label: "SNF Accuracy", value: "±0.15 – 0.2%" },
+    { label: "Analysis Time", value: "25 – 40 seconds" },
+    { label: "Sample Volume", value: "20 – 30 ml" },
+    { label: "Weighing Capacity", value: "60 kg / 200 kg" },
+    { label: "Display", value: "128 × 64 Graphic LCD" },
+    { label: "Connectivity", value: "USB, RS-232" },
+    { label: "Printer", value: "Inbuilt / External Thermal Printer" },
+    { label: "Power Consumption", value: "~60W" },
+    { label: "Operating Temperature", value: "15°C – 50°C" },
+    { label: "Platform", value: "SS304 (400×400 / 600×600 mm)" },
+    { label: "Calibration", value: "Auto Calibration & Self Cleaning" },
+    { label: "Reports", value: "Daily, Member-wise, Payment, Bonus, USB Export" },
+    { label: "Special Feature", value: "Inbuilt Milk Stirrer for Uniform Mixing" },
+    { label: "Warranty", value: "1 Year" }
+  ],
+
+  seo: {
+    title: "Advance Milk Analyzer with Stirrer Price in India | Combo Milk Testing Machine",
+    description:
+      "Buy Advance Milk Analyzer with Stirrer at best price in India. Accurate FAT & SNF milk testing machine for dairy farms and collection centers. Fast, reliable & easy to use.",
+    canonical: "/advance-milk-analyzer-with-stirrer",
+    robots: "index, follow"
+  }
+},
 ];
 export const creamSeparatorMachine: Products[] = [
   {
