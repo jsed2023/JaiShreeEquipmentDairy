@@ -19,7 +19,7 @@ type SitemapEntry = {
 };
 
 const formatDate = (date?: string | Date) =>
-  date ? new Date(date).toISOString() : "";
+  new Date(date || new Date()).toISOString();
 
 export async function GET() {
   const LAST_UPDATED = new Date();
@@ -48,13 +48,11 @@ export async function GET() {
       updatedAt: p.updatedAt,
       priority: 0.9,
     })),
-
     ...[...creamSeparatorMachine, ...milkingMachine].map((p) => ({
       path: `/dairy-equipment/${p.url}`,
       updatedAt: p.updatedAt,
       priority: 0.9,
     })),
-
     ...MilkTestingEquipment.map((p) => ({
       path: `/milk-testing-equipment/${p.url}`,
       updatedAt: p.updatedAt,
@@ -62,12 +60,12 @@ export async function GET() {
     })),
   ];
 
-  /* LOCATION PAGES (AUTO UPDATE 🔥) */
-  const locationPages: SitemapEntry[] = rajasthanLocations.map((slug) => ({
-    path: `/milk-analyzer-${slug}`,
-    updatedAt: LAST_UPDATED,
-    priority: 0.8,
-    changefreq: "weekly",
+  /* 🔥 LOCATION PAGES (SMART DATA) */
+  const locationPages: SitemapEntry[] = rajasthanLocations.map((loc) => ({
+    path: `/milk-analyzer-${loc.slug}`,
+    updatedAt: loc.updatedAt || LAST_UPDATED,
+    priority: loc.priority ?? 0.8,
+    changefreq: loc.frequency ?? "weekly",
   }));
 
   const urls = [...pages, ...productPages, ...locationPages];
@@ -80,7 +78,7 @@ ${urls
     ({ path, updatedAt, priority, changefreq }) => `
   <url>
     <loc>${SITE_URL}${path}</loc>
-    ${updatedAt ? `<lastmod>${formatDate(updatedAt)}</lastmod>` : ""}
+    <lastmod>${formatDate(updatedAt)}</lastmod>
     <changefreq>${changefreq ?? "weekly"}</changefreq>
     <priority>${priority ?? 0.7}</priority>
   </url>`
@@ -92,7 +90,9 @@ ${urls
   return new NextResponse(xml, {
     headers: {
       "Content-Type": "application/xml",
-      "Cache-Control": "no-store", // 🔥 MUST
+      // 🔥 BEST CACHE FOR SEO
+      "Cache-Control":
+        "public, max-age=0, s-maxage=86400, stale-while-revalidate",
     },
   });
 }
