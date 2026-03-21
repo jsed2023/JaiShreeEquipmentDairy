@@ -734,7 +734,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     }
   ],
 
-  price: 58000,
+  price: "58000",
   moreDetails:
     "High-performance milk analyzer with inbuilt stirrer for uniform sample mixing and precise milk testing. Ideal for dairy farms, cooperatives, and milk collection centers.",
 
