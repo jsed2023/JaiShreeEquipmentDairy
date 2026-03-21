@@ -735,9 +735,6 @@ export const automaticMilkCollectionSystem: Products[] = [
   ],
 
   price: 58000,
-  currency: "INR",
-  inStock: true,
-
   moreDetails:
     "High-performance milk analyzer with inbuilt stirrer for uniform sample mixing and precise milk testing. Ideal for dairy farms, cooperatives, and milk collection centers.",
 
@@ -793,14 +790,6 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Special Feature", value: "Inbuilt Milk Stirrer for Uniform Mixing" },
     { label: "Warranty", value: "1 Year" }
   ],
-
-  seo: {
-    title: "Advance Milk Analyzer with Stirrer Price in India | Combo Milk Testing Machine",
-    description:
-      "Buy Advance Milk Analyzer with Stirrer at best price in India. Accurate FAT & SNF milk testing machine for dairy farms and collection centers. Fast, reliable & easy to use.",
-    canonical: "/advance-milk-analyzer-with-stirrer",
-    robots: "index, follow"
-  }
 },
 ];
 export const creamSeparatorMachine: Products[] = [
