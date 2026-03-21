@@ -2,15 +2,11 @@ import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    host: "https://jaishreeequipmentdairy.in",
     rules: [
       {
         userAgent: "*",
-        allow: "/",
-        disallow: [
-          "/admin/",
-          "/private/",
-        ],
+        allow: ["/"],
+        disallow: ["/admin/", "/private/"],
       },
     ],
     sitemap: [
