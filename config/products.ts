@@ -648,9 +648,9 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Unit Weight", value: "5 – 15 kg" },]
 },
 {
-  id: 9,
-  name: "Milk Analyzer And Dpu ",
-  url: "milk-analyzer-and-dpu",
+  id: 10,
+  name: "Advance Combination of Milk Analyzer & Stirrer",
+  url: advance-combination-milk-analyzer-stirrer",
   category: "automatic-milk-collection-system",
   smallDesc:
     "Milk Analyzer And Data Processor Unit(Dairy Khata) for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
@@ -661,28 +661,28 @@ export const automaticMilkCollectionSystem: Products[] = [
     },
   ],
 
-  price: "50,000",
+  price: "58,000",
 
   features: [
-    { id: "5A", key: "Capacity", value: "90 sample/hour" },
-    { id: "5B", key: "Brand", value: "Advance & Dairy Khata" },
-    {id: "5C", key: "Equipment Type", value: "Fat Testing And Milk Collection Unit"},
-    { id: "5D", key: "Display", value: "16x2 (S) LCD Yellow Green" },
-    { id: "5E", key: "Power Supply", value: "220V AC / 12V DC" },
-    { id: "5F", key: "Country of Origin", value: "Made in India" },
-    { id: "5G", key: "Usage/Application", value: "Lab testing & Milk Collection Center" },
-    { id: "5H", key: "Phase", value: "Single" },
-    { id: "5I", key: "Machine Body Material", value: "S.S.Body" },
-    { id: "5J", key: "Dimensions", value: "190 x 300 x 250 mm" },
-    { id: "5K", key: "Weight", value: "5 – 15kg" },
-    { id: "5L", key: "Price", value: "₹ 50,000" }
+    { id: "10A", key: "Capacity", value: "90 sample/hour" },
+    { id: "10B", key: "Brand", value: "Advance & Dairy Khata" },
+    {id: "10C", key: "Equipment Type", value: "Fat Testing And Milk Collection Unit"},
+    { id: "10D", key: "Display", value: "16x2 (S) LCD Yellow Green" },
+    { id: "10E", key: "Power Supply", value: "220V AC / 12V DC" },
+    { id: "10F", key: "Country of Origin", value: "Made in India" },
+    { id: "10G", key: "Usage/Application", value: "Lab testing & Milk Collection Center" },
+    { id: "10H", key: "Phase", value: "Single" },
+    { id: "10I", key: "Machine Body Material", value: "S.S.Body" },
+    { id: "10J", key: "Dimensions", value: "190 x 300 x 250 mm" },
+    { id: "10K", key: "Weight", value: "5 – 15kg" },
+    { id: "10L", key: "Price", value: "₹ 58,000" }
   ],
 
   desc:
-    "Advance milk analyzer with inbuilt data processor unit for milk testing, billing, and village milk collection centers.",
+    "Advance Combination Milk Analyzer with Stirrer is designed for accurate milk testing and uniform sample mixing. It analyzes FAT, SNF, density, added water, and more while ensuring proper milk consistency through an inbuilt stirrer.",
 
   keywords:
-    "milk analyzer, Milk Analyzer And DPU, Milk Analyzer Advance, Milk Analyzer Advance Max, Milk Analyzer Advance Plus milk testing machine, dairy equipment, dairy machinery, dairy technology, milk quality testing, milk analysis, milk analyzer machine",
+    "milk analysis,Milk Analyzer with Stirrer,milk analyzer, Milk Analyzer And DPU, Milk Analyzer Advance, Milk Analyzer Advance Max, Milk Analyzer Advance Plus milk testing machine, dairy equipment, dairy machinery, dairy technology, milk quality testing, Advance Milk Analyzer Combo, Milk Testing Machine with Stirrer, Dairy Equipment, Milk Collection System, Milk Analyzer Machine India,milk analyzer machine",
 
   specsTable: [
     { label: "Product Name", value: "Milk Analyzer ( Data Processor Unit)" },
@@ -719,76 +719,77 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Unit Weight", value: "5 – 10 kg" },]
 },
 {
-  id: 10,
-  name: "Advance Milk Analyzer with Stirrer (Combination Unit)",
-  slug: "advance-milk-analyzer-with-stirrer",
+  id: 7,
+  name: "Advance Milk Analyzer Max",
+  url: "advance-milk-analyzer-max",
   category: "automatic-milk-collection-system",
-
   smallDesc:
-    "Advance Milk Analyzer with Stirrer for dairy farms and milk collection centers in Ganganagar, Bikaner, Hanumangarh & Anupgarh. Fast and accurate FAT & SNF testing.",
+    "Advance Milk Analyzer Max for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
 
   images: [
     {
-      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png"),
-      alt: "Advance Milk Analyzer with Stirrer Combo Machine"
-    }
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png",),
+    },
   ],
 
-  price: "58000",
-  moreDetails:
-    "High-performance milk analyzer with inbuilt stirrer for uniform sample mixing and precise milk testing. Ideal for dairy farms, cooperatives, and milk collection centers.",
+  price: "52,000",
+
+  moreDetails:"",
 
   features: [
-    { id: "10A", key: "Capacity", value: "90 samples/hour" },
-    { id: "10B", key: "Brand", value: "Advance" },
-    { id: "10C", key: "Equipment Type", value: "Milk Analyzer with Inbuilt Stirrer" },
-    { id: "10D", key: "Display", value: "16x2 LCD" },
-    { id: "10E", key: "Power Supply", value: "220V AC / 12V DC" },
-    { id: "10F", key: "Country of Origin", value: "Made in India" },
-    { id: "10G", key: "Application", value: "Milk Collection Center, Dairy Farm, Cooperative" },
-    { id: "10H", key: "Phase", value: "Single Phase" },
-    { id: "10I", key: "Body Material", value: "Stainless Steel" },
-    { id: "10J", key: "Dimensions", value: "190 × 300 × 250 mm" },
-    { id: "10K", key: "Weight", value: "5 – 18 kg" }
+    { id: "5A", key: "Capacity", value: "90 sample/hour" },
+    { id: "5B", key: "Brand", value: "Advance" },
+    {id: "5C", key: "Equipment Type", value: "Fat Testing And Milk Collection System"},
+    { id: "5D", key: "Display", value: "16x2 (S) LCD Yellow Green" },
+    { id: "5E", key: "Power Supply", value: "220V AC / 12V DC" },
+    { id: "5F", key: "Country of Origin", value: "Made in India" },
+    { id: "5G", key: "Usage/Application", value: "Lab testing & Milk Collection Center" },
+    { id: "5H", key: "Phase", value: "Single" },
+    { id: "5I", key: "Machine Body Material", value: "S.S.Body" },
+    { id: "5J", key: "Dimensions", value: "190 x 300 x 250 mm" },
+    { id: "5K", key: "Weight", value: "5 – 15kg" },
+    { id: "5L", key: "Price", value: "₹ 52,000" }
   ],
 
-  description:
-    "Advance Milk Analyzer with Stirrer is a reliable milk testing machine designed for dairy farms and milk collection centers. It features an inbuilt stirrer that ensures uniform mixing of milk samples, delivering accurate results for FAT, SNF, density, added water, protein, and lactose. With fast analysis time, durable stainless steel body, and automated calculations, it improves efficiency and transparency in milk procurement.",
+  desc:
+    "The function of the milk analyzer is to quickly analyze milk for FAT, SNF, proteins, lactose, water content, conductivity, and density.",
 
-  keywords: [
-    "milk analyzer with stirrer",
-    "advance milk analyzer combo",
-    "milk testing machine india",
-    "dairy milk analyzer price",
-    "milk fat testing machine",
-    "automatic milk collection system",
-    "milk analyzer for dairy farm",
-    "milk analyzer machine price india"
-  ],
+  keywords:
+    "Milk Analyzer Advance, Milk Analyzer Advance Max, Milk Analyzer Advance Plus milk testing machine, dairy equipment, dairy machinery, dairy technology, milk quality testing, milk analysis, milk analyzer machine",
 
-  specifications: [
-    { label: "Model", value: "AMAS-Combo" },
-    { label: "Use Case", value: "Milk Collection Center, Dairy Booth, Cooperative" },
+  specsTable: [
+    { label: "Product Name", value: "Advance Milk Analyzer Max (Inbuilt Data Processor Milk Collection Unit)" },
+    { label: "Model / Variant", value: "AMAM-DPMCU-Max" },
+    { label: "Purpose / Use-Case", value: "Village Milk Collection Center, Cooperative, BMC Point" },
     { label: "Fat Range", value: "0.5% – 12%" },
     { label: "SNF Range", value: "6% – 12%" },
     { label: "Added Water", value: "0% – 60%" },
     { label: "Density", value: "1.020 – 1.040 g/cm³" },
-    { label: "Optional Tests", value: "Protein, Lactose" },
-    { label: "Fat Accuracy", value: "±0.1%" },
-    { label: "SNF Accuracy", value: "±0.15 – 0.2%" },
+    { label: "Optional", value: "Protein, Lactose" },
+    { label: "Accuracy (Fat)", value: "±0.1%" },
+    { label: "Accuracy (SNF)", value: "±0.15 – 0.2%" },
+    { label: "Accuracy (Added Water)", value: "±3 – 5%" },
+    { label: "Accuracy (Density)", value: "±0.0005 g/cm³" },
     { label: "Analysis Time", value: "25 – 40 seconds" },
     { label: "Sample Volume", value: "20 – 30 ml" },
     { label: "Weighing Capacity", value: "60 kg / 200 kg" },
+    { label: "Least Count", value: "10 g / 20 g" },
+    { label: "Weighing Accuracy", value: "Class-III" },
+    { label: "Processor", value: "ARM Cortex-M (32-bit M7)" },
     { label: "Display", value: "128 × 64 Graphic LCD" },
-    { label: "Connectivity", value: "USB, RS-232" },
-    { label: "Printer", value: "Inbuilt / External Thermal Printer" },
-    { label: "Power Consumption", value: "~60W" },
-    { label: "Operating Temperature", value: "15°C – 50°C" },
-    { label: "Platform", value: "SS304 (400×400 / 600×600 mm)" },
-    { label: "Calibration", value: "Auto Calibration & Self Cleaning" },
+    { label: "Keypad", value: "5×5 matrix, USB/PS2 keyboard support" },
+    { label: "Storage", value: "Internal Memory, Encrypted" },
+    { label: "Connectivity", value: "USB, RS-232," },
+    { label: "Price Logic", value: "FAT/SNF-based rate chart, FAT/CLR-based rate chart, auto calculation" },
+    { label: "Printer", value: "Inbuilt thermal / external 40-80 column" },
+    { label: "Power", value: "220V AC / 12V DC, ~60W" },
+    { label: "Environment", value: "15°C – 50°C, 30%–80% humidity" },
+    { label: "Platform", value: "SS304 400×400 mm / 600×600 mm" },
+    { label: "Calibration", value: "Auto-calibration, cleaning cycle, self-check" },
     { label: "Reports", value: "Daily, Member-wise, Payment, Bonus, USB Export" },
-    { label: "Special Feature", value: "Inbuilt Milk Stirrer for Uniform Mixing" },
-    { label: "Warranty", value: "1 Year" }
+    { label: "Training", value: "Installation" },
+    { label: "Guarantee", value: "1 Years" },
+    { label: "Unit Weight", value: "5 – 15 kg" },
   ]
 },
 ];
