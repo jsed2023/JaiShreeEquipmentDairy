@@ -789,7 +789,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Reports", value: "Daily, Member-wise, Payment, Bonus, USB Export" },
     { label: "Special Feature", value: "Inbuilt Milk Stirrer for Uniform Mixing" },
     { label: "Warranty", value: "1 Year" }
-  ],
+  ]
 },
 ];
 export const creamSeparatorMachine: Products[] = [
