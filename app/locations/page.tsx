@@ -14,7 +14,7 @@ export default function LocationsPage() {
         text-purple-700 dark:text-purple-300
         border border-purple-400/30 backdrop-blur-sm">
 
-        <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center underline bg-clip-text text-transparent animate-title-gradient">
+        <h1 className="text-2xl md:text-2xl font-bold mb-6 text-center underline bg-clip-text text-transparent animate-title-gradient">
           Milk Analyzer Machine Service Locations in Rajasthan
         </h1>
 
