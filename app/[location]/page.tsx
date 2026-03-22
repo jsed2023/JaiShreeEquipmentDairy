@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `https://jaishreeequipmentdairy.in/milk-analyzer-${slug}`;
 
   return {
-    title: `Milk Analyzer Machine in ${city} | Jai Shree Equipment Dairy`,
+    title: `Milk Analyzer Machine in ${city}`,
     description: `Looking for milk analyzer near me in ${city}? Jai Shree Equipment Dairy supplies milk analyzer, milking machine, cream separator and dairy machines in ${city}, Rajasthan.`,
     alternates: { canonical: url },
     openGraph: {
@@ -112,7 +112,7 @@ export default function LocationPage({ params }: Props) {
       text-purple-700 dark:text-purple-300 border border-purple-400/30 backdrop-blur-sm">
 
         <h1 className="text-lg md:text-xl font-bold text-center">
-          Milk Analyzer Machine & Dairy Machine in {city}
+          Milk Analyzer Machine in {city}
         </h1>
       </div>
 
