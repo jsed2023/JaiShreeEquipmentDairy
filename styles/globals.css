@@ -3,12 +3,26 @@
 @tailwind utilities;
 
 /* -----------------------
-   Base Improvements
+   Base Improvements + Fonts
 ------------------------*/
 
 @layer base {
+  :root {
+    --font-sans: Arial, sans-serif;
+    --font-heading: 'Times New Roman', Times, serif;
+  }
+
   * {
     @apply scroll-smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
   }
 }
 
@@ -72,6 +86,11 @@
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/* -----------------------
+   Loader
+------------------------*/
+
 .loader {
   position: relative;
   width: 90px;
