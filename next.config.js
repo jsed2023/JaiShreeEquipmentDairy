@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
-  trailingSlash: false,
+  trailingSlash: false, // 👈 important (no / at end)
 
   compress: true,
-
   reactStrictMode: true,
-
   poweredByHeader: false,
 
   images: {
@@ -34,7 +31,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-
-}
+};
 
 module.exports = nextConfig;
