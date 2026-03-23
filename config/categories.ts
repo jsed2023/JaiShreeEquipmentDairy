@@ -21,7 +21,7 @@ export const CATEGORIES: Category[] = [
     url: "https://jaishreeequipmentdairy.in/dairy-equipment",
     gradient: "linear-gradient(to right,#22c55e,#06b6d4,#3b82f6)",
     seo: {
-      title: "Dairy Equipment Supplier | Jai Shree Equipment Dairy",
+      title: "Dairy Equipment",
       description:
         "Leading supplier of dairy equipment including milking machines, cream separators, and farm machinery in Rajasthan.",
       keywords:
@@ -36,7 +36,7 @@ export const CATEGORIES: Category[] = [
     gradient: "linear-gradient(to right,#f97316,#ec4899,#8b5cf6)",
     seo: {
       title:
-        "Milk Testing Equipment & Milk Analyzers | Jai Shree Equipment Dairy",
+        "Milk Testing Equipment & Milk Analyzers",
       description:
         "High quality milk testing equipment and milk analyzer machines for accurate dairy quality testing.",
       keywords:
@@ -51,7 +51,7 @@ export const CATEGORIES: Category[] = [
     gradient: "linear-gradient(to right,#38bdf8,#8b5cf6,#6366f1)",
     seo: {
       title:
-        "Automatic Milk Collection System (AMCS) | Smart Dairy Solutions",
+        "Automatic Milk Collection System (AMCS)",
       description:
         "Advanced automatic milk collection systems for transparent data tracking.",
       keywords:
