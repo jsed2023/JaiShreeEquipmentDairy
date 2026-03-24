@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = formatCity(slug) || "Rajasthan";
 
   return {
-    title: `Milk Analyzer Machine in ${city} | Service Available`,
+    title: `Milk Analyzer Machine in ${city}`,
     description: `Buy milk analyzer machine in ${city}. Best price, fast delivery & service available.`,
 
     keywords: metaKeywords?.[10]?.keywords || [],
