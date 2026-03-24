@@ -62,12 +62,11 @@ export async function GET() {
 
   /* 🔥 LOCATION PAGES (SMART DATA) */
   const locationPages: SitemapEntry[] = rajasthanLocations.map((loc) => ({
-    path: `/milk-analyzer-${loc.slug}`,
-    updatedAt: loc.updatedAt || LAST_UPDATED,
-    priority: loc.priority ?? 0.8,
-    changefreq: loc.frequency ?? "weekly",
+    path: `/milk-analyzer-${loc}`, // ✅ FIXED
+    updatedAt: LAST_UPDATED,
+    priority: 0.85,
+    changefreq: "weekly",
   }));
-
   const urls = [...pages, ...productPages, ...locationPages];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
