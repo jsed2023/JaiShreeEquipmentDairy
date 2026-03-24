@@ -1,53 +1,95 @@
-import { Metadata } from "next";
-import { metaKeywords } from "@/config/site";
+import { metaKeywords, siteConfig } from "@/config/site";
+import { rajasthanLocations } from "@/lib/rajasthan-locations";
+import type { Metadata } from "next";
 
 type Props = {
-  params?: {
-    slug?: string;
+  children: React.ReactNode;
+  params: {
+    location: string;
   };
 };
 
-/* ================= HELPERS ================= */
-
-const formatCity = (slug?: string) => {
-  if (!slug || typeof slug !== "string") return "";
-
+// 🔥 slug → readable city name
+function formatCityName(slug: string) {
   return slug
     .replace(/-/g, " ")
-    .replace(/\b\w/g, (l) => l.toUpperCase());
-};
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
 
-/* ================= SEO ================= */
-
+// 🔥 Dynamic Metadata per location
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params?.slug;
+  const isValid = rajasthanLocations.includes(params.location);
 
-  // 🔥 SAFE CITY
-  const city = formatCity(slug) || "Rajasthan";
+  if (!isValid) {
+    return {};
+  }
+
+  const cityName = formatCityName(params.location);
+  const url = `${siteConfig.url}/milk-analyzer-${params.location}`;
 
   return {
-    title: `Milk Analyzer Machine in ${city}`,
-    description: `Buy milk analyzer machine in ${city}. Best price, fast delivery & service available.`,
+    title: `Milk Analyzer in ${cityName}`,
 
-    keywords: metaKeywords?.[10]?.keywords || [],
+    description: `Buy milk analyzer in ${cityName} with accurate milk testing technology. Best dairy equipment supplier in ${cityName} offering milk analyzers, testing machines and solutions.`,
+
+    keywords: [
+      `milk analyzer machine in ${cityName}`,
+  `milk analyzer price in ${cityName}`,
+  `milk analyzer supplier in ${cityName}`,
+  `milk analyzer dealer in ${cityName}`,
+  `buy milk analyzer machine in ${cityName}`,
+
+  `advance milk analyzer in ${cityName}`,
+  `advance milk analyzer plus in ${cityName}`,
+  `advance milk analyzer max in ${cityName}`,
+  `advance milk analyzer price in ${cityName}`,
+
+  `ekomilk ultra milk analyzer in ${cityName}`,
+  `milk testing machine in ${cityName}`,
+  `milk fat testing machine in ${cityName}`,
+
+  `dpu milk collection unit in ${cityName}`,
+  `automatic milk collection system in ${cityName}`,
+  `dairy khata milk collection unit in ${cityName}`,
+
+  `dairy equipment in ${cityName}`,
+  `dairy equipment supplier in ${cityName}`,
+
+  `milking machine in ${cityName}`,
+  `cow milking machine in ${cityName}`,
+  `buffalo milking machine in ${cityName}`,
+
+  `cream separator machine in ${cityName}`,
+  `paras cream separator machine in ${cityName}`,
+
+  `milk analyzer installation in ${cityName}`,
+  `milk analyzer repair service in ${cityName}`,
+      ...metaKeywords[10].keywords,
+    ],
 
     authors: [
       {
-        name: metaKeywords?.[10]?.name || "Jai Shree Equipment Dairy",
+        name: metaKeywords[10].name,
       },
     ],
 
+    alternates: {
+      canonical: url,
+    },
+
     openGraph: {
-      title: `Milk Analyzer in ${city}`,
-      description: `Milk analyzer machine available in ${city}`,
+      title: `Milk Analyzer in ${cityName}`,
+      description: `Get high-quality milk analyzer and dairy equipment in ${cityName}. Trusted supplier of milk testing machines.`,
+      url,
+      siteName: siteConfig.name,
       locale: "en_IN",
       type: "website",
     },
 
     twitter: {
       card: "summary_large_image",
-      title: `Milk Analyzer in ${city}`,
-      description: `Milk analyzer machine available in ${city}`,
+      title: `Milk Analyzer in ${cityName}`,
+      description: `Best milk analyzer and dairy equipment supplier in ${cityName}.`,
     },
 
     robots: {
@@ -57,12 +99,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-/* ================= LAYOUT ================= */
-
-export default function LocationLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <div className="overflow-x-hidden">{children}</div>;
+export default function LocationLayout({ children }: Props) {
+  return (
+    <section className="bg-gradient-to-b from-slate-50 to-white min-h-screen">
+      {children}
+    </section>
+  );
 }

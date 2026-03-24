@@ -1,249 +1,231 @@
-import { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 import { generateLocationSEOContent } from "@/lib/location-seo-content";
 import { productImages } from "@/lib/product-images";
-import { generateKeywords } from "@/lib/location-keyword-matrix";
-import { locationPages } from "@/lib/location-pages";
-
-/* ================= PERFORMANCE ================= */
-
-export const revalidate = 86400;
-export const dynamicParams = true;
-
-export function generateStaticParams() {
-  return locationPages
-    ?.filter((loc) => typeof loc === "string" && loc.trim() !== "")
-    .slice(0, 30)
-    .map((location) => ({
-      location,
-    }));
-}
-
-/* ================= WHATSAPP ================= */
-
-const WHATSAPP_NUMBER = "918112294173";
-
-const createWhatsAppLink = (city: string) => {
-  const message = `Hello, I need Milk Analyzer Machine price in ${city}`;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-};
-
-/* ================= TYPES ================= */
+import { locationGroups } from "@/lib/location-groups";
+import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
-  params: { location?: string };
-};
-
-/* ================= HELPERS ================= */
-
-const formatName = (slug?: string) => {
-  if (!slug || typeof slug !== "string") return "";
-
-  return slug
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (l) => l.toUpperCase());
-};
-
-const extractCity = (slug?: string) => {
-  if (!slug || typeof slug !== "string") return "";
-
-  const parts = slug.split("-");
-  return parts.length >= 2 ? parts.slice(-2).join("-") : slug;
-};
-
-const getNearbyLocations = (current: string) =>
-  rajasthanLocations
-    ?.filter((l) => typeof l === "string" && l !== current)
-    .slice(0, 15);
-
-/* ================= SEO ================= */
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params?.location;
-
-  if (!slug || !locationPages?.includes(slug)) {
-    notFound();
-  }
-
-  const citySlug = extractCity(slug);
-  const city = formatName(citySlug);
-
-  const url = `https://jaishreeequipmentdairy.in/milk-analyzer-${slug}`;
-
-  return {
-    title: `Milk Analyzer Machine in ${city}`,
-    description: `Looking for milk analyzer near me in ${city}? Jai Shree Equipment Dairy supplies milk analyzer, milking machine, cream separator and dairy machines in ${city}, Rajasthan.`,
-    alternates: { canonical: url },
-    openGraph: {
-      title: `Milk Analyzer Machine in ${city}`,
-      description: `Best dairy equipment supplier in ${city}, Rajasthan.`,
-      url,
-      type: "website",
-    },
+  params: {
+    location: string;
   };
+};
+
+// 🔥 Static pages
+export async function generateStaticParams() {
+  return rajasthanLocations.map((loc) => ({
+    location: `milk-analyzer-${loc}`,
+  }));
 }
 
-/* ================= PAGE ================= */
+// 🔥 format name
+function formatName(slug: string) {
+  return slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+// 🔥 WhatsApp
+function createWhatsAppLink(city: string) {
+  const msg = `Hello, I want to buy Milk Analyzer in ${city}`;
+  return `https://wa.me/918112294173?text=${encodeURIComponent(msg)}`;
+}
+
+// 🔥 Nearby
+function getNearbyCities(current: string) {
+  const group = Object.values(locationGroups).find((cities) =>
+    cities.includes(current)
+  );
+
+  if (!group) return [];
+
+  return group
+    .filter((city) => city !== current)
+    .slice(0, 15);
+}
 
 export default function LocationPage({ params }: Props) {
-  const slug = params?.location;
+  const raw = params.location;
+  const prefix = "milk-analyzer-";
 
-  // 🔥 HARD VALIDATION (no crash possible)
-  if (!slug || typeof slug !== "string" || !locationPages?.includes(slug)) {
-    notFound();
-  }
+  // ❌ invalid URL
+  if (!raw.startsWith(prefix)) return notFound();
 
-  const citySlug = extractCity(slug);
-  const city = formatName(citySlug) || "Rajasthan";
+  const location = raw.slice(prefix.length);
 
-  const seo = generateLocationSEOContent(city) || {};
-  const nearby = getNearbyLocations(citySlug) || [];
-  const keywords = generateKeywords(city) || [];
+  // ❌ invalid city
+  if (!rajasthanLocations.includes(location)) return notFound();
+
+  const city = formatName(location);
+
+  const seo =
+    generateLocationSEOContent(city) || {
+      intro: `We provide milk analyzer machine in ${city}.`,
+      about: "",
+      products: "",
+      industry: "",
+    };
+
+  const nearby = getNearbyCities(location);
+
+  const keywords = [
+    `milk analyzer in ${city}`,
+    `milk testing machine ${city}`,
+    `dairy equipment ${city}`,
+    `milk analyzer machine in ${city}`,
+  `milk analyzer price in ${city}`,
+  `milk analyzer supplier in ${city}`,
+  `milk analyzer dealer in ${city}`,
+  `buy milk analyzer machine in ${city}`,
+  `advance milk analyzer in ${city}`,
+  `advance milk analyzer plus in ${city}`,
+  `advance milk analyzer max in ${city}`,
+  `advance milk analyzer price in ${city}`,
+  `ekomilk ultra milk analyzer in ${city}`,
+  `milk testing machine in ${city}`,
+  `milk fat testing machine in ${city}`,
+  `dpu milk collection unit in ${city}`,
+  `automatic milk collection system in ${city}`,
+  `dairy khata milk collection unit in ${city}`,
+  `dairy equipment in ${city}`,
+  `dairy equipment supplier in ${city}`,
+  `milking machine in ${city}`,
+  `cow milking machine in ${city}`,
+  `buffalo milking machine in ${city}`,
+  `cream separator machine in ${city}`,
+  `paras cream separator machine in ${city}`,
+  `milk analyzer installation in ${city}`,
+  `milk analyzer repair service in ${city}`,
+  ];
 
   return (
-    <section className="container mx-auto px-4 py-10">
+    <section className="max-w-7xl mx-auto px-4 py-10">
 
-      {/* H1 */}
-      <div className="flex items-center justify-center px-2 py-1.5 rounded-full text-sm font-semibold
-      bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
-      text-purple-700 dark:text-purple-300 border border-purple-400/30 backdrop-blur-sm">
-
-        <h1 className="text-lg md:text-xl font-bold text-center">
-          Milk Analyzer Machine in {city}
+      {/* HERO */}
+      <div className="bg-gradient-to-r from-blue-600 to-sky-500 text-white p-6 md:p-10 rounded-2xl mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold mb-3">
+          Milk Analyzer in {city}
         </h1>
-      </div>
-
-      {/* HERO IMAGE */}
-      <div className="flex justify-center my-6">
-        <Image
-          src="https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_1200,c_limit/Our_Service_Locations_in_Rajasthan_y9d4qn.png"
-          alt={`Milk Analyzer Machine & Dairy Machine in ${city}`}
-          width={1200}
-          height={400}
-          priority
-          quality={80}
-          sizes="(max-width:768px)100vw,(max-width:1280px)90vw,1200px"
-          className="w-full max-w-5xl h-auto"
-        />
-      </div>
-
-      {/* INTRO */}
-      <div className="space-y-4 text-gray-700">
-        <p>
-          {seo?.intro || ""}
-          {" "}For quick price details and machine availability in {city},
-          contact us on WhatsApp at +91 81122 94173.
-        </p>
-
-        <p>{seo?.about || ""}</p>
-        <p>{seo?.products || ""}</p>
-        <p>{seo?.industry || ""}</p>
-      </div>
-
-      {/* SERVICE */}
-      <h2 className="text-xl font-semibold mt-10 mb-3">
-        Milk Analyzer Machine Service in {city}
-      </h2>
-
-      <p className="text-gray-700 mb-6">
-        Our team provides fast delivery, installation, training and repair
-        support in {city} and nearby villages.
-      </p>
-
-      {/* WHY */}
-      <h2 className="text-xl font-semibold mb-3">
-        Why Choose Us in {city}
-      </h2>
-
-      <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-10">
-        <li>Fast delivery in {city}</li>
-        <li>On-site installation in {city}</li>
-        <li>Reliable support in {city}</li>
-        <li>Best price in {city}</li>
-      </ul>
-
-      {/* KEYWORDS */}
-      <h2 className="text-xl font-semibold mb-4">
-        Dairy Machine Available in {city}
-      </h2>
-
-      <div className="text-gray-700 mb-12">
-        {keywords.map((kw) => (
-          <p key={kw}>
-            <strong>{kw}</strong> with complete service, sale and support.
-          </p>
-        ))}
-      </div>
-
-      {/* PRODUCTS */}
-      <div className="bg-sky-100 dark:bg-sky-900 text-sky-900 dark:text-sky-100 py-4">
-        <h2 className="text-center mx-auto py-1 rounded-lg md:text-2xl text-lg font-bold mb-4">
-          Dairy Machines Available in {city}
-        </h2>
-      </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 mb-12">
-        {productImages?.map((item) => (
-          <div
-            key={item.productUrl}
-            className="bg-white rounded shadow p-3 text-center max-w-[180px] mx-auto"
-          >
-            <Link href={item.productUrl}>
-              <Image
-                src={item.url}
-                alt={`${item.name} in ${city}`}
-                width={400}
-                height={400}
-                className="rounded mb-2 object-contain mx-auto"
-              />
-            </Link>
-
-            <p className="font-medium text-gray-600 text-sm mb-2">
-              {item.name}
-            </p>
-
-            <Link
-              href={item.productUrl}
-              className="inline-block bg-sky-600 text-white text-xs px-4 py-2 rounded hover:bg-sky-700"
-            >
-              View Product
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      {/* NEARBY */}
-      <h2 className="text-xl font-semibold mb-3">
-        Nearby Cities We Serve
-      </h2>
-
-      <div className="flex flex-wrap gap-3 mb-12">
-        {nearby.map((citySlug) => (
-          <Link
-            key={citySlug}
-            href={`/milk-analyzer-${citySlug}`}
-            className="text-blue-600 underline hover:text-blue-800"
-          >
-            Milk Analyzer in {formatName(citySlug)}
-          </Link>
-        ))}
-      </div>
-
-      {/* CTA */}
-      <div className="text-center space-y-4">
-        <div className="bg-blue-600 text-white px-6 py-3 rounded inline-block">
-          Contact for Best Price in {city}
-        </div>
+        <p className="max-w-2xl">{seo.intro}</p>
 
         <Link
           href={createWhatsAppLink(city)}
-          target="_blank"
-          className="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700"
+          className="inline-block mt-4 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold"
         >
-          WhatsApp for Milk Analyzer in {city}
+          WhatsApp Now
+        </Link>
+      </div>
+
+      {/* ABOUT */}
+      <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="bg-white p-6 rounded-xl shadow">
+          <h2 className="text-xl font-semibold mb-3">About</h2>
+          <p>{seo.about}</p>
+        </div>
+
+        <div className="bg-white p-6 rounded-xl shadow">
+          <h2 className="text-xl font-semibold mb-3">Industry Use</h2>
+          <p>{seo.industry}</p>
+        </div>
+      </div>
+
+      {/* FEATURES */}
+      <div className="mb-12 text-center">
+        <h2 className="text-2xl font-semibold mb-6">
+          Why Choose Us in {city}
+        </h2>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {["Fast Delivery", "Installation", "Support", "Best Price"].map((f) => (
+            <div key={f} className="bg-white p-5 rounded-xl shadow">
+              {f}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* PRODUCTS */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-semibold mb-6 text-center">
+          Dairy Machines in {city}
+        </h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {productImages.map((item) => (
+            <div
+              key={item.productUrl}
+              className="bg-white border rounded-xl shadow p-4 flex flex-col"
+            >
+              <Link href={item.productUrl}>
+                <div className="h-[150px] flex items-center justify-center">
+                  <Image
+                    src={item.url}
+                    alt={`${item.name} in ${city}`}
+                    width={300}
+                    height={300}
+                    className="object-contain max-h-[140px]"
+                  />
+                </div>
+              </Link>
+
+              <p className="text-sm mt-3 text-center">{item.name}</p>
+
+              <Link
+                href={item.productUrl}
+                className="mt-auto bg-blue-600 text-white px-3 py-2 rounded text-center text-sm"
+              >
+                View Product
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* KEYWORDS */}
+      <div className="bg-gray-50 p-6 rounded-xl mb-12">
+        <h2 className="text-xl font-semibold mb-4">
+          Dairy Equipment in {city}
+        </h2>
+
+        <div className="flex flex-wrap gap-3">
+          {keywords.map((kw) => (
+            <span key={kw} className="bg-white px-3 py-1 rounded shadow text-sm">
+              {kw}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* NEARBY */}
+<div className="mb-12">
+  <h2 className="text-xl font-semibold mb-4">
+    Nearby Cities We Serve
+  </h2>
+
+  <div className="flex flex-wrap gap-3">
+    {nearby.map((slug) => (
+      <Link
+        key={slug}
+        href={`/milk-analyzer-${slug}`}
+        className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm hover:scale-105 transition"
+      >
+        {formatName(slug)}
+      </Link>
+    ))}
+  </div>
+</div>
+      {/* CTA */}
+      <div className="bg-blue-600 text-white p-8 rounded-2xl text-center">
+        <h3 className="text-2xl font-semibold mb-3">
+          Get Milk Analyzer in {city}
+        </h3>
+
+        <Link
+          href={createWhatsAppLink(city)}
+          className="bg-green-500 px-6 py-3 rounded-lg"
+        >
+          WhatsApp Now
         </Link>
       </div>
 
