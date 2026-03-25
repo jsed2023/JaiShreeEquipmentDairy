@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     "Jai Shree Equipment Dairy supplies milk analyzer machines and dairy equipment across Rajasthan.",
 
   keywords: metaKeywords[10]?.keywords,
-
+  alternates: {
+    canonical: `${siteConfig.url}/locations,
+  },
   robots: {
     index: true,
     follow: true,
