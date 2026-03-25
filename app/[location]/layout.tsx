@@ -51,6 +51,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `milk analyzer machine in ${cityName}`,
       `Best milk analyzer in ${cityName}`,
       `milk analyzer price in ${cityName}`,
+      `Popular Milk Analyser  in ${cityName}`,
+      `top Milk Analyser  in ${cityName}`,
       `milk analyzer supplier in ${cityName}`,
       `milk analyzer dealer in ${cityName}`,
       `buy milk analyzer machine in ${cityName}`,

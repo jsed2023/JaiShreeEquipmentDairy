@@ -82,6 +82,8 @@ export default function LocationPage({ params }: Props) {
   const keywords = [
     `milk analyzer in ${city}`,
     `Best milk analyzer in ${city}`,
+    `Popular milk analyzer in ${city}`,
+    `top milk analyzer in ${city}`,
     `milk testing machine ${city}`,
     `dairy equipment ${city}`,
     `milk analyzer machine in ${city}`,
