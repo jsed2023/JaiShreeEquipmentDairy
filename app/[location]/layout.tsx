@@ -16,13 +16,22 @@ function formatCityName(slug: string) {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
+// 🔥 normalize slug (CRITICAL FIX)
+function normalizeLocation(slug: string) {
+  return slug.toLowerCase().trim().replace(/\/+$/, "");
+}
+
 // 🔥 Dynamic Metadata per location
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const isValid = rajasthanLocations.includes(params.location);
+  const normalizedLocation = normalizeLocation(params.location);
 
-  // ❌ Invalid location → noindex (IMPORTANT for SEO)
+  const isValid = rajasthanLocations.includes(normalizedLocation);
+
+  // ❌ Only block truly invalid pages
   if (!isValid) {
     return {
+      metadataBase: new URL(siteConfig.url),
+      title: "Page Not Found",
       robots: {
         index: false,
         follow: false,
@@ -30,15 +39,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const cityName = formatCityName(params.location);
+  const cityName = formatCityName(normalizedLocation);
+  const path = `/milk-analyzer-${normalizedLocation}`;
 
   return {
-    // ✅ IMPORTANT: ensures proper canonical handling
+    // ✅ REQUIRED for correct canonical resolution
     metadataBase: new URL(siteConfig.url),
 
     title: `Milk Analyzer in ${cityName}`,
 
-    description: `Buy milk analyzer in ${cityName} with accurate milk testing technology. Best dairy equipment supplier in ${cityName} offering milk analyzers, testing machines and solutions.`,
+    description: `Buy milk analyzer in ${cityName} with accurate milk testing technology. Best dairy equipment supplier in ${cityName}.`,
 
     keywords: [
       `milk analyzer machine in ${cityName}`,
@@ -50,7 +60,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `advance milk analyzer in ${cityName}`,
       `advance milk analyzer plus in ${cityName}`,
       `advance milk analyzer max in ${cityName}`,
-      `advance milk analyzer price in ${cityName}`,
 
       `ekomilk ultra milk analyzer in ${cityName}`,
       `milk testing machine in ${cityName}`,
@@ -58,7 +67,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
       `dpu milk collection unit in ${cityName}`,
       `automatic milk collection system in ${cityName}`,
-      `dairy khata milk collection unit in ${cityName}`,
 
       `dairy equipment in ${cityName}`,
       `dairy equipment supplier in ${cityName}`,
@@ -68,7 +76,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `buffalo milking machine in ${cityName}`,
 
       `cream separator machine in ${cityName}`,
-      `paras cream separator machine in ${cityName}`,
 
       `milk analyzer installation in ${cityName}`,
       `milk analyzer repair service in ${cityName}`,
@@ -82,15 +89,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     ],
 
-    // ✅ FIXED CANONICAL (NO ROOT ISSUE)
+    // ✅ FIXED canonical (never points to homepage)
     alternates: {
-      canonical: `/milk-analyzer-${params.location}`,
+      canonical: path,
     },
 
     openGraph: {
       title: `Milk Analyzer in ${cityName}`,
-      description: `Get high-quality milk analyzer and dairy equipment in ${cityName}. Trusted supplier of milk testing machines.`,
-      url: `/milk-analyzer-${params.location}`, // ✅ relative (uses metadataBase)
+      description: `Trusted milk analyzer and dairy equipment supplier in ${cityName}.`,
+      url: path,
       siteName: siteConfig.name,
       locale: "en_IN",
       type: "website",
@@ -99,12 +106,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: `Milk Analyzer in ${cityName}`,
-      description: `Best milk analyzer and dairy equipment supplier in ${cityName}.`,
+      description: `Best milk analyzer supplier in ${cityName}.`,
     },
 
     robots: {
       index: true,
       follow: true,
+    },
+
+    // 🔥 Extra SEO boost
+    other: {
+      "geo.region": "IN-RJ",
+      "geo.placename": cityName,
     },
   };
 }
