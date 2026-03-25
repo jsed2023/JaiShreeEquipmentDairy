@@ -1,6 +1,7 @@
 import { metaKeywords, siteConfig } from "@/config/site";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 type Props = {
   children: React.ReactNode;
@@ -16,7 +17,7 @@ function formatCityName(slug: string) {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-// 🔥 normalize slug (CRITICAL FIX)
+// 🔥 normalize slug
 function normalizeLocation(slug: string) {
   return slug.toLowerCase().trim().replace(/\/+$/, "");
 }
@@ -25,25 +26,15 @@ function normalizeLocation(slug: string) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const normalizedLocation = normalizeLocation(params.location);
 
-  const isValid = rajasthanLocations.includes(normalizedLocation);
-
-  // ❌ Only block truly invalid pages
-  if (!isValid) {
-    return {
-      metadataBase: new URL(siteConfig.url),
-      title: "Page Not Found",
-      robots: {
-        index: false,
-        follow: false,
-      },
-    };
+  // ✅ FIX: use 404 instead of noindex
+  if (!rajasthanLocations.includes(normalizedLocation)) {
+    notFound(); // 🔥 best practice
   }
 
   const cityName = formatCityName(normalizedLocation);
   const path = `/milk-analyzer-${normalizedLocation}`;
 
   return {
-    // ✅ REQUIRED for correct canonical resolution
     metadataBase: new URL(siteConfig.url),
 
     title: `Milk Analyzer in ${cityName}`,
@@ -89,9 +80,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     ],
 
-    // ✅ FIXED canonical (never points to homepage)
+    // ✅ Perfect canonical
     alternates: {
       canonical: path,
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
 
     openGraph: {
@@ -109,12 +105,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: `Best milk analyzer supplier in ${cityName}.`,
     },
 
-    robots: {
-      index: true,
-      follow: true,
-    },
-
-    // 🔥 Extra SEO boost
+    // 🔥 Extra SEO signals
     other: {
       "geo.region": "IN-RJ",
       "geo.placename": cityName,
