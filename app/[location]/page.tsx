@@ -46,62 +46,71 @@ function getNearbyCities(current: string) {
 }
 
 export default function LocationPage({ params }: Props) {
-  const raw = params.location;
+  // 1. Decode and normalize the URL parameter
+  const rawUrlParam = decodeURIComponent(params.location);
+  const normalizedParam = rawUrlParam.toLowerCase().replace(/\s+/g, "-");
   const prefix = "milk-analyzer-";
 
-  // ❌ invalid URL
-  if (!raw.startsWith(prefix)) return notFound();
+  // 2. Validate the prefix and strip it to get the raw city slug
+  if (!normalizedParam.startsWith(prefix)) {
+    return notFound();
+  }
+  const locationSlug = normalizedParam.slice(prefix.length);
 
-  const location = raw.slice(prefix.length);
+  // 3. BULLETPROOF CHECK: Match against the array using the clean city slug
+  const validCity = rajasthanLocations.find(
+    (city) => city.toLowerCase().replace(/\s+/g, "-") === locationSlug
+  );
 
-  // ❌ invalid city
-  if (!rajasthanLocations.includes(location)) return notFound();
+  // 4. Trigger 404 if the city is not in the array
+  if (!validCity) {
+    return notFound();
+  }
 
-  const city = formatName(location);
+  // Create the readable city name
+  const city = formatName(locationSlug);
 
-  const seo =
-    generateLocationSEOContent(city) || {
-      intro: `We provide milk analyzer machine in ${city}.`,
-      about: "",
-      products: "",
-      industry: "",
-    };
+  const seo = generateLocationSEOContent(city) || {
+    intro: `We provide milk analyzer machine in ${city}.`,
+    about: "",
+    products: "",
+    industry: "",
+  };
 
-  const nearby = getNearbyCities(location);
+  const nearby = getNearbyCities(locationSlug);
 
   const keywords = [
     `milk analyzer in ${city}`,
     `milk testing machine ${city}`,
     `dairy equipment ${city}`,
     `milk analyzer machine in ${city}`,
-  `milk analyzer price in ${city}`,
-  `milk analyzer supplier in ${city}`,
-  `milk analyzer dealer in ${city}`,
-  `buy milk analyzer machine in ${city}`,
-  `advance milk analyzer in ${city}`,
-  `advance milk analyzer plus in ${city}`,
-  `advance milk analyzer max in ${city}`,
-  `advance milk analyzer price in ${city}`,
-  `ekomilk ultra milk analyzer in ${city}`,
-  `milk testing machine in ${city}`,
-  `milk fat testing machine in ${city}`,
-  `dpu milk collection unit in ${city}`,
-  `automatic milk collection system in ${city}`,
-  `dairy khata milk collection unit in ${city}`,
-  `dairy equipment in ${city}`,
-  `dairy equipment supplier in ${city}`,
-  `milking machine in ${city}`,
-  `cow milking machine in ${city}`,
-  `buffalo milking machine in ${city}`,
-  `cream separator machine in ${city}`,
-  `paras cream separator machine in ${city}`,
-  `milk analyzer installation in ${city}`,
-  `milk analyzer repair service in ${city}`,
+    `milk analyzer price in ${city}`,
+    `milk analyzer supplier in ${city}`,
+    `milk analyzer dealer in ${city}`,
+    `buy milk analyzer machine in ${city}`,
+    `advance milk analyzer in ${city}`,
+    `advance milk analyzer plus in ${city}`,
+    `advance milk analyzer max in ${city}`,
+    `advance milk analyzer price in ${city}`,
+    `ekomilk ultra milk analyzer in ${city}`,
+    `milk testing machine in ${city}`,
+    `milk fat testing machine in ${city}`,
+    `dpu milk collection unit in ${city}`,
+    `automatic milk collection system in ${city}`,
+    `dairy khata milk collection unit in ${city}`,
+    `dairy equipment in ${city}`,
+    `dairy equipment supplier in ${city}`,
+    `milking machine in ${city}`,
+    `cow milking machine in ${city}`,
+    `buffalo milking machine in ${city}`,
+    `cream separator machine in ${city}`,
+    `paras cream separator machine in ${city}`,
+    `milk analyzer installation in ${city}`,
+    `milk analyzer repair service in ${city}`,
   ];
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-10">
-
       {/* HERO */}
       <div className="bg-gradient-to-r from-blue-600 to-sky-500 text-white p-6 md:p-10 rounded-2xl mb-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
@@ -198,23 +207,24 @@ export default function LocationPage({ params }: Props) {
       </div>
 
       {/* NEARBY */}
-<div className="mb-12">
-  <h2 className="text-xl font-semibold mb-4">
-    Nearby Cities We Serve
-  </h2>
+      <div className="mb-12">
+        <h2 className="text-xl font-semibold mb-4">
+          Nearby Cities We Serve
+        </h2>
 
-  <div className="flex flex-wrap gap-3">
-    {nearby.map((slug) => (
-      <Link
-        key={slug}
-        href={`/milk-analyzer-${slug}`}
-        className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm hover:scale-105 transition"
-      >
-        {formatName(slug)}
-      </Link>
-    ))}
-  </div>
-</div>
+        <div className="flex flex-wrap gap-3">
+          {nearby.map((slug) => (
+            <Link
+              key={slug}
+              href={`/milk-analyzer-${slug}`}
+              className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm hover:scale-105 transition"
+            >
+              {formatName(slug)}
+            </Link>
+          ))}
+        </div>
+      </div>
+      
       {/* CTA */}
       <div className="bg-blue-600 text-white p-8 rounded-2xl text-center">
         <h3 className="text-2xl font-semibold mb-3">
@@ -223,12 +233,11 @@ export default function LocationPage({ params }: Props) {
 
         <Link
           href={createWhatsAppLink(city)}
-          className="bg-green-500 px-6 py-3 rounded-lg"
+          className="bg-green-500 px-6 py-3 rounded-lg inline-block"
         >
           WhatsApp Now
         </Link>
       </div>
-
     </section>
   );
 }
