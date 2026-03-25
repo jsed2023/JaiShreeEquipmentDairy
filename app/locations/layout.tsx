@@ -2,13 +2,10 @@ import { Metadata } from "next";
 import { metaKeywords, siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Jai Shree Equipment Dairy",
-    template: "%s | Jai Shree Equipment Dairy",
-  },
+  title:  "Dairy Equipment Locations",
 
   description:
-    "Jai Shree Equipment Dairy supplies milk analyzer machines and dairy equipment across Rajasthan.",
+    "Jai Shree Equipment Dairy supplies milk analyzer machines and dairy equipments machines across Rajasthan.",
 
   keywords: metaKeywords[10]?.keywords,
 authors: [
@@ -26,7 +23,7 @@ authors: [
   },
 
   openGraph: {
-    title: "Dairy Equipment Locations | Jai Shree Equipment Dairy",
+    title: "Dairy Equipment Locations ",
     description:
       "Find Jai Shree Equipment Dairy services across Rajasthan.",
     url: `${siteConfig.url}/locations`,
