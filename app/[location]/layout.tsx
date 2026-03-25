@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // ... (Keep the rest of your return { title, description, etc } the same as before)
   return {
-    title: `Milk Analyzer in ${cityName}`,
+    title: `Milk Analyzer Machine in ${cityName}`,
 
     description: `Buy milk analyzer in ${cityName} with accurate milk testing technology. Best dairy equipment supplier in ${cityName} offering milk analyzers, testing machines and solutions.`,
 
