@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ],
 
     alternates: {
-      canonical: `${siteConfig.url}/milk-analyzer-${cityName}`,
+      canonical: `${siteConfig.url}/milk-analyzer-${params.location}`
     },
 
     openGraph: {
