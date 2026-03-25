@@ -107,4 +107,4 @@ return (
 {children}
 </section>
 );
-}.  Document does not have a valid rel=canonicalPoints to the domain's root URL (the homepage), instead of an equivalent page of content
+}
