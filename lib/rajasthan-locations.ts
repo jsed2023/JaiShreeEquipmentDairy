@@ -34,4 +34,8 @@ export const rajasthanLocations = [
 
   // Jaipur District
   "jaipur",
+
+  // 🔥 High-Intent Search Queries
+  "near-me",
+  "nearby"
 ];
