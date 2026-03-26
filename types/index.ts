@@ -22,6 +22,7 @@ export interface ImageSliderProps {
 
 export interface ImagesData {
   src: string;
+  alt?: string; // optional
 }
 
 export interface ModalData {
