@@ -2516,11 +2516,12 @@ images: [
 
   images: [
     {
-      src: "https://your-image-link-ekomilk-ultra.png",
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1774636620/Ekomilk_Ultra_and_Digital_Milk_Stirrer_fagy6i.webp",),
+alt: "Ekomilk Ultra milk analyzer with digital milk stirrer machine for dairy testing",
     },
   ],
 
-  price: "45,000",
+  price: "40,000",
 
   features: [
     {
