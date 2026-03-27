@@ -39,16 +39,31 @@ export interface Features {
 }
 
 export interface Products {
-  [x: string]: any;
   id: number;
   name: string;
   url: string;
+  category: string;
   keywords: string;
   smallDesc: string;
-  price: string;
   desc: string;
   images: ImagesData[];
   features: Features[];
+
+  // 💰 Pricing
+  price: number;
+  offerPrice?: number;
+  discount?: string;
+  isOnOffer?: boolean;
+  // 📦 Status
+  stock?: string;
+  // 🔥 UI Sections
+  highlights?: string[];
+  applications?: string[];
+  // ⭐ Extras
+  tags?: string[];
+  emi?: string;
+  delivery?: string;
+
   moreDetails?: string;
 }
 
