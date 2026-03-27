@@ -2636,6 +2636,92 @@ alt: "Ekomilk Ultra milk analyzer with digital milk stirrer machine for dairy te
 
   keywords:
     "Ekomilk Ultra milk analyzer, digital milk stirrer, milk testing machine India, dairy milk analyzer with stirrer, milk fat SNF testing machine, milk analyzer Rajasthan"
+},
+{
+  id: 11,
+  name: "Ekomilk Ultra Milk Analyzer with Ultrasonic Milk Stirrer",
+  url: "ekomilk-ultra-milk-analyzer-ultrasonic-stirrer",
+  category: "milk-testing-equipment",
+
+  smallDesc:
+    "High-precision milk analyzer with ultrasonic milk stirrer for accurate and consistent dairy testing results.",
+
+  images: [
+    {
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1774636620/Ekomilk_Ultra_and_Digital_Milk_Stirrer_fagy6i.webp"),
+      alt: "Ekomilk Ultra milk analyzer with ultrasonic milk stirrer machine for dairy testing",
+    },
+  ],
+
+  // 💰 Pricing
+  price: "40,000",
+
+  // 📦 Features & Specifications
+  features: [
+    { id: "11A", key: "Model Name", value: "Ekomilk Ultra" },
+    { id: "11B", key: "Brand", value: "Ekomilk" },
+    { id: "11C", key: "Stirring Technology", value: "Ultrasonic Milk Stirrer (Uniform Mixing)" },
+    { id: "11D", key: "Power System", value: "Electric Powered (Analyzer + Stirrer)" },
+
+    {
+      id: "11E",
+      key: "Milk Parameters Tested",
+      value:
+        "Fat (FAT), SNF, Protein, Lactose, Density, Added Water, Temperature, pH, Freezing Point",
+    },
+
+    { id: "11F", key: "Display Type", value: "Digital LCD Display" },
+    { id: "11G", key: "Testing Time", value: "Approx 30–40 seconds" },
+    { id: "11H", key: "Body Material", value: "ABS Body + Stainless Steel Stirrer" },
+    { id: "11I", key: "Weight", value: "Approx 4–6 kg (Combined Setup)" },
+    { id: "11J", key: "Operation", value: "Automatic with Minimal Manual Effort" },
+
+    // 🔥 Key Features
+    {
+      id: "11K",
+      key: "Feature 1",
+      value: "Ultrasonic stirring ensures perfect and uniform sample mixing",
+    },
+    {
+      id: "11L",
+      key: "Feature 2",
+      value: "High accuracy milk testing without chemicals",
+    },
+    {
+      id: "11M",
+      key: "Feature 3",
+      value: "Fast results within seconds",
+    },
+    {
+      id: "11N",
+      key: "Feature 4",
+      value: "User-friendly interface with digital display",
+    },
+    {
+      id: "11O",
+      key: "Feature 5",
+      value: "Low maintenance and long service life",
+    },
+    {
+      id: "11P",
+      key: "Feature 6",
+      value: "Energy efficient and reliable performance",
+    },
+
+    // 🔥 Applications
+    { id: "11Q", key: "Application 1", value: "Milk Collection Centers" },
+    { id: "11R", key: "Application 2", value: "Dairy Farms" },
+    { id: "11S", key: "Application 3", value: "Dairy Quality Testing Labs" },
+    { id: "11T", key: "Application 4", value: "Milk Processing Units" },
+  ],
+
+  // 📝 Description
+  desc:
+    "Ekomilk Ultra Milk Analyzer with Ultrasonic Milk Stirrer is a high-precision dairy testing solution designed for accurate milk quality analysis. The ultrasonic stirrer ensures proper and uniform mixing of milk samples before testing, improving accuracy. It quickly measures Fat (FAT), SNF, Protein, Density, Added Water, and other parameters within seconds. Its compact design, reliable performance, and easy operation make it ideal for dairy farms, milk collection centers, and quality control laboratories.",
+
+  // 🔍 SEO Keywords
+  keywords:
+    "ekomilk ultra milk analyzer ultrasonic stirrer, milk testing machine india, dairy milk analyzer with stirrer, ultrasonic milk analyzer rajasthan, milk fat snf testing machine",
 }
 ];
 
