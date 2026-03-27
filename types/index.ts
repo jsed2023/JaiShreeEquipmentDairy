@@ -22,7 +22,7 @@ export interface ImageSliderProps {
 
 export interface ImagesData {
   src: string;
-  alt?: string; // optional
+  alt: string;
 }
 
 export interface ModalData {
@@ -39,17 +39,18 @@ export interface Features {
 }
 
 export interface Products {
-[x: string]: any;
-id: number;
-name: string;
-url: string;
-keywords: string;
-smallDesc: string;
-price: string;
-desc: string;
-images: ImagesData[];
-features: Features[];
-moreDetails?: string;
+  [x: string]: any;
+  id: number;
+  name: string;
+  url: string;
+  category: string;
+  keywords: string;
+  smallDesc: string;
+  price: string;
+  desc: string;
+  images: ImagesData[];
+  features: Features[];
+  moreDetails?: string;
 }
 
 export interface ContactFormData {
