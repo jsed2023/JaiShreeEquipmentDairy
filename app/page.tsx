@@ -397,7 +397,7 @@ Dairy Equipment & Milk Analyzer Machines in Rajasthan
   <NavButton href="/locations" label="Locations" />
   <NavButton href="/milk-rate-chart" label="Milk Rate Chart" />
 
-  <NavButton href="/amcu" label="AMCU" />
+  <NavButton href="/automatic-milk-collection-system" label="AMCU" />
   <NavButton href="/dairy-equipment" label="Dairy Equipment" />
   <NavButton href="/milk-testing-equipment" label="Milk Testing Equipment" />
   <NavButton href="/categories" label="Categories" />
