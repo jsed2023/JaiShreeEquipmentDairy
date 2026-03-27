@@ -2648,7 +2648,7 @@ alt: "Ekomilk Ultra milk analyzer with digital milk stirrer machine for dairy te
 
   images: [
     {
-      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1774636620/Ekomilk_Ultra_and_Digital_Milk_Stirrer_fagy6i.webp"),
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1774636620/Ekomilk_Analyzer_and_Millk_Stirrer_qnphka.webp"),
       alt: "Ekomilk Ultra milk analyzer with ultrasonic milk stirrer machine for dairy testing",
     },
   ],
