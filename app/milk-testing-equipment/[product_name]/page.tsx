@@ -17,7 +17,6 @@ export default function Product({
 }: {
   params: { product_name: string };
 }) {
-  // ✅ Hooks FIRST — always executed
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [modalData, setModalData] = useState<ModalData>({
     modalType: "BN",
@@ -26,13 +25,10 @@ export default function Product({
     equipmentPrice: "",
   });
 
-  const productName = params.product_name;
-
   const product = MilkTestingEquipment.find(
-    (item) => item.url.toLowerCase() === productName.toLowerCase()
+    (item) => item.url.toLowerCase() === params.product_name.toLowerCase()
   );
 
-  // ✅ Conditional logic AFTER hooks
   if (!product) {
     notFound();
   }
@@ -51,15 +47,37 @@ export default function Product({
         <div className="flex flex-col gap-y-4">
           <div className="inline-flex items-center justify-center gap-3 px-5 py-2.5 
              rounded-full text-base font-semibold
-           bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
-            text-purple-700 dark:text-purple-300
-            border border-purple-400/30 backdrop-blur-sm">
-          <h2 className="text-center font-bold underline sm:text-xl bg-clip-text text-transparent animate-title-gradient">
-            {product.name}
-          </h2></div>
+             bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
+             text-purple-700 dark:text-purple-300
+             border border-purple-400/30 backdrop-blur-sm">
+             
+            <h2 className="text-center font-bold underline sm:text-xl bg-clip-text text-transparent animate-title-gradient">
+              {product.name}
+            </h2>
+          </div>
+
           <p className="dark:text-gray-400 text-center text-stone-700 max-sm:px-2">
             {product.smallDesc}
           </p>
+
+          {/* ✅ 💰 PRICE ADDED (ONLY CHANGE) */}
+          <div className="flex justify-center items-center gap-2 mt-2">
+            {product.offerPrice && (
+              <span className="text-green-600 font-bold text-lg">
+                ₹{product.offerPrice}
+              </span>
+            )}
+
+            <span className="line-through text-gray-400">
+              ₹{product.price}
+            </span>
+
+            {product.discount && (
+              <span className="text-red-500 text-xs">
+                ({product.discount} OFF)
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="flex max-md:flex-wrap md:pl-10 max-md:justify-center">
@@ -83,22 +101,23 @@ export default function Product({
             ))}
           </div>
         </div>
-                <p className="inline-flex items-center justify-center gap-3 px-5 py-2.5 
-                  rounded-full text-base font-semibold
-                  bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
-                  text-purple-700 dark:text-purple-300
-                  border border-purple-400/30
-                  backdrop-blur-sm">
-                  
-                  <MdOutlineAutoAwesome className="text-xl text-purple-600 dark:text-purple-400 animate-pulse" />
-                  
-                  <span className="bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
-                    Fixed Rate. No Bargaining.
-                  </span>
-                  <span className="bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
-                     कीमत तय है। मोलभाव नहीं होगा।
-                   </span>
-                </p>
+
+        <p className="inline-flex items-center justify-center gap-3 px-5 py-2.5 
+          rounded-full text-base font-semibold
+          bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
+          text-purple-700 dark:text-purple-300
+          border border-purple-400/30 backdrop-blur-sm">
+          
+          <MdOutlineAutoAwesome className="text-xl text-purple-600 dark:text-purple-400 animate-pulse" />
+          
+          <span className="bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+            Fixed Rate. No Bargaining.
+          </span>
+          <span className="bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+            कीमत तय है। मोलभाव नहीं होगा।
+          </span>
+        </p>
+
         <div>
           <p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
             {product.desc}
@@ -128,20 +147,20 @@ export default function Product({
           <Button
             size="md"
             variant="solid"
-             className="bg-white text-black border border-gray-300 
-             dark:bg-zinc-800 dark:text-white dark:border-gray-600
-             hover:bg-gray-100 dark:hover:bg-zinc-700"
+            className="bg-white text-black border border-gray-300 
+            dark:bg-zinc-800 dark:text-white dark:border-gray-600
+            hover:bg-gray-100 dark:hover:bg-zinc-700"
             onPress={() =>
               handleOpen({
                 modalType: "BN",
                 equipmentName: product.name,
-                equipmentPrice: product.price,
+                equipmentPrice: String(product.offerPrice || product.price), // ✅ FIXED
               })
             }
           >
             <span className="w-40 flex justify-center items-center gap-2">
               <RiMoneyRupeeCircleLine className="text-xl" />
-              Buy Now
+              Buy Now ₹{product.offerPrice || product.price} {/* ✅ FIXED */}
             </span>
           </Button>
         </div>
