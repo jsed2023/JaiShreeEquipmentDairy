@@ -2568,7 +2568,7 @@ alt: "Ekomilk Ultra milk analyzer with digital milk stirrer machine for dairy te
     {
       id: "10I",
       key: "Price",
-      value: "₹ 45,000",
+      value: "₹ 40,000",
     },
     {
       id: "10J",
