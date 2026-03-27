@@ -2504,6 +2504,87 @@ images: [
     "Advance Milk Analyzer Plus is a high-performance ultrasonic milk testing machine designed for modern dairy operations. Equipped with an advanced Ultrasonic Milk Stirrer and Inbuilt Lithium Battery, it ensures precise sample mixing and uninterrupted operation. The analyzer quickly measures Fat (FAT), SNF, Protein, Lactose, Water Content, Temperature, pH, Freezing Point, Conductivity, and Density from a single milk sample. Its compact stainless steel body, energy-efficient design, and user-friendly interface make it an ideal solution for dairy farms, milk collection centers, and processing units.",
     keywords:
     "Advance Milk Analyzer Plus, ultrasonic milk analyzer, lithium battery milk analyzer, battery operated milk analyzer, milk testing machine India, milk quality control machine, dairy milk analyzer machine Rajasthan, milk analyzer Sri Ganganagar, milk testing machine Bikaner, dairy milk analyzer machine Hanumangarh, dairy milk fat testing machine Anupgarh, milk fat testing machine, milk SNF testing machine, milk protein testing equipment, ultrasonic milk analyzer for dairy farms"
-  }
+  },
+{
+  id: 10,
+  name: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer",
+  url: "ekomilk-ultra-milk-analyzer-digital-stirrer",
+  category: "milk-testing-equipment",
+
+  smallDesc:
+    "Professional milk analyzer with external digital milk stirrer for accurate and consistent dairy testing results.",
+
+  images: [
+    {
+      src: "https://your-image-link-ekomilk-front.png",
+      alt: "Ekomilk Ultra milk analyzer front view with digital display panel",
+    },
+    {
+      src: "https://your-image-link-stirrer.png",
+      alt: "Digital milk stirrer machine for uniform milk sample mixing in dairy testing",
+    },
+    {
+      src: "https://your-image-link-working.png",
+      alt: "Milk testing process using Ekomilk Ultra analyzer and stirrer setup",
+    },
+  ],
+
+  // 💰 Pricing
+  price: 45000,
+  offerPrice: 39999,
+  discount: "11%",
+  isOnOffer: true,
+
+  // 📦 Status
+  stock: "In Stock",
+
+  // ⚙️ Specifications
+  features: [
+    { id: "10A", key: "Model Name", value: "Ekomilk Ultra" },
+    { id: "10B", key: "Brand", value: "Ekomilk" },
+    { id: "10C", key: "Stirring Technology", value: "External Digital Milk Stirrer (Motor-Based Mixing)" },
+    { id: "10D", key: "Power System", value: "Electric Powered (Analyzer + Stirrer)" },
+    { id: "10E", key: "Milk Parameters Tested", value: "Fat (FAT), SNF, Density, Added Water, Protein" },
+    { id: "10F", key: "Display Type", value: "Digital LCD Display" },
+    { id: "10G", key: "Body Material", value: "ABS Body + Stainless Steel Stirrer" },
+    { id: "10H", key: "Weight", value: "Approx 4–6 kg (Combined Setup)" },
+  ],
+
+  // 🔥 Highlights
+  highlights: [
+    "Accurate milk analysis using ultrasonic technology",
+    "External digital stirrer ensures proper sample mixing",
+    "Fast results within seconds",
+    "User-friendly interface",
+    "Low maintenance and long service life",
+    "Compact and durable design for dairy use",
+  ],
+
+  // 🏭 Applications
+  applications: [
+    "Milk Collection Centers",
+    "Dairy Farms",
+    "Dairy Quality Testing Labs",
+    "Village Dairy Societies",
+    "Milk Processing Units",
+  ],
+
+  // 📝 Description
+  desc:
+    "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer is a reliable and efficient dairy testing solution designed for accurate milk quality analysis. The analyzer works with an external digital stirrer to ensure proper mixing of milk samples before testing, resulting in precise readings. It quickly measures key parameters like Fat (FAT), SNF, Density, Added Water, and Protein. Its compact design, durable build, and easy operation make it ideal for milk collection centers, dairy farms, and quality control laboratories.",
+
+  // 🔍 SEO Keywords
+  keywords:
+    "Ekomilk Ultra milk analyzer, digital milk stirrer, milk testing machine India, dairy milk analyzer with stirrer, milk fat SNF testing machine, milk analyzer Rajasthan, dairy equipment India",
+
+  // ⭐ Extra Tags (optional for UI)
+  tags: ["Best Seller", "High Accuracy", "Dairy Equipment", "Milk Testing"],
+
+  // 💸 EMI Option (optional)
+  emi: "₹1,999/month (approx)",
+
+  // 🚚 Delivery Info (optional)
+  delivery: "Free Delivery Available",
+}
 ];
 
