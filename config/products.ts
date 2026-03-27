@@ -380,7 +380,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       {
         id: "3B",
         key: "Brand",
-        value: "Ekomilk Ultra Mb",
+        value: "Ekomilk",
       },
       {
         id: "3C",
@@ -419,7 +419,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       },
       {
         id: "3J",
-        key: "Dimenstions",
+        key: "Dimensions",
         value: "90 X 300 X 250 mm",
       },
       {
@@ -484,7 +484,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       },
       {
         id: "4G",
-        key: "Dimenstions",
+        key: "Dimensions",
         value: "400 X 400 mm",
       },
       {
@@ -1915,7 +1915,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "1J",
-        key: "Dimenstions",
+        key: "Dimensions",
         value: "90 X 300 X 250 mm",
       },
       {
@@ -1996,7 +1996,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "2J",
-        key: "Dimenstions",
+        key: "Dimensions",
         value: "90 X 300 X 250 mm",
       },
       {
@@ -2077,7 +2077,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "3J",
-        key: "Dimenstions",
+        key: "Dimensions",
         value: "90 X 300 X 250 mm",
       },
       {
@@ -2158,7 +2158,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "4J",
-        key: "Dimenstions",
+        key: "Dimensions",
         value: "270 x 190 x 270mm",
       },
       {
@@ -2240,7 +2240,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "5J",
-        key: "Dimenstions",
+        key: "Dimensions",
         value: "100x223x216 mm",
       },
       {
@@ -2323,7 +2323,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "6J",
-        key: "Dimenstions",
+        key: "Dimensions",
         value: "100x223x216 mm",
       },
       {
