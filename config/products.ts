@@ -19,6 +19,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",),
+      alt: "Automatic Milk Collection Data Processor Unit",
       },
     ],
     price: "15,000",
@@ -100,6 +101,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",),
+     alt: "DPU Milk Collection Unit (Dairy Khata)",
       },
     ],
     price: "15,000",
@@ -181,6 +183,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",),
+      alt: "Digital Ultrasonic Milk Stirrer",
       },
     ],
     price: "3,500",
@@ -276,6 +279,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902688/Ultrasonic-Milk-Stirrer-Normal.jpg",),
+      alt: "Ultrasonic Milk Stirrer Normal",
       },
     ],
     price: "2,800",
@@ -366,6 +370,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg",),
+      alt: "Milk Analyzer Machine",
       },
     ],
     price: "37,500",
@@ -424,7 +429,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       },
       {
         id: "3K",
-        key: "Waight",
+        key: "Weight",
         value: "3kg",
       },
       {
@@ -447,6 +452,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902744/weighing-scale.jpg",),
+    alt: "Weighing Scale",
       },
     ],
     moreDetails: undefined,
@@ -513,6 +519,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png",),
+    alt: "All In One Milk Analyzer And Advance Milk Analyzer Max",
     },
   ],
 
@@ -587,6 +594,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png",),
+    alt: "All In One Milk Analyzer",
     },
   ],
 
@@ -658,6 +666,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1768578295/Milk_Analyzer_And_DPU.png",),
+    alt: "Milk Analyzer And Dpu",
     },
   ],
 
@@ -730,6 +739,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png"),
+    alt: "Advance Combination of Milk Analyzer & Stirrer",
     },
   ],
 
@@ -805,6 +815,8 @@ export const automaticMilkCollectionSystem: Products[] = [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png"),
+    alt: "Advance Milk Analyzer with Stirrer (Combination Unit)",
+    
     },
   ],
 
@@ -880,6 +892,8 @@ export const creamSeparatorMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401213/CREAM%20SEPARATOR%20MACHINE%207%20UT%20HO%2060%20LPH.jpg",),
+     alt: "Paras Milk Cream Separator Machine 7 UT HO 60 LPH",
+    
       },
     ],
     price: "7,500",
@@ -944,12 +958,15 @@ export const creamSeparatorMachine: Products[] = [
     id: 2,
     name: "Paras Milk Cream Separator Machine 7 UT AE 60 LPH",
     url: "cream-separator-machine-7-ut-ae-60-lph",
+    category: "dairy-equipment",
     smallDesc:
       "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401213/CREAM%20SEPARATOR%20MACHINE%207%20UT%20AE%2060%20LPH.jpg",),
+     alt: "Paras Milk Cream Separator Machine 7 UT AE 60 LPH",
       },
+      
     ],
     price: "14,500",
     moreDetails: undefined,
@@ -1018,7 +1035,8 @@ export const creamSeparatorMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401214/CREAM%20SEPARATOR%20MACHINE%208%20HO%2090%20LPH.jpg",),
-      },
+     alt: "Paras Milk Cream Separator Machine 8 HO 90 LPH",
+     },
     ],
     price: "13,000",
     moreDetails: undefined,
@@ -1088,6 +1106,7 @@ export const creamSeparatorMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401215/CREAM%20SEPARATOR%20MACHINE%208%20AE%2090%20LPH.jpg",),
+     alt: "Paras Milk Cream Separator Machine 8 AE 90 LPH",
       },
     ],
     price: "16,500",
@@ -1158,6 +1177,7 @@ export const creamSeparatorMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401679/CREAM_SEPARATOR_MACHINE_9_DUAL_165_LPH.jpg",),
+     alt: "Paras Milk Cream Separator Machine 9 DUAL 165 LPH",
       },
     ],
     price: "28,500",
@@ -1228,6 +1248,7 @@ export const creamSeparatorMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401214/cream-separator-machine-9-ae-165-lph.jpg",),
+      alt: "Paras Milk Cream Separator Machine 9 AE 165 LPH",
       },
     ],
     price: "27,500",
@@ -1298,6 +1319,7 @@ export const creamSeparatorMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg",),
+      alt: "Paras Milk Cream Separator Machine AED 165 LHP",
       },
     ],
     price: "30,000",
@@ -1367,6 +1389,7 @@ export const creamSeparatorMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1770061380/paras-milk-cream-separator-11-AE-300-lph.webp",),
+      alt: "Paras Milk Cream Separator Machine 11 AE 300 LHP",
       },
     ],
     price: "45,000",
@@ -1436,6 +1459,7 @@ export const creamSeparatorMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1770064498/paras-milk-cream-separator-AE-600-lph.webp"),
+        alt: "Paras Milk Cream Separator Machine AE 600 LHP",
       },
     ],
     price: "65,000",
@@ -1510,6 +1534,7 @@ export const milkingMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902637/Nano%20cow%20milking%20machine.jpg",),
+     alt: "Neno Cow Milking Machine",
       },
     ],
     price: "26,500",
@@ -1579,6 +1604,7 @@ export const milkingMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902641/Blue%20Nano%20cow%20milking%20machine.jpg",),
+      alt: "Blue Neno Cow Milking Machine",
       },
     ],
     price: "30,500",
@@ -1649,6 +1675,7 @@ export const milkingMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731937547/Vansan_Trolly_Cow_And_Buff_Single_Milking_Machine.jpg",),
+       alt: "Vansan Trolly Cow and Buff Single Milking Machine",
       },
     ],
     price: "36,000",
@@ -1718,6 +1745,7 @@ export const milkingMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731937915/Melasty_Milking_Machine.jpg",),
+           alt: "Melasty Trolly Single Milking Machine",
       },
     ],
     price: "42,000",
@@ -1788,6 +1816,7 @@ export const milkingMachine: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731935014/Vansan_Trolly_Cow_And_Buff_milking_machine.jpg",),
+     alt: "Vansan Trolly Cow and Buff Milking Machine",
       },
     ],
     price: "50,000",
@@ -1862,6 +1891,7 @@ export const MilkTestingEquipment: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg",),
+     alt: "Ekomilk Ultra Milk Analyzer",
       },
     ],
     price: "37,500",
@@ -1920,7 +1950,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "1K",
-        key: "Waight",
+        key: "Weight",
         value: "3kg",
       },
       {
@@ -1943,6 +1973,7 @@ export const MilkTestingEquipment: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/MILK%20ANALYZER%20ADVANCE.png",),
+     alt: "Milk Analyzer Advance",
       },
     ],
     price: "28,000",
@@ -2001,7 +2032,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "2K",
-        key: "Waight",
+        key: "Weight",
         value: "3kg",
       },
       {
@@ -2024,7 +2055,7 @@ export const MilkTestingEquipment: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/Ekomilk%20ULTRA%20PRO.jpg",),
-      },
+      alt: "Ekomilk Ultra Pro",},
     ],
     price: "45,000",
     moreDetails:
@@ -2082,7 +2113,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "3K",
-        key: "Waight",
+        key: "Weight",
         value: "3kg",
       },
       {
@@ -2105,6 +2136,7 @@ export const MilkTestingEquipment: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1757013349/Advance_Milk_Analyzer_plus.png",),
+    alt: "Advance Milk Analyzer Plus",
       },
     ],
     price: "35,000",
@@ -2163,7 +2195,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "4K",
-        key: "Waight",
+        key: "Weight",
         value: "5kg",
       },
       {
@@ -2186,6 +2218,7 @@ export const MilkTestingEquipment: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766093542/milk%20analyzer%20lactoscan.jpg",),
+    alt: "Milk Analyzer Lactoscan",
       },
     ],
     price: "28,000",
@@ -2245,7 +2278,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "5K",
-        key: "Waight",
+        key: "Weight",
         value: "3.5kg",
       },
       {
@@ -2269,6 +2302,7 @@ export const MilkTestingEquipment: Products[] = [
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902638/milk_analyzer_lactoscan_with_stirrer.jpg",),
+    alt: "Milk Analyzer Lactoscan With Stirrer",
       },
     ],
     price: "32,000",
@@ -2328,7 +2362,7 @@ export const MilkTestingEquipment: Products[] = [
       },
       {
         id: "6K",
-        key: "Waight",
+        key: "Weight",
         value: "4kg",
       },
       {
@@ -2352,8 +2386,11 @@ export const MilkTestingEquipment: Products[] = [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png",),
+    alt: "Advance Milk Analyzer Max",
     },
   ],
+
+
 
   price: "52,000",
 
@@ -2389,7 +2426,7 @@ export const MilkTestingEquipment: Products[] = [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1765477571/Advance_Milk_Analyzer_Pro20.png",),
-    },
+    alt: "Advance Milk Analyzer Pro20",},
   ],
 
   price: "35,000",
@@ -2430,6 +2467,7 @@ export const MilkTestingEquipment: Products[] = [
 images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1757013349/Advance_Milk_Analyzer_plus.png",),
+      alt: "Advance Milk Analyzer Plus with Ultrasonic Stirrer & Lithium Battery",
       },
     ],
     price: "35,000",
@@ -2505,7 +2543,7 @@ images: [
     keywords:
     "Advance Milk Analyzer Plus, ultrasonic milk analyzer, lithium battery milk analyzer, battery operated milk analyzer, milk testing machine India, milk quality control machine, dairy milk analyzer machine Rajasthan, milk analyzer Sri Ganganagar, milk testing machine Bikaner, dairy milk analyzer machine Hanumangarh, dairy milk fat testing machine Anupgarh, milk fat testing machine, milk SNF testing machine, milk protein testing equipment, ultrasonic milk analyzer for dairy farms"
   },
-{
+  {
   id: 10,
   name: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer",
   url: "ekomilk-ultra-milk-analyzer-digital-stirrer",
@@ -2517,7 +2555,7 @@ images: [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1774636620/Ekomilk_Ultra_and_Digital_Milk_Stirrer_fagy6i.webp",),
-alt: "Ekomilk Ultra milk analyzer with digital milk stirrer machine for dairy testing",
+alt: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer machine",
     },
   ],
 
@@ -2635,7 +2673,7 @@ alt: "Ekomilk Ultra milk analyzer with digital milk stirrer machine for dairy te
     "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer is a reliable dairy testing solution designed for accurate and consistent milk analysis. The analyzer works with an external digital stirrer to ensure proper mixing of milk samples before testing. It measures key parameters like Fat, SNF, Density, Added Water, and Protein within seconds. Its durable design, easy operation, and precise performance make it ideal for milk collection centers, dairy farms, and quality control labs.",
 
   keywords:
-    "Ekomilk Ultra milk analyzer, digital milk stirrer, milk testing machine India, dairy milk analyzer with stirrer, milk fat SNF testing machine, milk analyzer Rajasthan"
+    "ekomilk ultra milk analyzer, ultrasonic milk stirrer machine, milk analyzer with stirrer india, milk testing machine for dairy farms, milk fat snf testing machine, ultrasonic milk analyzer india, milk quality testing equipment, digital milk analyzer machine, dairy milk testing machine rajasthan, milk analyzer machine sri ganganagar, milk testing machine bikaner, dairy equipment hanumangarh, milk analyzer anupgarh, milk testing machine for collection center, milk analyzer price india, best milk analyzer machine india, milk analyzer supplier rajasthan, dairy milk analyzer machine india, milk analyzer with ultrasonic stirrer, milk testing equipment for dairy labs"
 },
 {
   id: 11,
@@ -2649,70 +2687,75 @@ alt: "Ekomilk Ultra milk analyzer with digital milk stirrer machine for dairy te
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1774636620/Ekomilk_Analyzer_and_Millk_Stirrer_qnphka.webp"),
-      alt: "Ekomilk Ultra milk analyzer with ultrasonic milk stirrer machine for dairy testing",
+      alt: "Ekomilk Ultra Milk Analyzer with Ultrasonic Milk Stirrer machine",
     },
   ],
 
-  // 💰 Pricing
   price: "40,000",
 
-  // 📦 Features & Specifications
   features: [
     { id: "11A", key: "Model Name", value: "Ekomilk Ultra" },
     { id: "11B", key: "Brand", value: "Ekomilk" },
     { id: "11C", key: "Stirring Technology", value: "Ultrasonic Milk Stirrer (Uniform Mixing)" },
     { id: "11D", key: "Power System", value: "Electric Powered (Analyzer + Stirrer)" },
-
     {
       id: "11E",
       key: "Milk Parameters Tested",
       value:
         "Fat (FAT), SNF, Protein, Lactose, Density, Added Water, Temperature, pH, Freezing Point",
     },
-
     { id: "11F", key: "Display Type", value: "Digital LCD Display" },
     { id: "11G", key: "Testing Time", value: "Approx 30–40 seconds" },
     { id: "11H", key: "Body Material", value: "ABS Body + Stainless Steel Stirrer" },
     { id: "11I", key: "Weight", value: "Approx 4–6 kg (Combined Setup)" },
     { id: "11J", key: "Operation", value: "Automatic with Minimal Manual Effort" },
-
+{
+      id: "11K",
+      key: "Price",
+      value: "₹ 39,500",
+    },
+    {
+      id: "11L",
+      key: "Stock",
+      value: "In Stock",
+    },
     // 🔥 Key Features
     {
-      id: "11K",
+      id: "11M",
       key: "Feature 1",
       value: "Ultrasonic stirring ensures perfect and uniform sample mixing",
     },
     {
-      id: "11L",
+      id: "11N",
       key: "Feature 2",
       value: "High accuracy milk testing without chemicals",
     },
     {
-      id: "11M",
+      id: "11O",
       key: "Feature 3",
       value: "Fast results within seconds",
     },
     {
-      id: "11N",
+      id: "11P",
       key: "Feature 4",
       value: "User-friendly interface with digital display",
     },
     {
-      id: "11O",
+      id: "11Q",
       key: "Feature 5",
       value: "Low maintenance and long service life",
     },
     {
-      id: "11P",
+      id: "11R",
       key: "Feature 6",
       value: "Energy efficient and reliable performance",
     },
 
     // 🔥 Applications
-    { id: "11Q", key: "Application 1", value: "Milk Collection Centers" },
-    { id: "11R", key: "Application 2", value: "Dairy Farms" },
-    { id: "11S", key: "Application 3", value: "Dairy Quality Testing Labs" },
-    { id: "11T", key: "Application 4", value: "Milk Processing Units" },
+    { id: "11S", key: "Application 1", value: "Milk Collection Centers" },
+    { id: "11T", key: "Application 2", value: "Dairy Farms" },
+    { id: "11U", key: "Application 3", value: "Dairy Quality Testing Labs" },
+    { id: "11V", key: "Application 4", value: "Milk Processing Units" },
   ],
 
   // 📝 Description
@@ -2721,7 +2764,7 @@ alt: "Ekomilk Ultra milk analyzer with digital milk stirrer machine for dairy te
 
   // 🔍 SEO Keywords
   keywords:
-    "ekomilk ultra milk analyzer ultrasonic stirrer, milk testing machine india, dairy milk analyzer with stirrer, ultrasonic milk analyzer rajasthan, milk fat snf testing machine",
+    "ekomilk ultra milk analyzer, ultrasonic milk stirrer machine, milk analyzer with stirrer india, milk testing machine for dairy farms, milk fat snf testing machine, ultrasonic milk analyzer india, milk quality testing equipment, digital milk analyzer machine, dairy milk testing machine rajasthan, milk analyzer machine sri ganganagar, milk testing machine bikaner, dairy equipment hanumangarh, milk analyzer anupgarh, milk testing machine for collection center, milk analyzer price india, best milk analyzer machine india, milk analyzer supplier rajasthan, dairy milk analyzer machine india, milk analyzer with ultrasonic stirrer, milk testing equipment for dairy labs",
 }
 ];
 
