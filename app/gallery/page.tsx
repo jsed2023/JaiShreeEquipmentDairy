@@ -90,9 +90,17 @@ export default function GalleryPage() {
       {/* ✅ Preload LCP image */}
       <link rel="preload" as="image" href={getCldUrl(images[0].src, 800)} />
 
-      <h1 className="text-center font-bold underline sm:text-4xl text-lg mb-6 bg-clip-text text-transparent animate-title-gradient">
-        Product Gallery
-      </h1>
+            <div className="items-center justify-center gap-2 px-3 py-2.5 
+        rounded-full text-base font-semibold
+        bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
+        text-purple-700 dark:text-purple-300
+        border border-purple-400/30 backdrop-blur-sm">
+
+        <h1 className="text-2xl md:text-2xl font-bold mb-6 text-center underline bg-clip-text text-transparent animate-title-gradient">
+          Product Gallery
+        </h1>
+
+      </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((item, index) => {
