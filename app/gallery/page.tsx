@@ -7,56 +7,69 @@ import { cld } from "@/utils/cloudinary";
 interface GalleryImage {
   src: string;
   name: string;
+  altText: string; // Added SEO alt text property
 }
 
 const images: GalleryImage[] = [
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1757013349/Advance_Milk_Analyzer_plus.png",
     name: "Advance Milk Analyzer Plus",
+    altText: "Advance Milk Analyzer Plus machine for accurate milk fat and SNF testing in dairy farms.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",
     name: "DPU Milk Collection Unit",
+    altText: "DPU Milk Collection Unit Dairy Khata for automated milk collection and digital record keeping.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1751737335/advance_milk_analyzer_max.png",
     name: "Advance Milk Analyzer Max",
+    altText: "Advance Milk Analyzer Max equipment for fast, high-volume milk measurement at collection centers.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1765479086/Advance_Milk_Analyzer_Pro20.png",
     name: "Advance Milk Analyzer Pro",
+    altText: "Advance Milk Analyzer Pro for commercial dairy milk testing and quality control.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902688/Ultrasonic-Milk-Stirrer-Normal.jpg",
     name: "Ultrasonic Milk Stirrer Normal",
+    altText: "Standard Ultrasonic Milk Stirrer for removing air bubbles from milk samples before testing.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/Ekomilk%20ULTRA%20PRO.jpg",
     name: "Ekomilk ULTRA PRO",
+    altText: "Ekomilk ULTRA PRO advanced milk analyzer providing precise biological data for dairy cooperatives.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg",
     name: "Ekomilk Ultra Analyzer",
+    altText: "Ekomilk Ultra Analyzer machine testing milk parameters like added water and density.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",
     name: "KREI Ultrasonic Milk Stirrer",
+    altText: "KREI Ultrasonic Milk Stirrer equipment for preparing milk samples at local collection centers.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902682/Advance%20Milk%20Analyzer.jpg",
     name: "Advance Milk Analyzer",
+    altText: "Advance Milk Analyzer machine for reliable daily testing on regional dairy farms.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766092196/Milk_Analyzer_PCB_Motherboard_Front.png",
     name: "Milk Analyzer PCB Motherboard Front",
+    altText: "Front view of a replacement PCB Motherboard used for expert milk analyzer machine repairs.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766091579/Milk_Analyzer_PCB_Motherboard_back.png",
     name: "Milk Analyzer PCB Motherboard back",
+    altText: "Back view of a replacement PCB Motherboard for servicing dairy testing equipment.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766090508/Milk_Analyzer_Plastic_Body_Cabinet.png",
     name: "Milk Analyzer Plastic Body Cabinet",
+    altText: "Durable plastic body cabinet replacement part for repairing Ekomilk and Advance milk analyzers.",
   },
 ];
 
@@ -102,7 +115,7 @@ export default function GalleryPage() {
               <div className="relative w-full h-[140px] sm:h-[160px] md:h-[170px] bg-[#f3f3f3] dark:bg-neutral-800">
                 <Image
                   src={getCldUrl(item.src, 600)}
-                  alt={item.name}
+                  alt={item.altText} // ✅ Using the new SEO-optimized alt text
                   fill
                   priority={index === 0}
                   sizes="(max-width:640px) 50vw,
