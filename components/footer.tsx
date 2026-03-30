@@ -9,7 +9,10 @@ return (
 
 <footer className="w-full fixed bottom-0 left-0 flex max-sm:flex-col max-sm:items-center gap-1 text-center justify-between px-3 py-2 bg-blue-700 text-white text-xs shadow-md z-50">  <span>    
     © 2026 Jai Shree Equipment Dairy. All Rights Reserved.    
-  </span>      <Link    
+  </span>     
+<p className="text-xs text-blue-200">
+  Trusted Dairy Equipment Supplier in Rajasthan | Since 2020
+</p> <Link    
     isExternal    
     href="https://developerchoudhary.vercel.app/"    
     title="Developer Choudhary"    
