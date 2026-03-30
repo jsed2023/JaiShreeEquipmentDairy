@@ -56,7 +56,7 @@ export default function Home() {
     <h1
       className="font-bold text-xl md:text-2xl lg:text-2xl
         text-center bg-clip-text text-transparent animate-title-gradient">
-           Milk Analyzer Machine in Rajasthan 
+           Milk Analyzer Machine Supplier in Rajasthan 
         </h1></div>
       <section id="hero-welcome-section" className="flex flex-col gap-6">
         <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
