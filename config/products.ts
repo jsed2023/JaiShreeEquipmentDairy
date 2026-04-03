@@ -872,7 +872,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "This dairy weighing machine is designed for accurate milk collection in dairy farms and milk collection centers. It works with Automatic Milk Collection Systems (AMCS) and provides direct data transfer to the DPU for real-time milk measurement.",
+    "This dairy weighing machine is designed for accurate milk collection in dairy farms and milk collection centers. It works with Automatic Milk Collection Systems (AMCS) and provides direct data transfer to the DPU for real-time milk measurement,Available in Sri Ganganagar, Bikaner, Hanumangarh, and Anupgarh.",
 
   images: [
     {
