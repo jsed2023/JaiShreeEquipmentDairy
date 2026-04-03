@@ -872,7 +872,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "This dairy weighing machine is designed for accurate milk collection in dairy farms and milk collection centers. It works with Automatic Milk Collection Systems (AMCS) and provides direct data transfer to the DPU for real-time milk measurement,Available in Sri Ganganagar, Bikaner, Hanumangarh, and Anupgarh.",
+    "This dairy weighing machine is designed for accurate milk collection in dairy farms and milk collection centers. It works with Automatic Milk Collection Systems (AMCS) and provides direct data transfer to the DPU for real-time milk measurement. Available in Sri Ganganagar, Bikaner, Hanumangarh, and Anupgarh.",
 
   images: [
     {
@@ -899,12 +899,11 @@ export const automaticMilkCollectionSystem: Products[] = [
     { id: "12M", key: "Price", value: "₹ 4,500" }
   ],
 
-  desc:
-    "This dairy weighing machine is specially designed for milk collection centers and dairy farms using Automatic Milk Collection Systems (AMCS). It is built with advanced load cell technology to ensure highly accurate weight measurement and directly transfers data to the Data Processing Unit (DPU) for real-time processing.
+  desc: `This dairy weighing machine is specially designed for milk collection centers and dairy farms using Automatic Milk Collection Systems (AMCS). It is built with advanced load cell technology to ensure highly accurate weight measurement and directly transfers data to the Data Processing Unit (DPU) for real-time processing.
 
-  The machine helps eliminate manual errors and improves efficiency in daily milk collection operations. Its strong stainless steel platform makes it suitable for continuous use in rural and commercial environments. The system works seamlessly with AMCS and can also operate without a display, making it ideal for automated dairy setups.
+The machine helps eliminate manual errors and improves efficiency in daily milk collection operations. Its strong stainless steel platform makes it suitable for continuous use in rural and commercial environments. The system works seamlessly with AMCS and can also operate without a display, making it ideal for automated dairy setups.
 
-  This milk collection weighing machine is a reliable and durable solution for farmers, dairy operators, and milk collection centers looking for accurate and hassle-free milk measurement.",
+This milk collection weighing machine is a reliable and durable solution for farmers, dairy operators, and milk collection centers looking for accurate and hassle-free milk measurement.`,
 
   keywords:
     "dairy weighing machine, milk collection weighing machine, amcs weighing scale, weighing machine, weight machine, load cell weighing machine, platform weighing machine 300kg, digital weighing machine for dairy, milk weighing machine, weighing scale for milk collection center, dairy equipment weighing machine, milk measurement machine, weighing machine for farmers, heavy duty weighing machine, industrial platform weighing scale, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh",
