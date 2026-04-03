@@ -184,6 +184,11 @@ your dairy machines operate efficiently.
                 src: "v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",
                 label: "DPU Milk Collection Unit (Dairy Khata)",
               },
+{
+                href: "/automatic-milk-collection-system",
+                src: "v1728902744/weighing-scale.jpg",
+                label: "Dairy Weighing Machine 300kg",
+              },
               {
                 href: "/automatic-milk-collection-system",
                 src: "v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",
