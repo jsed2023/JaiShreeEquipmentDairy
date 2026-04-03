@@ -16,52 +16,32 @@ import PageLoader from "@/components/PageLoader"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 
-import { GA_TRACKING_ID } from "@/lib/gtag"
-
 const GTM_ID = "GTM-K3VGDWGP"
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
-
   description: siteConfig.description,
-
   keywords: metaKeywords[0].keywords,
-
-  authors: [
-    {
-      name: siteConfig.name,
-    },
-  ],
-
+  authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-
   category: "dairy equipment",
-
-  alternates: {
-    canonical: siteConfig.url,
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-  },
-
+  alternates: { canonical: siteConfig.url },
+  icons: { icon: "/favicon.ico" },
   verification: {
     google: "Pwgrtmz4YYu7wvKICR3xPoHIa52SsSz4bQwyBb9EG0A",
   },
-
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: siteConfig.url,
     siteName: siteConfig.name,
     description: siteConfig.description,
-
     images: [
       {
         url: cld(`${siteConfig.url}/logo.png`),
@@ -71,13 +51,11 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     description: siteConfig.description,
     images: [cld(`${siteConfig.url}/logo.png`)],
   },
-
   robots: {
     index: true,
     follow: true,
@@ -97,26 +75,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-
       <head>
-
-        {/* Google Analytics */}
+        {/* ✅ Google Analytics (gtag.js) */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
         />
 
-        <Script id="google-analytics" strategy="beforeInteractive">
+        {/* ✅ GA Init (NO ADS + NO AUTO PAGEVIEW) */}
+        <Script id="ga-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
+
             gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}');
+
+            gtag('config', '${GA_ID}', {
+              send_page_view: false,
+              allow_google_signals: false,
+              allow_ad_personalization_signals: false
+            });
           `}
         </Script>
 
-        {/* Google Tag Manager */}
+        {/* ✅ Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -135,17 +118,11 @@ export default function RootLayout({
             `,
           }}
         />
-
       </head>
 
-      <body
-        className={clsx(
-          "min-h-screen flex flex-col",
-          fontSans.variable
-        )}
-      >
-
-        {/* GTM noscript */}
+      <body className={clsx("min-h-screen flex flex-col", fontSans.variable)}>
+        
+        {/* ✅ GTM fallback */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -158,11 +135,8 @@ export default function RootLayout({
         <LocalBusinessSchema />
 
         <Providers>
-
           <PageLoader>
-
             <div className="relative flex min-h-screen flex-col">
-
               <Navbar />
 
               <main className="flex-grow pt-20 pb-36">
@@ -170,20 +144,14 @@ export default function RootLayout({
               </main>
 
               <Footer />
-
               <WhatsAppButton />
-
             </div>
-
           </PageLoader>
-
         </Providers>
 
         <SpeedInsights />
         <Analytics />
-
       </body>
-
     </html>
   )
 }
