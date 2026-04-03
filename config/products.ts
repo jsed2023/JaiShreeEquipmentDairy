@@ -486,7 +486,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       {
         id: "4M",
         key: "Price",
-        value: "₹ 4,000",
+        value: "₹ 4,500",
       },
     ],
     desc: "This load cell-based dairy weighing machine is specially designed for Automatic Milk Collection Systems (AMCS). It directly transfers weight data to the Data Processing Unit (DPU), enabling accurate and real-time milk measurement without requiring a display unit. Built with a durable stainless steel platform, this weighing machine ensures long-lasting performance in dairy farms and milk collection centers.",
