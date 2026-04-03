@@ -448,15 +448,16 @@ export const automaticMilkCollectionSystem: Products[] = [
     url: "weingh-scale",
     category: "automatic-milk-collection-system",
     smallDesc:
-      "Find the best weighing scale for dairy farms and agricultural businesses in Sri Ganganagar, Bikaner, Hanumangarh, and Anupgarh.",
-    images: [
-      {
-        src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902744/weighing-scale.jpg",),
-    alt: "Weighing Scale",
-      },
-    ],
-    moreDetails: undefined,
-    price: "4,000",
+    "High-precision dairy weighing machine for Automatic Milk Collection Systems (AMCS) with direct DPU input. Ideal for milk collection centers in Sri Ganganagar, Bikaner, Hanumangarh, and Anupgarh.",
+
+  images: [
+    {
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902744/weighing-scale.jpg"),
+      alt: "Dairy Weighing Machine 300kg Load Cell Platform for AMCS Milk Collection System",
+    },
+  ],
+
+  price: "₹ 4,500",
     features: [
       {
         id: "4A",
@@ -468,45 +469,29 @@ export const automaticMilkCollectionSystem: Products[] = [
         key: "Brand",
         value: "JSED",
       },
+{ id: "4C", key: "Technology", value: "Load Cell Based" },
       {
-        id: "4C",
+        id: "4D",
         key: "Equipment Type",
         value: "Platform weingh scale",
       },
+      { id: "4E", key: "Type", value: "Platform Weighing Machine (AMCS Compatible)" },
+      { id: "4F", key: "Output", value: "Direct DPU Connection (Analog / RS232 Optional)" },
+    { id: "4G", key: "Display", value: "Not Required (Optional Indicator Supported)" },
+    { id: "4H", key: "Body Material", value: "Stainless Steel" },
+    { id: "4I", key: "Dimensions", value: "400 x 400 mm" },
+    { id: "4J", key: "Accuracy", value: "±10–50 gm" },
+    { id: "4K", key: "Application", value: "Milk Collection Centers / Dairy Farms" },
+    { id: "4L", key: "Country of Origin", value: "Made in India" },    
       {
-        id: "4D",
-        key: "Display",
-        value: `Digital With Battery Back up`,
-      },
-      {
-        id: "4E",
-        key: "Country of Origin",
-        value: `Made in India`,
-      },
-      {
-        id: "4F",
-        key: "Body Material",
-        value: "SS",
-      },
-      {
-        id: "4G",
-        key: "Dimensions",
-        value: "400 X 400 mm",
-      },
-      {
-        id: "4H",
-        key: "Accuracy",
-        value: "50gm",
-      },
-      {
-        id: "4I",
+        id: "4M",
         key: "Price",
         value: "₹ 4,000",
       },
     ],
-    desc: "Weighing Scale is a device used to measure the weight of person and it is among the common used device by doctors. The weighing scale has two major variants, the mechanical and the digital weighing scales. The mechanical scale features a rotating dial which indicates the weight. A platform scale is a weighing device that consists of one or two metal plates that hold items to be weighed and can have a smooth or diamond surface.",
+    desc: "This load cell-based dairy weighing machine is specially designed for Automatic Milk Collection Systems (AMCS). It directly transfers weight data to the Data Processing Unit (DPU), enabling accurate and real-time milk measurement without requiring a display unit. Built with a durable stainless steel platform, this weighing machine ensures long-lasting performance in dairy farms and milk collection centers.",
     keywords:
-      "Weingh Scale, Weingh scale machine Sri Ganganagar, Weingh scale machine Bikaner, Weingh scale machine Hanumangarh, Weingh scale machine Anupgarh, Weingh scale Sri Ganganagar, Weingh scale Bikaner, Weingh scale Hanumangarh, Weingh scale Anupgarh, Weingh machine Sri Ganganagar, Weingh machine Bikaner, Weingh machine Hanumangarh, Weingh machine Anupgarh, scale machine Sri Ganganagar, scale machine Bikaner, scale machine Hanumangarh, scale machine Anupgarh, Weingh scale machine, Weingh scale, Weingh machine, scale machine, digital scale, electronic scale",
+      "amcs weighing scale, dairy weighing machine, milk collection weighing machine, weighing machine for dairy, load cell weighing scale, weighing scale with dpu connection, platform weighing machine 300kg, dairy automation weighing machine, milk collection system equipment, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh, weight machine for dairy use,Weingh Scale, Weingh scale machine Sri Ganganagar, Weingh scale machine Bikaner, Weingh scale machine Hanumangarh, Weingh scale machine Anupgarh, Weingh scale Sri Ganganagar, Weingh scale Bikaner, Weingh scale Hanumangarh, Weingh scale Anupgarh, Weingh machine Sri Ganganagar, Weingh machine Bikaner, Weingh machine Hanumangarh, Weingh machine Anupgarh, scale machine Sri Ganganagar, scale machine Bikaner, scale machine Hanumangarh, scale machine Anupgarh, Weingh scale machine, Weingh scale, Weingh machine, scale machine, digital scale, electronic scale",
   },
 {
   id: 7,
