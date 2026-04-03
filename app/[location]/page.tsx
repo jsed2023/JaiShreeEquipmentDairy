@@ -113,21 +113,28 @@ export default function LocationPage({ params }: Props) {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10 text-center"">
-      {/* HERO */}
-      <div className="bg-gradient-to-r from-blue-600 to-sky-500 text-white p-6 md:p-10 rounded-2xl mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold mb-3">
-          Milk Analyzer in {city}
-        </h1>
-        <p className="max-w-2xl">{seo.intro}</p>
+  <section className="max-w-7xl mx-auto px-4 py-10 text-center">
+    {/* HERO */}
+    <div className="bg-gradient-to-r from-blue-600 to-sky-500 text-white p-6 md:p-10 rounded-2xl mb-10 flex flex-col items-center">
+      
+      <h1 className="text-3xl md:text-4xl font-bold mb-3">
+        Milk Analyzer in {city}
+      </h1>
 
-        <Link
-          href={createWhatsAppLink(city)}
-          className="inline-block mt-4 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold"
-        >
-          WhatsApp Now
-        </Link>
-      </div>
+      <p className="max-w-2xl">
+        {seo.intro}
+      </p>
+
+      <Link
+        href={createWhatsAppLink(city)}
+        className="inline-block mt-4 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold"
+      >
+        WhatsApp Now
+      </Link>
+
+    </div>
+  </section>
+);
 
       {/* ABOUT */}
       <div className="grid md:grid-cols-2 gap-8 mb-12">
