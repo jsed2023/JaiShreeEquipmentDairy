@@ -865,6 +865,46 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Guarantee", value: "1 Year" },
     { label: "Unit Weight", value: "5 – 18 kg" }]
 },
+{
+  id: 12,
+  name: "Dairy Weighing Machine 300kg",
+  url: "dairy-weighing-machine-amcs",
+  category: "automatic-milk-collection-system",
+
+  smallDesc:
+    "Dairy weighing machine for milk collection centers with AMCS and direct DPU connection.",
+
+  images: [
+    {
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902744/weighing-scale.jpg"),
+      alt: "Dairy Weighing Machine 300kg",
+    },
+  ],
+
+  price: "₹ 4,500",
+
+  features: [
+    { id: "12A", key: "Capacity", value: "300 kg" },
+    { id: "12B", key: "Technology", value: "Load Cell Based" },
+    { id: "12C", key: "Type", value: "Platform Weighing Machine" },
+    { id: "12D", key: "Usage", value: "Milk Collection / Dairy Use" },
+    { id: "12E", key: "Output", value: "Direct DPU Connection" },
+    { id: "12F", key: "Interface", value: "Analog / RS232 (Optional)" },
+    { id: "12G", key: "Display", value: "Optional (Works Without Display)" },
+    { id: "12H", key: "Body Material", value: "Stainless Steel" },
+    { id: "12I", key: "Platform Size", value: "400 x 400 mm" },
+    { id: "12J", key: "Accuracy", value: "±10–50 g" },
+    { id: "12K", key: "Power Requirement", value: "DPU Controlled / Low Power" },
+    { id: "12L", key: "Country of Origin", value: "Made in India" },
+    { id: "12M", key: "Price", value: "₹ 4,500" }
+  ],
+
+  desc:
+    "This dairy weighing machine is used in milk collection centers and works with AMCS. It uses load cell technology to send weight data directly to the DPU for accurate milk measurement.",
+
+  keywords:
+    "dairy weighing machine, milk collection weighing machine, amcs weighing scale, weighing machine, weight machine, load cell weighing machine, platform weighing machine 300kg, digital weighing machine for dairy, milk weighing machine, weighing scale for milk collection center, dairy equipment weighing machine, milk measurement machine, weighing machine for farmers, heavy duty weighing machine, industrial platform weighing scale, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh",
+},
 ];
 export const creamSeparatorMachine: Products[] = [
   {
