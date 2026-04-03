@@ -113,7 +113,7 @@ export default function LocationPage({ params }: Props) {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10">
+    <section className="max-w-7xl mx-auto px-4 py-10 text-center"">
       {/* HERO */}
       <div className="bg-gradient-to-r from-blue-600 to-sky-500 text-white p-6 md:p-10 rounded-2xl mb-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
