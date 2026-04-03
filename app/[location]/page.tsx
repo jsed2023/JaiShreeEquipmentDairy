@@ -113,28 +113,23 @@ export default function LocationPage({ params }: Props) {
   ];
 
   return (
-  <section className="max-w-7xl mx-auto px-4 py-10 text-center">
-    {/* HERO */}
-    <div className="bg-gradient-to-r from-blue-600 to-sky-500 text-white p-6 md:p-10 rounded-2xl mb-10 flex flex-col items-center">
-      
-      <h1 className="text-3xl md:text-4xl font-bold mb-3">
-        Milk Analyzer in {city}
-      </h1>
+    <section className="max-w-7xl mx-auto px-4 py-10">
 
-      <p className="max-w-2xl">
-        {seo.intro}
-      </p>
+      {/* HERO */}
+      <div className="bg-gradient-to-r from-blue-600 to-sky-500 text-white p-6 md:p-10 rounded-2xl mb-10 text-center flex flex-col items-center">
+        <h1 className="text-3xl md:text-4xl font-bold mb-3">
+          Milk Analyzer in {city}
+        </h1>
 
-      <Link
-        href={createWhatsAppLink(city)}
-        className="inline-block mt-4 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold"
-      >
-        WhatsApp Now
-      </Link>
+        <p className="max-w-2xl">{seo.intro}</p>
 
-    </div>
-  </section>
-);
+        <Link
+          href={createWhatsAppLink(city)}
+          className="inline-block mt-4 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold"
+        >
+          WhatsApp Now
+        </Link>
+      </div>
 
       {/* ABOUT */}
       <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -227,14 +222,14 @@ export default function LocationPage({ params }: Props) {
             <Link
               key={slug}
               href={`/milk-analyzer-${slug}`}
-              className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm hover:scale-105 transition"
+              className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm hover:scale-105 transition"
             >
               {formatName(slug)}
             </Link>
           ))}
         </div>
       </div>
-      
+
       {/* CTA */}
       <div className="bg-blue-600 text-white p-8 rounded-2xl text-center">
         <h3 className="text-2xl font-semibold mb-3">
@@ -248,6 +243,7 @@ export default function LocationPage({ params }: Props) {
           WhatsApp Now
         </Link>
       </div>
+
     </section>
   );
 }
