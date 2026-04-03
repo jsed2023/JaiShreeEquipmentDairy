@@ -789,7 +789,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Unit Weight", value: "5 – 18 kg" }]
 },
 {
-  id: 10,
+  id: 11,
   name: "Advance Milk Analyzer with Stirrer (Combination Unit)",
   url: "advance-milk-analyzer-with-stirrer",
   category: "automatic-milk-collection-system",
