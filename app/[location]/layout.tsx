@@ -10,27 +10,29 @@ type Props = {
   };
 };
 
-// 🔥 slug → readable city name (e.g., "sri-ganganagar" -> "Sri Ganganagar")
+// 🔹 Format slug → city name
 function formatCityName(slug: string) {
   return slug
     .replace(/-/g, " ")
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-// 🔥 Dynamic Metadata per location
+// 🔹 Dynamic Metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  // 1. Clean the URL parameter
   const rawUrlParam = decodeURIComponent(params.location);
   const normalizedParam = rawUrlParam.toLowerCase().replace(/\s+/g, "-");
-  
-  // 2. Strip the prefix so we can match the city
+
   const prefix = "milk-analyzer-";
+
+  // Validate prefix
   if (!normalizedParam.startsWith(prefix)) {
     notFound();
   }
+
+  // Extract city slug
   const locationSlug = normalizedParam.slice(prefix.length);
 
-  // 3. BULLETPROOF CHECK
+  // Validate city
   const validCity = rajasthanLocations.find(
     (city) => city.toLowerCase().replace(/\s+/g, "-") === locationSlug
   );
@@ -41,69 +43,65 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const cityName = formatCityName(locationSlug);
 
-  // ... (Keep the rest of your return { title, description, etc } the same as before)
+  // ✅ FIXED URL (no duplication bug)
+  const url = `https://jaishreeequipmentdairy.in/${normalizedParam}`;
+
   return {
-    title: `Milk Analyzer Machine in ${cityName}`,
+    // ✅ Improved Title (CTR boost)
+    title: `Milk Analyzer Machine in ${cityName} | Best Price & Service`,
 
-    description: `Buy milk analyzer in ${cityName} with accurate milk testing technology. Best dairy equipment supplier in ${cityName} offering milk analyzers, testing machines and solutions.`,
+    // ✅ Better Description (conversion focused)
+    description: `Buy milk analyzer machine in ${cityName} at best price. We provide installation, repair, and dairy equipment including milk testing machines, DPU systems, and milking machines in ${cityName}.`,
 
+    // ✅ Clean keywords (no spam)
     keywords: [
-      `milk analyzer machine in ${cityName}`,
-      `Best milk analyzer in ${cityName}`,
-      `milk analyzer price in ${cityName}`,
-      `Popular Milk Analyser  in ${cityName}`,
-      `top Milk Analyser  in ${cityName}`,
-      `milk analyzer supplier in ${cityName}`,
-      `milk analyzer dealer in ${cityName}`,
-      `buy milk analyzer machine in ${cityName}`,
-      `advance milk analyzer in ${cityName}`,
-      `advance milk analyzer plus in ${cityName}`,
-      `advance milk analyzer max in ${cityName}`,
-      `advance milk analyzer price in ${cityName}`,
-      `ekomilk ultra milk analyzer in ${cityName}`,
-      `milk testing machine in ${cityName}`,
-      `milk fat testing machine in ${cityName}`,
-      `dpu milk collection unit in ${cityName}`,
-      `automatic milk collection system in ${cityName}`,
-      `dairy khata milk collection unit in ${cityName}`,
-      `dairy equipment in ${cityName}`,
-      `dairy equipment supplier in ${cityName}`,
-      `milking machine in ${cityName}`,
-      `cow milking machine in ${cityName}`,
-      `buffalo milking machine in ${cityName}`,
-      `cream separator machine in ${cityName}`,
-      `paras cream separator machine in ${cityName}`,
-      `milk analyzer installation in ${cityName}`,
-      `milk analyzer repair service in ${cityName}`,
-      ...metaKeywords[10].keywords,
+      `milk analyzer in ${cityName}`,
+      `milk testing machine ${cityName}`,
+      `dairy equipment ${cityName}`,
+      `milk analyzer supplier ${cityName}`,
+      `buy milk analyzer ${cityName}`,
     ],
 
     authors: [
       {
-        name: metaKeywords[10].name,
+        name: metaKeywords[10]?.name || "Jai Shree Equipment Dairy",
       },
     ],
 
+    // ✅ Canonical FIXED
     alternates: {
-      // Use the normalized, hyphenated slug for a clean canonical URL
-      canonical: `https://jaishreeequipmentdairy.in/milk-analyzer-${normalizedParam}`,
+      canonical: url,
     },
 
+    // ✅ OpenGraph (for WhatsApp / Facebook)
     openGraph: {
-      title: `Milk Analyzer in ${cityName} | Dairy Equipment`,
-      description: `Get high-quality milk analyzer and dairy equipment in ${cityName}. Trusted supplier of milk testing machines.`,
+      title: `Milk Analyzer Machine in ${cityName}`,
+      description: `Best milk analyzer and dairy equipment supplier in ${cityName}.`,
+      url,
       siteName: siteConfig.name,
       locale: "en_IN",
       type: "website",
-      url: `https://jaishreeequipmentdairy.in/milk-analyzer-${normalizedParam}`,
+      images: [
+        {
+          url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png",
+          width: 1200,
+          height: 630,
+          alt: `Milk Analyzer in ${cityName}`,
+        },
+      ],
     },
 
+    // ✅ Twitter preview
     twitter: {
       card: "summary_large_image",
-      title: `Milk Analyzer in ${cityName} | Dairy Equipment`,
-      description: `Best milk analyzer and dairy equipment supplier in ${cityName}.`,
+      title: `Milk Analyzer in ${cityName}`,
+      description: `Buy milk analyzer machine in ${cityName} with best price and service.`,
+      images: [
+        "https://res.cloudinary.com/dddhtbuzs/image/upload/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png",
+      ],
     },
 
+    // ✅ Indexing allowed
     robots: {
       index: true,
       follow: true,
@@ -111,6 +109,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// 🔹 Layout wrapper
 export default function LocationLayout({ children }: Props) {
   return (
     <section className="bg-gradient-to-b from-slate-50 to-white min-h-screen">
