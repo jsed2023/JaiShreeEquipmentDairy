@@ -1,13 +1,13 @@
 "use client";
 
-import { Image } from "@nextui-org/react";
+import Image from "next/image";
 import { cld } from "@/utils/cloudinary";
 
 export default function Gallerycarousel() {
   const rawImages = [
     "v1757013349/Advance_Milk_Analyzer_plus.png",
     "v1766063713/advance_milk_analyzer_max.png",
-    "v1728902682/Advance Milk Analyzer.jpg",
+    "v1728902682/Advance%20Milk%20Analyzer.jpg", // fixed space
     "v1736160426/DPU_Milk_Collection_Unit_(DAIRY KHATA).png",
     "v1731935014/Vansan_Trolly_Cow_And_Buff_milking_machine.jpg",
     "v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg",
@@ -16,7 +16,7 @@ export default function Gallerycarousel() {
     "v1766061561/Ekomilk-Ultra-Analyzer.jpg",
   ];
 
-  /// Match actual display size (~18rem ≈ 288px)
+  // Cloudinary optimized images
   const images = rawImages.map((publicId) =>
     cld(publicId, {
       width: 320,
@@ -32,7 +32,12 @@ export default function Gallerycarousel() {
       </h2>
 
       <div className="overflow-hidden">
-        <div className="flex animate-marquee gap-8">
+        <div
+          className="flex gap-8 animate-marquee"
+          style={{
+            animationDuration: `${images.length * 5}s`, // dynamic speed
+          }}
+        >
           {images.concat(images).map((src, idx) => (
             <div
               key={idx}
@@ -40,11 +45,10 @@ export default function Gallerycarousel() {
             >
               <Image
                 src={src}
-                alt={`Gallery product ${idx + 1}`}
+                alt={`Milk Analyzer Machine ${idx + 1}`} // improved SEO
                 width={320}
                 height={260}
-                removeWrapper
-                loading={idx < 4 ? "eager" : "lazy"}
+                priority={idx < 3} // better than eager
                 className="rounded-xl shadow-lg object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
@@ -56,8 +60,15 @@ export default function Gallerycarousel() {
         .animate-marquee {
           display: flex;
           width: max-content;
-          animation: marquee 28s linear infinite;
+          animation-name: marquee;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
           will-change: transform;
+          transform: translate3d(0, 0, 0);
+        }
+
+        .animate-marquee:hover {
+          animation-play-state: paused;
         }
 
         @keyframes marquee {
@@ -65,7 +76,7 @@ export default function Gallerycarousel() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(calc(-50% - 1rem)); /* gap fix */
           }
         }
       `}</style>
