@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { siteConfig } from "@/config/site";
-import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
 import {
   MilkTestingEquipment,
@@ -60,14 +59,7 @@ export async function GET() {
     })),
   ];
 
-  /* 🔥 LOCATION PAGES (SMART DATA) */
-  const locationPages: SitemapEntry[] = rajasthanLocations.map((loc) => ({
-    path: `/milk-analyzer-${loc}`, // ✅ FIXED
-    updatedAt: LAST_UPDATED,
-    priority: 0.85,
-    changefreq: "weekly",
-  }));
-  const urls = [...pages, ...productPages, ...locationPages];
+  const urls = [...pages, ...productPages];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -89,7 +81,6 @@ ${urls
   return new NextResponse(xml, {
     headers: {
       "Content-Type": "application/xml",
-      // 🔥 BEST CACHE FOR SEO
       "Cache-Control":
         "public, max-age=0, s-maxage=86400, stale-while-revalidate",
     },
