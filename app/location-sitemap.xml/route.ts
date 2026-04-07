@@ -17,13 +17,17 @@ const formatDate = (date?: string | Date) =>
 export async function GET() {
   const LAST_UPDATED = new Date();
 
-  /* 🔥 LOCATION PAGES ONLY */
-  const locationPages: SitemapEntry[] = rajasthanLocations.map((loc) => ({
-    path: `/locations/${loc}/milk-analyzer`, // ✅ SEO URL
-    updatedAt: LAST_UPDATED,
-    priority: 0.85,
-    changefreq: "weekly",
-  }));
+  /* 🔥 LOCATION PAGES */
+  const locationPages: SitemapEntry[] = rajasthanLocations.map((loc) => {
+    const slug = loc.toLowerCase().replace(/\s+/g, "-");
+
+    return {
+      path: `/milk-analyzer-${slug}`, // ✅ YOUR URL FORMAT
+      updatedAt: LAST_UPDATED,
+      priority: 0.85,
+      changefreq: "weekly",
+    };
+  });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
