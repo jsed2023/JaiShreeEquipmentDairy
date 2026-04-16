@@ -63,7 +63,7 @@ export default function Home() {
         <h2
       className="font-bold text-xl md:text-2xl lg:text-2xl
         text-center bg-clip-text text-transparent animate-title-gradient">
-          Trusted Milk Analyzer Machine Supplier in Sri Ganganagar Rajasthan
+          Trusted Milk Fat Testing Machine Supplier in Sri Ganganagar Rajasthan
         </h2></div> 
         <p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
   <strong>JAI SHREE EQUIPMENT DAIRY</strong>, established in{" "}
