@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Dairy Equipment",
 
   description:
-    "Explore high-quality dairy equipment including cream separators, milking machines, milk testing machines, and dairy automation systems supplied by Jai Shree Equipment Dairy.",
+    "Explore high-quality dairy equipment including cream separators, milking machines, dairy automation systems supplied by Jai Shree Equipment Dairy.",
 
   keywords: metaKeywords[2].keywords,
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dairy Equipment | Jai Shree Equipment Dairy",
     description:
-      "Buy reliable dairy equipment such as milking machines, cream separators, and milk testing devices from Jai Shree Equipment Dairy.",
+      "Buy reliable dairy equipment such as milking machines, cream separators from Jai Shree Equipment Dairy.",
     url: `${siteConfig.url}/dairy-equipment`,
     siteName: siteConfig.name,
     locale: "en_IN",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dairy Equipment",
     description:
-      "High-quality dairy equipment including milking machines, cream separators, and milk testing machines.",
+      "High-quality dairy equipment including milking machines, cream separators.",
   },
 
   robots: {
