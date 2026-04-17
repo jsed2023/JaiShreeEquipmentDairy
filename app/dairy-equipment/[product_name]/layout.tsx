@@ -62,10 +62,6 @@ export async function generateMetadata({
       description: product.desc,
     },
 
-    robots: {
-      index: true,
-      follow: true,
-    },
   };
 }
 
