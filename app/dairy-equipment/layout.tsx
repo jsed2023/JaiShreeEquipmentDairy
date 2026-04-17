@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Dairy Equipment",
 
   description:
-    "Explore high-quality dairy equipment including cream separators, milking machines, dairy automation systems supplied by Jai Shree Equipment Dairy.",
+    "Explore high-quality dairy equipment including cream separators machines, milking machines, dairy automation systems supplied by Jai Shree Equipment Dairy.",
 
   keywords: metaKeywords[2].keywords,
 
