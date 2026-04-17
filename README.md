@@ -1,12 +1,5 @@
 🥛 Jai Shree Equipment Dairy
 
-"GitHub repo size" (https://img.shields.io/github/repo-size/jsed2023/JaiShreeEquipmentDairy)
-"GitHub stars" (https://img.shields.io/github/stars/jsed2023/JaiShreeEquipmentDairy?style=social)
-"GitHub forks" (https://img.shields.io/github/forks/jsed2023/JaiShreeEquipmentDairy?style=social)
-"GitHub issues" (https://img.shields.io/github/issues/jsed2023/JaiShreeEquipmentDairy)
-"License" (https://img.shields.io/github/license/jsed2023/JaiShreeEquipmentDairy)
-"Last commit" (https://img.shields.io/github/last-commit/jsed2023/JaiShreeEquipmentDairy)
-
 🚀 Official website project for Jai Shree Equipment Dairy, a trusted supplier of dairy equipment and milk analyzer machines in Rajasthan.
 
 ---
