@@ -8,10 +8,6 @@ import MilkTestingEquipmentsShowcase from "@/components/MilkTestingEquipmentsSho
 export default function MilkTestingEquipmentsPage() {
   return (
     <div>
-      <div
-        id="automatic-milk-collection-system"
-        className="sm:mt-10 mt-4 flex flex-col gap-y-8 mb-10"
-      >
         <section>
              <div className="bg-sky-100 dark:bg-sky-900 text-sky-900 dark:text-sky-100 py-4xl">
           <h1 className="text-center font-bold underline sm:text-4xl text-lg
