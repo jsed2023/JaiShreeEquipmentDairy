@@ -9,14 +9,14 @@ export default function DairyEquipmentsPage() {
   return (
     <div>
       <div
-        id="automatic-milk-collection-system"
+        id="dairy-equipment"
         className="sm:mt-10 mt-4 flex flex-col gap-y-8 mb-10"
       >
         <section>
           <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
           <h1 className="text-center font-bold underline sm:text-4xl text-lg
              bg-clip-text text-transparent animate-title-gradient">
-            Dairy Equipments
+            Dairy Equipment in Sri Ganganagar, Rajasthan, India 
           </h1></div> 
           <div className="flex justify-center my-5">
                       <Image
