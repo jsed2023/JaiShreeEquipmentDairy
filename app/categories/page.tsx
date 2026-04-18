@@ -26,7 +26,7 @@ export default function CategoriesPage() {
         <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
       </div>
 
-      {/* ===== SEO HEADER ===== */}
+      {/* ===== HEADER (UNCHANGED H1) ===== */}
       <header className="text-center max-w-3xl mx-auto mb-16">
         <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight animate-slideInFromTop8">
           Dairy Equipment, Milk Testing Machines & AMCS Systems
@@ -43,15 +43,11 @@ export default function CategoriesPage() {
       {/* ===== GRID ===== */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {sortedCategories.map((cat, index) => (
-          <CategoryCard
-            key={cat.slug}
-            cat={cat}
-            index={index}
-          />
+          <CategoryCard key={cat.slug} cat={cat} index={index} />
         ))}
       </section>
 
-      {/* ===== SEO CONTENT BLOCK ===== */}
+      {/* ===== SEO CONTENT ===== */}
       <section className="mt-20 max-w-3xl mx-auto text-slate-700 text-sm leading-relaxed space-y-4">
         <h2 className="text-xl font-semibold text-slate-900">
           Complete Dairy Machinery Solutions in India
