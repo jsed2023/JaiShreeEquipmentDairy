@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import type { Category } from "@/config/categories";
 
 interface CategoryCardProps {
@@ -10,7 +10,6 @@ interface CategoryCardProps {
 }
 
 export default function CategoryCard({ cat, index }: CategoryCardProps) {
-
   const animationDelayMap = ["8", "11", "14"];
   const animationDelay = animationDelayMap[index % 3];
 
@@ -19,16 +18,21 @@ export default function CategoryCard({ cat, index }: CategoryCardProps) {
     "linear-gradient(to right,#38bdf8,#8b5cf6,#6366f1)";
 
   const [isFlipped, setIsFlipped] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleTouch = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Only apply flip logic on touch devices
+    if (window.matchMedia("(hover: none)").matches) {
+      if (!isFlipped) {
+        e.preventDefault();
+        setIsFlipped(true);
 
-    // Mobile: first tap flips only
-    if (!isFlipped) {
-      e.preventDefault();
-      setIsFlipped(true);
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
-      // auto reset flip after 3 sec (optional UX polish)
-      setTimeout(() => setIsFlipped(false), 3000);
+        timeoutRef.current = setTimeout(() => {
+          setIsFlipped(false);
+        }, 2500);
+      }
     }
   };
 
@@ -36,11 +40,10 @@ export default function CategoryCard({ cat, index }: CategoryCardProps) {
     <Link
       href={`/${cat.slug}`}
       aria-label={`Open category ${cat.name}`}
-      className="group relative"
+      className="group relative focus:outline-none"
       style={{ perspective: "1200px" }}
       onClick={handleTouch}
     >
-
       {/* ===== Glow Halo ===== */}
       <div
         className="
@@ -68,11 +71,15 @@ export default function CategoryCard({ cat, index }: CategoryCardProps) {
           animate-slideInFromBottom${animationDelay}
           shadow-[0_20px_40px_rgba(0,0,0,0.35)]
           group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.45)]
+          will-change-transform
           group-hover:[transform:rotateY(180deg)_translateY(-10px)_scale(1.04)_rotateX(2deg)]
-          ${isFlipped ? "[transform:rotateY(180deg)_translateY(-10px)_scale(1.04)_rotateX(2deg)]" : ""}
+          ${
+            isFlipped
+              ? "[transform:rotateY(180deg)_translateY(-10px)_scale(1.04)_rotateX(2deg)]"
+              : ""
+          }
         `}
       >
-
         {/* ===== FRONT ===== */}
         <div
           className="
@@ -88,12 +95,12 @@ export default function CategoryCard({ cat, index }: CategoryCardProps) {
             {cat.name}
           </h2>
 
-          <p className="text-sm text-slate-600 dark:text-slate-300 flex-grow leading-relaxed">
+          <p className="text-sm text-slate-600 dark:text-slate-300 flex-grow leading-relaxed line-clamp-3">
             {cat.seo.description}
           </p>
 
           <span className="mt-6 text-sm font-medium text-indigo-600 dark:text-indigo-400">
-            view category →
+            View Category →
           </span>
         </div>
 
@@ -112,7 +119,7 @@ export default function CategoryCard({ cat, index }: CategoryCardProps) {
           </h3>
 
           <p className="text-sm opacity-90 mb-6 max-w-[220px]">
-            Explore premium dairy equipment & solutions
+            Explore premium dairy equipment, milk analyzers & AMCS systems
           </p>
 
           <span
@@ -122,10 +129,9 @@ export default function CategoryCard({ cat, index }: CategoryCardProps) {
               text-sm font-medium
             "
           >
-             open →
+            Open →
           </span>
         </div>
-
       </div>
     </Link>
   );
