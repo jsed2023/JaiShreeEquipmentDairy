@@ -2,8 +2,6 @@ import { CATEGORIES } from "@/config/categories";
 import CategoryCard from "@/components/CategoryCard";
 
 export default function CategoriesPage() {
-
-  // Optional: sort by priority
   const sortedCategories = [...CATEGORIES].sort(
     (a, b) => (b.priority || 0) - (a.priority || 0)
   );
@@ -11,7 +9,7 @@ export default function CategoriesPage() {
   return (
     <main className="relative max-w-6xl mx-auto px-4 py-24 overflow-hidden">
 
-      {/* ===== CINEMATIC BACKGROUND ===== */}
+      {/* ===== BACKGROUND ===== */}
       <div className="fixed inset-0 -z-10 bg-slate-950 overflow-hidden">
 
         <div
@@ -38,14 +36,22 @@ export default function CategoriesPage() {
         <div className="absolute inset-0 bg-slate-950/75" />
       </div>
 
-      {/* ===== TITLE ===== */}
-      <h1 className="text-4xl font-extrabold mb-16 text-center text-sky-400 tracking-tight animate-slideInFromTop8">
-          Categories For Dairy Machines
-      </h1>
+      {/* ===== SEO HEADER ===== */}
+      <header className="text-center max-w-3xl mx-auto mb-16">
+        <h1 className="text-4xl font-extrabold text-sky-400 tracking-tight animate-slideInFromTop8">
+          Dairy Equipment, Milk Testing Machines & AMCS Systems
+        </h1>
+
+        <p className="mt-4 text-slate-300 text-base leading-relaxed">
+          Explore our complete range of dairy solutions including dairy equipment,
+          milk testing machines, and automatic milk collection systems (AMCS).
+          We provide high-quality machinery for dairy farms, milk collection centers,
+          and processing units across India.
+        </p>
+      </header>
 
       {/* ===== GRID ===== */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {sortedCategories.map((cat, index) => (
           <CategoryCard
             key={cat.slug}
@@ -53,10 +59,33 @@ export default function CategoriesPage() {
             index={index}
           />
         ))}
+      </section>
 
-      </div>
+      {/* ===== SEO CONTENT BLOCK (VERY IMPORTANT) ===== */}
+      <section className="mt-20 max-w-3xl mx-auto text-slate-300 text-sm leading-relaxed space-y-4">
+        <h2 className="text-xl font-semibold text-white">
+          Complete Dairy Machinery Solutions in India
+        </h2>
+
+        <p>
+          Our platform offers a wide range of dairy equipment including milking machines,
+          milk analyzers, and automatic milk collection systems. These solutions are designed
+          to improve efficiency, ensure accurate milk testing, and provide transparent billing
+          for dairy businesses.
+        </p>
+
+        <p>
+          Whether you are setting up a new dairy farm or upgrading your milk collection center,
+          our products help streamline operations with modern technology such as digital milk
+          analyzers, weighing machines, ultrasonic stirrers, and billing printers.
+        </p>
+
+        <p>
+          We serve dairy farmers, cooperatives, and commercial dairy units across Rajasthan
+          and India with reliable and cost-effective machinery.
+        </p>
+      </section>
 
     </main>
   );
 }
-
