@@ -36,14 +36,18 @@ export default function CategoriesPage() {
         <div className="absolute inset-0 bg-slate-950/75" />
       </div>
 
-      {/* ===== SEO HEADER ===== */}
-      <header className="text-center max-w-3xl mx-auto mb-16">
+      {/* ===== HEADER (FIXED) ===== */}
+      <header className="relative text-center max-w-3xl mx-auto mb-16">
+
+        {/* 🔥 DARK OVERLAY FOR READABILITY */}
+        <div className="absolute inset-0 bg-black/40 rounded-xl -z-10" />
+
         <h1 className="text-4xl font-extrabold text-sky-400 tracking-tight animate-slideInFromTop8">
           Dairy Equipment, Milk Testing Machines & AMCS Systems
         </h1>
 
         {/* ✅ FIXED TEXT VISIBILITY */}
-        <p className="mt-4 text-slate-100 text-base leading-relaxed">
+        <p className="mt-4 text-white text-base leading-relaxed">
           Explore our complete range of dairy solutions including dairy equipment,
           milk testing machines, and automatic milk collection systems (AMCS).
           We provide high-quality machinery for dairy farms, milk collection centers,
@@ -54,16 +58,12 @@ export default function CategoriesPage() {
       {/* ===== GRID ===== */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {sortedCategories.map((cat, index) => (
-          <CategoryCard
-            key={cat.slug}
-            cat={cat}
-            index={index}
-          />
+          <CategoryCard key={cat.slug} cat={cat} index={index} />
         ))}
       </section>
 
       {/* ===== SEO CONTENT BLOCK ===== */}
-      <section className="mt-20 max-w-3xl mx-auto text-slate-100 text-sm leading-relaxed space-y-4">
+      <section className="mt-20 max-w-3xl mx-auto text-white text-sm leading-relaxed space-y-4">
         <h2 className="text-xl font-semibold text-white">
           Complete Dairy Machinery Solutions in India
         </h2>
