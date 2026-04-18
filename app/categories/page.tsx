@@ -9,30 +9,41 @@ export default function CategoriesPage() {
   return (
     <main className="relative max-w-6xl mx-auto px-4 py-24 overflow-hidden">
 
-      {/* ===== LIGHT BACKGROUND ===== */}
-      <div className="fixed inset-0 -z-10 bg-slate-100 overflow-hidden">
+      {/* ===== BACKGROUND ===== */}
+      <div className="fixed inset-0 -z-10 bg-slate-950 overflow-hidden">
 
         <div
-          className="absolute inset-0 opacity-60 animate-ambientFloat"
+          className="absolute inset-0 opacity-70 animate-ambientFloat"
           style={{
             background: `
-              radial-gradient(circle at 12% 18%, rgba(56,189,248,0.25) 0%, transparent 38%),
-              radial-gradient(circle at 82% 22%, rgba(167,139,250,0.25) 0%, transparent 38%),
-              radial-gradient(circle at 50% 82%, rgba(99,102,241,0.25) 0%, transparent 42%)
+              radial-gradient(circle at 12% 18%, rgba(56,189,248,0.45) 0%, transparent 38%),
+              radial-gradient(circle at 82% 22%, rgba(167,139,250,0.45) 0%, transparent 38%),
+              radial-gradient(circle at 50% 82%, rgba(99,102,241,0.5) 0%, transparent 42%)
             `
           }}
         />
 
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
+        <div
+          className="absolute inset-0 blur-3xl opacity-40 animate-slowPulse"
+          style={{
+            background: `
+              radial-gradient(circle at 30% 40%, rgba(99,102,241,0.35), transparent 45%),
+              radial-gradient(circle at 70% 65%, rgba(56,189,248,0.3), transparent 45%)
+            `
+          }}
+        />
+
+        <div className="absolute inset-0 bg-slate-950/75" />
       </div>
 
-      {/* ===== HEADER (UNCHANGED H1) ===== */}
+      {/* ===== SEO HEADER ===== */}
       <header className="text-center max-w-3xl mx-auto mb-16">
-        <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight animate-slideInFromTop8">
+        <h1 className="text-4xl font-extrabold text-sky-400 tracking-tight animate-slideInFromTop8">
           Dairy Equipment, Milk Testing Machines & AMCS Systems
         </h1>
 
-        <p className="mt-4 text-slate-700 text-base leading-relaxed">
+        {/* ✅ Updated paragraph color */}
+        <p className="mt-4 text-slate-200 text-base leading-relaxed">
           Explore our complete range of dairy solutions including dairy equipment,
           milk testing machines, and automatic milk collection systems (AMCS).
           We provide high-quality machinery for dairy farms, milk collection centers,
@@ -43,13 +54,18 @@ export default function CategoriesPage() {
       {/* ===== GRID ===== */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {sortedCategories.map((cat, index) => (
-          <CategoryCard key={cat.slug} cat={cat} index={index} />
+          <CategoryCard
+            key={cat.slug}
+            cat={cat}
+            index={index}
+          />
         ))}
       </section>
 
-      {/* ===== SEO CONTENT ===== */}
-      <section className="mt-20 max-w-3xl mx-auto text-slate-700 text-sm leading-relaxed space-y-4">
-        <h2 className="text-xl font-semibold text-slate-900">
+      {/* ===== SEO CONTENT BLOCK ===== */}
+      {/* ✅ Updated paragraph color */}
+      <section className="mt-20 max-w-3xl mx-auto text-slate-200 text-sm leading-relaxed space-y-4">
+        <h2 className="text-xl font-semibold text-white">
           Complete Dairy Machinery Solutions in India
         </h2>
 
