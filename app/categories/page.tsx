@@ -47,7 +47,7 @@ export default function CategoriesPage() {
         </h1>
 
         {/* ✅ FIXED TEXT VISIBILITY */}
-        <p className="mt-4 text-white text-base leading-relaxed">
+        <p className="mt-4 text-block text-base leading-relaxed">
           Explore our complete range of dairy solutions including dairy equipment,
           milk testing machines, and automatic milk collection systems (AMCS).
           We provide high-quality machinery for dairy farms, milk collection centers,
@@ -63,14 +63,14 @@ export default function CategoriesPage() {
       </section>
 
       {/* ===== SEO CONTENT BLOCK ===== */}
-      <section className="mt-20 max-w-3xl mx-auto text-white text-sm leading-relaxed space-y-4">
-        <h2 className="text-xl font-semibold text-white">
+      <section className="mt-20 max-w-3xl mx-auto text-block text-sm leading-relaxed space-y-4">
+        <h2 className="text-xl font-semibold text-block">
           Complete Dairy Machinery Solutions in India
         </h2>
 
         <p>
-          Our platform offers a wide range of dairy equipment including milking machines,
-          milk analyzers, and automatic milk collection systems. These solutions are designed
+          Our platform offers a wide range of dairy equipment including milking machines,milk cream separator machine,
+          milk analyzers machine, and automatic milk collection systems. These solutions are designed
           to improve efficiency, ensure accurate milk testing, and provide transparent billing
           for dairy businesses.
         </p>
