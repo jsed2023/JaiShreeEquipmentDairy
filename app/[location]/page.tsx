@@ -44,6 +44,34 @@ function getNearbyCities(current: string) {
     .filter((city) => city !== current)
     .slice(0, 15);
 }
+function faqData(city: string) {
+  return [
+    {
+      q: `What is the price of milk analyzer in ${city}?`,
+      a: `Milk analyzer price in ${city} starts from ₹25,000 and can go up to ₹1,00,000 depending on model and features.`,
+    },
+    {
+      q: `Which milk analyzer is best in ${city}?`,
+      a: `Popular models include Ekomilk Ultra, Lactoscan, and Advance Milk Analyzer. The best depends on your dairy needs.`,
+    },
+    {
+      q: `Do you provide installation in ${city}?`,
+      a: `Yes, we provide complete installation and setup support in ${city} and nearby areas.`,
+    },
+    {
+      q: `How accurate is a milk analyzer machine?`,
+      a: `Modern milk analyzers provide highly accurate fat, SNF, and density readings within seconds.`,
+    },
+    {
+      q: `Do you offer service and repair in ${city}?`,
+      a: `Yes, we offer after-sales service, calibration, and repair support in ${city}.`,
+    },
+    {
+      q: `Can I order milk analyzer online in ${city}?`,
+      a: `Yes, you can easily order via WhatsApp or contact us directly for quick delivery in ${city}.`,
+    },
+  ];
+}
 
 export default function LocationPage({ params }: Props) {
   // 1. Decode and normalize the URL parameter
@@ -111,6 +139,7 @@ export default function LocationPage({ params }: Props) {
     `milk analyzer installation in ${city}`,
     `milk analyzer repair service in ${city}`,
   ];
+  
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-10">
@@ -229,7 +258,21 @@ export default function LocationPage({ params }: Props) {
           ))}
         </div>
       </div>
+{/* FAQ */}
+<div className="mb-12">
+  <h2 className="text-2xl font-semibold mb-6 text-center">
+    Frequently Asked Questions
+  </h2>
 
+  <div className="space-y-4">
+    {faqData(city).map((faq, i) => (
+      <div key={i} className="bg-white p-5 rounded-xl shadow">
+        <h3 className="font-semibold mb-2">{faq.q}</h3>
+        <p className="text-gray-700 text-sm">{faq.a}</p>
+      </div>
+    ))}
+  </div>
+</div>
       {/* CTA */}
       <div className="bg-blue-600 text-white p-8 rounded-2xl text-center">
         <h3 className="text-2xl font-semibold mb-3">
