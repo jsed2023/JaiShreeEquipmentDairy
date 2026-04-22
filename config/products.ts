@@ -1213,7 +1213,7 @@ export const creamSeparatorMachine: Products[] = [
      alt: "Paras Milk Cream Separator Machine 9 DUAL 165 LPH",
       },
     ],
-    price: "28,500",
+    price: "29,500",
     moreDetails: undefined,
     features: [
       {
@@ -1264,7 +1264,7 @@ export const creamSeparatorMachine: Products[] = [
       {
         id: "1F",
         key: "Price",
-        value: "₹ 28,500",
+        value: "₹ 29,500",
       },
     ],
     desc: "Experience efficient milk processing with  JAI SHREE EQUIPMENT DAIRY, your premier destination for high-quality Milk Cream Separators in Sri ganganagar. As esteemed Milk Cream Separator DISTRIBUTOR in Sri ganganagar, we specialize in crafting state-of-the-art machines designed to separate milk into cream and skim milk components. Our range of milk cream separators in Sri ganganagar is meticulously designed to meet the highest standards of functionality, durability, and performance. Whether you're managing a dairy farm, milk processing facility, or any business in Sri ganganagar, our milk cream separators cater to the diverse needs of businesses, delivering reliable and high-performance solutions for your milk processing requirements.",
@@ -1284,7 +1284,7 @@ export const creamSeparatorMachine: Products[] = [
       alt: "Paras Milk Cream Separator Machine 9 AE 165 LPH",
       },
     ],
-    price: "27,500",
+    price: "28,500",
     moreDetails: undefined,
     features: [
       {
@@ -1335,7 +1335,7 @@ export const creamSeparatorMachine: Products[] = [
       {
         id: "6F",
         key: "Price",
-        value: "₹ 27,500",
+        value: "₹ 28,500",
       },
     ],
     desc: "Experience efficient milk processing with  JAI SHREE EQUIPMENT DAIRY, your premier destination for high-quality Milk Cream Separators in Sri ganganagar. As esteemed Milk Cream Separator DISTRIBUTOR in Sri ganganagar, we specialize in crafting state-of-the-art machines designed to separate milk into cream and skim milk components. Our range of milk cream separators in Sri ganganagar is meticulously designed to meet the highest standards of functionality, durability, and performance. Whether you're managing a dairy farm, milk processing facility, or any business in Sri ganganagar, our milk cream separators cater to the diverse needs of businesses, delivering reliable and high-performance solutions for your milk processing requirements.",
