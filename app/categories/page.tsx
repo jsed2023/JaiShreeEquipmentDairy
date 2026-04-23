@@ -81,7 +81,7 @@ export default function CategoriesPage() {
         </p>
 
 <p>
-In the modern dairy industry, precision and efficiency are the cornerstones of success. We offer a comprehensive range of advanced Milk Analyzers from world-renowned brands like Ekomilk, Advance, and Essar. These analyzers are engineered to provide rapid and accurate testing for fat, SNF, and added water, ensuring that every drop of milk meets the highest quality standards without the need for complex chemical testing.
+In the modern dairy industry, precision and efficiency are the cornerstones of success. We offer a comprehensive range of advanced Milk Analyzers from world-renowned brands like Ekomilk, Advance. These analyzers are engineered to provide rapid and accurate testing for fat, SNF, and added water, ensuring that every drop of milk meets the highest quality standards without the need for complex chemical testing.
 </p>
 
 <p>
