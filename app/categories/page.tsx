@@ -79,6 +79,22 @@ export default function CategoriesPage() {
           We serve dairy farmers, cooperatives, and commercial dairy units across Rajasthan
           and India with reliable and cost-effective machinery.
         </p>
+
+<p>
+In the modern dairy industry, precision and efficiency are the cornerstones of success. We offer a comprehensive range of advanced Milk Analyzers from world-renowned brands like Ekomilk, Advance, and Essar. These analyzers are engineered to provide rapid and accurate testing for fat, SNF, and added water, ensuring that every drop of milk meets the highest quality standards without the need for complex chemical testing.
+</p>
+
+<p>
+To streamline operations at the ground level, our Automatic Milk Collection Units (AMCU), including specialized solutions for Dairy Khatadpu setups, integrate weighing, testing, and data management into a single seamless process. These units are designed to build trust with farmers by providing transparent, real-time results and automated record-keeping for cooperatives and private dairies alike.
+</p>
+
+<p>
+Processing and harvesting are made easier with our robust machinery lineup. We provide high-performance Paras Cream Separator Machines, known for their durability and superior fat extraction efficiency. Additionally, for modern farm management, our Vansun Milking Machines offer a hygienic and stress-free milking experience for cattle, significantly reducing labor costs while increasing overall milk yield.
+</p>
+
+<p>
+Whether you are setting up a small collection center or managing a large-scale dairy plant, our selection of Advance Dairy Systems and machinery ensures you stay ahead with the latest technology. From testing to processing, we bring you the tools needed to optimize your dairy business for maximum profitability and quality assurance.
+</p>
       </section>
     </main>
   );
