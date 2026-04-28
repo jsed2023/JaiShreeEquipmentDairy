@@ -6,7 +6,6 @@ import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
 import { metaKeywords, siteConfig } from "@/config/site"
 import { fontSans } from "@/config/fonts"
-
 import { Navbar } from "@/components/navbar"
 import Footer from "@/components/footer"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
@@ -18,6 +17,10 @@ import { Analytics } from "@vercel/analytics/react"
 
 const GTM_ID = "GTM-K3VGDWGP"
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+
+// ✅ ONLY allow tracking on your real domain
+const isProduction =
+  process.env.NEXT_PUBLIC_SITE_URL === "https://jaishreeequipmentdairy.in"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -76,61 +79,68 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* ✅ Google Analytics (gtag.js) */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          strategy="afterInteractive"
-        />
+        {/* ✅ Google Analytics */}
+        {isProduction && GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
 
-        {/* ✅ GA Init (NO ADS + NO AUTO PAGEVIEW) */}
-        <Script id="ga-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
+            <Script id="ga-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
 
-            gtag('js', new Date());
+                gtag('js', new Date());
 
-            gtag('config', '${GA_ID}', {
-              send_page_view: false,
-              allow_google_signals: false,
-              allow_ad_personalization_signals: false
-            });
-          `}
-        </Script>
+                gtag('config', '${GA_ID}', {
+                  send_page_view: false,
+                  allow_google_signals: false,
+                  allow_ad_personalization_signals: false
+                });
+              `}
+            </Script>
+          </>
+        )}
 
         {/* ✅ Google Tag Manager */}
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-                var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),
-                dl=l!='dataLayer'?'&l='+l:'';
-                j.async=true;
-                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${GTM_ID}');
-            `,
-          }}
-        />
+        {isProduction && (
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){
+                  w[l]=w[l]||[];
+                  w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+                  var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),
+                  dl=l!='dataLayer'?'&l='+l:'';
+                  j.async=true;
+                  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                  f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${GTM_ID}');
+              `,
+            }}
+          />
+        )}
       </head>
 
       <body className={clsx("min-h-screen flex flex-col", fontSans.variable)}>
         
         {/* ✅ GTM fallback */}
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+        {isProduction && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
 
         <LocalBusinessSchema />
 
@@ -149,8 +159,9 @@ export default function RootLayout({
           </PageLoader>
         </Providers>
 
-        <SpeedInsights />
-        <Analytics />
+        {/* ✅ Vercel analytics only for production */}
+        {isProduction && <SpeedInsights />}
+        {isProduction && <Analytics />}
       </body>
     </html>
   )
