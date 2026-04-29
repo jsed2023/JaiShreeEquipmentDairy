@@ -16,8 +16,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 
 const GTM_ID = "GTM-K3VGDWGP"
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
-
 const isProduction = process.env.NODE_ENV === "production"
 
 export const metadata: Metadata = {
@@ -75,30 +73,25 @@ children,
 children: React.ReactNode
 }) {
 return ( <html lang="en" suppressHydrationWarning> <head>
-{/* Google Analytics */}
-{GA_ID && (
-<>
-<Script
-src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-strategy="afterInteractive"
-/>
+{/* ✅ Google Analytics — MUST be beforeInteractive */} <Script
+       src="https://www.googletagmanager.com/gtag/js?id=G-RW4MD5X6R1"
+       strategy="beforeInteractive"
+     />
 <Script
 id="ga-init"
-strategy="afterInteractive"
+strategy="beforeInteractive"
 dangerouslySetInnerHTML={{
-__html: `                   window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  window.gtag = gtag;
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}', { send_page_view: true });
-                `,
+__html: `               window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', 'G-RW4MD5X6R1');
+            `,
 }}
 />
-</>
-)}
 
 ```
-    {/* Google Tag Manager */}
+    {/* ✅ Google Tag Manager (optional) */}
     {isProduction && (
       <Script
         id="gtm-script"
@@ -123,7 +116,7 @@ __html: `                   window.dataLayer = window.dataLayer || [];
 
   <body className={clsx("min-h-screen flex flex-col", fontSans.variable)}>
     
-    {/* GTM fallback */}
+    {/* ✅ GTM fallback */}
     {isProduction && (
       <noscript>
         <iframe
@@ -141,9 +134,11 @@ __html: `                   window.dataLayer = window.dataLayer || [];
       <PageLoader>
         <div className="relative flex min-h-screen flex-col">
           <Navbar />
+
           <main className="flex-grow pt-20 pb-36">
             {children}
           </main>
+
           <Footer />
           <WhatsAppButton />
         </div>
