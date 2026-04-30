@@ -60,8 +60,7 @@ export default function ServicesPage() {
           ["Repairs", "Quick and efficient repair services."],
           ["Milk Analyzer Repair Service", "Expert repair service for digital milk analyzers and milk testing machines."],
           ["Dairy Equipment Installation", "Professional installation and setup of dairy machinery at your location."],
-          ["Dairy Machinery Maintenance", "Regular maintenance service to ensure smooth and accurate performance."],
-
+          ["Dairy Machinery Maintenance", "Regular maintenance service to ensure smooth and accurate performance."]
         ].map(([title, desc]) => (
           <div key={title} className="flex justify-between gap-4">
             <h2 className="font-bold">{title}:</h2>

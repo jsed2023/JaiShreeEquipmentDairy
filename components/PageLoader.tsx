@@ -1,35 +1,49 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import JSEDLoader from "./JSEDLoader";
 
 export default function PageLoader({ children }: { children: React.ReactNode }) {
-
   const pathname = usePathname();
-  const [loading, setLoading] = useState(true);
+
+  const [visible, setVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 900);
+    const showTimer: ReturnType<typeof setTimeout> = setTimeout(() => {
+      setMounted(true);
+      setVisible(true);
+    }, 120); // prevents flicker
 
-    return () => clearTimeout(timer);
-  }, []);
+    const hideTimer: ReturnType<typeof setTimeout> = setTimeout(() => {
+      setVisible(false);
 
-  useEffect(() => {
-    setLoading(true);
+      // wait for fade-out before unmount
+      const unmountTimer = setTimeout(() => {
+        setMounted(false);
+      }, 300);
 
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 400);
+      return () => clearTimeout(unmountTimer);
+    }, 600);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
   }, [pathname]);
 
   return (
     <>
-      {loading && <JSEDLoader />}
+      {mounted && (
+        <div
+          className={`fixed inset-0 z-[9999] transition-opacity duration-300 ${
+            visible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <JSEDLoader />
+        </div>
+      )}
       {children}
     </>
   );

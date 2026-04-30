@@ -1,4 +1,4 @@
-import "./globals.css"
+import "@/styles/globals.css"
 import type { Metadata, Viewport } from "next"
 import clsx from "clsx"
 import Script from "next/script"
@@ -72,7 +72,8 @@ children,
 }: {
 children: React.ReactNode
 }) {
-return ( <html lang="en" suppressHydrationWarning> <head>
+return ( <html lang="en"> 
+<head>
 {/* ✅ Google Analytics — MUST be beforeInteractive */} <Script
        src="https://www.googletagmanager.com/gtag/js?id=G-RW4MD5X6R1"
        strategy="beforeInteractive"

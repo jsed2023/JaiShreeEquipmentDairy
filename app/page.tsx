@@ -312,7 +312,8 @@ Dairy Equipment & Milk Analyzer Machines in Rajasthan
     >
       <strong>JAI SHREE EQUIPMENT DAIRY</strong> is an
       <strong> Authorized Distributor of K R Electronics Industries for the Bikaner Division</strong>,
-      We provide: Advance Milk Analyzer Machines, Genuine Products with Manufacturer Warranty, Original Spare Parts, Reliable After-Sales Support.
+      supplying genuine products, original spare parts, and
+      manufacturer-supported solutions.
     </p></div>
 
     {/* Trust Icons */}
