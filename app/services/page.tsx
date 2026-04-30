@@ -22,7 +22,7 @@ export default function ServicesPage() {
       <section id="dairy-equipment-services">
         <div className="bg-sky-100 dark:bg-sky-900 py-4">
           <h1 className="text-center font-bold underline sm:text-2xl text-lg bg-clip-text text-transparent animate-title-gradient">
-            Dairy Machine Services – Installation, Maintenance & Repairs
+            Milk Analyzer Repair & Dairy Equipment Services in Rajasthan
           </h1>
         </div>
 
@@ -58,6 +58,10 @@ export default function ServicesPage() {
           ["Installation", "Professional setup of dairy equipment at your farm."],
           ["Maintenance", "Regular servicing to ensure optimal performance."],
           ["Repairs", "Quick and efficient repair services."],
+          ["Milk Analyzer Repair Service", "Expert repair service for digital milk analyzers and milk testing machines."],
+          ["Dairy Equipment Installation", "Professional installation and setup of dairy machinery at your location."],
+          ["Dairy Machinery Maintenance", "Regular maintenance service to ensure smooth and accurate performance."],
+
         ].map(([title, desc]) => (
           <div key={title} className="flex justify-between gap-4">
             <h2 className="font-bold">{title}:</h2>
