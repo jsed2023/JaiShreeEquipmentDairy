@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: false, // ✅ important (no trailing slash issues)
+  trailingSlash: false,
 
   compress: true,
   reactStrictMode: true,
@@ -24,13 +24,12 @@ const nextConfig = {
 
   swcMinify: true,
 
-  // ⚠️ TEMP: use only during debugging
   typescript: {
-    ignoreBuildErrors: false, // 🔥 change this
+    ignoreBuildErrors: false,
   },
 
   eslint: {
-    ignoreDuringBuilds: false, // 🔥 change this
+    ignoreDuringBuilds: false,
   },
 
   async headers() {
@@ -40,7 +39,11 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Type",
-            value: "text/plain",
+            value: "text/plain; charset=utf-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "no-store, no-cache, must-revalidate",
           },
         ],
       },
@@ -49,7 +52,11 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Type",
-            value: "application/xml",
+            value: "application/xml; charset=utf-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "no-store, no-cache, must-revalidate",
           },
         ],
       },
