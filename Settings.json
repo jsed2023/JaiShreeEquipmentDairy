@@ -1,5 +1,25 @@
 {
   "files.watcherExclude": {
     "**/node_modules/**": true
+  },
+
+  "files.associations": {
+    "*.css": "postcss"
+  },
+
+  "css.lint.unknownAtRules": "ignore",
+  "css.validate": false,
+
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "css": "css",
+    "postcss": "css",
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact"
+  },
+
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }
