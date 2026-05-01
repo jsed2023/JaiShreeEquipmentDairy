@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: false, // 👈 important (no / at end)
+  trailingSlash: false, // ✅ important (no trailing slash issues)
 
   compress: true,
   reactStrictMode: true,
@@ -24,12 +24,36 @@ const nextConfig = {
 
   swcMinify: true,
 
+  // ⚠️ TEMP: use only during debugging
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false, // 🔥 change this
   },
 
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false, // 🔥 change this
+  },
+
+  async headers() {
+    return [
+      {
+        source: "/robots.txt",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "text/plain",
+          },
+        ],
+      },
+      {
+        source: "/:path*.xml",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/xml",
+          },
+        ],
+      },
+    ];
   },
 };
 
