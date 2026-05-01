@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { cld } from "@/utils/cloudinary";
 
 export function AuthorizedDealerSection() {
@@ -26,13 +26,17 @@ export function AuthorizedDealerSection() {
             {/* Image */}
             <div className="relative w-full h-[360px]">
               <Image
-  src={cld("v1772135052/krei-authorized-dealer_gd8hvd.webp", 100)}
-  alt="Authorized Dealer Certificate"
-  fill
-  sizes="(max-width:768px) 100vw, (max-width:120px) 50vw, 33vw"
-  className="object-contain"
-  priority
-/>
+                src={cld("v1772135052/krei-authorized-dealer_gd8hvd.webp", {
+                  width: 800,
+                  quality: "auto",
+                  format: "webp",
+                })}
+                alt="Authorized dealer certificate of Jai Shree Equipment Dairy for K R Electronics Industries"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain"
+                priority
+              />
             </div>
 
             {/* Content */}
@@ -40,19 +44,21 @@ export function AuthorizedDealerSection() {
 
               <p><strong>Firm:</strong> Jai Shree Equipment Dairy</p>
               <p><strong>Proprietor:</strong> Akshay Choudhary</p>
-              <p><strong>Head Office:</strong> Sri-ganganagar</p>
+              <p><strong>Head Office:</strong> Sri Ganganagar</p>
               <p><strong>Established:</strong> 2020</p>
               <p><strong>Authorized Dealer Since:</strong> 2023</p>
               <p><strong>Valid Till:</strong> 2028</p>
               <p><strong>Territory:</strong> Bikaner Division</p>
-              <p><strong>Districts:</strong> Sri-Ganganagar, Hanumangarh, Bikaner</p>
+              <p><strong>Districts:</strong> Sri Ganganagar, Hanumangarh, Bikaner</p>
+
               <p>
                 <strong>Address:</strong><br />
-                Shop No. B-42, Upper Side, Rohit Udhyog Market,
-                Near HP Gas Agency, Shiv Circle Road,
+                Shop No. B-42, Upper Side, Rohit Udhyog Market,<br />
+                Near HP Gas Agency, Shiv Circle Road,<br />
                 Sri Ganganagar, Rajasthan – 335001
               </p>
 
+              {/* Call CTA */}
               <a
                 href="tel:8112294173"
                 className="text-base font-semibold text-primary block pt-1"
@@ -60,11 +66,13 @@ export function AuthorizedDealerSection() {
                 📞 8112294173
               </a>
 
+              {/* Certificate Button */}
               <div className="pt-2">
                 <Button size="lg" variant="outline" asChild>
                   <a
                     href="https://res.cloudinary.com/dddhtbuzs/image/upload/v1772135052/krei-authorized-dealer_gd8hvd.webp"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View Certificate
                   </a>
@@ -77,5 +85,5 @@ export function AuthorizedDealerSection() {
 
       </div>
     </section>
-  )
+  );
 }
