@@ -1,9 +1,8 @@
 export const GA_TRACKING_ID =
   process.env.NEXT_PUBLIC_GA_ID || "";
 
-// ✅ Strong typing for gtag
+// ✅ Strong typing
 type GtagCommand = "event" | "config" | "js";
-
 type GtagParams = Record<string, unknown>;
 
 declare global {
@@ -12,7 +11,16 @@ declare global {
   }
 }
 
-// ✅ Track custom events ONLY
+// ✅ Page view tracking
+export const pageview = (url: string): void => {
+  if (typeof window === "undefined" || !window.gtag) return;
+
+  window.gtag("config", GA_TRACKING_ID, {
+    page_path: url,
+  });
+};
+
+// ✅ Custom event tracking
 export const trackEvent = (
   eventName: string,
   params?: GtagParams
@@ -21,8 +29,6 @@ export const trackEvent = (
 
   window.gtag("event", eventName, {
     ...params,
-
-    // 🚫 Disable ads signals
     allow_google_signals: false,
     allow_ad_personalization_signals: false,
   });
