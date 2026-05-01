@@ -15,11 +15,10 @@ export default function WhatsAppButton() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
-    // 🔥 Track lead
-    trackEvent({
-      action: "whatsapp_click",
-      category: "lead",
-      label: window.location.pathname,
+    // ✅ Track lead (fixed)
+    trackEvent("whatsapp_click", {
+      event_category: "lead",
+      event_label: window.location.pathname,
       value: 1,
     });
 
