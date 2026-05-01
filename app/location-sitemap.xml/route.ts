@@ -2,14 +2,9 @@ import { NextResponse } from "next/server";
 import { siteConfig } from "@/config/site";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
-const SITE_URL = siteConfig.url;
+export const runtime = "nodejs";
 
-type SitemapEntry = {
-  path: string;
-  updatedAt?: string | Date;
-  priority?: number;
-  changefreq?: string;
-};
+const SITE_URL = siteConfig.url;
 
 const formatDate = (date?: string | Date) =>
   new Date(date || new Date()).toISOString();
@@ -22,50 +17,23 @@ export async function GET() {
     now.getDate()
   );
 
-  const locationPages: SitemapEntry[] = rajasthanLocations.map((loc) => {
+  const locationPages = rajasthanLocations.map((loc) => {
     const slug = loc.toLowerCase().replace(/\s+/g, "-");
 
     return {
-      path: `/milk-analyzer-${slug}`,
-      updatedAt: LAST_UPDATED,
-      priority: 0.85,
-      changefreq: "weekly",
+      url: `${SITE_URL}/milk-analyzer-${slug}`,
+      lastModified: formatDate(LAST_UPDATED),
     };
   });
 
-  const staticPages: SitemapEntry[] = [
-    {
-      path: "/",
-      updatedAt: LAST_UPDATED,
-      priority: 1.0,
-      changefreq: "daily",
-    },
-    {
-      path: "/about",
-      updatedAt: LAST_UPDATED,
-      priority: 0.7,
-      changefreq: "monthly",
-    },
-    {
-      path: "/contact",
-      updatedAt: LAST_UPDATED,
-      priority: 0.7,
-      changefreq: "monthly",
-    },
-  ];
-
-  const allPages = [...staticPages, ...locationPages];
-
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages
+${locationPages
   .map(
-    ({ path, updatedAt, priority, changefreq }) => `
+    (page) => `
   <url>
-    <loc>${SITE_URL}${path}</loc>
-    <lastmod>${formatDate(updatedAt)}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
+    <loc>${page.url}</loc>
+    <lastmod>${page.lastModified}</lastmod>
   </url>`
   )
   .join("")}
@@ -74,8 +42,7 @@ ${allPages
   return new NextResponse(xml, {
     headers: {
       "Content-Type": "application/xml",
-      "Cache-Control":
-        "public, max-age=0, s-maxage=86400, stale-while-revalidate",
+      "Cache-Control": "public, max-age=0, s-maxage=86400",
     },
   });
 }
