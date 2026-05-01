@@ -4,10 +4,25 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const url = request.nextUrl;
 
-  // remove trailing slash (except root)
-  if (url.pathname !== "/" && url.pathname.endsWith("/")) {
+  // 🚫 Skip SEO files
+  if (
+    url.pathname.startsWith("/robots.txt") ||
+    url.pathname.startsWith("/sitemap.xml") ||
+    url.pathname.startsWith("/location-sitemap.xml") ||
+    url.pathname.startsWith("/image-sitemap.xml")
+  ) {
+    return NextResponse.next();
+  }
+
+  // ✅ Remove trailing slash (except root & files)
+  if (
+    url.pathname !== "/" &&
+    url.pathname.endsWith("/") &&
+    !url.pathname.includes(".")
+  ) {
     return NextResponse.redirect(
-      new URL(url.pathname.slice(0, -1), request.url)
+      new URL(url.pathname.slice(0, -1), request.url),
+      301
     );
   }
 
@@ -16,6 +31,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!robots.txt|sitemap.xml|location-sitemap.xml|image-sitemap.xml).*)",
+    "/((?!_next|api|favicon.ico|robots.txt|sitemap.xml|location-sitemap.xml|image-sitemap.xml).*)",
   ],
 };
