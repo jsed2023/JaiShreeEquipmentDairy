@@ -499,12 +499,14 @@ export const automaticMilkCollectionSystem: Products[] = [
   url: "advance-milk-analyzer-max",
   category: "automatic-milk-collection-system",
   smallDesc:
-    "Advance Milk Analyzer Max for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    "Advance Milk Analyzer Max is a high-precision milk testing machine designed for dairy farms and milk collection centers. It accurately measures FAT, SNF, density, protein, lactose, and added water within seconds, ensuring fast and reliable milk analysis, 
+Advance Milk Analyzer Max for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh.
+High-precision milk analyzer for FAT, SNF, density, and protein testing with fast results and automated dairy data management",
 
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png",),
-    alt: "All In One Milk Analyzer And Advance Milk Analyzer Max",
+    alt: "Advance Milk Analyzer Max",
     },
   ],
 
@@ -528,7 +530,23 @@ export const automaticMilkCollectionSystem: Products[] = [
   ],
 
   desc:
-    "The function of the milk analyzer is to quickly analyze milk for FAT, SNF, proteins, lactose, water content, conductivity, and density.",
+    "Advance Milk Analyzer Max is a modern and high-performance milk testing machine designed for dairy farms, milk collection centers, and cooperative societies. It provides fast and accurate analysis of milk quality parameters including FAT, SNF, density, protein, lactose, added water, and conductivity.
+
+This advanced milk analyzer can process up to 90 samples per hour, delivering results within 25–40 seconds. It is equipped with a powerful ARM Cortex processor, ensuring reliable performance and precise calculations. The system supports automatic milk rate calculation based on FAT/SNF or FAT/CLR, making it ideal for digital dairy management systems.
+
+Built with a durable stainless steel body, the machine operates on 220V AC or 12V DC power supply, making it suitable for both rural and commercial dairy environments. It features a graphic LCD display, internal memory storage, USB and RS-232 connectivity, and an optional inbuilt thermal printer for instant report generation.
+
+With auto-calibration, self-check functions, and easy cleaning cycles, the Advance Milk Analyzer Max ensures low maintenance and long-term reliability. It is the perfect solution for improving milk testing accuracy, transparency in payment systems, and overall efficiency in dairy operations.
+
+Key Features:
+- Accurate testing of FAT, SNF, density, protein, lactose, and added water
+- Fast analysis time (25–40 seconds)
+- Capacity up to 90 samples per hour
+- Inbuilt data processor and milk collection unit (DPU)
+- Automatic rate calculation system
+- USB connectivity and data export options
+- Durable stainless steel body
+- Suitable for village milk collection centers and dairy farms.",
 
   keywords:
     "Milk Analyzer Advance, Milk Analyzer Advance Max, Milk Analyzer Advance Plus milk testing machine, dairy equipment, dairy machinery, dairy technology, milk quality testing, milk analysis, milk analyzer machine",
