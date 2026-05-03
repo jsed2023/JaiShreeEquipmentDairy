@@ -10,7 +10,9 @@ import {
 
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
-export const runtime = "nodejs";
+/* 🔥 IMPORTANT FIX */
+export const dynamic = "force-static";
+export const revalidate = 86400; // 1 day cache
 
 const SITE_URL = siteConfig.url;
 
@@ -33,7 +35,7 @@ export async function GET() {
     now.getDate()
   );
 
-  /* ================= STATIC PAGES ================= */
+  /* ================= STATIC ================= */
   const pages: SitemapEntry[] = [
     { path: "/", priority: 1, updatedAt: LAST_UPDATED, changefreq: "daily" },
     { path: "/about", priority: 0.8 },
@@ -50,7 +52,7 @@ export async function GET() {
     { path: "/dairy-equipment", priority: 0.9 },
   ];
 
-  /* ================= PRODUCT PAGES ================= */
+  /* ================= PRODUCTS ================= */
   const productPages: SitemapEntry[] = [
     ...automaticMilkCollectionSystem.map((p) => ({
       path: `/automatic-milk-collection-system/${p.url}`,
@@ -69,7 +71,7 @@ export async function GET() {
     })),
   ];
 
-  /* ================= LOCATION PAGES ================= */
+  /* ================= LOCATIONS ================= */
   const locationPages: SitemapEntry[] = rajasthanLocations.map((loc) => {
     const slug = loc.toLowerCase().replace(/\s+/g, "-");
 
@@ -80,13 +82,11 @@ export async function GET() {
     };
   });
 
-  /* ================= MERGE ALL ================= */
   const urls = [...pages, ...productPages, ...locationPages];
 
   /* ================= XML ================= */
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
 ${urls
   .map(
     ({ path, updatedAt, priority, changefreq }) => `
@@ -98,14 +98,13 @@ ${urls
   </url>`
   )
   .join("")}
-
 </urlset>`;
 
   return new NextResponse(xml, {
     headers: {
       "Content-Type": "application/xml",
-      "Cache-Control":
-        "public, max-age=0, s-maxage=86400, stale-while-revalidate",
+      /* 🔥 FIXED CACHE */
+      "Cache-Control": "public, max-age=86400, immutable",
     },
   });
 }
