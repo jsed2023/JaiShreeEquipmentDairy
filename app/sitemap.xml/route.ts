@@ -8,6 +8,10 @@ import {
   automaticMilkCollectionSystem,
 } from "@/config/products";
 
+import { rajasthanLocations } from "@/lib/rajasthan-locations";
+
+export const runtime = "nodejs";
+
 const SITE_URL = siteConfig.url;
 
 type SitemapEntry = {
@@ -21,9 +25,15 @@ const formatDate = (date?: string | Date) =>
   new Date(date || new Date()).toISOString();
 
 export async function GET() {
-  const LAST_UPDATED = new Date();
+  const now = new Date();
 
-  /* STATIC PAGES */
+  const LAST_UPDATED = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate()
+  );
+
+  /* ================= STATIC PAGES ================= */
   const pages: SitemapEntry[] = [
     { path: "/", priority: 1, updatedAt: LAST_UPDATED, changefreq: "daily" },
     { path: "/about", priority: 0.8 },
@@ -40,7 +50,7 @@ export async function GET() {
     { path: "/dairy-equipment", priority: 0.9 },
   ];
 
-  /* PRODUCT PAGES */
+  /* ================= PRODUCT PAGES ================= */
   const productPages: SitemapEntry[] = [
     ...automaticMilkCollectionSystem.map((p) => ({
       path: `/automatic-milk-collection-system/${p.url}`,
@@ -59,8 +69,21 @@ export async function GET() {
     })),
   ];
 
-  const urls = [...pages, ...productPages];
+  /* ================= LOCATION PAGES ================= */
+  const locationPages: SitemapEntry[] = rajasthanLocations.map((loc) => {
+    const slug = loc.toLowerCase().replace(/\s+/g, "-");
 
+    return {
+      path: `/milk-analyzer-${slug}`,
+      updatedAt: LAST_UPDATED,
+      priority: 0.8,
+    };
+  });
+
+  /* ================= MERGE ALL ================= */
+  const urls = [...pages, ...productPages, ...locationPages];
+
+  /* ================= XML ================= */
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
