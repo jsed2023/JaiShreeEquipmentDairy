@@ -17,6 +17,4 @@ export default function robots(): MetadataRoute.Robots {
       "https://jaishreeequipmentdairy.in/sitemap.xml",
       "https://jaishreeequipmentdairy.in/image-sitemap.xml",
     ],
-    host: "https://jaishreeequipmentdairy.in",
-  };
 }
