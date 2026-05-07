@@ -1,15 +1,22 @@
 import type { MetadataRoute } from "next";
 
+const SITE_URL = "https://jaishreeequipmentdairy.in";
+
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/admin/", "/private/", "/api/"],
-    },
-    sitemap: [
-      "https://jaishreeequipmentdairy.in/sitemap.xml",
-      "https://jaishreeequipmentdairy.in/image-sitemap.xml",
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/admin/", "/private/", "/api/"],
+      },
     ],
+
+    sitemap: [
+      `${SITE_URL}/sitemap.xml`,
+      `${SITE_URL}/image-sitemap.xml`,
+    ],
+
+   
   };
 }
