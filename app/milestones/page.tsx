@@ -9,7 +9,7 @@ export default function MilestonesPage() {
        <div className="bg-sky-100 dark:bg-sky-900 text-sky-900 dark:text-sky-100 py-4xl">
           <h1 className="relative text-center font-bold sm:text-4xl
            text-lg bg-clip-text text-transparent animate-title-gradient">
-            Milestones Journey By Jai Shree Equipment Dairy
+            Milestones Journey By Jai Jai Shree Equipment Dairy Milestones & Company Journey
           </h1></div>
           <div className="flex justify-center my-5">
             <Image
