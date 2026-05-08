@@ -49,7 +49,8 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-3">Contact Us</h4>
           <ul className="space-y-2 text-sm">
-            <li>📍 Rajasthan, India</li>
+            <li>📍 
+Shop No. B-42, Upper Side, Rohit Udhyog Market, Near HP Gas Agency, Shiv Circle Road, Sri Ganganagar, Rajasthan – 335001, India</li>
             <li>
               📞{" "}
               <a href="tel:+918112294173" className="hover:text-white">
