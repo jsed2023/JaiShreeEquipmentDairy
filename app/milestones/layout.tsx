@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Milestones",
 
   description:
-    "Explore the journey, growth, and achievements of Jai Shree Equipment Dairy and how it has supported dairy farmers with quality equipment and services.",
+    "Explore the growth journey of Jai Shree Equipment Dairy, trusted supplier of dairy equipment, milk analyzers, milking machines, and AMCS systems in Rajasthan since 2020.",
 
   keywords: metaKeywords[11].keywords,
 
