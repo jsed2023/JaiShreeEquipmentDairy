@@ -16,88 +16,33 @@ const SITE_URL = siteConfig.url;
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: `${SITE_URL}/`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    {
-      url: `${SITE_URL}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/contact`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/categories`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/gallery`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/testimonials`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/locations`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/milestones`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/milk-rate-chart`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/services`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/automatic-milk-collection-system`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/milk-testing-equipment`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/dairy-equipment`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-  ];
+  /* ================= STATIC PAGES ================= */
 
-  /* ================= PRODUCTS ================= */
+  const staticPages: MetadataRoute.Sitemap = [
+    "",
+    "/about",
+    "/contact",
+    "/categories",
+    "/gallery",
+    "/testimonials",
+    "/locations",
+    "/milestones",
+    "/milk-rate-chart",
+    "/services",
+    "/automatic-milk-collection-system",
+    "/milk-testing-equipment",
+    "/dairy-equipment",
+  ].map((path, index) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: now,
+    changeFrequency:
+      path === "" || path === "/milk-rate-chart"
+        ? "daily"
+        : "weekly",
+    priority: index === 0 ? 1 : 0.8,
+  }));
+
+  /* ================= AUTOMATIC MILK COLLECTION ================= */
 
   const automaticMilkCollectionPages: MetadataRoute.Sitemap =
     automaticMilkCollectionSystem.map((product) => ({
@@ -106,6 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     }));
+
+  /* ================= DAIRY EQUIPMENT ================= */
 
   const dairyEquipmentPages: MetadataRoute.Sitemap = [
     ...creamSeparatorMachine,
@@ -117,7 +64,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  const milkTestingPages: MetadataRoute.Sitemap =
+  /* ================= MILK TESTING EQUIPMENT ================= */
+
+  const milkTestingEquipmentPages: MetadataRoute.Sitemap =
     MilkTestingEquipment.map((product) => ({
       url: `${SITE_URL}/milk-testing-equipment/${product.url}`,
       lastModified: product.updatedAt || now,
@@ -125,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     }));
 
-  /* ================= LOCATIONS ================= */
+  /* ================= LOCATION PAGES ================= */
 
   const locationPages: MetadataRoute.Sitemap =
     rajasthanLocations.map((location) => {
@@ -142,13 +91,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       };
     });
 
-  /* ================= FINAL ================= */
+  /* ================= FINAL SITEMAP ================= */
 
   return [
     ...staticPages,
     ...automaticMilkCollectionPages,
     ...dairyEquipmentPages,
-    ...milkTestingPages,
+    ...milkTestingEquipmentPages,
     ...locationPages,
   ];
 }
