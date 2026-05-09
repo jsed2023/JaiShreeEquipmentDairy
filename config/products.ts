@@ -2804,7 +2804,7 @@ alt: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer machine",
 {
   id: 12,
 
-  name: "Ekomilk Ultra ",
+  name: "Ekomilk Ultra Analyzer Machine",
 
   url: "ekomilk-ultra",
 
