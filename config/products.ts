@@ -1910,7 +1910,7 @@ export const milkingMachine: Products[] = [
     ],
     desc: "Jai Shree Equipment Dairy is a prominent distributor of cow and buffalo milking machines in Sri Ganganagar, Rajasthan.They offer a wide range of milking machines suitable for both small-scale and large-scale dairy operation",
     keywords:
-      "Milking Machine, Vansun Milking Machine, Jai Shree Equipment Dairy, Milking Machine, Dairy Equipment, Dairy Machinery, Automatic Milking Machine, Electric Milking Machine, Portable Milking Machine, Dairy Farm Equipment, Livestock Equipment, Dairy Technology, Dairy Automation, Milk Production, Farm Equipment, Vansun Milking Machine Sri Ganganagar, Vansun Milking Machine Bikaner, Vansun Milking Machine Hanumangarh, Vansun Milking Machine Anupgarh, Jai Shree Equipment Dairy Sri Ganganagar, Jai Shree Equipment Dairy Bikaner, Jai Shree Equipment Dairy Hanumangarh, Jai Shree Equipment Dairy Anupgarh, Milking Machine Sri Ganganagar, Milking Machine Bikaner, Milking Machine Hanumangarh, Milking Machine Anupgarh, Dairy Equipment Sri Ganganagar, Dairy Equipment Bikaner, Dairy Equipment Hanumangarh, Dairy Equipment Anupgarh, Dairy Machinery Sri Ganganagar, Dairy Machinery Bikaner, Dairy Machinery Hanumangarh, Dairy Machinery Anupgarh, Best Milking Machine in Sri Ganganagar, Best Milking Machine in Bikaner, Best Milking Machine in Hanumangarh, Best Milking Machine in Anupgarh, Buy Milking Machine in Sri Ganganagar, Buy Milking Machine in Bikaner, Buy Milking Machine in Hanumangarh, Buy Milking Machine in Anupgarh, Price of Milking Machine in Sri Ganganagar, Price of Milking Machine in Bikaner, Price of Milking Machine in Hanumangarh, Price of Milking Machine in Anupgarh, Vansun Milking Machine Dealer in Sri Ganganagar, Vansun Milking Machine Dealer in Bikaner, Vansun Milking Machine Dealer in Hanumangarh, Vansun Milking Machine Dealer in Anupgarh, Jai Shree Equipment Dairy Contact Number, Jai Shree Equipment Dairy Address, Jai Shree Equipment Dairy Reviews, Jai Shree Equipment Dairy Services",
+      "Milking Machine, Vansun Milking Machine, Jai Shree Equipment Dairy, Dairy Equipment, Dairy Machinery, Automatic Milking Machine, Electric Milking Machine, Portable Milking Machine, Dairy Farm Equipment, Dairy Technology, Farm Equipment, Vansun Milking Machine Sri Ganganagar, Vansun Milking Machine Bikaner, Vansun Milking Machine Hanumangarh, Vansun Milking Machine Anupgarh, Jai Shree Equipment Dairy Sri Ganganagar, Jai Shree Equipment Dairy Bikaner, Jai Shree Equipment Dairy Hanumangarh, Jai Shree Equipment Dairy Anupgarh, Milking Machine Sri Ganganagar, Milking Machine Bikaner, Milking Machine Hanumangarh, Milking Machine Anupgarh, Dairy Equipment Sri Ganganagar, Dairy Equipment Bikaner, Dairy Equipment Hanumangarh, Dairy Equipment Anupgarh, Dairy Machinery Sri Ganganagar, Dairy Machinery Bikaner, Dairy Machinery Hanumangarh, Dairy Machinery Anupgarh, Best Milking Machine in Sri Ganganagar, Best Milking Machine in Bikaner, Best Milking Machine in Hanumangarh, Best Milking Machine in Anupgarh, Buy Milking Machine in Sri Ganganagar, Buy Milking Machine in Bikaner, Buy Milking Machine in Hanumangarh, Buy Milking Machine in Anupgarh, Price of Milking Machine in Sri Ganganagar, Price of Milking Machine in Bikaner, Price of Milking Machine in Hanumangarh, Price of Milking Machine in Anupgarh, Vansun Milking Machine Dealer in Sri Ganganagar, Vansun Milking Machine Dealer in Bikaner, Vansun Milking Machine Dealer in Hanumangarh, Vansun Milking Machine Dealer in Anupgarh, Jai Shree Equipment Dairy Contact Number, Jai Shree Equipment Dairy Address, Jai Shree Equipment Dairy Reviews, Jai Shree Equipment Dairy Services",
   },
 ];
 
@@ -2800,6 +2800,178 @@ alt: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer machine",
   // 🔍 SEO Keywords
   keywords:
     "ekomilk ultra milk analyzer, ultrasonic milk stirrer machine, milk analyzer with stirrer india, milk testing machine for dairy farms, milk fat snf testing machine, ultrasonic milk analyzer india, milk quality testing equipment, digital milk analyzer machine, dairy milk testing machine rajasthan, milk analyzer machine sri ganganagar, milk testing machine bikaner, dairy equipment hanumangarh, milk analyzer anupgarh, milk testing machine for collection center, milk analyzer price india, best milk analyzer machine india, milk analyzer supplier rajasthan, dairy milk analyzer machine india, milk analyzer with ultrasonic stirrer, milk testing equipment for dairy labs",
-}
+},
+{
+  id: 12,
+
+  name: "Ekomilk Ultra ",
+
+  url: "ekomilk-ultra",
+
+  category: "milk-testing-equipment",
+
+  smallDesc:
+    "Ekomilk Ultra milk analyzer for fast, accurate, and reliable milk testing in dairy farms, milk collection centers, and laboratories.",
+
+  images: [
+    {
+      src: cld(
+        "https://res.cloudinary.com/dddhtbuzs/image/upload/v1778338596/Ekomilk_Ultra.webp"
+      ),
+
+      alt: "Ekomilk Ultra",
+    },
+  ],
+
+  price: "33,000",
+
+  features: [
+    {
+      id: "12A",
+      key: "Model Name",
+      value: "Ekomilk Ultra",
+    },
+
+    {
+      id: "12B",
+      key: "Brand",
+      value: "Ekomilk",
+    },
+
+    {
+      id: "12C",
+      key: "Machine Type",
+      value: "Ultrasonic Digital Milk Analyzer",
+    },
+
+    {
+      id: "12D",
+      key: "Milk Parameters Tested",
+      value:
+        "Fat (FAT), SNF, Protein, Lactose, Density, Added Water, Temperature, pH, Freezing Point",
+    },
+
+    {
+      id: "12E",
+      key: "Testing Capacity",
+      value: "Approx. 30–40 Seconds per Sample",
+    },
+
+    {
+      id: "12F",
+      key: "Sample Volume",
+      value: "15–20 ml",
+    },
+
+    {
+      id: "12G",
+      key: "Display Type",
+      value: "Digital LCD Display",
+    },
+
+    {
+      id: "12H",
+      key: "Operation Mode",
+      value: "Fully Automatic",
+    },
+
+    {
+      id: "12I",
+      key: "Power Supply",
+      value: "220V AC Power",
+    },
+
+    {
+      id: "12J",
+      key: "Body Material",
+      value: "Durable ABS Body",
+    },
+
+    {
+      id: "12K",
+      key: "Machine Weight",
+      value: "Approx. 4–5 kg",
+    },
+
+    {
+      id: "12L",
+      key: "Price",
+      value: "₹40,000",
+    },
+
+    {
+      id: "12M",
+      key: "Availability",
+      value: "In Stock",
+    },
+
+    // 🔥 Advanced Features
+    {
+      id: "12N",
+      key: "High Accuracy Testing",
+      value: "High-precision milk testing without chemicals",
+    },
+
+    {
+      id: "12O",
+      key: "Fast Analysis",
+      value: "Fast and accurate milk analysis within seconds",
+    },
+
+    {
+      id: "12P",
+      key: "Ultrasonic Technology",
+      value: "Advanced ultrasonic testing technology",
+    },
+
+    {
+      id: "12Q",
+      key: "User-Friendly Interface",
+      value: "Easy-to-use digital LCD interface",
+    },
+
+    {
+      id: "12R",
+      key: "Low Maintenance",
+      value: "Low maintenance with energy-efficient performance",
+    },
+
+    {
+      id: "12S",
+      key: "Compact Design",
+      value: "Compact, durable, and reliable dairy testing solution",
+    },
+
+    // 🔥 Applications
+    {
+      id: "12T",
+      key: "Used In",
+      value: "Milk Collection Centers",
+    },
+
+    {
+      id: "12U",
+      key: "Used In",
+      value: "Dairy Farms",
+    },
+
+    {
+      id: "12V",
+      key: "Used In",
+      value: "Dairy Quality Testing Laboratories",
+    },
+
+    {
+      id: "12W",
+      key: "Used In",
+      value: "Milk Processing Plants and Dairy Units",
+    },
+  ],
+desc:
+  "Ekomilk Ultra Milk Analyzer is an digital milk testing machine designed for fast, accurate, and reliable dairy analysis. It efficiently measures Fat (FAT), SNF, Protein, Lactose, Density, Added Water, Temperature, pH, and Freezing Point within 30–40 seconds. Built with ultrasonic testing technology and a user-friendly digital LCD display, the machine delivers precise results with minimal maintenance. Its compact design, fully automatic operation, and energy-efficient performance make it an ideal solution for dairy farms, milk collection centers, dairy processing plants, and quality testing laboratories.",
+
+  keywords:
+    "ekomilk ultra, ekomilk ultra milk analyzer, ekomilk ultra machine price, digital milk analyzer machine, milk analyzer machine india, milk testing machine, milk fat snf testing machine, dairy milk testing machine, milk analyzer supplier rajasthan, milk testing equipment india",
+},
 ];
 
