@@ -2,10 +2,11 @@ import { metaKeywords, siteConfig } from "@/config/site";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dairy Equipment Services",
+  title: "Milk Analyzer Repair & Dairy Equipment Services in Rajasthan
+",
 
   description:
-    "Professional dairy equipment services including installation, maintenance, and repair. Get reliable dairy machinery support from Jai Shree Equipment Dairy.",
+    "Jai Shree Equipment Dairy provides expert milk analyzer repair, AMCS installation, dairy equipment maintenance, calibration, and dairy machinery services in Rajasthan. Get fast, reliable, and affordable support for milk testing machines, ultrasonic milk stirrers, weighing scales, and dairy automation systems in Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh, and nearby areas.",
 
   keywords: metaKeywords[4].keywords,
 
