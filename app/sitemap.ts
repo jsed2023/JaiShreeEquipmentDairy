@@ -11,6 +11,9 @@ import {
 
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
+export const dynamic = "force-static";
+export const revalidate = 86400;
+
 const SITE_URL = siteConfig.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -44,52 +47,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   /* ================= AUTOMATIC MILK COLLECTION ================= */
 
-  const automaticMilkCollectionPages: MetadataRoute.Sitemap =
+  const automaticMilkCollectionPages =
     automaticMilkCollectionSystem.map((product) => ({
       url: `${SITE_URL}/automatic-milk-collection-system/${product.url}`,
-      lastModified: product.updatedAt || now,
-      changeFrequency: "weekly",
+      lastModified: product.updatedAt ?? now,
+      changeFrequency: "weekly" as const,
       priority: 0.9,
     }));
 
   /* ================= DAIRY EQUIPMENT ================= */
 
-  const dairyEquipmentPages: MetadataRoute.Sitemap = [
+  const dairyEquipmentPages = [
     ...creamSeparatorMachine,
     ...milkingMachine,
   ].map((product) => ({
     url: `${SITE_URL}/dairy-equipment/${product.url}`,
-    lastModified: product.updatedAt || now,
-    changeFrequency: "weekly",
+    lastModified: product.updatedAt ?? now,
+    changeFrequency: "weekly" as const,
     priority: 0.9,
   }));
 
   /* ================= MILK TESTING EQUIPMENT ================= */
 
-  const milkTestingEquipmentPages: MetadataRoute.Sitemap =
+  const milkTestingEquipmentPages =
     MilkTestingEquipment.map((product) => ({
       url: `${SITE_URL}/milk-testing-equipment/${product.url}`,
-      lastModified: product.updatedAt || now,
-      changeFrequency: "weekly",
+      lastModified: product.updatedAt ?? now,
+      changeFrequency: "weekly" as const,
       priority: 0.9,
     }));
 
   /* ================= LOCATION PAGES ================= */
 
-  const locationPages: MetadataRoute.Sitemap =
-    rajasthanLocations.map((location) => {
-      const slug = location
-        .toLowerCase()
-        .trim()
-        .replace(/\s+/g, "-");
+  const locationPages = rajasthanLocations.map((location) => {
+    const slug = location
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "-");
 
-      return {
-        url: `${SITE_URL}/milk-analyzer-${slug}`,
-        lastModified: now,
-        changeFrequency: "weekly",
-        priority: 0.8,
-      };
-    });
+    return {
+      url: `${SITE_URL}/milk-analyzer-${slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    };
+  });
 
   /* ================= FINAL SITEMAP ================= */
 
