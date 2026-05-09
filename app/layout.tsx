@@ -23,7 +23,7 @@ keywords: metaKeywords[0].keywords,
 authors: [{ name: siteConfig.name }],
 creator: siteConfig.name,
 publisher: siteConfig.name,
-  category:"dairy equipment, milk testing equipment,automatic milk collection system";
+  category:"dairy equipment, milk testing equipment,automatic milk collection system",
 alternates: { canonical: siteConfig.url },
 icons: { icon: "/favicon.ico" },
 verification: {
