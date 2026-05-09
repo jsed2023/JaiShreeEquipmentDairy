@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-
+export const dynamic = "force-static";
 const SITE_URL = "https://jaishreeequipmentdairy.in";
 
 export default function robots(): MetadataRoute.Robots {
