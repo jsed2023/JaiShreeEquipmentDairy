@@ -2,8 +2,8 @@ import { metaKeywords, siteConfig } from "@/config/site";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Milk Analyzer Repair & Dairy Equipment Services in Rajasthan
-",
+  title:
+    "Milk Analyzer Repair & Dairy Equipment Services in Rajasthan",
 
   description:
     "Jai Shree Equipment Dairy provides expert milk analyzer repair, AMCS installation, dairy equipment maintenance, calibration, and dairy machinery services in Rajasthan. Get fast, reliable, and affordable support for milk testing machines, ultrasonic milk stirrers, weighing scales, and dairy automation systems in Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh, and nearby areas.",
@@ -21,9 +21,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Dairy Equipment Services",
+    title:
+      "Milk Analyzer Repair & Dairy Equipment Services in Rajasthan",
     description:
-      "Installation, maintenance, and repair services for dairy equipment. Trusted dairy machinery services from Jai Shree Equipment Dairy.",
+      "Expert milk analyzer repair, AMCS installation, dairy equipment maintenance, calibration, and dairy machinery services in Rajasthan.",
     url: `${siteConfig.url}/services`,
     siteName: siteConfig.name,
     locale: "en_IN",
@@ -32,9 +33,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Dairy Equipment Services",
+    title:
+      "Milk Analyzer Repair & Dairy Equipment Services in Rajasthan",
     description:
-      "Professional dairy equipment installation, maintenance and repair services.",
+      "Professional milk analyzer repair, dairy equipment installation, calibration, and maintenance services in Rajasthan.",
   },
 
   robots: {
