@@ -41,37 +41,6 @@ const nextConfig = {
       },
     ];
   },
-
-  async headers() {
-    return [
-      {
-        source: "/robots.txt",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "text/plain; charset=utf-8",
-          },
-          {
-            key: "Cache-Control",
-            value: "no-store, no-cache, must-revalidate",
-          },
-        ],
-      },
-      {
-        source: "/:path*.xml",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "application/xml; charset=utf-8",
-          },
-          {
-            key: "Cache-Control",
-            value: "no-store, no-cache, must-revalidate",
-          },
-        ],
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;
