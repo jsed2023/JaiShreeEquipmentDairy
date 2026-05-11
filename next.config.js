@@ -32,6 +32,16 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
 
+  async redirects() {
+    return [
+      {
+        source: "/:path+/",
+        destination: "/:path+",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
