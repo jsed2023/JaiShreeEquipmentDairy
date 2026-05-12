@@ -39,7 +39,7 @@ export default function BuyNowModal({
 
 Please contact me.`;
 
-    const whatsappNumber = "918112294173";
+    const whatsappNumber = "917375082341";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       message
     )}`;
