@@ -27,7 +27,7 @@ Quantity: ${quantity}`;
     const encodedMessage = encodeURIComponent(message);
 
     // Your WhatsApp number link
-    const whatsappUrl = `https://wa.me/918112294173?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/917375082341?text=${encodedMessage}`;
 
     return NextResponse.json(
       {
