@@ -36,7 +36,7 @@ export default function ContactPage() {
 
     setSending(true);
 
-    const phoneNumber = "918112294173";
+    const phoneNumber = "917375082341";
 
     const text = `📩 New Contact Request
 ──────────────────────
@@ -112,7 +112,7 @@ export default function ContactPage() {
               <h3>Call Us</h3>
             </div>
             <p className="text-stone-500">
-              +91 8112294173
+              +91 7375082341
             </p>
           </div>
           {/* ===== Legal Text ===== */}
