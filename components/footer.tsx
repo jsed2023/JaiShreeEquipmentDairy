@@ -102,7 +102,7 @@ export default function Footer() {
                 href="tel:+918112294173"
                 className="hover:text-white"
               >
-                +91 81122 94173
+                +91 73750 82341
               </a>
             </li>
 
