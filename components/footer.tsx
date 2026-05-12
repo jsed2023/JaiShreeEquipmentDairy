@@ -99,7 +99,7 @@ export default function Footer() {
             <li>
               📞{" "}
               <a
-                href="tel:+918112294173"
+                href="tel:+917375082341"
                 className="hover:text-white"
               >
                 +91 73750 82341
