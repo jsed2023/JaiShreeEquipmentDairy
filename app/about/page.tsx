@@ -98,8 +98,7 @@ export default function AboutPage() {
             <span className="font-bold">
               DISTRIBUTOR SERVICE IN BIKANER DIVISION :-
             </span>
-            Ekomilk Analyzer Ultra Mb, Advance Milk Analyzer Plus & Max, Lacto Scan, Milk
-            Collection Unit, Paras Cream Separator Machine, Vansun Milking Machine, Weighing Machine, 
+             Advance Milk Analyzer Plus & Max, Lacto Scan, Ekomilk Analyzer Ultra Mb, Milk Collection Unit, Paras Cream Separator Machine, Vansun Milking Machine, Weighing Machine, 
             Milk Ultrasonic Stirrer, Etc All Item For Sale And Service.
           </p>
           <p className="max-sm:text-sm dark:text-gray-400 text-stone-700">
