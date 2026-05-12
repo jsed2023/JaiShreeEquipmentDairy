@@ -33,7 +33,7 @@ export default function LocalBusinessSchema() {
             "name": "Akshay Choudhary"
           },
 
-          "telephone": "+91-8112294173",
+          "telephone": "+91-7375082341",
           "priceRange": "₹₹",
 
           "inLanguage": "en-IN",
@@ -43,7 +43,7 @@ export default function LocalBusinessSchema() {
           
           "contactPoint":{
             "@type":"ContactPoint",
-            "telephone":"+91-8112294173",
+            "telephone":"+91-7375082341",
             "contactType":"customer service",
             "areaServed":"IN",
             "availableLanguage":["Hindi","English","Punjabi"]
@@ -322,7 +322,7 @@ export default function LocalBusinessSchema() {
           "paymentAccepted":["Cash","UPI","NFC Mobile Payments"],
 
           "sameAs":[
-            "https://wa.me/918112294173"
+            "https://wa.me/917375082341"
           ],
 
           "hasDeliveryMethod":
