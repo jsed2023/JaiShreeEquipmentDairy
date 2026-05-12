@@ -24,7 +24,7 @@ export const CATEGORIES: Category[] = [
       description:
         "Leading supplier of dairy equipment including milking machines, cream separators, milk cooling tanks, and dairy farm machinery in Rajasthan.",
       keywords:
-        "dairy equipment, dairy equipment supplier india, dairy equipment rajasthan, dairy machinery india, dairy farm equipment, dairy plant machinery, dairy equipment manufacturer india, dairy equipment exporter, dairy tools and equipment, milk processing equipment, dairy processing machines, dairy machinery supplier, dairy equipment near me, milking machine, milking machine price india, automatic milking machine, cow milking machine, buffalo milking machine, portable milking machine, cream separator machine, dairy cream separator price, butter churn machine, paneer making machine, milk storage tank, bulk milk cooler, dairy cooling tank, milk chiller machine, dairy farm setup equipment, small dairy farm equipment india, commercial dairy equipment, dairy automation equipment, buy dairy equipment online india",
+        "dairy equipment, dairy equipment supplier india, dairy equipment rajasthan, dairy machinery india, dairy farm equipment, dairy machinery supplier, dairy equipment near me, milking machine, milking machine price india, automatic milking machine, cow milking machine, buffalo milking machine, portable milking machine, cream separator machine, paras milk cream separator machine, milk cream separator machine, dairy cream separator price,",
     },
   },
   {
@@ -39,7 +39,7 @@ export const CATEGORIES: Category[] = [
       description:
         "High quality milk testing equipment including milk analyzers, fat testing machines, and ultrasonic milk stirrers for accurate dairy quality testing.",
       keywords:
-        "milk testing equipment, milk testing equipment india, milk analyzer machine, milk analyzer machine price india, digital milk analyzer, automatic milk analyzer, milk fat testing machine, milk fat analyzer, milk quality testing equipment, dairy testing equipment, milk testing lab equipment, milk analyzer supplier india, milk analyzer supplier rajasthan, lactometer digital, electronic lactometer, milk adulteration testing kit, milk purity testing machine, milk SNF testing machine, milk composition analyzer, milk testing machine price, portable milk testing kit, dairy milk testing solutions, milk analyzer for dairy farm, bulk milk testing machine, ultrasonic milk stirrer, milk stirrer machine, automatic milk stirrer, ultrasonic stirrer for milk analyzer, milk sample mixing machine, buy milk analyzer online india",
+        "milk testing equipment, milk testing equipment india, milk analyzer machine, milk analyzer machine price india, digital milk analyzer, automatic milk analyzer, milk fat testing machine, milk fat analyzer, milk quality testing equipment, dairy testing equipment, milk testing lab equipment, milk analyzer supplier india, milk analyzer supplier rajasthan, milk purity testing machine, milk SNF testing machine, milk composition analyzer, milk testing machine price, portable milk Analyzer, dairy milk testing solutions, milk analyzer for dairy farm, bulk milk testing machine, ultrasonic milk stirrer, milk stirrer machine, automatic milk stirrer, ultrasonic stirrer for milk analyzer, milk sample mixing machine, buy milk analyzer online india",
     },
   },
   {
