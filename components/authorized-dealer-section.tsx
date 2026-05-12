@@ -63,7 +63,7 @@ export function AuthorizedDealerSection() {
                 href="tel:8112294173"
                 className="text-base font-semibold text-primary block pt-1"
               >
-                📞 8112294173
+                📞 7375082341
               </a>
 
               {/* Certificate Button */}
