@@ -60,7 +60,7 @@ export function AuthorizedDealerSection() {
 
               {/* Call CTA */}
               <a
-                href="tel:8112294173"
+                href="tel:+917375082341"
                 className="text-base font-semibold text-primary block pt-1"
               >
                 📞 7375082341
