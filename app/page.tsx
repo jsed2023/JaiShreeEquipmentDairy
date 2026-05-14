@@ -74,7 +74,7 @@ export default function Home() {
 
   Our product range includes{" "}
   <strong>
-    Milk Analyzer Machines, Milk Collection Units, Advance Milk Analyzer Max,
+    Milk Fat Testing Machine, Milk Analyzer Machines,Ekomilk Ultra Milk, Milk Collection Units, Advance Milk Analyzer Max,
     Advance Milk Analyzer Plus, Milk Analyzer Advance, Milking Machines, Milk
     Cream Separators, and Digital Weighing Scales
   </strong>
