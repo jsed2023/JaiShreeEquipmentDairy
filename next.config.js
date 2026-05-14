@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
-
   compress: true,
   reactStrictMode: true,
   poweredByHeader: false,
+  swcMinify: true,
 
   images: {
     remotePatterns: [
@@ -20,26 +20,6 @@ const nextConfig = {
 
   experimental: {
     scrollRestoration: true,
-  },
-
-  swcMinify: true,
-
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
-
-  async redirects() {
-    return [
-      {
-        source: "/:path+/",
-        destination: "/:path+",
-        permanent: true,
-      },
-    ];
   },
 };
 
