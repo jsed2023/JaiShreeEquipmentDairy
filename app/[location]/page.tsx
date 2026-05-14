@@ -28,7 +28,7 @@ function formatName(slug: string) {
 // 🔥 WhatsApp
 function createWhatsAppLink(city: string) {
   const msg = `Hello, I want to buy Milk Analyzer in ${city}`;
-  return `https://wa.me/918112294173?text=${encodeURIComponent(msg)}`;
+  return `https://wa.me/917375082341?text=${encodeURIComponent(msg)}`;
 }
 
 // 🔥 Nearby
@@ -128,6 +128,14 @@ export default function LocationPage({ params }: Props) {
         <div className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-xl font-semibold mb-3">Industry Use</h2>
           <p>{seo.industry}</p>
+        </div>
+<div className="bg-white p-6 rounded-xl shadow">
+          <h2 className="text-xl font-semibold mb-3">Intro</h2>
+          <p>{seo.intro}</p>
+        </div>
+<div className="bg-white p-6 rounded-xl shadow">
+          <h2 className="text-xl font-semibold mb-3">Products</h2>
+          <p>{seo.products}</p>
         </div>
       </div>
 
