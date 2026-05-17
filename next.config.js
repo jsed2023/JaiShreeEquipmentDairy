@@ -21,6 +21,30 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+
+  // ================= ADD THIS HEADERS SECTION =================
+  async headers() {
+    return [
+      {
+        source: "/sitemap.xml",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/xml",
+          },
+        ],
+      },
+      {
+        source: "/image-sitemap.xml",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/xml",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
