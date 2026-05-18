@@ -3,7 +3,7 @@
 import { PiChatsDuotone } from "react-icons/pi";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { FcCallback } from "react-icons/fc";
-import { Input, Textarea, Button, } from "@nextui-org/react";
+import { Input, Textarea, Button } from "@nextui-org/react";
 import { IoMdSend } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -21,33 +21,32 @@ interface ContactFormData {
 }
 
 export default function ContactPage() {
-  const { register, handleSubmit, reset,  } =
+  const { register, handleSubmit, reset } =
     useForm<ContactFormData>();
 
   const [sending, setSending] = useState(false);
 
   const handleOnSubmit = async (data: ContactFormData) => {
 
-    if (!data.consent) {
-      alert("Please accept Terms & Conditions and Privacy Policy");
-      return;
-    }
+    if (sending) return;
 
     setSending(true);
 
     const phoneNumber = "917375082341";
 
-    const text = `📩 New Contact Request
+    const text = encodeURIComponent(`
+📩 New Contact Request
 ──────────────────────
 👤 Name: ${data.firstName} ${data.lastName ?? ""}
 📞 Mobile: ${data.mobileNumber}
 📧 Email: ${data.email ?? ""}
 📝 Message: ${data.query ?? ""}
-`
-      .replace(/ /g, "%20")
-      .replace(/\n/g, "%0A");
+`);
 
-    window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${text}`,
+      "_blank"
+    );
 
     reset();
     setSending(false);
@@ -58,20 +57,27 @@ export default function ContactPage() {
 
       {/* ===== Header ===== */}
 
-           <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
-          <h1 className="text-center font-bold underline sm:text-4xl text-lg
-             bg-clip-text text-transparent animate-title-gradient">
-            Contact
-          </h1></div>
-             <section
-          className="rounded-xl dark:bg-[#27272a]bg-[rgb(244,244,245)] p-4 flex flex-col gap-y-5"
-        ><div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
-             <h2>
-        <p className="text-center max-w-4xl mx-auto text-stone-700 dark:text-white/80">
-          Get in touch with Jai Shree Equipment Dairy for milk analyzers, DPU milk
-          collection units, milking machines and dairy equipment in Sri
-          Ganganagar, Hanumangarh, Suratgarh, Bikaner And Nearby Areas.
-        </p></h2></div></section>
+      <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 space-y-3">
+        <h1
+          className="text-center font-bold underline sm:text-4xl text-lg
+          bg-clip-text text-transparent animate-title-gradient"
+        >
+          Contact
+        </h1>
+      </div>
+
+      <section
+        className="rounded-xl dark:bg-[#27272a] bg-[rgb(244,244,245)] p-4 flex flex-col gap-y-5"
+      >
+        <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 space-y-3">
+          <p className="text-center max-w-4xl mx-auto text-stone-700 dark:text-white/80">
+            Get in touch with Jai Shree Equipment Dairy for milk analyzers,
+            DPU milk collection units, milking machines and dairy equipment
+            in Sri Ganganagar, Hanumangarh, Suratgarh, Bikaner And Nearby Areas.
+          </p>
+        </div>
+      </section>
+
       <div className="flex max-md:flex-col gap-8 justify-between w-full">
 
         {/* =======================
@@ -88,6 +94,7 @@ export default function ContactPage() {
               <PiChatsDuotone className="text-2xl text-stone-400" />
               <h3>Chat with Us</h3>
             </div>
+
             <p className="text-stone-500">
               choudharydairy@outlook.com
             </p>
@@ -98,9 +105,12 @@ export default function ContactPage() {
               <FaEarthAmericas className="text-2xl text-stone-400" />
               <h3>Visit Us</h3>
             </div>
+
             <p className="text-stone-500">
-              Shop No:-B-42, Rohit Udhyog Market,<br />
-              Near HP Gas Agency, Shiv Circle Road,<br />
+              Shop No:-B-42, Rohit Udhyog Market,
+              <br />
+              Near HP Gas Agency, Shiv Circle Road,
+              <br />
               Sri Ganganagar, Rajasthan - 335001
             </p>
           </div>
@@ -110,51 +120,11 @@ export default function ContactPage() {
               <FcCallback className="text-2xl" />
               <h3>Call Us</h3>
             </div>
+
             <p className="text-stone-500">
               +91 7375082341
             </p>
           </div>
-          {/* ===== Legal Text ===== */}
-
-            <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
-
-  <h3 className="text-lg sm:text-xl font-bold">Terms & Conditions</h3>
-
-  <p className="leading-relaxed">
-    By accessing this website and submitting the contact form, you agree to be
-    bound by the Terms and Conditions of Jai Shree Equipment Dairy. The
-    information provided must be accurate and complete.
-  </p>
-
-  <p className="leading-relaxed">
-    Jai Shree Equipment Dairy may contact you through phone calls,
-    WhatsApp messages, or emails regarding your inquiry, products,
-    or services.
-  </p>
-
-  <p className="leading-relaxed">
-    We reserve the right to update product details, pricing, and
-    information without prior notice.
-  </p>
-
-  <h3 className="text-lg sm:text-xl font-bold mt-4">Privacy Policy</h3>
-
-  <p className="leading-relaxed">
-    We collect personal information including your name, contact
-    number, email address, and message to respond to your inquiry.
-  </p>
-
-  <p className="leading-relaxed">
-    Your information will not be shared with third parties unless
-    required by law.
-  </p>
-
-  <p className="leading-relaxed">
-    By submitting this form, you consent to the use of your data as
-    outlined in this policy.
-  </p>
-
-</div>
 
         </section>
 
@@ -167,24 +137,30 @@ export default function ContactPage() {
           <h1 className="font-bold text-2xl mb-2">
             Need milk analyzer and dairy equipment?
           </h1>
-          <p className="dark:text-white/60 text-stone-500">
-              Reach out to Jai Shree Equipment Dairy for inquiries about dairy
-              equipment in Sri Ganganagar, Bikaner, Hanumangarh, and Anupgarh.
-            </p>          
+
+          <p className="dark:text-white/60 text-stone-500 mb-6">
+            Reach out to Jai Shree Equipment Dairy for inquiries
+            about dairy equipment in Sri Ganganagar,
+            Bikaner, Hanumangarh, and Anupgarh.
+          </p>
+
           <form
             className="flex flex-col gap-4 sm:gap-8"
             onSubmit={handleSubmit(handleOnSubmit)}
           >
 
             <div className="flex gap-4 max-sm:flex-col">
+
               <Input
                 label="First Name"
                 {...register("firstName", { required: true })}
               />
+
               <Input
                 label="Last Name"
                 {...register("lastName")}
               />
+
             </div>
 
             <Input
@@ -215,30 +191,46 @@ export default function ContactPage() {
             </Button>
 
           </form>
+
         </section>
 
       </div>
+
       {/* ================= Service Areas ================= */}
-      
-       <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
-      <section
+
+      <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 space-y-3">
+
+        <section
           className="rounded-xl dark:bg-[#27272a]
           bg-[rgb(244,244,245)] p-4 flex flex-col gap-y-5"
         >
-        <h2 className="text-xl font-bold mb-2">Areas We Service</h2>
-        <p>
-          Sri Ganganagar, Hanumangarh, Suratgarh, Raisinghnagar, Padampur,
-          Kesrisinghpur, Anupgarh and Bikaner, Nearby, Near Me   .
-        </p>
-      </section>
+
+          <h2 className="text-xl font-bold mb-2">
+            Areas We Service
+          </h2>
+
+          <p>
+            Sri Ganganagar, Hanumangarh, Suratgarh,
+            Raisinghnagar, Padampur, Kesrisinghpur,
+            Anupgarh and Bikaner.
+          </p>
+
+        </section>
+
       </div>
-            {/* =======================
+
+      {/* =======================
             Map
       ======================= */}
 
       <section className="mt-10">
-        <h2 className="text-xl font-bold mb-4">Our Location</h2>
+
+        <h2 className="text-xl font-bold mb-4">
+          Our Location
+        </h2>
+
         <GoogleMapIframe />
+
       </section>
 
     </div>
