@@ -18,7 +18,6 @@ interface ContactFormData {
   email?: string;
   mobileNumber: string;
   query?: string;
-  consent: boolean;
 }
 
 export default function ContactPage() {
