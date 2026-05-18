@@ -15,9 +15,9 @@ import PageLoader from "@/components/PageLoader"
 export const metadata: Metadata = {
 metadataBase: new URL(siteConfig.url),
 title: {
-default: siteConfig.name,
-template: `%s - ${siteConfig.name}`,
-},
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
 description: siteConfig.description,
 keywords: metaKeywords[0].keywords,
 authors: [{ name: siteConfig.name }],
@@ -31,10 +31,11 @@ google: "Pwgrtmz4YYu7wvKICR3xPoHIa52SsSz4bQwyBb9EG0A",
 },
 openGraph: {
 type: "website",
-locale: "en_IN",
-url: siteConfig.url,
-siteName: siteConfig.name,
-description: siteConfig.description,
+    locale: "en_IN",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
 images: [
 {
 url: cld(`${siteConfig.url}/logo.png`),
