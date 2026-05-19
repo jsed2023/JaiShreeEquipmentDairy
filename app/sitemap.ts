@@ -11,6 +11,7 @@ import {
 
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
+export const dynamic = "force-static";
 export const revalidate = 86400;
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
@@ -23,8 +24,8 @@ function slugify(value: string) {
     .replace(/\s+/g, "-");
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date().toISOString();
 
   const staticPages = [
     "",
@@ -52,49 +53,39 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: index === 0 ? 1 : 0.8,
   }));
 
-  // Automatic Milk Collection Products
   automaticMilkCollectionSystem
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
       sitemap.push({
         url: `${BASE_URL}/automatic-milk-collection-system/${product.url}`,
-        lastModified: product?.updatedAt
-          ? new Date(product.updatedAt)
-          : now,
+        lastModified: product?.updatedAt || now,
         changeFrequency: "weekly",
         priority: 0.9,
       });
     });
 
-  // Dairy Equipment Products
   [...creamSeparatorMachine, ...milkingMachine]
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
       sitemap.push({
         url: `${BASE_URL}/dairy-equipment/${product.url}`,
-        lastModified: product?.updatedAt
-          ? new Date(product.updatedAt)
-          : now,
+        lastModified: product?.updatedAt || now,
         changeFrequency: "weekly",
         priority: 0.9,
       });
     });
 
-  // Milk Testing Equipment
   MilkTestingEquipment
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
       sitemap.push({
         url: `${BASE_URL}/milk-testing-equipment/${product.url}`,
-        lastModified: product?.updatedAt
-          ? new Date(product.updatedAt)
-          : now,
+        lastModified: product?.updatedAt || now,
         changeFrequency: "weekly",
         priority: 0.9,
       });
     });
 
-  // Rajasthan Locations
   rajasthanLocations?.forEach((location) => {
     sitemap.push({
       url: `${BASE_URL}/milk-analyzer-${slugify(location)}`,
