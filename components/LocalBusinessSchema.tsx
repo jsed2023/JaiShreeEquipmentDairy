@@ -64,7 +64,34 @@ export default function LocalBusinessSchema() {
             "latitude":29.9038,
             "longitude":73.8772
           },
+"telephone": "+91-7375082341",
 
+/* ✅ BUSINESS HOURS */
+"openingHours": "Mo-Sa 09:00-19:00",
+
+"openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "19:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Sunday",
+    "opens": "10:00",
+    "closes": "14:00"
+  }
+],
+
+"priceRange": "₹₹",
           "hasMap":"https://www.google.com/maps?q=29.9038,73.8772",
 
           /* 🔥 ALL MACHINE KEYWORDS */
