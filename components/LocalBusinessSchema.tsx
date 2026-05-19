@@ -5,8 +5,6 @@ export default function LocalBusinessSchema() {
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "https://schema.org",
-
-          /* ✅ MULTI TYPE FOR BETTER UNDERSTANDING */
           "@type": ["LocalBusiness", "Store"],
 
           "@id": "https://jaishreeequipmentdairy.in/#localbusiness",
@@ -27,10 +25,11 @@ export default function LocalBusinessSchema() {
             "name": "Jai Shree Equipment Dairy"
           },
 
-          "slogan": "Complete Dairy Equipment & Repair Solutions",
+          "slogan":
+            "Complete Dairy Equipment & Repair Solutions",
 
           "description":
-            "JAI SHREE EQUIPMENT DAIRY, Established in 2020, is a premier provider of dairy farm equipment and repair services in Sri Ganganagar, Rajasthan. With its state-of-the-art facility and extensive range of products including Milk Analyzer Machines, Milk Collection Units, Milking Machines, Cream Separators, Weighing Scales and more, the company caters to dairy farmers across Rajasthan.",
+            "JAI SHREE EQUIPMENT DAIRY, established in 2020, is a leading supplier of dairy farm equipment and repair services in Sri Ganganagar, Rajasthan. The company provides milk analyzer machines, milking machines, cream separators, milk collection units, weighing scales, and dairy equipment solutions for dairy farmers across Rajasthan.",
 
           "foundingDate": "2020-10-01",
 
@@ -43,7 +42,6 @@ export default function LocalBusinessSchema() {
 
           "priceRange": "₹₹",
 
-          /* ✅ BUSINESS HOURS */
           "openingHours": "Mo-Sa 09:00-19:00",
 
           "openingHoursSpecification": [
@@ -94,9 +92,13 @@ export default function LocalBusinessSchema() {
             "@type": "PostalAddress",
             "streetAddress":
               "Shop No B-42, Upper Side, Rohit Udhyog Market, Near HP Gas Agency, Shiv Circle Road",
+
             "addressLocality": "Sri Ganganagar",
+
             "addressRegion": "Rajasthan",
+
             "postalCode": "335001",
+
             "addressCountry": "IN"
           },
 
@@ -121,49 +123,57 @@ export default function LocalBusinessSchema() {
 
           "areaServed": {
             "@type": "GeoCircle",
+
             "geoMidpoint": {
               "@type": "GeoCoordinates",
               "latitude": 29.9038,
               "longitude": 73.8772
             },
+
             "geoRadius": "150000"
           },
 
           "serviceArea": [
             {
               "@type": "AdministrativeArea",
-              "name": "Sri Ganganagar, Rajasthan, India"
+              "name":
+                "Sri Ganganagar, Rajasthan, India"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Hanumangarh, Rajasthan, India"
+              "name":
+                "Hanumangarh, Rajasthan, India"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Suratgarh, Rajasthan, India"
+              "name":
+                "Suratgarh, Rajasthan, India"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Anupgarh, Rajasthan, India"
+              "name":
+                "Anupgarh, Rajasthan, India"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Raisingh Nagar, Rajasthan, India"
+              "name":
+                "Padampur, Rajasthan, India"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Padampur, Rajasthan, India"
+              "name":
+                "Raisingh Nagar, Rajasthan, India"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Sri Vijaynagar, Rajasthan, India"
+              "name":
+                "Sri Vijaynagar, Rajasthan, India"
             }
           ],
 
           "knowsAbout": [
             "Milk Analyzer Machine",
             "Advance Milk Analyzer",
-            "Ultrasonic Milk Analyzer",
             "Milking Machine",
             "Cream Separator Machine",
             "Automatic Milk Collection Unit",
@@ -177,58 +187,75 @@ export default function LocalBusinessSchema() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Advanced Milk Analyzer Machine Supplier"
+                "name":
+                  "Advanced Milk Analyzer Machine Supplier"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Milk Analyzer Machine Supplier"
+                "name":
+                  "Milk Analyzer Machine Supplier"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Milking Machine Supplier"
+                "name":
+                  "Milking Machine Supplier"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Cream Separator Machine Supplier"
+                "name":
+                  "Cream Separator Machine Supplier"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Automatic Milk Collection Unit Supplier"
+                "name":
+                  "Automatic Milk Collection Unit Supplier"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Dairy Equipment Repair Service"
+                "name":
+                  "Weighing Scale Supplier"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name":
+                  "Dairy Equipment Repair Service"
               }
             }
           ],
 
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
+
             "name": "Dairy Machines",
 
             "itemListElement": [
               {
                 "@type": "OfferCatalog",
-                "name": "Advance Milk Analyzer Machine"
+                "name":
+                  "Advance Milk Analyzer Machine"
               },
               {
                 "@type": "OfferCatalog",
-                "name": "Milk Analyzer Machine"
+                "name":
+                  "Milk Analyzer Machine"
               },
               {
                 "@type": "OfferCatalog",
@@ -240,26 +267,32 @@ export default function LocalBusinessSchema() {
               },
               {
                 "@type": "OfferCatalog",
-                "name": "Milk Collection Unit"
+                "name":
+                  "Milk Collection Unit"
               },
               {
                 "@type": "OfferCatalog",
                 "name": "Weighing Scale"
+              },
+              {
+                "@type": "OfferCatalog",
+                "name":
+                  "Milk Testing Machine"
               }
             ]
           },
 
           "keywords": [
             "milk analyzer machine in Sri Ganganagar",
-            "milking machine supplier Rajasthan",
+            "milk analyzer supplier Rajasthan",
+            "milking machine supplier",
             "cream separator machine",
-            "dairy equipment supplier",
             "milk testing machine",
+            "dairy equipment supplier",
             "automatic milk collection unit",
-            "dairy equipment repair service",
             "weighing scale supplier",
-            "milk analyzer repair",
-            "dairy machine dealer Rajasthan"
+            "dairy equipment repair service",
+            "milk analyzer repair"
           ],
 
           "hasDeliveryMethod":
