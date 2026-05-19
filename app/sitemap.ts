@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
+
 import {
   MilkTestingEquipment,
   creamSeparatorMachine,
@@ -10,12 +11,11 @@ import {
 
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
-export const dynamic = "force-static";
 export const revalidate = 86400;
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
 
-function createSlug(value: string) {
+function slugify(value: string) {
   return value
     .toLowerCase()
     .trim()
@@ -26,11 +26,8 @@ function createSlug(value: string) {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  const routes: MetadataRoute.Sitemap = [];
-
-  // Static Pages
   const staticPages = [
-    "/",
+    "",
     "/about",
     "/contact",
     "/categories",
@@ -45,23 +42,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/dairy-equipment",
   ];
 
-  staticPages.forEach((path, index) => {
-    routes.push({
-      url: `${BASE_URL}${path === "/" ? "" : path}`,
-      lastModified: now,
-      changeFrequency:
-        path === "/" || path === "/milk-rate-chart"
-          ? "daily"
-          : "weekly",
-      priority: index === 0 ? 1 : 0.8,
-    });
-  });
+  const sitemap: MetadataRoute.Sitemap = staticPages.map((path, index) => ({
+    url: `${BASE_URL}${path}`,
+    lastModified: now,
+    changeFrequency:
+      path === "" || path === "/milk-rate-chart"
+        ? "daily"
+        : "weekly",
+    priority: index === 0 ? 1 : 0.8,
+  }));
 
-  // Automatic Milk Collection System
+  // Automatic Milk Collection Products
   automaticMilkCollectionSystem
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
-      routes.push({
+      sitemap.push({
         url: `${BASE_URL}/automatic-milk-collection-system/${product.url}`,
         lastModified: product?.updatedAt
           ? new Date(product.updatedAt)
@@ -71,11 +66,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
     });
 
-  // Dairy Equipment
+  // Dairy Equipment Products
   [...creamSeparatorMachine, ...milkingMachine]
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
-      routes.push({
+      sitemap.push({
         url: `${BASE_URL}/dairy-equipment/${product.url}`,
         lastModified: product?.updatedAt
           ? new Date(product.updatedAt)
@@ -89,7 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   MilkTestingEquipment
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
-      routes.push({
+      sitemap.push({
         url: `${BASE_URL}/milk-testing-equipment/${product.url}`,
         lastModified: product?.updatedAt
           ? new Date(product.updatedAt)
@@ -99,17 +94,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
     });
 
-  // Location Pages
+  // Rajasthan Locations
   rajasthanLocations?.forEach((location) => {
-    const slug = createSlug(location);
-
-    routes.push({
-      url: `${BASE_URL}/milk-analyzer-${slug}`,
+    sitemap.push({
+      url: `${BASE_URL}/milk-analyzer-${slugify(location)}`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.7,
     });
   });
 
-  return routes;
+  return sitemap;
 }
