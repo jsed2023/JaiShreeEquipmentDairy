@@ -2228,14 +2228,20 @@ export const MilkTestingEquipment: Products[] = [
     smallDesc:
       "Milk Analyzer Advance for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
     images: [
-      {
-        src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/MILK%20ANALYZER%20ADVANCE.png",),
-     alt: "Milk Analyzer Advance",
-      },
+  {
+    src: cld(
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/MILK%20ANALYZER%20ADVANCE.png"
+    ),
+    alt: "Milk Analyzer Advance",
+  },
 
-cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1779257895/Advance_Milk_Analyzer_Ultra.webp",),
-    ],
-alt: "Advance Milk Analyzer Ultra",
+  {
+    src: cld(
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779257895/Advance_Milk_Analyzer_Ultra.webp"
+    ),
+    alt: "Advance Milk Analyzer Ultra",
+  },
+],
     price: "28,000",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
