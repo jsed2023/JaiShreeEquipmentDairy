@@ -3342,5 +3342,171 @@ desc:
   keywords:
     "ekomilk ultra, ekomilk ultra milk analyzer, ekomilk ultra analyzer machine, ekomilk ultra machine, ekomilk ultra machine price, ekomilk ultra price in india, ekomilk ultra near me, ekomilk ultra nearby, ekomilk ultra milk analyzer near me, digital milk analyzer machine, automatic milk analyzer machine, ultrasonic milk analyzer, milk analyzer machine india, milk testing machine, dairy milk testing machine, milk fat testing machine, milk fat snf testing machine, milk quality testing machine, milk analyzer supplier rajasthan, milk analyzer machine rajasthan, dairy equipment supplier india, milk testing equipment india, milk analyzer for dairy farm, milk analyzer for milk collection center, milk analyzer for dairy cooperative, dairy laboratory equipment, milk analyzer machine supplier, electronic milk analyzer, portable milk analyzer machine, milk adulteration testing machine, milk analyzer manufacturer india, dairy milk analyzer supplier, smart milk analyzer machine, dairy farm testing equipment, milk analyzer with printer, high accuracy milk analyzer, bulk milk testing machine, dairy automation equipment, milk analyzer for village dairy, dairy equipment manufacturer india, milk testing laboratory equipment, dairy quality testing equipment, SNF testing machine for milk, digital fat testing machine, milk collection center equipment, milk analyzer dealer rajasthan, milk analyzer in sri ganganagar, dairy equipment in rajasthan, ultrasonic milk testing machine, best milk analyzer machine in india,",
 },
+{
+  id: 13,
+
+  name: "Advance Milk Analyzer Ultra",
+
+  url: "advance-milk-analyzer-ultra",
+
+  category: "milk-testing-equipment",
+
+  smallDesc:
+    "Best Advance Milk Analyzer Ultra Machine for Dairy Farms, Milk Collection Centers, Dairy Plants & Laboratories in Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh and Anupgarh",
+
+  images: [
+    {
+      src: cld(
+        "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779257895/Advance_Milk_Analyzer_Ultra.webp"
+      ),
+      alt: "Advance Milk Analyzer Ultra Digital Milk Testing Machine",
+    },
+  ],
+
+  price: "38,000",
+
+  moreDetails: cld(
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png"
+  ),
+
+  features: [
+    {
+      id: "13A",
+      key: "Testing Speed",
+      value: "120 Samples Per Hour",
+    },
+    {
+      id: "13B",
+      key: "Brand",
+      value: "Advance",
+    },
+    {
+      id: "13C",
+      key: "Machine Type",
+      value: "Automatic Digital Milk Analyzer",
+    },
+    {
+      id: "13D",
+      key: "Display",
+      value: "7 Inch Smart LCD Display",
+    },
+    {
+      id: "13E",
+      key: "FAT Testing",
+      value: "High Accuracy FAT Analysis",
+    },
+    {
+      id: "13F",
+      key: "SNF Testing",
+      value: "Automatic SNF Detection",
+    },
+    {
+      id: "13G",
+      key: "Protein Testing",
+      value: "Accurate Protein Analysis",
+    },
+    {
+      id: "13H",
+      key: "Lactose Testing",
+      value: "Instant Lactose Detection",
+    },
+    {
+      id: "13I",
+      key: "Water Detection",
+      value: "Added Water Percentage Detection",
+    },
+    {
+      id: "13J",
+      key: "Density Testing",
+      value: "Digital Density Analysis",
+    },
+    {
+      id: "13K",
+      key: "Temperature Testing",
+      value: "Real Time Milk Temperature",
+    },
+    {
+      id: "13L",
+      key: "Conductivity Testing",
+      value: "Automatic Conductivity Analysis",
+    },
+    {
+      id: "13M",
+      key: "Technology",
+      value: "Smart Automatic Analysis System",
+    },
+    {
+      id: "13N",
+      key: "Connectivity",
+      value: "USB / WiFi / Bluetooth",
+    },
+    {
+      id: "13O",
+      key: "Power Supply",
+      value: "220V AC / 12V DC",
+    },
+    {
+      id: "13P",
+      key: "Body Material",
+      value: "Industrial ABS Plastic",
+    },
+    {
+      id: "13Q",
+      key: "Application",
+      value: "Dairy Farm & Milk Collection Center",
+    },
+    {
+      id: "13R",
+      key: "Operation",
+      value: "Fully Automatic",
+    },
+    {
+      id: "13S",
+      key: "Accuracy",
+      value: "High Precision Milk Testing",
+    },
+    {
+      id: "13T",
+      key: "Data Storage",
+      value: "Smart Digital Data Memory",
+    },
+    {
+      id: "13U",
+      key: "Maintenance",
+      value: "Low Maintenance Design",
+    },
+    {
+      id: "13V",
+      key: "Cleaning System",
+      value: "Quick Auto Cleaning Support",
+    },
+    {
+      id: "13W",
+      key: "Usage",
+      value: "Dairy Plant, Lab & Milk Society",
+    },
+    {
+      id: "13X",
+      key: "Country of Origin",
+      value: "Made in India",
+    },
+    {
+      id: "13Y",
+      key: "Weight",
+      value: "4 Kg",
+    },
+    {
+      id: "13Z",
+      key: "Price",
+      value: "₹ 38,000",
+    },
+  ],
+
+  desc:
+    "Advance Milk Analyzer Ultra is a fully automatic high accuracy digital milk testing machine designed for dairy farms, milk collection centers, dairy plants and milk testing laboratories. This advanced milk analyzer machine delivers fast and reliable milk quality testing including FAT, SNF, Protein, Lactose, Added Water, Density, Temperature and Conductivity analysis. The machine provides accurate milk testing results within seconds and improves dairy collection efficiency. Ideal for professional dairy testing operations across Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh and Rajasthan.",
+
+  keywords:
+    "Advance Milk Analyzer Ultra, milk analyzer machine, digital milk analyzer, automatic milk testing machine, dairy milk analyzer, milk FAT testing machine, SNF testing machine, milk quality testing machine, dairy testing equipment, milk analyzer machine India, milk analyzer Sri Ganganagar, milk analyzer Bikaner, dairy equipment Hanumangarh, milk testing machine Suratgarh, milk analyzer Anupgarh, dairy lab equipment, milk collection center machine, automatic dairy analyzer, smart milk analyzer machine, best milk analyzer machine India, professional milk testing machine, milk analyzer supplier Rajasthan, digital dairy testing machine, protein testing milk analyzer, lactose testing machine, dairy automation equipment, milk testing equipment Rajasthan, high accuracy milk analyzer machine, dairy farm machine, milk testing device, dairy analyzer machine, milk analyzer for dairy plant",
+},
 ];
 
