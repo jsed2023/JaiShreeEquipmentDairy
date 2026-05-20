@@ -3363,7 +3363,7 @@ desc:
     },
   ],
 
-  price: "38,000",
+  price: "28,000",
 
   moreDetails: cld(
     "https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png"
@@ -3498,7 +3498,7 @@ desc:
     {
       id: "13Z",
       key: "Price",
-      value: "₹ 38,000",
+      value: "₹ 28,000",
     },
   ],
 
