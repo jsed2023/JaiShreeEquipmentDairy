@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
 
-  // Skip SEO and static files
+  // Ignore SEO & static files
   if (
     url.pathname.startsWith("/_next") ||
     url.pathname.startsWith("/api") ||
@@ -16,12 +16,12 @@ export function middleware(request: NextRequest) {
 
   // Remove trailing slash
   if (
-    url.pathname.length > 1 &&
+    url.pathname !== "/" &&
     url.pathname.endsWith("/")
   ) {
     url.pathname = url.pathname.slice(0, -1);
 
-    return NextResponse.redirect(url, 301);
+    return NextResponse.redirect(url, 308);
   }
 
   return NextResponse.next();
