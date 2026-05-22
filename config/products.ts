@@ -107,67 +107,127 @@ export const automaticMilkCollectionSystem: Products[] = [
     price: "15,000",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729601210/Technical%20Detaits%20DPU.png",),
-    features: [
-      {
-        id: "1A",
-        key: "Design Type",
-        value: "Fixed",
-      },
-      {
-        id: "1B",
-        key: "Brand",
-        value: "Dairy Khata",
-      },
-      {
-        id: "1C",
-        key: "Equipment Type",
-        value: "Milk Billing Machine",
-      },
-      {
-        id: "1D",
-        key: "Display",
-        value: `28x12 (S) LCD Yellow Green`,
-      },
-      {
-        id: "1E",
-        key: "Ac Power Supply Voltage",
-        value: "12V, 3A",
-      },
-      {
-        id: "1F",
-        key: "Country of Origin",
-        value: `Made in India`,
-      },
-      {
-        id: "1G",
-        key: "Usage/Application",
-        value: "Milk data processor",
-      },
-      {
-        id: "1H",
-        key: "Phase",
-        value: "Single",
-      },
-      {
-        id: "1I",
-        key: "Machine Body Material",
-        value: "MS",
-      },
-      {
-        id: "1J",
-        key: "Capacity",
-        value: "500 Milk Members 5 Year Data Memory",
-      },
-      {
-        id: "1K",
-        key: "Design Type",
-        value: "Customized",
-      },
-      {
-        id: "1L",
-        key: "Price",
-        value: "₹ 15,000",
-      },
+  features: [
+  {
+    id: "1A",
+    key: "Brand",
+    value: "Dairy Khata",
+  },
+  {
+    id: "1B",
+    key: "Product Name",
+    value: "Milk Billing Machine",
+  },
+  {
+    id: "1C",
+    key: "Model Type",
+    value: "Customized Fixed Design",
+  },
+  {
+    id: "1D",
+    key: "Display Type",
+    value: "28x12 (S) LCD Yellow Green",
+  },
+  {
+    id: "1E",
+    key: "Processor",
+    value: "High-Speed Embedded Processor",
+  },
+  {
+    id: "1F",
+    key: "Power Supply",
+    value: "12V, 3A AC Adapter",
+  },
+  {
+    id: "1G",
+    key: "Battery Backup",
+    value: "Inbuilt Power Backup Support",
+  },
+  {
+    id: "1H",
+    key: "Usage/Application",
+    value: "Milk Data Processing & Billing",
+  },
+  {
+    id: "1I",
+    key: "Machine Body Material",
+    value: "MS (Mild Steel)",
+  },
+  {
+    id: "1J",
+    key: "Phase",
+    value: "Single Phase",
+  },
+  {
+    id: "1K",
+    key: "Storage Capacity",
+    value: "500 Milk Members with 5 Years Backup Memory",
+  },
+  {
+    id: "1L",
+    key: "Milk Collection Support",
+    value: "Morning & Evening Collection Entry",
+  },
+  {
+    id: "1M",
+    key: "Fat & SNF Calculation",
+    value: "Automatic Calculation System",
+  },
+  {
+    id: "1N",
+    key: "Billing Type",
+    value: "Daily, Weekly & Monthly Billing",
+  },
+  {
+    id: "1O",
+    key: "Data Backup",
+    value: "Secure Long-Term Data Storage",
+  },
+  {
+    id: "1P",
+    key: "Connectivity",
+    value: "Printer & Computer Supported",
+  },
+  {
+    id: "1Q",
+    key: "Printer Support",
+    value: "Thermal Receipt Printer Compatible",
+  },
+  {
+    id: "1R",
+    key: "Operation Type",
+    value: "Automatic Billing System",
+  },
+  {
+    id: "1S",
+    key: "User Interface",
+    value: "Easy Menu Navigation",
+  },
+  {
+    id: "1T",
+    key: "Language Support",
+    value: "Hindi & English",
+  },
+  {
+    id: "1U",
+    key: "Installation Support",
+    value: "Available",
+  },
+  {
+    id: "1V",
+    key: "Warranty",
+    value: "1 Year Service Support",
+  },
+  {
+    id: "1W",
+    key: "Country of Origin",
+    value: "Made in India",
+  },
+  {
+    id: "1X",
+    key: "Price",
+    value: "₹15,000",
+  },
     ],
     desc: "We retail a complete system for the Milk Data Processing Unit (DPU) under the brand name Dairy Khata DPU. This system captures data from both the weighing scale and the milk analyzer device and transfers it to a digital display and printer. The generated receipt contains important milk information such as FAT, SNF, CLR, Quantity, Rate, and Amount, and it also maintains a ledger for customers. The Dairy Khata DPU model comes with built-in features, including multiple language support.",
     keywords:
