@@ -50,6 +50,11 @@ export const siteConfig = {
       items: [],
     },
     {
+      label: "Blog",
+      href: "/blog",
+      items: [],
+    },
+    {
       label: "Services",
       href: "/services",
       items: [],
@@ -169,5 +174,11 @@ Ultrasonic Milk Analyzer,Digital Milk Analyzer Machine,Portable Milk Analyzer Ma
   name: "Categories - Jai Shree Equipment Dairy",
   keywords:
     "Categories, Jai Shree Equipment Dairy, Advance Milk Analyzer, Milk Testing Machine, Dairy Equipment Supplier, Milk Analyzer Max, milk anlayzer near me, milking machine mear me, milking machine near me, advance milk analyzer, dairy equipment shop near me, ekomilk milk analyzer,hand milking machine, milk analyzer, advance milk analyzer plus, dairy equipment near me, milk analyser machine, milking machine dealers near me, automatic milk collection system, milk testing equipment, dairy farm equipment shop near me, milk testing lab near me, दूध निकालने की मशीन कहां मिलती है, khoya making machine, dpu for milk collection, milk dpu, amcs for milk collection, fat measuring machine for milk, milk fat and snf testing machine, milk analyser, best milk analyzer in india, paras cream separator photos, dairy equipment, gay ke dudh nikaalne wali machine, cow milking machine, mini cream separator machine, weighing machine, mini milking machine, paneer press machine, weight machine near me shop, milking machine for cows, soya paneer machine, milk cream separator machine, milk cream separator machine for home use, weingh, cows milk machine, milking machine shop near me, electronic weight machine, milk analyzer machine near me, ultrasonic stirrer, milk fat testing machine, milk collection system,"
-}
+},
+{
+  id: 13,
+  name: "Blog - Jai Shree Equipment Dairy",
+  keywords:
+    "Dairy Blogs, Milk Testing Blogs, Milk Analyzer Articles, Dairy Equipment Blogs, Dairy Farming Tips, Automatic Milk Collection Unit Blogs, Fat Testing Machine Guide, Milking Machine Articles, Milk Cream Separator Blogs, Dairy Industry News, Dairy Technology Blogs, Dairy Machinery Insights, Dairy Plant Equipment Blogs, Dairy Processing Articles, Dairy Equipment Rajasthan, Dairy Equipment India, Jai Shree Equipment Dairy Blogs, Milk Testing Equipment Guide, Dairy Farm Equipment Articles, Commercial Dairy Equipment Blogs, Dairy Machine Knowledge, Dairy Engineering Blogs, Milk Collection Center Guide, Dairy Automation Blogs, Dairy Quality Testing Articles, Dairy Business Tips, Dairy Machinery Updates, Dairy Equipment Supplier India, Dairy Equipment Sri Ganganagar, Dairy Equipment Bikaner, Dairy Equipment Hanumangarh, Dairy Equipment Anupgarh, Industrial Dairy Equipment Articles, Dairy Plant Machinery Blogs, Milk Processing Equipment Insights, Dairy Equipment Manufacturer Rajasthan, Dairy Equipment Services India, Dairy Machine Installation Guide, Dairy Equipment Maintenance Tips, Modern Dairy Farming Blogs, Dairy Equipment Dealer India, Dairy Product Processing Blogs, Smart Dairy Technology Articles"
+},
 ];
