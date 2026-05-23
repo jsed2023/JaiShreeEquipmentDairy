@@ -9,6 +9,8 @@ import {
   automaticMilkCollectionSystem,
 } from "@/config/products";
 
+import { blogs } from "@/config/blogs";
+
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
 export const dynamic = "force-static";
@@ -30,29 +32,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/about",
+    "/automatic-milk-collection-system",
+    "/blog",
     "/contact",
     "/categories",
+    "/dairy-equipment",
     "/gallery",
     "/testimonials",
     "/locations",
     "/milestones",
     "/milk-rate-chart",
-    "/services",
-    "/automatic-milk-collection-system",
     "/milk-testing-equipment",
-    "/dairy-equipment",
+    "/services",
   ];
 
-  const sitemap: MetadataRoute.Sitemap = staticPages.map((path, index) => ({
-    url: `${BASE_URL}${path}`,
-    lastModified: now,
-    changeFrequency:
-      path === "" || path === "/milk-rate-chart"
-        ? "daily"
-        : "weekly",
-    priority: index === 0 ? 1 : 0.8,
-  }));
+  const sitemap: MetadataRoute.Sitemap =
+    staticPages.map((path, index) => ({
+      url: `${BASE_URL}${path}`,
+      lastModified: now,
+      changeFrequency:
+        path === "" || path === "/milk-rate-chart"
+          ? "daily"
+          : "weekly",
+      priority: index === 0 ? 1 : 0.8,
+    }));
 
+  /* Automatic Milk Collection System */
   automaticMilkCollectionSystem
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
@@ -64,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     });
 
+  /* Dairy Equipment */
   [...creamSeparatorMachine, ...milkingMachine]
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
@@ -75,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     });
 
+  /* Milk Testing Equipment */
   MilkTestingEquipment
     ?.filter((product) => product?.url)
     ?.forEach((product) => {
@@ -86,6 +93,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     });
 
+  /* Blog Pages */
+  Object.values(blogs)?.forEach((blog) => {
+    sitemap.push({
+      url: `${BASE_URL}/blog/${blog.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    });
+  });
+
+  /* Rajasthan Locations */
   rajasthanLocations?.forEach((location) => {
     sitemap.push({
       url: `${BASE_URL}/milk-analyzer-${slugify(location)}`,
