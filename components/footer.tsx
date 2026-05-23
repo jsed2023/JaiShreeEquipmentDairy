@@ -170,14 +170,14 @@ export default function Footer() {
               {
                 name:
                   "Weighing Scale Machine",
-                href: "/dairy-equipment",
+                href: "/automatic-milk-collection-system",
               },
 
               {
                 name:
                   "Ultrasonic Milk Stirrer",
                 href:
-                  "/milk-testing-equipment",
+                  "/automatic-milk-collection-system",
               },
 
               {
