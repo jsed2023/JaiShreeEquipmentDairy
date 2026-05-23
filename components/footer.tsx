@@ -65,6 +65,14 @@ export default function Footer() {
                 AMCS System
               </Link>
             </li>
+<li>
+              <Link
+                href="/blog"
+                className="hover:text-white"
+              >
+                Blogs
+              </Link>
+            </li>
           </ul>
         </div>
 
