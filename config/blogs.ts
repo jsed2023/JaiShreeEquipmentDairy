@@ -176,7 +176,7 @@ Advanced dairy machinery simplifies farm operations and supports business growth
       "EKO Milk Analyzer, EKO Milk Analyzer Working, Milk Analyzer Guide Hindi, Milk Testing Machine India, Dairy Equipment Rajasthan, Automatic Milk Analyzer",
 
     image:
-      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779534500/EKO_Milk_Analyzer_Working_Guide.webp",
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779553152/EKO_Milk_Analyzer_Works.webp",
 
     category: "Milk Analyzer",
 
