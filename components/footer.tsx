@@ -19,20 +19,6 @@ export default function Footer() {
       className="relative mt-24 overflow-hidden border-t border-white/10 bg-black text-slate-300"
       aria-label="Website Footer"
     >
-      {/* ===== SEO CONTENT ===== */}
-      <div className="hidden">
-        Jai Shree Equipment Dairy is a trusted dairy
-        equipment supplier in Rajasthan providing
-        milk analyzer machines, milk testing
-        equipment, dairy automation systems,
-        automatic milk collection units, weighing
-        scale machines, cream separator machines,
-        ultrasonic milk stirrers, and dairy
-        machinery solutions in Sri Ganganagar,
-        Bikaner, Hanumangarh, Suratgarh, and
-        Rajasthan.
-      </div>
-
       {/* ===== BACKGROUND EFFECT ===== */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 blur-3xl" />
 
@@ -49,15 +35,23 @@ export default function Footer() {
             </h2>
           </Link>
 
+          {/* ===== SEO CONTENT ===== */}
           <p className="mt-6 text-sm leading-7 text-slate-400">
-            Leading dairy equipment supplier in
-            Rajasthan offering milk analyzers,
-            dairy machinery, AMCS systems,
-            milk testing equipment, and dairy
-            automation solutions since 2020.
+            Jai Shree Equipment Dairy is a trusted
+            dairy equipment & milk testing machine
+            supplier in Rajasthan providing milk
+            analyzer machines, milk testing
+            equipment, automatic milk collection
+            systems, weighing scale machines,
+            cream separator machines, ultrasonic
+            milk stirrers, dairy farming equipment,
+            and dairy automation solutions in
+            Sri Ganganagar, Bikaner, Hanumangarh,
+            Suratgarh, and nearby Rajasthan areas
+            since 2020.
           </p>
 
-          {/* SOCIAL */}
+          {/* ===== SOCIAL MEDIA ===== */}
           <div className="mt-8 flex items-center gap-4">
             <a
               href="https://www.facebook.com/Jaishreeequipmentdairy"
@@ -105,8 +99,10 @@ export default function Footer() {
               },
 
               {
-                name: "Automatic Milk Collection System",
-                href: "/automatic-milk-collection-system",
+                name:
+                  "Automatic Milk Collection System",
+                href:
+                  "/automatic-milk-collection-system",
               },
 
               {
@@ -159,30 +155,43 @@ export default function Footer() {
               },
 
               {
-                name: "Automatic Milk Collection System",
-                href: "/automatic-milk-collection-system",
+                name:
+                  "Automatic Milk Collection System",
+                href:
+                  "/automatic-milk-collection-system",
               },
 
               {
-                name: "Milk Cream Separator Machine",
+                name:
+                  "Milk Cream Separator Machine",
                 href: "/dairy-equipment",
               },
 
               {
-                name: "Weighing Scale Machine",
-                href: "/automatic-milk-collection-system",
-              },
-
-              {
-                name: "Ultrasonic Milk Stirrer",
-                href: "/milk-testing-equipment",
-              },
-
-              {
-                name: "Dairy Farming Equipment",
+                name:
+                  "Weighing Scale Machine",
                 href: "/dairy-equipment",
               },
-               
+
+              {
+                name:
+                  "Ultrasonic Milk Stirrer",
+                href:
+                  "/milk-testing-equipment",
+              },
+
+              {
+                name:
+                  "Dairy Farming Equipment",
+                href: "/dairy-equipment",
+              },
+
+              {
+                name:
+                  "Dairy Automation Systems",
+                href:
+                  "/automatic-milk-collection-system",
+              },
             ].map((item) => (
               <li
                 key={item.name}
@@ -203,7 +212,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* ===== CONTACT ===== */}
+        {/* ===== CONTACT INFO ===== */}
         <address className="not-italic">
           <h3 className="text-xl font-semibold text-white">
             Contact Information
@@ -263,8 +272,8 @@ export default function Footer() {
           </p>
 
           <p>
-            Trusted Dairy Equipment Supplier in
-            Rajasthan, India
+            Trusted Dairy Equipment & Milk Testing
+            Machine Supplier in Rajasthan, India
           </p>
         </div>
       </div>
