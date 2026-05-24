@@ -388,7 +388,7 @@ We offer:
 Contact us today for the latest milk analyzer machine prices and dairy equipment solutions.
   `,
 },
-"how-dairy-khata-dpu-works": {
+"dairy-khata-dpu-works": {
   slug: "dairy-khata-dpu-works",
 
   title:
