@@ -103,3 +103,21 @@ export interface Services {
   name: string;
   images: ServicesImages[];
 }
+
+export interface BlogType {
+  slug: string;
+
+  title: string;
+
+  description: string;
+
+  keywords: string[];
+
+  image: string;
+
+  category: string;
+
+  date: string;
+
+  content: string;
+}

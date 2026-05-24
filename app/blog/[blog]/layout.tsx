@@ -1,33 +1,83 @@
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+
 import { blogs } from "@/config/blogs";
+import { siteConfig } from "@/config/site";
 
-type Props = {
-  children: React.ReactNode;
-
-  params: {
-    blog: string;
-  };
-};
-
-export default function BlogSlugLayout({
-  children,
+export async function generateMetadata({
   params,
-}: Props) {
+}: {
+  params: { blog: string };
+}): Promise<Metadata> {
   const blog =
     blogs[params.blog as keyof typeof blogs];
 
   if (!blog) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-black text-white">
-        <h1 className="text-3xl font-bold">
-          Blog Not Found
-        </h1>
-      </div>
-    );
+    return {
+      title: "Blog Not Found",
+      description:
+        "The requested blog could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const blogUrl = `${siteConfig.url}/blogs/${params.blog}`;
+
+  return {
+    title: blog.title,
+
+    description: blog.description,
+
+    keywords: blog.keywords,
+
+    authors: [
+      {
+        name: `${blog.title} - ${siteConfig.name}`,
+      },
+    ],
+
+    alternates: {
+      canonical: blogUrl,
+    },
+
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      url: blogUrl,
+      siteName: siteConfig.name,
+      locale: "en_IN",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.description,
+    },
+  };
+}
+
+export default function BlogSlugLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+
+  params: { blog: string };
+}) {
+  const blog =
+    blogs[params.blog as keyof typeof blogs];
+
+  if (!blog) {
+    return notFound();
   }
 
   return (
-    <main className="overflow-x-hidden bg-black text-white">
+    <div className="overflow-x-hidden">
       {children}
-    </main>
+    </div>
   );
 }

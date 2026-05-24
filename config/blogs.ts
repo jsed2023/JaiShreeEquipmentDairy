@@ -1,4 +1,6 @@
-export const blogs = {
+import { BlogType } from "@/types";
+
+export const blogs: Record<string, BlogType> = {
   "milk-testing-machine-guide": {
     slug: "milk-testing-machine-guide",
 
@@ -7,8 +9,15 @@ export const blogs = {
     description:
       "Learn how milk testing machines improve dairy quality, milk accuracy testing, and dairy automation in modern dairy farms.",
 
-    keywords:
-      "Milk Testing Machine Guide, Milk Analyzer Machine, Dairy Milk Testing Equipment, Fat Testing Machine, Milk Quality Testing, Automatic Milk Analyzer, Dairy Equipment India",
+    keywords: [
+      "Milk Testing Machine Guide",
+      "Milk Analyzer Machine",
+      "Dairy Milk Testing Equipment",
+      "Fat Testing Machine",
+      "Milk Quality Testing",
+      "Automatic Milk Analyzer",
+      "Dairy Equipment India",
+    ],
 
     image:
       "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779533383/Guideline_for_milk_testing_machines.webp",
@@ -62,8 +71,13 @@ Milk analyzers improve efficiency and help dairy owners maintain better milk qua
     description:
       "Discover the benefits of automatic milk analyzers for dairy farms and milk collection centers.",
 
-    keywords:
-      "Automatic Milk Analyzer Benefits, Milk Analyzer Machine, Dairy Automation, Milk Testing Equipment, Dairy Equipment Rajasthan",
+    keywords: [
+      "Automatic Milk Analyzer Benefits",
+      "Milk Analyzer Machine",
+      "Dairy Automation",
+      "Milk Testing Equipment",
+      "Dairy Equipment Rajasthan",
+    ],
 
     image:
       "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779533677/Benefits_of_Automatic_Milk_Analyzers.webp",
@@ -119,8 +133,13 @@ Milk analyzers help maintain high milk quality standards while simplifying dairy
     description:
       "Explore advanced dairy farming machines and modern dairy equipment used in milk processing plants.",
 
-    keywords:
-      "Modern Dairy Farming Equipment, Dairy Machinery India, Dairy Plant Equipment, Milking Machine, Cream Separator Machine",
+    keywords: [
+      "Modern Dairy Farming Equipment",
+      "Dairy Machinery India",
+      "Dairy Plant Equipment",
+      "Milking Machine",
+      "Cream Separator Machine",
+    ],
 
     image:
       "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779533973/Popular_dairy_equipment.webp",
@@ -164,16 +183,24 @@ These machines are used in:
 Advanced dairy machinery simplifies farm operations and supports business growth.
     `,
   },
-"eko-milk-analyzer-working-guide": {
+
+  "eko-milk-analyzer-working-guide": {
     slug: "eko-milk-analyzer-working-guide",
 
-    title: "How EKO Milk Analyzer Works | EKO Milk Analyzer कैसे काम करता है",
+    title:
+      "How EKO Milk Analyzer Works | EKO Milk Analyzer कैसे काम करता है",
 
     description:
       "Learn how EKO Milk Analyzer machines work in dairy farms and milk collection centers with Hindi and English explanations.",
 
-    keywords:
-      "EKO Milk Analyzer, EKO Milk Analyzer Working, Milk Analyzer Guide Hindi, Milk Testing Machine India, Dairy Equipment Rajasthan, Automatic Milk Analyzer",
+    keywords: [
+      "EKO Milk Analyzer",
+      "EKO Milk Analyzer Working",
+      "Milk Analyzer Guide Hindi",
+      "Milk Testing Machine India",
+      "Dairy Equipment Rajasthan",
+      "Automatic Milk Analyzer",
+    ],
 
     image:
       "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779553152/EKO_Milk_Analyzer_Works.webp",
@@ -265,4 +292,100 @@ EKO Milk Analyzer improves milk quality testing and helps dairy businesses maint
 EKO Milk Analyzer डेयरी व्यवसाय में पारदर्शिता और बेहतर दूध जांच सुनिश्चित करता है।
     `,
   },
+  "milk-analyzer-machine-price-india": {
+  slug: "milk-analyzer-machine-price-india",
+
+  title:
+    "Milk Analyzer Machine Price in India | Complete Buying Guide",
+
+  description:
+    "Explore milk analyzer machine prices in India, features, benefits, and how to choose the best dairy milk testing machine for your dairy farm or milk collection center.",
+
+  keywords: [
+    "Milk Analyzer Machine Price",
+    "Milk Analyzer Price India",
+    "Automatic Milk Analyzer",
+    "Milk Testing Machine",
+    "Dairy Equipment India",
+    "Milk Collection Center Machine",
+    "Milk Analyzer Rajasthan",
+  ],
+
+  image:
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779553152/EKO_Milk_Analyzer_Works.webp",
+
+  category: "Milk Analyzer",
+
+  date: "25 May 2026",
+
+  content: `
+# Milk Analyzer Machine Price in India
+
+Milk analyzer machines are widely used in dairy farms and milk collection centers for accurate milk quality testing.
+
+These machines help dairy businesses measure:
+
+- Fat percentage
+- SNF value
+- Density
+- Added water
+- Protein
+- Milk purity
+
+## Milk Analyzer Machine Price Range
+
+The price of milk analyzer machines in India depends on:
+
+- Brand
+- Features
+- Testing speed
+- Automation level
+- Accuracy
+
+Basic milk analyzers are suitable for small dairy farms, while advanced automatic milk analyzers are ideal for milk collection centers and dairy cooperatives.
+
+## Benefits of Milk Analyzer Machines
+
+- Fast milk testing
+- Accurate results
+- Improved milk transparency
+- Better dairy management
+- Reduced manual errors
+- Digital milk records
+
+## Applications of Milk Analyzer Machines
+
+Milk analyzers are commonly used in:
+
+- Dairy farms
+- Milk collection centers
+- Dairy cooperatives
+- Milk processing plants
+
+## How to Choose the Best Milk Analyzer Machine
+
+Before purchasing a milk analyzer machine, consider:
+
+- Testing accuracy
+- Ease of operation
+- Maintenance support
+- Warranty
+- Technical support
+- Digital features
+
+## Why Choose Jai Shree Equipment Dairy
+
+Jai Shree Equipment Dairy provides high-quality dairy equipment, milk analyzers, milking machines, and dairy automation solutions across Rajasthan and India.
+
+We offer:
+
+- Genuine dairy machinery
+- Installation support
+- Technical guidance
+- Machine servicing
+- Affordable pricing
+
+Contact us today for the latest milk analyzer machine prices and dairy equipment solutions.
+  `,
+},
 };
