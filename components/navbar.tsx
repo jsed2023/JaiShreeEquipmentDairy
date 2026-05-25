@@ -39,10 +39,11 @@ export const Navbar = () => {
         position="static"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
-        className="bg-sky-600 text-white shadow-md fixed top-0 left-0 w-full z-50"
+        className="fixed top-0 left-0 z-50 w-full bg-sky-600 text-white shadow-md"
       >
-        {/* LEFT */}
+        {/* LEFT SIDE */}
         <NavbarContent justify="start">
+          {/* LOGO */}
           <NavbarBrand>
             <NextLink
               href="/"
@@ -66,64 +67,69 @@ export const Navbar = () => {
           </NavbarBrand>
 
           {/* DESKTOP MENU */}
-          <NavbarContent className="hidden lg:flex gap-6 ml-6">
-            {siteConfig.navItems.map((item) => (
-              <NavbarItem key={item.href}>
-                {item.href === "/products" ? (
-                  <Dropdown placement="bottom-start">
-                    <DropdownTrigger>
-                      <button
-                        type="button"
-                        className="flex items-center gap-1 font-medium text-white hover:text-gray-200"
-                      >
-                        {item.label}
-                        <FaAngleDown />
-                      </button>
-                    </DropdownTrigger>
+          {siteConfig.navItems.map((item) => (
+            <NavbarItem
+              key={item.href}
+              className="hidden lg:flex"
+            >
+              {item.href === "/products" ? (
+                <Dropdown placement="bottom-start">
+                  <DropdownTrigger>
+                    <button
+                      type="button"
+                      className="flex items-center gap-1 font-medium text-white hover:text-gray-200"
+                    >
+                      {item.label}
+                      <FaAngleDown />
+                    </button>
+                  </DropdownTrigger>
 
-                    <DropdownMenu className="min-w-[220px]">
-                      {item.items?.map((productItem) => (
-                        <DropdownItem
-                          key={productItem.href}
-                          textValue={productItem.product}
+                  <DropdownMenu className="min-w-[220px]">
+                    {item.items?.map((productItem) => (
+                      <DropdownItem
+                        key={productItem.href}
+                        textValue={productItem.product}
+                      >
+                        <NextLink
+                          href={`/${productItem.href}`}
+                          className="block w-full"
                         >
-                          <NextLink
-                            href={`/${productItem.href}`}
-                            className="block w-full"
-                          >
-                            {productItem.product}
-                          </NextLink>
-                        </DropdownItem>
-                      ))}
-                    </DropdownMenu>
-                  </Dropdown>
-                ) : (
-                  <NextLink
-                    href={item.href}
-                    className={clsx(
-                      linkStyles({ color: "foreground" }),
-                      "font-medium text-white hover:text-gray-200"
-                    )}
-                  >
-                    {item.label}
-                  </NextLink>
-                )}
-              </NavbarItem>
-            ))}
-          </NavbarContent>
+                          {productItem.product}
+                        </NextLink>
+                      </DropdownItem>
+                    ))}
+                  </DropdownMenu>
+                </Dropdown>
+              ) : (
+                <NextLink
+                  href={item.href}
+                  className={clsx(
+                    linkStyles({ color: "foreground" }),
+                    "font-medium text-white hover:text-gray-200"
+                  )}
+                >
+                  {item.label}
+                </NextLink>
+              )}
+            </NavbarItem>
+          ))}
         </NavbarContent>
 
         {/* RIGHT DESKTOP */}
         <NavbarContent justify="end" className="hidden lg:flex">
           <NavbarItem>
-            <ThemeSwitch />
+            <div>
+              <ThemeSwitch />
+            </div>
           </NavbarItem>
         </NavbarContent>
 
         {/* MOBILE TOP */}
         <NavbarContent justify="end" className="lg:hidden">
           <NavbarItem>
-            <ThemeSwitch />
+            <div>
+              <ThemeSwitch />
+            </div>
           </NavbarItem>
 
           <NavbarItem>
@@ -138,7 +144,7 @@ export const Navbar = () => {
             if (item.href === "/products") {
               const elements = [];
 
-              // Toggle button
+              // TOGGLE BUTTON
               elements.push(
                 <NavbarMenuItem key={`toggle-${item.href}`}>
                   <button
@@ -147,7 +153,7 @@ export const Navbar = () => {
                     onClick={() =>
                       setMobileProductsOpen(!mobileProductsOpen)
                     }
-                    className="flex items-center justify-between w-full font-medium"
+                    className="flex w-full items-center justify-between font-medium"
                   >
                     {item.label}
 
@@ -160,7 +166,7 @@ export const Navbar = () => {
                 </NavbarMenuItem>
               );
 
-              // Sub items
+              // SUB MENU ITEMS
               if (mobileProductsOpen) {
                 item.items?.forEach((productItem) => {
                   elements.push(
@@ -171,7 +177,7 @@ export const Navbar = () => {
                           setIsMenuOpen(false);
                           setMobileProductsOpen(false);
                         }}
-                        className="text-sm ml-4"
+                        className="ml-4 text-sm"
                       >
                         {productItem.product}
                       </NextLink>
@@ -183,7 +189,7 @@ export const Navbar = () => {
               return elements;
             }
 
-            // NORMAL MENU
+            // NORMAL MENU ITEMS
             return [
               <NavbarMenuItem key={item.href}>
                 <NextLink
