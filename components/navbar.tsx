@@ -43,27 +43,29 @@ export const Navbar = () => {
         {/* LEFT SIDE */}
         <NavbarContent justify="start">
           {/* LOGO */}
-          <NavbarBrand>
-            <NextLink
-              href="/"
-              aria-label="Homepage"
-              className="flex items-center gap-2"
-            >
-              <Image
-                src={cld("v1728902101/bp2mmtxztn5xuzjdeuop.png", {
-                  width: 50,
-                  height: 50,
-                  crop: "fit",
-                  quality: "auto",
-                  format: "auto",
-                })}
-                alt="Jai Shree Equipment Dairy Logo"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
-            </NextLink>
-          </NavbarBrand>
+          <NavbarItem>
+            <NavbarBrand>
+              <NextLink
+                href="/"
+                aria-label="Homepage"
+                className="flex items-center gap-2"
+              >
+                <Image
+                  src={cld("v1728902101/bp2mmtxztn5xuzjdeuop.png", {
+                    width: 50,
+                    height: 50,
+                    crop: "fit",
+                    quality: "auto",
+                    format: "auto",
+                  })}
+                  alt="Jai Shree Equipment Dairy Logo"
+                  width={50}
+                  height={50}
+                  className="object-contain"
+                />
+              </NextLink>
+            </NavbarBrand>
+          </NavbarItem>
 
           {/* DESKTOP MENU */}
           {siteConfig.navItems.map((item) => (
