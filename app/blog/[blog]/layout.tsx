@@ -4,6 +4,13 @@ import { notFound } from "next/navigation";
 import { blogs } from "@/config/blogs";
 import { siteConfig } from "@/config/site";
 
+type Props = {
+  children: React.ReactNode;
+  params: {
+    blog: string;
+  };
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -12,6 +19,7 @@ export async function generateMetadata({
   const blog =
     blogs[params.blog as keyof typeof blogs];
 
+  // Blog not found
   if (!blog) {
     return {
       title: "Blog Not Found",
@@ -24,7 +32,8 @@ export async function generateMetadata({
     };
   }
 
-  const blogUrl = `${siteConfig.url}/blogs/${params.blog}`;
+  // Correct canonical URL
+  const blogUrl = `${siteConfig.url}/blog/${params.blog}`;
 
   return {
     title: blog.title,
@@ -35,9 +44,14 @@ export async function generateMetadata({
 
     authors: [
       {
-        name: `${blog.title} - ${siteConfig.name}`,
+        name: siteConfig.name,
       },
     ],
+
+    robots: {
+      index: true,
+      follow: true,
+    },
 
     alternates: {
       canonical: blogUrl,
@@ -49,7 +63,7 @@ export async function generateMetadata({
       url: blogUrl,
       siteName: siteConfig.name,
       locale: "en_IN",
-      type: "website",
+      type: "article",
     },
 
     twitter: {
@@ -63,14 +77,11 @@ export async function generateMetadata({
 export default function BlogSlugLayout({
   children,
   params,
-}: {
-  children: React.ReactNode;
-
-  params: { blog: string };
-}) {
+}: Props) {
   const blog =
     blogs[params.blog as keyof typeof blogs];
 
+  // 404 page if blog doesn't exist
   if (!blog) {
     return notFound();
   }
