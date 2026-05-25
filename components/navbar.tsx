@@ -16,9 +16,9 @@ import {
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
+  Image,
 } from "@nextui-org/react";
 
-import { Image } from "@nextui-org/react";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -57,7 +57,7 @@ export const Navbar = () => {
                   quality: "auto",
                   format: "auto",
                 })}
-                alt="Company Logo"
+                alt="Jai Shree Equipment Dairy Logo"
                 width={50}
                 height={50}
                 className="object-contain"
@@ -72,7 +72,10 @@ export const Navbar = () => {
                 {item.href === "/products" ? (
                   <Dropdown placement="bottom-start">
                     <DropdownTrigger>
-                      <button className="flex items-center gap-1 font-medium text-white hover:text-gray-200">
+                      <button
+                        type="button"
+                        className="flex items-center gap-1 font-medium text-white hover:text-gray-200"
+                      >
                         {item.label}
                         <FaAngleDown />
                       </button>
@@ -112,16 +115,23 @@ export const Navbar = () => {
 
         {/* RIGHT DESKTOP */}
         <NavbarContent justify="end" className="hidden lg:flex">
-          <ThemeSwitch />
+          <NavbarItem>
+            <ThemeSwitch />
+          </NavbarItem>
         </NavbarContent>
 
         {/* MOBILE TOP */}
         <NavbarContent justify="end" className="lg:hidden">
-          <ThemeSwitch />
-          <NavbarMenuToggle />
+          <NavbarItem>
+            <ThemeSwitch />
+          </NavbarItem>
+
+          <NavbarItem>
+            <NavbarMenuToggle />
+          </NavbarItem>
         </NavbarContent>
 
-        {/* MOBILE MENU (FIXED) */}
+        {/* MOBILE MENU */}
         <NavbarMenu className="bg-blue-700 text-white">
           {siteConfig.navItems.flatMap((item) => {
             // PRODUCTS MENU
@@ -140,6 +150,7 @@ export const Navbar = () => {
                     className="flex items-center justify-between w-full font-medium"
                   >
                     {item.label}
+
                     <FaAngleDown
                       className={`transition-transform duration-300 ${
                         mobileProductsOpen ? "rotate-180" : ""
