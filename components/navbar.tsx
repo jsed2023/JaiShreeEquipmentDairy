@@ -38,7 +38,6 @@ export const Navbar = () => {
         maxWidth="2xl"
         position="static"
         isMenuOpen={isMenuOpen}
-        onMenuOpenChange={setIsMenuOpen}
         className="fixed top-0 left-0 z-50 w-full bg-sky-600 text-white shadow-md"
       >
         {/* LEFT SIDE */}
@@ -133,7 +132,10 @@ export const Navbar = () => {
           </NavbarItem>
 
           <NavbarItem>
-            <NavbarMenuToggle />
+            <NavbarMenuToggle
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            />
           </NavbarItem>
         </NavbarContent>
 
