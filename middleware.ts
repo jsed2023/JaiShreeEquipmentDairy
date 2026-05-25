@@ -14,19 +14,18 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Remove trailing slash
-  if (
-    url.pathname !== "/" &&
-    url.pathname.endsWith("/")
-  ) {
+  // Remove trailing slash safely
+  if (url.pathname !== "/" && url.pathname.endsWith("/")) {
     url.pathname = url.pathname.slice(0, -1);
 
-    return NextResponse.redirect(url, 308);
+    return NextResponse.rewrite(url);
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: "/:path*",
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
+  ],
 };
