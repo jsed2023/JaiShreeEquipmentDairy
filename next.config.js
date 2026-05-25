@@ -20,9 +20,6 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-  
-  // Note: robots.ts और sitemap.ts के लिए Headers की आवश्यकता 
-  // Next.js (App Router) में नहीं होती, यह खुद मैनेज करता है।
 };
 
 module.exports = nextConfig;
