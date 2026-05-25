@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
+
   compress: true,
   reactStrictMode: true,
   poweredByHeader: false,
@@ -19,6 +20,16 @@ const nextConfig = {
 
   experimental: {
     scrollRestoration: true,
+  },
+
+  async redirects() {
+    return [
+      {
+        source: "/:path*/",
+        destination: "/:path*",
+        permanent: true,
+      },
+    ];
   },
 };
 
