@@ -21,16 +21,6 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-
-  async redirects() {
-    return [
-      {
-        source: "/:path*/",
-        destination: "/:path*",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;
