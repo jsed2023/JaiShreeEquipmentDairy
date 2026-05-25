@@ -1,12 +1,16 @@
 import { NextResponse } from "next/server";
+
 import { siteConfig } from "@/config/site";
+
 import {
   MilkTestingEquipment,
   creamSeparatorMachine,
   milkingMachine,
   automaticMilkCollectionSystem,
 } from "@/config/products";
+
 import { blogs } from "@/config/blogs";
+
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
@@ -20,28 +24,27 @@ function slugify(value: string) {
 }
 
 export async function GET() {
-  // Safer sitemap date format
-  const now = new Date().toISOString().split("T")[0];
+  const now = new Date().toISOString();
 
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+  const urls: string[] = [];
 
   const addUrl = (
-    url: string,
-    lastMod: string = now,
-    freq: string = "weekly",
-    priority: number = 0.5
+    path: string,
+    priority = 0.8,
+    changefreq = "weekly"
   ) => {
-    xml += `
-  <url>
-    <loc>${url}</loc>
-    <lastmod>${lastMod}</lastmod>
-    <changefreq>${freq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
+    urls.push(`
+      <url>
+        <loc>${BASE_URL}${path}</loc>
+        <lastmod>${now}</lastmod>
+        <changefreq>${changefreq}</changefreq>
+        <priority>${priority}</priority>
+      </url>
+    `);
   };
 
-  const staticPages = [
+  // Static pages
+  [
     "",
     "/about",
     "/automatic-milk-collection-system",
@@ -56,68 +59,65 @@ export async function GET() {
     "/milk-rate-chart",
     "/milk-testing-equipment",
     "/services",
-  ];
+  ].forEach((path, index) => {
+    addUrl(path, index === 0 ? 1 : 0.8);
+  });
 
-  staticPages.forEach((path, i) =>
-    addUrl(`${BASE_URL}${path}`, now, "weekly", i === 0 ? 1 : 0.8)
-  );
-
-  automaticMilkCollectionSystem?.forEach(
-    (p) =>
-      p.url &&
+  // Automatic Milk Collection System
+  automaticMilkCollectionSystem?.forEach((p) => {
+    if (p.url) {
       addUrl(
-        `${BASE_URL}/automatic-milk-collection-system/${p.url}`,
-        now,
-        "weekly",
+        `/automatic-milk-collection-system/${p.url}`,
         0.9
-      )
-  );
+      );
+    }
+  });
 
+  // Dairy Equipment
   [...creamSeparatorMachine, ...milkingMachine]?.forEach(
-    (p) =>
-      p.url &&
+    (p) => {
+      if (p.url) {
+        addUrl(`/dairy-equipment/${p.url}`, 0.9);
+      }
+    }
+  );
+
+  // Milk Testing Equipment
+  MilkTestingEquipment?.forEach((p) => {
+    if (p.url) {
       addUrl(
-        `${BASE_URL}/dairy-equipment/${p.url}`,
-        now,
-        "weekly",
+        `/milk-testing-equipment/${p.url}`,
         0.9
-      )
-  );
+      );
+    }
+  });
 
-  MilkTestingEquipment?.forEach(
-    (p) =>
-      p.url &&
-      addUrl(
-        `${BASE_URL}/milk-testing-equipment/${p.url}`,
-        now,
-        "weekly",
-        0.9
-      )
-  );
+  // Blogs
+  Object.values(blogs)?.forEach((blog) => {
+    if (blog.slug) {
+      addUrl(`/blog/${blog.slug}`, 0.8);
+    }
+  });
 
-  Object.values(blogs)?.forEach(
-    (b) =>
-      b.slug &&
-      addUrl(`${BASE_URL}/blog/${b.slug}`, now, "weekly", 0.8)
-  );
-
-  rajasthanLocations?.forEach((loc) =>
+  // Rajasthan location pages
+  rajasthanLocations?.forEach((location) => {
     addUrl(
-      `${BASE_URL}/milk-analyzer-${slugify(loc)}`,
-      now,
-      "weekly",
+      `/milk-analyzer-${slugify(location)}`,
       0.7
-    )
-  );
+    );
+  });
 
-  xml += `
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${urls.join("")}
 </urlset>`;
 
   return new NextResponse(xml, {
     headers: {
-      "Content-Type": "application/xml; charset=utf-8",
+      "Content-Type": "application/xml",
       "Cache-Control":
-        "public, max-age=0, s-maxage=86400, stale-while-revalidate=43200",
+        "public, s-maxage=86400, stale-while-revalidate",
     },
   });
 }
