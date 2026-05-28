@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server";
-
 import { siteConfig } from "@/config/site";
 
 import {
@@ -12,8 +10,6 @@ import {
 import { blogs } from "@/config/blogs";
 
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
-
-export const dynamic = "force-dynamic";
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
 
@@ -45,7 +41,7 @@ export async function GET() {
     `);
   };
 
-  // Static pages
+  // Static Pages
   [
     "",
     "/about",
@@ -106,7 +102,7 @@ export async function GET() {
     }
   });
 
-  // Rajasthan location pages
+  // Rajasthan Locations
   rajasthanLocations?.forEach((location) => {
     addUrl(
       `/milk-analyzer-${slugify(location)}`,
@@ -119,11 +115,9 @@ export async function GET() {
 ${urls.join("")}
 </urlset>`;
 
-  return new NextResponse(xml, {
+  return new Response(xml, {
     headers: {
       "Content-Type": "application/xml",
-      "Cache-Control":
-        "public, s-maxage=86400, stale-while-revalidate",
     },
   });
 }
