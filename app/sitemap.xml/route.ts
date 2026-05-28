@@ -63,7 +63,7 @@ export async function GET() {
 
   // Automatic Milk Collection System
   automaticMilkCollectionSystem?.forEach((p) => {
-    if (p.url) {
+    if (p?.url) {
       addUrl(
         `/automatic-milk-collection-system/${p.url}`,
         0.9
@@ -74,28 +74,32 @@ export async function GET() {
   // Dairy Equipment
   [...creamSeparatorMachine, ...milkingMachine].forEach(
     (p) => {
-      if (p.url) {
+      if (p?.url) {
         addUrl(`/dairy-equipment/${p.url}`, 0.9);
       }
     }
   );
 
   // Milk Testing Equipment
-MilkTestingEquipment?.forEach((p) => {
-  if (p.url) {
-    addUrl(
-      `/milk-testing-equipment/${p.url}`,
-      0.9
-    );
-  }
-});
+  MilkTestingEquipment?.forEach((p) => {
+    if (p?.url) {
+      addUrl(
+        `/milk-testing-equipment/${p.url}`,
+        0.9
+      );
+    }
+  });
 
-// Blogs
-Object.values(blogs)?.forEach((blog: any) => {
-  if (blog?.slug) {
-    addUrl(`/blog/${blog.slug}`, 0.8);
-  }
-});
+  // Blogs
+  Object.values(blogs || {}).forEach((blog) => {
+    if (
+      typeof blog === "object" &&
+      blog !== null &&
+      "slug" in blog
+    ) {
+      addUrl(`/blog/${blog.slug}`, 0.8);
+    }
+  });
 
   // Rajasthan Locations
   rajasthanLocations?.forEach((location) => {
