@@ -81,26 +81,21 @@ export async function GET() {
   );
 
   // Milk Testing Equipment
-  MilkTestingEquipment?.forEach((p) => {
-    if (p.url) {
-      addUrl(
-        `/milk-testing-equipment/${p.url}`,
-        0.9
-      );
-    }
-  });
+MilkTestingEquipment?.forEach((p) => {
+  if (p.url) {
+    addUrl(
+      `/milk-testing-equipment/${p.url}`,
+      0.9
+    );
+  }
+});
 
-  // Blogs
-  Object.values(blogs).forEach((blog) => {
-    if (
-      blog &&
-      typeof blog === "object" &&
-      "slug" in blog &&
-      typeof blog.slug === "string"
-    ) {
-      addUrl(`/blog/${blog.slug}`, 0.8);
-    }
-  });
+// Blogs
+Object.values(blogs)?.forEach((blog: any) => {
+  if (blog?.slug) {
+    addUrl(`/blog/${blog.slug}`, 0.8);
+  }
+});
 
   // Rajasthan Locations
   rajasthanLocations?.forEach((location) => {
