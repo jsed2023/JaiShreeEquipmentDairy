@@ -95,8 +95,13 @@ export async function GET() {
   });
 
   // Blogs
-  Object.values(blogs).forEach((blog: any) => {
-    if (blog?.slug) {
+  Object.values(blogs).forEach((blog) => {
+    if (
+      blog &&
+      typeof blog === "object" &&
+      "slug" in blog &&
+      typeof blog.slug === "string"
+    ) {
       addUrl(`/blog/${blog.slug}`, 0.8);
     }
   });
