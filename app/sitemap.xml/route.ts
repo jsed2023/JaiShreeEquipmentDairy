@@ -13,6 +13,8 @@ import { blogs } from "@/config/blogs";
 
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
+export const dynamic = "force-dynamic";
+
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
 
 function slugify(value: string) {
@@ -35,7 +37,7 @@ export async function GET() {
   ) => {
     urls.push(`
       <url>
-        <loc>${BASE_URL}${path}</loc>
+        <loc>${BASE_URL}${encodeURI(path)}</loc>
         <lastmod>${now}</lastmod>
         <changefreq>${changefreq}</changefreq>
         <priority>${priority}</priority>
@@ -74,7 +76,7 @@ export async function GET() {
   });
 
   // Dairy Equipment
-  [...creamSeparatorMachine, ...milkingMachine]?.forEach(
+  [...creamSeparatorMachine, ...milkingMachine].forEach(
     (p) => {
       if (p.url) {
         addUrl(`/dairy-equipment/${p.url}`, 0.9);
@@ -93,8 +95,8 @@ export async function GET() {
   });
 
   // Blogs
-  Object.values(blogs)?.forEach((blog) => {
-    if (blog.slug) {
+  Object.values(blogs).forEach((blog: any) => {
+    if (blog?.slug) {
       addUrl(`/blog/${blog.slug}`, 0.8);
     }
   });
@@ -108,9 +110,8 @@ export async function GET() {
   });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${urls.join("")}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.join("")}
 </urlset>`;
 
   return new NextResponse(xml, {
