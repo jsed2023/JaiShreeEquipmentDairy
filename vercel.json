@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "trailingSlash": false,
 
   "buildCommand": "next build",
@@ -11,6 +10,15 @@
   "regions": ["bom1"],
 
   "headers": [
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [
@@ -33,14 +41,3 @@
       ]
     },
     {
-      "source": "/static/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value":
-            "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ]
-}
