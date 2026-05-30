@@ -116,8 +116,8 @@ export const services: Services[] = [
       {
         id: "lactoscan-milk-analyzer-complete-motor",
         url: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729439745/Lactoscan%20Milk%20Analyzer%20Moter%20Complete.jpg",),
-        alt: "lactoscan milk analyzer moter complete",
-        figcaption: "Lactoscan Milk Analyzer Moter Complete",
+        alt: "lactoscan milk analyzer motor complete",
+        figcaption: "Lactoscan Milk Analyzer Motor Complete",
       },
       {
         id: "lactoscan-milk-analyzer-cleaning-solutions",
