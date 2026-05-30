@@ -7,6 +7,7 @@ import {
   creamSeparatorMachine,
   milkingMachine,
   automaticMilkCollectionSystem,
+  MilkAnalyzerMachines,
 } from "@/config/products";
 
 import { blogs } from "@/config/blogs";
@@ -61,6 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/testimonials",
     "/locations",
     "/milestones",
+    "/milk-analyzer-machines",
     "/milk-rate-chart",
     "/milk-testing-equipment",
     "/services",
@@ -96,6 +98,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       );
     }
   });
+        
+// Milk Analyzer Machines
+MilkAnalyzerMachines?.forEach((p) => {
+  if (p?.url) {
+    addUrl(
+      `/milk-analyzer-machines/${p.url}`,
+      0.9
+    );
+  }
+});
+
+
 
   // Blogs
   Object.values(blogs || {}).forEach((blog) => {
