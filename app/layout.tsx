@@ -15,130 +15,131 @@ import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
 
 export const metadata: Metadata = {
-metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteConfig.url),
 
-title: {
-default: siteConfig.name,
-template: "%s | ${siteConfig.name}",
-},
-
-description: siteConfig.description,
-
-keywords: metaKeywords[0].keywords,
-
-authors: [{ name: siteConfig.name }],
-
-creator: siteConfig.name,
-
-publisher: siteConfig.name,
-
-category:
-"dairy equipment, milk testing equipment, automatic milk collection system",
-
-alternates: {
-canonical: siteConfig.url,
-},
-
-icons: {
-icon: "/favicon.ico",
-},
-
-verification: {
-google: "Pwgrtmz4YYu7wvKICR3xPoHIa52SsSz4bQwyBb9EG0A",
-},
-
-openGraph: {
-type: "website",
-locale: "en_IN",
-url: siteConfig.url,
-title: siteConfig.name,
-description: siteConfig.description,
-siteName: siteConfig.name,
-
-images: [
-  {
-    url: cld(`${siteConfig.url}/logo.png`),
-    width: 1200,
-    height: 630,
-    alt: siteConfig.name,
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
-],
 
-},
+  description: siteConfig.description,
 
-twitter: {
-card: "summary_large_image",
-description: siteConfig.description,
-images: [cld("${siteConfig.url}/logo.png")],
-},
+  keywords: metaKeywords[0].keywords,
 
-robots: {
-index: true,
-follow: true,
-},
+  authors: [{ name: siteConfig.name }],
+
+  creator: siteConfig.name,
+
+  publisher: siteConfig.name,
+
+  category:
+    "dairy equipment, milk testing equipment, automatic milk collection system",
+
+  alternates: {
+    canonical: siteConfig.url,
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+
+  verification: {
+    google: "Pwgrtmz4YYu7wvKICR3xPoHIa52SsSz4bQwyBb9EG0A",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+
+    images: [
+      {
+        url: cld(`${siteConfig.url}/logo.png`),
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    description: siteConfig.description,
+    images: [cld(`${siteConfig.url}/logo.png`)],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export const viewport: Viewport = {
-width: "device-width",
-initialScale: 1,
-themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
 }
 
 export default function RootLayout({
-children,
+  children,
 }: {
-children: React.ReactNode
+  children: React.ReactNode
 }) {
-return (
-<html lang="en">
-<head>
-{/* ✅ Only Google Tag Manager */}
-<Script
-id="gtm-script"
-strategy="afterInteractive"
-dangerouslySetInnerHTML={{
-__html: "(function(w,d,s,l,i){w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-K3VGDWGP');",
-}}
-/>
-</head>
+  return (
+    <html lang="en">
+      <head>
+        {/* ✅ GTM only on main domain */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (
+                window.location.hostname === "jaishreeequipmentdairy.in" ||
+                window.location.hostname === "www.jaishreeequipmentdairy.in"
+              ) {
+                (function(w,d,s,l,i){
+                  w[l]=w[l]||[];
+                  w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+                  var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),
+                  dl=l!='dataLayer'?'&l='+l:'';
+                  j.async=true;
+                  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                  f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-K3VGDWGP');
+              }
+            `,
+          }}
+        />
+      </head>
 
-  <body
-    className={clsx(
-      "min-h-screen flex flex-col",
-      fontSans.variable
-    )}
-  >
-    {/* ✅ GTM NoScript */}
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-K3VGDWGP"
-        height="0"
-        width="0"
-        style={{
-          display: "none",
-          visibility: "hidden",
-        }}
-      />
-    </noscript>
+      <body
+        className={clsx(
+          "min-h-screen flex flex-col",
+          fontSans.variable
+        )}
+      >
+        <LocalBusinessSchema />
 
-    <LocalBusinessSchema />
+        <Providers>
+          <PageLoader>
+            <div className="relative flex min-h-screen flex-col">
+              <Navbar />
 
-    <Providers>
-      <PageLoader>
-        <div className="relative flex min-h-screen flex-col">
-          <Navbar />
+              <main className="flex-grow pt-20 pb-36">
+                {children}
+              </main>
 
-          <main className="flex-grow pt-20 pb-36">
-            {children}
-          </main>
-
-          <Footer />
-          <WhatsAppButton />
-        </div>
-      </PageLoader>
-    </Providers>
-  </body>
-</html>
-
-)
+              <Footer />
+              <WhatsAppButton />
+            </div>
+          </PageLoader>
+        </Providers>
+      </body>
+    </html>
+  )
 }
