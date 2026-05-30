@@ -104,7 +104,10 @@ export default function Footer() {
                 href:
                   "/automatic-milk-collection-system",
               },
-
+              {
+                name: "Milk Analyzer Machines",
+                href: "/milk-analyzer-machines",
+              },
               {
                 name: "Services",
                 href: "/services",
