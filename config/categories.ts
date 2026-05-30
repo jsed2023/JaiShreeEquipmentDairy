@@ -43,6 +43,21 @@ export const CATEGORIES: Category[] = [
     },
   },
   {
+  slug: "milk-analyzer-machines",
+  name: "Milk Analyzer Machines",
+  priority: 0.9,
+  url: "https://jaishreeequipmentdairy.in/milk-analyzer-machines",
+  gradient: "linear-gradient(to right,#0ea5e9,#6366f1,#8b5cf6)",
+  seo: {
+    title:
+      "Milk Analyzer Machines & Milk Testing Solutions in India",
+    description:
+      "Buy advance milk analyzer machines, milk testing machines, fat testing equipment  for accurate dairy quality analysis. Sales, service, repair, and genuine spare parts available across India.",
+    keywords:
+      "milk analyzer machines, milk analyzer machine, milk analyzer machine india, milk analyzer machine price india, digital milk analyzer, automatic milk analyzer, advance milk analyzer, ekomilk ultra analyzer, lactoscan milk analyzer, milk testing machine, milk fat testing machine, milk fat analyzer, milk quality testing machine, dairy testing equipment, dairy milk analyzer, milk analyzer supplier india, milk analyzer supplier rajasthan, milk analyzer sri ganganagar, milk analyzer hanumangarh, milk analyzer bikaner, milk analyzer anupgarh, milk purity testing machine, milk SNF testing machine, milk composition analyzer, milk testing machine price, portable milk analyzer, dairy milk testing solutions, milk analyzer for dairy farm, bulk milk testing machine, ultrasonic milk stirrer, milk stirrer machine, automatic milk stirrer, ultrasonic stirrer for milk analyzer, milk sample mixing machine, milk analyzer repair service, milk analyzer spare parts, milk analyzer calibration service, buy milk analyzer online india",
+  },
+},
+  {
     slug: "automatic-milk-collection-system",
     name: "Automatic Milk Collection System",
     priority: 0.9,

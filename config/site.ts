@@ -42,6 +42,10 @@ export const siteConfig = {
           product: "Milk Testing Equipment",
           href: "milk-testing-equipment",
         },
+        {
+          product: "Milk Analyzer Machines",
+          href: "milk-analyzer-machines",
+        },
       ],
     },
     {
@@ -180,5 +184,11 @@ Ultrasonic Milk Analyzer,Digital Milk Analyzer Machine,Portable Milk Analyzer Ma
   name: "Blog - Jai Shree Equipment Dairy",
   keywords:
     "Dairy Blogs, Milk Testing Blogs, Milk Analyzer Articles, Dairy Equipment Blogs, Dairy Farming Tips, Automatic Milk Collection Unit Blogs, Fat Testing Machine Guide, Milking Machine Articles, Milk Cream Separator Blogs, Dairy Industry News, Dairy Technology Blogs, Dairy Machinery Insights, Dairy Plant Equipment Blogs, Dairy Processing Articles, Dairy Equipment Rajasthan, Dairy Equipment India, Jai Shree Equipment Dairy Blogs, Milk Testing Equipment Guide, Dairy Farm Equipment Articles, Commercial Dairy Equipment Blogs, Dairy Machine Knowledge, Dairy Engineering Blogs, Milk Collection Center Guide, Dairy Automation Blogs, Dairy Quality Testing Articles, Dairy Business Tips, Dairy Machinery Updates, Dairy Equipment Supplier India, Dairy Equipment Sri Ganganagar, Dairy Equipment Bikaner, Dairy Equipment Hanumangarh, Dairy Equipment Anupgarh, Industrial Dairy Equipment Articles, Dairy Plant Machinery Blogs, Milk Processing Equipment Insights, Dairy Equipment Manufacturer Rajasthan, Dairy Equipment Services India, Dairy Machine Installation Guide, Dairy Equipment Maintenance Tips, Modern Dairy Farming Blogs, Dairy Equipment Dealer India, Dairy Product Processing Blogs, Smart Dairy Technology Articles"
+},
+{
+  id: 14,
+  name: "Milk Analyzer Machines - Jai Shree Equipment Dairy",
+  keywords:
+    "Milk Analyzer Machines, Milk Analyzer Machine, Advance Milk Analyzer, Ekomilk Ultra Analyzer, Lactoscan Milk Analyzer, Milk Testing Machine, Milk Fat Testing Machine, Milk Analyzer Machine Supplier, Milk Analyzer Machine Rajasthan, Milk Analyzer Machine India, Dairy Milk Analyzer, Automatic Milk Analyzer, Digital Milk Analyzer, Milk Testing Equipment, Milk Analyzer Service, Milk Analyzer Repair, Milk Analyzer Spare Parts, Milk Analyzer Calibration, Milk Quality Testing Machine, Dairy Testing Equipment, Milk Collection Center Machine, AMCS Milk Analyzer, Dairy Automation Equipment, Milk Analyzer Dealer Rajasthan, Milk Analyzer Supplier Sri Ganganagar, Milk Analyzer Hanumangarh, Milk Analyzer Bikaner, Milk Analyzer Anupgarh, Dairy Equipment Rajasthan, Jai Shree Equipment Dairy"
 },
 ];

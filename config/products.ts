@@ -5,7 +5,8 @@ export type Product = {
   category:
     | "dairy-equipment"
     | "milk-testing-equipment"
-    | "automatic-milk-collection-system";
+    | "automatic-milk-collection-system"
+    | "milk-analyzer-machines";
 };
 export const automaticMilkCollectionSystem: Products[] = [
   
@@ -3442,6 +3443,1379 @@ desc:
   url: "advance-milk-analyzer-ultra",
 
   category: "milk-testing-equipment",
+
+  smallDesc:
+    "Best Advance Milk Analyzer Ultra Machine for Dairy Farms, Milk Collection Centers, Dairy Plants & Laboratories in Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh and Anupgarh",
+
+  images: [
+    {
+      src: cld(
+        "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779257895/Advance_Milk_Analyzer_Ultra.webp"
+      ),
+      alt: "Advance Milk Analyzer Ultra Digital Milk Testing Machine",
+    },
+  ],
+
+  price: "28,000",
+
+  moreDetails: cld(
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png"
+  ),
+
+  features: [
+    {
+      id: "13A",
+      key: "Testing Speed",
+      value: "120 Samples Per Hour",
+    },
+    {
+      id: "13B",
+      key: "Brand",
+      value: "Advance",
+    },
+    {
+      id: "13C",
+      key: "Machine Type",
+      value: "Automatic Digital Milk Analyzer",
+    },
+    {
+      id: "13D",
+      key: "Display",
+      value: "7 Inch Smart LCD Display",
+    },
+    {
+      id: "13E",
+      key: "FAT Testing",
+      value: "High Accuracy FAT Analysis",
+    },
+    {
+      id: "13F",
+      key: "SNF Testing",
+      value: "Automatic SNF Detection",
+    },
+    {
+      id: "13G",
+      key: "Protein Testing",
+      value: "Accurate Protein Analysis",
+    },
+    {
+      id: "13H",
+      key: "Lactose Testing",
+      value: "Instant Lactose Detection",
+    },
+    {
+      id: "13I",
+      key: "Water Detection",
+      value: "Added Water Percentage Detection",
+    },
+    {
+      id: "13J",
+      key: "Density Testing",
+      value: "Digital Density Analysis",
+    },
+    {
+      id: "13K",
+      key: "Temperature Testing",
+      value: "Real Time Milk Temperature",
+    },
+    {
+      id: "13L",
+      key: "Conductivity Testing",
+      value: "Automatic Conductivity Analysis",
+    },
+    {
+      id: "13M",
+      key: "Technology",
+      value: "Smart Automatic Analysis System",
+    },
+    {
+      id: "13N",
+      key: "Connectivity",
+      value: "USB / WiFi / Bluetooth",
+    },
+    {
+      id: "13O",
+      key: "Power Supply",
+      value: "220V AC / 12V DC",
+    },
+    {
+      id: "13P",
+      key: "Body Material",
+      value: "Industrial ABS Plastic",
+    },
+    {
+      id: "13Q",
+      key: "Application",
+      value: "Dairy Farm & Milk Collection Center",
+    },
+    {
+      id: "13R",
+      key: "Operation",
+      value: "Fully Automatic",
+    },
+    {
+      id: "13S",
+      key: "Accuracy",
+      value: "High Precision Milk Testing",
+    },
+    {
+      id: "13T",
+      key: "Data Storage",
+      value: "Smart Digital Data Memory",
+    },
+    {
+      id: "13U",
+      key: "Maintenance",
+      value: "Low Maintenance Design",
+    },
+    {
+      id: "13V",
+      key: "Cleaning System",
+      value: "Quick Auto Cleaning Support",
+    },
+    {
+      id: "13W",
+      key: "Usage",
+      value: "Dairy Plant, Lab & Milk Society",
+    },
+    {
+      id: "13X",
+      key: "Country of Origin",
+      value: "Made in India",
+    },
+    {
+      id: "13Y",
+      key: "Weight",
+      value: "4 Kg",
+    },
+    {
+      id: "13Z",
+      key: "Price",
+      value: "₹ 28,000",
+    },
+  ],
+
+  desc:
+    "Advance Milk Analyzer Ultra is a fully automatic high accuracy digital milk testing machine designed for dairy farms, milk collection centers, dairy plants and milk testing laboratories. This advanced milk analyzer machine delivers fast and reliable milk quality testing including FAT, SNF, Protein, Lactose, Added Water, Density, Temperature and Conductivity analysis. The machine provides accurate milk testing results within seconds and improves dairy collection efficiency. Ideal for professional dairy testing operations across Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh and Rajasthan.",
+
+  keywords:
+    "Advance Milk Analyzer Ultra, milk analyzer machine, digital milk analyzer, automatic milk testing machine, dairy milk analyzer, milk FAT testing machine, SNF testing machine, milk quality testing machine, dairy testing equipment, milk analyzer machine India, milk analyzer Sri Ganganagar, milk analyzer Bikaner, dairy equipment Hanumangarh, milk testing machine Suratgarh, milk analyzer Anupgarh, dairy lab equipment, milk collection center machine, automatic dairy analyzer, smart milk analyzer machine, best milk analyzer machine India, professional milk testing machine, milk analyzer supplier Rajasthan, digital dairy testing machine, protein testing milk analyzer, lactose testing machine, dairy automation equipment, milk testing equipment Rajasthan, high accuracy milk analyzer machine, dairy farm machine, milk testing device, dairy analyzer machine, milk analyzer for dairy plant",
+},
+];
+
+export const MilkAnalyzerMachines: Products[] = [
+  {
+    id: 1,
+    name: "Ekomilk Ultra Milk Analyzer",
+    url: "ekomilk-ultra-milk-analyzer",
+    category: "milk-analyzer-machines",
+    smallDesc:
+      "The Ekomilk Ultra Analyzer is a robust, ultrasonic, multi-parameter milk quality testing device ideal for dairy farms and milk collection points in the Ganganagar, Bikaner, Hanumangarh, and Anupgarh regions, helping improve quality control, payment accuracy, and operational efficiency without chemical reagents",
+    images: [
+      {
+        src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg",),
+     alt: "Ekomilk Ultra Milk Analyzer",
+      },
+    ],
+    price: "37,500",
+    moreDetails:
+      cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
+    features: [
+      {
+        id: "1A",
+        key: "Capacity",
+        value: "90 sample/hour",
+      },
+      {
+        id: "1B",
+        key: "Brand",
+        value: "Ekomilk Ultra mb ",
+      },
+      {
+        id: "1C",
+        key: "Equipment Type",
+        value: "Fat Testing",
+      },
+      {
+        id: "1D",
+        key: "Display",
+        value: `16x2 (S) LCD Yellow Green`,
+      },
+      {
+        id: "1E",
+        key: "Power Supply",
+        value: "220V AC / 12V DC",
+      },
+      {
+        id: "1F",
+        key: "Country of Origin",
+        value: "Made in Bulgaria",
+      },
+      {
+        id: "1G",
+        key: "Usage/Application",
+        value: "Lab testing",
+      },
+      {
+        id: "1H",
+        key: "Phase",
+        value: "Single",
+      },
+      {
+        id: "1I",
+        key: "Machine Body Material",
+        value: "Plastic",
+      },
+      {
+        id: "1J",
+        key: "Dimensions",
+        value: "90 X 300 X 250 mm",
+      },
+      {
+        id: "1K",
+        key: "Weight",
+        value: "3kg",
+      },
+      {
+        id: "1L",
+        key: "Price",
+        value: "₹ 37,500",
+      },
+    ],
+    desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
+    keywords:
+      "milk fat machine, Ekomilk Ultra Milk Analyzer, Milk Analyzer Machine, Milk Testing Machine, Milk Quality Control, Milk Analysis, Milk Testing Laboratory, Ekomilk Ultra Milk Analyzer Sri Ganganagar, Ekomilk Ultra Milk Analyzer Bikaner, Ekomilk Ultra Milk Analyzer Hanumangarh, Ekomilk Ultra Milk Analyzer Anupgarh, Best Milk Analyzer Machine in Sri Ganganagar, Reliable Milk Testing Equipment in Bikaner, Accurate Milk Analysis Machine in Hanumangarh, Affordable Dairy Equipment in Anupgarh, Buy Ekomilk Ultra Milk Analyzer in Sri Ganganagar, Purchase Milk Analyzer Machine in Bikaner, Get Milk Testing Equipment in Hanumangarh, Ekomilk Ultra Milk Analyzer Price in Sri Ganganagar, Ekomilk Ultra Milk Analyzer Cost in Bikaner, Ekomilk Ultra Milk Analyzer Dealers in Hanumangarh, Ekomilk Ultra Milk Analyzer Suppliers in Anupgarh, Ekomilk Ultra Milk Analyzer, Milk Analyzer Machine, Milk Testing Machine",
+  },
+  {
+    id: 2,
+    name: "Milk Analyzer Advance",
+    url: "milk-analyzer-advance",
+    category: "milk-analyzer-machines",
+    smallDesc:
+      "Milk Analyzer Advance for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    images: [
+  {
+    src: cld(
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/MILK%20ANALYZER%20ADVANCE.png"
+    ),
+    alt: "Milk Analyzer Advance",
+  },
+
+  {
+    src: cld(
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779257895/Advance_Milk_Analyzer_Ultra.webp"
+    ),
+    alt: "Advance Milk Analyzer Ultra",
+  },
+],
+    price: "28,000",
+    moreDetails:
+      cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
+    features: [
+      {
+        id: "2A",
+        key: "Capacity",
+        value: "90 sample/hour",
+      },
+      {
+        id: "2B",
+        key: "Brand",
+        value: "Advance ",
+      },
+      {
+        id: "2C",
+        key: "Equipment Type",
+        value: "Fat Testing",
+      },
+      {
+        id: "2D",
+        key: "Display",
+        value: `16x2 (S) LCD Yellow Green`,
+      },
+      {
+        id: "2E",
+        key: "Power Supply",
+        value: "220V AC / 12V DC",
+      },
+      {
+        id: "2F",
+        key: "Country of Origin",
+        value: `Made in India`,
+      },
+      {
+        id: "2G",
+        key: "Usage/Application",
+        value: "Lab testing",
+      },
+      {
+        id: "2H",
+        key: "Phase",
+        value: "Single",
+      },
+      {
+        id: "2I",
+        key: "Machine Body Material",
+        value: "Plastic",
+      },
+      {
+        id: "2J",
+        key: "Dimensions",
+        value: "90 X 300 X 250 mm",
+      },
+      {
+        id: "2K",
+        key: "Weight",
+        value: "3kg",
+      },
+      {
+        id: "2L",
+        key: "Price",
+        value: "₹ 28,000",
+      },
+    ],
+    desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
+    keywords:
+      "Milk Analyzer Advance, milk fat machine, milk testing machine, milk quality testing, milk analysis, milk testing instrument, milk analyzer, milk testing device, milk analyzer machine Sri Ganganagar, milk testing machine Bikaner, dairy equipment Hanumangarh, dairy machinery Anupgarh, milk quality testing Sri Ganganagar, milk analysis Bikaner, milk testing instrument Hanumangarh, milk analyzer Anupgarh, milk testing device Sri Ganganagar, milk testing device Bikaner, milk testing device Hanumangarh, milk testing device Anupgarh, advanced milk analyzer machine Sri Ganganagar, latest milk testing machine Bikaner, high quality dairy equipment Hanumangarh, efficient dairy machinery Anupgarh, accurate milk quality testing Sri Ganganagar, reliable milk analysis Bikaner, precise milk testing instrument Hanumangarh, modern milk analyzer Anupgarh, cutting edge milk testing device Sri Ganganagar, state of the art milk testing device Bikaner, top notch milk testing device Hanumangarh, best in class milk testing device Anupgarh,  milk analyzer machine, milk testing machine, dairy equipment, dairy machinery, dairy technology, milk quality testing, milk analysis, milk testing instrument, milk analyzer, milk testing device, milk analyzer machine Sri Ganganagar, milk testing machine Bikaner, dairy equipment Hanumangarh, dairy machinery Anupgarh, milk quality testing Sri Ganganagar, milk analysis Bikaner, milk testing instrument Hanumangarh, milk analyzer Anupgarh, milk testing device Sri Ganganagar, milk testing device Bikaner, milk testing device Hanumangarh, milk testing device Anupgarh, advanced milk analyzer machine Sri Ganganagar, latest milk testing machine Bikaner, high quality dairy equipment Hanumangarh, efficient dairy machinery Anupgarh, accurate milk quality testing Sri Ganganagar, reliable milk analysis Bikaner, precise milk testing instrument Hanumangarh, modern milk analyzer Anupgarh, cutting edge milk testing device Sri Ganganagar, state of the art milk testing device Bikaner, top-notch milk testing device Hanumangarh, best-in-class milk testing device Anupgarh",
+  },
+  {
+    id: 3,
+    name: "Ekomilk Ultra Pro",
+    url: "ekomilk-ultra-pro",
+    category: "milk-analyzer-machines",
+    smallDesc:
+      "Ekomilk Ultra Pro Milk Analyzer for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    images: [
+      {
+        src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/Ekomilk%20ULTRA%20PRO.jpg",),
+      alt: "Ekomilk Ultra Pro",},
+    ],
+    price: "45,000",
+    moreDetails:
+      cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
+    features: [
+      {
+        id: "3A",
+        key: "Capacity",
+        value: "100 sample/hour",
+      },
+      {
+        id: "3B",
+        key: "Brand",
+        value: "Ekomilk Ultra Pro ",
+      },
+      {
+        id: "3C",
+        key: "Equipment Type",
+        value: "Fat Testing",
+      },
+      {
+        id: "3D",
+        key: "Display",
+        value: `16x2 (S) LCD Yellow Green`,
+      },
+      {
+        id: "3E",
+        key: "Power Supply",
+        value: "220V AC / 12V DC",
+      },
+      {
+        id: "3F",
+        key: "Country of Origin",
+        value: "Made in Bulgaria",
+      },
+      {
+        id: "3G",
+        key: "Usage/Application",
+        value: "Lab testing",
+      },
+      {
+        id: "3H",
+        key: "Phase",
+        value: "Single",
+      },
+      {
+        id: "3I",
+        key: "Machine Body Material",
+        value: "Plastic",
+      },
+      {
+        id: "3J",
+        key: "Dimensions",
+        value: "90 X 300 X 250 mm",
+      },
+      {
+        id: "3K",
+        key: "Weight",
+        value: "3kg",
+      },
+      {
+        id: "3L",
+        key: "Price",
+        value: "₹ 45000",
+      },
+    ],
+    desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
+    keywords:
+      "Ekomilk Ultra Pro, milk fat machine, Ekomilk Milk Analyzer, Milk Analyzer Machine, Milk Testing, Milk Quality Control, Ekomilk Ultra pro in Sri Ganganagar, Ekomilk Ultra pro in Bikaner, Ekomilk Ultra pro in Hanumangarh, Ekomilk Ultra pro in Anupgarh, Ekomilk Ultra pro Near Me, Jai Shree Equipment Dairy  Best Milk Analyzer Machine in Sri Ganganagar, Buy Ekomilk Ultra pro in Bikaner, Ekomilk Ultra pro Price in Hanumangarh, Ekomilk Ultra pro Features and Benefits, How to Use Ekomilk Ultra pro, Ekomilk Ultra pro Maintenance Tips",
+  },
+  {
+    id: 4,
+    name: "Advance Milk Analyzer Plus",
+    url: "advance-milk-analyzer-plus",
+    category: "milk-analyzer-machines",
+    smallDesc:
+      "Advance  Milk Analyzer Plus machine for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    images: [
+      {
+        src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1757013349/Advance_Milk_Analyzer_plus.png",),
+    alt: "Advance Milk Analyzer Plus",
+      },
+    ],
+    price: "35,000",
+    moreDetails:
+      cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
+    features: [
+      {
+        id: "4A",
+        key: "Capacity",
+        value: "90 sample/hour",
+      },
+      {
+        id: "4B",
+        key: "Brand",
+        value: "Advance",
+      },
+      {
+        id: "4C",
+        key: "Equipment Type",
+        value: "Fat Testing",
+      },
+      {
+        id: "4D",
+        key: "Display",
+        value: `16x2 (S) LCD Yellow Green`,
+      },
+      {
+        id: "4E",
+        key: "Power Supply",
+        value: "220V AC / 12V DC",
+      },
+      {
+        id: "4F",
+        key: "Country of Origin",
+        value: `Made in India`,
+      },
+      {
+        id: "4G",
+        key: "Usage/Application",
+        value: "Lab testing",
+      },
+      {
+        id: "4H",
+        key: "Phase",
+        value: "Single",
+      },
+      {
+        id: "4I",
+        key: "Machine Body Material",
+        value: "Stainless Steel",
+      },
+      {
+        id: "4J",
+        key: "Dimensions",
+        value: "270 x 190 x 270mm",
+      },
+      {
+        id: "4K",
+        key: "Weight",
+        value: "5kg",
+      },
+      {
+        id: "4L",
+        key: "Price",
+        value: "₹ 35,000",
+      },
+    ],
+    desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
+    keywords:
+      "Advance Milk Analyzer plus, milk fat machine, milk testing machine, milk quality control, milk analysis, milk testing, milk analyzer machine, milk testing instrument, milk quality analyzer, milk analyzer Sri Ganganagar, milk testing machine Bikaner, dairy equipment Hanumangarh, dairy technology Anupgarh, milk quality control Sri Ganganagar, milk analysis Bikaner, milk testing Hanumangarh, milk analyzer machine Anupgarh, milk testing instrument Sri Ganganagar, milk quality analyzer Bikaner, Advance Milk Analyzer Plus Anupgarh, Advance Milk Analyzer Plus Bikaner, Advance Milk Analyzer Plus Sri Ganganagar, Advance Milk Analyzer Plus Hanumangarh, milk fat testing, milk protein testing, milk SNF testing, milk density testing, milk quality assurance, milk collection centers",
+  },
+  {
+    id: 5,
+    name: "Milk Analyzer Lactoscan",
+    url: "milk-analyzer-lactoscan",
+    category: "milk-analyzer-machines",
+    smallDesc:
+      "Lactoscan Milk Analyzer machine for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    images: [
+      {
+        src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766093542/milk%20analyzer%20lactoscan.jpg",),
+    alt: "Milk Analyzer Lactoscan",
+      },
+    ],
+    price: "28,000",
+    moreDetails:
+      cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
+    features: [
+      {
+        id: "5A",
+        key: "Capacity",
+        value: "90 sample/hour",
+      },
+      {
+        id: "5B",
+        key: "Brand",
+        value: "lactoscan ",
+      },
+      {
+        id: "5C",
+        key: "Equipment Type",
+        value: "Fat Testing",
+      },
+      {
+        id: "5D",
+        key: "Display",
+        value: `Blue LCD Display 128x64`,
+      },
+      {
+        id: "5E",
+        key: "Power Supply",
+        value:
+          "AC Power Supply Voltage 220-240V,(Max + 10%,Min-15%) DC Power Supply Voltage 12V,6A (Max 16V,Min.10.5V)",
+      },
+      {
+        id: "5F",
+        key: "Country of Origin",
+        value: `Made in India`,
+      },
+      {
+        id: "5G",
+        key: "Usage/Application",
+        value: "Lab testing",
+      },
+      {
+        id: "5H",
+        key: "Phase",
+        value: "Single",
+      },
+      {
+        id: "5I",
+        key: "Machine Body Material",
+        value: "Stainless Steel ",
+      },
+      {
+        id: "5J",
+        key: "Dimensions",
+        value: "100x223x216 mm",
+      },
+      {
+        id: "5K",
+        key: "Weight",
+        value: "3.5kg",
+      },
+      {
+        id: "5L",
+        key: "Price",
+        value: "₹ 28,000",
+      },
+    ],
+    desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
+    keywords:
+      "Milk Analyzer Lactoscan, Lactoscan Milk Analyzer, Lactoscan, milk testing machine, milk quality control, milk analysis, milk testing, milk analyzer machine, milk analyzer Sri Ganganagar, milk analyzer Bikaner, milk analyzer Hanumangarh,  milk analyzer Anupgarh, best milk analyzer in Sri Ganganagar, reliable milk testing machine in Bikaner, affordable Lactoscan in Hanumangarh, accurate milk analysis equipment in Anupgarh, buy Lactoscan milk analyzer in Sri Ganganagar, purchase milk analyzer  in Bikaner, get milk testing solutions in Hanumangarh, find the best milk analyzer dealer in Anupgarh",
+  },
+  
+  {
+    id: 6,
+    name: "Milk Analyzer Lactoscan With Stirrer",
+    url: "milk-analyzer-lactoscan-with-stirrer",
+    category: "milk-analyzer-machines",
+    smallDesc:
+      "Lactoscan Milk Analyzer  with stirrer machine for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    images: [
+      {
+        src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902638/milk_analyzer_lactoscan_with_stirrer.jpg",),
+    alt: "Milk Analyzer Lactoscan With Stirrer",
+      },
+    ],
+    price: "32,000",
+    moreDetails:
+      cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
+    features: [
+      {
+        id: "6A",
+        key: "Capacity",
+        value: "90 sample/hour",
+      },
+      {
+        id: "6B",
+        key: "Brand",
+        value: "lactoscan ",
+      },
+      {
+        id: "6C",
+        key: "Equipment Type",
+        value: "Fat Testing",
+      },
+      {
+        id: "6D",
+        key: "Display",
+        value: `Blue LCD Display 128x64`,
+      },
+      {
+        id: "6E",
+        key: "Power Supply",
+        value:
+          "AC Power Supply Voltage 220-240V,(Max + 10%,Min-15%) DC Power Supply Voltage 12V,6A (Max 16V,Min.10.5V)",
+      },
+      {
+        id: "6F",
+        key: "Country of Origin",
+        value: `Made in India`,
+      },
+      {
+        id: "6G",
+        key: "Usage/Application",
+        value: "Lab testing",
+      },
+      {
+        id: "6H",
+        key: "Phase",
+        value: "Single",
+      },
+      {
+        id: "6I",
+        key: "Machine Body Material",
+        value: "Stainless Steel",
+      },
+      {
+        id: "6J",
+        key: "Dimensions",
+        value: "100x223x216 mm",
+      },
+      {
+        id: "6K",
+        key: "Weight",
+        value: "4kg",
+      },
+      {
+        id: "6L",
+        key: "Price",
+        value: "₹ 32,000",
+      },
+    ],
+    desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
+    keywords:
+      "Milk Analyzer Lactoscan With Stirrer, Lactoscan Milk Analyzer With Stirrer, milk testing machine, milk quality control, milk analysis, milk testing, milk analyzer machine, milk testing instrument, milk analyzer Sri Ganganagar, Lactoscan Sri Ganganagar, milk testing machine Sri Ganganagar, dairy equipment Sri Ganganagar, dairy machinery Sri Ganganagar, milk quality control Sri Ganganagar, milk analysis Sri Ganganagar, milk testing Sri Ganganagar, milk analyzer machine Sri Ganganagar, milk testing instrument Sri Ganganagar, milk analyzer Bikaner, Lactoscan Bikaner, milk testing machine Bikaner, dairy equipment Bikaner, dairy machinery Bikaner, milk quality control Bikaner, milk analysis Bikaner, milk testing Bikaner, milk analyzer machine Bikaner, milk testing instrument Bikaner, milk analyzer Hanumangarh, Lactoscan Hanumangarh, milk testing machine Hanumangarh, dairy equipment Hanumangarh, dairy machinery Hanumangarh, milk quality control Hanumangarh, milk analysis Hanumangarh, milk testing Hanumangarh, milk analyzer machine Hanumangarh, milk testing instrument Hanumangarh, milk analyzer Anupgarh, Lactoscan Anupgarh, milk testing machine Anupgarh, dairy equipment Anupgarh, dairy machinery Anupgarh, milk quality control Anupgarh, milk analysis Anupgarh, milk testing Anupgarh, milk analyzer machine Anupgarh, milk testing instrument Anupgarh, Jai Shree Equipment Dairy, Jai Shree Equipment Dairy Sri Ganganagar, Jai Shree Equipment Dairy Bikaner, Jai Shree Equipment Dairy Hanumangarh, Jai Shree Equipment Dairy Anupgarh",
+  },
+  {
+  id: 7,
+  name: "Advance Max",
+  url: "advance-max",
+  category: "milk-analyzer-machines",
+  smallDesc:
+    "Advance Milk Analyzer Max for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+
+  images: [
+    {
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png",),
+    alt: "Advance Milk Analyzer Max",
+    },
+  ],
+
+
+
+  price: "52,000",
+
+  features: [
+    { id: "7A", key: "Capacity", value: "90 sample/hour" },
+    { id: "7B", key: "Brand", value: "Advance" },
+    {id: "C", key: "Equipment Type",value: "Fat Testing And Milk Collection System"},
+    { id: "7D", key: "Display", value: "16x2 (S) LCD Yellow Green" },
+    { id: "7E", key: "Power Supply", value: "220V AC / 12V DC" },
+    { id: "7F", key: "Country of Origin", value: "Made in India" },
+    { id: "7G", key: "Usage/Application", value: "Lab testing & Milk Collection Center" },
+    { id: "7H", key: "Phase", value: "Single" },
+    { id: "7I", key: "Machine Body Material", value: "S.S.Body" },
+    { id: "7J", key: "Dimensions", value: "90 x 300 x 250 mm" },
+    { id: "7K", key: "Weight", value: "8 kg" },
+    { id: "7L", key: "Price", value: "₹ 52,000" }
+  ],
+
+  desc:
+    "The function of the milk analyzer is to quickly analyze milk for FAT, SNF, proteins, lactose, water content, dpu, and density.",
+
+  keywords:
+    "Advance Max, Milk Analyzer Advance, milk testing machine, dairy equipment, dairy machinery, dairy technology, milk quality testing, milk analysis, milk analyzer machine",
+ },
+ {
+  id: 8,
+  name: "Advance Milk Analyzer Pro20",
+  url: "advance-milk-analyzer-pro20",
+  category: "milk-analyzer-machines",
+  smallDesc:
+    "Advance Milk Analyzer Pro20 for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+
+  images: [
+    {
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1765477571/Advance_Milk_Analyzer_Pro20.png",),
+    alt: "Advance Milk Analyzer Pro20",},
+  ],
+
+  price: "35,000",
+
+  moreDetails:
+    cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png"),
+
+  features: [
+    { id: "8A", key: "Capacity", value: "90 sample/hour" },
+    { id: "8B", key: "Brand", value: "Advance" },
+    { id: "8C", key: "Equipment Type", value: "Fat Testing " },
+    { id: "8D", key: "Display", value: "16x2 (S) LCD Yellow Green" },
+    { id: "8E", key: "Power Supply", value: "220V AC / 12V DC" },
+    { id: "8F", key: "Country of Origin", value: "Made in India" },
+    { id: "8G", key: "Usage/Application", value: "Lab testing " },
+    { id: "8H", key: "Phase", value: "Double" },
+    { id: "8I", key: "Machine Body Material", value: "Plastic" },
+    { id: "8J", key: "Dimensions", value: "90 x 300 x 250 mm" },
+    { id: "8K", key: "Weight", value: "5 kg" },
+    { id: "8L", key: "Price", value: "₹ 35,000" }
+  ],
+
+  desc:
+    "The function of the milk analyzer is to quickly analyze milk for FAT, SNF, proteins, lactose, water content, dpu, and density.",
+
+  keywords:
+    "Advance Milk Analyzer Pro20, Advance Milk Analyzer Plus, Advance Milk Analyzer Max, Advance Max, Milk Analyzer Advance, milk testing machine, dairy equipment, dairy machinery, dairy technology, milk quality testing, milk analysis, milk analyzer machine, Lactoscan Milk Analyser, Milk Analyzer Lactoscan",
+ },
+  {
+  id: 9,
+  name: "Advance Milk Analyzer Plus with Ultrasonic Stirrer & Lithium Battery",
+  url: "advance-milk-analyzer-plus-with-ultrasonic-stirrer-lithium-battery",
+  category: "milk-testing-equipment",
+  
+  
+  smallDesc:
+    "High-precision ultrasonic milk testing machine with inbuilt lithium battery for fast and accurate milk quality analysis.",
+images: [
+      {
+        src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1757013349/Advance_Milk_Analyzer_plus.png",),
+      alt: "Advance Milk Analyzer Plus with Ultrasonic Stirrer & Lithium Battery",
+      },
+    ],
+    price: "35,000",
+  features: [
+    {
+      id: "9A",
+      key: "Model Name",
+      value: "Advance Milk Analyzer Plus",
+    },
+    { 
+      id: "9B",
+        key: "brand",
+        value:"Advance",},
+    {
+      id: "9C",
+      key: "Stirring Technology",
+      value: "Ultrasonic Milk Stirrer (Automatic Mixing)",
+    },
+    {
+      id: "9D",
+      key: "Power System",
+      value: "Inbuilt Lithium Battery + Power Adapter",
+    },
+    {
+      id: "9E",
+      key: "Milk Parameters Tested",
+      value:
+        "Fat (FAT), SNF, Protein, Lactose, Water Content, Temperature, pH, Freezing Point, Salts, Conductivity, Density",
+    },
+    {
+      id: "9F",
+      key: "Body Material",
+      value: "Stainless Steel",
+    },
+    {
+      id: "9G",
+      key: "Dimensions",
+      value: "270 x 190 x 270 mm",
+    },
+    {
+      id: "9H",
+      key: "Weight",
+      value: "5 kg",
+    },
+    {
+      id: "9I",
+      key: "Price",
+      value: "₹ 35,000",
+    },
+    {
+      id: "9J",
+      key:"stock",
+      value: "In Stock",},
+    // 🔥 Features Added
+  { id: "9I", key: "Feature 1", value: "Advanced Ultrasonic Stirring Technology for Uniform Sample Mixing" },
+  { id: "9J", key: "Feature 2", value: "Inbuilt Lithium Battery for Backup During Power Cuts" },
+  { id: "9K", key: "Feature 3", value: "Fast & Accurate Milk Testing Within Seconds" },
+  { id: "9L", key: "Feature 4", value: "High Precision Sensors for Reliable Results" },
+  { id: "9M", key: "Feature 5", value: "Compact, Portable & Energy Efficient Design" },
+  { id: "9N", key: "Feature 6", value: "Low Maintenance & Easy to Operate" },
+  { id: "9O", key: "Feature 7", value: "Durable Stainless Steel Body" },
+  { id: "9P", key: "Feature 8", value: "Ideal for Dairy Farms & Milk Collection Centers" },
+
+  // 🔥 Applications Added
+  { id: "9Q", key: "Application 1", value: "Milk Collection Centers" },
+  { id: "9R", key: "Application 2", value: "Dairy Farms" },
+  { id: "9S", key: "Application 3", value: "Milk Processing Units" },
+  { id: "9T", key: "Application 4", value: "Dairy Quality Control Labs" },
+  { id: "9U", key: "Application 5", value: "Village Dairy Societies" },
+  ],
+  desc:
+    "Advance Milk Analyzer Plus is a high-performance ultrasonic milk testing machine designed for modern dairy operations. Equipped with an advanced Ultrasonic Milk Stirrer and Inbuilt Lithium Battery, it ensures precise sample mixing and uninterrupted operation. The analyzer quickly measures Fat (FAT), SNF, Protein, Lactose, Water Content, Temperature, pH, Freezing Point, Conductivity, and Density from a single milk sample. Its compact stainless steel body, energy-efficient design, and user-friendly interface make it an ideal solution for dairy farms, milk collection centers, and processing units.",
+    keywords:
+    "Advance Milk Analyzer Plus, ultrasonic milk analyzer, lithium battery milk analyzer, battery operated milk analyzer, milk testing machine India, milk quality control machine, dairy milk analyzer machine Rajasthan, milk analyzer Sri Ganganagar, milk testing machine Bikaner, dairy milk analyzer machine Hanumangarh, dairy milk fat testing machine Anupgarh, milk fat testing machine, milk SNF testing machine, milk protein testing equipment, ultrasonic milk analyzer for dairy farms"
+  },
+  {
+  id: 10,
+  name: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer",
+  url: "ekomilk-ultra-milk-analyzer-digital-stirrer",
+  category: "milk-analyzer-machines",
+
+  smallDesc:
+    "Professional milk analyzer with external digital milk stirrer for accurate and consistent dairy testing results.",
+
+  images: [
+    {
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1774636620/Ekomilk_Ultra_and_Digital_Milk_Stirrer_fagy6i.webp",),
+alt: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer machine",
+    },
+  ],
+
+  price: "40,000",
+
+  features: [
+    {
+      id: "10A",
+      key: "Model Name",
+      value: "Ekomilk Ultra",
+    },
+    {
+      id: "10B",
+      key: "Brand",
+      value: "Ekomilk",
+    },
+    {
+      id: "10C",
+      key: "Stirring Technology",
+      value: "External Digital Milk Stirrer (Motor-Based Mixing)",
+    },
+    {
+      id: "10D",
+      key: "Power System",
+      value: "Electric Powered (Analyzer + Stirrer)",
+    },
+    {
+      id: "10E",
+      key: "Milk Parameters Tested",
+      value:
+        "Fat (FAT), SNF, Density, Added Water, Protein",
+    },
+    {
+      id: "10F",
+      key: "Display Type",
+      value: "Digital LCD Display",
+    },
+    {
+      id: "10G",
+      key: "Body Material",
+      value: "ABS Body + Stainless Steel Stirrer",
+    },
+    {
+      id: "10H",
+      key: "Weight",
+      value: "Approx 4–6 kg (Combined Setup)",
+    },
+    {
+      id: "10I",
+      key: "Price",
+      value: "₹ 40,000",
+    },
+    {
+      id: "10J",
+      key: "Stock",
+      value: "In Stock",
+    },
+
+    // 🔥 Features
+    {
+      id: "10K",
+      key: "Feature 1",
+      value: "Accurate Milk Analysis with Ultrasonic Technology",
+    },
+    {
+      id: "10L",
+      key: "Feature 2",
+      value: "External Digital Stirrer Ensures Proper Sample Mixing",
+    },
+    {
+      id: "10M",
+      key: "Feature 3",
+      value: "Fast Results Within Seconds",
+    },
+    {
+      id: "10N",
+      key: "Feature 4",
+      value: "User-Friendly Interface",
+    },
+    {
+      id: "10O",
+      key: "Feature 5",
+      value: "Low Maintenance & Long Life",
+    },
+    {
+      id: "10P",
+      key: "Feature 6",
+      value: "Compact Design for Dairy Use",
+    },
+
+    // 🔥 Applications
+    {
+      id: "10Q",
+      key: "Application 1",
+      value: "Milk Collection Centers",
+    },
+    {
+      id: "10R",
+      key: "Application 2",
+      value: "Dairy Farms",
+    },
+    {
+      id: "10S",
+      key: "Application 3",
+      value: "Dairy Labs",
+    },
+    {
+      id: "10T",
+      key: "Application 4",
+      value: "Village Dairy Societies",
+    },
+  ],
+
+  desc:
+    "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer is a reliable dairy testing solution designed for accurate and consistent milk analysis. The analyzer works with an external digital stirrer to ensure proper mixing of milk samples before testing. It measures key parameters like Fat, SNF, Density, Added Water, and Protein within seconds. Its durable design, easy operation, and precise performance make it ideal for milk collection centers, dairy farms, and quality control labs.",
+
+  keywords:
+    "ekomilk ultra milk analyzer, ultrasonic milk stirrer machine, milk analyzer with stirrer india, milk testing machine for dairy farms, milk fat snf testing machine, ultrasonic milk analyzer india, milk quality testing equipment, digital milk analyzer machine, dairy milk testing machine rajasthan, milk analyzer machine sri ganganagar, milk testing machine bikaner, dairy equipment hanumangarh, milk analyzer anupgarh, milk testing machine for collection center, milk analyzer price india, best milk analyzer machine india, milk analyzer supplier rajasthan, dairy milk analyzer machine india, milk analyzer with ultrasonic stirrer, milk testing equipment for dairy labs"
+},
+{
+  id: 11,
+  name: "Ekomilk Ultra Milk Analyzer with Ultrasonic Milk Stirrer",
+  url: "ekomilk-ultra-milk-analyzer-ultrasonic-stirrer",
+  category: "milk-analyzer-machines",
+
+  smallDesc:
+    "High-precision milk analyzer with ultrasonic milk stirrer for accurate and consistent dairy testing results.",
+
+  images: [
+    {
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1774636620/Ekomilk_Analyzer_and_Millk_Stirrer_qnphka.webp"),
+      alt: "Ekomilk Ultra Milk Analyzer with Ultrasonic Milk Stirrer machine",
+    },
+  ],
+
+  price: "40,000",
+
+  features: [
+    { id: "11A", key: "Model Name", value: "Ekomilk Ultra" },
+    { id: "11B", key: "Brand", value: "Ekomilk" },
+    { id: "11C", key: "Stirring Technology", value: "Ultrasonic Milk Stirrer (Uniform Mixing)" },
+    { id: "11D", key: "Power System", value: "Electric Powered (Analyzer + Stirrer)" },
+    {
+      id: "11E",
+      key: "Milk Parameters Tested",
+      value:
+        "Fat (FAT), SNF, Protein, Lactose, Density, Added Water, Temperature, pH, Freezing Point",
+    },
+    { id: "11F", key: "Display Type", value: "Digital LCD Display" },
+    { id: "11G", key: "Testing Time", value: "Approx 30–40 seconds" },
+    { id: "11H", key: "Body Material", value: "ABS Body + Stainless Steel Stirrer" },
+    { id: "11I", key: "Weight", value: "Approx 4–6 kg (Combined Setup)" },
+    { id: "11J", key: "Operation", value: "Automatic with Minimal Manual Effort" },
+{
+      id: "11K",
+      key: "Price",
+      value: "₹ 39,500",
+    },
+    {
+      id: "11L",
+      key: "Stock",
+      value: "In Stock",
+    },
+    // 🔥 Key Features
+    {
+      id: "11M",
+      key: "Feature 1",
+      value: "Ultrasonic stirring ensures perfect and uniform sample mixing",
+    },
+    {
+      id: "11N",
+      key: "Feature 2",
+      value: "High accuracy milk testing without chemicals",
+    },
+    {
+      id: "11O",
+      key: "Feature 3",
+      value: "Fast results within seconds",
+    },
+    {
+      id: "11P",
+      key: "Feature 4",
+      value: "User-friendly interface with digital display",
+    },
+    {
+      id: "11Q",
+      key: "Feature 5",
+      value: "Low maintenance and long service life",
+    },
+    {
+      id: "11R",
+      key: "Feature 6",
+      value: "Energy efficient and reliable performance",
+    },
+
+    // 🔥 Applications
+    { id: "11S", key: "Application 1", value: "Milk Collection Centers" },
+    { id: "11T", key: "Application 2", value: "Dairy Farms" },
+    { id: "11U", key: "Application 3", value: "Dairy Quality Testing Labs" },
+    { id: "11V", key: "Application 4", value: "Milk Processing Units" },
+  ],
+
+  // 📝 Description
+  desc:
+    "Ekomilk Ultra Milk Analyzer with Ultrasonic Milk Stirrer is a high-precision dairy testing solution designed for accurate milk quality analysis. The ultrasonic stirrer ensures proper and uniform mixing of milk samples before testing, improving accuracy. It quickly measures Fat (FAT), SNF, Protein, Density, Added Water, and other parameters within seconds. Its compact design, reliable performance, and easy operation make it ideal for dairy farms, milk collection centers, and quality control laboratories.",
+
+  // 🔍 SEO Keywords
+  keywords:
+    "ekomilk ultra milk analyzer, ultrasonic milk stirrer machine, milk analyzer with stirrer india, milk testing machine for dairy farms, milk fat snf testing machine, ultrasonic milk analyzer india, milk quality testing equipment, digital milk analyzer machine, dairy milk testing machine rajasthan, milk analyzer machine sri ganganagar, milk testing machine bikaner, dairy equipment hanumangarh, milk analyzer anupgarh, milk testing machine for collection center, milk analyzer price india, best milk analyzer machine india, milk analyzer supplier rajasthan, dairy milk analyzer machine india, milk analyzer with ultrasonic stirrer, milk testing equipment for dairy labs",
+},
+{
+  id: 12,
+
+  name: "Ekomilk Ultra Machine",
+
+  url: "ekomilk-ultra",
+
+  category: "milk-analyzer-machines",
+
+  smallDesc:
+    "Buy Ekomilk Ultra digital milk analyzer machine in India for accurate FAT, SNF, Protein, and milk quality testing. Best dairy milk testing machine for dairy farms and milk collection centers.",
+
+  images: [
+    {
+      src: cld(
+        "https://res.cloudinary.com/dddhtbuzs/image/upload/v1778338596/Ekomilk_Ultra.webp"
+      ),
+
+      alt: "Ekomilk Ultra Machine",
+    },
+  ],
+
+  price: "33,500",
+
+ features: [
+    {
+      id: "12A",
+      key: "Model Name",
+      value: "Ekomilk Ultra",
+    },
+
+    {
+      id: "12B",
+      key: "Brand",
+      value: "Ekomilk",
+    },
+
+    {
+      id: "12C",
+      key: "Product Category",
+      value: "Digital Milk Testing Equipment",
+    },
+
+    {
+      id: "12D",
+      key: "Machine Type",
+      value: "Ultrasonic Digital Milk Analyzer Machine",
+    },
+
+    {
+      id: "12E",
+      key: "Technology",
+      value: "Ultrasonic Milk Analyzer Technology",
+    },
+
+    {
+      id: "12F",
+      key: "Milk Parameters Tested",
+      value:
+        "Fat (FAT), SNF, Protein, Lactose, Density(CLR), Added Water, Temperature,and Freezing Point",
+    },
+
+    {
+      id: "12G",
+      key: "Testing Speed",
+      value: "Fast milk testing within 30–40 seconds per sample",
+    },
+
+    {
+      id: "12H",
+      key: "Testing Capacity",
+      value: "Approx. 65–70 milk samples testing per hour",
+    },
+
+    {
+      id: "12I",
+      key: "Sample Volume",
+      value: "15–20 ml milk sample required",
+    },
+
+    {
+      id: "12J",
+      key: "Display Type",
+      value: "Digital LCD Display with easy-to-read interface",
+    },
+
+    {
+      id: "12K",
+      key: "Operation Mode",
+      value: "Fully Automatic Milk Analyzer System",
+    },
+
+    {
+      id: "12L",
+      key: "Testing Method",
+      value: "Chemical-free ultrasonic milk testing process",
+    },
+
+    {
+      id: "12M",
+      key: "Accuracy Level",
+      value: "High-precision and reliable milk quality testing",
+    },
+
+    {
+      id: "12N",
+      key: "Repeatability",
+      value: "Stable and repeatable milk analysis results",
+    },
+
+    {
+      id: "12O",
+      key: "Power Supply",
+      value: "220V AC Single Phase Power Supply",
+    },
+
+    {
+      id: "12P",
+      key: "Power Consumption",
+      value: "Low power consumption with energy-efficient operation",
+    },
+
+    {
+      id: "12Q",
+      key: "Connectivity",
+      value: "RS232 Port with thermal printer connectivity support",
+    },
+
+    {
+      id: "12R",
+      key: "Printer Support",
+      value: "Compatible with external thermal printer systems",
+    },
+
+    {
+      id: "12S",
+      key: "Body Material",
+      value: "Strong Plastic body with compact portable structure",
+    },
+
+    {
+      id: "12T",
+      key: "Machine Weight",
+      value: "Approx. 4–5 kg lightweight design",
+    },
+
+    {
+      id: "12U",
+      key: "Maintenance",
+      value: "Low maintenance milk analyzer machine",
+    },
+
+    {
+      id: "12V",
+      key: "Cleaning System",
+      value: "Easy cleaning and hygienic testing operation",
+    },
+
+    {
+      id: "12W",
+      key: "Price",
+      value: "₹33,500",
+    },
+
+    {
+      id: "12X",
+      key: "Best Price",
+      value: "Competitive Ekomilk Ultra milk analyzer machine price in India",
+    },
+
+    {
+      id: "12Y",
+      key: "Pricing Type",
+      value: "Affordable digital milk testing machine for dairy businesses",
+    },
+
+    {
+      id: "12Z",
+      key: "Availability",
+      value: "Ready Stock Available",
+    },
+
+    {
+      id: "12AA",
+      key: "Warranty",
+      value: "1 Year Manufacturer Warranty",
+    },
+
+    // 🔥 Advanced SEO Features
+    {
+      id: "12AB",
+      key: "High Accuracy Milk Testing",
+      value: "Provides highly accurate FAT and SNF milk testing results",
+    },
+
+    {
+      id: "12AC",
+      key: "Instant Milk Analysis",
+      value: "Quick digital milk quality analysis within seconds",
+    },
+
+    {
+      id: "12AD",
+      key: "Chemical-Free Testing",
+      value: "Safe and eco-friendly milk testing without chemicals",
+    },
+
+    {
+      id: "12AE",
+      key: "User-Friendly Interface",
+      value: "Easy digital operation with simple navigation controls",
+    },
+
+    {
+      id: "12AF",
+      key: "Portable Design",
+      value: "Compact and portable milk testing equipment",
+    },
+
+    {
+      id: "12AG",
+      key: "Energy Efficient",
+      value: "Low electricity consumption for long-term dairy operations",
+    },
+
+    {
+      id: "12AH",
+      key: "Reliable Performance",
+      value: "Stable and consistent milk testing performance",
+    },
+
+    {
+      id: "12AI",
+      key: "Industrial Usage",
+      value: "Suitable for commercial dairy and milk testing industries",
+    },
+
+    {
+      id: "12AJ",
+      key: "Made For",
+      value: "Professional dairy milk testing applications",
+    },
+
+    // 🔥 Applications
+    {
+      id: "12AK",
+      key: "Milk Collection Centers",
+      value: "Ideal for accurate FAT and SNF milk testing at collection centers",
+    },
+
+    {
+      id: "12AL",
+      key: "Dairy Farms",
+      value: "Suitable for daily milk quality testing in dairy farms",
+    },
+
+    {
+      id: "12AM",
+      key: "Milk Testing Laboratories",
+      value: "Used for professional milk quality testing and analysis",
+    },
+
+    {
+      id: "12AN",
+      key: "Dairy Processing Plants",
+      value: "Perfect for milk quality control in dairy processing units",
+    },
+
+    {
+      id: "12AO",
+      key: "Milk Chilling Centers",
+      value: "Ensures accurate milk testing before milk storage",
+    },
+
+    {
+      id: "12AP",
+      key: "Dairy Cooperative Societies",
+      value: "Widely used in dairy cooperative procurement systems",
+    },
+
+    {
+      id: "12AQ",
+      key: "Bulk Milk Collection Units",
+      value: "Efficient for bulk milk testing and procurement operations",
+    },
+
+    {
+      id: "12AR",
+      key: "Food Testing Industries",
+      value: "Applicable for dairy and food quality testing applications",
+    },
+
+    {
+      id: "12AS",
+      key: "Private Dairy Businesses",
+      value: "Suitable for private dairy businesses and milk distributors",
+    },
+
+    {
+      id: "12AT",
+      key: "Village Dairy Centers",
+      value: "Ideal milk analyzer machine for rural and village dairy centers",
+    },
+  ],
+desc:
+    "Ekomilk Ultra is an ultrasonic digital milk analyzer machine designed for fast, accurate, and reliable milk testing in dairy farms, milk collection centers, dairy processing plants, and milk quality testing laboratories across India. This high-performance milk testing machine accurately measures FAT, SNF, Protein, Lactose, Density(CLR), Added Water, Temperature, and Freezing Point within 30–40 seconds. Built with ultrasonic milk analysis technology, the Ekomilk Ultra delivers precise results without chemicals, ensuring efficient dairy quality testing with low maintenance and energy-efficient performance. Featuring a digital LCD display, fully automatic operation, and compact durable design, this digital milk analyzer machine is widely used as a milk fat SNF testing machine and dairy milk testing machine in Rajasthan, Jaipur, Sri Ganganagar, Hanumangarh, and across India.",
+
+  keywords:
+    "ekomilk ultra, ekomilk ultra milk analyzer, ekomilk ultra analyzer machine, ekomilk ultra machine, ekomilk ultra machine price, ekomilk ultra price in india, ekomilk ultra near me, ekomilk ultra nearby, ekomilk ultra milk analyzer near me, digital milk analyzer machine, automatic milk analyzer machine, ultrasonic milk analyzer, milk analyzer machine india, milk testing machine, dairy milk testing machine, milk fat testing machine, milk fat snf testing machine, milk quality testing machine, milk analyzer supplier rajasthan, milk analyzer machine rajasthan, dairy equipment supplier india, milk testing equipment india, milk analyzer for dairy farm, milk analyzer for milk collection center, milk analyzer for dairy cooperative, dairy laboratory equipment, milk analyzer machine supplier, electronic milk analyzer, portable milk analyzer machine, milk adulteration testing machine, milk analyzer manufacturer india, dairy milk analyzer supplier, smart milk analyzer machine, dairy farm testing equipment, milk analyzer with printer, high accuracy milk analyzer, bulk milk testing machine, dairy automation equipment, milk analyzer for village dairy, dairy equipment manufacturer india, milk testing laboratory equipment, dairy quality testing equipment, SNF testing machine for milk, digital fat testing machine, milk collection center equipment, milk analyzer dealer rajasthan, milk analyzer in sri ganganagar, dairy equipment in rajasthan, ultrasonic milk testing machine, best milk analyzer machine in india,",
+},
+{
+  id: 13,
+
+  name: "Advance Milk Analyzer Ultra",
+
+  url: "advance-milk-analyzer-ultra",
+
+  category: "milk-analyzer-machines",
 
   smallDesc:
     "Best Advance Milk Analyzer Ultra Machine for Dairy Farms, Milk Collection Centers, Dairy Plants & Laboratories in Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh and Anupgarh",
