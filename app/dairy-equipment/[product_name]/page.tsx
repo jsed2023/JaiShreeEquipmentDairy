@@ -11,7 +11,7 @@ import { useState } from "react";
 import { CgDetailsMore } from "react-icons/cg";
 import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 import { notFound } from "next/navigation";
-
+import Link from "next/link";
 export default function Product({
   params,
 }: {
@@ -37,7 +37,29 @@ export default function Product({
   if (!product) {
     notFound();
   }
-
+ 
+      const currentIndex =
+        allDairyEquipments.findIndex(
+          (item) =>
+            item.url.toLowerCase() ===
+            productName.toLowerCase()
+        );
+    
+      const prevProduct =
+        currentIndex > 0
+          ? allDairyEquipments[
+              currentIndex - 1
+            ]
+          : null;
+    
+      const nextProduct =
+        currentIndex <
+        allDairyEquipments.length - 1
+          ? allDairyEquipments[
+              currentIndex + 1
+            ]
+          : null;
+    
   const handleOpen = (modalData: ModalData) => {
     setModalData(modalData);
     onOpen();
@@ -55,9 +77,11 @@ export default function Product({
                 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
             text-purple-700 dark:text-purple-300
              border border-purple-400/30 backdrop-blur-sm">
-          <h2 className="text-center font-bold underline sm:text-xl bg-clip-text text-transparent animate-title-gradient">
-            {product.name}
-          </h2></div>
+          
+<h1 className="text-center font-bold underline sm:text-xl bg-clip-text text-transparent animate-title-gradient">
+  {product.name}
+</h1>
+</div>
           <p className="dark:text-gray-400 text-center text-stone-700 max-sm:px-2">
             {product.smallDesc}
           </p>
@@ -147,7 +171,60 @@ export default function Product({
           </Button>
         </div>
       </section>
+{/* ========================= */}
+      {/* NEXT / PREVIOUS */}
+      {/* ========================= */}
 
+      <div
+        className="
+          mt-10 flex
+          justify-between
+          gap-4 flex-wrap
+        "
+      >
+
+        {prevProduct ? (
+
+          <Link
+            href={`/dairy-equipment/${prevProduct.url}`}
+            className="
+              bg-blue-100 text-blue-700
+              px-5 py-3 rounded-xl
+              hover:bg-blue-200
+              transition
+            "
+          >
+            ← Previous:
+            {" "}
+            {prevProduct.name}
+          </Link>
+
+        ) : (
+          <div />
+        )}
+
+        {nextProduct ? (
+
+          <Link
+            href={`/dairy-equipment/${nextProduct.url}`}
+            className="
+              bg-purple-100
+              text-purple-700
+              px-5 py-3 rounded-xl
+              hover:bg-purple-200
+              transition
+            "
+          >
+            Next:
+            {" "}
+            {nextProduct.name}
+            {" "}
+            →
+          </Link>
+
+        ) : null}
+
+      </div>
       <BuyNowModel
         isModelOpen={isOpen}
         onClose={onClose}

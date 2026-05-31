@@ -11,7 +11,7 @@ import { useState } from "react";
 import { CgDetailsMore } from "react-icons/cg";
 import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 import { notFound } from "next/navigation";
-
+import Link from "next/link";
 /* ===================== TYPES ===================== */
 
 interface SpecsRow {
@@ -47,6 +47,32 @@ export default function Product({
   if (!product) {
     notFound();
   }
+  // =========================
+    // NEXT / PREVIOUS PRODUCTS
+    // =========================
+  
+    const currentIndex =
+      automaticMilkCollectionSystem.findIndex(
+        (item) =>
+          item.url.toLowerCase() ===
+          productName.toLowerCase()
+      );
+  
+    const prevProduct =
+      currentIndex > 0
+        ? automaticMilkCollectionSystem[
+            currentIndex - 1
+          ]
+        : null;
+  
+    const nextProduct =
+      currentIndex <
+      automaticMilkCollectionSystem.length - 1
+        ? automaticMilkCollectionSystem[
+            currentIndex + 1
+          ]
+        : null;
+  
 
   /* ===== Handlers ===== */
   const handleOpen = (data: ModalData) => {
@@ -196,6 +222,60 @@ export default function Product({
           </Button>
         </div>
       </section>
+   {/* ========================= */}
+         {/* NEXT / PREVIOUS */}
+         {/* ========================= */}
+   
+         <div
+           className="
+             mt-10 flex
+             justify-between
+             gap-4 flex-wrap
+           "
+         >
+   
+           {prevProduct ? (
+   
+             <Link
+               href={`/automatic-milk-collection-system/${prevProduct.url}`}
+               className="
+                 bg-blue-100 text-blue-700
+                 px-5 py-3 rounded-xl
+                 hover:bg-blue-200
+                 transition
+               "
+             >
+               ← Previous:
+               {" "}
+               {prevProduct.name}
+             </Link>
+   
+           ) : (
+             <div />
+           )}
+   
+           {nextProduct ? (
+   
+             <Link
+               href={`/automatic-milk-collection-system/${nextProduct.url}`}
+               className="
+                 bg-purple-100
+                 text-purple-700
+                 px-5 py-3 rounded-xl
+                 hover:bg-purple-200
+                 transition
+               "
+             >
+               Next:
+               {" "}
+               {nextProduct.name}
+               {" "}
+               →
+             </Link>
+   
+           ) : null}
+   
+         </div>
    
       {/* ===== Modal ===== */}
       <BuyNowModel
