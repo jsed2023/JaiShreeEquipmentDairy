@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
+
   trailingSlash: false,
 
   compress: true,
+
   reactStrictMode: true,
+
   poweredByHeader: false,
 
   images: {
@@ -14,12 +18,28 @@ const nextConfig = {
         pathname: "/dddhtbuzs/**",
       },
     ],
+
     formats: ["image/avif", "image/webp"],
+
     minimumCacheTTL: 31536000,
   },
 
   experimental: {
     scrollRestoration: true,
+  },
+
+  // =========================
+  // REWRITES
+  // =========================
+  async rewrites() {
+    return [
+      {
+        source: "/milk-analyzer-:city",
+
+        destination:
+          "/locations/milk-analyzer-:city",
+      },
+    ];
   },
 };
 
