@@ -41,6 +41,21 @@ const nextConfig = {
       },
     ];
   },
+
+  // =========================
+  // REDIRECTS
+  // =========================
+  async redirects() {
+    return [
+      {
+        source: "/locations/:location",
+
+        destination: "/:location",
+
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
