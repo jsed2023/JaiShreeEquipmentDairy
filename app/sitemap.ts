@@ -32,102 +32,99 @@ const sitemap: MetadataRoute.Sitemap = [];
 const addUrl = (
 path: string,
 priority = 0.8,
-changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "weekly"
+changeFrequency:
+| "always"
+| "hourly"
+| "daily"
+| "weekly"
+| "monthly"
+| "yearly"
+| "never" = "weekly"
 ) => {
 sitemap.push({
-url: "${BASE_URL}${path}",
+url: ${BASE_URL}${path},
 lastModified: now,
 changeFrequency,
 priority,
 });
 };
 
-// Main Static Pages
+// Static Pages
 [
 "",
 "/about",
-"/contact",
-"/blog",
-"/categories",
-"/services",
-"/gallery",
-"/locations",
-"/testimonials",
-"/milestones",
-"/milk-rate-chart",
 "/automatic-milk-collection-system",
+"/blog",
+"/contact",
+"/categories",
 "/dairy-equipment",
-"/milk-testing-equipment",
+"/gallery",
+"/testimonials",
+"/locations",
+"/milestones",
 "/milk-analyzer-machines",
+"/milk-rate-chart",
+"/milk-testing-equipment",
+"/services",
 ].forEach((path, index) => {
-addUrl(
-path,
-index === 0 ? 1.0 : 0.8,
-index === 0 ? "daily" : "weekly"
-);
+addUrl(path, index === 0 ? 1 : 0.8);
 });
 
-// Automatic Milk Collection System Products
-automaticMilkCollectionSystem?.forEach((product) => {
-if (product?.url) {
+// Automatic Milk Collection System
+automaticMilkCollectionSystem?.forEach((p) => {
+if (p?.url) {
 addUrl(
-"/automatic-milk-collection-system/${product.url}",
-0.9,
-"weekly"
+/automatic-milk-collection-system/${p.url},
+0.9
 );
 }
 });
 
-// Dairy Equipment Products
-[...creamSeparatorMachine, ...milkingMachine].forEach((product) => {
-if (product?.url) {
+// Dairy Equipment
+[...creamSeparatorMachine, ...milkingMachine].forEach(
+(p) => {
+if (p?.url) {
+addUrl(/dairy-equipment/${p.url}, 0.9);
+}
+}
+);
+
+// Milk Testing Equipment
+MilkTestingEquipment?.forEach((p) => {
+if (p?.url) {
 addUrl(
-"/dairy-equipment/${product.url}",
-0.9,
-"weekly"
+/milk-testing-equipment/${p.url},
+0.9
 );
 }
 });
 
-// Milk Testing Equipment Products
-MilkTestingEquipment?.forEach((product) => {
-if (product?.url) {
+// Milk Analyzer Machines
+MilkAnalyzerMachines?.forEach((p) => {
+if (p?.url) {
 addUrl(
-"/milk-testing-equipment/${product.url}",
-0.9,
-"weekly"
+/milk-analyzer-machines/${p.url},
+0.9
 );
 }
 });
 
-// Milk Analyzer Machine Products
-MilkAnalyzerMachines?.forEach((product) => {
-if (product?.url) {
-addUrl(
-"/milk-analyzer-machines/${product.url}",
-0.9,
-"weekly"
-);
+// Blogs
+Object.values(blogs || {}).forEach((blog) => {
+if (
+typeof blog === "object" &&
+blog !== null &&
+"slug" in blog
+) {
+addUrl(/blog/${blog.slug}, 0.8);
 }
 });
 
-// Blog Pages
-Object.values(blogs || {}).forEach((blog: any) => {
-if (blog?.slug) {
-addUrl(
-"/blog/${blog.slug}",
-0.7,
-"monthly"
-);
-}
-});
-
-// Rajasthan Location Pages
+// Rajasthan Locations
 rajasthanLocations?.forEach((location) => {
 addUrl(
-"/milk-analyzer-${slugify(location)}",
-0.7,
-"monthly"
+/milk-analyzer-${slugify(location)},
+0.7
 );
 });
 
