@@ -1661,7 +1661,7 @@ export const creamSeparatorMachine: Products[] = [
   },
   {
     id: 7,
-    name: "Paras Milk Cream Separator Machine AED 165 LHP",
+    name: "Paras Milk Cream Separator Machine AED 165 LPH",
     url: "paras-milk-cream-separator-aed-165-lph",
     category: "dairy-equipment",
     smallDesc:
