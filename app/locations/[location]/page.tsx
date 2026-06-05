@@ -1,10 +1,17 @@
 import { notFound } from "next/navigation";
-import { rajasthanLocations } from "@/lib/rajasthan-locations";
-import { generateLocationSEOContent } from "@/lib/location-seo-content";
-import { productImages } from "@/lib/product-images";
 
 import Image from "next/image";
+
 import Link from "next/link";
+
+import { rajasthanLocations }
+from "@/lib/rajasthan-locations";
+
+import { generateLocationSEOContent }
+from "@/lib/location-seo-content";
+
+import { productImages }
+from "@/lib/product-images";
 
 type Props = {
   params: {
@@ -15,34 +22,30 @@ type Props = {
 // =========================
 // Generate Static Params
 // =========================
+
 export async function generateStaticParams() {
-  return rajasthanLocations.map((loc) => ({
-    location: `milk-analyzer-${loc
-      .toLowerCase()
-      .replace(/\s+/g, "-")}`,
-  }));
+
+  return rajasthanLocations.map(
+    (loc) => ({
+      location:
+        `milk-analyzer-${loc.slug}`,
+    })
+  );
 }
 
 // =========================
 // Prevent Random URLs
 // =========================
-export const dynamicParams = false;
 
-// =========================
-// Format City Name
-// =========================
-function formatName(slug: string) {
-  return slug
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (c) =>
-      c.toUpperCase()
-    );
-}
+export const dynamicParams = false;
 
 // =========================
 // WhatsApp Link
 // =========================
-function createWhatsAppLink(city: string) {
+
+function createWhatsAppLink(
+  city: string
+) {
 
   const msg =
     `Hello, I want to buy Milk Analyzer in ${city}`;
@@ -55,96 +58,113 @@ function createWhatsAppLink(city: string) {
 // =========================
 // Page
 // =========================
+
 export default function LocationPage({
   params,
 }: Props) {
 
+  // =========================
   // Decode URL
-  const rawUrlParam = decodeURIComponent(
-    params.location
-  );
+  // =========================
 
+  const rawUrlParam =
+    decodeURIComponent(
+      params.location
+    );
+
+  // =========================
   // Normalize URL
-  const normalizedParam = rawUrlParam
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-");
+  // =========================
 
-  // Prefix
-  const prefix = "milk-analyzer-";
+  const normalizedParam =
+    rawUrlParam
+      .toLowerCase()
+      .trim();
 
+  const prefix =
+    "milk-analyzer-";
+
+  // =========================
   // Validate Prefix
-  if (!normalizedParam.startsWith(prefix)) {
+  // =========================
+
+  if (
+    !normalizedParam.startsWith(prefix)
+  ) {
     return notFound();
   }
 
-  // Extract City Slug
-  const locationSlug = normalizedParam.slice(
-    prefix.length
-  );
+  // =========================
+  // Extract Slug
+  // =========================
 
-  // Validate City
-  const validCity = rajasthanLocations.find(
-    (city) =>
-      city.toLowerCase().replace(/\s+/g, "-") ===
-      locationSlug
-  );
+  const locationSlug =
+    normalizedParam.replace(
+      prefix,
+      ""
+    );
 
-  // Invalid URL → 404
-  if (!validCity) {
+  // =========================
+  // Validate Location
+  // =========================
+
+  const validLocation =
+    rajasthanLocations.find(
+      (city) =>
+        city.slug === locationSlug
+    );
+
+  if (!validLocation) {
     return notFound();
   }
 
+  // =========================
   // City Name
-  const city = formatName(locationSlug);
+  // =========================
 
+  const city =
+    validLocation.city;
+
+  // =========================
   // SEO Content
-  const seo = generateLocationSEOContent(
-    city
-  ) || {
-    intro:
-      `We provide milk analyzer machine in ${city}.`,
+  // =========================
 
-    about:
-      `We are leading supplier of milk analyzer machines and dairy equipment in ${city}.`,
+  const seo =
+    generateLocationSEOContent(
+      city
+    ) || {
 
-    products:
-      `Milk analyzer machines, milking machines, cream separator machines and dairy equipment available in ${city}.`,
+      intro:
+        `We provide milk analyzer machines in ${city}.`,
 
-    industry:
-      `Milk collection centers and dairy farms in ${city} use milk analyzer machines for accurate milk testing.`,
-  };
+      about:
+        `We are a leading supplier of milk analyzer machines and dairy equipment in ${city}.`,
 
+      products:
+        `Milk analyzer machines, milking machines, cream separator machines and dairy equipment available in ${city}.`,
+
+      industry:
+        `Milk collection centers and dairy farms in ${city} use milk analyzer machines for accurate milk testing.`,
+    };
+
+  // =========================
   // Keywords
+  // =========================
+
   const keywords = [
     `milk analyzer in ${city}`,
-    `Best milk analyzer in ${city}`,
-    `milk testing machine ${city}`,
-    `dairy equipment ${city}`,
-    `milk analyzer machine in ${city}`,
-    `milk analyzer price in ${city}`,
-    `milk analyzer supplier in ${city}`,
-    `milk analyzer dealer in ${city}`,
-    `buy milk analyzer machine in ${city}`,
     `milk testing machine in ${city}`,
-    `milk fat testing machine in ${city}`,
-    `automatic milk collection system in ${city}`,
-    `dairy equipment supplier in ${city}`,
+    `dairy equipment in ${city}`,
     `milking machine in ${city}`,
-    `cow milking machine in ${city}`,
-    `buffalo milking machine in ${city}`,
     `cream separator machine in ${city}`,
-    `milk analyzer installation in ${city}`,
-    `milk analyzer repair service in ${city}`,
+    `automatic milk collection system in ${city}`,
   ];
 
   return (
 
     <section className="max-w-7xl mx-auto px-4 py-10">
 
-      {/* ========================= */}
       {/* HERO */}
-      {/* ========================= */}
 
       <div className="bg-gradient-to-r from-blue-600 to-sky-500 text-white p-6 md:p-10 rounded-2xl mb-10 text-center flex flex-col items-center">
 
@@ -165,9 +185,7 @@ export default function LocationPage({
 
       </div>
 
-      {/* ========================= */}
-      {/* ABOUT SECTION */}
-      {/* ========================= */}
+      {/* ABOUT */}
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
 
@@ -228,9 +246,7 @@ export default function LocationPage({
 
       </div>
 
-      {/* ========================= */}
       {/* FEATURES */}
-      {/* ========================= */}
 
       <div className="mb-14 text-center">
 
@@ -264,9 +280,7 @@ export default function LocationPage({
 
       </div>
 
-      {/* ========================= */}
       {/* PRODUCTS */}
-      {/* ========================= */}
 
       <div className="mb-14">
 
@@ -318,9 +332,7 @@ export default function LocationPage({
 
       </div>
 
-      {/* ========================= */}
       {/* POPULAR SEARCHES */}
-      {/* ========================= */}
 
       <div className="bg-gray-50 p-6 rounded-xl mb-14">
 
@@ -345,9 +357,7 @@ export default function LocationPage({
 
       </div>
 
-      {/* ========================= */}
       {/* NEARBY CITIES */}
-      {/* ========================= */}
 
       <div className="mb-14">
 
@@ -359,21 +369,19 @@ export default function LocationPage({
 
           {rajasthanLocations
             .filter(
-              (slug) =>
-                slug.toLowerCase().replace(/\s+/g, "-") !==
+              (location) =>
+                location.slug !==
                 locationSlug
             )
             .slice(0, 20)
-            .map((slug) => (
+            .map((location) => (
 
               <Link
-                key={slug}
-                href={`/locations/milk-analyzer-${slug
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")}`}
+                key={location.slug}
+                href={`/locations/milk-analyzer-${location.slug}`}
                 className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm hover:bg-blue-200 transition"
               >
-                {formatName(slug)}
+                {location.city}
               </Link>
 
             ))}
@@ -382,9 +390,7 @@ export default function LocationPage({
 
       </div>
 
-      {/* ========================= */}
       {/* CTA */}
-      {/* ========================= */}
 
       <div className="bg-blue-600 text-white p-8 rounded-2xl text-center">
 
