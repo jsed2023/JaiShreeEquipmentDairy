@@ -1,7 +1,5 @@
 import { MetadataRoute } from "next";
-
 import { siteConfig } from "@/config/site";
-
 import {
   MilkTestingEquipment,
   creamSeparatorMachine,
@@ -9,9 +7,7 @@ import {
   automaticMilkCollectionSystem,
   MilkAnalyzerMachines,
 } from "@/config/products";
-
 import { blogs } from "@/config/blogs";
-
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
@@ -38,21 +34,47 @@ type BlogType = {
   updatedAt?: string | Date;
 };
 
+// SAFE DATE HELPER
+const getSafeDate = () => {
+  const now = new Date();
+
+  return new Date(
+    Date.UTC(
+      now.getUTCFullYear(),
+      now.getUTCMonth(),
+      now.getUTCDate()
+    )
+  );
+};
+
+// PREVENT FUTURE DATES
+const sanitizeDate = (date?: string | Date) => {
+  if (!date) return getSafeDate();
+
+  const parsed = new Date(date);
+
+  if (isNaN(parsed.getTime())) {
+    return getSafeDate();
+  }
+
+  const now = new Date();
+
+  return parsed > now ? getSafeDate() : parsed;
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [];
 
-  // Prevent duplicate URLs
   const addedUrls = new Set<string>();
 
   const addUrl = (
     path: string,
     priority = 0.8,
     changeFrequency: ChangeFrequency = "weekly",
-    lastModified: Date = new Date()
+    lastModified: Date = getSafeDate()
   ) => {
     const fullUrl = `${BASE_URL}${path}`;
 
-    // Skip duplicates
     if (addedUrls.has(fullUrl)) return;
 
     addedUrls.add(fullUrl);
@@ -66,7 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   };
 
   // =========================
-  // Static Pages
+  // STATIC PAGES
   // =========================
   const staticPages = [
     {
@@ -150,25 +172,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     addUrl(
       page.path,
       page.priority,
-      page.changeFrequency
+      page.changeFrequency,
+      getSafeDate()
     );
   });
 
   // =========================
-  // Automatic Milk Collection System
+  // AUTOMATIC MILK COLLECTION SYSTEM
   // =========================
   automaticMilkCollectionSystem?.forEach((product) => {
     if (product?.url) {
       addUrl(
         `/automatic-milk-collection-system/${product.url}`,
         0.9,
-        "weekly"
+        "weekly",
+        getSafeDate()
       );
     }
   });
 
   // =========================
-  // Dairy Equipment
+  // DAIRY EQUIPMENT
   // =========================
   [...creamSeparatorMachine, ...milkingMachine].forEach(
     (product) => {
@@ -176,40 +200,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
         addUrl(
           `/dairy-equipment/${product.url}`,
           0.9,
-          "weekly"
+          "weekly",
+          getSafeDate()
         );
       }
     }
   );
 
   // =========================
-  // Milk Testing Equipment
+  // MILK TESTING EQUIPMENT
   // =========================
   MilkTestingEquipment?.forEach((product) => {
     if (product?.url) {
       addUrl(
         `/milk-testing-equipment/${product.url}`,
         0.9,
-        "weekly"
+        "weekly",
+        getSafeDate()
       );
     }
   });
 
   // =========================
-  // Milk Analyzer Machines
+  // MILK ANALYZER MACHINES
   // =========================
   MilkAnalyzerMachines?.forEach((product) => {
     if (product?.url) {
       addUrl(
         `/milk-analyzer-machines/${product.url}`,
         0.9,
-        "weekly"
+        "weekly",
+        getSafeDate()
       );
     }
   });
 
   // =========================
-  // Blogs
+  // BLOGS
   // =========================
   Object.values(blogs || {}).forEach((blog) => {
     const typedBlog = blog as BlogType;
@@ -219,21 +246,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `/blog/${typedBlog.slug}`,
         0.8,
         "weekly",
-        typedBlog.updatedAt
-          ? new Date(typedBlog.updatedAt)
-          : new Date()
+        sanitizeDate(typedBlog.updatedAt)
       );
     }
   });
 
   // =========================
-  // Rajasthan Location Pages
+  // LOCATION PAGES
   // =========================
   rajasthanLocations?.forEach((location) => {
     addUrl(
       `/milk-analyzer-${slugify(location)}`,
       0.7,
-      "monthly"
+      "monthly",
+      getSafeDate()
     );
   });
 
