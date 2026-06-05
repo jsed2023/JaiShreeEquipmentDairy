@@ -22,7 +22,6 @@ type Props = {
 function formatCityName(slug: string) {
 
   return slug
-    .replace(/^milk-analyzer-/, "")
     .replace(/-/g, " ")
     .replace(/\b\w/g, (char) =>
       char.toUpperCase()
@@ -48,6 +47,12 @@ export async function generateStaticParams() {
 // =========================
 
 export const dynamicParams = false;
+
+// =========================
+// ISR
+// =========================
+
+export const revalidate = 86400;
 
 // =========================
 // Dynamic Metadata
@@ -84,7 +89,7 @@ export async function generateMetadata({
       ""
     );
 
-  // Validate City
+  // Validate Location
   const validLocation =
     rajasthanLocations.find(
       (city) =>
@@ -95,11 +100,9 @@ export async function generateMetadata({
     notFound();
   }
 
-  // Format Name
+  // Use Real City Name
   const cityName =
-    formatCityName(
-      normalizedParam
-    );
+    validLocation.city;
 
   // Canonical URL
   const url =
@@ -200,12 +203,6 @@ export async function generateMetadata({
     },
   };
 }
-
-// =========================
-// ISR
-// =========================
-
-export const revalidate = 86400;
 
 // =========================
 // Layout
