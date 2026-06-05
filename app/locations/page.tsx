@@ -1,20 +1,12 @@
 import Image from "next/image";
+
 import Link from "next/link";
 
-import { rajasthanLocations } from "@/lib/rajasthan-locations";
+import { rajasthanLocations }
+from "@/lib/rajasthan-locations";
 
-import FadeInOnScroll from "@/components/FadeInOnScroll";
-
-// =========================
-// Format Location Name
-// =========================
-function formatLocationName(slug: string) {
-  return slug
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (char) =>
-      char.toUpperCase()
-    );
-}
+import FadeInOnScroll
+from "@/components/FadeInOnScroll";
 
 export default function LocationsPage() {
 
@@ -22,9 +14,7 @@ export default function LocationsPage() {
 
     <section className="container mx-auto px-4 py-10">
 
-      {/* ========================= */}
       {/* HEADER */}
-      {/* ========================= */}
 
       <div
         className="
@@ -54,9 +44,7 @@ export default function LocationsPage() {
 
       </div>
 
-      {/* ========================= */}
       {/* IMAGE */}
-      {/* ========================= */}
 
       <div className="flex justify-center my-8">
 
@@ -72,9 +60,7 @@ export default function LocationsPage() {
 
       </div>
 
-      {/* ========================= */}
       {/* DESCRIPTION */}
-      {/* ========================= */}
 
       <div
         className="
@@ -115,9 +101,7 @@ export default function LocationsPage() {
 
       </div>
 
-      {/* ========================= */}
       {/* LOCATIONS GRID */}
-      {/* ========================= */}
 
       <div
         className="
@@ -133,17 +117,15 @@ export default function LocationsPage() {
           (location, index) => {
 
             const locationName =
-              formatLocationName(location);
+              location.city;
 
             const locationSlug =
-              location
-                .toLowerCase()
-                .replace(/\s+/g, "-");
+              location.slug;
 
             return (
 
               <FadeInOnScroll
-                key={location}
+                key={location.slug}
                 delay={index * 40}
               >
 
@@ -183,8 +165,6 @@ export default function LocationsPage() {
 
                   <div className="relative p-5 text-center">
 
-                    {/* Title */}
-
                     <h2
                       className="
                         text-lg md:text-xl
@@ -198,16 +178,12 @@ export default function LocationsPage() {
                       {locationName}
                     </h2>
 
-                    {/* Subtitle */}
-
                     <p className="text-sm text-gray-600 mt-2">
 
                       Milk Analyzer Machine in{" "}
                       {locationName}
 
                     </p>
-
-                    {/* CTA */}
 
                     <div
                       className="
@@ -234,9 +210,7 @@ export default function LocationsPage() {
 
       </div>
 
-      {/* ========================= */}
       {/* POPULAR LOCATIONS */}
-      {/* ========================= */}
 
       <div className="mt-16 text-center">
 
