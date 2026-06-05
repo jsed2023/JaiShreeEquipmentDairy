@@ -1,5 +1,8 @@
 import { MetadataRoute } from "next";
-import { siteConfig } from "@/config/site";
+
+import { siteConfig }
+from "@/config/site";
+
 import {
   MilkTestingEquipment,
   creamSeparatorMachine,
@@ -7,18 +10,23 @@ import {
   automaticMilkCollectionSystem,
   MilkAnalyzerMachines,
 } from "@/config/products";
-import { blogs } from "@/config/blogs";
-import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
-const BASE_URL = siteConfig.url.replace(/\/$/, "");
+import { blogs }
+from "@/config/blogs";
 
-function slugify(value: string) {
-  return value
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-");
-}
+import { rajasthanLocations }
+from "@/lib/rajasthan-locations";
+
+// =========================
+// Base URL
+// =========================
+
+const BASE_URL =
+  siteConfig.url.replace(/\/$/, "");
+
+// =========================
+// Change Frequency Type
+// =========================
 
 type ChangeFrequency =
   | "always"
@@ -29,13 +37,22 @@ type ChangeFrequency =
   | "yearly"
   | "never";
 
+// =========================
+// Blog Type
+// =========================
+
 type BlogType = {
   slug: string;
+
   updatedAt?: string | Date;
 };
 
-// SAFE DATE HELPER
+// =========================
+// Safe Date Helper
+// =========================
+
 const getSafeDate = () => {
+
   const now = new Date();
 
   return new Date(
@@ -47,158 +64,235 @@ const getSafeDate = () => {
   );
 };
 
-// PREVENT FUTURE DATES
-const sanitizeDate = (date?: string | Date) => {
-  if (!date) return getSafeDate();
+// =========================
+// Prevent Future Dates
+// =========================
 
-  const parsed = new Date(date);
+const sanitizeDate = (
+  date?: string | Date
+) => {
 
-  if (isNaN(parsed.getTime())) {
+  if (!date) {
     return getSafeDate();
   }
 
-  const now = new Date();
+  const parsed =
+    new Date(date);
 
-  return parsed > now ? getSafeDate() : parsed;
+  if (
+    isNaN(parsed.getTime())
+  ) {
+    return getSafeDate();
+  }
+
+  const now =
+    new Date();
+
+  return parsed > now
+    ? getSafeDate()
+    : parsed;
 };
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const sitemap: MetadataRoute.Sitemap = [];
+// =========================
+// Sitemap
+// =========================
 
-  const addedUrls = new Set<string>();
+export default function sitemap():
+MetadataRoute.Sitemap {
+
+  const sitemap:
+    MetadataRoute.Sitemap = [];
+
+  const addedUrls =
+    new Set<string>();
+
+  // =========================
+  // Add URL Helper
+  // =========================
 
   const addUrl = (
     path: string,
     priority = 0.8,
-    changeFrequency: ChangeFrequency = "weekly",
-    lastModified: Date = getSafeDate()
+    changeFrequency:
+      ChangeFrequency = "weekly",
+    lastModified: Date =
+      getSafeDate()
   ) => {
-    const fullUrl = `${BASE_URL}${path}`;
 
-    if (addedUrls.has(fullUrl)) return;
+    const fullUrl =
+      `${BASE_URL}${path}`;
+
+    // Prevent duplicates
+    if (
+      addedUrls.has(fullUrl)
+    ) {
+      return;
+    }
 
     addedUrls.add(fullUrl);
 
     sitemap.push({
       url: fullUrl,
+
       lastModified,
+
       changeFrequency,
+
       priority,
     });
   };
 
   // =========================
-  // STATIC PAGES
+  // Static Pages
   // =========================
+
   const staticPages = [
+
     {
       path: "/",
       priority: 1,
-      changeFrequency: "daily" as ChangeFrequency,
+      changeFrequency:
+        "daily" as ChangeFrequency,
     },
+
     {
       path: "/about",
       priority: 0.7,
-      changeFrequency: "monthly" as ChangeFrequency,
+      changeFrequency:
+        "monthly" as ChangeFrequency,
     },
+
     {
-      path: "/automatic-milk-collection-system",
+      path:
+        "/automatic-milk-collection-system",
+
       priority: 0.9,
-      changeFrequency: "weekly" as ChangeFrequency,
+
+      changeFrequency:
+        "weekly" as ChangeFrequency,
     },
+
     {
       path: "/blog",
       priority: 0.9,
-      changeFrequency: "daily" as ChangeFrequency,
+      changeFrequency:
+        "daily" as ChangeFrequency,
     },
+
     {
       path: "/contact",
       priority: 0.6,
-      changeFrequency: "monthly" as ChangeFrequency,
+      changeFrequency:
+        "monthly" as ChangeFrequency,
     },
+
     {
       path: "/categories",
       priority: 0.8,
-      changeFrequency: "weekly" as ChangeFrequency,
+      changeFrequency:
+        "weekly" as ChangeFrequency,
     },
+
     {
       path: "/dairy-equipment",
       priority: 0.9,
-      changeFrequency: "weekly" as ChangeFrequency,
+      changeFrequency:
+        "weekly" as ChangeFrequency,
     },
+
     {
       path: "/gallery",
       priority: 0.7,
-      changeFrequency: "monthly" as ChangeFrequency,
+      changeFrequency:
+        "monthly" as ChangeFrequency,
     },
+
     {
       path: "/testimonials",
       priority: 0.7,
-      changeFrequency: "monthly" as ChangeFrequency,
+      changeFrequency:
+        "monthly" as ChangeFrequency,
     },
+
     {
       path: "/locations",
       priority: 0.8,
-      changeFrequency: "weekly" as ChangeFrequency,
+      changeFrequency:
+        "weekly" as ChangeFrequency,
     },
+
     {
       path: "/milestones",
       priority: 0.7,
-      changeFrequency: "monthly" as ChangeFrequency,
+      changeFrequency:
+        "monthly" as ChangeFrequency,
     },
+
     {
-      path: "/milk-analyzer-machines",
+      path:
+        "/milk-analyzer-machines",
+
       priority: 0.9,
-      changeFrequency: "weekly" as ChangeFrequency,
+
+      changeFrequency:
+        "weekly" as ChangeFrequency,
     },
+
     {
-      path: "/milk-rate-chart",
+      path:
+        "/milk-rate-chart",
+
       priority: 0.8,
-      changeFrequency: "daily" as ChangeFrequency,
+
+      changeFrequency:
+        "daily" as ChangeFrequency,
     },
+
     {
-      path: "/milk-testing-equipment",
+      path:
+        "/milk-testing-equipment",
+
       priority: 0.9,
-      changeFrequency: "weekly" as ChangeFrequency,
+
+      changeFrequency:
+        "weekly" as ChangeFrequency,
     },
+
     {
       path: "/services",
       priority: 0.8,
-      changeFrequency: "monthly" as ChangeFrequency,
+      changeFrequency:
+        "monthly" as ChangeFrequency,
     },
   ];
 
-  staticPages.forEach((page) => {
-    addUrl(
-      page.path,
-      page.priority,
-      page.changeFrequency,
-      getSafeDate()
-    );
-  });
+  // =========================
+  // Add Static Pages
+  // =========================
 
-  // =========================
-  // AUTOMATIC MILK COLLECTION SYSTEM
-  // =========================
-  automaticMilkCollectionSystem?.forEach((product) => {
-    if (product?.url) {
+  staticPages.forEach(
+    (page) => {
+
       addUrl(
-        `/automatic-milk-collection-system/${product.url}`,
-        0.9,
-        "weekly",
+        page.path,
+        page.priority,
+        page.changeFrequency,
         getSafeDate()
       );
     }
-  });
+  );
 
   // =========================
-  // DAIRY EQUIPMENT
+  // Automatic Milk Collection
   // =========================
-  [...creamSeparatorMachine, ...milkingMachine].forEach(
+
+  automaticMilkCollectionSystem?.forEach(
     (product) => {
+
       if (product?.url) {
+
         addUrl(
-          `/dairy-equipment/${product.url}`,
+          `/automatic-milk-collection-system/${product.url}`,
           0.9,
           "weekly",
           getSafeDate()
@@ -208,12 +302,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   // =========================
-  // MILK TESTING EQUIPMENT
+  // Dairy Equipment
   // =========================
-  MilkTestingEquipment?.forEach((product) => {
+
+  [
+    ...creamSeparatorMachine,
+    ...milkingMachine,
+  ].forEach((product) => {
+
     if (product?.url) {
+
       addUrl(
-        `/milk-testing-equipment/${product.url}`,
+        `/dairy-equipment/${product.url}`,
         0.9,
         "weekly",
         getSafeDate()
@@ -222,46 +322,82 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   // =========================
-  // MILK ANALYZER MACHINES
+  // Milk Testing Equipment
   // =========================
-  MilkAnalyzerMachines?.forEach((product) => {
-    if (product?.url) {
-      addUrl(
-        `/milk-analyzer-machines/${product.url}`,
-        0.9,
-        "weekly",
-        getSafeDate()
-      );
+
+  MilkTestingEquipment?.forEach(
+    (product) => {
+
+      if (product?.url) {
+
+        addUrl(
+          `/milk-testing-equipment/${product.url}`,
+          0.9,
+          "weekly",
+          getSafeDate()
+        );
+      }
     }
-  });
+  );
 
   // =========================
-  // BLOGS
+  // Milk Analyzer Machines
   // =========================
-  Object.values(blogs || {}).forEach((blog) => {
-    const typedBlog = blog as BlogType;
+
+  MilkAnalyzerMachines?.forEach(
+    (product) => {
+
+      if (product?.url) {
+
+        addUrl(
+          `/milk-analyzer-machines/${product.url}`,
+          0.9,
+          "weekly",
+          getSafeDate()
+        );
+      }
+    }
+  );
+
+  // =========================
+  // Blogs
+  // =========================
+
+  Object.values(
+    blogs || {}
+  ).forEach((blog) => {
+
+    const typedBlog =
+      blog as BlogType;
 
     if (typedBlog?.slug) {
+
       addUrl(
         `/blog/${typedBlog.slug}`,
         0.8,
         "weekly",
-        sanitizeDate(typedBlog.updatedAt)
+        sanitizeDate(
+          typedBlog.updatedAt
+        )
       );
     }
   });
 
   // =========================
-  // LOCATION PAGES
+  // Location Pages
   // =========================
-  rajasthanLocations?.forEach((location) => {
-    addUrl(
-      `/milk-analyzer-${slugify(location)}`,
-      0.7,
-      "monthly",
-      getSafeDate()
-    );
-  });
+
+  rajasthanLocations?.forEach(
+    (location) => {
+
+      addUrl(
+        `/milk-analyzer-${location.slug}`,
+        0.7,
+        "monthly",
+        getSafeDate()
+      );
+    }
+  );
 
   return sitemap;
 }
