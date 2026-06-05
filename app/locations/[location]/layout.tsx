@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
+
 import { notFound } from "next/navigation";
 
-import { metaKeywords, siteConfig } from "@/config/site";
-import { rajasthanLocations } from "@/lib/rajasthan-locations";
+import { siteConfig } from "@/config/site";
+
+import { rajasthanLocations }
+from "@/lib/rajasthan-locations";
 
 type Props = {
   children: React.ReactNode;
+
   params: {
     location: string;
   };
@@ -14,8 +18,11 @@ type Props = {
 // =========================
 // Format City Name
 // =========================
+
 function formatCityName(slug: string) {
+
   return slug
+    .replace(/^milk-analyzer-/, "")
     .replace(/-/g, " ")
     .replace(/\b\w/g, (char) =>
       char.toUpperCase()
@@ -25,131 +32,99 @@ function formatCityName(slug: string) {
 // =========================
 // Generate Static Params
 // =========================
+
 export async function generateStaticParams() {
-  return rajasthanLocations.map((city) => ({
-    location: `milk-analyzer-${city
-      .toLowerCase()
-      .replace(/\s+/g, "-")}`,
-  }));
+
+  return rajasthanLocations.map(
+    (city) => ({
+      location:
+        `milk-analyzer-${city.slug}`,
+    })
+  );
 }
 
 // =========================
-// Prevent Random Dynamic URLs
+// Prevent Random URLs
 // =========================
+
 export const dynamicParams = false;
 
 // =========================
 // Dynamic Metadata
 // =========================
+
 export async function generateMetadata({
   params,
 }: Props): Promise<Metadata> {
 
-  // Decode URL param
-  const rawParam = decodeURIComponent(
-    params.location
-  );
+  const rawParam =
+    decodeURIComponent(
+      params.location
+    );
 
-  // Normalize URL
-  const normalizedParam = rawParam
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-");
+  const normalizedParam =
+    rawParam
+      .toLowerCase()
+      .trim();
 
-  // URL Prefix
-  const prefix = "milk-analyzer-";
+  const prefix =
+    "milk-analyzer-";
 
   // Validate Prefix
-  if (!normalizedParam.startsWith(prefix)) {
+  if (
+    !normalizedParam.startsWith(prefix)
+  ) {
     notFound();
   }
 
-  // Extract City Slug
-  const locationSlug = normalizedParam.slice(
-    prefix.length
-  );
+  // Extract Slug
+  const locationSlug =
+    normalizedParam.replace(
+      prefix,
+      ""
+    );
 
-  // Validate City Exists
-  const validCity = rajasthanLocations.find(
-    (city) =>
-      city.toLowerCase().replace(/\s+/g, "-") ===
-      locationSlug
-  );
+  // Validate City
+  const validLocation =
+    rajasthanLocations.find(
+      (city) =>
+        city.slug === locationSlug
+    );
 
-  // Invalid City → 404
-  if (!validCity) {
+  if (!validLocation) {
     notFound();
   }
 
-  // Format City Name
-  const cityName = formatCityName(
-    locationSlug
-  );
+  // Format Name
+  const cityName =
+    formatCityName(
+      normalizedParam
+    );
 
-  // =========================
-  // IMPORTANT
-  // Because you are using rewrites,
-  // canonical should NOT contain /locations
-  // =========================
-
+  // Canonical URL
   const url =
-    `https://jaishreeequipmentdairy.in/${normalizedParam}`;
-
-  // SEO Keywords
-  const keywords = [
-    `milk analyzer in ${cityName}`,
-    `milk analyzer machine in ${cityName}`,
-    `milk analyzer price in ${cityName}`,
-    `milk analyzer supplier in ${cityName}`,
-    `milk analyzer dealer in ${cityName}`,
-    `buy milk analyzer machine in ${cityName}`,
-    `milk testing machine in ${cityName}`,
-    `milk fat testing machine in ${cityName}`,
-    `dairy equipment in ${cityName}`,
-    `dairy equipment supplier in ${cityName}`,
-    `milking machine in ${cityName}`,
-    `cow milking machine in ${cityName}`,
-    `buffalo milking machine in ${cityName}`,
-    `cream separator machine in ${cityName}`,
-    `automatic milk collection system in ${cityName}`,
-    `dpu milk collection unit in ${cityName}`,
-    `milk analyzer installation in ${cityName}`,
-    `milk analyzer repair service in ${cityName}`,
-  ];
+    `${siteConfig.url}/${normalizedParam}`;
 
   return {
 
     // =========================
     // Title
     // =========================
+
     title:
-      `Milk Analyzer Machine in ${cityName} | Dairy Equipment Supplier`,
+      `Milk Analyzer Machine Supplier in ${cityName} | Jai Shree Equipment Dairy`,
 
     // =========================
     // Description
     // =========================
+
     description:
-      `Buy milk analyzer machine in ${cityName} at best price. We provide milk testing machines, dairy equipment, milking machines, cream separator machines, DPU systems, installation and repair services in ${cityName}.`,
-
-    // =========================
-    // Keywords
-    // =========================
-    keywords,
-
-    // =========================
-    // Authors
-    // =========================
-    authors: [
-      {
-        name:
-          metaKeywords?.[10]?.name ||
-          "Jai Shree Equipment Dairy",
-      },
-    ],
+      `Jai Shree Equipment Dairy supplies milk analyzer machines, dairy equipment, milking machines and automatic milk collection systems in ${cityName}.`,
 
     // =========================
     // Canonical
     // =========================
+
     alternates: {
       canonical: url,
     },
@@ -157,6 +132,7 @@ export async function generateMetadata({
     // =========================
     // Robots
     // =========================
+
     robots: {
       index: true,
       follow: true,
@@ -170,17 +146,19 @@ export async function generateMetadata({
     // =========================
     // Open Graph
     // =========================
+
     openGraph: {
 
       title:
-        `Milk Analyzer Machine in ${cityName}`,
+        `Milk Analyzer Machine Supplier in ${cityName}`,
 
       description:
-        `Best milk analyzer and dairy equipment supplier in ${cityName}.`,
+        `Dairy equipment and milk analyzer machine supplier in ${cityName}.`,
 
       url,
 
-      siteName: siteConfig.name,
+      siteName:
+        siteConfig.name,
 
       locale: "en_IN",
 
@@ -196,7 +174,7 @@ export async function generateMetadata({
           height: 630,
 
           alt:
-            `Milk Analyzer in ${cityName}`,
+            `Milk Analyzer Machine in ${cityName}`,
         },
       ],
     },
@@ -204,15 +182,17 @@ export async function generateMetadata({
     // =========================
     // Twitter
     // =========================
+
     twitter: {
 
-      card: "summary_large_image",
+      card:
+        "summary_large_image",
 
       title:
-        `Milk Analyzer Machine in ${cityName}`,
+        `Milk Analyzer Machine Supplier in ${cityName}`,
 
       description:
-        `Buy milk analyzer machine in ${cityName} with installation and repair service.`,
+        `Milk analyzer machine and dairy equipment supplier in ${cityName}.`,
 
       images: [
         "https://res.cloudinary.com/dddhtbuzs/image/upload/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png",
@@ -222,14 +202,24 @@ export async function generateMetadata({
 }
 
 // =========================
+// ISR
+// =========================
+
+export const revalidate = 86400;
+
+// =========================
 // Layout
 // =========================
+
 export default function LocationLayout({
   children,
 }: Props) {
+
   return (
     <section className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+
       {children}
+
     </section>
   );
 }
