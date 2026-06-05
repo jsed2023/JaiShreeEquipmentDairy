@@ -18,14 +18,12 @@ MetadataRoute.Robots {
         disallow: [
           "/api/",
           "/admin/",
+          "/_next/",
         ],
       },
     ],
 
     sitemap:
       `${siteConfig.url}/sitemap.xml`,
-
-    host:
-      siteConfig.url,
   };
 }
