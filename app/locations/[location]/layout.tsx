@@ -16,19 +16,6 @@ type Props = {
 };
 
 // =========================
-// Format City Name
-// =========================
-
-function formatCityName(slug: string) {
-
-  return slug
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (char) =>
-      char.toUpperCase()
-    );
-}
-
-// =========================
 // Generate Static Params
 // =========================
 
@@ -75,21 +62,30 @@ export async function generateMetadata({
   const prefix =
     "milk-analyzer-";
 
+  // =========================
   // Validate Prefix
+  // =========================
+
   if (
     !normalizedParam.startsWith(prefix)
   ) {
     notFound();
   }
 
+  // =========================
   // Extract Slug
+  // =========================
+
   const locationSlug =
     normalizedParam.replace(
       prefix,
       ""
     );
 
+  // =========================
   // Validate Location
+  // =========================
+
   const validLocation =
     rajasthanLocations.find(
       (city) =>
@@ -100,11 +96,17 @@ export async function generateMetadata({
     notFound();
   }
 
-  // Use Real City Name
+  // =========================
+  // City Name
+  // =========================
+
   const cityName =
     validLocation.city;
 
+  // =========================
   // Canonical URL
+  // =========================
+
   const url =
     `${siteConfig.url}/${normalizedParam}`;
 
