@@ -19,12 +19,12 @@ export default function Footer() {
       className="relative mt-24 overflow-hidden border-t border-white/10 bg-black text-slate-300"
       aria-label="Website Footer"
     >
-      {/* ===== BACKGROUND EFFECT ===== */}
+      {/* Background Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 blur-3xl" />
 
-      {/* ===== MAIN FOOTER ===== */}
+      {/* Main Footer */}
       <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2 xl:grid-cols-4">
-        {/* ===== BRAND ===== */}
+        {/* Brand */}
         <div>
           <Link
             href="/"
@@ -35,23 +35,17 @@ export default function Footer() {
             </h2>
           </Link>
 
-          {/* ===== SEO CONTENT ===== */}
+          {/* Optimized SEO Content */}
           <p className="mt-6 text-sm leading-7 text-slate-400">
-            Jai Shree Equipment Dairy is a trusted
-            dairy equipment & milk testing machine
-            supplier in Rajasthan providing milk
-            analyzer machines, milk testing
-            equipment, automatic milk collection
-            systems, weighing scale machines,
-            cream separator machines, ultrasonic
-            milk stirrers, dairy farming equipment,
-            and dairy automation solutions in
-            Sri Ganganagar, Bikaner, Hanumangarh,
-            Suratgarh, and nearby Rajasthan areas
-            since 2020.
+            Jai Shree Equipment Dairy supplies
+            reliable dairy equipment, milk
+            analyzer machines, and milk
+            testing solutions for dairy
+            businesses across Rajasthan
+            and India.
           </p>
 
-          {/* ===== SOCIAL MEDIA ===== */}
+          {/* Social Media */}
           <div className="mt-8 flex items-center gap-4">
             <a
               href="https://www.facebook.com/Jaishreeequipmentdairy"
@@ -75,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ===== QUICK LINKS ===== */}
+        {/* Quick Links */}
         <nav aria-label="Footer Navigation">
           <h3 className="text-xl font-semibold text-white">
             Quick Links
@@ -87,37 +81,26 @@ export default function Footer() {
                 name: "Home",
                 href: "/",
               },
-
               {
                 name: "Dairy Equipment",
                 href: "/dairy-equipment",
               },
-
               {
                 name: "Milk Testing Equipment",
                 href: "/milk-testing-equipment",
               },
-
               {
-                name:
-                  "Automatic Milk Collection System",
-                href:
-                  "/automatic-milk-collection-system",
-              },
-              {
-                name: "Milk Analyzer Machines",
-                href: "/milk-analyzer-machines",
+                name: "Automatic Milk Collection System",
+                href: "/automatic-milk-collection-system",
               },
               {
                 name: "Services",
                 href: "/services",
               },
-
               {
-                name: "Blogs",
+                name: "Blog",
                 href: "/blog",
               },
-
               {
                 name: "Contact Us",
                 href: "/contact",
@@ -139,61 +122,33 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* ===== PRODUCTS ===== */}
+        {/* Products */}
         <div>
           <h3 className="text-xl font-semibold text-white">
-            Dairy Equipment Products
+            Products
           </h3>
 
           <ul className="mt-6 space-y-4 text-sm text-slate-400">
             {[
               {
-                name: "Milk Analyzer Machine",
+                name: "Milk Analyzer",
                 href: "/milk-testing-equipment",
               },
-
               {
-                name: "Milk Testing Equipment",
-                href: "/milk-testing-equipment",
-              },
-
-              {
-                name:
-                  "Automatic Milk Collection System",
-                href:
-                  "/automatic-milk-collection-system",
-              },
-
-              {
-                name:
-                  "Milk Cream Separator Machine",
-                href: "/dairy-equipment",
-              },
-
-              {
-                name:
-                  "Weighing Scale Machine",
+                name: "Automatic Milk Collection System",
                 href: "/automatic-milk-collection-system",
               },
-
               {
-                name:
-                  "Ultrasonic Milk Stirrer",
-                href:
-                  "/automatic-milk-collection-system",
-              },
-
-              {
-                name:
-                  "Dairy Farming Equipment",
+                name: "Cream Separator Machine",
                 href: "/dairy-equipment",
               },
-
               {
-                name:
-                  "Dairy Automation Systems",
-                href:
-                  "/automatic-milk-collection-system",
+                name: "Electronic Weighing Scale",
+                href: "/automatic-milk-collection-system",
+              },
+              {
+                name: "Dairy Automation Solutions",
+                href: "/automatic-milk-collection-system",
               },
             ].map((item) => (
               <li
@@ -215,7 +170,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* ===== CONTACT INFO ===== */}
+        {/* Contact Information */}
         <address className="not-italic">
           <h3 className="text-xl font-semibold text-white">
             Contact Information
@@ -266,7 +221,7 @@ export default function Footer() {
         </address>
       </div>
 
-      {/* ===== COPYRIGHT ===== */}
+      {/* Copyright */}
       <div className="relative border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-center text-sm text-slate-500 md:flex-row">
           <p>
@@ -275,23 +230,23 @@ export default function Footer() {
           </p>
 
           <p>
-            Trusted Dairy Equipment & Milk Testing
-            Machine Supplier in Rajasthan, India
+            Trusted Dairy Equipment Supplier
+            in Rajasthan, India
           </p>
         </div>
       </div>
 
-      {/* ===== DEVELOPER BAR ===== */}
+      {/* Developer Bar */}
       <div className="relative border-t border-blue-500/20 bg-blue-600/90 px-4 py-3 text-xs text-white backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 md:flex-row">
           <span>
-            Built for speed, SEO & modern web
-            performance
+            Built for speed, SEO & modern web performance
           </span>
 
           <Link
             href="https://developerchoudhary.vercel.app/"
             target="_blank"
+            rel="nofollow noopener noreferrer"
             className="flex items-center gap-1 transition hover:text-blue-200"
           >
             <span>Made with</span>
