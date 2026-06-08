@@ -1,7 +1,6 @@
 import { MetadataRoute } from "next";
 
-import { siteConfig }
-from "@/config/site";
+import { siteConfig } from "@/config/site";
 
 import {
   MilkTestingEquipment,
@@ -11,11 +10,9 @@ import {
   MilkAnalyzerMachines,
 } from "@/config/products";
 
-import { blogs }
-from "@/config/blogs";
+import { blogs } from "@/config/blogs";
 
-import { rajasthanLocations }
-from "@/lib/rajasthan-locations";
+import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
 // =========================
 // Base URL
@@ -43,7 +40,6 @@ type ChangeFrequency =
 
 type BlogType = {
   slug: string;
-
   updatedAt?: string | Date;
 };
 
@@ -65,7 +61,7 @@ const getSafeDate = () => {
 };
 
 // =========================
-// Prevent Future Dates
+// Sanitize Date
 // =========================
 
 const sanitizeDate = (
@@ -112,7 +108,7 @@ MetadataRoute.Sitemap {
 
   const addUrl = (
     path: string,
-    priority = 0.8,
+    priority = 0.7,
     changeFrequency:
       ChangeFrequency = "weekly",
     lastModified: Date =
@@ -120,7 +116,9 @@ MetadataRoute.Sitemap {
   ) => {
 
     const fullUrl =
-      `${BASE_URL}${path}`;
+      encodeURI(
+        `${BASE_URL}${path}`
+      );
 
     // Prevent duplicates
     if (
@@ -150,119 +148,96 @@ MetadataRoute.Sitemap {
 
     {
       path: "/",
-      priority: 1,
-      changeFrequency:
-        "daily" as ChangeFrequency,
+      priority: 1.0,
+      changeFrequency: "daily",
     },
 
     {
       path: "/about",
-      priority: 0.7,
-      changeFrequency:
-        "monthly" as ChangeFrequency,
+      priority: 0.4,
+      changeFrequency: "monthly",
     },
 
     {
       path:
         "/automatic-milk-collection-system",
-
-      priority: 0.9,
-
-      changeFrequency:
-        "weekly" as ChangeFrequency,
+      priority: 0.8,
+      changeFrequency: "weekly",
     },
 
     {
       path: "/blog",
-      priority: 0.9,
-      changeFrequency:
-        "daily" as ChangeFrequency,
+      priority: 0.8,
+      changeFrequency: "daily",
     },
 
     {
       path: "/contact",
-      priority: 0.6,
-      changeFrequency:
-        "monthly" as ChangeFrequency,
+      priority: 0.4,
+      changeFrequency: "monthly",
     },
 
     {
       path: "/categories",
       priority: 0.8,
-      changeFrequency:
-        "weekly" as ChangeFrequency,
+      changeFrequency: "weekly",
     },
 
     {
       path: "/dairy-equipment",
-      priority: 0.9,
-      changeFrequency:
-        "weekly" as ChangeFrequency,
+      priority: 0.8,
+      changeFrequency: "weekly",
     },
 
     {
       path: "/gallery",
-      priority: 0.7,
-      changeFrequency:
-        "monthly" as ChangeFrequency,
+      priority: 0.5,
+      changeFrequency: "monthly",
     },
 
     {
       path: "/testimonials",
-      priority: 0.7,
-      changeFrequency:
-        "monthly" as ChangeFrequency,
+      priority: 0.5,
+      changeFrequency: "monthly",
     },
 
     {
       path: "/locations",
-      priority: 0.8,
-      changeFrequency:
-        "weekly" as ChangeFrequency,
+      priority: 0.6,
+      changeFrequency: "weekly",
     },
 
     {
       path: "/milestones",
-      priority: 0.7,
-      changeFrequency:
-        "monthly" as ChangeFrequency,
+      priority: 0.5,
+      changeFrequency: "monthly",
     },
 
     {
       path:
         "/milk-analyzer-machines",
-
-      priority: 0.9,
-
-      changeFrequency:
-        "weekly" as ChangeFrequency,
+      priority: 0.8,
+      changeFrequency: "weekly",
     },
 
     {
       path:
         "/milk-rate-chart",
-
-      priority: 0.8,
-
-      changeFrequency:
-        "daily" as ChangeFrequency,
+      priority: 0.7,
+      changeFrequency: "daily",
     },
 
     {
       path:
         "/milk-testing-equipment",
-
-      priority: 0.9,
-
-      changeFrequency:
-        "weekly" as ChangeFrequency,
+      priority: 0.8,
+      changeFrequency: "weekly",
     },
 
     {
       path: "/services",
-      priority: 0.8,
-      changeFrequency:
-        "monthly" as ChangeFrequency,
+      priority: 0.6,
+      changeFrequency: "monthly",
     },
   ];
 
@@ -293,9 +268,11 @@ MetadataRoute.Sitemap {
 
         addUrl(
           `/automatic-milk-collection-system/${product.url}`,
-          0.9,
+          0.7,
           "weekly",
-          getSafeDate()
+          sanitizeDate(
+            product.updatedAt
+          )
         );
       }
     }
@@ -314,9 +291,11 @@ MetadataRoute.Sitemap {
 
       addUrl(
         `/dairy-equipment/${product.url}`,
-        0.9,
+        0.7,
         "weekly",
-        getSafeDate()
+        sanitizeDate(
+          product.updatedAt
+        )
       );
     }
   });
@@ -332,9 +311,11 @@ MetadataRoute.Sitemap {
 
         addUrl(
           `/milk-testing-equipment/${product.url}`,
-          0.9,
+          0.7,
           "weekly",
-          getSafeDate()
+          sanitizeDate(
+            product.updatedAt
+          )
         );
       }
     }
@@ -351,9 +332,11 @@ MetadataRoute.Sitemap {
 
         addUrl(
           `/milk-analyzer-machines/${product.url}`,
-          0.9,
+          0.7,
           "weekly",
-          getSafeDate()
+          sanitizeDate(
+            product.updatedAt
+          )
         );
       }
     }
@@ -374,7 +357,7 @@ MetadataRoute.Sitemap {
 
       addUrl(
         `/blog/${typedBlog.slug}`,
-        0.8,
+        0.6,
         "weekly",
         sanitizeDate(
           typedBlog.updatedAt
@@ -392,7 +375,7 @@ MetadataRoute.Sitemap {
 
       addUrl(
         `/milk-analyzer-${location.slug}`,
-        0.7,
+        0.5,
         "monthly",
         getSafeDate()
       );
