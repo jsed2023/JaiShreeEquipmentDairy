@@ -14,12 +14,6 @@ MetadataRoute.Robots {
         userAgent: "*",
 
         allow: "/",
-
-        disallow: [
-          "/api/",
-          "/admin/",
-          "/_next/",
-        ],
       },
     ],
 
