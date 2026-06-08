@@ -44,6 +44,25 @@ type BlogType = {
 };
 
 // =========================
+// Product Type
+// =========================
+
+type ProductType = {
+  url?: string;
+  updatedAt?: string | Date;
+};
+
+// =========================
+// Static Page Type
+// =========================
+
+type StaticPageType = {
+  path: string;
+  priority: number;
+  changeFrequency: ChangeFrequency;
+};
+
+// =========================
 // Safe Date Helper
 // =========================
 
@@ -131,11 +150,8 @@ MetadataRoute.Sitemap {
 
     sitemap.push({
       url: fullUrl,
-
       lastModified,
-
       changeFrequency,
-
       priority,
     });
   };
@@ -144,7 +160,8 @@ MetadataRoute.Sitemap {
   // Static Pages
   // =========================
 
-  const staticPages = [
+  const staticPages:
+    StaticPageType[] = [
 
     {
       path: "/",
@@ -262,7 +279,7 @@ MetadataRoute.Sitemap {
   // =========================
 
   automaticMilkCollectionSystem?.forEach(
-    (product) => {
+    (product: ProductType) => {
 
       if (product?.url) {
 
@@ -285,27 +302,29 @@ MetadataRoute.Sitemap {
   [
     ...creamSeparatorMachine,
     ...milkingMachine,
-  ].forEach((product) => {
+  ].forEach(
+    (product: ProductType) => {
 
-    if (product?.url) {
+      if (product?.url) {
 
-      addUrl(
-        `/dairy-equipment/${product.url}`,
-        0.7,
-        "weekly",
-        sanitizeDate(
-          product.updatedAt
-        )
-      );
+        addUrl(
+          `/dairy-equipment/${product.url}`,
+          0.7,
+          "weekly",
+          sanitizeDate(
+            product.updatedAt
+          )
+        );
+      }
     }
-  });
+  );
 
   // =========================
   // Milk Testing Equipment
   // =========================
 
   MilkTestingEquipment?.forEach(
-    (product) => {
+    (product: ProductType) => {
 
       if (product?.url) {
 
@@ -326,7 +345,7 @@ MetadataRoute.Sitemap {
   // =========================
 
   MilkAnalyzerMachines?.forEach(
-    (product) => {
+    (product: ProductType) => {
 
       if (product?.url) {
 
