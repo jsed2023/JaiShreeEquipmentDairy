@@ -1,9 +1,9 @@
 export function generateLocationSEOContent(locationName: string) {
   return {
     intro: `
-We are a trusted supplier of Advance Milk Analyzer Max, Plus, Pro and 
-Ekomilk Ultra Analyzer, Milk Fat Testing Machines, Milk Collection Units (DPU), 
-Milk Cream Separator Machines and Milking Machines in ${locationName}, Rajasthan.
+We are a trusted supplier of Advance Milk Analyzer Max, Plus, Pro20 and 
+Ekomilk Ultra Analyzer, Ekomilk Ultra Pro, Milk Fat Testing Machines, Milk Collection Units (DPU),
+Data Processing Unit(DPU), Milk Cream Separator Machines and Milking Machines in ${locationName}, Rajasthan.
 `,
 
     about: `
