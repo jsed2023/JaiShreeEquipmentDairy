@@ -18,6 +18,9 @@ export function AuthorizedDealerSection() {
           <p className="text-muted-foreground mt-2">
             For Milk Analyzers & Milk Collection Systems (Advance & Dairy Khata DPU)
           </p>
+          <p className="text-muted-foreground mt-2">
+            brand Name for machines :- Advance(Milk Analyzers), Dairy Khata (Dpu)      
+          </p>
         </div>
 
         <Card className="max-w-3xl mx-auto shadow-lg border-0">
