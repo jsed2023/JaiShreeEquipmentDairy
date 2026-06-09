@@ -145,7 +145,7 @@ export const testimonials: Testimonial[] = [
   },
     {
     id: 16,
-    name: "aakashdeep",
+    name: "Aakash Deep",
     role: "local Milk sales ",
     location: "Sri Ganganagar, Rajasthan",
     message:
