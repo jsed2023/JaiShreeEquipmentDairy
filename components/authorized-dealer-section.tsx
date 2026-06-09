@@ -16,10 +16,10 @@ export function AuthorizedDealerSection() {
             Authorized Dealer – K R Electronics Industries
           </h2>
           <p className="text-muted-foreground mt-2">
-            For Milk Analyzers & Milk Collection Systems (Advance & Dairy Khata DPU)
+            For Milk Analyzers & Milk Collection Systems 
           </p>
           <p className="text-muted-foreground mt-2">
-            brand Name for machines :- Advance(Milk Analyzers), Dairy Khata (Dpu)      
+            Brand Name For Machines :- Advance (Milk Analyzers), Dairy Khata (Dpu)      
           </p>
         </div>
 
