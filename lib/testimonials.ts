@@ -143,4 +143,13 @@ export const testimonials: Testimonial[] = [
       "Excellent experience from purchase to after-sales service. A reliable partner for dairy equipment.",
     rating: 5,
   },
+    {
+    id: 16,
+    name: "aakashdeep",
+    role: "local Milk sales ",
+    location: "Sri Ganganagar, Rajasthan",
+    message:
+      "Excellent experience from purchase to after-sales service. A reliable partner for dairy equipment. And Good quality For All Prodects For Milk Analyzers",
+    rating: 5,
+  },
 ];
