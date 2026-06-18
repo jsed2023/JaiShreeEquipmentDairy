@@ -253,24 +253,6 @@ export const automaticMilkCollectionSystem: Products[] = [
 
   keywords:
     "DPU Milk Collection Unit, Dairy Khata DPU Machine, Milk Billing Machine, Automatic Milk Collection System, Milk Data Processor Unit, Dairy Automation Equipment, Milk Collection Machine, Milk Procurement System, Dairy Khata Machine, Milk Collection Unit Rajasthan",
-
-  faq: [
-    {
-      question: "What is a DPU Milk Collection Unit?",
-      answer:
-        "A DPU Milk Collection Unit is an automatic milk billing and data processing machine used in dairy collection centers.",
-    },
-    {
-      question: "Does the machine support FAT and SNF calculation?",
-      answer:
-        "Yes, the Dairy Khata DPU machine supports automatic FAT and SNF calculation.",
-    },
-    {
-      question: "Is thermal printer support available?",
-      answer:
-        "Yes, the machine supports thermal receipt printers.",
-    },
-  ],
 },
   {
     id: 3,
