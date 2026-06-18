@@ -107,19 +107,21 @@ export interface Services {
 }
 
 export interface BlogType {
-  slug: string;
+slug: string;
 
-  title: string;
+title: string;
 
-  description: string;
+description: string;
 
-  keywords: string[];
+keywords: string[];
 
-  image: string;
+image: string;
 
-  category: string;
+alt: string;
 
-  date: string;
+category: string;
 
-  content: string;
+date: string;
+
+content: string;
 }
