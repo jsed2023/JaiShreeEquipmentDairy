@@ -206,7 +206,7 @@ export const spareParts = [
   }
 },
 {
-  id: 8,
+  id: 9,
   slug: "ekomilk-lcd-display-module",
   name: "Ekomilk LCD Display Module",
   photo: "/products/ekomilk-lcd-display-module.jpg",
@@ -232,7 +232,7 @@ export const spareParts = [
 },
 
 {
-  id: 9,
+  id: 10,
   slug: "ekomilk-keypad",
   name: "Ekomilk Keypad",
   photo: "/products/ekomilk-keypad.jpg",
@@ -256,7 +256,7 @@ export const spareParts = [
 },
 
 {
-  id: 10,
+  id: 11,
   slug: "ekomilk-motor-pcb",
   name: "Ekomilk Motor PCB",
   photo: "/products/ekomilk-motor-pcb.jpg",
@@ -281,7 +281,7 @@ export const spareParts = [
 },
 
 {
-  id: 11,
+  id: 12,
   slug: "ekomilk-peristaltic-pump-assembly",
   name: "Ekomilk Peristaltic Pump Assembly",
   photo: "/products/ekomilk-peristaltic-pump-assembly.jpg",
@@ -300,31 +300,6 @@ export const spareParts = [
   specifications: {
     ProductType: "Pump Assembly",
     Compatibility: "Ekomilk Milk Analyzer",
-    Voltage: "12V DC",
-    Condition: "New"
-  }
-},
-
-{
-  id: 12,
-  slug: "lactoscan-milk-analyzer-pcb-board",
-  name: "Lactoscan Milk Analyzer PCB Board",
-  photo: "/products/lactoscan-milk-analyzer-pcb-board.jpg",
-  sku: "LAC-PCB-012",
-  price: "₹13,500",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "1 Year",
-  keywords: [
-    "lactoscan pcb",
-    "lactoscan board",
-    "milk analyzer pcb"
-  ],
-  description:
-    "Original PCB control board for Lactoscan Milk Analyzer.",
-  specifications: {
-    ProductType: "PCB Control Board",
-    Compatibility: "Lactoscan SL30 / LS30",
     Voltage: "12V DC",
     Condition: "New"
   }
