@@ -31,24 +31,11 @@ setCurrentIndex(
 const currentImage =
 images[currentIndex];
 
-const fileName =
-currentImage.src
-?.split("/")
-.pop()
-?.replace(/.[^/.]+$/, "")
-.replace(/[-_]/g, " ")
-.replace(/\b\w/g, (c) =>
-c.toUpperCase()
-) || "";
-
+// SEO Alt Text
 const altText =
-fileName
-? "${productName} ${fileName}"
-.replace(/\s+/g, " ")
-.trim()
-.slice(0, 125)
-: productName;
+currentImage.alt || productName;
 
+// Caption below image
 const caption = productName;
 
 return (
@@ -88,6 +75,7 @@ my-5
           text-sm
           font-bold
           text-black
+          text-center
           tracking-wide
         "
       >
