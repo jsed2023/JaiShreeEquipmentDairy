@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { spareParts } from "@/config/spareParts";
+import { spareparts } from "@/config/spareparts";
 
 export default function SparePartsPage() {
   return (
