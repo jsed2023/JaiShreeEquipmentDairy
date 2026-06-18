@@ -17,6 +17,8 @@ export const revalidate = 86400;
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
 
+const STATIC_DATE = new Date("2026-06-19");
+
 type ChangeFrequency =
   | "always"
   | "hourly"
@@ -26,17 +28,22 @@ type ChangeFrequency =
   | "yearly"
   | "never";
 
+type BlogType = {
+  slug: string;
+  updatedAt?: string | Date;
+};
+
 const getLastModified = (
   date?: string | Date
-) => {
+): Date => {
   if (!date) {
-    return new Date();
+    return STATIC_DATE;
   }
 
   const parsed = new Date(date);
 
   if (isNaN(parsed.getTime())) {
-    return new Date();
+    return STATIC_DATE;
   }
 
   return parsed > new Date()
@@ -53,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     path: string,
     priority: number = 0.7,
     changeFrequency: ChangeFrequency = "weekly",
-    lastModified: Date = new Date()
+    lastModified: Date = STATIC_DATE
   ) => {
     const url = encodeURI(
       `${BASE_URL}${path}`
@@ -89,7 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/dairy-equipment", 0.8, "weekly"],
     ["/milk-testing-equipment", 0.8, "weekly"],
     ["/milk-analyzer-machines", 0.8, "weekly"],
-    ["/milk-testing-machine-spare-parts", 0.8,"weekly"],
+    ["/milk-testing-machine-spare-parts", 0.8, "weekly"],
     ["/automatic-milk-collection-system", 0.8, "weekly"],
     ["/milk-rate-chart", 0.7, "daily"],
   ].forEach(
@@ -98,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         path as string,
         priority as number,
         changeFrequency as ChangeFrequency,
-        new Date()
+        STATIC_DATE
       );
     }
   );
@@ -113,9 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `/automatic-milk-collection-system/${product.url}`,
         0.7,
         "weekly",
-        getLastModified(
-          product.updatedAt
-        )
+        getLastModified(product.updatedAt)
       );
     }
   );
@@ -132,9 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       `/dairy-equipment/${product.url}`,
       0.7,
       "weekly",
-      getLastModified(
-        product.updatedAt
-      )
+      getLastModified(product.updatedAt)
     );
   });
 
@@ -148,9 +151,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `/milk-testing-equipment/${product.url}`,
         0.7,
         "weekly",
-        getLastModified(
-          product.updatedAt
-        )
+        getLastModified(product.updatedAt)
       );
     }
   );
@@ -165,29 +166,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `/milk-analyzer-machines/${product.url}`,
         0.7,
         "weekly",
-        getLastModified(
-          product.updatedAt
-        )
+        getLastModified(product.updatedAt)
       );
     }
   );
 
   // Blogs
 
-  Object.values(blogs || {}).forEach(
-    (blog: any) => {
-      if (!blog?.slug) return;
+  Object.values(
+    blogs as Record<string, BlogType>
+  ).forEach((blog) => {
+    if (!blog?.slug) return;
 
-      addUrl(
-        `/blog/${blog.slug}`,
-        0.8,
-        "weekly",
-        getLastModified(
-          blog.updatedAt
-        )
-      );
-    }
-  );
+    addUrl(
+      `/blog/${blog.slug}`,
+      0.8,
+      "weekly",
+      getLastModified(blog.updatedAt)
+    );
+  });
 
   // Rajasthan Location Pages
 
@@ -199,7 +196,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `/milk-analyzer-${location.slug}`,
         0.5,
         "monthly",
-        new Date()
+        STATIC_DATE
       );
     }
   );
