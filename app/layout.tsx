@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
 
   category:
-    "dairy equipment, milk testing equipment, automatic milk collection system",
+    "dairy equipment, milk testing equipment, milk  analyzer machices, automatic milk collection system",
 
   alternates: {
     canonical: siteConfig.url,
@@ -157,7 +157,7 @@ export default function RootLayout({
             <div className="relative flex min-h-screen flex-col">
               <Navbar />
 
-              <main className="flex-grow pt-20 pb-36">
+              <main className="flex-grow">
                 {children}
               </main>
 

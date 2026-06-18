@@ -4,7 +4,7 @@ import { cld } from "@/utils/cloudinary";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import NavButton from "@/components/NavButton";
-// Lazy load heavy component (reduces unused JS)
+
 const GalleryCarousel = dynamic(
   () => import("@/components/GalleryCarousel"),
   { ssr: false }
@@ -30,26 +30,24 @@ export default function Home() {
 {/* ================= HERO BANNER ================= */}
 <section
   id="hero-banner-section"
-  className="flex justify-center py-4"
+  className="w-full"
 >
-  <div className="w-[90%] md:w-[70%] max-w-5xl aspect-[3/2]">
-    <Image
-  src={cld("v1737653135/jai_shree_eq.jpg", {
-    width: 900,
-    crop: "fill",
-    quality: "auto",
-      // ✅ FIXED
-  })}
-  alt="Jai Shree Equipment Dairy Banner"
-  loading="eager"
-  fetchPriority="high"
-  decoding="async"
-  sizes="(max-width: 768px) 90vw, 70vw"
-  radius="md"
-  className="w-full h-full object-cover"
-  removeWrapper
-/>
-  </div>
+  <Image
+    src={cld("v1737653135/jai_shree_eq.jpg", {
+      width: 900,
+      quality: "auto",
+      format: "auto",
+      crop: "fill",
+    })}
+    alt="Jai Shree Equipment Dairy Banner"
+    loading="eager"
+    fetchPriority="high"
+    decoding="async"
+    sizes="100vw"
+    removeWrapper
+    radius="none"
+    className="w-full h-auto"
+  />
 </section>
       <section className="bg-gray-100 dark:bg-[#1f1f22] text-gray-900 dark:text-gray-50 py-6">
         <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
