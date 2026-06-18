@@ -1,117 +1,99 @@
 export const spareParts = [
   {
-  id: 1,
+    id: 1,
+    slug: "ekomilk-motor-assembly",
+    name: "Ekomilk Motor Assembly Complete",
+    keywords: [
+      "ekomilk motor assembly",
+      "milk analyzer motor",
+      "peristaltic pump motor",
+      "ekomilk spare parts",
+      "milk testing machine motor"
+    ],
+    photo: "/products/ekomilk-peristaltic-pump-motor-assembly.jpg",
+    sku: "EKO-PMA-001",
+    price: "₹5,500",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
+    description:
+      "Complete motor assembly for Ekomilk Milk Analyzer. Designed for reliable sample suction, smooth operation and accurate milk testing.",
+    specifications: {
+      ProductType: "Motor Assembly",
+      Compatibility: "Ekomilk Milk Analyzer",
+      Voltage: "12V DC",
+      MotorType: "DC Geared Motor",
+      Weight: "500 g",
+      Condition: "New"
+    }
+  },
 
-  slug: "ekomilk--motor-assembly",
-
-  name: "Ekomilk  Motor Assembly Complete",
-
-  photo: "/products/ekomilk-peristaltic-pump-motor-assembly.jpg",
-
-  sku: "EKO-PMA-001",
-
-  price: "₹5,500",
-
-  category: "Milk Analyzer Spare Parts",
-
-  stockStatus: "In Stock",
-
-  warranty: "6 Months",
-
-  description:
-    "Ekomilk Peristaltic Pump Motor Assembly is a high-quality replacement spare part designed for Ekomilk Milk Analyzer machines. It ensures smooth sample suction, accurate milk flow, reliable performance, and long service life for dairy testing applications.",
-
-  specifications: {
-    ProductType: "Peristaltic Pump Motor Assembly",
-    BrandCompatibility: "Ekomilk Milk Analyzer",
-    Voltage: "12V DC",
-    MotorType: "DC Geared Motor",
-    PumpType: "Peristaltic Pump",
-    FlowRate: "50-100 ml/min",
-    TubingType: "Food Grade Silicone Tube",
-    Material: "Engineering Plastic & Metal",
-    Application: "Milk Sample Suction and Testing",
-    Weight: "500 g",
-    Condition: "New",
-    Installation: "Ready to Install"
-  }
-},
   {
-   {
-  id: 2,
+    id: 2,
+    slug: "ekomilk-analyzer-sensor",
+    name: "Ekomilk Analyzer Sensor",
+    keywords: [
+      "ekomilk analyzer sensor",
+      "milk analyzer sensor",
+      "ekomilk spare parts",
+      "ultrasonic sensor"
+    ],
+    photo: "/products/ekomilk-analyzer-sensor.jpg",
+    sku: "EKO-SEN-002",
+    price: "₹3,300",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
+    description:
+      "High precision analyzer sensor for Ekomilk Milk Analyzer machines.",
+    specifications: {
+      ProductType: "Milk Analyzer Sensor",
+      Compatibility: "Ekomilk Ultra / DPS / Pro",
+      Technology: "Ultrasonic",
+      Accuracy: "High Precision",
+      Weight: "250 g",
+      Condition: "New"
+    }
+  },
 
-  slug: "ekomilk-analyzer-sensor",
-
-  name: "Ekomilk Analyzer Sensor",
-
-  photo: "/products/ekomilk-analyzer-sensor.jpg",
-
-  sku: "EKO-SEN-002",
-
-  price: "₹3,300",
-
-  category: "Milk Analyzer Spare Parts",
-
-  stockStatus: "In Stock",
-
-  warranty: "6 Months",
-
-  description:
-    "Genuine Ekomilk Analyzer Sensor designed for Ekomilk Milk Analyzer machines. Provides accurate milk parameter measurement, stable performance and reliable testing results for dairy collection centers and laboratories.",
-
-  specifications: {
-    ProductType: "Milk Analyzer Sensor",
-    Compatibility: "Ekomilk Ultra / DPS / Pro / Bond",
-    Technology: "Ultrasonic Sensor",
-    Accuracy: "High Precision",
-    Application: "Milk Quality Analysis",
-    OperatingVoltage: "12V DC",
-    Installation: "Professional Installation Recommended",
-    Condition: "New",
-    Warranty: "6 Months",
-    Weight: "250 g"
-  }
-},
   {
-  id: 3,
+    id: 3,
+    slug: "ekomilk-ultra-v17-pcb-board",
+    name: "Ekomilk Ultra V17 PCB Control Board",
+    keywords: [
+      "ekomilk pcb board",
+      "ekomilk ultra v17 pcb",
+      "milk analyzer pcb board",
+      "control board"
+    ],
+    photo: "/products/ekomilk-ultra-v17-pcb-board.jpg",
+    sku: "EKO-PCB-V17-003",
+    price: "₹12,000",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "1 Year",
+    description:
+      "Original PCB control board for Ekomilk Ultra Version 17 Milk Analyzer.",
+    specifications: {
+      ProductType: "PCB Control Board",
+      Model: "Ultra V17",
+      Compatibility: "Ekomilk Ultra",
+      Voltage: "12V DC",
+      Interface: "USB / RS232",
+      Condition: "New"
+    }
+  },
 
-  slug: "ekomilk-ultra-v17-pcb-board",
-
-  name: "Ekomilk Ultra V17 PCB Control Board",
-
-  photo: "/products/ekomilk-ultra-v17-pcb-board.jpg",
-
-  sku: "EKO-PCB-V17-003",
-
-  price: "₹12,000",
-
-  category: "Milk Analyzer Spare Parts",
-
-  stockStatus: "In Stock",
-
-  warranty: "1 Year",
-
-  description:
-    "Genuine Ekomilk Ultra V17 PCB Control Board designed for Ekomilk Ultra Milk Analyzer machines. Controls sensor communication, display functions, data processing and machine operations for accurate milk testing performance.",
-
-  specifications: {
-    ProductType: "PCB Control Board",
-    Model: "Ekomilk Ultra Version 17",
-    Compatibility: "Ekomilk Ultra Milk Analyzer",
-    OperatingVoltage: "12V DC",
-    Processor: "Industrial Microcontroller",
-    DisplaySupport: "LCD Display",
-    Interface: "USB / RS232 Serial",
-    Application: "Milk Analyzer Control System",
-    Condition: "New",
-    Installation: "Ready to Install",
-    Weight: "250 g"
-  }
-},
   {
     id: 4,
     slug: "thermal-printer",
     name: "Thermal Printer",
+    keywords: [
+      "thermal printer",
+      "milk analyzer printer",
+      "receipt printer",
+      "amcu printer"
+    ],
     photo: "/products/thermal-printer.jpg",
     sku: "TP-004",
     price: "₹3,800",
@@ -119,78 +101,62 @@ export const spareParts = [
     stockStatus: "In Stock",
     warranty: "6 Months",
     description:
-      "Thermal printer module for milk collection receipts.",
+      "Thermal printer for milk collection centers and milk analyzer systems.",
     specifications: {
       Method: "Direct Thermal",
-      PaperWidth: "58mm",
+      PaperWidth: "58 mm",
       Resolution: "203 DPI",
       Interface: "Serial"
     }
   },
+
   {
-  id: 6,
+    id: 6,
+    slug: "ekomilk-daily-cleaning-solution-200ml",
+    name: "Ekomilk Daily Cleaning Solution (200 ml)",
+    keywords: [
+      "ekomilk cleaning solution",
+      "daily cleaning solution",
+      "milk analyzer cleaner"
+    ],
+    photo: "/products/ekomilk-daily-cleaning-solution-200ml.jpg",
+    sku: "EKO-DCS-200",
+    price: "₹750",
+    category: "Cleaning Solution",
+    stockStatus: "In Stock",
+    warranty: "No Warranty",
+    description:
+      "Daily cleaning solution for removing milk residue and maintaining analyzer accuracy.",
+    specifications: {
+      Quantity: "200 ml",
+      Usage: "Daily Cleaning",
+      Form: "Liquid",
+      ShelfLife: "12 Months"
+    }
+  },
 
-  slug: "ekomilk-daily-cleaning-solution-200ml",
-
-  name: "Ekomilk Milk Analyser Daily Cleaning Solution (200 ml)",
-
-  photo: "/products/ekomilk-daily-cleaning-solution-200ml.jpg",
-
-  sku: "EKO-DCS-200",
-
-  price: "₹750",
-
-  category: "Milk Analyzer Cleaning Solution",
-
-  stockStatus: "In Stock",
-
-  warranty: "No Warranty",
-
-  description:
-    "Daily cleaning solution specially formulated for Ekomilk Milk Analyser machines. Helps remove milk residue, protein deposits and fat buildup, ensuring accurate milk testing and extending analyzer life.",
-
-  specifications: {
-    ProductType: "Daily Cleaning Solution",
-    BrandCompatibility: "Ekomilk Milk Analyser",
-    Quantity: "200 ml",
-    Usage: "Daily Cleaning",
-    Application: "Milk Analyzer Maintenance",
-    Form: "Liquid",
-    ShelfLife: "12 Months",
-    Condition: "New"
-  }
-},
   {
-  id: 7,
-
-  slug: "ekomilk-weekly-cleaning-solution-200ml",
-
-  name: "Ekomilk Milk Analyser Weekly Cleaning Solution (200 ml)",
-
-  photo: "/products/ekomilk-weekly-cleaning-solution-200ml.jpg",
-
-  sku: "EKO-WCS-200",
-
-  price: "₹950",
-
-  category: "Milk Analyzer Cleaning Solution",
-
-  stockStatus: "In Stock",
-
-  warranty: "No Warranty",
-
-  description:
-    "Weekly cleaning solution for Ekomilk Milk Analyser machines. Effectively removes stubborn protein, mineral and fat deposits from measuring systems and sample lines.",
-
-  specifications: {
-    ProductType: "Weekly Cleaning Solution",
-    BrandCompatibility: "Ekomilk Milk Analyser",
-    Quantity: "200 ml",
-    Usage: "Weekly Deep Cleaning",
-    Application: "Milk Analyzer Maintenance",
-    Form: "Liquid",
-    ShelfLife: "12 Months",
-    Condition: "New"
+    id: 7,
+    slug: "ekomilk-weekly-cleaning-solution-200ml",
+    name: "Ekomilk Weekly Cleaning Solution (200 ml)",
+    keywords: [
+      "ekomilk weekly cleaning solution",
+      "milk analyzer maintenance",
+      "deep cleaning solution"
+    ],
+    photo: "/products/ekomilk-weekly-cleaning-solution-200ml.jpg",
+    sku: "EKO-WCS-200",
+    price: "₹950",
+    category: "Cleaning Solution",
+    stockStatus: "In Stock",
+    warranty: "No Warranty",
+    description:
+      "Weekly deep cleaning solution for removing stubborn protein and mineral deposits.",
+    specifications: {
+      Quantity: "200 ml",
+      Usage: "Weekly Deep Cleaning",
+      Form: "Liquid",
+      ShelfLife: "12 Months"
+    }
   }
-}
 ];
