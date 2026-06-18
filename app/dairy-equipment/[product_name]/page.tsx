@@ -91,7 +91,10 @@ export default function Product({
           <div
             className={`md:mr-20 ${product.images.length > 1 && "max-md:mb-10"}`}
           >
-            <ImageSlider images={product.images} />
+            <ImageSlider
+  images={product.images}
+  productName={product.name}
+/>
           </div>
 
           <div className="flex flex-col max-sm:px-2 gap-y-2 w-full justify-center">
