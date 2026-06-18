@@ -109,7 +109,38 @@ export const spareParts = [
       Interface: "Serial"
     }
   },
-
+{
+  id: 5,
+  slug: "milk-analyzer-consumables-kit",
+  name: "Syringes, Beakers & Plungers",
+  keywords: [
+    "milk analyzer syringes",
+    "milk analyzer beakers",
+    "milk analyzer plungers",
+    "milk testing consumables",
+    "milk analyzer accessories",
+    "ekomilk syringe",
+    "lactoscan beaker",
+    "milk analyzer spare parts"
+  ],
+  photo: "/products/syringes-beakers-plungers.jpg",
+  sku: "MAC-005",
+  price: "₹140 / Piece",
+  category: "Milk Analyzer Consumables",
+  stockStatus: "In Stock",
+  warranty: "No Warranty",
+  description:
+    "Premium quality syringes, beakers and plungers used in milk analyzer machines for accurate sample handling and testing. Compatible with Ekomilk, Lactoscan and other milk analyzers. Minimum order quantity: 50 pieces.",
+  specifications: {
+    ProductType: "Milk Analyzer Consumables",
+    ItemsIncluded: "Syringes, Beakers, Plungers",
+    Compatibility: "Ekomilk, Lactoscan & Other Milk Analyzers",
+    Material: "Laboratory Grade Plastic",
+    MinimumOrderQuantity: "50 Pieces",
+    UnitPrice: "₹140 Per Piece",
+    Condition: "New"
+  }
+},
   {
     id: 6,
     slug: "ekomilk-daily-cleaning-solution-200ml",
