@@ -15,28 +15,27 @@ import { FcLike } from "react-icons/fc";
 
 export default function Footer() {
   return (
-    <footer
-      className="relative mt-24 overflow-hidden border-t border-white/10 bg-black text-slate-300"
-      aria-label="Website Footer"
-    >
+<footer
+  className="relative mt-4 overflow-hidden border-t border-amber-200 bg-[#FAF9F6] text-slate-700"
+  aria-label="Website Footer"
+>
       {/* Background Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 blur-3xl" />
-
+      <div className="absolute inset-0 bg-white/20" />
       {/* Main Footer */}
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2 xl:grid-cols-4">
+      <div className="relative mx-auto grid max-w-7xl gap-4 px-4 py-6 md:grid-cols-2 xl:grid-cols-4">
         {/* Brand */}
         <div>
           <Link
             href="/"
             aria-label="Jai Shree Equipment Dairy Home"
           >
-            <h2 className="text-3xl font-bold text-white">
+           <h2 className="text-xl font-bold text-slate-900">
               Jai Shree Equipment Dairy
             </h2>
           </Link>
 
           {/* Optimized SEO Content */}
-          <p className="mt-6 text-sm leading-7 text-slate-400">
+          <p className="mt-4 text-sm leading-6 text-slate-600">
             Jai Shree Equipment Dairy supplies
             reliable dairy equipment, milk
             analyzer machines, and milk
@@ -46,13 +45,13 @@ export default function Footer() {
           </p>
 
           {/* Social Media */}
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-4 flex items-center gap-2">
             <a
               href="https://www.facebook.com/Jaishreeequipmentdairy"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-lg transition hover:border-blue-500 hover:text-blue-500"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm text-base transition"
             >
               <FaFacebookF />
             </a>
@@ -62,20 +61,20 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-lg transition hover:border-red-500 hover:text-red-500"
-            >
-              <FaYoutube />
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm text-base transition"
+              >
+                <FaYoutube />
             </a>
           </div>
         </div>
 
         {/* Quick Links */}
         <nav aria-label="Footer Navigation">
-          <h3 className="text-xl font-semibold text-white">
+          <h3 className="text-lg font-semibold text-slate-900">
             Quick Links
           </h3>
 
-          <ul className="mt-6 space-y-4 text-sm">
+          <ul className="mt-3 space-y-1 text-sm text-slate-600">
             {[
               {
                 name: "Home",
@@ -124,11 +123,11 @@ export default function Footer() {
 
         {/* Products */}
         <div>
-          <h3 className="text-xl font-semibold text-white">
+          <h3 className="text-xl font-semibold text-slate-900">
             Products
           </h3>
 
-          <ul className="mt-6 space-y-4 text-sm text-slate-400">
+          <ul className="mt-4 space-y-2 text-sm text-slate-600">
             {[
               {
                 name: "Milk Analyzer",
@@ -172,18 +171,18 @@ export default function Footer() {
 
         {/* Contact Information */}
         <address className="not-italic">
-          <h3 className="text-xl font-semibold text-white">
+          <h3 className="text-xl font-semibold text-slate-900">
             Contact Information
           </h3>
 
-          <div className="mt-6 space-y-6 text-sm">
+          <div className="mt-3 space-y-3 text-sm">
             {/* Address */}
             <div className="flex gap-4">
-              <div className="mt-1 text-cyan-400">
-                <FaMapMarkerAlt />
+              <div className="mt-1 text-cyan-600">
+                <FaMapMarkerAlt className="text-cyan-600" />
               </div>
 
-              <p className="leading-7 text-slate-400">
+             <p className="leading-5 text-slate-600">
                 Shop No. B-42, Upper Side,
                 Rohit Udhyog Market,
                 Near HP Gas Agency,
@@ -196,7 +195,7 @@ export default function Footer() {
 
             {/* Phone */}
             <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-cyan-400" />
+              <FaPhoneAlt className="text-cyan-600" />
 
               <a
                 href="tel:+917375082341"
@@ -208,7 +207,7 @@ export default function Footer() {
 
             {/* Email */}
             <div className="flex items-center gap-4">
-              <FaEnvelope className="text-cyan-400" />
+              <FaEnvelope className="text-cyan-600" />
 
               <a
                 href="mailto:choudharydairy@outlook.com"
@@ -222,22 +221,22 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="relative border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-center text-sm text-slate-500 md:flex-row">
+     <div className="relative border-t border-amber-200">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-1 px-4 py-3 text-center text-sm text-slate-600 md:flex-row">
           <p>
             © 2026 Jai Shree Equipment Dairy.
             All Rights Reserved.
           </p>
 
           <p>
-            Trusted Dairy Equipment Supplier
+            Trusted Dairy Equipment & Milk Testing Equipment Supplier
             in Rajasthan, India
           </p>
         </div>
       </div>
 
       {/* Developer Bar */}
-      <div className="relative border-t border-blue-500/20 bg-blue-600/90 px-4 py-3 text-xs text-white backdrop-blur-sm">
+      <div className="relative border-t border-amber-200 bg-amber-100 px-4 py-1 text-xs text-slate-700 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 md:flex-row">
           <span>
             Built for speed, SEO & modern web performance
@@ -247,7 +246,7 @@ export default function Footer() {
             href="https://developerchoudhary.vercel.app/"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            className="flex items-center gap-1 transition hover:text-blue-200"
+            className="flex items-center gap-1 transition hover:text-cyan-700"
           >
             <span>Made with</span>
 

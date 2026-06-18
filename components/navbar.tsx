@@ -35,11 +35,11 @@ export const Navbar = () => {
   return (
     <nav aria-label="Main Navigation">
       <NextUINavbar
-        maxWidth="2xl"
-        position="static"
-        isMenuOpen={isMenuOpen}
-        className="fixed top-0 left-0 z-50 w-full bg-sky-600 text-white shadow-md"
-      >
+  maxWidth="full"
+  position="sticky"
+  isMenuOpen={isMenuOpen}
+  className="top-0 z-50 h-16 bg-sky-600 text-white shadow-md"
+>
         {/* LEFT SIDE */}
         <NavbarContent justify="start">
           {/* LOGO */}
