@@ -5,11 +5,9 @@ import { spareparts } from "@/config/spareparts";
 export default function SparePartsPage() {
   return (
     <section className="bg-slate-50 min-h-screen">
-
       {/* Hero Section */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 py-12">
-
           <div className="text-sm text-slate-500 mb-4">
             <Link href="/">Home</Link>
             <span className="mx-2">/</span>
@@ -45,10 +43,8 @@ export default function SparePartsPage() {
 
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto px-4 py-10">
-
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-          {spareParts.map((product) => (
+          {spareparts.map((product) => (
             <article
               key={product.id}
               className="bg-white border rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
@@ -65,13 +61,11 @@ export default function SparePartsPage() {
 
               {/* Product Content */}
               <div className="p-6">
-
                 <h2 className="text-2xl font-bold">
                   {product.name}
                 </h2>
 
                 <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
-
                   <div>
                     <span className="font-semibold">SKU:</span>
                     <br />
@@ -136,9 +130,10 @@ export default function SparePartsPage() {
 
                 {/* Buttons */}
                 <div className="mt-6 flex gap-3">
-
                   <a
-                    href={`https://wa.me/91737502341?text=Hello,%20I%20am%20interested%20in%20${product.name}`}
+                    href={`https://wa.me/917375023411?text=Hello,%20I%20am%20interested%20in%20${encodeURIComponent(
+                      product.name
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-green-600 text-white text-center py-3 rounded-lg font-medium hover:bg-green-700"
@@ -152,12 +147,10 @@ export default function SparePartsPage() {
                   >
                     Details
                   </Link>
-
                 </div>
               </div>
             </article>
           ))}
-
         </div>
       </div>
     </section>
