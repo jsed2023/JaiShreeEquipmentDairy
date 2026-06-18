@@ -1,4 +1,4 @@
-export const spareparts = [
+export const spareParts = [
   {
     id: 1,
     slug: "sample-pump",
