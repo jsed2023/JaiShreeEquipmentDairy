@@ -282,31 +282,6 @@ export const spareParts = [
 
 {
   id: 12,
-  slug: "ekomilk-peristaltic-pump-assembly",
-  name: "Ekomilk Peristaltic Pump Assembly",
-  photo: "/products/ekomilk-peristaltic-pump-assembly.jpg",
-  sku: "EKO-PPA-011",
-  price: "₹2,500",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "6 Months",
-  keywords: [
-    "peristaltic pump assembly",
-    "ekomilk pump",
-    "milk analyzer pump"
-  ],
-  description:
-    "Complete peristaltic pump assembly for Ekomilk analyzers.",
-  specifications: {
-    ProductType: "Pump Assembly",
-    Compatibility: "Ekomilk Milk Analyzer",
-    Voltage: "12V DC",
-    Condition: "New"
-  }
-},
-
-{
-  id: 13,
   slug: "lactoscan-motor",
   name: "Lactoscan Motor",
   photo: "/products/lactoscan-motor.jpg",
