@@ -18,11 +18,13 @@ export interface ProvidersProps {
 
 export interface ImageSliderProps {
   images: ImagesData[];
+  productName: string;
 }
 
 export interface ImagesData {
   src: string;
-  alt: string;
+  alt?: string;
+  caption?: string;
 }
 
 export interface ModalData {
