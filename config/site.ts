@@ -63,6 +63,11 @@ export const siteConfig = {
       href: "/services",
       items: [],
     },
+{
+      label: "Milk Testing Machine Spare Parts",
+      href: "/milk-testing-machine-spare-parts",
+      items: [],
+    },
     {
       label: "Milk Rate Chart",
       href: "/milk-rate-chart",
