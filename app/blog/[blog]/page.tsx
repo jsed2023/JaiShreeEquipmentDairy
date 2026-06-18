@@ -53,7 +53,7 @@ export default function BlogDetailsPage({
           <div className="relative mx-auto mt-14 flex h-[260px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-3xl border border-gray-200 bg-white p-4 shadow-xl md:h-[500px] md:p-6">
   <Image
     src={blog.image}
-    alt={`${blog.title} - Jai Shree Equipment Dairy`}
+    alt={blog.alt}
     fill
     priority
     sizes="(max-width: 768px) 100vw, 1200px"
