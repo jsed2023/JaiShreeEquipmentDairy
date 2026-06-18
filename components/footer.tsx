@@ -22,14 +22,14 @@ export default function Footer() {
       {/* Background Effect */}
       <div className="absolute inset-0 bg-white/20" />
       {/* Main Footer */}
-      <div className="relative mx-auto grid max-w-7xl gap-4 px-4 py-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-6 lg:grid-cols-4">
         {/* Brand */}
         <div>
           <Link
             href="/"
             aria-label="Jai Shree Equipment Dairy Home"
           >
-           <h2 className="text-xl font-bold text-slate-900">
+           <h2 className="text-sm font-bold text-slate-900">
               Jai Shree Equipment Dairy
             </h2>
           </Link>
@@ -70,11 +70,11 @@ export default function Footer() {
 
         {/* Quick Links */}
         <nav aria-label="Footer Navigation">
-          <h3 className="text-lg font-semibold text-slate-900">
+          <h3 className="text-xs font-semibold text-slate-900">
             Quick Links
           </h3>
 
-          <ul className="mt-3 space-y-1 text-sm text-slate-600">
+          <ul className="mt-2 space-y-1 text-[10px] text-slate-600">
             {[
               {
                 name: "Home",
@@ -110,9 +110,9 @@ export default function Footer() {
                   href={link.href}
                   title={link.name}
                   aria-label={link.name}
-                  className="group flex items-center gap-2 transition hover:text-cyan-400"
+                  className="group flex items-center gap-1 transition hover:text-amber-600"
                 >
-                  <FaArrowRight className="text-xs opacity-60 transition group-hover:translate-x-1" />
+                  <FaArrowRight className="text-[8px] opacity-60 transition group-hover:translate-x-1" />
 
                   {link.name}
                 </Link>
@@ -123,11 +123,11 @@ export default function Footer() {
 
         {/* Products */}
         <div>
-          <h3 className="text-xl font-semibold text-slate-900">
+          <h3 className="text-xs font-semibold text-slate-900">
             Products
           </h3>
 
-          <ul className="mt-4 space-y-2 text-sm text-slate-600">
+          <ul className="mt-2 space-y-1 text-[10px] text-slate-600">
             {[
               {
                 name: "Milk Analyzer",
@@ -152,15 +152,15 @@ export default function Footer() {
             ].map((item) => (
               <li
                 key={item.name}
-                className="flex items-center gap-2"
+                className="flex items-center gap-1"
               >
-                <span className="h-2 w-2 rounded-full bg-cyan-400" />
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
 
                 <Link
                   href={item.href}
                   title={item.name}
                   aria-label={item.name}
-                  className="transition hover:text-cyan-400"
+                  className="transition hover:text-amber-600"
                 >
                   {item.name}
                 </Link>
@@ -171,47 +171,45 @@ export default function Footer() {
 
         {/* Contact Information */}
         <address className="not-italic">
-          <h3 className="text-xl font-semibold text-slate-900">
+          <h3 className="text-xs font-semibold text-slate-900">
             Contact Information
           </h3>
 
-          <div className="mt-3 space-y-3 text-sm">
+          <div className="mt-2 space-y-2 text-[10px]">
             {/* Address */}
-            <div className="flex gap-4">
+            <div className="flex gap-1">
               <div className="mt-1 text-cyan-600">
                 <FaMapMarkerAlt className="text-cyan-600" />
               </div>
 
-             <p className="leading-5 text-slate-600">
+             <p className="leading-4 text-slate-600">
                 Shop No. B-42, Upper Side,
                 Rohit Udhyog Market,
-                Near HP Gas Agency,
-                Shiv Circle Road,
-                Sri Ganganagar,
-                Rajasthan – 335001,
+                Near HP Gas Agency,Shiv Circle Road,
+                Sri Ganganagar,Rajasthan – 335001,
                 India
               </p>
             </div>
 
             {/* Phone */}
-            <div className="flex items-center gap-4">
+               <div className="flex items-center gap-1">
               <FaPhoneAlt className="text-cyan-600" />
 
               <a
                 href="tel:+917375082341"
-                className="transition hover:text-white"
+                className="transition hover:text-amber-700"
               >
                 +91 73750 82341
               </a>
             </div>
 
             {/* Email */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1">
               <FaEnvelope className="text-cyan-600" />
 
               <a
                 href="mailto:choudharydairy@outlook.com"
-                className="transition hover:text-white"
+                className="transition hover:text-amber-700"
               >
                 choudharydairy@outlook.com
               </a>
@@ -222,7 +220,7 @@ export default function Footer() {
 
       {/* Copyright */}
      <div className="relative border-t border-amber-200">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-1 px-4 py-3 text-center text-sm text-slate-600 md:flex-row">
+        <div className="mx-auto flex flex-col items-center justify-between gap-1 px-2 py-2 text-center text-[10px] text-slate-600 md:flex-row">
           <p>
             © 2026 Jai Shree Equipment Dairy.
             All Rights Reserved.
@@ -236,8 +234,8 @@ export default function Footer() {
       </div>
 
       {/* Developer Bar */}
-      <div className="relative border-t border-amber-200 bg-amber-100 px-4 py-1 text-xs text-slate-700 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 md:flex-row">
+      <div className="relative border-t border-amber-200 bg-amber-100 px-2 py-1 text-[10px] text-slate-700">
+        <div className="mx-auto flex flex-col items-center justify-between gap-1 md:flex-row">
           <span>
             Built for speed, SEO & modern web performance
           </span>
@@ -246,7 +244,7 @@ export default function Footer() {
             href="https://developerchoudhary.vercel.app/"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            className="flex items-center gap-1 transition hover:text-cyan-700"
+            className="flex items-center gap-1 transition hover:text-amber-700"
           >
             <span>Made with</span>
 
