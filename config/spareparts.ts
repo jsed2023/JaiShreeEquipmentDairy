@@ -2,15 +2,15 @@ export const spareParts = [
   {
   id: 1,
 
-  slug: "ekomilk-peristaltic-pump-motor-assembly",
+  slug: "ekomilk--motor-assembly",
 
-  name: "Ekomilk Peristaltic Pump Motor Assembly",
+  name: "Ekomilk  Motor Assembly Complete",
 
   photo: "/products/ekomilk-peristaltic-pump-motor-assembly.jpg",
 
   sku: "EKO-PMA-001",
 
-  price: "₹1,500",
+  price: "₹5,500",
 
   category: "Milk Analyzer Spare Parts",
 
