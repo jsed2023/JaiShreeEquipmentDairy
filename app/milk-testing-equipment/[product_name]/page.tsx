@@ -185,8 +185,9 @@ export default function Product({
           >
 
             <ImageSlider
-              images={product.images}
-            />
+  images={product.images}
+  productName={product.name}
+/>
 
           </div>
 
