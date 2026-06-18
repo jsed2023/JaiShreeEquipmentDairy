@@ -21,6 +21,7 @@ export const blogs: Record<string, BlogType> = {
 
     image:
       "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779533383/Guideline_for_milk_testing_machines.webp",
+alt: "Milk testing machine used for fat, SNF, density and milk quality analysis in dairy farms and milk collection centers",
 
     category: "Milk Testing",
 
@@ -81,7 +82,7 @@ Milk analyzers improve efficiency and help dairy owners maintain better milk qua
 
     image:
       "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779533677/Benefits_of_Automatic_Milk_Analyzers.webp",
-
+alt: "Automatic milk analyzer machine for fast and accurate milk testing in dairy collection centers",
     category: "Milk Analyzer",
 
     date: "24 May 2026",
@@ -143,7 +144,7 @@ Milk analyzers help maintain high milk quality standards while simplifying dairy
 
     image:
       "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779533973/Popular_dairy_equipment.webp",
-
+alt: "Modern dairy farming equipment including milk analyzers, milking machines and dairy automation systems",
     category: "Dairy Equipment",
 
     date: "24 May 2026",
@@ -204,7 +205,7 @@ Advanced dairy machinery simplifies farm operations and supports business growth
 
     image:
       "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779553152/EKO_Milk_Analyzer_Works.webp",
-
+alt: "EKO Milk Analyzer machine testing milk quality with fat, SNF and density measurement",
     category: "Milk Analyzer",
 
     date: "24 May 2026",
@@ -336,7 +337,7 @@ EKO Milk Analyzer डेयरी व्यवसाय में पारद�
  
   image:
     "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779553152/EKO_Milk_Analyzer_Works.webp",
-
+alt: "Milk analyzer machine in India for dairy milk testing, fat analysis and milk collection center automation",
   category: "Milk Analyzer",
 
   date: "25 May 2026",
@@ -434,7 +435,7 @@ Contact us today for the latest milk analyzer machine prices and dairy equipment
 
   image:
     "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779660066/dairy-khata-dpu.webp",
-
+alt: "Dairy Khata DPU machine connected with milk analyzer and weighing scale for digital milk collection management",
   category: "DPU Machine",
 
   date: "25 May 2026",
