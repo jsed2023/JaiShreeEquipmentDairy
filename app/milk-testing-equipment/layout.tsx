@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Milk Testing Equipment",
 
   description:
-    "Explore advanced milk testing equipment including milk analyzers, lactometers, and dairy quality testing machines supplied by Jai Shree Equipment Dairy.",
+    "milk testing equipment including milk analyzers, and dairy quality testing machines supplied by Jai Shree Equipment Dairy.",
 
   keywords: metaKeywords[3].keywords,
 
