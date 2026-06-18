@@ -44,7 +44,7 @@ export default function SparePartsPage() {
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {spareparts.map((product) => (
+          {spareParts.map((product) =>  (
             <article
               key={product.id}
               className="bg-white border rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
