@@ -119,7 +119,7 @@ export default function SparePartsPage() {
                   </table>
 
                   <a
-                    href={`https://wa.me/917375023411?text=Hello,%20I%20am%20interested%20in%20${encodeURIComponent(
+                    href={`https://wa.me/917375082341?text=Hello,%20I%20am%20interested%20in%20${encodeURIComponent(
                       product.name
                     )}`}
                     target="_blank"
