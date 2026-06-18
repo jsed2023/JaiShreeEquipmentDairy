@@ -42,11 +42,12 @@ c.toUpperCase()
 ) || "";
 
 const altText =
-fileName.includes(productName)
-? fileName
-: "${productName} ${fileName}"
+fileName
+? "${productName} ${fileName}"
+.replace(/\s+/g, " ")
 .trim()
-.slice(0, 125);
+.slice(0, 125)
+: productName;
 
 const caption = productName;
 
@@ -85,13 +86,9 @@ my-5
       <p
         className="
           text-sm
-          font-semibold
-          bg-gradient-to-r
-          from-blue-600
-          via-cyan-500
-          to-blue-600
-          bg-clip-text
-          text-transparent
+          font-bold
+          text-black
+          tracking-wide
         "
       >
         {caption}
