@@ -42,58 +42,58 @@ c.toUpperCase()
 ) || "";
 
 const altText =
-fileName.includes(productName)
-? fileName
-: "${productName} ${fileName}"
-.trim()
-.slice(0, 125);
+  fileName.includes(productName)
+    ? fileName
+    : `${productName} ${fileName}`
+        .trim()
+        .slice(0, 125);
 
-const caption =
-productName;
+const caption = productName;
 
-return (
-<div className="relative w-full mx-auto mt-4">
-<div className="relative mx-12">
 <Image
-src={cld(currentImage.src)}
-isBlurred
-alt={altText}
-title={altText}
-width={400}
-height={400}
-fetchPriority={
-currentIndex === 0
-? "high"
-: undefined
-}
-loading={
-currentIndex === 0
-? "eager"
-: "lazy"
-}
-className="
-transition-all
-duration-500
-ease-in-out
-w-[25rem]
-h-[25rem]
-object-contain
-my-5
-"
+  src={cld(currentImage.src)}
+  isBlurred
+  alt={altText}
+  title={altText}
+  width={400}
+  height={400}
+  fetchPriority={
+    currentIndex === 0
+      ? "high"
+      : undefined
+  }
+  loading={
+    currentIndex === 0
+      ? "eager"
+      : "lazy"
+  }
+  className="
+    transition-all
+    duration-500
+    ease-in-out
+    w-[25rem]
+    h-[25rem]
+    object-contain
+    my-5
+  "
 />
 
-    <p
-      className="
-        text-center
-        text-sm
-        text-gray-500
-        dark:text-gray-400
-        mt-2
-      "
-    >
-      {caption}
-    </p>
-  </div>
+<div className="flex justify-center mt-2">
+  <p
+    className="
+      text-sm
+      font-semibold
+      bg-gradient-to-r
+      from-blue-600
+      via-cyan-500
+      to-blue-600
+      bg-clip-text
+      text-transparent
+    "
+  >
+    {caption}
+  </p>
+</div>
 
   {images.length > 1 && (
     <>
