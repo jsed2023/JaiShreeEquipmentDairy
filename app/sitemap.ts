@@ -1,7 +1,6 @@
 import { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
-
 import {
   MilkTestingEquipment,
   creamSeparatorMachine,
@@ -9,15 +8,12 @@ import {
   automaticMilkCollectionSystem,
   MilkAnalyzerMachines,
 } from "@/config/products";
-
 import { blogs } from "@/config/blogs";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
 export const revalidate = 86400;
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
-
-const STATIC_DATE = new Date("2026-06-19");
 
 type ChangeFrequency =
   | "always"
@@ -35,46 +31,37 @@ type BlogType = {
 
 const getLastModified = (
   date?: string | Date
-): Date => {
-  if (!date) {
-    return STATIC_DATE;
-  }
+): Date | undefined => {
+  if (!date) return undefined;
 
   const parsed = new Date(date);
 
   if (isNaN(parsed.getTime())) {
-    return STATIC_DATE;
+    return undefined;
   }
 
-  return parsed > new Date()
-    ? new Date()
-    : parsed;
+  return parsed;
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [];
-
   const addedUrls = new Set<string>();
 
   const addUrl = (
     path: string,
-    priority: number = 0.7,
+    priority = 0.7,
     changeFrequency: ChangeFrequency = "weekly",
-    lastModified: Date = STATIC_DATE
+    lastModified?: Date
   ) => {
-    const url = encodeURI(
-      `${BASE_URL}${path}`
-    );
+    const url = encodeURI(`${BASE_URL}${path}`);
 
-    if (addedUrls.has(url)) {
-      return;
-    }
+    if (addedUrls.has(url)) return;
 
     addedUrls.add(url);
 
     sitemap.push({
       url,
-      lastModified,
+      ...(lastModified ? { lastModified } : {}),
       changeFrequency,
       priority,
     });
@@ -99,77 +86,67 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/milk-testing-machine-spare-parts", 0.8, "weekly"],
     ["/automatic-milk-collection-system", 0.8, "weekly"],
     ["/milk-rate-chart", 0.7, "daily"],
-  ].forEach(
-    ([path, priority, changeFrequency]) => {
-      addUrl(
-        path as string,
-        priority as number,
-        changeFrequency as ChangeFrequency,
-        STATIC_DATE
-      );
-    }
-  );
+  ].forEach(([path, priority, freq]) => {
+    addUrl(
+      path as string,
+      priority as number,
+      freq as ChangeFrequency
+    );
+  });
 
   // Automatic Milk Collection System
 
-  automaticMilkCollectionSystem?.forEach(
-    (product) => {
-      if (!product?.url) return;
-
-      addUrl(
-        `/automatic-milk-collection-system/${product.url}`,
-        0.7,
-        "weekly",
-        getLastModified(product.updatedAt)
-      );
-    }
-  );
-
-  // Dairy Equipment
-
-  [
-    ...creamSeparatorMachine,
-    ...milkingMachine,
-  ].forEach((product) => {
+  automaticMilkCollectionSystem?.forEach((product) => {
     if (!product?.url) return;
 
     addUrl(
-      `/dairy-equipment/${product.url}`,
+      `/automatic-milk-collection-system/${product.url}`,
       0.7,
       "weekly",
       getLastModified(product.updatedAt)
     );
   });
 
-  // Milk Testing Equipment
+  // Dairy Equipment
 
-  MilkTestingEquipment?.forEach(
+  [...creamSeparatorMachine, ...milkingMachine].forEach(
     (product) => {
       if (!product?.url) return;
 
       addUrl(
-        `/milk-testing-equipment/${product.url}`,
+        `/dairy-equipment/${product.url}`,
         0.7,
         "weekly",
         getLastModified(product.updatedAt)
       );
     }
   );
+
+  // Milk Testing Equipment
+
+  MilkTestingEquipment?.forEach((product) => {
+    if (!product?.url) return;
+
+    addUrl(
+      `/milk-testing-equipment/${product.url}`,
+      0.7,
+      "weekly",
+      getLastModified(product.updatedAt)
+    );
+  });
 
   // Milk Analyzer Machines
 
-  MilkAnalyzerMachines?.forEach(
-    (product) => {
-      if (!product?.url) return;
+  MilkAnalyzerMachines?.forEach((product) => {
+    if (!product?.url) return;
 
-      addUrl(
-        `/milk-analyzer-machines/${product.url}`,
-        0.7,
-        "weekly",
-        getLastModified(product.updatedAt)
-      );
-    }
-  );
+    addUrl(
+      `/milk-analyzer-machines/${product.url}`,
+      0.7,
+      "weekly",
+      getLastModified(product.updatedAt)
+    );
+  });
 
   // Blogs
 
@@ -188,18 +165,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Rajasthan Location Pages
 
-  rajasthanLocations?.forEach(
-    (location) => {
-      if (!location?.slug) return;
+  rajasthanLocations?.forEach((location) => {
+    if (!location?.slug) return;
 
-      addUrl(
-        `/milk-analyzer-${location.slug}`,
-        0.5,
-        "monthly",
-        STATIC_DATE
-      );
-    }
-  );
+    addUrl(
+      `/milk-analyzer-${location.slug}`,
+      0.5,
+      "monthly"
+    );
+  });
 
   return sitemap;
 }
