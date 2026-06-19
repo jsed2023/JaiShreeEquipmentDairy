@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Milk Testing Machine Spare Parts",
 
   description:
-    "Buy genuine milk testing machine spare parts including sample pumps, sensors, PCB boards, LCD displays, thermal printers, solenoid valves, SMPS power supplies, and accessories from Jai Shree Equipment Dairy.",
+    "Buy genuine milk testing machine spare parts including PCB, sensors, displays and accessories for Ekomilk, Advance and Lactoscan analyzers. Available across Rajasthan and India.",
 
   keywords: metaKeywords[15].keywords,
 
