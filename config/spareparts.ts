@@ -175,7 +175,7 @@ export const spareParts = [
       "milk analyzer maintenance",
       "deep cleaning solution"
     ],
-    photo: "/https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848852/Ekomilk_Weekly_Cleaning_Solution_200_ml.webp",
+    photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848852/Ekomilk_Weekly_Cleaning_Solution_200_ml.webp",
     sku: "EKO-WCS-200",
     price: "₹350",
     category: "Cleaning Solution",
