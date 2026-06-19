@@ -64,7 +64,7 @@ export const siteConfig = {
       items: [],
     },
 {
-      label: "Milk Testing Machine Spare Parts",
+      label: "Spare Parts",
       href: "/milk-testing-machine-spare-parts",
       items: [],
     },
