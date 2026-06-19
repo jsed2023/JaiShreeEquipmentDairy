@@ -66,7 +66,7 @@ export const spareParts = [
       "milk analyzer pcb board",
       "control board"
     ],
-    photo: "/products/ekomilk-ultra-v17-pcb-board.jpg",
+    photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848855/Ekomilk_Ultra_V17_PCB_Control_Board.webp",
     sku: "EKO-PCB-V17-003",
     price: "₹12,000",
     category: "Milk Analyzer Spare Parts",
