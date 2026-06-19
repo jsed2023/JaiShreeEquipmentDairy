@@ -150,7 +150,7 @@ export const spareParts = [
       "daily cleaning solution",
       "milk analyzer cleaner"
     ],
-    photo: "/products/ekomilk-daily-cleaning-solution-200ml.jpg",
+    photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848852/Ekomilk_Daily_Cleaning_Solution_200_ml.webp",
     sku: "EKO-DCS-200",
     price: "₹300",
     category: "Cleaning Solution",
@@ -175,7 +175,7 @@ export const spareParts = [
       "milk analyzer maintenance",
       "deep cleaning solution"
     ],
-    photo: "/products/ekomilk-weekly-cleaning-solution-200ml.jpg",
+    photo: "/https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848852/Ekomilk_Weekly_Cleaning_Solution_200_ml.webp",
     sku: "EKO-WCS-200",
     price: "₹350",
     category: "Cleaning Solution",
@@ -208,7 +208,7 @@ export const spareParts = [
     "milk analyzer control board"
   ],
 
-  photo: "/products/lactoscan-milk-analyzer-pcb-board.jpg",
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848851/Lactoscan_Milk_Analyzer_PCB_Board.webp",
 
   sku: "LAC-PCB-008",
 
@@ -240,7 +240,7 @@ export const spareParts = [
   id: 9,
   slug: "ekomilk-lcd-display-module",
   name: "Ekomilk LCD Display Module",
-  photo: "/products/ekomilk-lcd-display-module.jpg",
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848853/Ekomilk_LCD_Display.webp",
   sku: "EKO-LCD-008",
   price: "₹1,500",
   category: "Milk Analyzer Spare Parts",
@@ -266,7 +266,7 @@ export const spareParts = [
   id: 10,
   slug: "ekomilk-keypad",
   name: "Ekomilk Keypad",
-  photo: "/products/ekomilk-keypad.jpg",
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Milk_Analyzer_Keypad.webp",
   sku: "EKO-KPD-009",
   price: "₹1,000",
   category: "Milk Analyzer Spare Parts",
@@ -290,7 +290,7 @@ export const spareParts = [
   id: 11,
   slug: "ekomilk-motor-pcb",
   name: "Ekomilk Motor PCB",
-  photo: "/products/ekomilk-motor-pcb.jpg",
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848855/Ekomilk_Motor_PCB.webp",
   sku: "EKO-MPCB-010",
   price: "₹3,000",
   category: "Milk Analyzer Spare Parts",
@@ -315,7 +315,7 @@ export const spareParts = [
   id: 12,
   slug: "lactoscan-motor",
   name: "Lactoscan Motor",
-  photo: "/products/lactoscan-motor.jpg",
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Lactoscan_Motor.webp",
   sku: "LAC-MTR-013",
   price: "₹4,500",
   category: "Milk Analyzer Spare Parts",
