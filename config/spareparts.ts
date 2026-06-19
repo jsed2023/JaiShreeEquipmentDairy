@@ -48,7 +48,7 @@ export const spareParts = [
       "High precision analyzer sensor for Ekomilk Milk Analyzer machines.",
     specifications: {
       ProductType: "Milk Analyzer Sensor",
-      Compatibility: "Ekomilk Ultra / DPS / Pro",
+      Compatibility: "Ekomilk Ultra / Pro",
       Technology: "Ultrasonic",
       Accuracy: "High Precision",
       Weight: "250 g",
