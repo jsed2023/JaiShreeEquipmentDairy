@@ -38,7 +38,7 @@ export const spareParts = [
       "ekomilk spare parts",
       "ultrasonic sensor"
     ],
-    photo: "/products/ekomilk-analyzer-sensor.jpg",
+    photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Ekomilk_Analyzer_Sensor.webp",
     sku: "EKO-SEN-002",
     price: "₹3,300",
     category: "Milk Analyzer Spare Parts",
