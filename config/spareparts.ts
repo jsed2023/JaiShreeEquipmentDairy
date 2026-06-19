@@ -94,7 +94,7 @@ export const spareParts = [
       "receipt printer",
       "amcu printer"
     ],
-    photo: "/products/thermal-printer.jpg",
+    photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Thermal_Printer.webp",
     sku: "TP-004",
     price: "₹3,800",
     category: "Printer",
@@ -123,7 +123,7 @@ export const spareParts = [
     "lactoscan beaker",
     "milk analyzer spare parts"
   ],
-  photo: "/products/syringes-beakers-plungers.jpg",
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848850/Ekomilk_Syringes_Beakers_Plungers.webp",
   sku: "MAC-005",
   price: "₹140 / Piece",
   category: "Milk Analyzer Consumables",
