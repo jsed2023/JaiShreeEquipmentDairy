@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { cld } from "@/utils/cloudinary";
 
 export function AuthorizedDealerSection() {
