@@ -69,19 +69,7 @@ export function AuthorizedDealerSection() {
                 📞 7375082341
               </a>
 
-              {/* Certificate Button */}
-              <div className="pt-2">
-                <Button size="lg" variant="outline" asChild>
-                  <a
-                    href="https://res.cloudinary.com/dddhtbuzs/image/upload/v1772135052/krei-authorized-dealer_gd8hvd.webp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Certificate
-                  </a>
-                </Button>
-              </div>
-
+            
             </div>
           </CardContent>
         </Card>

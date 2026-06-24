@@ -1,75 +1,78 @@
 export type Category = {
-  slug: string;
-  name: string;
-  priority?: number;
-  url: string;
-  gradient?: string;
-  seo: {
-    title: string;
-    description: string;
-    keywords: string;
-  };
+slug: string;
+name: string;
+priority?: number;
+url: string;
+gradient?: string;
+seo: {
+title: string;
+description: string;
+keywords: string;
+};
 };
 
 export const CATEGORIES: Category[] = [
-  {
-    slug: "dairy-equipment",
-    name: "Dairy Equipment",
-    priority: 0.9,
-    url: "https://jaishreeequipmentdairy.in/dairy-equipment",
-    gradient: "linear-gradient(to right,#22c55e,#06b6d4,#3b82f6)",
-    seo: {
-      title:
-        "Dairy Equipment Supplier in India | Buy Milking Machines & Dairy Machinery",
-      description:
-        "Leading supplier of dairy equipment including milking machines, cream separators, milk cooling tanks, and dairy farm machinery in Rajasthan.",
-      keywords:
-        "dairy equipment, dairy equipment supplier india, dairy equipment rajasthan, dairy machinery india, dairy farm equipment, dairy machinery supplier, dairy equipment near me, milking machine, milking machine price india, automatic milking machine, cow milking machine, buffalo milking machine, portable milking machine, cream separator machine, paras milk cream separator machine, milk cream separator machine, dairy cream separator price,",
-    },
-  },
-  {
-    slug: "milk-testing-equipment",
-    name: "Milk Testing Equipment",
-    priority: 0.9,
-    url: "https://jaishreeequipmentdairy.in/milk-testing-equipment",
-    gradient: "linear-gradient(to right,#f97316,#ec4899,#8b5cf6)",
-    seo: {
-      title:
-        "Milk Testing Equipment & Analyzer Machine Price in India | Accurate & Fast",
-      description:
-        "High quality milk testing equipment including milk analyzers, fat testing machines, and ultrasonic milk stirrers for accurate dairy quality testing.",
-      keywords:
-        "milk testing equipment, milk testing equipment india, milk analyzer machine, milk analyzer machine price india, digital milk analyzer, automatic milk analyzer, milk fat testing machine, milk fat analyzer, milk quality testing equipment, dairy testing equipment, milk testing lab equipment, milk analyzer supplier india, milk analyzer supplier rajasthan, milk purity testing machine, milk SNF testing machine, milk composition analyzer, milk testing machine price, portable milk Analyzer, dairy milk testing solutions, milk analyzer for dairy farm, bulk milk testing machine, ultrasonic milk stirrer, milk stirrer machine, automatic milk stirrer, ultrasonic stirrer for milk analyzer, milk sample mixing machine, buy milk analyzer online india",
-    },
-  },
-  {
-  slug: "milk-analyzer-machines",
-  name: "Milk Analyzer Machines",
-  priority: 0.9,
-  url: "https://jaishreeequipmentdairy.in/milk-analyzer-machines",
-  gradient: "linear-gradient(to right,#0ea5e9,#6366f1,#8b5cf6)",
-  seo: {
-    title:
-      "Milk Analyzer Machines & Milk Testing Solutions in India",
-    description:
-      "Buy advance milk analyzer machines, milk testing machines, fat testing equipment  for accurate dairy quality analysis. Sales, service, repair, and genuine spare parts available across India.",
-    keywords:
-      "milk analyzer machines, milk analyzer machine, milk analyzer machine india, milk analyzer machine price india, digital milk analyzer, automatic milk analyzer, advance milk analyzer, ekomilk ultra analyzer, lactoscan milk analyzer, milk testing machine, milk fat testing machine, milk fat analyzer, milk quality testing machine, dairy testing equipment, dairy milk analyzer, milk analyzer supplier india, milk analyzer supplier rajasthan, milk analyzer sri ganganagar, milk analyzer hanumangarh, milk analyzer bikaner, milk analyzer anupgarh, milk purity testing machine, milk SNF testing machine, milk composition analyzer, milk testing machine price, portable milk analyzer, dairy milk testing solutions, milk analyzer for dairy farm, bulk milk testing machine, ultrasonic milk stirrer, milk stirrer machine, automatic milk stirrer, ultrasonic stirrer for milk analyzer, milk sample mixing machine, milk analyzer repair service, milk analyzer spare parts, milk analyzer calibration service, buy milk analyzer online india",
-  },
+{
+slug: "dairy-equipment",
+name: "Dairy Equipment",
+priority: 0.9,
+url: "https://jaishreeequipmentdairy.in/dairy-equipment",
+gradient: "linear-gradient(to right,#22c55e,#06b6d4,#3b82f6)",
+seo: {
+title:
+"Dairy Equipment Supplier in India | Milking Machines & Dairy Machinery",
+description:
+"Buy high-quality dairy equipment including milking machines, Paras cream separators, and dairy farm machinery. Trusted supplier serving Rajasthan and across India.",
+keywords:
+"dairy equipment, dairy equipment supplier india, dairy machinery india, dairy farm equipment, dairy machinery supplier, milking machine, milking machine price india, automatic milking machine, cow milking machine, buffalo milking machine, portable milking machine, paras cream separator machine, paras cream separator, paras milk cream separator machine, paras dairy equipment, cream separator machine, milk cream separator machine, dairy cream separator, electric cream separator machine, hand operated cream separator machine, cream separator price india, milk separator machine, cream separator supplier india, cream separator machine rajasthan, cream separator machine sri ganganagar, cream separator machine hanumangarh, cream separator machine bikaner, dairy farming equipment"
 },
-  {
-    slug: "automatic-milk-collection-system",
-    name: "Automatic Milk Collection System",
-    priority: 0.9,
-    url: "https://jaishreeequipmentdairy.in/automatic-milk-collection-system",
-    gradient: "linear-gradient(to right,#38bdf8,#8b5cf6,#6366f1)",
-    seo: {
-      title:
-        "Automatic Milk Collection System (AMCS) in India | Smart Dairy Solutions",
-      description:
-        "Advanced AMCS with Milk Analyzer, Weighing Machine, Ultrasonic Milk Stirrer, and Printer for accurate testing, billing, and transparent dairy management.",
-      keywords:
-        "automatic milk collection system, AMCS system india, milk collection system india, milk collection machine, dairy milk collection system, milk procurement system, milk collection software, dairy management system india, AMCS dairy software, automatic milk collection unit, bulk milk collection system, milk collection center equipment, dairy automation system, milk collection with billing system, milk data management system, village milk collection system, milk collection system price india, dairy ERP software, milk analyzer machine, milk analyzer for AMCS, digital milk analyzer, milk testing machine, milk weighing machine, digital weighing machine for milk, milk weight machine, electronic weighing scale dairy, load cell milk collection system, milk weighing and billing machine, ultrasonic milk stirrer, milk stirrer machine, automatic milk stirrer, ultrasonic stirrer for milk analyzer, milk sample mixing machine, thermal printer for milk collection, milk receipt printer, billing printer for dairy, AMCS supplier rajasthan, smart dairy solutions india, digital milk collection system, buy AMCS system india",
-    },
-  },
+},
+
+{
+slug: "milk-testing-equipment",
+name: "Milk Testing Equipment",
+priority: 0.9,
+url: "https://jaishreeequipmentdairy.in/milk-testing-equipment",
+gradient: "linear-gradient(to right,#f97316,#ec4899,#8b5cf6)",
+seo: {
+title:
+"Milk Testing Equipment Supplier in India | Milk Analyzer & Fat Testing Machines",
+description:
+"Accurate milk testing equipment including Advance Milk Analyzer, Ekomilk, Lactoscan analyzers, fat testing machines, and dairy laboratory instruments for dairy farms and milk collection centers.",
+keywords:
+"milk testing equipment, milk analyzer machine, milk analyzer machine price india, digital milk analyzer, automatic milk analyzer, advance milk analyzer, advance milk analyzer machine, advance milk analyzer price, advance milk analyzer supplier india, milk fat testing machine, milk fat analyzer, milk quality testing equipment, dairy testing equipment, milk analyzer supplier india, milk purity testing machine, milk SNF testing machine, milk composition analyzer, portable milk analyzer, dairy milk testing solutions, milk analyzer rajasthan, ekomilk analyzer, lactoscan analyzer, milk testing machine"
+},
+},
+
+{
+slug: "milk-analyzer-machines",
+name: "Milk Analyzer Machines",
+priority: 1.0,
+url: "https://jaishreeequipmentdairy.in/milk-analyzer-machines",
+gradient: "linear-gradient(to right,#0ea5e9,#6366f1,#8b5cf6)",
+seo: {
+title:
+"Advance Milk Analyzer, Ekomilk & Lactoscan Machines Supplier in India",
+description:
+"Buy Advance Milk Analyzer, Ekomilk, and Lactoscan milk analyzer machines for accurate milk fat, SNF, density, and quality testing. Sales, service, calibration, repair, and spare parts available across India.",
+keywords:
+"milk analyzer machine, milk analyzer machines, advance milk analyzer, advance milk analyzer machine, advance milk analyzer price, advance milk analyzer supplier india, digital milk analyzer, automatic milk analyzer, milk testing machine, milk fat analyzer, milk quality testing machine, dairy milk analyzer, milk analyzer supplier india, milk analyzer price india, milk analyzer rajasthan, ekomilk analyzer, ekomilk ultra pro, ekomilk ultra analyzer, lactoscan analyzer, lactoscan milk analyzer, portable milk analyzer, dairy testing equipment, milk analyzer calibration, milk analyzer repair service, milk analyzer spare parts, milk analyzer dealer india, milk analyzer sri ganganagar, milk analyzer hanumangarh, milk analyzer bikaner"
+},
+},
+
+{
+slug: "automatic-milk-collection-system",
+name: "Automatic Milk Collection System",
+priority: 0.9,
+url: "https://jaishreeequipmentdairy.in/automatic-milk-collection-system",
+gradient: "linear-gradient(to right,#38bdf8,#8b5cf6,#6366f1)",
+seo: {
+title:
+"Automatic Milk Collection System (AMCS) Supplier in India",
+description:
+"Advanced AMCS solutions with milk analyzer, weighing scale, milk stirrer, billing printer, and software for efficient milk procurement and dairy management.",
+keywords:
+"automatic milk collection system, AMCS system india, milk collection system india, dairy milk collection system, milk procurement system, milk collection software, dairy management system india, automatic milk collection unit, bulk milk collection system, milk collection center equipment, dairy automation system, milk collection billing software, milk data management system, village milk collection system, milk collection system price india, milk analyzer for AMCS, advance milk analyzer, digital milk analyzer, milk weighing machine, electronic weighing scale dairy, ultrasonic milk stirrer, milk receipt printer, AMCS supplier rajasthan, smart dairy solutions india, digital milk collection system"
+},
+},
 ];
