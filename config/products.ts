@@ -5005,5 +5005,66 @@ desc:
   keywords:
     "Advance Bond Machine, milk analyzer machine, milk analyzer for dairy farms, milk testing machine, milk fat testing machine, SNF testing machine, CLR testing machine, dairy milk analyzer, milk collection machine, DPU milk machine, milk ultrasonic stirrer, weighing scale machine, thermal printer milk machine, dairy equipment, automatic milk analyzer, milk collection system, dairy farm equipment, milk quality testing machine, milk analyzer Rajasthan, milk analyzer Ganganagar, milk analyzer Bikaner, milk analyzer Hanumangarh, milk analyzer Anupgarh, dairy automation machine, milk collection software machine",
 },
+{
+  id: 15,
+  name: "Advance Milk Bond Machine",
+  url: "advance-milk-bond-machine",
+  category: "milk-analyzer-machines",
+
+  smallDesc:
+    "Advance Milk Bond Machine with Milk Analyzer, DPU, Ultrasonic Milk Stirrer, Thermal Printer, Rechargeable Battery & Weighing Scale Support for Dairy Farms and Milk Collection Centers.",
+
+  images: [
+    {
+      src: cld(
+        "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png"
+      ),
+      alt: "Advance Milk Bond Machine",
+    },
+  ],
+
+  price: "₹51,000",
+
+  features: [
+    { id: "15A", key: "Brand", value: "Advance" },
+    { id: "15B", key: "Model Name", value: "Advance Milk Bond Machine" },
+    { id: "15C", key: "Category", value: "Milk Analyzer Machine" },
+    { id: "15D", key: "Technology", value: "Ultrasonic Milk Analysis" },
+    { id: "15E", key: "Milk Fat Testing", value: "Available" },
+    { id: "15F", key: "SNF Testing", value: "Available" },
+    { id: "15G", key: "CLR Testing", value: "Available" },
+    { id: "15H", key: "Density Testing", value: "Available" },
+    { id: "15I", key: "Protein Testing", value: "Available" },
+    { id: "15J", key: "Added Water Detection", value: "Available" },
+    { id: "15K", key: "Lactose Calculation", value: "Available" },
+    { id: "15L", key: "Milk Sample Volume", value: "20 ml" },
+    { id: "15M", key: "Testing Time", value: "Approx. 40 Seconds" },
+    { id: "15N", key: "Accuracy", value: "High Precision" },
+    { id: "15O", key: "Data Processing Unit", value: "Inbuilt DPU" },
+    { id: "15P", key: "Ultrasonic Milk Stirrer", value: "Inbuilt" },
+    { id: "15Q", key: "Thermal Printer", value: "Inbuilt High-Speed Printer" },
+    { id: "15R", key: "Printer Paper", value: "2 Inch Thermal Roll" },
+    { id: "15S", key: "Battery", value: "Rechargeable Inbuilt Battery" },
+    { id: "15T", key: "Display", value: "Digital LCD Display" },
+    { id: "15U", key: "Keyboard", value: "Soft Touch Keypad" },
+    { id: "15V", key: "Connectivity", value: "USB / Serial (RS232)" },
+    { id: "15W", key: "Weighing Scale", value: "Compatible" },
+    { id: "15X", key: "Power Supply", value: "220V AC / 12V DC" },
+    { id: "15Y", key: "Power Consumption", value: "Low Power" },
+    { id: "15Z", key: "Machine Body", value: "Heavy Duty Metal Body" },
+    { id: "15AA", key: "Application", value: "Milk Collection Centers, Dairy Farms & Dairy Societies" },
+    { id: "15AB", key: "Milk Type", value: "Cow Milk, Buffalo Milk & Mixed Milk" },
+    { id: "15AC", key: "Country of Origin", value: "Made in India" },
+    { id: "15AD", key: "Approx. Weight", value: "6 Kg" },
+    { id: "15AE", key: "Warranty", value: "1 Year Manufacturer Warranty*" },
+    { id: "15AF", key: "Price", value: "₹51,000" }
+  ],
+
+  desc:
+    "Advance Milk Bond Machine is a high-performance milk analyzer and milk collection machine designed for dairy farms, milk collection centers, dairy societies, and cooperatives. It provides accurate Fat, SNF, CLR, Density, Protein, Lactose and Added Water testing using advanced ultrasonic technology. The machine features an inbuilt Data Processing Unit (DPU), ultrasonic milk stirrer, high-speed thermal printer, rechargeable battery, weighing scale compatibility, USB connectivity, and a user-friendly LCD display. Built with a durable metal body, it ensures fast, reliable, and efficient milk testing while improving dairy automation and milk collection operations.",
+
+  keywords:
+    "Advance Milk Bond Machine, Advance Milk Analyzer, Milk Bond Machine, Milk Analyzer Machine, Milk Testing Machine, Milk Collection Machine, Dairy Milk Analyzer, Automatic Milk Analyzer, Milk Fat Testing Machine, SNF Testing Machine, CLR Testing Machine, Density Testing Machine, Protein Testing Machine, Added Water Testing Machine, Ultrasonic Milk Analyzer, Milk Ultrasonic Stirrer, DPU Machine, Dairy Equipment, Thermal Printer Milk Analyzer, Weighing Scale Milk Analyzer, Milk Collection Center Machine, Dairy Automation Machine, Milk Quality Testing Machine, Dairy Farm Equipment, Milk Analyzer Rajasthan, Milk Analyzer Ganganagar, Milk Analyzer Hanumangarh, Milk Analyzer Bikaner, Milk Analyzer India"
+},
 ];
 
