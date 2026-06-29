@@ -92,37 +92,93 @@ export default function AutomaticMilkCollectionSystemPage() {
       {/* SHOWCASE */}
       <AMCSShowcase />
 
-      {/* PRODUCTS */}
-      <div className="flex flex-wrap justify-center gap-8">
-        {automaticMilkCollectionSystem.map((product) => {
-          return (
-            <Link
-              href={`/automatic-milk-collection-system/${product.url}`}
-              key={product.id}
-              className="flex flex-col w-fit gap-y-6 dark:bg-[#27272a] bg-[rgb(244,244,245)] sm:p-4 py-4 rounded-md hover:shadow-xl transition"
-            >
-              <figure
-                id={product.name}
-                className="flex flex-col justify-center items-center dark:bg-[#1a1a1c] bg-[rgb(214,214,217)] p-6 pb-4 rounded-lg"
-              >
-                <Image
-                  src={cld(product.images[0].src)}
-                  isBlurred
-                  alt={product.name}
-                  width={400}
-                  height={240}
-                  className="object-contain h-[15rem] w-auto"
-                  loading="lazy"
-                />
-                <figcaption className="text-center mt-2 font-semibold">
-                  {product.name}
-                </figcaption>
-              </figure>
-            </Link>
-          );
-        })}
-      </div>
+    {/* PRODUCTS */}
+  <section>
+          <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90
+          border border-stone-200 dark:border-zinc-700 rounded-lg p-4 max-h-[400px] space-y-3
+       bg-white dark:bg-zinc-900/80 backdrop-blur shadow-sm dark:shadow-lg">
+          <h1 className="text-center font-bold underline sm:text-2xl text-lg
+             bg-clip-text text-transparent animate-title-gradient">      
+            Our AMCS Products
+          </h1></div>
+        </section>
+<section className="flex flex-col gap-y-4 dark:bg-[#27272a] bg-[rgb(244,244,245)] rounded-md sm:px-8 px-4 py-8">
+  <p className="dark:text-gray-400 text-stone-700 flex flex-col gap-4 leading-8">
+    <span>
+      <b>Automatic Milk Collection System (AMCS)</b> by <b>Jai Shree Equipment Dairy</b>
+      is an advanced solution designed to simplify and automate the milk
+      collection process for dairy farms, milk collection centers, and dairy
+      cooperative societies. It ensures fast, accurate, and transparent milk
+      procurement while minimizing manual errors.
+    </span>
 
+    <span>
+      Our AMCS integrates digital weighing scales, milk analyzers, billing
+      software, and thermal printers into a single system. It instantly
+      measures milk quantity, fat percentage, SNF, density (CLR), and generates
+      detailed payment receipts, making milk collection faster, more reliable,
+      and completely computerized.
+    </span>
+
+    <span>
+      Jai Shree Equipment Dairy provides complete installation, training,
+      maintenance, spare parts, and technical support for Automatic Milk
+      Collection Systems across <b>Sri Ganganagar, Hanumangarh, Bikaner,
+      Anupgarh, Suratgarh, Raisinghnagar, Padampur</b>, and nearby regions.
+      Our AMCS solutions help dairy businesses improve efficiency, maintain
+      transparency, and deliver accurate records for every milk collection.
+    </span>
+  </p>
+</section>
+
+<section className="py-6">
+ 
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    {automaticMilkCollectionSystem.map((product) => (
+      <Link
+        href={`/automatic-milk-collection-system/${product.url}`}
+        key={product.id}
+        className="group overflow-hidden rounded-2xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+      >
+        {/* Image */}
+        <div className="bg-gray-100 dark:bg-zinc-800 p-6 flex justify-center items-center h-72 overflow-hidden">
+          <Image
+            src={cld(product.images[0].src)}
+            alt={product.name}
+            width={260}
+            height={260}
+            loading="lazy"
+            className="object-contain transition duration-300 group-hover:scale-110"
+          />
+        </div>
+
+        {/* Content */}
+         <div className="p-5">
+          <h3 className="text-xl font-bold text-center text-zinc-900 dark:text-white line-clamp-2
+        bg-clip-text text-transparent animate-title-gradient">
+            {product.name}
+          </h3>
+
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 line-clamp-3">
+            High-quality Automatic Milk Collection System designed for
+            accurate milk testing, weighing, billing and reliable dairy
+            operations.
+          </p>
+
+          <div className="mt-6 flex gap-3">
+            <span className="flex-1 bg-sky-600 text-white text-center py-2 rounded-xl font-semibold group-hover:bg-sky-700 transition">
+              View Details
+            </span>
+
+            <span className="flex-1 border border-sky-600 text-sky-600 text-center py-2 rounded-xl font-semibold hover:bg-sky-600 hover:text-white transition">
+              Enquire
+            </span>
+          </div>
+        </div>
+      </Link>
+    ))}
+  </div>
+</section>
     </div>
   );
 }
