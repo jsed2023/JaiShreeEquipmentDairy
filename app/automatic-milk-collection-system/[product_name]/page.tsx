@@ -104,34 +104,91 @@ export default function Product({
           </p>
         </div>
 
-        {/* ===== Image + Features ===== */}
-        <div className="flex max-md:flex-wrap md:pl-10 max-md:justify-center">
-          <div
-            className={`md:mr-20 ${
-              product.images.length > 1 && "max-md:mb-10"
-            }`}
-          >
-            <ImageSlider
-  images={product.images}
-  productName={product.name}
-/>
-          </div>
-
-          <div className="flex flex-col max-sm:px-2 gap-y-2 w-full justify-center">
-            <h2 className="font-bold underline tracking-widest">Features:</h2>
-
-            {product.features.map((feature) => (
-              <div key={feature.id} className="flex">
-                <p className="max-sm:text-sm w-[20rem] dark:text-gray-400 text-stone-700">
-                  {feature.key}
+                {/* ========================= */}
+                {/* IMAGE + FEATURES */}
+                {/* ========================= */}
+        
+                
+                      <div className="grid lg:grid-cols-12 gap-8">
+                
+                          <div className="lg:col-span-4">
+                
+                <div className="sticky top-24">
+                
+                <ImageSlider
+                images={product.images}
+                productName={product.name}
+                />
+                
+                </div>
+                
+                </div>
+                          {/* FEATURES */}
+                
+                          <div className="lg:col-span-5">
+                
+                <h1 className="text-3xl font-bold">
+                
+                {product.name}
+                
+                </h1>
+                
+                <p className="text-blue-600 text-2xl font-bold mt-2">
+                
+                ₹ {product.price || "Get Best Price"}
+                
                 </p>
-                <p className="max-sm:text-sm w-full dark:text-gray-400 text-stone-700">
-                  {feature.value}
+                
+                <p className="mt-4 text-gray-600">
+                
+                {product.smallDesc}
+                
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
+                            <h2
+                              className="
+                                font-bold underline
+                                tracking-widest
+                              "
+                            >
+                              Features:
+                            </h2>
+                
+                            <ul className="mt-8 space-y-3">
+                
+                {product.features.map(feature=>(
+                
+                <li
+                key={feature.id}
+                className="flex gap-3"
+                >
+                
+                <span className="text-green-600">
+                
+                ✔
+                
+                </span>
+                
+                <div>
+                
+                <b>{feature.key}</b>
+                
+                {" : "}
+                
+                {feature.value}
+                
+                </div>
+                
+                </li>
+                
+                ))}
+                
+                </ul>              
+                
+                  </div>
+        
+                </div>
+        
+        
            <p className="inline-flex items-center justify-center gap-3 px-5 py-2.5 
   rounded-full text-base font-semibold
   bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
@@ -148,6 +205,59 @@ export default function Product({
     कीमत तय है। मोलभाव नहीं होगा।
   </span>
 </p>
+<h2 className="text-2xl font-bold mt-10 mb-4">
+
+Specifications
+
+</h2>
+
+<table className="w-full border">
+
+<thead>
+
+<tr>
+
+<th className="border p-3">
+
+Feature
+
+</th>
+
+<th className="border p-3">
+
+Value
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{product.features.map(item=>(
+
+<tr key={item.id}>
+
+<td className="border p-3">
+
+{item.key}
+
+</td>
+
+<td className="border p-3">
+
+{item.value}
+
+</td>
+
+</tr>
+
+))}
+
+</tbody>
+
+</table>
 
         {/* ===== Description ===== */}
         <p className="dark:text-gray-400 text-stone-700 max-sm:px-2">

@@ -3,19 +3,14 @@
 import ImageSlider from "@/components/imageSlider";
 import { MilkAnalyzerMachines } from "@/config/products";
 import { ModalData } from "@/types";
-
 import { Button } from "@nextui-org/button";
 import BuyNowModel from "@/components/buyNowModal";
-
 import { useDisclosure } from "@nextui-org/react";
 import { useState } from "react";
-
 import { CgDetailsMore } from "react-icons/cg";
 import { MdOutlineAutoAwesome } from "react-icons/md";
 import { RiMoneyRupeeCircleLine } from "react-icons/ri";
-
 import { notFound } from "next/navigation";
-
 import Link from "next/link";
 
 export default function Product({
@@ -169,40 +164,41 @@ export default function Product({
         {/* IMAGE + FEATURES */}
         {/* ========================= */}
 
-        <div
-          className="
-            flex max-md:flex-wrap
-            md:pl-10
-            max-md:justify-center
-          "
-        >
+      <div className="grid lg:grid-cols-12 gap-8">
 
-          <div
-            className={`md:mr-20 ${
-              product.images.length > 1 &&
-              "max-md:mb-10"
-            }`}
-          >
+          <div className="lg:col-span-4">
 
-            <ImageSlider
-  images={product.images}
-  productName={product.name}
+<div className="sticky top-24">
+
+<ImageSlider
+images={product.images}
+productName={product.name}
 />
 
-          </div>
+</div>
 
+</div>
           {/* FEATURES */}
 
-          <div
-            className="
-              flex flex-col
-              max-sm:px-2
-              gap-y-2
-              w-full
-              justify-center
-            "
-          >
+          <div className="lg:col-span-5">
 
+<h1 className="text-3xl font-bold">
+
+{product.name}
+
+</h1>
+
+<p className="text-blue-600 text-2xl font-bold mt-2">
+
+₹ {product.price || "Get Best Price"}
+
+</p>
+
+<p className="mt-4 text-gray-600">
+
+{product.smallDesc}
+
+</p>
             <h2
               className="
                 font-bold underline
@@ -212,40 +208,36 @@ export default function Product({
               Features:
             </h2>
 
-            {product.features.map(
-              (feature) => (
+            <ul className="mt-8 space-y-3">
 
-                <div
-                  key={feature.id}
-                  className="flex"
-                >
+{product.features.map(feature=>(
 
-                  <p
-                    className="
-                      max-sm:text-sm
-                      w-[20rem]
-                      dark:text-gray-400
-                      text-stone-700
-                    "
-                  >
-                    {feature.key}
-                  </p>
+<li
+key={feature.id}
+className="flex gap-3"
+>
 
-                  <p
-                    className="
-                      max-sm:text-sm
-                      w-full
-                      dark:text-gray-400
-                      text-stone-700
-                    "
-                  >
-                    {feature.value}
-                  </p>
+<span className="text-green-600">
 
-                </div>
-              )
-            )}
+✔
 
+</span>
+
+<div>
+
+<b>{feature.key}</b>
+
+{" : "}
+
+{feature.value}
+
+</div>
+
+</li>
+
+))}
+
+</ul>              
           </div>
 
         </div>
@@ -306,6 +298,59 @@ export default function Product({
 
         </p>
 
+<h2 className="text-2xl font-bold mt-10 mb-4">
+
+Specifications
+
+</h2>
+
+<table className="w-full border">
+
+<thead>
+
+<tr>
+
+<th className="border p-3">
+
+Feature
+
+</th>
+
+<th className="border p-3">
+
+Value
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{product.features.map(item=>(
+
+<tr key={item.id}>
+
+<td className="border p-3">
+
+{item.key}
+
+</td>
+
+<td className="border p-3">
+
+{item.value}
+
+</td>
+
+</tr>
+
+))}
+
+</tbody>
+
+</table>
         {/* ========================= */}
         {/* DESCRIPTION */}
         {/* ========================= */}
