@@ -157,8 +157,8 @@ export default function RootLayout({
             <div className="relative flex min-h-screen flex-col">
               <Navbar />
 
-              <main className="flex-grow">
-                {children}
+              <main className="flex-grow max-w-7xl mx-auto w-full px-4">
+                  {children}
               </main>
 
               <Footer />
