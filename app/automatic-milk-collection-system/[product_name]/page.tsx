@@ -335,61 +335,68 @@ Value
           </Button>
         </div>
       </section>
-   {/* ========================= */}
-         {/* NEXT / PREVIOUS */}
-         {/* ========================= */}
-   
-         <div
-           className="
-             mt-10 flex
-             justify-between
-             gap-4 flex-wrap
-           "
-         >
-   
-           {prevProduct ? (
-   
-             <Link
-               href={`/automatic-milk-collection-system/${prevProduct.url}`}
-               className="
-                 bg-blue-100 text-blue-700
-                 px-5 py-3 rounded-xl
-                 hover:bg-blue-200
-                 transition
-               "
-             >
-               ← Previous:
-               {" "}
-               {prevProduct.name}
-             </Link>
-   
-           ) : (
-             <div />
-           )}
-   
-           {nextProduct ? (
-   
-             <Link
-               href={`/automatic-milk-collection-system/${nextProduct.url}`}
-               className="
-                 bg-purple-100
-                 text-purple-700
-                 px-5 py-3 rounded-xl
-                 hover:bg-purple-200
-                 transition
-               "
-             >
-               Next:
-               {" "}
-               {nextProduct.name}
-               {" "}
-               →
-             </Link>
-   
-           ) : null}
-   
-         </div>
-   
+      {/* ========================= */}
+{/* NEXT / PREVIOUS */}
+{/* ========================= */}
+
+<div className="mt-10 w-full">
+  <div className="flex w-full items-center justify-between">
+    {/* Previous */}
+    {prevProduct ? (
+      <Link
+        href={`/automatic-milk-collection-system/${prevProduct.url}`}
+        className="
+          inline-flex items-center
+          rounded-md
+          bg-blue-100
+          px-3 py-2
+          text-sm
+          font-medium
+          text-blue-700
+          hover:bg-blue-200
+          transition-colors
+        "
+      >
+        ← Previous
+      </Link>
+    ) : (
+      <div />
+    )}
+
+    {/* Next */}
+    {nextProduct ? (
+      <Link
+        href={`/automatic-milk-collection-system/${nextProduct.url}`}
+        className="
+          inline-flex items-center
+          rounded-md
+          bg-purple-100
+          px-3 py-2
+          text-sm
+          font-medium
+          text-purple-700
+          hover:bg-purple-200
+          transition-colors
+        "
+      >
+        Next →
+      </Link>
+    ) : (
+      <div />
+    )}
+  </div>
+
+  {/* Product Names */}
+  <div className="mt-2 flex justify-between text-xs text-gray-600">
+    <div className="max-w-[45%] truncate">
+      {prevProduct?.name}
+    </div>
+
+    <div className="max-w-[45%] truncate text-right">
+      {nextProduct?.name}
+    </div>
+  </div>
+</div>
       {/* ===== Modal ===== */}
       <BuyNowModel
         isModelOpen={isOpen}
