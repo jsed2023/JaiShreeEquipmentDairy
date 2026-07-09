@@ -1,4 +1,4 @@
-"use client";
+""use client";
 
 import Link from "next/link";
 
@@ -15,10 +15,10 @@ import { FcLike } from "react-icons/fc";
 
 export default function Footer() {
   return (
-<footer
-  className="relative mt-4 overflow-hidden border-t border-amber-200 bg-[#FAF9F6] text-slate-700"
-  aria-label="Website Footer"
->
+    <footer
+      className="relative mt-4 overflow-hidden border-t border-amber-200 bg-[#FAF9F6] text-slate-700"
+      aria-label="Website Footer"
+    >
       {/* Background Effect */}
       <div className="absolute inset-0 bg-white/20" />
       {/* Main Footer */}
