@@ -250,19 +250,17 @@ export default function Footer() {
       Built for speed, SEO &amp; modern web performance
     </span>
 
-    <Link
-      href="https://developerchoudhary.vercel.app/"
-      target="_blank"
-      rel="nofollow noopener noreferrer"
-      aria-label="Visit Developer Choudhary website"
-      className="flex min-h-12 items-center gap-2 rounded-md px-3 py-2 transition-all duration-200 hover:bg-amber-200 hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
-    >
-      <span>Made with</span>
-
-      <FcLike aria-hidden="true" />
-
-      <span>by Developer Choudhary</span>
-    </Link>
+    <<a
+  href="https://developerchoudhary.vercel.app/"
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  aria-label="Visit Developer Choudhary website"
+  className="flex min-h-12 items-center gap-2 rounded-md px-3 py-2 transition-all duration-200 hover:bg-amber-200 hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
+>
+  <span>Made with</span>
+  <FcLike aria-hidden="true" />
+  <span>by Developer Choudhary</span>
+</a>
   </div>
 </div>
     </footer>
