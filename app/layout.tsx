@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    google: "Pwgrtmz4YYu7wvKICR3xPoHIa52SsSz4bQwyBb9EG0A",
+    google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
   },
 
   openGraph: {
