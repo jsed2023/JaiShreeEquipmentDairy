@@ -56,13 +56,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
 
     images: [
-      {
-        url: cld(`${siteConfig.url}/logo.png`),
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
+  {
+    url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
+    width: 1200,
+    height: 630,
+    alt: siteConfig.name,
+  },
+],
   },
 
   twitter: {
