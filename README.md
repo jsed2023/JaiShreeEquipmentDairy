@@ -84,7 +84,7 @@ Sri Ganganagar, Rajasthan, India
 
 📧 Email: choudharydqiry@outlook.com
 📱 Phone: +91-8112294173
-🌐 Website: https://jaishreeequipmentdairy.in/
+🌐 Website: https://jaishreeequipmentdairy.co.in/
 
 ---
 
