@@ -19,7 +19,7 @@ export const siteConfig = {
   name: "Jai Shree Equipment Dairy",
   description:
     "Jai Shree Equipment Dairy is a trusted supplier of milk analyzer machines and dairy equipment in Sri Ganganagar, Rajasthan. Established in 2020, we provide high-quality milk testing machines, automatic milk collection units, and dairy automation solutions.",
-  url: "https://jaishreeequipmentdairy.in",
+  url: "https://jaishreeequipmentdairy.co.in",
   navItems: [
     {
       label: "Home",
