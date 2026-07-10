@@ -586,11 +586,11 @@ export const automaticMilkCollectionSystem: Products[] = [
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png"),
-      alt: "Advance Milk Analyzer Max Milk Testing Machine",
+      alt: "Advance Milk Analyzer Max",
     },
   ],
 
-  price: "52,000",
+  price: "50,500",
 
   moreDetails:
     "Advance Milk Analyzer Max is widely used in village milk collection centers and dairy farms for fast, accurate, and automated milk testing. It improves transparency in milk payments and reduces manual errors. Ideal for Rajasthan dairy businesses.",
@@ -607,7 +607,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     { id: "5I", key: "Machine Body Material", value: "S.S.Body" },
     { id: "5J", key: "Dimensions", value: "190 x 300 x 250 mm" },
     { id: "5K", key: "Weight", value: "5 – 15kg" },
-    { id: "5L", key: "Price", value: "₹ 52,000" }
+    { id: "5L", key: "Price", value: "₹ 50,500" }
   ],
 
   desc:
@@ -666,7 +666,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     },
   ],
 
-  price: "52,000",
+  price: "51,000",
 
   features: [
     { id: "5A", key: "Capacity", value: "90 sample/hour" },
@@ -680,7 +680,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     { id: "5I", key: "Machine Body Material", value: "S.S.Body" },
     { id: "5J", key: "Dimensions", value: "190 x 300 x 250 mm" },
     { id: "5K", key: "Weight", value: "5 – 15kg" },
-    { id: "5L", key: "Price", value: "₹ 52,000" }
+    { id: "5L", key: "Price", value: "₹ 51,000" }
   ],
 
   desc:
@@ -738,7 +738,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     },
   ],
 
-  price: "50,000",
+  price: "48,000",
 
   features: [
     { id: "5A", key: "Capacity", value: "90 sample/hour" },
@@ -752,7 +752,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     { id: "5I", key: "Machine Body Material", value: "S.S.Body" },
     { id: "5J", key: "Dimensions", value: "190 x 300 x 250 mm" },
     { id: "5K", key: "Weight", value: "5 – 15kg" },
-    { id: "5L", key: "Price", value: "₹ 50,000" }
+    { id: "5L", key: "Price", value: "₹ 48,000" }
   ],
 
   desc:
@@ -940,7 +940,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     },
   ],
 
-  price: "₹ 4,500",
+  price: "4,500",
 
   features: [
     { id: "12A", key: "Capacity", value: "300 kg" },
@@ -993,7 +993,7 @@ This milk collection weighing machine is a reliable and durable solution for far
     },
   ],
 
-  price: "15,000",
+  price: "14,500",
 
   moreDetails: cld(
     "https://res.cloudinary.com/dddhtbuzs/image/upload/v1729601210/Technical%20Detaits%20DPU.png"
@@ -1178,7 +1178,7 @@ This milk collection weighing machine is a reliable and durable solution for far
     {
       id: "13AK",
       key: "Price",
-      value: "₹ 15,000",
+      value: "₹ 14,500",
     },
   ],
 
@@ -3575,7 +3575,7 @@ export const MilkAnalyzerMachines: Products[] = [
      alt: "Ekomilk Ultra Milk Analyzer",
       },
     ],
-    price: "37,500",
+    price: "35,500",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
     features: [
@@ -3637,7 +3637,7 @@ export const MilkAnalyzerMachines: Products[] = [
       {
         id: "1L",
         key: "Price",
-        value: "₹ 37,500",
+        value: "₹ 35,500",
       },
     ],
     desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
@@ -3666,7 +3666,7 @@ export const MilkAnalyzerMachines: Products[] = [
     alt: "Advance Milk Analyzer Ultra",
   },
 ],
-    price: "28,000",
+    price: "27,500",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
     features: [
@@ -3728,7 +3728,7 @@ export const MilkAnalyzerMachines: Products[] = [
       {
         id: "2L",
         key: "Price",
-        value: "₹ 28,000",
+        value: "₹ 27,500",
       },
     ],
     desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
@@ -3747,7 +3747,7 @@ export const MilkAnalyzerMachines: Products[] = [
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/Ekomilk%20ULTRA%20PRO.jpg",),
       alt: "Ekomilk Pro Analyzer",},
     ],
-    price: "45,000",
+    price: "41,500",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
     features: [
@@ -3809,7 +3809,7 @@ export const MilkAnalyzerMachines: Products[] = [
       {
         id: "3L",
         key: "Price",
-        value: "₹ 45000",
+        value: "₹ 41,500",
       },
     ],
     desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
@@ -3829,7 +3829,7 @@ export const MilkAnalyzerMachines: Products[] = [
     alt: "Advance Milk Analyzer Plus Machine",
       },
     ],
-    price: "35,000",
+    price: "34,500",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
     features: [
@@ -3891,7 +3891,7 @@ export const MilkAnalyzerMachines: Products[] = [
       {
         id: "4L",
         key: "Price",
-        value: "₹ 35,000",
+        value: "₹ 34,500",
       },
     ],
     desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
@@ -3911,7 +3911,7 @@ export const MilkAnalyzerMachines: Products[] = [
     alt: "Milk Analyzer Lactoscan",
       },
     ],
-    price: "28,000",
+    price: "28,500",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
     features: [
@@ -3974,7 +3974,7 @@ export const MilkAnalyzerMachines: Products[] = [
       {
         id: "5L",
         key: "Price",
-        value: "₹ 28,000",
+        value: "₹ 28,500",
       },
     ],
     desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
@@ -3995,7 +3995,7 @@ export const MilkAnalyzerMachines: Products[] = [
     alt: " Lactoscan Milk Analyzer With Stirrer",
       },
     ],
-    price: "32,000",
+    price: "31,500",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
     features: [
@@ -4058,7 +4058,7 @@ export const MilkAnalyzerMachines: Products[] = [
       {
         id: "6L",
         key: "Price",
-        value: "₹ 32,000",
+        value: "₹ 31,500",
       },
     ],
     desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
@@ -4082,7 +4082,7 @@ export const MilkAnalyzerMachines: Products[] = [
 
 
 
-  price: "52,000",
+  price: "49,500",
 
   features: [
     { id: "7A", key: "Capacity", value: "90 sample/hour" },
@@ -4096,7 +4096,7 @@ export const MilkAnalyzerMachines: Products[] = [
     { id: "7I", key: "Machine Body Material", value: "S.S.Body" },
     { id: "7J", key: "Dimensions", value: "90 x 300 x 250 mm" },
     { id: "7K", key: "Weight", value: "8 kg" },
-    { id: "7L", key: "Price", value: "₹ 52,000" }
+    { id: "7L", key: "Price", value: "₹ 49,500" }
   ],
 
   desc:
@@ -4119,7 +4119,7 @@ export const MilkAnalyzerMachines: Products[] = [
     alt: "Advance Milk Analyzer Pro20",},
   ],
 
-  price: "35,000",
+  price: "33,000",
 
   moreDetails:
     cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png"),
@@ -4136,7 +4136,7 @@ export const MilkAnalyzerMachines: Products[] = [
     { id: "8I", key: "Machine Body Material", value: "Plastic" },
     { id: "8J", key: "Dimensions", value: "90 x 300 x 250 mm" },
     { id: "8K", key: "Weight", value: "5 kg" },
-    { id: "8L", key: "Price", value: "₹ 35,000" }
+    { id: "8L", key: "Price", value: "₹ 33,000" }
   ],
 
   desc:
@@ -4160,7 +4160,7 @@ images: [
       alt: "Advance Milk Analyzer with Ultrasonic Stirrer & Lithium Battery",
       },
     ],
-    price: "35,000",
+    price: "34,900",
   features: [
     {
       id: "9A",
@@ -4205,7 +4205,7 @@ images: [
     {
       id: "9I",
       key: "Price",
-      value: "₹ 35,000",
+      value: "₹ 34,900",
     },
     {
       id: "9J",
@@ -4249,7 +4249,7 @@ alt: "Ekomilk Ultra with Digital Milk Stirrer machine",
     },
   ],
 
-  price: "40,000",
+  price: "36,000",
 
   features: [
     {
@@ -4296,7 +4296,7 @@ alt: "Ekomilk Ultra with Digital Milk Stirrer machine",
     {
       id: "10I",
       key: "Price",
-      value: "₹ 40,000",
+      value: "₹ 36,000",
     },
     {
       id: "10J",
@@ -4381,7 +4381,7 @@ alt: "Ekomilk Ultra with Digital Milk Stirrer machine",
     },
   ],
 
-  price: "39,500",
+  price: "35,500",
 
   features: [
     { id: "11A", key: "Model Name", value: "Ekomilk Ultra" },
@@ -4402,7 +4402,7 @@ alt: "Ekomilk Ultra with Digital Milk Stirrer machine",
 {
       id: "11K",
       key: "Price",
-      value: "₹ 39,500",
+      value: "₹ 35,500",
     },
     {
       id: "11L",
@@ -4787,7 +4787,7 @@ desc:
     },
   ],
 
-  price: "28,000",
+  price: "27,000",
 
   moreDetails: cld(
     "https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png"
@@ -4922,7 +4922,7 @@ desc:
     {
       id: "13Z",
       key: "Price",
-      value: "₹ 28,000",
+      value: "₹ 27,000",
     },
   ],
 
@@ -4950,7 +4950,7 @@ desc:
     },
   ],
 
-  price: "51,000",
+  price: "50,000",
 
   features: [
     { id: "14A", key: "Brand", value: "Advance" },
@@ -4972,7 +4972,7 @@ desc:
     { id: "14Q", key: "Usage/Application", value: "Milk Collection Center & Dairy Farms" },
     { id: "14R", key: "Country of Origin", value: "Made in India" },
     { id: "14S", key: "Weight", value: "6 kg" },
-    { id: "14T", key: "Price", value: "₹ 51,000" }
+    { id: "14T", key: "Price", value: "₹ 50,000" }
   ],
 
   desc:
@@ -4999,7 +4999,7 @@ desc:
     },
   ],
 
-  price: "51,000",
+  price: "49,500",
 
   features: [
     { id: "15A", key: "Brand", value: "Advance" },
@@ -5033,7 +5033,7 @@ desc:
     { id: "15AC", key: "Country of Origin", value: "Made in India" },
     { id: "15AD", key: "Approx. Weight", value: "6 Kg" },
     { id: "15AE", key: "Warranty", value: "1 Year Manufacturer Warranty*" },
-    { id: "15AF", key: "Price", value: "₹51,000" }
+    { id: "15AF", key: "Price", value: "₹49,500" }
   ],
 
   desc:
