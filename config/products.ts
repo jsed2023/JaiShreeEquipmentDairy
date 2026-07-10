@@ -572,7 +572,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     ],
     desc: "This load cell-based dairy weighing machine is specially designed for Automatic Milk Collection Systems (AMCS). It directly transfers weight data to the Data Processing Unit (DPU), enabling accurate and real-time milk measurement without requiring a display unit. Built with a durable stainless steel platform, this weighing machine ensures long-lasting performance in dairy farms and milk collection centers.",
     keywords:
-      "amcs weighing scale, dairy weighing machine, milk collection weighing machine, weighing machine for dairy, load cell weighing scale, weighing scale with dpu connection, platform weighing machine 300kg, dairy automation weighing machine, milk collection system equipment, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh, weight machine for dairy use,Weingh Scale, Weingh scale machine Sri Ganganagar, Weingh scale machine Bikaner, Weingh scale machine Hanumangarh, Weingh scale machine Anupgarh, Weingh scale Sri Ganganagar, Weingh scale Bikaner, Weingh scale Hanumangarh, Weingh scale Anupgarh, Weingh machine Sri Ganganagar, Weingh machine Bikaner, Weingh machine Hanumangarh, Weingh machine Anupgarh, scale machine Sri Ganganagar, scale machine Bikaner, scale machine Hanumangarh, scale machine Anupgarh, Weingh scale machine, Weingh scale, Weingh machine, scale machine, digital scale, electronic scale",
+      "weight machine, weight machine for dairy, digital weight machine, electronic weight machine, weighing machine, weighing scale, dairy weighing scale, dairy weighing machine, milk collection weighing machine, platform weighing machine, 300kg weighing scale, load cell weighing scale, weighing scale with DPU, automatic milk collection system weighing scale, dairy automation equipment, milk collection equipment, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh, amcs weighing scale, dairy weighing machine, milk collection weighing machine, weighing machine for dairy, load cell weighing scale, weighing scale with dpu connection, platform weighing machine 300kg, dairy automation weighing machine, milk collection system equipment, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh, weight machine for dairy use,Weingh Scale, Weingh scale machine Sri Ganganagar, Weingh scale machine Bikaner, Weingh scale machine Hanumangarh, Weingh scale machine Anupgarh, Weingh scale Sri Ganganagar, Weingh scale Bikaner, Weingh scale Hanumangarh, Weingh scale Anupgarh, Weingh machine Sri Ganganagar, Weingh machine Bikaner, Weingh machine Hanumangarh, Weingh machine Anupgarh, scale machine Sri Ganganagar, scale machine Bikaner, scale machine Hanumangarh, scale machine Anupgarh, Weingh scale machine, Weingh scale, Weingh machine, scale machine, digital scale, electronic scale",
   },
 {
   id: 7,
@@ -806,12 +806,12 @@ export const automaticMilkCollectionSystem: Products[] = [
 
   images: [
     {
-      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png"),
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1783692432/Advance_Combination_of_Milk_Analyzer_Stirrer.webp"),
     alt: "Advance Combination of Milk Analyzer & Stirrer",
     },
   ],
 
-  price: "58,000",
+  price: "34,999",
 
   moreDetails: "",
 
@@ -827,7 +827,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     { id: "10I", key: "Machine Body Material", value: "S.S.Body" },
     { id: "10J", key: "Dimensions", value: "190 x 300 x 250 mm" },
     { id: "10K", key: "Weight", value: "5 – 18kg" },
-    { id: "10L", key: "Price", value: "₹ 58,000" }
+    { id: "10L", key: "Price", value: "₹ 34,999" }
   ],
 
   desc:
@@ -852,20 +852,10 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Analysis Time", value: "25 – 40 seconds" },
     { label: "Sample Volume", value: "20 – 30 ml" },
     { label: "Weighing Capacity", value: "60 kg / 200 kg" },
-    { label: "Least Count", value: "10 g / 20 g" },
-    { label: "Weighing Accuracy", value: "Class-III" },
-    { label: "Processor", value: "ARM Cortex-M (32-bit M7)" },
     { label: "Display", value: "128 × 64 Graphic LCD" },
     { label: "Keypad", value: "5×5 matrix, USB/PS2 keyboard support" },
-    { label: "Storage", value: "Internal Memory, Encrypted" },
-    { label: "Connectivity", value: "USB, RS-232" },
-    { label: "Price Logic", value: "FAT/SNF-based rate chart, FAT/CLR-based rate chart, auto calculation" },
-    { label: "Printer", value: "Inbuilt thermal / external printer support" },
     { label: "Power", value: "220V AC / 12V DC, ~60W" },
-    { label: "Environment", value: "15°C – 50°C, 30%–80% humidity" },
-    { label: "Platform", value: "SS304 400×400 mm / 600×600 mm" },
     { label: "Calibration", value: "Auto-calibration, cleaning cycle, self-check" },
-    { label: "Reports", value: "Daily, Member-wise, Payment, Bonus, USB Export" },
     { label: "Additional Feature", value: "Inbuilt Milk Stirrer for uniform mixing" },
     { label: "Training", value: "Installation Support" },
     { label: "Guarantee", value: "1 Year" },
@@ -882,13 +872,13 @@ export const automaticMilkCollectionSystem: Products[] = [
 
   images: [
     {
-      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766063713/advance_milk_analyzer_max.png"),
-    alt: "Advance Milk Analyzer with Stirrer (Combination Unit)",
+      src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1783692433/Advance_Milk_Analyzer_with_Stirrer.webp"),
+    alt: "Advance Milk Analyzer with Stirrer ",
     
     },
   ],
 
-  price: "58,000",
+  price: "34,900",
 
   moreDetails: "Best milk analyzer with inbuilt stirrer for dairy farms and milk collection centers. Ensures accurate milk testing with uniform mixing, fast results, and reliable performance.",
 
@@ -904,7 +894,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     { id: "11I", key: "Machine Body Material", value: "S.S.Body" },
     { id: "11J", key: "Dimensions", value: "190 x 300 x 250 mm" },
     { id: "11K", key: "Weight", value: "5 – 18kg" },
-    { id: "11L", key: "Price", value: "₹ 58,000" }
+    { id: "11L", key: "Price", value: "₹ 34,900" }
   ],
 
   desc:
@@ -928,23 +918,9 @@ export const automaticMilkCollectionSystem: Products[] = [
     { label: "Accuracy (Density)", value: "±0.0005 g/cm³" },
     { label: "Analysis Time", value: "25 – 40 seconds" },
     { label: "Sample Volume", value: "20 – 30 ml" },
-    { label: "Weighing Capacity", value: "60 kg / 200 kg" },
-    { label: "Least Count", value: "10 g / 20 g" },
-    { label: "Weighing Accuracy", value: "Class-III" },
-    { label: "Processor", value: "ARM Cortex-M (32-bit M7)" },
-    { label: "Display", value: "128 × 64 Graphic LCD" },
-    { label: "Keypad", value: "5×5 matrix, USB/PS2 keyboard support" },
-    { label: "Storage", value: "Internal Memory, Encrypted" },
-    { label: "Connectivity", value: "USB, RS-232" },
-    { label: "Price Logic", value: "FAT/SNF-based rate chart, FAT/CLR-based rate chart, auto calculation" },
-    { label: "Printer", value: "Inbuilt thermal / external printer support" },
     { label: "Power", value: "220V AC / 12V DC, ~60W" },
-    { label: "Environment", value: "15°C – 50°C, 30%–80% humidity" },
-    { label: "Platform", value: "SS304 400×400 mm / 600×600 mm" },
     { label: "Calibration", value: "Auto-calibration, cleaning cycle, self-check" },
-    { label: "Reports", value: "Daily, Member-wise, Payment, Bonus, USB Export" },
     { label: "Additional Feature", value: "Inbuilt Milk Stirrer for uniform mixing" },
-    { label: "Training", value: "Installation Support" },
     { label: "Guarantee", value: "1 Year" },
     { label: "Unit Weight", value: "5 – 18 kg" }]
 },
@@ -994,7 +970,7 @@ Its strong stainless steel platform makes it suitable for continuous use in rura
 This milk collection weighing machine is a reliable and durable solution for farmers, dairy operators, and milk collection centers looking for accurate and hassle-free milk measurement.`,
 
   keywords:
-    "dairy weighing machine, milk collection weighing machine, amcs weighing scale, weighing machine, weight machine, load cell weighing machine, platform weighing machine 300kg, digital weighing machine for dairy, milk weighing machine, weighing scale for milk collection center, dairy equipment weighing machine, milk measurement machine, weighing machine for farmers, heavy duty weighing machine, industrial platform weighing scale, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh"
+    "dairy weighing machine, weight machine, weight machine for dairy, digital weight machine, electronic weight machine, weighing machine, weighing scale, dairy weighing scale, dairy weighing machine, milk collection weighing machine, platform weighing machine, 300kg weighing scale, load cell weighing scale, weighing scale with DPU, automatic milk collection system weighing scale, dairy automation equipment, milk collection equipment, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh, milk collection weighing machine, amcs weighing scale, weighing machine, weight machine, load cell weighing machine, platform weighing machine 300kg, digital weighing machine for dairy, milk weighing machine, weighing scale for milk collection center, dairy equipment weighing machine, milk measurement machine, weighing machine for farmers, heavy duty weighing machine, industrial platform weighing scale, weighing machine Rajasthan, weighing machine Sri Ganganagar, weighing machine Bikaner, weighing machine Hanumangarh, weighing machine Anupgarh"
 },
 {
   id: 13,
@@ -5023,7 +4999,7 @@ desc:
     },
   ],
 
-  price: "₹51,000",
+  price: "51,000",
 
   features: [
     { id: "15A", key: "Brand", value: "Advance" },
