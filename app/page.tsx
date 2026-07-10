@@ -3,7 +3,7 @@ import { Image } from "@nextui-org/react";
 import { cld } from "@/utils/cloudinary";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import NavButton from "@/components/NavButton";
+
 
 const GalleryCarousel = dynamic(
   () => import("@/components/GalleryCarousel"),
@@ -30,11 +30,11 @@ export default function Home() {
 {/* ================= HERO BANNER ================= */}
 <section
   id="hero-banner-section"
-  className="w-full"
+  className="w-full mt-4"
 >
   <Image
     src={cld("v1737653135/jai_shree_eq.jpg", {
-      width: 900,
+      width: 700,
       quality: "auto",
       format: "auto",
       crop: "fill",
@@ -43,13 +43,13 @@ export default function Home() {
     loading="eager"
     fetchPriority="high"
     decoding="async"
-    sizes="100vw"
+    sizes="80vw"
     removeWrapper
     radius="none"
-    className="w-full h-auto"
+    className="block w-full h-auto"
   />
 </section>
-      <section className="bg-gray-100 dark:bg-[#1f1f22] text-gray-900 dark:text-gray-50 py-6">
+      <section className="my-10 bg-gray-100 dark:bg-[#1f1f22] text-gray-900 dark:text-gray-50 py-6">
         <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
     <h1
       className="font-bold text-xl md:text-2xl lg:text-2xl
@@ -57,7 +57,7 @@ export default function Home() {
            Milk Analyzer Machine Supplier in Rajasthan 
         </h1></div>
       <section id="hero-welcome-section" className="flex flex-col gap-6">
-        <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
+        <div className=" mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
         <h2
       className="font-bold text-xl md:text-2xl lg:text-2xl
         text-center bg-clip-text text-transparent animate-title-gradient">
@@ -148,7 +148,7 @@ your dairy machines operate efficiently.
           </div>
       </section>
       <section id="hero-our-product-section">
-          <section className="bg-gray-100 dark:bg-[#1f1f22] text-gray-900 dark:text-gray-50 py-6">
+          <section className="my-10 bg-gray-100 dark:bg-[#1f1f22] text-gray-900 dark:text-gray-50 py-6">
             <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
         <h2 className="dark:bg-[#27272a] bg-[rgb(244,244,245)] sm:w-6/12 w-11/12 text-center mx-auto py-1 rounded-lg md:text-2xl text-lg font-bold mb-6
         bg-clip-text text-transparent animate-title-gradient">
@@ -229,12 +229,14 @@ your dairy machines operate efficiently.
             ))}
           </div>
           </section>
-    <main >
+
+    <main className="py-8">
       <GalleryCarousel />
     </main>
+
 {/* ================= SEO CONTENT ================= */}
 
-<section className="bg-gray-100 dark:bg-[#1f1f22] py-10">
+<section className="my-10 bg-gray-100 dark:bg-[#1f1f22] py-10">
 
 <div className="max-w-6xl mx-auto px-4 space-y-6 text-stone-700 dark:text-gray-300">
 
@@ -247,11 +249,12 @@ Dairy Equipment & Milk Analyzer Machines in Rajasthan
 ))}
 
 </div>
-
 </section>
+
+
       <section
   id="krei-logo-strip"
-  className="dark:bg-[#1f1f22] bg-[rgb(244,244,245)] py-10 ">
+  className="dark:bg-[#1f1f22] bg-[rgb(244,244,245)] py-8 ">
     
   <div className="flex flex-col items-center gap-8">
 <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
@@ -269,20 +272,13 @@ Dairy Equipment & Milk Analyzer Machines in Rajasthan
  
     {/* Logo + Badge */}
     <div className="flex flex-col items-center gap-2">
-      <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
+       <div className="flex flex-col items-center gap-3">
       <Image
-  src={cld("v1771343933/K_R_Electronics_Industries_Log.webp", {
-    width: 200,
-    height: 150,
-    crop: "fit",
-  })}
-  alt="K R Electronics Industries Logo"
-  loading="eager"
-  fetchPriority="high"
-  decoding="async"
-  removeWrapper
-  className="object-contain"
-/>
+        src={cld("v1771343933/K_R_Electronics_Industries_Log.webp",)}
+        alt="K R Electronics Industries Logo"
+        className="h-[3rem] w-auto"
+        loading="lazy"
+      />
     </div>
       {/* Badge */}
       <span
@@ -385,28 +381,6 @@ Dairy Equipment & Milk Analyzer Machines in Rajasthan
     </div>
   </div>
 </section>
-
-<div
-  className="bg-gray-100 dark:bg-[#1f1f22] text-gray-900 dark:text-gray-50 py-6">
-<div className="bg-gray-100 dark:bg-[#1f1f22] py-6">
-  <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
-  <NavButton href="/about" label="About" />
-  <NavButton href="/contact" label="Contact" />
-  <NavButton href="/gallery" label="Gallery" />
-  <NavButton href="/milestones" label="Milestones" />
-
-  <NavButton href="/services" label="Services" />
-  <NavButton href="/testimonials" label="Testimonials" />
-  <NavButton href="/locations" label="Locations" />
-  <NavButton href="/milk-rate-chart" label="Milk Rate Chart" />
-
-  <NavButton href="/automatic-milk-collection-system" label="AMCU" />
-  <NavButton href="/dairy-equipment" label="Dairy Equipment" />
-  <NavButton href="/milk-testing-equipment" label="Milk Testing Equipment" />
-  <NavButton href="/categories" label="Categories" />
-</div>
-</div>
-    </div>
     </>
   );
 }
