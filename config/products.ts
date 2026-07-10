@@ -538,7 +538,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     },
   ],
 
-  price: "₹ 4,500",
+  price: "4,500",
     features: [
       {
         id: "4A",
