@@ -43,8 +43,7 @@ export default function Footer() {
             businesses across Rajasthan
             and India.
           </p>
-</div>
-         {/* Social Media */}
+{/* Social Media */}
 <div className="mt-4 flex items-center gap-2">
   <a
     href="https://www.facebook.com/Jaishreeequipmentdairy"
@@ -70,6 +69,8 @@ export default function Footer() {
     <FaYoutube />
   </a>
 </div>
+        </div>
+
         {/* Quick Links */}
         <nav aria-label="Footer Navigation">
           <h3 className="text-xs font-semibold text-slate-900">
