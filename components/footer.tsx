@@ -43,35 +43,33 @@ export default function Footer() {
             businesses across Rajasthan
             and India.
           </p>
+</div>
+         {/* Social Media */}
+<div className="mt-4 flex items-center gap-2">
+  <a
+    href="https://www.facebook.com/Jaishreeequipmentdairy"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="flex h-12 w-12 items-center justify-center rounded-full
+      border border-slate-200 bg-white shadow-sm text-xl
+      text-[#1877F2] transition hover:bg-[#1877F2] hover:text-white"
+  >
+    <FaFacebookF />
+  </a>
 
-          {/* Social Media */}
-          <div className="mt-4 flex items-center gap-2">
-            <a
-              href="https://www.facebook.com/Jaishreeequipmentdairy"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="flex h-12 w-12 items-center justify-center rounded-full
-border border-slate-200 bg-white shadow-sm text-lg
-transition hover:bg-amber-50"
-            >
-              <FaFacebookF />
-            </a>
-
-            <a
-              href="https://www.youtube.com/@Jaishreeequipmentdairy"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-              className="flex h-12 w-12 items-center justify-center rounded-full
-border border-slate-200 bg-white shadow-sm text-lg
-transition hover:bg-amber-50"
-              >
-                <FaYoutube />
-            </a>
-          </div>
-        </div>
-
+  <a
+    href="https://www.youtube.com/@Jaishreeequipmentdairy"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube"
+    className="flex h-12 w-12 items-center justify-center rounded-full
+      border border-slate-200 bg-white shadow-sm text-xl
+      text-[#FF0000] transition hover:bg-[#FF0000] hover:text-white"
+  >
+    <FaYoutube />
+  </a>
+</div>
         {/* Quick Links */}
         <nav aria-label="Footer Navigation">
           <h3 className="text-xs font-semibold text-slate-900">
@@ -84,17 +82,9 @@ transition hover:bg-amber-50"
                 name: "Home",
                 href: "/",
               },
-              {
-                name: "Dairy Equipment",
-                href: "/dairy-equipment",
-              },
-              {
-                name: "Milk Testing Equipment",
-                href: "/milk-testing-equipment",
-              },
-              {
-                name: "Automatic Milk Collection System",
-                href: "/automatic-milk-collection-system",
+            {
+                name: "Gallery",
+                href: "/gallery",
               },
               {
                 name: "Services",
@@ -114,7 +104,7 @@ transition hover:bg-amber-50"
                   href={link.href}
                   title={link.name}
                   aria-label={link.name}
-                  className="group flex min-h-[44px] items-center gap-2
+                  className="group flex min-h-[12px] items-center gap-2
 px-2 py-2 transition hover:text-amber-600"
 
                 >
@@ -136,8 +126,8 @@ px-2 py-2 transition hover:text-amber-600"
           <ul className="mt-2 space-y-1 text-[10px] text-slate-600">
             {[
               {
-                name: "Milk Analyzer",
-                href: "/milk-testing-equipment",
+                name: "Milk Analyzers",
+                href: "/milk-analyzer-machines",
               },
               {
                 name: "Automatic Milk Collection System",
@@ -166,7 +156,7 @@ px-2 py-2 transition hover:text-amber-600"
                   href={item.href}
                   title={item.name}
                   aria-label={item.name}
-                  className="inline-flex min-h-[44px] items-center py-2 transition hover:text-amber-600"
+                  className="inline-flex min-h-[12px] items-center py-2 transition hover:text-amber-600"
                 >
                   {item.name}
                 </Link>
