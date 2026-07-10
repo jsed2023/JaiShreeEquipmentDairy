@@ -11,7 +11,7 @@ import {
 import { blogs } from "@/config/blogs";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
-export const revalidate = 86400;
+export const revalidate = 3600; // 1 hour
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
 
@@ -43,6 +43,7 @@ const getLastModified = (
   return parsed;
 };
 
+const BUILD_DATE = new Date();
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [];
   const addedUrls = new Set<string>();
@@ -87,10 +88,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/automatic-milk-collection-system", 0.8, "weekly"],
     ["/milk-rate-chart", 0.7, "daily"],
   ].forEach(([path, priority, freq]) => {
-    addUrl(
-      path as string,
-      priority as number,
-      freq as ChangeFrequency
+  addUrl(
+    path as string,
+    priority as number,
+    freq as ChangeFrequency,
+    BUILD_DATE
     );
   });
 
@@ -103,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       `/automatic-milk-collection-system/${product.url}`,
       0.7,
       "weekly",
-      getLastModified(product.updatedAt)
+      getLastModified(product.updatedAt) ?? BUILD_DATE
     );
   });
 
@@ -117,7 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `/dairy-equipment/${product.url}`,
         0.7,
         "weekly",
-        getLastModified(product.updatedAt)
+        getLastModified(product.updatedAt) ?? BUILD_DATE
       );
     }
   );
@@ -131,7 +133,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       `/milk-testing-equipment/${product.url}`,
       0.7,
       "weekly",
-      getLastModified(product.updatedAt)
+      getLastModified(product.updatedAt) ?? BUILD_DATE
     );
   });
 
@@ -144,7 +146,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       `/milk-analyzer-machines/${product.url}`,
       0.7,
       "weekly",
-      getLastModified(product.updatedAt)
+      getLastModified(product.updatedAt) ?? BUILD_DATE
     );
   });
 
@@ -159,7 +161,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       `/blog/${blog.slug}`,
       0.8,
       "weekly",
-      getLastModified(blog.updatedAt)
+      getLastModified(blog.updatedAt) ?? BUILD_DATE
     );
   });
 
@@ -171,7 +173,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     addUrl(
       `/milk-analyzer-${location.slug}`,
       0.5,
-      "monthly"
+      "monthly",
+      BUILD_DATE
     );
   });
 
