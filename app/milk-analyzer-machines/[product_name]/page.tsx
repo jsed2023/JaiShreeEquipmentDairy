@@ -464,6 +464,54 @@ Value
         </div>
 
       </section>
+      <div className="mt-10 rounded-xl bg-gradient-to-r from-blue-50 via-purple-50 to-cyan-50 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 p-6 md:p-8 border border-gray-200 dark:border-zinc-700">
+      <h2 className="text-2xl font-bold mt-10 mb-4">
+  Frequently Asked Questions
+</h2>
+
+<div className="space-y-6">
+  <div>
+    <h3 className="font-semibold text-lg">
+      What is {product.name}?
+    </h3>
+    <p>
+      {product.name} is designed to improve dairy operations by providing
+      reliable performance, accurate results, and easy operation.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="font-semibold text-lg">
+      Why should I choose {product.name}?
+    </h3>
+    <p>
+      {product.name} offers high accuracy, durable construction, low
+      maintenance, and is suitable for dairy farms, milk collection centres,
+      and cooperative societies.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="font-semibold text-lg">
+      Is {product.name} suitable for commercial use?
+    </h3>
+    <p>
+      Yes, {product.name} is ideal for commercial dairy applications and can
+      be used in milk collection centres, dairy plants, and private dairies.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="font-semibold text-lg">
+      Do you provide installation and support for {product.name}?
+    </h3>
+    <p>
+      Yes, we provide installation guidance, technical support, and
+      after-sales service for {product.name}.
+    </p>
+  </div>
+</div>
+</div>
       {/* ========================= */}
 {/* NEXT / PREVIOUS */}
 {/* ========================= */}
