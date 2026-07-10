@@ -28,13 +28,10 @@ export default function Home() {
   return (  
    <>
 {/* ================= HERO BANNER ================= */}
-<section
-  id="hero-banner-section"
-  className="w-full mt-4"
->
+<section id="hero-banner-section" className="w-full mt-4">
   <Image
     src={cld("v1737653135/jai_shree_eq.jpg", {
-      width: 700,
+      width: 1920,
       quality: "auto",
       format: "auto",
       crop: "fill",
@@ -43,9 +40,7 @@ export default function Home() {
     loading="eager"
     fetchPriority="high"
     decoding="async"
-    sizes="80vw"
-    removeWrapper
-    radius="none"
+    sizes="100vw"
     className="block w-full h-auto"
   />
 </section>
