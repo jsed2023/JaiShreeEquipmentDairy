@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://jaishreeequipmentdairy.co.in/sitemap.xml
