@@ -107,8 +107,7 @@ export async function generateMetadata({
   // Canonical URL
   // =========================
 
-  const url =
-    `${siteConfig.url}/${normalizedParam}`;
+  const url = `${siteConfig.url}/locations/${normalizedParam}`;
 
   return {
 
@@ -117,7 +116,8 @@ export async function generateMetadata({
     // =========================
 
     title:
-      `Milk Analyzer Machine Supplier in ${cityName} | Jai Shree Equipment Dairy`,
+      `Milk Analyzer Machine Supplier in ${cityName}`,
+      
 
     // =========================
     // Description
@@ -129,7 +129,13 @@ export async function generateMetadata({
     // =========================
     // Canonical
     // =========================
-
+keywords: [
+  `Milk Analyzer Machine ${cityName}`,
+  `Milk Analyzer Supplier ${cityName}`,
+  `Milk Testing Machine ${cityName}`,
+  `Dairy Equipment ${cityName}`,
+  `Automatic Milk Collection System ${cityName}`,
+],
     alternates: {
       canonical: url,
     },
@@ -141,11 +147,6 @@ export async function generateMetadata({
     robots: {
       index: true,
       follow: true,
-
-      googleBot: {
-        index: true,
-        follow: true,
-      },
     },
 
     // =========================
