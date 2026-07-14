@@ -16,7 +16,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     name: "Automatic Milk Collection Data Processor Unit",
     category: "automatic-milk-collection-system",
     smallDesc:
-      "Buy Automatic Milk Collection Data Processor Unit(Dairy Khata) for accurate milk billing and data processing. Serving Sri Ganganagar, Bikaner, Hanumangarh & Rajasthan",
+       "The Dairy Khata Automatic Milk Collection Data Processor Unit (DPU) automates milk billing, FAT/SNF calculation, and data management for dairy farms and milk collection centers.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",),
@@ -101,7 +101,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "Buy DPU Milk Collection Unit Machine by Dairy Khata for accurate milk billing, FAT/SNF calculation, and dairy data management. Available across Rajasthan including Sri Ganganagar, Bikaner, and Hanumangarh.",
+      "The Dairy Khata DPU Milk Collection Unit provides accurate milk billing, FAT/SNF calculation, thermal receipt printing, and secure dairy data management for milk collection centers.",
 
   images: [
     {
@@ -254,7 +254,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     url: "ultrasonic-milk-stirrer",
     category: "automatic-milk-collection-system",
     smallDesc:
-      "KREI Ultrasonic milk stirrer - milk sample to remove the air bubbles from the sample to get accurate readings for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+       "The KREI Digital Ultrasonic Milk Stirrer removes air bubbles from milk samples for accurate FAT and SNF testing in dairy laboratories and milk collection centers.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",),
@@ -350,7 +350,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     url: "ultrasonic-milk-stirrer-normal",
     category: "automatic-milk-collection-system",
     smallDesc:
-      "KREI Ultrasonic milk stirrer normal - milk sample to remove the air bubbles from the sample to get accurate readings for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+        "The KREI Ultrasonic Milk Stirrer ensures uniform milk sample mixing by removing air bubbles, improving the accuracy of milk analyzer test results.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902688/Ultrasonic-Milk-Stirrer-Normal.jpg",),
@@ -441,7 +441,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     url: "milk-analyzer-machine",
     category: "automatic-milk-collection-system",
     smallDesc:
-      "The Ekomilk Ultra Analyzer is a robust, ultrasonic, multi-parameter milk quality testing device ideal for dairy farms and milk collection points in the Ganganagar, Bikaner, Hanumangarh, and Anupgarh regions, helping improve quality control, payment accuracy, and operational efficiency without chemical reagents",
+       "The Ekomilk Ultra Milk Analyzer delivers fast and accurate FAT, SNF, protein, density, and added water testing for dairy farms and milk collection centers.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg",),
@@ -523,8 +523,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     url: "weingh-scale",
     category: "automatic-milk-collection-system",
     smallDesc:
-    "High-precision dairy weighing machine for Automatic Milk Collection Systems (AMCS) with direct DPU input. Ideal for milk collection centers in Sri Ganganagar, Bikaner, Hanumangarh, and Anupgarh.",
-
+      "This 300kg dairy weighing machine features load cell technology with direct DPU connectivity for accurate milk weighing in Automatic Milk Collection Systems.",
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902744/weighing-scale.jpg"),
@@ -575,7 +574,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "Advance Milk Analyzer Max is a high-precision milk testing machine for dairy farms and milk collection centers. It measures FAT, SNF, density, protein, and added water with fast and accurate results across Rajasthan including Ganganagar, Bikaner, Hanumangarh, and Anupgarh.",
+    "Advance Milk Analyzer Max provides high-precision FAT, SNF, density, protein, and added water testing with automatic milk collection support for dairy operations.",
 
   images: [
     {
@@ -651,7 +650,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   url: "all-in-one-milk-analyzer",
   category: "automatic-milk-collection-system",
   smallDesc:
-    "all in one milk analyzer, Advance Milk Analyzer Max for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    "The Advance All In One Milk Analyzer combines milk testing, automatic billing, and data processing in one compact solution for dairy farms and milk collection centers.",
 
   images: [
     {
@@ -723,7 +722,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   url: "milk-analyzer-and-dpu",
   category: "automatic-milk-collection-system",
   smallDesc:
-    "Milk Analyzer And Data Processor Unit(Dairy Khata) for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+      "The Milk Analyzer and Dairy Khata DPU system combines accurate milk quality testing with automatic billing and data processing for dairy collection centers.",
 
   images: [
     {
@@ -796,7 +795,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "Advance Combination Milk Analyzer & Stirrer for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    "The Advance Milk Analyzer & Stirrer Combo delivers accurate FAT and SNF testing with an integrated ultrasonic stirrer for consistent milk sample preparation.",
 
   images: [
     {
@@ -862,8 +861,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "Buy Advance Milk Analyzer with Stirrer for dairy farms & milk collection centers in Ganganagar, Bikaner, Hanumangarh & Anupgarh. Accurate FAT, SNF testing with automatic stirring system",
-
+      "Advance Milk Analyzer with inbuilt stirrer provides accurate FAT, SNF, density, and milk quality testing with automatic sample mixing for dairy applications.",
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1783692433/Advance_Milk_Analyzer_with_Stirrer.webp"),
@@ -925,7 +923,7 @@ export const automaticMilkCollectionSystem: Products[] = [
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "High-accuracy dairy weighing machine for milk collection centers with AMCS weighing scale support and direct DPU connection. Available in Sri Ganganagar, Bikaner, Hanumangarh, and Anupgarh.",
+    "The 300kg Dairy Weighing Machine uses load cell technology with direct DPU integration for precise milk weighing in dairy farms and milk collection centers.",
 
   images: [
     {
@@ -976,7 +974,7 @@ This milk collection weighing machine is a reliable and durable solution for far
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "Buy Dairy Khata DPU Machine for automatic milk collection, milk billing, FAT SNF testing, dairy software management, and milk data processing. Best automatic milk collection system in Rajasthan including Sri Ganganagar, Hanumangarh, Bikaner, Suratgarh, Raisinghnagar and nearby dairy areas.",
+     "The Dairy Khata DPU Machine automates milk collection, FAT/SNF billing, receipt printing, and member data management for dairy societies and milk collection centers.",
 
   images: [
     {
@@ -3562,7 +3560,7 @@ export const MilkAnalyzerMachines: Products[] = [
     url: "ekomilk-ultra-analyzer",
     category: "milk-analyzer-machines",
     smallDesc:
-      "The Ekomilk Ultra Analyzer is a robust, ultrasonic, multi-parameter milk quality testing device ideal for dairy farms and milk collection points in the Ganganagar, Bikaner, Hanumangarh, and Anupgarh regions, helping improve quality control, payment accuracy, and operational efficiency without chemical reagents",
+     "Ekomilk Ultra Analyzer delivers fast and accurate FAT, SNF, protein, lactose, density, and added water testing for dairy farms and milk collection centers.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg",),
@@ -3644,7 +3642,7 @@ export const MilkAnalyzerMachines: Products[] = [
     url: "advance-milk-analyzer",
     category: "milk-analyzer-machines",
     smallDesc:
-      "Advance Milk Analyzer  for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+        "Advance Milk Analyzer provides reliable FAT, SNF, protein, lactose, and density testing for dairy farms, milk collection centers, and dairy laboratories.",
     images: [
   {
     src: cld(
@@ -3735,7 +3733,7 @@ export const MilkAnalyzerMachines: Products[] = [
     url: "ekomilk-pro-analyzer",
     category: "milk-analyzer-machines",
     smallDesc:
-      "Ekomilk Pro Milk Analyzer for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+        "Ekomilk Pro Analyzer offers high-speed ultrasonic FAT, SNF, protein, density, and milk quality testing for commercial dairy operations.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/Ekomilk%20ULTRA%20PRO.jpg",),
@@ -3816,7 +3814,7 @@ export const MilkAnalyzerMachines: Products[] = [
     url: "advance-milk-analyzer-plus-machine",
     category: "milk-analyzer-machines",
     smallDesc:
-      "Advance Milk Analyzer Plus machine for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+        "Advance Milk Analyzer Plus Machine ensures accurate FAT, SNF, protein, lactose, and density testing with a durable stainless steel body.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1757013349/Advance_Milk_Analyzer_plus.png",),
@@ -3898,7 +3896,7 @@ export const MilkAnalyzerMachines: Products[] = [
     url: "lactoscan-milk-analyzer",
     category: "milk-analyzer-machines",
     smallDesc:
-      "Lactoscan Milk Analyzer machine for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+      "Lactoscan Milk Analyzer provides fast and accurate FAT, SNF, protein, lactose, density, and added water testing for dairy quality control.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1766093542/milk%20analyzer%20lactoscan.jpg",),
@@ -3982,7 +3980,7 @@ export const MilkAnalyzerMachines: Products[] = [
     url: "lactoscan-milk-analyzer-with-stirrer",
     category: "milk-analyzer-machines",
     smallDesc:
-      "Lactoscan Milk Analyzer  with stirrer machine for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+        "Lactoscan Milk Analyzer with Stirrer delivers precise FAT, SNF, protein, and density testing with uniform sample mixing for better accuracy.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902638/milk_analyzer_lactoscan_with_stirrer.jpg",),
@@ -4065,7 +4063,7 @@ export const MilkAnalyzerMachines: Products[] = [
   url: "advance-max-combo",
   category: "milk-analyzer-machines",
   smallDesc:
-    "Advance Milk Analyzer Max Combo for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    "Advance Max Combo Machine combines a milk analyzer and data processor for accurate FAT, SNF, density, and milk quality testing in dairy farms.",
 
   images: [
     {
@@ -4105,7 +4103,7 @@ export const MilkAnalyzerMachines: Products[] = [
   url: "advance-pro20-milk-analyzer",
   category: "milk-analyzer-machines",
   smallDesc:
-    "Advance Milk Analyzer Pro20 for Dairy Farms in Ganganagar, Bikaner, Hanumangarh, and Anupgarh",
+    "Advance Pro20 Milk Analyzer delivers fast and reliable FAT, SNF, protein, lactose, and density testing for dairy farms and milk collection centers.",
 
   images: [
     {
@@ -4147,7 +4145,7 @@ export const MilkAnalyzerMachines: Products[] = [
   
   
   smallDesc:
-    "High-precision ultrasonic milk testing machine with inbuilt lithium battery for fast and accurate milk quality analysis.",
+      "Advance Milk Analyzer with ultrasonic stirrer and lithium battery provides portable, high-accuracy milk testing for FAT, SNF, protein, and density.",
 images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1757013349/Advance_Milk_Analyzer_plus.png",),
@@ -4234,7 +4232,7 @@ images: [
   category: "milk-analyzer-machines",
 
   smallDesc:
-    "Professional milk analyzer with external digital milk stirrer for accurate and consistent dairy testing results.",
+      "Ekomilk Ultra with Digital Milk Stirrer ensures consistent sample mixing and accurate FAT, SNF, protein, and density testing for dairy operations.",
 
   images: [
     {
@@ -4366,7 +4364,7 @@ alt: "Ekomilk Ultra with Digital Milk Stirrer machine",
   category: "milk-analyzer-machines",
 
   smallDesc:
-    "High-precision milk analyzer with ultrasonic milk stirrer for accurate and consistent dairy testing results.",
+      "Ekomilk Ultra with Ultrasonic Milk Stirrer offers automatic sample mixing and precise FAT, SNF, protein, lactose, and density analysis.",
 
   images: [
     {
@@ -4460,7 +4458,7 @@ alt: "Ekomilk Ultra with Digital Milk Stirrer machine",
   category: "milk-analyzer-machines",
 
   smallDesc:
-    "Buy Ekomilk Ultra digital milk analyzer machine in India for accurate FAT, SNF, Protein, and milk quality testing. Best dairy milk testing machine for dairy farms and milk collection centers.",
+   "Buy Ekomilk Ultra Digital Milk Analyzer for fast and accurate FAT, SNF, protein, lactose, density, and added water testing in dairy farms.",
 
   images: [
     {
@@ -4770,8 +4768,7 @@ desc:
   category: "milk-analyzer-machines",
 
   smallDesc:
-    "Best Advance Milk Analyzer Ultra Machine for Dairy Farms, Milk Collection Centers, Dairy Plants & Laboratories in Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh and Anupgarh",
-
+     "Advance Milk Analyzer Ultra Machine provides high-speed FAT, SNF, protein, lactose, density, and milk quality testing for professional dairy applications.",
   images: [
     {
       src: cld(
@@ -4933,8 +4930,7 @@ desc:
   category: "milk-analyzer-machines",
 
   smallDesc:
-    "Advance Bond Machine for milk fat testing, SNF & CLR testing, DPU, milk ultrasonic stirrer, weighing scale, inbuilt battery, and thermal printer for dairy farms and milk collection centers",
-
+      "Advance Bond Machine integrates a milk analyzer, DPU, ultrasonic stirrer, weighing scale, and thermal printer for complete dairy automation.",
   images: [
     {
       src: cld(
@@ -4982,8 +4978,7 @@ desc:
   category: "milk-analyzer-machines",
 
   smallDesc:
-    "Advance Milk Bond Machine with Milk Analyzer, DPU, Ultrasonic Milk Stirrer, Thermal Printer, Rechargeable Battery & Weighing Scale Support for Dairy Farms and Milk Collection Centers.",
-
+     "Advance Milk Bond Machine combines milk analysis, DPU, ultrasonic stirring, weighing scale support, and thermal printing for efficient milk collection.",
   images: [
     {
       src: cld(
