@@ -140,12 +140,12 @@ keywords:
     keywords:
       "Contact Us, Jai Shree Equipment Dairy, Dairy Equipment Contact, Dairy Farm Services Contact, Milk Analyzer Machine Support, Fat Testing Machine Inquiry, Automatic Milk Collection Unit Assistance, Milking Machine Support, Milk Cream Separator Machine Help, Weingh Scale Machine Inquiry, Dairy Equipment Sri Ganganagar Contact, Dairy Machinery Bikaner Contact, Dairy Plant Equipment Hanumangarh Contact, Dairy Processing Equipment Anupgarh Contact, Rajasthan Dairy Equipment Supplier Contact, North India Dairy Equipment Contact, Reliable Dairy Equipment Supplier, Customer Support Dairy Equipment, Sales Inquiry Dairy Equipment, Service Center Dairy Equipment, Get in Touch Jai Shree Equipment Dairy, Dairy Equipment Contact Form, Customer Assistance Jai Shree Equipment Dairy, Dairy Equipment Helpline, Dairy Equipment Technical Support, Order Dairy Equipment, Buy Dairy Equipment, Maintenance Request Dairy Equipment, Schedule a Consultation Dairy Equipment, Locate Jai Shree Equipment Dairy, Dairy Equipment Dealer Near Me, Dairy Equipment Office Sri Ganganagar, Call Jai Shree Equipment Dairy, Email Jai Shree Equipment Dairy, Visit Jai Shree Equipment Dairy, Dairy Equipment FAQ, Dairy Machinery Customer Care, Dairy Plant Assistance, Milk Collection Unit Contact, Equipment Repair Inquiry, Dairy Equipment Services in Sri Ganganagar, Bikaner, Hanumangarh, Anupgarh",
   },
-  {
-    id: 6,
-    name: "Milk Rate Chart - Jai Shree Equipment Dairy",
-    keywords:
-      "Milk rate chart, DPU milk rate chart, Milk Rate Chart For Dpu Dairy Khata , Milk rate update, Milk rate chart update, Milk fat rate chart, Milk SNF rate chart, Jai Shree Equipment Dairy, Dairy milk price chart, Daily milk rate chart, Automatic milk rate chart generator, Dairy price chart software, Fat-SNF milk rate calculator, Milk rate fat-SNF chart, Online milk rate update tool, Milk procurement software rate chart, Digital milk rate chart maker, Milk rate chart template, Dairy farm milk price list, Fat SNF milk calculator, Fat and SNF based milk pricing, Daily milk price update app, Cooperative dairy milk rate chart, Milk collection system price chart, Milk analyzer fat SNF rate, Milk payment chart generator, Milk rate software for dairy farms, Automatic milk pricing tool,",
-  },
+{
+  id: 6,
+  name: "Milk Rate Chart - Jai Shree Equipment Dairy",
+  keywords:
+    "milk rate chart, milk rate chart for DPU dairy khata, DPU milk rate chart, dairy khata milk rate chart, milk rate chart generator, milk rate calculator, milk fat rate chart, milk SNF rate chart, FAT SNF milk rate calculator, milk rate chart update, DPU milk rate update, milk collection rate chart, milk payment chart, milk procurement software, milk collection software, dairy management software, dairy milk rate chart, milk analyzer rate chart, Excel to CSV milk rate chart, milk rate chart converter, automatic milk rate chart generator, online milk rate update tool, DPU dairy software, Jai Shree Equipment Dairy"
+},
   {
     id: 7,
     name: "About - Jai Shree Equipment Dairy",
