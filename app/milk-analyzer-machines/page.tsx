@@ -117,8 +117,7 @@ export default function MilkAnlayzerMachinesPage() {
           </h3>
 
           <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 line-clamp-3">
-            Advanced milk analyzer for accurate Fat, SNF, Protein, CLR,
-            Water, and milk quality testing with reliable performance.
+            {product.smallDesc}
           </p>
 
           <div className="mt-6 flex gap-3">

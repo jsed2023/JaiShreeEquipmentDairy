@@ -122,8 +122,7 @@ export default function DairyEquipmentsPage() {
           </h3>
 
           <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 line-clamp-3">
-            Premium quality cream separator machine for efficient milk processing,
-            reliable performance and long service life.
+            {product.smallDesc}
           </p>
 
           <div className="mt-6 flex gap-3">

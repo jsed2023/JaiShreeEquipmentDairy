@@ -1190,7 +1190,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "cream-separator-machine-7ut-ho-60-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+      "The Paras Milk Cream Separator Machine 7 UT HO 60 LPH is a hand-operated stainless steel cream separator designed for efficient milk fat separation. Ideal for dairy farms, milk collection centers, and small dairy plants.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401213/CREAM%20SEPARATOR%20MACHINE%207%20UT%20HO%2060%20LPH.jpg",),
@@ -1262,7 +1262,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "cream-separator-machine-7-ut-ae-60-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+      "The Paras Milk Cream Separator Machine 7 UT AE 60 LPH is an electric stainless steel cream separator that delivers fast and accurate cream separation for dairy farms and milk processing units.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401213/CREAM%20SEPARATOR%20MACHINE%207%20UT%20AE%2060%20LPH.jpg",),
@@ -1333,7 +1333,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "cream-separator-machine-8-ho-90-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+      "The Paras Milk Cream Separator Machine 8 HO 90 LPH is a hand-operated 90 LPH cream separator built for reliable milk processing with durable stainless steel construction.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401214/CREAM%20SEPARATOR%20MACHINE%208%20HO%2090%20LPH.jpg",),
@@ -1404,7 +1404,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "cream-separator-machine-8-ae-90-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+      "The Paras Milk Cream Separator Machine 8 AE 90 LPH is an electric cream separator with 90 LPH capacity, offering efficient cream extraction for commercial dairy operations.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401215/CREAM%20SEPARATOR%20MACHINE%208%20AE%2090%20LPH.jpg",),
@@ -1475,7 +1475,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "cream-separator-machine-9-dual-165-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+     "The Paras Milk Cream Separator Machine 9 Dual 165 LPH features both electric and manual operation, making it a versatile solution for high-capacity milk cream separation.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401679/CREAM_SEPARATOR_MACHINE_9_DUAL_165_LPH.jpg",),
@@ -1546,7 +1546,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "cream-separator-machine-9-ae-165-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+      "The Paras Milk Cream Separator Machine 9 AE 165 LPH is a powerful electric cream separator with 165 LPH capacity, designed for medium and large dairy processing plants.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401214/cream-separator-machine-9-ae-165-lph.jpg",),
@@ -1617,7 +1617,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "paras-milk-cream-separator-aed-165-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+      "The Paras Milk Cream Separator Machine AED 165 LPH is a premium electric stainless steel cream separator engineered for efficient and continuous dairy processing.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg",),
@@ -1687,7 +1687,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "paras-milk-cream-separator-11-AE-300-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+      "The Paras Milk Cream Separator Machine 11 AE 300 LPH is a high-capacity electric cream separator designed for commercial dairy plants requiring fast and reliable milk processing.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1770061380/paras-milk-cream-separator-11-AE-300-lph.webp",),
@@ -1757,7 +1757,7 @@ export const creamSeparatorMachine: Products[] = [
     url: "paras-milk-cream-separator-AE-600-lph",
     category: "dairy-equipment",
     smallDesc:
-      "Paras offers top-of-the-line milk cream separator machines for efficient milk processing. Explore our range of high-quality products today! ",
+      "The Paras Milk Cream Separator Machine AE 600 LPH is an industrial-grade electric cream separator with 600 LPH capacity, ideal for large-scale dairy processing and milk production.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1770064498/paras-milk-cream-separator-AE-600-lph.webp"),
@@ -1832,7 +1832,7 @@ export const milkingMachine: Products[] = [
     url: "neno-cow-milking-machine",
     category: "dairy-equipment",
     smallDesc:
-      "Buy Vansun Cow Milking Machine – electric, hygienic and durable. Ideal for small and medium dairy farms. Contact Jai Shree Equipment Dairy for price.",
+     "The Neno Cow Milking Machine is a compact automatic milking machine with a 20L stainless steel bucket, ideal for small and medium dairy farms.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902637/Nano%20cow%20milking%20machine.jpg",),
@@ -1902,7 +1902,7 @@ export const milkingMachine: Products[] = [
     url: "blue-neno-cow-milking-machine",
     category: "dairy-equipment",
     smallDesc:
-      "Blue Neno Cow Milking Machine: A Compact Solution for Small Dairy Farms products today! ",
+       "The Blue Neno Cow Milking Machine features a powerful electric motor, 20L stainless steel bucket, and hygienic milking system for efficient dairy farming.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902641/Blue%20Nano%20cow%20milking%20machine.jpg",),
@@ -1973,7 +1973,7 @@ export const milkingMachine: Products[] = [
     url: "vansan-trolly-cow-and-buff-single-milking-machine",
     category: "dairy-equipment",
     smallDesc:
-      "Vansun Cow Milking Machine: A Compact Solution for Small Dairy Farms products today! ",
+       "The Vansan Trolly Single Milking Machine is designed for cows and buffaloes, featuring a 25L stainless steel bucket and portable trolley for easy operation.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731937547/Vansan_Trolly_Cow_And_Buff_Single_Milking_Machine.jpg",),
@@ -2043,7 +2043,7 @@ export const milkingMachine: Products[] = [
     url: "melasty-trolly-single-milking-machine",
     category: "dairy-equipment",
     smallDesc:
-      "Melasty Cow Milking Machine: A Compact Solution for Small Dairy Farms products today! ",
+      "The Melasty Trolly Single Milking Machine offers automatic milking with a durable stainless steel body and 25L bucket, ideal for commercial dairy farms.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731937915/Melasty_Milking_Machine.jpg",),
@@ -2114,7 +2114,7 @@ export const milkingMachine: Products[] = [
     url: "vansan-trolly-cow-and-buff-milking-machine",
     category: "dairy-equipment",
     smallDesc:
-      "Vansun Cow Milking Machine: A Compact Solution for Small Dairy Farms products today! ",
+      "The Vansan Trolly Cow and Buffalo Milking Machine features a 1 HP motor, 25L stainless steel bucket, and automatic operation for high-performance dairy farming.",
     images: [
       {
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1731935014/Vansan_Trolly_Cow_And_Buff_milking_machine.jpg",),

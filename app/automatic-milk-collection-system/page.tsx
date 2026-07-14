@@ -160,9 +160,7 @@ export default function AutomaticMilkCollectionSystemPage() {
           </h3>
 
           <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 line-clamp-3">
-            High-quality Automatic Milk Collection System designed for
-            accurate milk testing, weighing, billing and reliable dairy
-            operations.
+            {product.smallDesc}
           </p>
 
           <div className="mt-6 flex gap-3">

@@ -123,8 +123,7 @@ export default function MilkTestingEquipmentsPage() {
           </h3>
 
           <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 line-clamp-3 text-center">
-            Reliable milk testing equipment for accurate quality analysis,
-            fat testing, SNF measurement and dairy quality control.
+           {product.smallDesc}
           </p>
 
           <div className="mt-6 flex gap-3">
