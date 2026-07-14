@@ -203,8 +203,7 @@ export default function DairyEquipmentsPage() {
           </h3>
 
           <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 line-clamp-3">
-            High-performance milking machine designed for hygienic and efficient
-            dairy farming with low maintenance.
+            {product.smallDesc}
           </p>
 
           <div className="mt-6 flex gap-3">
