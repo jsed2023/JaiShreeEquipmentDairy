@@ -3,10 +3,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
 
-  title: "Milk Rate Chart Generator",
+  title: "Milk Rate Chart",
 
   description:
-    "Milk Rate Chart Generator – Upload your Excel file and instantly convert it into a digital FAT & SNF milk rate chart for DPU & dairy software | Jai Shree Equipment Dairy.",
+    "Milk Rate Chart – Upload your Excel file and instantly convert it into a digital FAT & SNF milk rate chart for DPU & dairy software | Jai Shree Equipment Dairy.",
 
   keywords: metaKeywords[6].keywords,
 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Milk Rate Chart Generator",
+    title: "Milk Rate Chart",
     description:
       "Upload your Excel file and generate FAT & SNF milk rate chart instantly for DPU & dairy software.",
     url: `${siteConfig.url}/milk-rate-chart`,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Milk Rate Chart Generator",
+    title: "Milk Rate Chart",
     description:
       "Convert Excel into digital FAT & SNF milk rate chart for dairy software instantly.",
   },
