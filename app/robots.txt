@@ -1,0 +1,5 @@
+User-agent: *
+Allow:/
+Disallow: /private/
+Disallow: /admin/
+Sitemap: https://jaishreeequipmentdairy.co.in/sitemap.xml
