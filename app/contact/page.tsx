@@ -85,7 +85,7 @@ export default function ContactPage() {
         ======================= */}
 
         <section
-          className="rounded-xl dark:bg-[#27272a]
+          className="my-5 rounded-xl dark:bg-[#27272a]
           bg-[rgb(244,244,245)] p-4 flex flex-col gap-y-5"
         >
 
