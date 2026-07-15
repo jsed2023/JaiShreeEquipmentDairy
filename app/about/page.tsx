@@ -30,6 +30,9 @@ export default function AboutPage() {
             autoPlay
             muted
             loop
+            playsInline
+            preload="metadata"
+            controls={false}
             className="h-full w-full object-cover"
           >
             <source
