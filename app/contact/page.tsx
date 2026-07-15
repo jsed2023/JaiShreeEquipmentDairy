@@ -57,7 +57,7 @@ export default function ContactPage() {
 
       {/* ===== Header ===== */}
 
-      <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 space-y-3">
+      <div className="my-5 mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 space-y-3">
         <h1
           className="text-center font-bold underline sm:text-4xl text-lg
           bg-clip-text text-transparent animate-title-gradient"
