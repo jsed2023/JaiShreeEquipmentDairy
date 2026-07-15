@@ -8,29 +8,43 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-white text-black">
       {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-gray-200 bg-gradient-to-br from-cyan-50 via-white to-blue-50">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-200/20 via-blue-200/20 to-purple-200/20 blur-3xl" />
+   <section className="relative overflow-hidden border-b border-gray-200 bg-gradient-to-br from-cyan-50 via-white to-blue-50">
+  <div className="absolute inset-0 bg-gradient-to-r from-cyan-200/20 via-blue-200/20 to-purple-200/20 blur-3xl" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 text-center">
-          <span className="rounded-full border border-cyan-300 bg-cyan-100 px-5 py-2 text-sm font-medium text-cyan-700">
-            Jai Shree Equipment Dairy
+  <div className="relative mx-auto max-w-7xl px-6 py-20">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+      
+      {/* Box 1 */}
+      <div className="rounded-3xl border border-cyan-200 bg-white p-8 shadow-lg text-center">
+        <span className="inline-block rounded-full border border-cyan-300 bg-cyan-100 px-5 py-2 text-sm font-medium text-cyan-700">
+          Jai Shree Equipment Dairy
+        </span>
+      </div>
+
+      {/* Box 2 */}
+      <div className="rounded-3xl border border-blue-200 bg-white p-8 shadow-lg text-center">
+        <h1 className="text-4xl font-bold leading-tight md:text-5xl">
+          <span className="text-gray-900">Dairy Industry</span>
+          <span className="block bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Blogs & Insights
           </span>
+        </h1>
+      </div>
 
-          <h1 className="mt-8 text-5xl font-bold leading-tight md:text-7xl">
-            <span className="text-gray-900">Dairy Industry</span>
+      {/* Box 3 */}
+      <div className="rounded-3xl border border-purple-200 bg-white p-8 shadow-lg text-center">
+        <p className="text-lg leading-8 text-gray-600">
+          Explore expert blogs on milk analyzer machines, automatic milk collection
+  systems (AMCS), dairy weighing scales, cream separators, milk testing
+  equipment, ultrasonic milk stirrers, and modern dairy farming solutions.
+  Get buying guides, maintenance tips, and the latest dairy technology
+  updates from Jai Shree Equipment Dairy.
+        </p>
+      </div>
 
-            <span className="block bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Blogs & Insights
-            </span>
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-            Explore dairy farming knowledge, milk testing equipment
-            guides, milk analyzer insights, and modern dairy
-            technology articles.
-          </p>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
 
       {/* Blog Cards */}
       <section className="mx-auto max-w-7xl px-6 py-20">
