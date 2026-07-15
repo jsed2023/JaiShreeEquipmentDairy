@@ -773,7 +773,7 @@ Its ability to reduce testing errors, increase efficiency, and support transpare
 ],
 
   image:
-    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1779533677/Paras_Cream_Separator_Machine.webp",
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784154613/Paras_Cream_Separator_Machine.webp",
 
   alt:
     "Paras Cream Separator Machine for separating cream from fresh milk in dairy farms and milk processing plants.",
