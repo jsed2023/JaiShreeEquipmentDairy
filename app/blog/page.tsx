@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { blogs } from "@/config/blogs";
 
-const blogList = Object.values(blogs).slice(0, 3); // Show only first 3 blogs
+const blogList = Object.values(blogs);
 
 export default function BlogPage() {
   return (
