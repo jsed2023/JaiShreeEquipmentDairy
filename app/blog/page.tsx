@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { blogs } from "@/config/blogs";
 
-const blogList = Object.values(blogs);
+const blogList = Object.values(blogs).slice(0, 3); // Show only first 3 blogs
 
 export default function BlogPage() {
   return (
@@ -17,9 +17,7 @@ export default function BlogPage() {
           </span>
 
           <h1 className="mt-8 text-5xl font-bold leading-tight md:text-7xl">
-            <span className="text-gray-900">
-              Dairy Industry
-            </span>
+            <span className="text-gray-900">Dairy Industry</span>
 
             <span className="block bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
               Blogs & Insights
@@ -36,26 +34,26 @@ export default function BlogPage() {
 
       {/* Blog Cards */}
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogList.map((blog) => (
             <Link
               key={blog.slug}
               href={`/blog/${blog.slug}`}
-              className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* Image */}
-              <div className="relative flex h-72 w-full items-center justify-center overflow-hidden bg-white p-5">
+              <div className="relative h-72 w-full overflow-hidden bg-white">
                 <Image
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-contain transition duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-contain p-5 transition duration-700 group-hover:scale-105"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-center justify-between">
                   <span className="rounded-full bg-cyan-100 px-4 py-1 text-xs font-semibold text-cyan-700">
                     {blog.category}
@@ -70,13 +68,12 @@ export default function BlogPage() {
                   {blog.title}
                 </h2>
 
-                <p className="mt-4 leading-7 text-gray-600">
+                <p className="mt-4 flex-1 leading-7 text-gray-600">
                   {blog.description}
                 </p>
 
                 <div className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600">
                   Read Full Article
-
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
