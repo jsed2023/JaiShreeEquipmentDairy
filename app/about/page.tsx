@@ -22,7 +22,7 @@ export default function AboutPage() {
     return null;
   }
   return (
-    <div id="about" className="my-10 flex flex-col gap-y-10 mb-8">
+    <div id="about" className="my-6 flex flex-col gap-y-10 mb-8">
       <section className="relative h-full flex flex-col sm:gap-y-10 gap-y-4">
         <div className="lg:h-[30rem] h-full">
           <video
