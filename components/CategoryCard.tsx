@@ -63,23 +63,38 @@ export default function CategoryCard({ cat, index }: CategoryCardProps) {
       />
 
       {/* ===== Flip Container ===== */}
-      <div
-        className={`
-          relative w-full h-64 rounded-3xl
-          transition-all duration-700 ease-out
-          transform-style-preserve-3d
-          animate-slideInFromBottom${animationDelay}
-          shadow-[0_20px_40px_rgba(0,0,0,0.35)]
-          group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.45)]
-          will-change-transform
-          group-hover:[transform:rotateY(180deg)_translateY(-10px)_scale(1.04)_rotateX(2deg)]
-          ${
-            isFlipped
-              ? "[transform:rotateY(180deg)_translateY(-10px)_scale(1.04)_rotateX(2deg)]"
-              : ""
-          }
-        `}
-      >
+   <motion.div
+  initial={{
+    opacity: 0,
+    x: index % 2 === 0 ? -120 : 120,
+    y: 30,
+  }}
+  whileInView={{
+    opacity: 1,
+    x: 0,
+    y: 0,
+  }}
+  viewport={{ once: false, amount: 0.2 }}
+  transition={{
+    duration: 0.7,
+    ease: "easeOut",
+    delay: index * 0.1,
+  }}
+  className={`
+    relative w-full h-64 rounded-3xl
+    transition-all duration-700 ease-out
+    transform-style-preserve-3d
+    shadow-[0_20px_40px_rgba(0,0,0,0.35)]
+    group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.45)]
+    will-change-transform
+    group-hover:[transform:rotateY(180deg)_translateY(-10px)_scale(1.04)_rotateX(2deg)]
+    ${
+      isFlipped
+        ? "[transform:rotateY(180deg)_translateY(-10px)_scale(1.04)_rotateX(2deg)]"
+        : ""
+    }
+  `}
+>
         {/* ===== FRONT ===== */}
         <div
           className="
@@ -132,7 +147,7 @@ export default function CategoryCard({ cat, index }: CategoryCardProps) {
             Open →
           </span>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }
