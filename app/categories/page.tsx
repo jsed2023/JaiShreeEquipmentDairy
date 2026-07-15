@@ -7,7 +7,7 @@ export default function CategoriesPage() {
   );
 
   return (
-    <main className="relative max-w-6xl mx-auto px-4 py-24 overflow-hidden">
+    <main className="my-5 relative max-w-6xl mx-auto px-4 py-24 overflow-hidden">
 
       {/* ===== LIGHT BACKGROUND ===== */}
       <div className="fixed inset-0 -z-10 bg-white overflow-hidden">
