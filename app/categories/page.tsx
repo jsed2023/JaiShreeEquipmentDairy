@@ -36,13 +36,11 @@ export default function CategoriesPage() {
 
       {/* ===== HEADER ===== */}
       <header className="text-center max-w-3xl mx-auto mb-16">
-  <h1
-    className="text-center font-extrabold underline text-3xl sm:text-5xl
-    bg-gradient-to-r from-sky-600 via-blue-500 to-cyan-500
-    bg-clip-text text-transparent animate-title-gradient"
-  >
+  <div className="my-5 mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 space-y-3">
+    <h1 className="text-4xl font-extrabold text-sky-600 tracking-tight animate-slideInFromTop8">
     Automatic Milk Collection System (AMCS), Milk Testing Machines & Dairy Equipment in Rajasthan
   </h1>
+</div>
 </header>
 
         <p className="mt-4 text-slate-700 text-base leading-relaxed">
