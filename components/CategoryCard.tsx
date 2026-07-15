@@ -11,9 +11,7 @@ interface CategoryCardProps {
 }
 
 export default function CategoryCard({ cat, index }: CategoryCardProps) {
-  const animationDelayMap = ["8", "11", "14"];
-  const animationDelay = animationDelayMap[index % 3];
-
+  
   const glowBackground =
     cat.gradient ||
     "linear-gradient(to right,#38bdf8,#8b5cf6,#6366f1)";
