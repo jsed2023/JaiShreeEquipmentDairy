@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef } from "react";
+import { motion } from "framer-motion";
 import type { Category } from "@/config/categories";
 
 interface CategoryCardProps {
