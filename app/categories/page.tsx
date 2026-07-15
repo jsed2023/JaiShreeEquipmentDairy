@@ -41,7 +41,6 @@ export default function CategoriesPage() {
     Automatic Milk Collection System (AMCS), Milk Testing Machines & Dairy Equipment in Rajasthan
   </h1>
 </div>
-</header>
 
         <p className="mt-4 text-slate-700 text-base leading-relaxed">
           Explore our complete range of dairy solutions including dairy equipment,
