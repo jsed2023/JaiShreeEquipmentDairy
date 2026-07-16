@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: `${siteConfig.url}/about`,
+    canonical: "${siteConfig.url}/about",
   },
 
   openGraph: {

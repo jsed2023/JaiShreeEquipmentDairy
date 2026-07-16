@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://jaishreeequipmentdairy.in/contact",
+    canonical: "${siteConfig.url}/contact",
   },
 
   openGraph: {
     title: "Contact",
     description:
       "Contact for milk analyzer, DPU and dairy equipment sales & service across Rajasthan.",
-    url: "https://jaishreeequipmentdairy.in/contact",
+    url: "${siteConfig.url}/contact",
     siteName: "Jai Shree Equipment Dairy",
     locale: "en_IN",
     type: "website",
