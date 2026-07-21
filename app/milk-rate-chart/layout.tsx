@@ -3,10 +3,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
 
-  title: "Milk Rate Chart",
+  title: "Milk Rate Chart & DPU Milk Rate Generator",
 
   description:
-    "Milk Rate Chart – Upload your Excel file and instantly convert it into a digital FAT & SNF milk rate chart for DPU & dairy software | Jai Shree Equipment Dairy.",
+    "Milk Rate Chart – Upload your Excel file and instantly convert it into a digital FAT & SNF milk rate chart for DPU & Generate and download fat & SNF milk rate charts, DPU dairy khata rates, and use automated milk rate calculators for dairy management systems | Jai Shree Equipment Dairy.",
 
   keywords: metaKeywords[6].keywords,
 
