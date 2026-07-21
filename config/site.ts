@@ -143,8 +143,7 @@ keywords:
 {
   id: 6,
   name: "Milk Rate Chart - Jai Shree Equipment Dairy",
-  keywords:
-    "milk rate chart, milk rate chart for DPU dairy khata, DPU milk rate chart, dairy khata milk rate chart, milk rate chart generator, milk rate calculator, milk fat rate chart, milk SNF rate chart, FAT SNF milk rate calculator, milk rate chart update, DPU milk rate update, milk collection rate chart, milk payment chart, milk procurement software, milk collection software, dairy management software, dairy milk rate chart, milk analyzer rate chart, Excel to CSV milk rate chart, milk rate chart converter, automatic milk rate chart generator, online milk rate update tool, DPU dairy software, Jai Shree Equipment Dairy"
+  keywords: "milk rate chart, milk rate chart for DPU dairy khata, DPU milk rate chart, dairy khata milk rate chart, milk rate chart generator, milk rate calculator, milk fat rate chart, milk SNF rate chart, FAT SNF milk rate calculator, milk rate chart update, DPU milk rate update, milk collection rate chart, milk payment chart, milk procurement software, milk collection software, dairy management software, dairy milk rate chart, milk analyzer rate chart, Excel to CSV milk rate chart, milk rate chart converter, automatic milk rate chart generator, online milk rate update tool, DPU dairy software, Jai Shree Equipment Dairy"
 },
   {
     id: 7,
