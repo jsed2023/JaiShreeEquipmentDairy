@@ -188,11 +188,31 @@ productName={product.name}
 
 </h1>
 
-<p className="text-blue-600 text-2xl font-bold mt-2">
+<div className="mt-3 flex flex-wrap items-center gap-4">
+  {/* Price */}
+  <p className="text-blue-600 text-2xl sm:text-3xl font-bold">
+    {product.price ? `₹ ${product.price}` : "Get Best Price"}
+  </p>
 
-₹ {product.price || "Get Best Price"}
-
-</p>
+  {/* Buy Now */}
+  <Button
+    size="md"
+    color="primary"
+    variant="solid"
+    onPress={() =>
+      handleOpen({
+        modalType: "BN",
+        equipmentName: product.name,
+        equipmentPrice: product.price,
+      })
+    }
+  >
+    <span className="flex items-center justify-center gap-2 font-semibold">
+      <RiMoneyRupeeCircleLine className="text-xl" />
+      Buy Now
+    </span>
+  </Button>
+</div>
 
 <p className="mt-4 text-gray-600">
 
