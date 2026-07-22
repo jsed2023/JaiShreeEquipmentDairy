@@ -1410,7 +1410,6 @@ If you are looking for a reliable Milk Collection DPU, Milk Billing Machine, or 
 keywords:
   "DPU for Milk Collection, Milk Collection DPU, Dairy Khata DPU, Automatic Milk Collection System, Automatic Milk Collection Data Processor Unit, Milk Billing Machine, Milk Collection Machine, Milk Collection Data Processor, Dairy Data Processor Unit, Milk Data Processor Unit, Dairy Automation Equipment, Dairy Billing Machine, Milk Collection Software, Milk Procurement System, Milk Analyzer Compatible DPU, Weighing Scale Compatible DPU, Thermal Receipt Printing Machine, FAT SNF Billing Machine, Milk Collection Center Machine, Dairy Cooperative Equipment, Dairy Farm Equipment, Automatic Dairy Billing Machine, Digital Milk Collection Machine, Dairy Khata Milk Collection Software, Milk Collection Equipment India, DPU Machine Price, DPU Machine India, Dairy Machine Rajasthan, Milk Collection Machine Rajasthan, Milk Collection Machine Sri Ganganagar, Dairy Machine Hanumangarh, Dairy Machine Bikaner, Dairy Machine Suratgarh, Village Milk Collection Machine, Bulk Milk Collection System, Milk Society Billing Machine, Dairy Society Billing Machine, Milk Collection Unit, Dairy Procurement Equipment, Buy DPU for Milk Collection",
 },
-  ],
 ];
 export const creamSeparatorMachine: Products[] = [
   {
