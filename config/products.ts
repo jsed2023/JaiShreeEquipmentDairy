@@ -113,7 +113,7 @@ export const automaticMilkCollectionSystem: Products[] = [
     },
   ],
 
-  price: "15000",
+  price: "15,000",
 
   moreDetails: cld(
     "https://res.cloudinary.com/dddhtbuzs/image/upload/v1729601210/Technical%20Detaits%20DPU.png"
