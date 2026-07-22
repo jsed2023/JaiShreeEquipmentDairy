@@ -115,10 +115,10 @@ export default function RootLayout({
           </PageLoader>
         </Providers>
          {/* Google Tag Manager */}
-        <GoogleTagManager gtmId="GTM-N7N5234Q" />
+        <GoogleTagManager gtmId="GTM-N6QSC89J" />
 
         {/* Google Analytics 4 */}
-        <GoogleAnalytics gaId="G-TX57822QFZ" />
+        <GoogleAnalytics gaId="G-RBFDTF7PWV" />
       </body>
      
     </html>
