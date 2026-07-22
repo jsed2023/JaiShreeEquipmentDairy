@@ -1168,7 +1168,7 @@ This milk collection weighing machine is a reliable and durable solution for far
       value: "Dairy Industry Automation Equipment",
     },
     {
-      id: "13AK",
+      id: "13AJ",
       key: "Price",
       value: "₹ 14,500",
     },
