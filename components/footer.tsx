@@ -180,7 +180,7 @@ px-2 py-2 transition hover:text-amber-600"
               </div>
 
              <p className="leading-4 text-slate-600">
-                Shop No. B-42, Upper Side,Rohit Udhyog Market,Near-HP Gas Agency,Shiv Circle Road,Sri Ganganagar,Rajasthan – 335001,India
+                Shop No. B-42, Upper Side, Rohit Udhyog Market, Near-HP Gas Agency, Shiv Circle Road, Sri Ganganagar, Rajasthan – 335001, India
               </p>
             </div>
 
