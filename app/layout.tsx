@@ -89,6 +89,7 @@ export default function RootLayout({
     <html lang="en">
 
 
+
       <body
         className={clsx(
           "min-h-screen flex flex-col",
@@ -113,10 +114,13 @@ export default function RootLayout({
             </div>
           </PageLoader>
         </Providers>
-      </body>
-      <GoogleAnalytics gaId="G-TX57822QFZ" />
+         {/* Google Tag Manager */}
+        <GoogleTagManager gtmId="GTM-N7N5234Q" />
 
-      <GoogleTagManager gtmId="GTM-N7N5234Q" />
+        {/* Google Analytics 4 */}
+        <GoogleAnalytics gaId="G-TX57822QFZ" />
+      </body>
+     
     </html>
   )
 }
