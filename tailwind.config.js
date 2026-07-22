@@ -1,5 +1,5 @@
-import { nextui } from "@nextui-org/theme";
-import typography from "@tailwindcss/typography";
+const { nextui } = require("@nextui-org/theme");
+const typography = require("@tailwindcss/typography");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
 
-    // Optimized NextUI scan
+    // Scan only NextUI theme files required for components
     "./node_modules/@nextui-org/theme/dist/**/*.js",
   ],
 
@@ -15,13 +15,25 @@ module.exports = {
 
   theme: {
     extend: {
+      /**
+       * Fonts
+       *
+       * --font-sans comes from next/font in config/fonts.ts
+       * Removed --font-mono because Fira Code is not needed.
+       */
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+      },
+
+      /**
+       * Animations
+       */
       keyframes: {
         slideInFromLeft: {
           "0%": {
             transform: "translateX(-100%)",
             opacity: "0",
           },
-
           "100%": {
             transform: "translateX(0)",
             opacity: "1",
@@ -33,7 +45,6 @@ module.exports = {
             transform: "translateX(100%)",
             opacity: "0",
           },
-
           "100%": {
             transform: "translateX(0)",
             opacity: "1",
@@ -45,7 +56,6 @@ module.exports = {
             transform: "translateY(-200%)",
             opacity: "0",
           },
-
           "100%": {
             transform: "translateY(0)",
             opacity: "1",
@@ -57,7 +67,6 @@ module.exports = {
             transform: "translateY(200%)",
             opacity: "0",
           },
-
           "100%": {
             transform: "translateY(0)",
             opacity: "1",
@@ -68,11 +77,9 @@ module.exports = {
           "0%": {
             transform: "translateY(0px)",
           },
-
           "50%": {
             transform: "translateY(-20px)",
           },
-
           "100%": {
             transform: "translateY(0px)",
           },
@@ -80,56 +87,32 @@ module.exports = {
       },
 
       animation: {
-        slideInFromLeft:
-          "slideInFromLeft 1.5s ease-out forwards",
+        slideInFromLeft: "slideInFromLeft 1.5s ease-out forwards",
 
-        slideInFromRight:
-          "slideInFromRight 1.5s ease-out forwards",
+        slideInFromRight: "slideInFromRight 1.5s ease-out forwards",
 
-        slideInFromTop5:
-          "slideInFromTop .5s ease-out forwards",
+        slideInFromTop5: "slideInFromTop .5s ease-out forwards",
+        slideInFromTop8: "slideInFromTop .8s ease-out forwards",
+        slideInFromTop11: "slideInFromTop 1.1s ease-out forwards",
+        slideInFromTop14: "slideInFromTop 1.4s ease-out forwards",
+        slideInFromTop17: "slideInFromTop 1.7s ease-out forwards",
 
-        slideInFromTop8:
-          "slideInFromTop .8s ease-out forwards",
-
-        slideInFromTop11:
-          "slideInFromTop 1.1s ease-out forwards",
-
-        slideInFromTop14:
-          "slideInFromTop 1.4s ease-out forwards",
-
-        slideInFromTop17:
-          "slideInFromTop 1.7s ease-out forwards",
-
-        slideInFromBottom5:
-          "slideInFromBottom .5s ease-out forwards",
-
-        slideInFromBottom8:
-          "slideInFromBottom .8s ease-out forwards",
-
-        slideInFromBottom11:
-          "slideInFromBottom 1.1s ease-out forwards",
-
-        slideInFromBottom14:
-          "slideInFromBottom 1.4s ease-out forwards",
-
-        slideInFromBottom17:
-          "slideInFromBottom 1.7s ease-out forwards",
+        slideInFromBottom5: "slideInFromBottom .5s ease-out forwards",
+        slideInFromBottom8: "slideInFromBottom .8s ease-out forwards",
+        slideInFromBottom11: "slideInFromBottom 1.1s ease-out forwards",
+        slideInFromBottom14: "slideInFromBottom 1.4s ease-out forwards",
+        slideInFromBottom17: "slideInFromBottom 1.7s ease-out forwards",
 
         float: "float 6s ease-in-out infinite",
       },
 
-      fontFamily: {
-        sans: ["var(--font-sans)"],
-
-        mono: ["var(--font-mono)"],
-      },
-
+      /**
+       * Tailwind Typography
+       */
       typography: {
         DEFAULT: {
           css: {
             maxWidth: "100%",
-
             color: "#374151",
 
             h1: {
