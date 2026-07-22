@@ -277,7 +277,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       {
         id: "2C",
         key: "DC Power Supply",
-        value: "220/230 Volts, 50 Hz",
+        value: "12V DC, 5A",
       },
       {
         id: "2D",
@@ -373,7 +373,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       {
         id: "2C",
         key: "DC Power Supply",
-        value: "220/230 Volts, 50 Hz",
+        value: "12V DC, 5A",
       },
       {
         id: "2D",
