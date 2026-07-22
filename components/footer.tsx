@@ -139,7 +139,7 @@ px-2 py-2 transition hover:text-amber-600"
                 href: "/dairy-equipment",
               },
                {
-                name: "Milk Testing Machine Spare Parts
+                name: "Milk Testing Machine Spare Parts",
                 href: "/milk-testing-machine-spare-parts",
               },
               {
