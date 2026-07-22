@@ -1392,7 +1392,7 @@ This milk collection weighing machine is a reliable and durable solution for far
       id: "14AK",
       key: "Price",
       value: "₹ 14,500",
-    },
+    },],
 desc:
   "DPU for Milk Collection by Dairy Khata is an advanced digital milk collection and billing machine designed to simplify milk procurement for dairy societies, milk collection centers, dairy farms, and cooperative unions. The system automatically collects milk quantity from the weighing scale and milk quality data from the milk analyzer, then instantly calculates FAT, SNF, CLR, milk quantity, rate, and total payment without manual calculations.
 
