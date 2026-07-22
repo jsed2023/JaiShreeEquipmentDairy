@@ -547,7 +547,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       {
         id: "4D",
         key: "Equipment Type",
-        value: "Platform weingh scale",
+        value: "Platform Weighing Scale",
       },
       { id: "4E", key: "Type", value: "Platform Weighing Machine (AMCS Compatible)" },
       { id: "4F", key: "Output", value: "Direct DPU Connection (Analog / RS232 Optional)" },
@@ -918,17 +918,17 @@ export const automaticMilkCollectionSystem: Products[] = [
 },
 {
   id: 12,
-  name: "Dairy Weighing Machine 300kg",
+  name: "Dairy Weighing Machine",
   url: "dairy-weighing-machine-amcs",
   category: "automatic-milk-collection-system",
 
   smallDesc:
-    "The 300kg Dairy Weighing Machine uses load cell technology with direct DPU integration for precise milk weighing in dairy farms and milk collection centers.",
+    "The Dairy Weighing Machine uses load cell technology with direct DPU integration for precise milk weighing in dairy farms and milk collection centers.",
 
   images: [
     {
       src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902744/weighing-scale.jpg"),
-      alt: "Dairy Weighing Machine 300kg",
+      alt: "Dairy Weighing Machine",
     },
   ],
 
