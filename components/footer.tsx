@@ -138,13 +138,13 @@ px-2 py-2 transition hover:text-amber-600"
                 name: "Cream Separator Machine",
                 href: "/dairy-equipment",
               },
-              {
-                name: "Electronic Weighing Scale",
-                href: "/automatic-milk-collection-system",
+               {
+                name: "Milk Testing Machine Spare Parts
+                href: "/milk-testing-machine-spare-parts",
               },
               {
-                name: "Dairy Automation Solutions",
-                href: "/automatic-milk-collection-system",
+                name: "Milk Testing Equipment",
+                href: "/milk-testing-equipment",
               },
             ].map((item) => (
               <li
