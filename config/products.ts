@@ -1180,6 +1180,235 @@ This milk collection weighing machine is a reliable and durable solution for far
   keywords:
     "Dairy Khata DPU Machine, Dpu For Milk Collection, Automatic Milk Collection System, Milk Billing Machine, Milk Collection Data Processor Unit, Dairy Khata Machine, DPU Milk Collection Unit, Automatic Milk Collection Machine, Dairy Automation Equipment, Milk Analyzer Machine, Milk Billing Software, Dairy Farm Equipment, Milk Procurement System, FAT SNF Milk Testing Machine, Dairy Khata Software, Dairy Billing Machine Rajasthan, Milk Collection Center Machine, Dairy Society Billing Machine, Dairy Equipment India, Milk Collection Unit Sri Ganganagar, Dairy Machine Hanumangarh, Dairy Machine Bikaner, Dairy Machine Suratgarh, Automatic Dairy Billing System, Milk Data Processor Unit, Buy Dairy Khata DPU Machine, DPU Machine Price Rajasthan, Best Milk Collection Machine India, Milk Collection Software, Dairy Data Processor Machine, Digital Milk Collection Machine",
 },
+{
+  id: 14,
+
+  url: "dpu-for-milk-collection",
+
+  name: "DPU for Milk Collection",
+
+  category: "automatic-milk-collection-system",
+
+  smallDesc:
+    "Buy DPU for Milk Collection by Dairy Khata for automatic milk billing, FAT & SNF calculation, thermal receipt printing, milk analyzer connectivity, and member data management. Ideal for dairy societies, milk collection centers, and dairy farms across India.",
+
+  images: [
+    {
+      src: cld(
+        "https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png"
+      ),
+      alt: "DPU for Milk Collection Machine by Dairy Khata",
+    },
+  ],
+
+  price: "14,500",
+
+  moreDetails: cld(
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1729601210/Technical%20Detaits%20DPU.png"
+  ),
+
+  features: [
+    {
+      id: "14A",
+      key: "Brand",
+      value: "Dairy Khata",
+    },
+    {
+      id: "14B",
+      key: "Product Name",
+      value: "DPU for Milk Collection",
+    },
+    {
+      id: "14C",
+      key: "Product Type",
+      value: "Milk Collection Data Processor Unit",
+    },
+    {
+      id: "14D",
+      key: "Machine Type",
+      value: "Automatic Milk Collection System",
+    },
+    {
+      id: "14E",
+      key: "Application",
+      value: "Milk Collection & Dairy Billing",
+    },
+    {
+      id: "14F",
+      key: "Equipment Type",
+      value: "Automatic Milk Billing Machine",
+    },
+    {
+      id: "14G",
+      key: "Technology",
+      value: "Digital Dairy Automation Technology",
+    },
+    {
+      id: "14H",
+      key: "Display Type",
+      value: "28x12 (S) LCD Yellow Green Display",
+    },
+    {
+      id: "14I",
+      key: "Display Visibility",
+      value: "High Brightness Digital Display",
+    },
+    {
+      id: "14J",
+      key: "Printer Support",
+      value: "Thermal Receipt Printer Supported",
+    },
+    {
+      id: "14K",
+      key: "Milk Analyzer Connectivity",
+      value: "Supported",
+    },
+    {
+      id: "14L",
+      key: "Weighing Scale Connectivity",
+      value: "Supported",
+    },
+    {
+      id: "14M",
+      key: "Milk Data Processing",
+      value: "Fully Automatic",
+    },
+    {
+      id: "14N",
+      key: "Milk Receipt Printing",
+      value: "Instant Thermal Slip Printing",
+    },
+    {
+      id: "14O",
+      key: "Receipt Details",
+      value: "FAT, SNF, CLR, Quantity, Rate & Amount",
+    },
+    {
+      id: "14P",
+      key: "Member Capacity",
+      value: "500 Milk Members",
+    },
+    {
+      id: "14Q",
+      key: "Data Backup",
+      value: "5 Years Secure Data Memory",
+    },
+    {
+      id: "14R",
+      key: "Software Support",
+      value: "Dairy Khata Milk Collection Software",
+    },
+    {
+      id: "14S",
+      key: "Language Support",
+      value: "Hindi, English & Multiple Language Support",
+    },
+    {
+      id: "14T",
+      key: "Body Material",
+      value: "Heavy Duty MS Body",
+    },
+    {
+      id: "14U",
+      key: "Power Supply",
+      value: "12V, 3A Power Adapter",
+    },
+    {
+      id: "14V",
+      key: "Phase",
+      value: "Single Phase",
+    },
+    {
+      id: "14W",
+      key: "Automation",
+      value: "Fully Automatic Milk Collection & Billing",
+    },
+    {
+      id: "14X",
+      key: "Operation",
+      value: "Easy & User Friendly Interface",
+    },
+    {
+      id: "14Y",
+      key: "Accuracy",
+      value: "High Accuracy Milk Billing System",
+    },
+    {
+      id: "14Z",
+      key: "Connectivity",
+      value: "USB Data Transfer Supported",
+    },
+    {
+      id: "14AA",
+      key: "Data Management",
+      value: "Customer Ledger & Milk Record Management",
+    },
+    {
+      id: "14AB",
+      key: "Milk Testing Parameters",
+      value: "FAT, SNF & CLR",
+    },
+    {
+      id: "14AC",
+      key: "Suitable For",
+      value: "Dairy Farm, Dairy Society, Milk Collection Center & Milk Cooperative",
+    },
+    {
+      id: "14AD",
+      key: "Installation",
+      value: "Easy Installation & Quick Setup",
+    },
+    {
+      id: "14AE",
+      key: "Maintenance",
+      value: "Low Maintenance Required",
+    },
+    {
+      id: "14AF",
+      key: "Customization",
+      value: "Custom Software & Milk Slip Format Available",
+    },
+    {
+      id: "14AG",
+      key: "Country of Origin",
+      value: "Made in India",
+    },
+    {
+      id: "14AH",
+      key: "Popular Locations",
+      value: "Sri Ganganagar, Hanumangarh, Bikaner, Suratgarh, Raisinghnagar, Anupgarh, Padampur & Rajasthan",
+    },
+    {
+      id: "14AI",
+      key: "Industry",
+      value: "Dairy Industry Automation Equipment",
+    },
+    {
+      id: "14AJ",
+      key: "Warranty",
+      value: "1 Year Service Support",
+    },
+    {
+      id: "14AK",
+      key: "Price",
+      value: "₹ 14,500",
+    },
+desc:
+  "DPU for Milk Collection by Dairy Khata is an advanced digital milk collection and billing machine designed to simplify milk procurement for dairy societies, milk collection centers, dairy farms, and cooperative unions. The system automatically collects milk quantity from the weighing scale and milk quality data from the milk analyzer, then instantly calculates FAT, SNF, CLR, milk quantity, rate, and total payment without manual calculations.
+
+  This Automatic Milk Collection Data Processor Unit prints clear thermal receipts containing member name, milk quantity, FAT, SNF, CLR, rate, amount, date, and transaction details. The machine supports secure storage of up to 500 milk members with long-term data backup, making daily milk collection and record management fast, accurate, and reliable.
+
+  The Dairy Khata DPU integrates seamlessly with compatible milk analyzers, electronic weighing scales, thermal printers, and Dairy Khata Milk Collection Software. USB data transfer allows operators to back up records and generate reports whenever required. Its user-friendly interface and Hindi, English, and multilingual support make daily operation simple for dairy operators.
+
+  Built with a heavy-duty MS body and powered by a 12V, 3A adapter, the machine is designed for continuous operation in village milk collection centers as well as large dairy societies. It reduces billing errors, improves transparency, saves operator time, and helps maintain accurate member payment records.
+
+  DPU for Milk Collection is suitable for dairy cooperatives, private milk procurement businesses, village milk collection centers, dairy farms, and bulk milk collection units. It is widely used in Sri Ganganagar, Hanumangarh, Bikaner, Suratgarh, Raisinghnagar, Anupgarh, Padampur, and other dairy regions across Rajasthan and India.
+
+  If you are looking for a reliable Milk Collection DPU, Milk Billing Machine, or Automatic Milk Collection System, the Dairy Khata DPU provides accurate billing, secure data management, thermal receipt printing, and dependable performance for modern dairy operations.",
+keywords:
+  "DPU for Milk Collection, Milk Collection DPU, Dairy Khata DPU, Automatic Milk Collection System, Automatic Milk Collection Data Processor Unit, Milk Billing Machine, Milk Collection Machine, Milk Collection Data Processor, Dairy Data Processor Unit, Milk Data Processor Unit, Dairy Automation Equipment, Dairy Billing Machine, Milk Collection Software, Milk Procurement System, Milk Analyzer Compatible DPU, Weighing Scale Compatible DPU, Thermal Receipt Printing Machine, FAT SNF Billing Machine, Milk Collection Center Machine, Dairy Cooperative Equipment, Dairy Farm Equipment, Automatic Dairy Billing Machine, Digital Milk Collection Machine, Dairy Khata Milk Collection Software, Milk Collection Equipment India, DPU Machine Price, DPU Machine India, Dairy Machine Rajasthan, Milk Collection Machine Rajasthan, Milk Collection Machine Sri Ganganagar, Dairy Machine Hanumangarh, Dairy Machine Bikaner, Dairy Machine Suratgarh, Village Milk Collection Machine, Bulk Milk Collection System, Milk Society Billing Machine, Dairy Society Billing Machine, Milk Collection Unit, Dairy Procurement Equipment, Buy DPU for Milk Collection",
+},
+  ],
 ];
 export const creamSeparatorMachine: Products[] = [
   {
