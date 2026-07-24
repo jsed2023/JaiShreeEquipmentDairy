@@ -290,7 +290,7 @@ export const spareParts = [
   id: 11,
   slug: "ekomilk-motor-pcb",
   name: "Ekomilk Motor PCB",
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848855/Ekomilk_Motor_PCB.webp",
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Ekomilk_Motor_PCB.webp",
   sku: "EKO-MPCB-010",
   price: "₹3,000",
   category: "Milk Analyzer Spare Parts",
