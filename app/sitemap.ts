@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
 import {
@@ -11,7 +11,7 @@ import {
 import { blogs } from "@/config/blogs";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
-export const revalidate = 3600; // 1 hour
+export const revalidate = 3600;
 
 const BASE_URL = siteConfig.url.replace(/\/$/, "");
 
@@ -29,153 +29,246 @@ type BlogType = {
   updatedAt?: string | Date;
 };
 
-const getLastModified = (
-  date?: string | Date
-): Date | undefined => {
+type SitemapOptions = {
+  priority?: number;
+  changeFrequency?: ChangeFrequency;
+  lastModified?: string | Date;
+};
+
+/**
+ * Safely converts a date value to Date.
+ * Invalid or missing dates are ignored.
+ */
+function parseDate(date?: string | Date): Date | undefined {
   if (!date) return undefined;
 
-  const parsed = new Date(date);
+  const parsed = date instanceof Date ? date : new Date(date);
 
-  if (isNaN(parsed.getTime())) {
+  if (Number.isNaN(parsed.getTime())) {
     return undefined;
   }
 
   return parsed;
-};
+}
 
-const BUILD_DATE = new Date();
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [];
   const addedUrls = new Set<string>();
 
+  /**
+   * Adds a URL while preventing duplicates.
+   */
   const addUrl = (
     path: string,
-    priority = 0.7,
-    changeFrequency: ChangeFrequency = "weekly",
-    lastModified?: Date
+    {
+      priority = 0.7,
+      changeFrequency = "weekly",
+      lastModified,
+    }: SitemapOptions = {}
   ) => {
-    const url = encodeURI(`${BASE_URL}${path}`);
+    // Ensure path starts with /
+    const normalizedPath = path.startsWith("/")
+      ? path
+      : `/${path}`;
 
-    if (addedUrls.has(url)) return;
+    const url =
+      normalizedPath === "/"
+        ? `${BASE_URL}/`
+        : `${BASE_URL}${normalizedPath}`;
+
+    if (addedUrls.has(url)) {
+      return;
+    }
 
     addedUrls.add(url);
 
+    const parsedLastModified = parseDate(lastModified);
+
     sitemap.push({
       url,
-      ...(lastModified ? { lastModified } : {}),
       changeFrequency,
       priority,
+      ...(parsedLastModified
+        ? { lastModified: parsedLastModified }
+        : {}),
     });
   };
 
-  // Static Pages
+  // --------------------------------------------------
+  // Main / Static Pages
+  // --------------------------------------------------
 
-  [
-    ["/", 1, "daily"],
-    ["/about", 0.5, "monthly"],
-    ["/contact", 0.5, "monthly"],
-    ["/blog", 0.8, "daily"],
-    ["/services", 0.7, "monthly"],
-    ["/gallery", 0.5, "monthly"],
-    ["/testimonials", 0.5, "monthly"],
-    ["/locations", 0.6, "weekly"],
-    ["/categories", 0.7, "weekly"],
-    ["/milestones", 0.5, "monthly"],
-    ["/dairy-equipment", 0.8, "weekly"],
-    ["/milk-testing-equipment", 0.8, "weekly"],
-    ["/milk-analyzer-machines", 0.8, "weekly"],
-    ["/milk-testing-machine-spare-parts", 0.8, "weekly"],
-    ["/automatic-milk-collection-system", 0.8, "weekly"],
-    ["/milk-rate-chart", 0.7, "daily"],
-  ].forEach(([path, priority, freq]) => {
-  addUrl(
-    path as string,
-    priority as number,
-    freq as ChangeFrequency,
-    BUILD_DATE
-    );
+  addUrl("/", {
+    priority: 1,
+    changeFrequency: "daily",
   });
 
+  addUrl("/about", {
+    priority: 0.5,
+    changeFrequency: "monthly",
+  });
+
+  addUrl("/contact", {
+    priority: 0.5,
+    changeFrequency: "monthly",
+  });
+
+  addUrl("/blog", {
+    priority: 0.8,
+    changeFrequency: "daily",
+  });
+
+  addUrl("/services", {
+    priority: 0.7,
+    changeFrequency: "monthly",
+  });
+
+  addUrl("/gallery", {
+    priority: 0.5,
+    changeFrequency: "monthly",
+  });
+
+  addUrl("/testimonials", {
+    priority: 0.5,
+    changeFrequency: "monthly",
+  });
+
+  addUrl("/locations", {
+    priority: 0.6,
+    changeFrequency: "weekly",
+  });
+
+  addUrl("/categories", {
+    priority: 0.7,
+    changeFrequency: "weekly",
+  });
+
+  addUrl("/milestones", {
+    priority: 0.5,
+    changeFrequency: "monthly",
+  });
+
+  addUrl("/dairy-equipment", {
+    priority: 0.8,
+    changeFrequency: "weekly",
+  });
+
+  addUrl("/milk-testing-equipment", {
+    priority: 0.8,
+    changeFrequency: "weekly",
+  });
+
+  addUrl("/milk-analyzer-machines", {
+    priority: 0.8,
+    changeFrequency: "weekly",
+  });
+
+  addUrl("/milk-testing-machine-spare-parts", {
+    priority: 0.8,
+    changeFrequency: "weekly",
+  });
+
+  addUrl("/automatic-milk-collection-system", {
+    priority: 0.8,
+    changeFrequency: "weekly",
+  });
+
+  addUrl("/milk-rate-chart", {
+    priority: 0.7,
+    changeFrequency: "daily",
+  });
+
+  // --------------------------------------------------
   // Automatic Milk Collection System
+  // --------------------------------------------------
 
   automaticMilkCollectionSystem?.forEach((product) => {
     if (!product?.url) return;
 
     addUrl(
       `/automatic-milk-collection-system/${product.url}`,
-      0.7,
-      "weekly",
-      getLastModified(product.updatedAt) ?? BUILD_DATE
+      {
+        priority: 0.7,
+        changeFrequency: "weekly",
+        lastModified: product.updatedAt,
+      }
     );
   });
 
+  // --------------------------------------------------
   // Dairy Equipment
+  // --------------------------------------------------
 
-  [...creamSeparatorMachine, ...milkingMachine].forEach(
-    (product) => {
-      if (!product?.url) return;
+  const dairyEquipment = [
+    ...(creamSeparatorMachine ?? []),
+    ...(milkingMachine ?? []),
+  ];
 
-      addUrl(
-        `/dairy-equipment/${product.url}`,
-        0.7,
-        "weekly",
-        getLastModified(product.updatedAt) ?? BUILD_DATE
-      );
-    }
-  );
+  dairyEquipment.forEach((product) => {
+    if (!product?.url) return;
 
+    addUrl(`/dairy-equipment/${product.url}`, {
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: product.updatedAt,
+    });
+  });
+
+  // --------------------------------------------------
   // Milk Testing Equipment
+  // --------------------------------------------------
 
   MilkTestingEquipment?.forEach((product) => {
     if (!product?.url) return;
 
-    addUrl(
-      `/milk-testing-equipment/${product.url}`,
-      0.7,
-      "weekly",
-      getLastModified(product.updatedAt) ?? BUILD_DATE
-    );
+    addUrl(`/milk-testing-equipment/${product.url}`, {
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: product.updatedAt,
+    });
   });
 
+  // --------------------------------------------------
   // Milk Analyzer Machines
+  // --------------------------------------------------
 
   MilkAnalyzerMachines?.forEach((product) => {
     if (!product?.url) return;
 
-    addUrl(
-      `/milk-analyzer-machines/${product.url}`,
-      0.7,
-      "weekly",
-      getLastModified(product.updatedAt) ?? BUILD_DATE
-    );
+    addUrl(`/milk-analyzer-machines/${product.url}`, {
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: product.updatedAt,
+    });
   });
 
-  // Blogs
+  // --------------------------------------------------
+  // Blog Posts
+  // --------------------------------------------------
 
   Object.values(
     blogs as Record<string, BlogType>
   ).forEach((blog) => {
     if (!blog?.slug) return;
 
-    addUrl(
-      `/blog/${blog.slug}`,
-      0.8,
-      "weekly",
-      getLastModified(blog.updatedAt) ?? BUILD_DATE
-    );
+    addUrl(`/blog/${blog.slug}`, {
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: blog.updatedAt,
+    });
   });
 
-  // Rajasthan Location Pages
+  // --------------------------------------------------
+  // Rajasthan Location Landing Pages
+  // --------------------------------------------------
 
   rajasthanLocations?.forEach((location) => {
     if (!location?.slug) return;
 
-    addUrl(
-      `/milk-analyzer-${location.slug}`,
-      0.5,
-      "monthly",
-      BUILD_DATE
-    );
+    addUrl(`/milk-analyzer-${location.slug}`, {
+      priority: 0.5,
+      changeFrequency: "monthly",
+    });
   });
 
   return sitemap;
