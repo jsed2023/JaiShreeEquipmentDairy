@@ -149,7 +149,7 @@ your dairy machines operate efficiently.
         bg-clip-text text-transparent animate-title-gradient">
           OUR PRODUCTS
         </h2></div>
-        <<p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
+        <p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
   We are a trusted supplier of{" "}
   <strong>Milk Analyzer Machines and Dairy Equipment</strong>, providing
   professional repair and maintenance services for dairy farms and milk
