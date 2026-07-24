@@ -149,16 +149,21 @@ your dairy machines operate efficiently.
         bg-clip-text text-transparent animate-title-gradient">
           OUR PRODUCTS
         </h2></div>
-        <p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
-          We are a trusted supplier of essential Milk Analyzer Machines,and 
-          dairy machines servicing all your repair and maintenance needs with
-          expertise. Our focus on delivering top-quality{" "}
-          <strong>Milk Analyzer Machines, Milk Collection Unit (DPU), Milk Fat
-            Testing Machines, Milking Machines, Cream Separators Machines </strong>
-          , and more ensures the highest standards in your dairy operations.
-          When your dairy farm productivity matters, rely on JAI SHREE EQUIPMENT
-          DAIRY for innovative and reliable solutions.
-        </p> 
+        <<p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
+  We are a trusted supplier of{" "}
+  <strong>Milk Analyzer Machines and Dairy Equipment</strong>, providing
+  professional repair and maintenance services for dairy farms and milk
+  collection centers. Our product range includes{" "}
+  <strong>
+    Milk Analyzer Machines, Milk Collection Units (DPU), Milk Fat Testing
+    Machines, Milking Machines, Cream Separator Machines, and Digital
+    Weighing Scales
+  </strong>
+  . We provide reliable dairy equipment and solutions designed to improve
+  milk testing accuracy, operational efficiency, and productivity. Choose
+  JAI SHREE EQUIPMENT DAIRY for dependable dairy equipment, professional
+  service, and reliable support.
+</p>
          </section>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
             {[
