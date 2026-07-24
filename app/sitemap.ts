@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 
-import { siteConfig } from "@/config/site";
 import {
   MilkTestingEquipment,
   creamSeparatorMachine,
@@ -8,12 +7,21 @@ import {
   automaticMilkCollectionSystem,
   MilkAnalyzerMachines,
 } from "@/config/products";
+
 import { blogs } from "@/config/blogs";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
+/**
+ * Re-generate sitemap every hour.
+ */
 export const revalidate = 3600;
 
-const BASE_URL = siteConfig.url.replace(/\/$/, "");
+/**
+ * Keep the production canonical domain fixed here.
+ * This prevents an invalid siteConfig/environment value
+ * from breaking sitemap generation.
+ */
+const BASE_URL = "https://jaishreeequipmentdairy.co.in";
 
 type ChangeFrequency =
   | "always"
@@ -24,40 +32,61 @@ type ChangeFrequency =
   | "yearly"
   | "never";
 
-type BlogType = {
-  slug: string;
-  updatedAt?: string | Date;
-};
-
 type SitemapOptions = {
   priority?: number;
   changeFrequency?: ChangeFrequency;
   lastModified?: string | Date;
 };
 
+type BlogType = {
+  slug?: string;
+  updatedAt?: string | Date;
+};
+
 /**
- * Safely converts a date value to Date.
- * Invalid or missing dates are ignored.
+ * Safely parse dates.
+ * Invalid/missing dates will simply be excluded
+ * from the generated XML.
  */
-function parseDate(date?: string | Date): Date | undefined {
-  if (!date) return undefined;
+function parseDate(value?: string | Date): Date | undefined {
+  if (!value) return undefined;
 
-  const parsed = date instanceof Date ? date : new Date(date);
+  const date = value instanceof Date ? value : new Date(value);
 
-  if (Number.isNaN(parsed.getTime())) {
-    return undefined;
-  }
-
-  return parsed;
+  return Number.isNaN(date.getTime()) ? undefined : date;
 }
 
+/**
+ * Normalize URL path segments.
+ *
+ * Prevents:
+ * - accidental leading/trailing spaces
+ * - duplicate slashes
+ * - leading/trailing slashes in slugs
+ */
+function normalizePath(path: string): string {
+  const cleaned = String(path)
+    .trim()
+    .replace(/^\/+|\/+$/g, "");
+
+  if (!cleaned) {
+    return "/";
+  }
+
+  return `/${cleaned}`;
+}
+
+/**
+ * Generate sitemap.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const sitemap: MetadataRoute.Sitemap = [];
-  const addedUrls = new Set<string>();
+  const entries: MetadataRoute.Sitemap = [];
 
   /**
-   * Adds a URL while preventing duplicates.
+   * Prevent duplicate URLs.
    */
+  const addedUrls = new Set<string>();
+
   const addUrl = (
     path: string,
     {
@@ -66,16 +95,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
     }: SitemapOptions = {}
   ) => {
-    // Ensure path starts with /
-    const normalizedPath = path.startsWith("/")
-      ? path
-      : `/${path}`;
+    if (!path) return;
+
+    const normalizedPath = normalizePath(path);
 
     const url =
       normalizedPath === "/"
         ? `${BASE_URL}/`
         : `${BASE_URL}${normalizedPath}`;
 
+    /**
+     * Skip duplicates.
+     */
     if (addedUrls.has(url)) {
       return;
     }
@@ -84,24 +115,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const parsedLastModified = parseDate(lastModified);
 
-    sitemap.push({
+    const entry: MetadataRoute.Sitemap[number] = {
       url,
       changeFrequency,
       priority,
-      ...(parsedLastModified
-        ? { lastModified: parsedLastModified }
-        : {}),
-    });
+    };
+
+    if (parsedLastModified) {
+      entry.lastModified = parsedLastModified;
+    }
+
+    entries.push(entry);
   };
 
-  // --------------------------------------------------
-  // Main / Static Pages
-  // --------------------------------------------------
+  // ==================================================
+  // HOME
+  // ==================================================
 
   addUrl("/", {
     priority: 1,
     changeFrequency: "daily",
   });
+
+  // ==================================================
+  // STATIC PAGES
+  // ==================================================
 
   addUrl("/about", {
     priority: 0.5,
@@ -148,6 +186,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly",
   });
 
+  // ==================================================
+  // MAIN CATEGORY PAGES
+  // ==================================================
+
   addUrl("/dairy-equipment", {
     priority: 0.8,
     changeFrequency: "weekly",
@@ -178,98 +220,153 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "daily",
   });
 
-  // --------------------------------------------------
-  // Automatic Milk Collection System
-  // --------------------------------------------------
+  // ==================================================
+  // AUTOMATIC MILK COLLECTION SYSTEM
+  // ==================================================
 
-  automaticMilkCollectionSystem?.forEach((product) => {
-    if (!product?.url) return;
+  if (Array.isArray(automaticMilkCollectionSystem)) {
+    automaticMilkCollectionSystem.forEach((product) => {
+      if (!product?.url) return;
 
-    addUrl(
-      `/automatic-milk-collection-system/${product.url}`,
-      {
-        priority: 0.7,
-        changeFrequency: "weekly",
-        lastModified: product.updatedAt,
-      }
-    );
-  });
+      const slug = String(product.url)
+        .trim()
+        .replace(/^\/+|\/+$/g, "");
 
-  // --------------------------------------------------
-  // Dairy Equipment
-  // --------------------------------------------------
+      if (!slug) return;
+
+      addUrl(
+        `/automatic-milk-collection-system/${slug}`,
+        {
+          priority: 0.7,
+          changeFrequency: "weekly",
+          lastModified: product.updatedAt,
+        }
+      );
+    });
+  }
+
+  // ==================================================
+  // DAIRY EQUIPMENT
+  // ==================================================
 
   const dairyEquipment = [
-    ...(creamSeparatorMachine ?? []),
-    ...(milkingMachine ?? []),
+    ...(Array.isArray(creamSeparatorMachine)
+      ? creamSeparatorMachine
+      : []),
+
+    ...(Array.isArray(milkingMachine)
+      ? milkingMachine
+      : []),
   ];
 
   dairyEquipment.forEach((product) => {
     if (!product?.url) return;
 
-    addUrl(`/dairy-equipment/${product.url}`, {
+    const slug = String(product.url)
+      .trim()
+      .replace(/^\/+|\/+$/g, "");
+
+    if (!slug) return;
+
+    addUrl(`/dairy-equipment/${slug}`, {
       priority: 0.7,
       changeFrequency: "weekly",
       lastModified: product.updatedAt,
     });
   });
 
-  // --------------------------------------------------
-  // Milk Testing Equipment
-  // --------------------------------------------------
+  // ==================================================
+  // MILK TESTING EQUIPMENT
+  // ==================================================
 
-  MilkTestingEquipment?.forEach((product) => {
-    if (!product?.url) return;
+  if (Array.isArray(MilkTestingEquipment)) {
+    MilkTestingEquipment.forEach((product) => {
+      if (!product?.url) return;
 
-    addUrl(`/milk-testing-equipment/${product.url}`, {
-      priority: 0.7,
-      changeFrequency: "weekly",
-      lastModified: product.updatedAt,
+      const slug = String(product.url)
+        .trim()
+        .replace(/^\/+|\/+$/g, "");
+
+      if (!slug) return;
+
+      addUrl(`/milk-testing-equipment/${slug}`, {
+        priority: 0.7,
+        changeFrequency: "weekly",
+        lastModified: product.updatedAt,
+      });
     });
-  });
+  }
 
-  // --------------------------------------------------
-  // Milk Analyzer Machines
-  // --------------------------------------------------
+  // ==================================================
+  // MILK ANALYZER MACHINES
+  // ==================================================
 
-  MilkAnalyzerMachines?.forEach((product) => {
-    if (!product?.url) return;
+  if (Array.isArray(MilkAnalyzerMachines)) {
+    MilkAnalyzerMachines.forEach((product) => {
+      if (!product?.url) return;
 
-    addUrl(`/milk-analyzer-machines/${product.url}`, {
-      priority: 0.7,
-      changeFrequency: "weekly",
-      lastModified: product.updatedAt,
+      const slug = String(product.url)
+        .trim()
+        .replace(/^\/+|\/+$/g, "");
+
+      if (!slug) return;
+
+      addUrl(`/milk-analyzer-machines/${slug}`, {
+        priority: 0.7,
+        changeFrequency: "weekly",
+        lastModified: product.updatedAt,
+      });
     });
-  });
+  }
 
-  // --------------------------------------------------
-  // Blog Posts
-  // --------------------------------------------------
+  // ==================================================
+  // BLOG POSTS
+  // ==================================================
 
-  Object.values(
-    blogs as Record<string, BlogType>
-  ).forEach((blog) => {
-    if (!blog?.slug) return;
+  if (blogs && typeof blogs === "object") {
+    Object.values(
+      blogs as Record<string, BlogType>
+    ).forEach((blog) => {
+      if (!blog?.slug) return;
 
-    addUrl(`/blog/${blog.slug}`, {
-      priority: 0.8,
-      changeFrequency: "weekly",
-      lastModified: blog.updatedAt,
+      const slug = String(blog.slug)
+        .trim()
+        .replace(/^\/+|\/+$/g, "");
+
+      if (!slug) return;
+
+      addUrl(`/blog/${slug}`, {
+        priority: 0.8,
+        changeFrequency: "weekly",
+        lastModified: blog.updatedAt,
+      });
     });
-  });
+  }
 
-  // --------------------------------------------------
-  // Rajasthan Location Landing Pages
-  // --------------------------------------------------
+  // ==================================================
+  // RAJASTHAN LOCATION LANDING PAGES
+  // ==================================================
 
-  rajasthanLocations?.forEach((location) => {
-    if (!location?.slug) return;
+  if (Array.isArray(rajasthanLocations)) {
+    rajasthanLocations.forEach((location) => {
+      if (!location?.slug) return;
 
-    addUrl(`/milk-analyzer-${location.slug}`, {
-      priority: 0.5,
-      changeFrequency: "monthly",
+      const slug = String(location.slug)
+        .trim()
+        .replace(/^\/+|\/+$/g, "");
+
+      if (!slug) return;
+
+      addUrl(`/milk-analyzer-${slug}`, {
+        priority: 0.5,
+        changeFrequency: "monthly",
+      });
     });
-  });
+  }
 
-  return sitemap;
+  // ==================================================
+  // RETURN FINAL SITEMAP
+  // ==================================================
+
+  return entries;
 }
