@@ -298,7 +298,7 @@ export const spareParts = [
   warranty: "6 Months",
   keywords: [
     "ekomilk motor pcb",
-    "motor error pcb",
+    "motor pcb for ekomilk",
     "milk analyzer motor board"
   ],
   description:
