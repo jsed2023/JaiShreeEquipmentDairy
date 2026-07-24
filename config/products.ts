@@ -448,7 +448,7 @@ export const automaticMilkCollectionSystem: Products[] = [
       alt: "Milk Analyzer Machine",
       },
     ],
-    price: "33,500",
+    price: "37,500",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
     features: [
