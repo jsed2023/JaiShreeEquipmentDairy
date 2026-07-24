@@ -14,7 +14,7 @@ const seoContent = [
 
   "Milk analyzer machines are essential for modern dairy operations because they help measure important milk parameters such as FAT, SNF, density, protein, and added water. Accurate milk testing ensures fair payment systems and improves milk quality standards.",
 
-  "Our product range includes Advance Milk Analyzer, Advance Milk Analyzer Plus, Advance Milk Analyzer Max, Ekomilk Ultra Milk Analyzer, Milk For Data Collection Units (DPU), Milking Machines, Cream Separator Machines, Ultrasonic Milk Stirrers, and Digital Weighing Scales.",
+  "Our product range includes Advance Milk Analyzer, Advance Milk Analyzer Plus, Advance Milk Analyzer Max, Ekomilk Ultra Milk Analyzer, Milk Data Processing Units (DPU), Milking Machines, Cream Separator Machines, Ultrasonic Milk Stirrers, and Digital Weighing Scales.",
 
   "These dairy machines are designed to improve efficiency, accuracy, and productivity in milk collection centers and dairy farms. With modern dairy automation solutions, milk collection operators can manage milk testing and record keeping digitally.",
 
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="mt-4 text-sm sm:text-base text-stone-600 dark:text-white/90 border rounded-lg p-4 max-h-100 space-y-3">
         <h2 className="md:text-2xl dark:bg-[#27272a] bg-[rgb(244,244,245)] lg:w-6/12 w-11/12 text-center mx-auto py-1 rounded-lg text-lg font-bold mb-6
            bg-clip-text text-transparent animate-title-gradient">
-          Milk Analyzers Machines Sales And Expert Repair  
+          Milk Analyzer Machines Sales And Expert Repair  
         </h2></div>
         <p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
           At <strong>JAI SHREE EQUIPMENT DAIRY</strong>, we supply high-quality milk analyzer machines
@@ -150,10 +150,10 @@ your dairy machines operate efficiently.
           OUR PRODUCTS
         </h2></div>
         <p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
-          We are a trusted supplier of essential Milk Analyzers Machines,and 
+          We are a trusted supplier of essential Milk Analyzer Machines,and 
           dairy machines servicing all your repair and maintenance needs with
           expertise. Our focus on delivering top-quality{" "}
-          <strong>Milk Analyzers Machines, Milk Collection Unit (DPU), Milk Fat
+          <strong>Milk Analyzer Machines, Milk Collection Unit (DPU), Milk Fat
             Testing Machines, Milking Machines, Cream Separators Machines </strong>
           , and more ensures the highest standards in your dairy operations.
           When your dairy farm productivity matters, rely on JAI SHREE EQUIPMENT
