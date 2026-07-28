@@ -72,31 +72,46 @@ export function AuthorizedDealerSection() {
                 Sri Ganganagar, Rajasthan – 335001
               </address>
 
-              {/* Call Button */}
-              
+  {/* Call Button */}
 <a
   href="tel:+917375082341"
-  aria-label="Call Jai Shree Equipment Dairy"
+  aria-label="Call Jai Shree Equipment Dairy at 7375082341"
   className="
     mt-4
     inline-flex
-    min-h-11
+    min-h-[44px]
     items-center
     justify-center
     rounded-lg
     bg-sky-600
     px-5
-    py-2
+    py-2.5
+    text-base
     font-semibold
-    text-white
+    !text-white
+    !no-underline
     transition-colors
+    duration-200
     hover:bg-sky-700
+    hover:!text-white
     focus-visible:outline-none
     focus-visible:ring-2
     focus-visible:ring-sky-500
+    focus-visible:ring-offset-2
   "
+  style={{
+    color: "#ffffff",
+    WebkitTextFillColor: "#ffffff",
+  }}
 >
-  Call: 7375082341
+  <span
+    style={{
+      color: "#ffffff",
+      WebkitTextFillColor: "#ffffff",
+    }}
+  >
+    Call: 7375082341
+  </span>
 </a>
             </div>
           </CardContent>
