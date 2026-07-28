@@ -275,7 +275,7 @@ your dairy machines operate efficiently.
       object-contain
     "
   />
-</div>>
+</div>
 </Link>
                 <figcaption>{item.label}</figcaption>
               </figure>
