@@ -73,30 +73,31 @@ export function AuthorizedDealerSection() {
               </address>
 
               {/* Call Button */}
-              <a
-                href="tel:+917375082341"
-                aria-label="Call Jai Shree Equipment Dairy"
-                className="
-                  mt-4
-                  inline-flex
-                  min-h-11
-                  items-center
-                  justify-center
-                  rounded-lg
-                  bg-sky-600
-                  px-5
-                  py-2
-                  font-semibold
-                  text-white
-                  transition-colors
-                  hover:bg-sky-700
-                  focus-visible:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-sky-500
-                "
-              >
-                Call: 7375082341
-              </a>
+              
+<a
+  href="tel:+917375082341"
+  aria-label="Call Jai Shree Equipment Dairy"
+  className="
+    mt-4
+    inline-flex
+    min-h-11
+    items-center
+    justify-center
+    rounded-lg
+    bg-sky-600
+    px-5
+    py-2
+    font-semibold
+    text-white
+    transition-colors
+    hover:bg-sky-700
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-sky-500
+  "
+>
+  Call: 7375082341
+</a>
             </div>
           </CardContent>
         </Card>
