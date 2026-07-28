@@ -124,22 +124,44 @@ your dairy machines operate efficiently.
                 key={idx}
                 className="flex flex-col w-full dark:bg-[#27272a] bg-gray-100 font-bold p-4 gap-2 rounded-md items-center"
               >
-                <div className="flex aspect-square w-full items-center justify-center">
+                <div
+  className="
+    flex w-full items-center justify-center
+    h-36
+    sm:h-44
+    md:h-52
+    lg:h-60
+    xl:h-64
+    overflow-hidden
+  "
+>
   <Image
-  src={cld(item.src, {
-    width: 240,
-    height: 240,
-    crop: "fit",
-    quality: "auto",
-    format: "auto",
-  })}
-  alt={item.label}
-  width={240}
-  height={240}
-  loading="lazy"
-  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 240px"
-  className="h-auto w-auto max-h-full max-w-full object-contain"
-/>
+    src={cld(item.src, {
+      width: 600,
+      height: 600,
+      crop: "fit",
+      quality: "auto",
+      format: "auto",
+    })}
+    alt={item.label}
+    width={600}
+    height={600}
+    loading="lazy"
+    sizes="
+      (max-width: 640px) 45vw,
+      (max-width: 768px) 40vw,
+      (max-width: 1024px) 30vw,
+      (max-width: 1280px) 25vw,
+      300px
+    "
+    className="
+      h-auto
+      w-auto
+      max-h-full
+      max-w-full
+      object-contain
+    "
+  />
 </div>
                 <figcaption>{item.label}</figcaption>
               </figure>
@@ -216,23 +238,44 @@ your dairy machines operate efficiently.
   data-product={item.label}
   className="block w-full"
 >
-  <div className="flex aspect-square w-full items-center justify-center">
-    <Image
-  src={cld(item.src, {
-    width: 240,
-    height: 240,
-    crop: "fit",
-    quality: "auto",
-    format: "auto",
-  })}
-  alt={item.label}
-  width={240}
-  height={240}
-  loading="lazy"
-  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 240px"
-  className="h-auto w-auto max-h-full max-w-full object-contain"
-/>
-  </div>
+  <div
+  className="
+    flex w-full items-center justify-center overflow-hidden
+    h-36
+    sm:h-44
+    md:h-52
+    lg:h-60
+    xl:h-64
+  "
+>
+  <Image
+    src={cld(item.src, {
+      width: 600,
+      height: 600,
+      crop: "fit",
+      quality: "auto",
+      format: "auto",
+    })}
+    alt={item.label}
+    width={600}
+    height={600}
+    loading="lazy"
+    sizes="
+      (max-width: 640px) 45vw,
+      (max-width: 768px) 40vw,
+      (max-width: 1024px) 30vw,
+      (max-width: 1280px) 25vw,
+      300px
+    "
+    className="
+      h-auto
+      w-auto
+      max-h-full
+      max-w-full
+      object-contain
+    "
+  />
+</div>>
 </Link>
                 <figcaption>{item.label}</figcaption>
               </figure>
