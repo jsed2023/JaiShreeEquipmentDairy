@@ -24,22 +24,19 @@ export function Image({
   sizes,
   ...props
 }: ImageProps) {
-  // ==========================================
-  // DEFAULT RESPONSIVE SIZES
-  // ==========================================
-
+  // Phone → Tablet → Laptop → Desktop
   const responsiveSizes =
     sizes ??
     "(max-width: 640px) 100vw, " +
-      "(max-width: 768px) 100vw, " +
-      "(max-width: 1024px) 75vw, " +
-      "(max-width: 1280px) 60vw, " +
-      "50vw";
+      "(max-width: 768px) 90vw, " +
+      "(max-width: 1024px) 70vw, " +
+      "(max-width: 1280px) 50vw, " +
+      "40vw";
 
-  // ==========================================
-  // FILL IMAGE
-  // width + height are NEVER passed
-  // ==========================================
+  // ==============================
+  // FILL MODE
+  // Parent controls dimensions
+  // ==============================
 
   if (fill) {
     return (
@@ -57,10 +54,9 @@ export function Image({
     );
   }
 
-  // ==========================================
-  // NORMAL IMAGE
-  // Automatically responsive
-  // ==========================================
+  // ==============================
+  // NORMAL RESPONSIVE IMAGE
+  // ==============================
 
   return (
     <NextImage
@@ -71,8 +67,8 @@ export function Image({
       sizes={responsiveSizes}
       className={`max-w-full object-contain ${className}`}
       style={{
-        maxWidth: "100%",
         height: "auto",
+        maxWidth: "100%",
         ...style,
       }}
     />
