@@ -126,18 +126,20 @@ your dairy machines operate efficiently.
               >
                 <div className="flex aspect-square w-full items-center justify-center">
   <Image
-    src={cld(item.src, {
-      width: 240,
-      height: 240,
-      crop: "fit",
-     
-    })}
-    alt={item.label}
-    width={240}
-    height={240}
-    loading="lazy"
-    className="h-auto w-auto max-h-full max-w-full object-contain"
-  />
+  src={cld(item.src, {
+    width: 240,
+    height: 240,
+    crop: "fit",
+    quality: "auto",
+    format: "auto",
+  })}
+  alt={item.label}
+  width={240}
+  height={240}
+  loading="lazy"
+  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 240px"
+  className="h-auto w-auto max-h-full max-w-full object-contain"
+/>
 </div>
                 <figcaption>{item.label}</figcaption>
               </figure>
@@ -216,17 +218,20 @@ your dairy machines operate efficiently.
 >
   <div className="flex aspect-square w-full items-center justify-center">
     <Image
-      src={cld(item.src, {
-        width: 240,
-        height: 240,
-        crop: "fit",
-      })}
-      alt={item.label}
-      width={240}
-      height={240}
-      loading="lazy"
-       className="h-auto w-auto max-h-full max-w-full object-contain"
-    />
+  src={cld(item.src, {
+    width: 240,
+    height: 240,
+    crop: "fit",
+    quality: "auto",
+    format: "auto",
+  })}
+  alt={item.label}
+  width={240}
+  height={240}
+  loading="lazy"
+  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 240px"
+  className="h-auto w-auto max-h-full max-w-full object-contain"
+/>
   </div>
 </Link>
                 <figcaption>{item.label}</figcaption>
