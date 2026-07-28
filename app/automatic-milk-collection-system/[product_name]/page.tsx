@@ -1,0 +1,501 @@
+"use client";
+
+import { use, useState } from "react";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Button  } from "@heroui/react";
+import { CgDetailsMore } from "react-icons/cg";
+import { MdOutlineAutoAwesome } from "react-icons/md";
+import { RiMoneyRupeeCircleLine } from "react-icons/ri";
+import ImageSlider from "@/components/imageSlider";
+import BuyNowModel from "@/components/buyNowModal";
+import type { ModalData } from "@/types";
+import { automaticMilkCollectionSystem } from "@/config/products";
+/* ===================== TYPES ===================== */
+
+interface SpecsRow {
+  label: React.ReactNode;
+  value: React.ReactNode;
+}
+
+/* ===================== PAGE ===================== */
+
+export default function Product({
+  params,
+}: {
+  params: Promise<{ product_name: string }>;
+}) {
+
+  // =========================
+  // HOOKS
+  // =========================
+
+  const [isOpen, setIsOpen] = useState(false);
+
+const onOpen = () => setIsOpen(true);
+const onClose = () => setIsOpen(false);
+
+  const [modalData, setModalData] =
+    useState<ModalData>({
+      modalType: "BN",
+      equipmentName: "",
+      equipmentImage: "",
+      equipmentPrice: "",
+    });
+
+  // =========================
+  // PRODUCT
+  // =========================
+
+  const { product_name } = use(params);
+
+const productName = decodeURIComponent(product_name);
+
+  const product = automaticMilkCollectionSystem.find(
+    (item) => item.url.toLowerCase() === productName.toLowerCase()
+  );
+
+  /* ===== Guard ===== */
+  if (!product) {
+    notFound();
+  }
+  // =========================
+    // NEXT / PREVIOUS PRODUCTS
+    // =========================
+  
+    const currentIndex =
+      automaticMilkCollectionSystem.findIndex(
+        (item) =>
+          item.url.toLowerCase() ===
+          productName.toLowerCase()
+      );
+  
+    const prevProduct =
+      currentIndex > 0
+        ? automaticMilkCollectionSystem[
+            currentIndex - 1
+          ]
+        : null;
+  
+    const nextProduct =
+      currentIndex <
+      automaticMilkCollectionSystem.length - 1
+        ? automaticMilkCollectionSystem[
+            currentIndex + 1
+          ]
+        : null;
+  
+
+  /* ===== Handlers ===== */
+  const handleOpen = (data: ModalData) => {
+    setModalData(data);
+    onOpen();
+  };
+
+  /* ===================== JSX ===================== */
+
+  return (
+    <div className="mb-10">
+      <section
+        key={product.id}
+        className="flex flex-col gap-y-10 dark:bg-[#27272a] ] sm:p-4 py-4 rounded-md"
+      >
+        {/* ===== Header ===== */}
+        <div className="flex flex-col gap-y-4">
+          <div
+  className="
+    mx-auto inline-flex max-w-[95%] items-center justify-center
+    rounded-full border border-purple-400/30
+    bg-linear-to-r
+    from-purple-500/10 via-blue-500/10 to-cyan-500/10
+    px-5 py-2.5
+    backdrop-blur-sm
+  "
+>
+  <h1
+    className="
+      text-center text-lg font-bold
+      bg-clip-text text-transparent
+      animate-title-gradient
+      sm:text-xl md:text-2xl
+    "
+  >
+    {product.name}
+  </h1>
+</div>
+
+          <p className="dark:text-gray-400 text-center text-stone-700 max-sm:px-2">
+            {product.smallDesc}
+          </p>
+        </div>
+
+                {/* ========================= */}
+                {/* IMAGE + FEATURES */}
+                {/* ========================= */}
+        
+                
+                      <div className="grid lg:grid-cols-12 gap-8">
+                
+                          <div className="lg:col-span-4">
+                
+                <div className="sticky top-24">
+                
+                <ImageSlider
+                images={product.images}
+                productName={product.name}
+                />
+                
+                </div>
+                
+                </div>
+                          {/* FEATURES */}
+                
+                          <div className="lg:col-span-5">
+                
+                <h1 className="text-3xl font-bold">
+                
+                {product.name}
+                
+                </h1>
+                
+                <div className="mt-3 flex flex-wrap items-center gap-4">
+  {/* Price */}
+  <p className="text-blue-600 text-2xl sm:text-3xl font-bold">
+    {product.price ? `₹ ${product.price}` : "Get Best Price"}
+  </p>
+
+  {/* Buy Now */}
+  <Button
+    size="md"
+    variant="primary"
+    onPress={() =>
+      handleOpen({
+        modalType: "BN",
+        equipmentName: product.name,
+        equipmentPrice: product.price,
+      })
+    }
+  >
+    <span className="flex items-center justify-center gap-2 font-semibold">
+      <RiMoneyRupeeCircleLine className="text-xl" />
+      Buy Now
+    </span>
+  </Button>
+</div>
+                
+                <p className="mt-4 text-gray-600">
+                
+                {product.smallDesc}
+                
+                </p>
+                            <h2
+                              className="
+                                font-bold underline
+                                tracking-widest
+                              "
+                            >
+                              Features:
+                            </h2>
+                
+                            <ul className="mt-8 space-y-3">
+                
+                {product.features.map(feature=>(
+                
+                <li
+                key={feature.id}
+                className="flex gap-3"
+                >
+                
+                <span className="text-green-600">
+                
+                ✔
+                
+                </span>
+                
+                <div>
+                
+                <b>{feature.key}</b>
+                
+                {" : "}
+                
+                {feature.value}
+                
+                </div>
+                
+                </li>
+                
+                ))}
+                
+                </ul>              
+                
+                  </div>
+        
+                </div>
+        
+        
+           <p className="inline-flex items-center justify-center gap-3 px-5 py-2.5 
+  rounded-full text-base font-semibold
+  bg-linear-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
+  text-purple-700 dark:text-purple-300
+  border border-purple-400/30
+  backdrop-blur-sm">
+  
+  <MdOutlineAutoAwesome className="text-xl text-purple-600 dark:text-purple-400 animate-pulse" />
+  
+  <span className="bg-linear-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+    Fixed Rate. No Bargaining. 
+  </span>
+  <span className="bg-linear-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+    कीमत तय है। मोलभाव नहीं होगा।
+  </span>
+</p>
+<h2 className="text-2xl font-bold mt-10 mb-4">
+
+Specifications
+
+</h2>
+
+<table className="w-full border">
+
+<thead>
+
+<tr>
+
+<th className="border p-3">
+
+Feature
+
+</th>
+
+<th className="border p-3">
+
+Value
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{product.features.map(item=>(
+
+<tr key={item.id}>
+
+<td className="border p-3">
+
+{item.key}
+
+</td>
+
+<td className="border p-3">
+
+{item.value}
+
+</td>
+
+</tr>
+
+))}
+
+</tbody>
+
+</table>
+
+        {/* ===== Description ===== */}
+        <p className="dark:text-gray-400 text-stone-700 max-sm:px-2">
+          {product.desc}
+        </p>
+
+        {/* ===== Specs Table ===== */}
+        {product.specsTable && (
+          <div className="px-2 md:px-10">
+            <h2 className="font-bold underline tracking-widest mb-3">
+              Technical Specifications
+            </h2>
+
+            <table className="w-full border border-gray-400 dark:border-gray-500">
+              <tbody>
+                {product.specsTable.map(
+                  (row: SpecsRow, index: number) => (
+                    <tr
+                      key={index}
+                      className="border-b border-gray-400 dark:border-gray-600"
+                    >
+                      <td className="p-2 w-1/3 font-semibold dark:text-gray-300 text-stone-800 bg-gray-200 dark:bg-[#333]">
+                        {row.label}
+                      </td>
+                      <td className="p-2 dark:text-gray-300 text-stone-700">
+                        {row.value}
+                      </td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
+          </div>
+        )}
+
+        {/* ===== Actions ===== */}
+        <div className="w-full px-2 gap-10 md:justify-end justify-center flex md:px-20">
+          {product.moreDetails && (
+            <Button
+              size="md"
+               variant="primary"
+              onPress={() =>
+                handleOpen({
+                  modalType: "GMD",
+                  equipmentImage: product.moreDetails,
+                  equipmentName: product.name,
+                })
+              }
+            >
+              <span className="w-40 flex justify-center items-center gap-2">
+                <CgDetailsMore className="text-xl" />
+                Technical Details
+              </span>
+            </Button>
+          )}
+
+          <Button
+            size="md"
+            variant="outline"
+            className="bg-white text-black border border-gray-300 
+             dark:bg-zinc-800 dark:text-white dark:border-gray-600
+             hover:bg-gray-100 dark:hover:bg-zinc-700"
+            onPress={() =>
+              handleOpen({
+                modalType: "BN",
+                equipmentName: product.name,
+                equipmentPrice: product.price,
+              })
+            }
+          >
+            <span className="w-40 flex justify-center items-center gap-2">
+              <RiMoneyRupeeCircleLine className="text-xl" />
+              Buy Now
+            </span>
+          </Button>
+        </div>
+      </section>
+<div className="mt-10 rounded-xl bg-linear-to-r from-blue-50 via-purple-50 to-cyan-50 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 p-6 md:p-8 border border-gray-200 dark:border-zinc-700">
+      <h2 className="text-2xl font-bold mt-10 mb-4">
+  Frequently Asked Questions
+</h2>
+
+<div className="space-y-6">
+  <div>
+    <h3 className="font-semibold text-lg">
+      What is {product.name}?
+    </h3>
+    <p>
+      {product.name} is designed to improve dairy operations by providing
+      reliable performance, accurate results, and easy operation.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="font-semibold text-lg">
+      Why should I choose {product.name}?
+    </h3>
+    <p>
+      {product.name} offers high accuracy, durable construction, low
+      maintenance, and is suitable for dairy farms, milk collection centres,
+      and cooperative societies.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="font-semibold text-lg">
+      Is {product.name} suitable for commercial use?
+    </h3>
+    <p>
+      Yes, {product.name} is ideal for commercial dairy applications and can
+      be used in milk collection centres, dairy plants, and private dairies.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="font-semibold text-lg">
+      Do you provide installation and support for {product.name}?
+    </h3>
+    <p>
+      Yes, we provide installation guidance, technical support, and
+      after-sales service for {product.name}.
+    </p>
+  </div>
+</div>
+</div>
+      {/* ========================= */}
+{/* NEXT / PREVIOUS */}
+{/* ========================= */}
+
+<div className="mt-10 w-full">
+  <div className="flex w-full items-center justify-between">
+    {/* Previous */}
+    {prevProduct ? (
+      <Link
+        href={`/automatic-milk-collection-system/${prevProduct.url}`}
+        className="
+          inline-flex items-center
+          rounded-md
+          bg-blue-100
+          px-3 py-2
+          text-sm
+          font-medium
+          text-blue-700
+          hover:bg-blue-200
+          transition-colors
+        "
+      >
+        ← Previous
+      </Link>
+    ) : (
+      <div />
+    )}
+
+    {/* Next */}
+    {nextProduct ? (
+      <Link
+        href={`/automatic-milk-collection-system/${nextProduct.url}`}
+        className="
+          inline-flex items-center
+          rounded-md
+          bg-purple-100
+          px-3 py-2
+          text-sm
+          font-medium
+          text-purple-700
+          hover:bg-purple-200
+          transition-colors
+        "
+      >
+        Next →
+      </Link>
+    ) : (
+      <div />
+    )}
+  </div>
+
+  {/* Product Names */}
+  <div className="mt-2 flex justify-between text-xs text-gray-600">
+    <div className="max-w-[45%] truncate">
+      {prevProduct?.name}
+    </div>
+
+    <div className="max-w-[45%] truncate text-right">
+      {nextProduct?.name}
+    </div>
+  </div>
+</div>
+      {/* ===== Modal ===== */}
+      <BuyNowModel
+        isModelOpen={isOpen}
+        onClose={onClose}
+        modalData={modalData}
+      />
+    </div>
+    
+  );
+}
