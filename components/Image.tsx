@@ -19,14 +19,26 @@ export function Image({
   fill,
   removeWrapper: _removeWrapper,
   alt,
-  className,
+  className = "",
   style,
   sizes,
   ...props
 }: ImageProps) {
   // ==========================================
-  // FILL MODE
-  // Do NOT pass width / height with fill
+  // DEFAULT RESPONSIVE SIZES
+  // ==========================================
+
+  const responsiveSizes =
+    sizes ??
+    "(max-width: 640px) 100vw, " +
+      "(max-width: 768px) 100vw, " +
+      "(max-width: 1024px) 75vw, " +
+      "(max-width: 1280px) 60vw, " +
+      "50vw";
+
+  // ==========================================
+  // FILL IMAGE
+  // width + height are NEVER passed
   // ==========================================
 
   if (fill) {
@@ -35,16 +47,19 @@ export function Image({
         {...props}
         alt={alt}
         fill
-        sizes={sizes ?? "100vw"}
-        className={className}
-        style={style}
+        sizes={responsiveSizes}
+        className={`object-contain ${className}`}
+        style={{
+          maxWidth: "100%",
+          ...style,
+        }}
       />
     );
   }
 
   // ==========================================
-  // NORMAL MODE
-  // Keeps original aspect ratio
+  // NORMAL IMAGE
+  // Automatically responsive
   // ==========================================
 
   return (
@@ -53,9 +68,13 @@ export function Image({
       alt={alt}
       width={width ?? 800}
       height={height ?? 600}
-      sizes={sizes}
-      className={className}
-      style={style}
+      sizes={responsiveSizes}
+      className={`max-w-full object-contain ${className}`}
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+        ...style,
+      }}
     />
   );
 }
