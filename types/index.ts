@@ -1,19 +1,42 @@
-import { SwitchProps } from "@nextui-org/switch";
-import { ThemeProviderProps } from "next-themes/dist/types";
-import { SVGProps } from "react";
+import type { ReactNode, SVGProps } from "react";
+
+// =========================
+// ICON
+// =========================
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 
+// =========================
+// THEME SWITCH
+// =========================
+
 export interface ThemeSwitchProps {
   className?: string;
-  classNames?: SwitchProps["classNames"];
+
+  classNames?: {
+    base?: string;
+    wrapper?: string;
+  };
 }
 
+// =========================
+// PROVIDERS
+// =========================
+
 export interface ProvidersProps {
-  children: React.ReactNode;
-  themeProps?: ThemeProviderProps;
+  children: ReactNode;
+}
+
+// =========================
+// IMAGE SLIDER
+// =========================
+
+export interface ImagesData {
+  src: string;
+  alt?: string;
+  caption?: string;
 }
 
 export interface ImageSliderProps {
@@ -21,11 +44,9 @@ export interface ImageSliderProps {
   productName: string;
 }
 
-export interface ImagesData {
-  src: string;
-  alt?: string;
-  caption?: string;
-}
+// =========================
+// MODAL
+// =========================
 
 export interface ModalData {
   modalType: string;
@@ -34,14 +55,23 @@ export interface ModalData {
   equipmentPrice?: string;
 }
 
+// =========================
+// FEATURES
+// =========================
+
 export interface Features {
   id: string;
   key: string;
   value: string;
 }
 
+// =========================
+// PRODUCTS
+// =========================
+
 export interface Products {
   [x: string]: any;
+
   id: number;
   name: string;
   url: string;
@@ -55,6 +85,10 @@ export interface Products {
   moreDetails?: string;
 }
 
+// =========================
+// CONTACT FORM
+// =========================
+
 export interface ContactFormData {
   firstName?: string;
   lastName?: string;
@@ -62,6 +96,10 @@ export interface ContactFormData {
   query?: string;
   mobileNumber?: string;
 }
+
+// =========================
+// ABOUT
+// =========================
 
 export interface AboutAndStory {
   id: number;
@@ -93,6 +131,10 @@ export interface AboutFactsheet {
   information: Information[];
 }
 
+// =========================
+// SERVICES
+// =========================
+
 interface ServicesImages {
   id: string;
   url: string;
@@ -106,24 +148,19 @@ export interface Services {
   images: ServicesImages[];
 }
 
+// =========================
+// BLOG
+// =========================
+
 export interface BlogType {
-slug: string;
-
-title: string;
-
-updatedAt?: string;
-
-description: string;
-
-keywords: string[];
-
-image: string;
-
-alt: string;
-
-category: string;
-
-date: string;
-
-content: string;
+  slug: string;
+  title: string;
+  updatedAt?: string;
+  description: string;
+  keywords: string[];
+  image: string;
+  alt: string;
+  category: string;
+  date: string;
+  content: string;
 }
