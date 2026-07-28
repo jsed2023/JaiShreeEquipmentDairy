@@ -21,18 +21,21 @@ export function Image({
   alt,
   className,
   style,
+  sizes,
   ...props
 }: ImageProps) {
   // ==========================================
-  // FILL IMAGE
-  // width / height must NOT be passed
+  // FILL MODE
+  // Do NOT pass width / height with fill
   // ==========================================
+
   if (fill) {
     return (
       <NextImage
         {...props}
         alt={alt}
         fill
+        sizes={sizes ?? "100vw"}
         className={className}
         style={style}
       />
@@ -40,21 +43,19 @@ export function Image({
   }
 
   // ==========================================
-  // NORMAL IMAGE
-  // width / height are required
+  // NORMAL MODE
+  // Keeps original aspect ratio
   // ==========================================
+
   return (
     <NextImage
       {...props}
       alt={alt}
       width={width ?? 800}
       height={height ?? 600}
+      sizes={sizes}
       className={className}
-      style={{
-        width: "auto",
-        height: "auto",
-        ...style,
-      }}
+      style={style}
     />
   );
 }
