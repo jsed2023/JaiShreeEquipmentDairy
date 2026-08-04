@@ -2857,7 +2857,7 @@ export const MilkTestingEquipment: Products[] = [
         src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/Ekomilk%20ULTRA%20PRO.jpg",),
       alt: "Ekomilk Ultra Pro",},
     ],
-    price: "45,000",
+    price: "42,000",
     moreDetails:
       cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png",),
     features: [
@@ -2919,7 +2919,7 @@ export const MilkTestingEquipment: Products[] = [
       {
         id: "3L",
         key: "Price",
-        value: "₹ 45000",
+        value: "₹ 42,000",
       },
     ],
     desc: "The function of the milk analyzer is to make quick analyses of milk on fat (FAT), non-fat solids (SNF), proteins, lactose and water content percentages, temperature (0°C), pH, freezing point, salts, conductivity as well as density of one and the same sample directly after milking, at collecting and during processing.",
@@ -3234,7 +3234,7 @@ export const MilkTestingEquipment: Products[] = [
     alt: "Advance Milk Analyzer Pro20",},
   ],
 
-  price: "35,000",
+  price: "33,000",
 
   moreDetails:
     cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png"),
@@ -3251,7 +3251,7 @@ export const MilkTestingEquipment: Products[] = [
     { id: "8I", key: "Machine Body Material", value: "Plastic" },
     { id: "8J", key: "Dimensions", value: "90 x 300 x 250 mm" },
     { id: "8K", key: "Weight", value: "5 kg" },
-    { id: "8L", key: "Price", value: "₹ 35,000" }
+    { id: "8L", key: "Price", value: "₹ 33,000" }
   ],
 
   desc:
@@ -3366,7 +3366,7 @@ alt: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer machine",
     },
   ],
 
-  price: "40,000",
+  price: "39,000",
 
   features: [
     {
@@ -3413,7 +3413,7 @@ alt: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer machine",
     {
       id: "10I",
       key: "Price",
-      value: "₹ 40,000",
+      value: "₹ 39,000",
     },
     {
       id: "10J",
@@ -3499,7 +3499,7 @@ alt: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer machine",
     },
   ],
 
-  price: "40,000",
+  price: "38,000",
 
   features: [
     { id: "11A", key: "Model Name", value: "Ekomilk Ultra" },
@@ -3520,7 +3520,7 @@ alt: "Ekomilk Ultra Milk Analyzer with Digital Milk Stirrer machine",
 {
       id: "11K",
       key: "Price",
-      value: "₹ 39,500",
+      value: "₹ 38,000",
     },
     {
       id: "11L",
