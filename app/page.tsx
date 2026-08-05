@@ -228,7 +228,7 @@ your dairy machines operate efficiently.
                 label: "Paras Milk Cream Separator",
               },
               {
-                href: "/dairy-equipment/Vansan Trolly Cow and Buff Milking Machine",
+                href: "/dairy-equipment/vansan-trolly-cow-and-buff-milking-machine",
                 src: "v1731935014/Vansan_Trolly_Cow_And_Buff_milking_machine.jpg",
                 label: "Vansun Milking Machine",
               },
