@@ -545,5 +545,5 @@ export const spareParts = [
     MotorType: "DC Geared Motor",
     Condition: "New"
   }
-},
+}
 ];
