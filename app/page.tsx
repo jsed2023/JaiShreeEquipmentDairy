@@ -194,22 +194,22 @@ your dairy machines operate efficiently.
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
             {[
               {
-                href: "/milk-testing-equipment",
+                href: "/milk-analyzer-machines/ekomilk-ultra-analyzer",
                 src: "v1766061561/Ekomilk-Ultra-Analyzer.jpg",
                 label: "Ekomilk Ultra Analyzer",
               },
               {
-                href: "/milk-testing-equipment",
+                href: "/milk-analyzer-machines/advance-milk-analyzer",
                 src: "v1728902682/Advance%20Milk%20Analyzer.jpg",
                 label: "Advance Milk Analyzer",
               },
               {
-                href: "/automatic-milk-collection-system",
+                href: "/automatic-milk-collection-system/milk-collection-unit",
                 src: "v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",
                 label: "DPU Milk Collection Unit (Dairy Khata)",
               },
 {
-                href: "/automatic-milk-collection-system",
+                href: "/automatic-milk-collection-system/weingh-scale",
                 src: "v1728902744/weighing-scale.jpg",
                 label: "Dairy Weighing Machine 300kg",
               },{
@@ -218,17 +218,17 @@ your dairy machines operate efficiently.
                 label: "Advance Milk Bond Machine",
               },
               {
-                href: "/automatic-milk-collection-system",
+                href: "/automatic-milk-collection-system/ultrasonic-milk-stirrer",
                 src: "v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",
                 label: "Ultrasonic Milk Stirrer: KREI",
               },
               {
-                href: "/dairy-equipment",
+                href: "/dairy-equipment/paras-milk-cream-separator-aed-165-lph",
                 src: "v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg",
                 label: "Paras Milk Cream Separator",
               },
               {
-                href: "/dairy-equipment",
+                href: "/Vansan Trolly Cow and Buff Milking Machine",
                 src: "v1731935014/Vansan_Trolly_Cow_And_Buff_milking_machine.jpg",
                 label: "Vansun Milking Machine",
               },
