@@ -322,9 +322,9 @@ export const spareParts = [
   stockStatus: "In Stock",
   warranty: "6 Months",
   keywords: [
-    "lactoscan motor",
-    "milk analyzer motor",
-    "lactoscan spare parts"
+    "lactoscan motor,
+    milk analyzer motor,
+    lactoscan spare parts,"
   ],
   description:
     "Replacement motor for Lactoscan Milk Analyzer.",
