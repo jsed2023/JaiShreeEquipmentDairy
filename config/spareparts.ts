@@ -321,11 +321,18 @@ export const spareParts = [
   category: "Milk Analyzer Spare Parts",
   stockStatus: "In Stock",
   warranty: "6 Months",
-  keywords: {
-    "lactoscan motor,
-    milk analyzer motor,
-    lactoscan spare parts,"
-  },
+  keywords: [
+  "lactoscan motor",
+  "milk analyzer motor",
+  "lactoscan spare parts",
+  "replacement lactoscan motor",
+  "milk testing machine motor",
+  "lactoscan analyzer motor",
+  "milk analyzer spare parts",
+  "12V DC motor",
+  "buy lactoscan motor",
+  "dairy analyzer motor",
+],
   description:
     "Replacement motor for Lactoscan Milk Analyzer.",
   specifications: {
