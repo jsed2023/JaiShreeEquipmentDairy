@@ -222,7 +222,7 @@ export const spareParts = [
     MinimumOrderQuantity: "50 Pieces",
     UnitPrice: "₹140 Per Piece",
     Condition: "New"
-  }
+  } },
 {
   id: 6,
   slug: "ekomilk-daily-cleaning-solution-200ml",
