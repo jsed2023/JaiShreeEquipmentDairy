@@ -4053,6 +4053,144 @@ desc:
 ];
 
 export const MilkAnalyzerMachines: Products[] = [
+
+{
+  id: 1,
+  name: "Ekomilk ULTRA",
+  url: "ekomilk-ultra",
+  updatedAt: "2026-08-06",
+  category: "milk-analyzer-machines",
+
+  title: "Ekomilk ULTRA Price in India | Ultrasonic Milk Analyzer",
+
+  metaDescription:
+    "Buy Ekomilk ULTRA Ultrasonic Milk Analyzer at the best price in India. Accurate testing of FAT, SNF, Protein, Density, Added Water, Lactose, pH, Temperature, Conductivity and Freezing Point.",
+
+  h1: "Ekomilk ULTRA",
+
+  smallDesc:
+    "Ekomilk ULTRA is a robust ultrasonic milk analyzer designed for rapid and accurate testing of Fat, SNF, Protein, Density, Added Water, Lactose, Freezing Point, pH, Temperature, Conductivity and Titratable Acidity.",
+
+  images: [
+    {
+      src: cld(
+        "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg"
+      ),
+      alt: "Ekomilk ULTRA Ultrasonic Milk Analyzer",
+    },
+  ],
+
+  price: "35,500",
+
+  moreDetails: cld(
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1729603069/Technical%20Detaits.png"
+  ),
+
+  features: [
+    {
+      id: "1A",
+      key: "Technology",
+      value: "Ultrasonic Milk Analyzer",
+    },
+    {
+      id: "1B",
+      key: "Brand",
+      value: "Ekomilk",
+    },
+    {
+      id: "1C",
+      key: "Measuring Cycle",
+      value: "Less than 40 Seconds",
+    },
+    {
+      id: "1D",
+      key: "Capacity",
+      value: "65–70 Measurements per Hour",
+    },
+    {
+      id: "1E",
+      key: "Milk Parameters",
+      value:
+        "Fat, SNF, Density, Added Water, Protein, Freezing Point, pH, Temperature, Conductivity, Lactose, Titratable Acidity & Milk Cream",
+    },
+    {
+      id: "1F",
+      key: "Power Supply",
+      value: "220V/110V AC or 12V DC",
+    },
+    {
+      id: "1G",
+      key: "Interfaces",
+      value: "USB & RS-232",
+    },
+    {
+      id: "1H",
+      key: "Printer Support",
+      value: "Serial Thermal Printer",
+    },
+    {
+      id: "1I",
+      key: "Memory",
+      value: "Stores up to 120 Measurements",
+    },
+    {
+      id: "1J",
+      key: "Milk Data Program",
+      value: "Supports Milk Data Collection & PC Transfer",
+    },
+    {
+      id: "1K",
+      key: "Accuracy Adjustment",
+      value: "User Adjustable Calibration",
+    },
+    {
+      id: "1L",
+      key: "Chemical Requirement",
+      value: "No Acid or Other Chemicals Required",
+    },
+    {
+      id: "1M",
+      key: "Milk Quantity",
+      value: "Very Small Sample Required",
+    },
+    {
+      id: "1N",
+      key: "Power Consumption",
+      value: "Low Power Consumption",
+    },
+    {
+      id: "1O",
+      key: "Operation",
+      value: "Simple, Reliable & Fully Automated",
+    },
+    {
+      id: "1P",
+      key: "Application",
+      value: "Dairy Farms, Milk Collection Centres, Dairy Laboratories & Dairy Processing Plants",
+    },
+    {
+      id: "1Q",
+      key: "Country of Origin",
+      value: "Made in Bulgaria",
+    },
+    {
+      id: "1R",
+      key: "Warranty",
+      value: "1 Year",
+    },
+    {
+      id: "1S",
+      key: "Price",
+      value: "₹35,500",
+    },
+  ],
+
+  desc:
+    "Ekomilk ULTRA is a robust, reliable and automated ultrasonic milk analyzer developed for rapid and accurate milk quality testing. It measures Fat, Solids Not Fat (SNF), Density, Added Water, Protein, Freezing Point, pH, Temperature, Conductivity, Lactose, Titratable Acidity and Milk Cream in less than 40 seconds. The analyzer operates without acids or chemicals, making testing economical and environmentally friendly. It requires only a small milk sample, offers low power consumption, user-adjustable calibration, USB and RS-232 connectivity, serial thermal printer support and data storage for up to 120 measurements with Milk Data software compatibility. Ekomilk ULTRA is an ideal choice for dairy farms, milk collection centres, dairy laboratories, milk chilling centres and dairy processing plants requiring reliable and consistent milk quality analysis.",
+
+  keywords:
+    "Ekomilk ULTRA, Ekomilk ULTRA Milk Analyzer, Ultrasonic Milk Analyzer, Milk Analyzer Machine, Milk Testing Machine, Automatic Milk Analyzer, Dairy Milk Analyzer, FAT Testing Machine, SNF Testing Machine, Protein Milk Analyzer, Lactose Analyzer, Density Milk Analyzer, Conductivity Analyzer, Freezing Point Analyzer, pH Milk Analyzer, Milk Quality Analyzer, Dairy Equipment India, Milk Collection Centre Equipment, Dairy Laboratory Equipment, Buy Ekomilk ULTRA, Ekomilk ULTRA Price India, Best Milk Analyzer in India, Milk Analyzer Rajasthan, Milk Analyzer Sri Ganganagar, Nano Instruments Ekomilk ULTRA",
+},
   {
     id: 1,
     name: "Ekomilk Ultra Analyzer",
