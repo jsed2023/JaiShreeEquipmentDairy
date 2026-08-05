@@ -212,6 +212,10 @@ your dairy machines operate efficiently.
                 href: "/automatic-milk-collection-system",
                 src: "v1728902744/weighing-scale.jpg",
                 label: "Dairy Weighing Machine 300kg",
+              },{
+                href: "/milk-analyzer-machines/advance-milk-bond-machine",
+                src: "/v1785947314/Advance_Milk_Bond_Machine.webp",
+                label: "Advance Milk Bond Machine",
               },
               {
                 href: "/automatic-milk-collection-system",
