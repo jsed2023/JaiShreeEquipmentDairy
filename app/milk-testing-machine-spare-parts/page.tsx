@@ -129,7 +129,7 @@ export default function SparePartsPage() {
               </p>
 
               <p className="text-sm text-center text-zinc-500 dark:text-zinc-400 mt-4 leading-6">
-                {product.description}
+                {product.metadescription}
               </p>
 
               {/* Buttons */}
