@@ -545,5 +545,52 @@ export const spareParts = [
     MotorType: "DC Geared Motor",
     Condition: "New"
   }
+},
+{
+  id: 13,
+  slug: "milk-analyzer-plastic-body-cabinet",
+  name: "Milk Analyzer Plastic Body Cabinet",
+  keywords: [
+    "milk analyzer plastic body",
+    "milk analyzer cabinet",
+    "ekomilk plastic body",
+    "ekomilk cabinet",
+    "milk analyzer outer body",
+    "milk analyzer housing",
+    "milk analyzer enclosure",
+    "milk analyzer spare parts",
+    "ekomilk spare parts",
+    "replacement milk analyzer body",
+    "plastic cabinet for milk analyzer",
+    "milk testing machine body",
+    "buy milk analyzer cabinet",
+    "dairy equipment spare parts",
+    "milk analyzer cover"
+  ],
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Milk_Analyzer_Plastic_Body_Cabinet.webp",
+  sku: "EKO-CAB-013",
+  price: "₹2,500",
+  category: "Milk Analyzer Spare Parts",
+  stockStatus: "In Stock",
+  warranty: "6 Months",
+
+  metaTitle: "Milk Analyzer Plastic Body Cabinet | Genuine Ekomilk Spare Part",
+
+  metaDescription:
+    "Buy genuine Milk Analyzer Plastic Body Cabinet compatible with Ekomilk milk analyzer machines. Durable replacement outer body with fast delivery across India.",
+
+  alt: "Milk Analyzer Plastic Body Cabinet",
+
+  description:
+    "The Milk Analyzer Plastic Body Cabinet is a genuine replacement outer housing designed for Ekomilk milk analyzer machines. Manufactured from high-quality durable ABS plastic, it provides excellent protection for internal electronic components while maintaining the original appearance and structural strength of the analyzer. Ideal for replacing cracked, damaged, or worn cabinets in dairy laboratories, milk collection centres, cooperative societies, and dairy plants. Easy to install and fully compatible with Ekomilk milk analyzer models.",
+
+  specifications: {
+    ProductType: "Plastic Body Cabinet",
+    Compatibility: "Ekomilk Milk Analyzer",
+    Material: "High-Quality ABS Plastic",
+    Color: "White",
+    Condition: "New",
+    Installation: "Ready to Install"
+  }
 }
 ];
