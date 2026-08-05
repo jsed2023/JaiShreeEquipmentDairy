@@ -36,6 +36,53 @@ export const spareParts = [
     Condition: "New"
   }
 },
+{
+  id: 2,
+  slug: "ekomilk-analyzer-sensor",
+  name: "Ekomilk Analyzer Sensor",
+  keywords: [
+    "ekomilk analyzer sensor",
+    "ekomilk sensor",
+    "milk analyzer sensor",
+    "milk testing machine sensor",
+    "ultrasonic milk analyzer sensor",
+    "ekomilk spare parts",
+    "milk analyzer spare parts",
+    "replacement milk analyzer sensor",
+    "ekomilk ultra sensor",
+    "buy ekomilk sensor",
+    "dairy milk analyzer sensor",
+    "milk analyzer ultrasonic sensor",
+    "milk testing equipment sensor",
+    "ekomilk replacement parts",
+    "milk analyzer repair parts"
+  ],
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Ekomilk_Analyzer_Sensor.webp",
+  sku: "EKO-SEN-002",
+  price: "₹3,300",
+  category: "Milk Analyzer Spare Parts",
+  stockStatus: "In Stock",
+  warranty: "6 Months",
+
+  metaTitle: "Ekomilk Analyzer Sensor | Genuine Milk Analyzer Spare Parts",
+
+  metaDescription:
+    "Buy genuine Ekomilk Analyzer Sensor for accurate milk testing. High-quality ultrasonic sensor compatible with Ekomilk Ultra and Pro milk analyzers. Fast delivery across India.",
+
+  alt: "Ekomilk Analyzer Sensor for Milk Analyzer Machine",
+
+  description:
+    "Ekomilk Analyzer Sensor is a genuine replacement spare part designed for Ekomilk milk analyzer machines. It delivers highly accurate milk analysis by ensuring precise ultrasonic measurement of milk parameters. Manufactured using premium-quality components, this sensor offers reliable performance, long service life, and stable operation in dairy laboratories, milk collection centres, and dairy plants. Compatible with Ekomilk Ultra and Pro models, it is an ideal solution for replacing damaged or worn-out sensors and maintaining accurate milk testing results.",
+
+  specifications: {
+    ProductType: "Milk Analyzer Sensor",
+    Compatibility: "Ekomilk Ultra / Pro",
+    Technology: "Ultrasonic",
+    Accuracy: "High Precision",
+    Weight: "250 g",
+    Condition: "New"
+  }
+},
 
   {
     id: 3,
