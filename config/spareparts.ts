@@ -1,60 +1,41 @@
 export const spareParts = [
   {
-    id: 1,
-    slug: "ekomilk-motor-assembly",
-    name: "Ekomilk Motor Assembly Complete",
-    keywords: [
-      "ekomilk motor assembly",
-      "milk analyzer motor",
-      "peristaltic pump motor",
-      "ekomilk spare parts",
-      "milk testing machine motor"
-    ],
-    photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848853/Ekomilk_Motor_Assembly_Complete.webp",
-    sku: "EKO-PMA-001",
-    price: "₹5,500",
-    category: "Milk Analyzer Spare Parts",
-    stockStatus: "In Stock",
-    warranty: "6 Months",
-    description:
-      "Complete motor assembly for Ekomilk Milk Analyzer. Designed for reliable sample suction, smooth operation and accurate milk testing.",
-    specifications: {
-      ProductType: "Motor Assembly",
-      Compatibility: "Ekomilk Milk Analyzer",
-      Voltage: "12V DC",
-      MotorType: "DC Geared Motor",
-      Weight: "500 g",
-      Condition: "New"
-    }
-  },
-
-  {
-    id: 2,
-    slug: "ekomilk-analyzer-sensor",
-    name: "Ekomilk Analyzer Sensor",
-    keywords: [
-      "ekomilk analyzer sensor",
-      "milk analyzer sensor",
-      "ekomilk spare parts",
-      "ultrasonic sensor"
-    ],
-    photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Ekomilk_Analyzer_Sensor.webp",
-    sku: "EKO-SEN-002",
-    price: "₹3,300",
-    category: "Milk Analyzer Spare Parts",
-    stockStatus: "In Stock",
-    warranty: "6 Months",
-    description:
-      "High precision analyzer sensor for Ekomilk Milk Analyzer machines.",
-    specifications: {
-      ProductType: "Milk Analyzer Sensor",
-      Compatibility: "Ekomilk Ultra / Pro",
-      Technology: "Ultrasonic",
-      Accuracy: "High Precision",
-      Weight: "250 g",
-      Condition: "New"
-    }
-  },
+  id: 1,
+  slug: "ekomilk-motor-assembly",
+  name: "Ekomilk Motor Assembly Complete",
+  keywords: [
+    "ekomilk motor assembly",
+    "ekomilk motor",
+    "milk analyzer motor",
+    "milk analyzer motor assembly",
+    "peristaltic pump motor",
+    "ekomilk spare parts",
+    "milk analyzer spare parts",
+    "milk testing machine motor",
+    "ekomilk replacement motor",
+    "ekomilk ultra motor",
+    "buy ekomilk motor",
+    "dairy milk analyzer motor"
+  ],
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848853/Ekomilk_Motor_Assembly_Complete.webp",
+  sku: "EKO-PMA-001",
+  price: "₹5,500",
+  category: "Milk Analyzer Spare Parts",
+  stockStatus: "In Stock",
+  warranty: "6 Months",
+  metaTitle: "Ekomilk Motor Assembly Complete | Milk Analyzer Spare Parts",
+  metaDescription: "Buy genuine Ekomilk Motor Assembly for Milk Analyzer. High-quality replacement motor with fast delivery across India.",
+  alt: "Ekomilk Motor Assembly Complete",
+  description: "Original Ekomilk Motor Assembly designed for reliable sample suction and accurate milk testing. Compatible with Ekomilk Milk Analyzer machines, this genuine spare part ensures smooth motor performance, long service life, and precise operation. Suitable for dairy plants, milk collection centers, and service engineers looking for dependable replacement parts.",
+  specifications: {
+    ProductType: "Motor Assembly",
+    Compatibility: "Ekomilk Milk Analyzer",
+    Voltage: "12V DC",
+    MotorType: "DC Geared Motor",
+    Weight: "500 g",
+    Condition: "New"
+  }
+},
 
   {
     id: 3,
