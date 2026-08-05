@@ -129,8 +129,7 @@ export default function SparePartsPage() {
               </p>
 
               <p className="text-sm text-center text-zinc-500 dark:text-zinc-400 mt-4 leading-6">
-                Genuine replacement spare part for milk analyzer and dairy
-                equipment with excellent quality and long service life.
+                {product.description}
               </p>
 
               {/* Buttons */}
