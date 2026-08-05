@@ -1,5 +1,56 @@
 export const spareParts = [
   {
+  id: 14,
+  slug: "ekomilk-ultra-milk-analyzer",
+  name: "Ekomilk Ultra Milk Analyzer",
+  keywords: [
+    "ekomilk ultra",
+    "ekomilk ultra milk analyzer",
+    "milk analyzer",
+    "milk testing machine",
+    "automatic milk analyzer",
+    "ultrasonic milk analyzer",
+    "dairy milk analyzer",
+    "milk fat analyzer",
+    "snf analyzer",
+    "milk analyzer machine",
+    "ekomilk machine",
+    "buy ekomilk ultra",
+    "milk testing equipment",
+    "digital milk analyzer",
+    "dairy equipment"
+  ],
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Ekomilk_Ultra_Milk_Analyzer.webp",
+  sku: "EKO-ULTRA-014",
+  price: "Contact for Price",
+  category: "Milk Analyzer",
+  stockStatus: "In Stock",
+  warranty: "1 Year",
+
+  metaTitle: "Ekomilk Ultra Milk Analyzer | Automatic Milk Testing Machine",
+
+  metaDescription:
+    "Buy Ekomilk Ultra Milk Analyzer for fast and accurate milk testing. Measures Fat, SNF, Density, Protein, Added Water and more with reliable ultrasonic technology.",
+
+  alt: "Ekomilk Ultra Milk Analyzer",
+
+  description:
+    "The Ekomilk Ultra Milk Analyzer is a high-performance ultrasonic milk testing machine designed for rapid and accurate milk analysis. It measures Fat, SNF, Density, Protein, Lactose, Added Water, Salts, Freezing Point, and Temperature within seconds. Ideal for dairy farms, milk collection centres, cooperative societies, dairy laboratories, and dairy processing plants, the Ekomilk Ultra delivers reliable performance, user-friendly operation, and low maintenance for daily milk quality testing.",
+
+  specifications: {
+    ProductType: "Milk Analyzer",
+    Model: "Ekomilk Ultra",
+    Technology: "Ultrasonic",
+    Parameters: "Fat, SNF, Density, Protein, Lactose, Added Water, Salts, Freezing Point, Temperature",
+    TestingTime: "Approx. 30 Seconds",
+    Display: "LCD Display",
+    Interface: "USB / RS232",
+    PowerSupply: "12V DC",
+    Condition: "New",
+    Warranty: "1 Year"
+  }
+},
+{
   id: 1,
   slug: "ekomilk-motor-assembly",
   name: "Ekomilk Motor Assembly Complete",
