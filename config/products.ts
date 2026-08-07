@@ -2448,7 +2448,7 @@ keywords:
         value: "₹ 30,500",
       },
     ],
-    desc: "Jai Shree Equipment Dairy is a desc:
+    desc:
 "The Blue Neno Cow Milking Machine is a high-performance automatic milking machine suitable for small and medium dairy farms. Equipped with a 20-litre stainless steel bucket, 0.75 HP electric motor, and a powerful 200 LPM vacuum pump, it delivers fast and hygienic milk extraction. The durable stainless steel body offers corrosion resistance and easy maintenance, while the automatic operation reduces labour and increases productivity. Jai Shree Equipment Dairy provides genuine Blue Neno Cow Milking Machines with expert guidance, competitive prices, and dependable customer support.",
 
 keywords:
