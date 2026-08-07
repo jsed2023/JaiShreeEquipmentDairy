@@ -2352,7 +2352,7 @@ export const milkingMachine: Products[] = [
       {
         id: "1F",
         key: "Brand",
-        value: "Vansan",
+        value: "Vansun",
       },
       {
         id: "1G",
@@ -2375,9 +2375,11 @@ export const milkingMachine: Products[] = [
         value: "₹ 26,500",
       },
     ],
-    desc: "Jai Shree Equipment Dairy is a prominent distributor of cow and buffalo milking machines in Sri Ganganagar, Rajasthan.They offer a wide range of milking machines suitable for both small-scale and large-scale dairy operation",
-    keywords:
-      "milking machine, cow milking machine, automatic milking machine, electric milking machine, portable milking machine, Vansun milking machine, Jai Shree Equipment Dairy, milking machine dealer, dairy equipment supplier, Vansun milking machine Sri Ganganagar, Vansun milking machine Bikaner, Vansun milking machine Hanumangarh, Vansun milking machine Anupgarh"},
+  desc:
+"The Neno Cow Milking Machine is a compact and efficient automatic milking machine designed for small and medium dairy farms. It features a 20-litre stainless steel milk bucket, a powerful 0.75 HP electric motor, and a 150–200 LPM vacuum pump for hygienic and efficient milk collection. Its stainless steel construction ensures durability, easy cleaning, and long service life. The machine reduces manual labour, improves milking efficiency, and helps maintain milk quality. Jai Shree Equipment Dairy supplies the Neno Cow Milking Machine across Rajasthan and nearby states with competitive pricing, genuine products, and reliable after-sales support.",
+
+keywords:
+"neno cow milking machine, automatic cow milking machine, electric milking machine, portable milking machine, 20 litre milking machine, stainless steel milking machine, dairy milking machine, cow milking equipment, Vansan milking machine, milking machine price, dairy farm equipment, Jai Shree Equipment Dairy,"},
   {
     id: 2,
     name: "Blue Neno Cow Milking Machine",
@@ -2446,9 +2448,11 @@ export const milkingMachine: Products[] = [
         value: "₹ 30,500",
       },
     ],
-    desc: "Jai Shree Equipment Dairy is a prominent distributor of cow and buffalo milking machines in Sri Ganganagar, Rajasthan.They offer a wide range of milking machines suitable for both small-scale and large-scale dairy operation",
-    keywords:
-      "milking machine, cow milking machine, automatic milking machine, electric milking machine, portable milking machine, Vansun milking machine, Jai Shree Equipment Dairy, milking machine dealer, dairy equipment supplier, Vansun milking machine Sri Ganganagar, Vansun milking machine Bikaner, Vansun milking machine Hanumangarh, Vansun milking machine Anupgarh,"
+    desc: "Jai Shree Equipment Dairy is a desc:
+"The Blue Neno Cow Milking Machine is a high-performance automatic milking machine suitable for small and medium dairy farms. Equipped with a 20-litre stainless steel bucket, 0.75 HP electric motor, and a powerful 200 LPM vacuum pump, it delivers fast and hygienic milk extraction. The durable stainless steel body offers corrosion resistance and easy maintenance, while the automatic operation reduces labour and increases productivity. Jai Shree Equipment Dairy provides genuine Blue Neno Cow Milking Machines with expert guidance, competitive prices, and dependable customer support.",
+
+keywords:
+"blue neno cow milking machine, automatic milking machine, electric cow milking machine, 20 litre milking machine, stainless steel milking machine, dairy equipment, cow milking equipment, Vansan milking machine, milking machine supplier, dairy farm machinery, Jai Shree Equipment Dairy,"
     },
   {
     id: 3,
@@ -2518,9 +2522,11 @@ export const milkingMachine: Products[] = [
         value: "₹ 36,000",
       },
     ],
-    desc: "Jai Shree Equipment Dairy is a prominent distributor of cow and buffalo milking machines in Sri Ganganagar, Rajasthan.They offer a wide range of milking machines suitable for both small-scale and large-scale dairy operation",
-    keywords:
-      "Milking Machine, Vansun Milking Machine, Jai Shree Equipment Dairy, buffalo milking machine, cow milking machine, automatic milking machine, electric milking machine, portable milking machine, Vansun milking machine, Jai Shree Equipment Dairy, milking machine dealer, dairy equipment supplier, Vansun milking machine Sri Ganganagar, Vansun milking machine Bikaner, Vansun milking machine Hanumangarh, Vansun milking machine Anupgarh",},
+    desc:
+"The Vansan Trolly Cow and Buffalo Single Milking Machine is designed for efficient milking of both cows and buffaloes. It comes with a 25-litre stainless steel milk bucket, a 0.75 HP motor, and a 200 LPM vacuum pump for consistent and hygienic milk collection. Its portable trolley design allows easy movement between animals, making it ideal for dairy farms of all sizes. Built with high-quality stainless steel components, it offers excellent durability, low maintenance, and reliable performance. Jai Shree Equipment Dairy supplies genuine Vansan milking machines at competitive prices with excellent after-sales service.",
+
+keywords:
+"Vansan trolly milking machine, buffalo milking machine, cow milking machine, automatic milking machine, trolley milking machine, 25 litre milking machine, dairy milking equipment, electric milking machine, stainless steel milking machine, dairy machinery, Jai Shree Equipment Dairy",},
   {
     id: 4,
     name: "Melasty Trolly Single Milking Machine",
@@ -2589,9 +2595,11 @@ export const milkingMachine: Products[] = [
         value: "₹ 42,000",
       },
     ],
-    desc: "Jai Shree Equipment Dairy is a prominent distributor of cow and buffalo milking machines in Sri Ganganagar, Rajasthan.They offer a wide range of milking machines suitable for both small-scale and large-scale dairy operation",
-    keywords:
-      "Milking Machine, Vansun Milking Machine, Jai Shree Equipment Dairy, Milking Machine, Dairy Equipment, Dairy Machinery, Automatic Milking Machine, Electric Milking Machine, Portable Milking Machine, Dairy Farm Equipment, Livestock Equipment, Dairy Technology, Dairy Automation, Milk Production, Farm Equipment, Vansun Milking Machine Sri Ganganagar, Vansun Milking Machine Bikaner, Vansun Milking Machine Hanumangarh, Vansun Milking Machine Anupgarh, Jai Shree Equipment Dairy Sri Ganganagar, Jai Shree Equipment Dairy Bikaner, Jai Shree Equipment Dairy Hanumangarh, Jai Shree Equipment Dairy Anupgarh, Milking Machine Sri Ganganagar, Milking Machine Bikaner, Milking Machine Hanumangarh, Milking Machine Anupgarh, Dairy Equipment Sri Ganganagar, Dairy Equipment Bikaner, Dairy Equipment Hanumangarh, Dairy Equipment Anupgarh, Dairy Machinery Sri Ganganagar, Dairy Machinery Bikaner, Dairy Machinery Hanumangarh, Dairy Machinery Anupgarh, Best Milking Machine in Sri Ganganagar, Best Milking Machine in Bikaner, Best Milking Machine in Hanumangarh, Best Milking Machine in Anupgarh, Buy Milking Machine in Sri Ganganagar, Buy Milking Machine in Bikaner, Buy Milking Machine in Hanumangarh, Buy Milking Machine in Anupgarh, Price of Milking Machine in Sri Ganganagar, Price of Milking Machine in Bikaner, Price of Milking Machine in Hanumangarh, Price of Milking Machine in Anupgarh, Vansun Milking Machine Dealer in Sri Ganganagar, Vansun Milking Machine Dealer in Bikaner, Vansun Milking Machine Dealer in Hanumangarh, Vansun Milking Machine Dealer in Anupgarh, Jai Shree Equipment Dairy Contact Number, Jai Shree Equipment Dairy Address, Jai Shree Equipment Dairy Reviews, Jai Shree Equipment Dairy Services",
+    desc:
+"The Melasty Trolly Single Milking Machine is an advanced automatic milking solution for commercial dairy farms. It features a durable 25-litre stainless steel milk bucket, a 0.75 HP electric motor, and a powerful 200 LPM vacuum pump for fast and hygienic milk extraction. The trolley-mounted design offers excellent mobility and ease of operation, while the stainless steel construction ensures durability and simple maintenance. Jai Shree Equipment Dairy supplies genuine Melasty milking machines with competitive pricing, expert assistance, and dependable after-sales support.",
+
+keywords:
+"Melasty milking machine, Melasty trolley milking machine, automatic milking machine, commercial dairy equipment, electric milking machine, 25 litre milking machine, stainless steel milking machine, dairy farm machinery, cow milking machine, buffalo milking machine, Jai Shree Equipment Dairy",
   },
   {
     id: 5,
@@ -2661,9 +2669,11 @@ export const milkingMachine: Products[] = [
         value: "₹ 50,000",
       },
     ],
-    desc: "Jai Shree Equipment Dairy is a prominent distributor of cow and buffalo milking machines in Sri Ganganagar, Rajasthan.They offer a wide range of milking machines suitable for both small-scale and large-scale dairy operation",
-    keywords:
-      "Milking Machine, Vansun Milking Machine, Jai Shree Equipment Dairy, Dairy Equipment, Dairy Machinery, Automatic Milking Machine, Electric Milking Machine, Portable Milking Machine, Dairy Farm Equipment, Dairy Technology, Farm Equipment, Vansun Milking Machine Sri Ganganagar, Vansun Milking Machine Bikaner, Vansun Milking Machine Hanumangarh, Vansun Milking Machine Anupgarh, Jai Shree Equipment Dairy Sri Ganganagar, Jai Shree Equipment Dairy Bikaner, Jai Shree Equipment Dairy Hanumangarh, Jai Shree Equipment Dairy Anupgarh, Milking Machine Sri Ganganagar, Milking Machine Bikaner, Milking Machine Hanumangarh, Milking Machine Anupgarh, Dairy Equipment Sri Ganganagar, Dairy Equipment Bikaner, Dairy Equipment Hanumangarh, Dairy Equipment Anupgarh, Dairy Machinery Sri Ganganagar, Dairy Machinery Bikaner, Dairy Machinery Hanumangarh, Dairy Machinery Anupgarh, Best Milking Machine in Sri Ganganagar, Best Milking Machine in Bikaner, Best Milking Machine in Hanumangarh, Best Milking Machine in Anupgarh, Buy Milking Machine in Sri Ganganagar, Buy Milking Machine in Bikaner, Buy Milking Machine in Hanumangarh, Buy Milking Machine in Anupgarh, Price of Milking Machine in Sri Ganganagar, Price of Milking Machine in Bikaner, Price of Milking Machine in Hanumangarh, Price of Milking Machine in Anupgarh, Vansun Milking Machine Dealer in Sri Ganganagar, Vansun Milking Machine Dealer in Bikaner, Vansun Milking Machine Dealer in Hanumangarh, Vansun Milking Machine Dealer in Anupgarh, Jai Shree Equipment Dairy Contact Number, Jai Shree Equipment Dairy Address, Jai Shree Equipment Dairy Reviews, Jai Shree Equipment Dairy Services",
+    desc:
+"The Vansan Trolly Cow and Buffalo Milking Machine is a heavy-duty automatic milking machine built for medium and large dairy farms. It features a 25-litre stainless steel bucket, a powerful 1 HP electric motor, and a high-capacity 200 LPM vacuum pump for efficient and hygienic milk collection. The portable trolley design makes it easy to move between animals, while the robust stainless steel body ensures durability and long-lasting performance. Jai Shree Equipment Dairy supplies genuine Vansan milking machines with competitive prices, expert support, and reliable after-sales service across Rajasthan and nearby regions.",
+
+keywords:
+"Vansan cow and buffalo milking machine, automatic milking machine, 1 HP milking machine, trolley milking machine, dairy milking equipment, stainless steel milking machine, electric milking machine, buffalo milking machine, cow milking machine, dairy farm equipment, Jai Shree Equipment Dairy, milking machine price",
   },
 ];
 
