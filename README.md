@@ -18,10 +18,10 @@ We provide high-quality machines and services to support:
 
 🧰 Our Products
 
-- 🥛 Milk Analyzer Machines
+- 🥛 Milk Analyzer Machines (Ekomilk / Lactoscan / Advance)
 - ⚙️ Advance Milk Analyzer (Max / Plus / Advance)
 - 🐄 Milking Machines
-- 🧈 Milk Cream Separators
+- 🧈 Milk Cream Separators (Paras)
 - ⚖️ Digital Weighing Scales
 - 🧾 Milk Collection Units
 
@@ -29,7 +29,7 @@ We provide high-quality machines and services to support:
 
 🌐 Tech Stack
 
-- Next.js 14 (App Router)
+- Next.js 16 (App Router)
 - NextUI v2
 - Tailwind CSS
 - TypeScript
