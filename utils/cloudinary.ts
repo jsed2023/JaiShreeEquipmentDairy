@@ -1,15 +1,5 @@
 // utils/cloudinary.ts
 
-/**
- * Cloudinary Optimized URL Generator
- * -----------------------------------
- * ✔ Automatic modern format delivery (AVIF/WebP)
- * ✔ Smart compression control
- * ✔ Responsive width support
- * ✔ Optional height + crop
- * ✔ DPR auto optimization
- */
-
 interface CloudinaryOptions {
   width?: number;
   height?: number;
@@ -21,7 +11,76 @@ interface CloudinaryOptions {
 }
 
 const CLOUD_NAME = "dddhtbuzs";
+
 const BASE_URL = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload`;
+
+/**
+ * Check whether a Cloudinary path segment is a transformation segment.
+ */
+const isTransformationSegment = (segment: string): boolean => {
+  if (!segment) return false;
+
+  const transformationKeys = [
+    "f_",
+    "q_",
+    "dpr_",
+    "w_",
+    "h_",
+    "c_",
+    "ar_",
+    "g_",
+    "x_",
+    "y_",
+    "z_",
+    "e_",
+    "fl_",
+    "d_",
+    "pg_",
+    "so_",
+    "du_",
+    "fps_",
+    "vc_",
+    "ac_",
+  ];
+
+  return segment
+    .split(",")
+    .some((part) =>
+      transformationKeys.some((key) => part.startsWith(key))
+    );
+};
+
+/**
+ * Extract the Cloudinary public ID from either:
+ *
+ * 1. A full Cloudinary URL
+ * 2. A Cloudinary public ID
+ *
+ * Existing Cloudinary transformations are removed so they
+ * are never applied twice.
+ */
+const getPublicId = (src: string): string => {
+  const cleanSrc = src.split("?")[0].split("#")[0];
+
+  if (!cleanSrc.includes("/upload/")) {
+    return cleanSrc.replace(/^\/+/, "");
+  }
+
+  const afterUpload = cleanSrc.split("/upload/")[1];
+
+  if (!afterUpload) {
+    throw new Error(`Invalid Cloudinary URL: ${src}`);
+  }
+
+  const parts = afterUpload.split("/");
+
+  // Remove existing transformation segment(s)
+  while (parts.length > 1 && isTransformationSegment(parts[0])) {
+    parts.shift();
+  }
+
+  return parts.join("/");
+};
 
 export const cld = (
   src: string,
@@ -41,33 +100,31 @@ export const cld = (
     extra = "",
   } = options;
 
-  // Extract public ID if full URL is passed
-  const publicId = src.includes("/upload/")
-    ? src.split("/upload/")[1]
-    : src;
+  const publicId = getPublicId(src);
 
   const transformations: string[] = [];
 
-  // Format (WebP / AVIF auto)
+  // Automatic format delivery
   transformations.push(`f_${format}`);
 
   // Quality optimization
   transformations.push(`q_${quality}`);
 
-  // DPR (retina optimization)
+  // DPR optimization
   transformations.push(`dpr_${dpr}`);
 
-  // Width handling (only if provided)
+  // Responsive width
   if (width) {
     transformations.push(`w_${width}`);
   }
 
-  // Height + crop only if height exists
+  // Height + crop
   if (height) {
-    transformations.push(`h_${height}`, `c_${crop}`);
+    transformations.push(`h_${height}`);
+    transformations.push(`c_${crop}`);
   }
 
-  // Extra transformations if needed
+  // Additional transformations
   if (extra) {
     transformations.push(extra);
   }
