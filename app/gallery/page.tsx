@@ -24,19 +24,19 @@ const images: GalleryImage[] = [
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1757013349/Advance_Milk_Analyzer_plus.png",
     name: "Advance Milk Analyzer Plus",
     altText:
-      "Advance Milk Analyzer Plus machine for accurate milk fat and SNF testing in dairy farms.",
+      "Advance Milk Analyzer Plus for milk fat and SNF testing in dairy farms.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",
     name: "DPU Milk Collection Unit",
     altText:
-      "DPU Milk Collection Unit Dairy Khata for automated milk collection and digital record keeping.",
+      "DPU Milk Collection Unit Dairy Khata for automated milk collection and digital records.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1751737335/advance_milk_analyzer_max.png",
     name: "Advance Milk Analyzer Max",
     altText:
-      "Advance Milk Analyzer Max equipment for fast, high-volume milk measurement at collection centers.",
+      "Advance Milk Analyzer Max for fast milk measurement at collection centers.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1765479086/Advance_Milk_Analyzer_Pro20.png",
@@ -48,49 +48,49 @@ const images: GalleryImage[] = [
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902688/Ultrasonic-Milk-Stirrer-Normal.jpg",
     name: "Ultrasonic Milk Stirrer Normal",
     altText:
-      "Standard Ultrasonic Milk Stirrer for removing air bubbles from milk samples before testing.",
+      "Ultrasonic Milk Stirrer for preparing milk samples before testing.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/Ekomilk%20ULTRA%20PRO.jpg",
     name: "Ekomilk ULTRA PRO",
     altText:
-      "Ekomilk ULTRA PRO advanced milk analyzer providing precise biological data for dairy cooperatives.",
+      "Ekomilk ULTRA PRO milk analyzer for dairy milk quality testing.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg",
     name: "Ekomilk Ultra Analyzer",
     altText:
-      "Ekomilk Ultra Analyzer machine testing milk parameters like added water and density.",
+      "Ekomilk Ultra Analyzer for testing milk parameters including density and added water.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",
     name: "KREI Ultrasonic Milk Stirrer",
     altText:
-      "KREI Ultrasonic Milk Stirrer equipment for preparing milk samples at local collection centers.",
+      "KREI Ultrasonic Milk Stirrer for preparing milk samples at collection centers.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902682/Advance%20Milk%20Analyzer.jpg",
     name: "Advance Milk Analyzer",
     altText:
-      "Advance Milk Analyzer machine for reliable daily testing on regional dairy farms.",
+      "Advance Milk Analyzer for daily milk quality testing on dairy farms.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766092196/Milk_Analyzer_PCB_Motherboard_Front.png",
     name: "Milk Analyzer PCB Motherboard Front",
     altText:
-      "Front view of a replacement PCB Motherboard used for expert milk analyzer machine repairs.",
+      "Front view of a replacement PCB motherboard for milk analyzer repair.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766091579/Milk_Analyzer_PCB_Motherboard_back.png",
     name: "Milk Analyzer PCB Motherboard Back",
     altText:
-      "Back view of a replacement PCB Motherboard for servicing dairy testing equipment.",
+      "Back view of a replacement PCB motherboard for milk analyzer servicing.",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766090508/Milk_Analyzer_Plastic_Body_Cabinet.png",
     name: "Milk Analyzer Plastic Body Cabinet",
     altText:
-      "Durable plastic body cabinet replacement part for repairing Ekomilk and Advance milk analyzers.",
+      "Plastic body cabinet replacement part for Ekomilk and Advance milk analyzers.",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function GalleryPage() {
     useState<number | null>(null);
 
   /* =========================
-     CLOUDINARY URL
+     CLOUDINARY OPTIMIZATION
   ========================= */
 
   const getCldUrl = (
@@ -139,23 +139,23 @@ export default function GalleryPage() {
           backdrop-blur-sm
         "
       >
- <h1
-  className="
-    bg-linear-to-r
-    from-purple-600
-    via-blue-600
-    to-cyan-500
-    bg-clip-text
-    text-center
-    text-lg
-    font-bold
-    text-transparent
-    underline
-    md:text-xl
-  "
->
-  Product Gallery
-</h1>
+        <h1
+          className="
+            bg-linear-to-r
+            from-purple-600
+            via-blue-600
+            to-cyan-500
+            bg-clip-text
+            text-center
+            text-lg
+            font-bold
+            text-transparent
+            underline
+            md:text-xl
+          "
+        >
+          Product Gallery
+        </h1>
       </div>
 
       {/* =========================
@@ -175,33 +175,25 @@ export default function GalleryPage() {
             activeIndex === index;
 
           return (
-            <div
+            <button
               key={item.src}
-              role="button"
-              tabIndex={0}
+              type="button"
               aria-label={`View ${item.name}`}
+              aria-pressed={isActive}
               onClick={() =>
                 setActiveIndex(
                   isActive ? null : index
                 )
               }
-              onKeyDown={(event) => {
-                if (
-                  event.key === "Enter" ||
-                  event.key === " "
-                ) {
-                  event.preventDefault();
-
-                  setActiveIndex(
-                    isActive ? null : index
-                  );
-                }
-              }}
               className={`
+                group
+                block
+                w-full
                 cursor-pointer
                 overflow-hidden
                 rounded-xl
                 bg-white
+                text-left
                 transition-all
                 duration-300
                 focus-visible:outline-2
@@ -212,13 +204,13 @@ export default function GalleryPage() {
                 ${
                   isActive
                     ? "scale-105 shadow-2xl ring-4 ring-rose-400"
-                    : "shadow hover:shadow-lg"
+                    : "shadow hover:-translate-y-1 hover:shadow-lg"
                 }
               `}
             >
 
               {/* =========================
-                  IMAGE
+                  IMAGE CONTAINER
               ========================= */}
 
               <div
@@ -226,6 +218,7 @@ export default function GalleryPage() {
                   relative
                   h-35
                   w-full
+                  overflow-hidden
                   bg-[#f3f3f3]
                   sm:h-40
                   md:h-42.5
@@ -233,13 +226,11 @@ export default function GalleryPage() {
                 "
               >
                 <Image
-                  src={getCldUrl(
-                    item.src,
-                    600
-                  )}
+                  src={getCldUrl(item.src, 800)}
                   alt={item.altText}
                   fill
                   priority={index === 0}
+                  loading={index === 0 ? undefined : "lazy"}
                   sizes="
                     (max-width: 640px) 50vw,
                     (max-width: 1024px) 33vw,
@@ -248,6 +239,9 @@ export default function GalleryPage() {
                   className="
                     object-contain
                     p-3
+                    transition-transform
+                    duration-300
+                    group-hover:scale-105
                   "
                 />
               </div>
@@ -267,21 +261,22 @@ export default function GalleryPage() {
                 "
               >
                 <p
-  className="
-    min-h-10
-    line-clamp-2
-    text-center
-    text-sm
-    font-semibold
-    text-gray-900
-    dark:text-white
-  "
->
-  {item.name}
-</p>
+                  className="
+                    min-h-10
+                    line-clamp-2
+                    text-center
+                    text-sm
+                    font-semibold
+                    leading-5
+                    text-gray-900
+                    dark:text-white
+                  "
+                >
+                  {item.name}
+                </p>
               </div>
 
-            </div>
+            </button>
           );
         })}
       </div>
