@@ -154,7 +154,7 @@ export default function GalleryPage() {
             md:text-xl
           "
         >
-          Product Gallery
+          Product Images
         </h1>
       </div>
 
