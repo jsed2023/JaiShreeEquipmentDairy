@@ -22,8 +22,17 @@ export function Image({
   className = "",
   style,
   sizes,
+  src,
   ...props
 }: ImageProps) {
+  // Cloudinary already handles:
+  // format, quality, width, height and DPR.
+  // Therefore don't send Cloudinary images through
+  // Next.js /_next/image optimization again.
+  const isCloudinaryImage =
+    typeof src === "string" &&
+    src.includes("res.cloudinary.com/dddhtbuzs/");
+
   // Phone → Tablet → Laptop → Desktop
   const responsiveSizes =
     sizes ??
@@ -35,16 +44,17 @@ export function Image({
 
   // ==============================
   // FILL MODE
-  // Parent controls dimensions
   // ==============================
 
   if (fill) {
     return (
       <NextImage
         {...props}
+        src={src}
         alt={alt}
         fill
         sizes={responsiveSizes}
+        unoptimized={isCloudinaryImage || props.unoptimized}
         className={`object-contain ${className}`}
         style={{
           maxWidth: "100%",
@@ -61,10 +71,12 @@ export function Image({
   return (
     <NextImage
       {...props}
+      src={src}
       alt={alt}
       width={width ?? 800}
       height={height ?? 600}
       sizes={responsiveSizes}
+      unoptimized={isCloudinaryImage || props.unoptimized}
       className={`max-w-full object-contain ${className}`}
       style={{
         height: "auto",
