@@ -322,7 +322,7 @@ Dairy Equipment & Milk Analyzer Machines in Rajasthan
     </div>
 
     {/* Logo + Badge */}
-    <<div className="flex flex-col items-center gap-3">
+    <div className="flex flex-col items-center gap-3">
   <Image
     src={cld(
       "v1771343933/K_R_Electronics_Industries_Log.webp",
