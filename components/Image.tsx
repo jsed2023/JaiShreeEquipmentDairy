@@ -25,15 +25,10 @@ export function Image({
   src,
   ...props
 }: ImageProps) {
-  // Cloudinary already handles:
-  // format, quality, width, height and DPR.
-  // Therefore don't send Cloudinary images through
-  // Next.js /_next/image optimization again.
   const isCloudinaryImage =
     typeof src === "string" &&
-    src.includes("res.cloudinary.com/dddhtbuzs/");
+    src.startsWith("https://res.cloudinary.com/dddhtbuzs/");
 
-  // Phone → Tablet → Laptop → Desktop
   const responsiveSizes =
     sizes ??
     "(max-width: 640px) 100vw, " +
@@ -41,10 +36,6 @@ export function Image({
       "(max-width: 1024px) 70vw, " +
       "(max-width: 1280px) 50vw, " +
       "40vw";
-
-  // ==============================
-  // FILL MODE
-  // ==============================
 
   if (fill) {
     return (
@@ -63,10 +54,6 @@ export function Image({
       />
     );
   }
-
-  // ==============================
-  // NORMAL RESPONSIVE IMAGE
-  // ==============================
 
   return (
     <NextImage
