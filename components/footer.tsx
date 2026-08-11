@@ -92,6 +92,10 @@ export default function Footer() {
                 href: "/services",
               },
               {
+                name: "About Us",
+                href: "/about",
+              },
+             {
                 name: "Blog",
                 href: "/blog",
               },
@@ -139,7 +143,7 @@ px-2 py-2 transition hover:text-amber-600"
                 href: "/automatic-milk-collection-system",
               },
               {
-                name: "Cream Separator Machine",
+                name: "Dairy Equipment",
                 href: "/dairy-equipment",
               },
                {
