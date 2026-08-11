@@ -322,30 +322,28 @@ Dairy Equipment & Milk Analyzer Machines in Rajasthan
     </div>
 
     {/* Logo + Badge */}
-    <div className="flex flex-col items-center gap-3">
-      <Image
-        src={cld(
-          "v1771343933/K_R_Electronics_Industries_Log.webp",
-          {
-            width: 300,
-            quality: "auto",
-            format: "auto",
-            crop: "fit",
-          }
-        )}
-        alt="K R Electronics Industries Logo"
-        width={300}
-        height={100}
-        loading="lazy"
-        sizes="300px"
-        className="h-12 w-auto object-contain"
-      />
+    <<div className="flex flex-col items-center gap-3">
+  <Image
+    src={cld(
+      "v1771343933/K_R_Electronics_Industries_Log.webp",
+      {
+        width: 300,
+        height: 100,
+        crop: "fit",
+      }
+    )}
+    alt="K R Electronics Industries Logo"
+    width={300}
+    height={100}
+    loading="lazy"
+    sizes="300px"
+    className="h-12 w-auto object-contain"
+  />
 
-      <span className="animate-title-gradient rounded-full bg-green-600 px-4 py-1 text-sm font-semibold text-transparent shadow-md md:text-base">
-        Authorized Distributor
-      </span>
-    </div>
-
+  <span className="animate-title-gradient rounded-full bg-green-600 px-4 py-1 text-sm font-semibold text-transparent shadow-md md:text-base">
+    Authorized Distributor
+  </span>
+</div>
     {/* Description */}
     <div className="mt-4 max-h-100 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:text-white/90">
       <p className="max-w-5xl px-6 text-center text-base leading-relaxed text-stone-700 md:text-lg lg:text-xl dark:text-gray-300">
