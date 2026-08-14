@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
-import ImageSlider from "@/components/ImageSlider";
 import { spareParts } from "@/config/spareparts";
 
 export default function SparePartsPage() {
@@ -30,10 +30,10 @@ export default function SparePartsPage() {
             Milk Analyzer Machines, Automatic Milk Collection Systems,
             Milk Testing Equipment and Dairy Processing Machines.
 
-            We provide premium pumps, PCB boards, sensors,
-            valves, thermal printers, LCD displays, motors,
-            power supplies and original replacement components
-            with fast delivery across India.
+            We provide premium pumps, PCB boards, sensors, valves,
+            thermal printers, LCD displays, motors, power supplies
+            and original replacement components with fast delivery
+            across India.
           </p>
 
         </div>
@@ -108,26 +108,30 @@ export default function SparePartsPage() {
               bg-white dark:bg-zinc-900
               border border-gray-200 dark:border-zinc-700
               shadow-md hover:shadow-2xl
-              transition-all duration-300 hover:-translate-y-2
+              transition-all duration-300
+              hover:-translate-y-2
             "
           >
 
-            {/* ================= PRODUCT IMAGE SLIDER ================= */}
+            {/* ================= PRODUCT IMAGE ================= */}
 
-            <div className="bg-gray-100 dark:bg-zinc-800 h-72 overflow-hidden">
+            <div className="bg-gray-100 dark:bg-zinc-800 h-72 overflow-hidden flex items-center justify-center">
 
-              <ImageSlider
-  images={
-    (Array.isArray(product.photo)
-      ? product.photo
-      : [product.photo]
-    ).map((src) => ({
-      src,
-      alt: product.alt || product.name,
-    }))
-  }
-  productName={product.name}
-/>
+              <Image
+                src={product.photo}
+                alt={product.alt || product.name}
+                width={600}
+                height={400}
+                className="
+                  w-full
+                  h-full
+                  object-contain
+                  p-4
+                  transition-transform
+                  duration-500
+                  group-hover:scale-105
+                "
+              />
 
             </div>
 
@@ -177,8 +181,8 @@ export default function SparePartsPage() {
                 </button>
 
                 <a
-                  href={`https://wa.me/917375082341?text=Hello,%20I%20am%20interested%20in%20${encodeURIComponent(
-                    product.name
+                  href={`https://wa.me/917375082341?text=${encodeURIComponent(
+                    `Hello, I am interested in ${product.name}`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -244,56 +248,58 @@ export default function SparePartsPage() {
                     Specifications
                   </h4>
 
-                  <table
-                    className="
-                      w-full
-                      text-sm
-                      rounded-xl
-                      overflow-hidden
-                      border
-                      border-zinc-200
-                      dark:border-zinc-700
-                    "
-                  >
+                  <div className="overflow-x-auto rounded-xl">
 
-                    <tbody>
+                    <table
+                      className="
+                        w-full
+                        text-sm
+                        border
+                        border-zinc-200
+                        dark:border-zinc-700
+                      "
+                    >
 
-                      {Object.entries(
-                        product.specifications
-                      ).map(([key, value]) => (
+                      <tbody>
 
-                        <tr key={key}>
+                        {Object.entries(
+                          product.specifications
+                        ).map(([key, value]) => (
 
-                          <td
-                            className="
-                              border
-                              px-3
-                              py-2
-                              font-medium
-                              bg-slate-100
-                              dark:bg-zinc-800
-                            "
-                          >
-                            {key}
-                          </td>
+                          <tr key={key}>
 
-                          <td className="border px-3 py-2">
-                            {String(value)}
-                          </td>
+                            <td
+                              className="
+                                border
+                                px-3
+                                py-2
+                                font-medium
+                                bg-slate-100
+                                dark:bg-zinc-800
+                              "
+                            >
+                              {key}
+                            </td>
 
-                        </tr>
+                            <td className="border px-3 py-2">
+                              {String(value)}
+                            </td>
 
-                      ))}
+                          </tr>
 
-                    </tbody>
+                        ))}
 
-                  </table>
+                      </tbody>
+
+                    </table>
+
+                  </div>
 
                   {/* WhatsApp Enquiry */}
 
                   <a
-                    href={`https://wa.me/917375082341?text=Hello,%20I%20am%20interested%20in%20${encodeURIComponent(
-                      product.name
+                    href={`https://wa.me/917375082341?text=${encodeURIComponent(
+                      `Hello, I am interested in ${product.name}`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
