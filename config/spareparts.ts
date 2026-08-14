@@ -157,6 +157,7 @@ export const spareParts = [
     "milk analyzer repair parts"
   ],
   photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848855/Ekomilk_Ultra_V17_PCB_Control_Board.webp",
+"https://res.cloudinary.com/dddhtbuzs/image/upload/v1786699751/Ekomilk_Ultra_New_Pcb.webp",
   sku: "EKO-PCB-V17-003",
   price: "₹12,000",
   category: "Milk Analyzer Spare Parts",
