@@ -1,5 +1,5 @@
-import type { SparePart } from "@/types";
-export const spareParts: SparePart[] = [
+
+export const spareParts= [
   {
   id: 14,
   slug: "ekomilk-ultra-milk-analyzer",
@@ -157,8 +157,7 @@ export const spareParts: SparePart[] = [
     "buy ekomilk pcb board",
     "milk analyzer repair parts"
   ],
-  photo:[ "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848855/Ekomilk_Ultra_V17_PCB_Control_Board.webp",
-"https://res.cloudinary.com/dddhtbuzs/image/upload/v1786699751/Ekomilk_Ultra_New_Pcb.webp",],
+  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848855/Ekomilk_Ultra_V17_PCB_Control_Board.webp",
   sku: "EKO-PCB-V17-003",
   price: "₹12,000",
   category: "Milk Analyzer Spare Parts",
