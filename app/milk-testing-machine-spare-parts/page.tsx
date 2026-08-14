@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Image } from "@/components/Image";
+import ImageSlider from "@/components/ImageSlider";
 import { spareParts } from "@/config/spareparts";
-import { cld } from "@/utils/cloudinary";
+
 export default function SparePartsPage() {
   const [openId, setOpenId] = useState<number | null>(null);
 
@@ -13,13 +13,14 @@ export default function SparePartsPage() {
       {/* ================= HERO ================= */}
 
       <section className="mb-12">
-
         <div className="bg-linear-to-r from-sky-100 to-blue-100 dark:from-sky-900 dark:to-zinc-900 rounded-3xl p-10 shadow">
 
           <h1
-            className="text-center text-3xl sm:text-5xl font-extrabold
-            bg-linear-to-r from-sky-600 to-blue-700
-            bg-clip-text text-transparent"
+            className="
+              text-center text-3xl sm:text-5xl font-extrabold
+              bg-linear-to-r from-sky-600 to-blue-700
+              bg-clip-text text-transparent
+            "
           >
             Milk Testing Machine Spare Parts
           </h1>
@@ -36,7 +37,6 @@ export default function SparePartsPage() {
           </p>
 
         </div>
-
       </section>
 
       {/* ================= INTRO ================= */}
@@ -75,15 +75,23 @@ export default function SparePartsPage() {
       <section className="mt-12 mb-8">
 
         <div className="rounded-2xl border bg-white p-5 shadow dark:bg-zinc-900">
-  <h2
-    className="
-      animate-title-gradient bg-clip-text  text-center
-      text-lg font-bold text-transparent
-      underline sm:text-4xl"
-  >
-    Available Milk Analyzer Spare Parts
-  </h2>
-</div>
+
+          <h2
+            className="
+              animate-title-gradient
+              bg-clip-text
+              text-center
+              text-lg
+              font-bold
+              text-transparent
+              underline
+              sm:text-4xl
+            "
+          >
+            Available Milk Analyzer Spare Parts
+          </h2>
+
+        </div>
 
       </section>
 
@@ -95,32 +103,31 @@ export default function SparePartsPage() {
 
           <article
             key={product.id}
-            className="group overflow-hidden rounded-2xl
-            bg-white dark:bg-zinc-900
-            border border-gray-200 dark:border-zinc-700
-            shadow-md hover:shadow-2xl
-            transition-all duration-300 hover:-translate-y-2"
+            className="
+              group overflow-hidden rounded-2xl
+              bg-white dark:bg-zinc-900
+              border border-gray-200 dark:border-zinc-700
+              shadow-md hover:shadow-2xl
+              transition-all duration-300 hover:-translate-y-2
+            "
           >
 
-            {/* Product Image */}
+            {/* ================= PRODUCT IMAGE SLIDER ================= */}
 
-            <div className="bg-gray-100 dark:bg-zinc-800 h-72 flex justify-center items-center p-6 overflow-hidden">
-  <div className="flex gap-4 w-full h-full justify-center items-center">
-    {(Array.isArray(product.photo) ? product.photo : [product.photo]).map(
-      (photo, index) => (
-        <Image
-          key={index}
-          src={cld(photo)}
-          alt={`${product.name} - Image ${index + 1}`}
-          width={260}
-          height={220}
-          className="max-w-[48%] max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
-        />
-      )
-    )}
-  </div>
-</div>
-            {/* Product Content */}
+            <div className="bg-gray-100 dark:bg-zinc-800 h-72 overflow-hidden">
+
+              <ImageSlider
+                images={
+                  Array.isArray(product.photo)
+                    ? product.photo
+                    : [product.photo]
+                }
+                productName={product.name}
+              />
+
+            </div>
+
+            {/* ================= PRODUCT CONTENT ================= */}
 
             <div className="p-6">
 
@@ -136,15 +143,29 @@ export default function SparePartsPage() {
                 {product.metaDescription}
               </p>
 
-              {/* Buttons */}
+              {/* ================= BUTTONS ================= */}
 
               <div className="mt-6 flex gap-3">
 
                 <button
+                  type="button"
                   onClick={() =>
-                    setOpenId(openId === product.id ? null : product.id)
+                    setOpenId(
+                      openId === product.id
+                        ? null
+                        : product.id
+                    )
                   }
-                  className="flex-1 bg-sky-600 text-white py-3 rounded-xl font-semibold hover:bg-sky-700 transition"
+                  className="
+                    flex-1
+                    bg-sky-600
+                    text-white
+                    py-3
+                    rounded-xl
+                    font-semibold
+                    hover:bg-sky-700
+                    transition
+                  "
                 >
                   {openId === product.id
                     ? "Hide Details"
@@ -157,74 +178,114 @@ export default function SparePartsPage() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 border border-green-600 text-green-600
-                  text-center py-3 rounded-xl font-semibold
-                  hover:bg-green-600 hover:text-white transition"
+                  className="
+                    flex-1
+                    border border-green-600
+                    text-green-600
+                    text-center
+                    py-3
+                    rounded-xl
+                    font-semibold
+                    hover:bg-green-600
+                    hover:text-white
+                    transition
+                  "
                 >
                   Enquire
                 </a>
 
               </div>
 
-              {/* Details */}
+              {/* ================= DETAILS ================= */}
 
               {openId === product.id && (
 
                 <div className="mt-6 border-t border-zinc-200 dark:border-zinc-700 pt-5">
 
+                  {/* Basic Information */}
+
                   <div className="space-y-2 text-sm">
 
                     <p>
-                      <strong>SKU :</strong> {product.sku}
+                      <strong>SKU :</strong>{" "}
+                      {product.sku}
                     </p>
 
                     <p>
-                      <strong>Category :</strong> {product.category}
+                      <strong>Category :</strong>{" "}
+                      {product.category}
                     </p>
 
                     <p>
-                      <strong>Stock :</strong> {product.stockStatus}
+                      <strong>Stock :</strong>{" "}
+                      {product.stockStatus}
                     </p>
 
                     <p>
-                      <strong>Warranty :</strong> {product.warranty}
+                      <strong>Warranty :</strong>{" "}
+                      {product.warranty}
                     </p>
 
                   </div>
+
+                  {/* Description */}
 
                   <p className="mt-5 text-zinc-600 dark:text-zinc-400 leading-7">
                     {product.description}
                   </p>
 
+                  {/* Specifications */}
+
                   <h4 className="font-bold text-lg mt-6 mb-3">
                     Specifications
                   </h4>
 
-                  <table className="w-full text-sm rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-700">
+                  <table
+                    className="
+                      w-full
+                      text-sm
+                      rounded-xl
+                      overflow-hidden
+                      border
+                      border-zinc-200
+                      dark:border-zinc-700
+                    "
+                  >
 
                     <tbody>
 
-                      {Object.entries(product.specifications).map(
-                        ([key, value]) => (
+                      {Object.entries(
+                        product.specifications
+                      ).map(([key, value]) => (
 
-                          <tr key={key}>
+                        <tr key={key}>
 
-                            <td className="border px-3 py-2 font-medium bg-slate-100 dark:bg-zinc-800">
-                              {key}
-                            </td>
+                          <td
+                            className="
+                              border
+                              px-3
+                              py-2
+                              font-medium
+                              bg-slate-100
+                              dark:bg-zinc-800
+                            "
+                          >
+                            {key}
+                          </td>
 
-                            <td className="border px-3 py-2">
-                              {String(value)}
-                            </td>
+                          <td className="border px-3 py-2">
+                            {String(value)}
+                          </td>
 
-                          </tr>
+                        </tr>
 
-                        )
-                      )}
+                      ))}
 
                     </tbody>
 
                   </table>
+
+                  {/* WhatsApp Enquiry */}
 
                   <a
                     href={`https://wa.me/917375082341?text=Hello,%20I%20am%20interested%20in%20${encodeURIComponent(
@@ -232,7 +293,18 @@ export default function SparePartsPage() {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block mt-6 bg-green-600 text-white text-center py-3 rounded-xl font-semibold hover:bg-green-700 transition"
+                    className="
+                      block
+                      mt-6
+                      bg-green-600
+                      text-white
+                      text-center
+                      py-3
+                      rounded-xl
+                      font-semibold
+                      hover:bg-green-700
+                      transition
+                    "
                   >
                     WhatsApp Enquiry
                   </a>
@@ -260,35 +332,67 @@ export default function SparePartsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow p-6 text-center">
-            <div className="text-5xl mb-4">✅</div>
-            <h3 className="font-bold text-lg">Genuine Parts</h3>
+
+            <div className="text-5xl mb-4">
+              ✅
+            </div>
+
+            <h3 className="font-bold text-lg">
+              Genuine Parts
+            </h3>
+
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
               Original quality spare parts with long service life.
             </p>
+
           </div>
 
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow p-6 text-center">
-            <div className="text-5xl mb-4">🚚</div>
-            <h3 className="font-bold text-lg">Fast Delivery</h3>
+
+            <div className="text-5xl mb-4">
+              🚚
+            </div>
+
+            <h3 className="font-bold text-lg">
+              Fast Delivery
+            </h3>
+
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
               Safe and quick delivery across India.
             </p>
+
           </div>
 
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow p-6 text-center">
-            <div className="text-5xl mb-4">🛠️</div>
-            <h3 className="font-bold text-lg">Technical Support</h3>
+
+            <div className="text-5xl mb-4">
+              🛠️
+            </div>
+
+            <h3 className="font-bold text-lg">
+              Technical Support
+            </h3>
+
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
               Installation guidance and expert after-sales support.
             </p>
+
           </div>
 
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow p-6 text-center">
-            <div className="text-5xl mb-4">💯</div>
-            <h3 className="font-bold text-lg">100% Compatible</h3>
+
+            <div className="text-5xl mb-4">
+              💯
+            </div>
+
+            <h3 className="font-bold text-lg">
+              100% Compatible
+            </h3>
+
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
               Compatible with leading milk analyzers and dairy equipment.
             </p>
+
           </div>
 
         </div>
@@ -306,6 +410,7 @@ export default function SparePartsPage() {
         <div className="grid md:grid-cols-3 gap-8">
 
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow p-6">
+
             <h3 className="text-xl font-bold mb-3">
               🥛 Dairy Farms
             </h3>
@@ -315,9 +420,11 @@ export default function SparePartsPage() {
               milking machines and dairy equipment used in
               modern dairy farms.
             </p>
+
           </div>
 
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow p-6">
+
             <h3 className="text-xl font-bold mb-3">
               🏭 Milk Collection Centers
             </h3>
@@ -327,9 +434,11 @@ export default function SparePartsPage() {
               thermal printers, weighing systems and
               milk testing equipment.
             </p>
+
           </div>
 
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow p-6">
+
             <h3 className="text-xl font-bold mb-3">
               ⚙ Dairy Processing Plants
             </h3>
@@ -338,6 +447,7 @@ export default function SparePartsPage() {
               Durable replacement components for continuous
               dairy processing operations and quality control.
             </p>
+
           </div>
 
         </div>
@@ -364,7 +474,18 @@ export default function SparePartsPage() {
             href="https://wa.me/917375082341"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-8 bg-white text-sky-700 px-10 py-4 rounded-xl font-bold hover:scale-105 transition"
+            className="
+              inline-block
+              mt-8
+              bg-white
+              text-sky-700
+              px-10
+              py-4
+              rounded-xl
+              font-bold
+              hover:scale-105
+              transition
+            "
           >
             Get Free Quote
           </a>
@@ -376,4 +497,3 @@ export default function SparePartsPage() {
     </section>
   );
 }
-
