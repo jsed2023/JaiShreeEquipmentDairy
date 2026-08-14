@@ -106,16 +106,18 @@ export default function SparePartsPage() {
 
             <div className="bg-gray-100 dark:bg-zinc-800 h-72 flex justify-center items-center p-6 overflow-hidden">
   <div className="flex gap-4 w-full h-full justify-center items-center">
-    {(product.photos ?? [product.photo]).map((photo, index) => (
-      <Image
-        key={index}
-        src={cld(photo)}
-        alt={`${product.name} - Image ${index + 1}`}
-        width={260}
-        height={220}
-        className="max-w-[48%] max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
-      />
-    ))}
+    {(Array.isArray(product.photo) ? product.photo : [product.photo]).map(
+      (photo, index) => (
+        <Image
+          key={index}
+          src={cld(photo)}
+          alt={`${product.name} - Image ${index + 1}`}
+          width={260}
+          height={220}
+          className="max-w-[48%] max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+      )
+    )}
   </div>
 </div>
             {/* Product Content */}
