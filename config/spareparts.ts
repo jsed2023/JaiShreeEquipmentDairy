@@ -1,3 +1,4 @@
+import type { SparePart } from "@/types";
 export const spareParts = [
   {
   id: 14,
