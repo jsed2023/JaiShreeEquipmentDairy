@@ -106,7 +106,7 @@ export default function SparePartsPage() {
 
             <div className="bg-gray-100 dark:bg-zinc-800 h-72 flex justify-center items-center p-6 overflow-hidden">
   <div className="flex gap-4 w-full h-full justify-center items-center">
-    {product.photos?.map((photo, index) => (
+    {(product.photos ?? [product.photo]).map((photo, index) => (
       <Image
         key={index}
         src={cld(photo)}
@@ -118,7 +118,6 @@ export default function SparePartsPage() {
     ))}
   </div>
 </div>
-
             {/* Product Content */}
 
             <div className="p-6">
