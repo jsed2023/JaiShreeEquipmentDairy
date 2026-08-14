@@ -1,5 +1,5 @@
 import type { SparePart } from "@/types";
-export const spareParts = [
+export const spareParts: SparePart[] = [
   {
   id: 14,
   slug: "ekomilk-ultra-milk-analyzer",
