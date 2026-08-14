@@ -25,6 +25,11 @@ export default function SparePartsPage() {
             Milk Testing Machine Spare Parts
           </h1>
 
+        </div>
+      </section>
+<section className="mb-12">
+        <div className="bg-linear-to-r from-sky-100 to-blue-100 dark:from-sky-900 dark:to-zinc-900 rounded-3xl p-10 shadow">
+
           <p className="mt-6 max-w-4xl mx-auto text-center text-lg leading-8 text-slate-600 dark:text-slate-300">
             Jai Shree Equipment Dairy supplies genuine spare parts for
             Milk Analyzer Machines, Automatic Milk Collection Systems,
