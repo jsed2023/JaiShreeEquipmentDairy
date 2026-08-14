@@ -117,13 +117,17 @@ export default function SparePartsPage() {
             <div className="bg-gray-100 dark:bg-zinc-800 h-72 overflow-hidden">
 
               <ImageSlider
-                images={
-                  Array.isArray(product.photo)
-                    ? product.photo
-                    : [product.photo]
-                }
-                productName={product.name}
-              />
+  images={
+    (Array.isArray(product.photo)
+      ? product.photo
+      : [product.photo]
+    ).map((src) => ({
+      src,
+      alt: product.alt || product.name,
+    }))
+  }
+  productName={product.name}
+/>
 
             </div>
 
