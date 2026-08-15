@@ -39,9 +39,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 
-  verification: {
-    google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
-  },
+  <meta name="google-site-verification" content="szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94">
 
   openGraph: {
     type: "website",
