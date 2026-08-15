@@ -10,7 +10,8 @@ import Footer from "@/components/footer"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google"
+import { GoogleTagManager } from "@next/third-parties/google"
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
@@ -24,13 +25,11 @@ export const metadata: Metadata = {
   keywords: metaKeywords[0].keywords,
 
   authors: [{ name: siteConfig.name }],
-
   creator: siteConfig.name,
-
   publisher: siteConfig.name,
 
   category:
-    "dairy equipment, milk testing equipment, milk  analyzer machices, automatic milk collection system",
+    "dairy equipment, milk testing equipment, milk analyzer machines, automatic milk collection system",
 
   alternates: {
     canonical: siteConfig.url,
@@ -51,15 +50,14 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-
     images: [
-  {
-    url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
-    width: 1200,
-    height: 630,
-    alt: siteConfig.name,
-  },
-],
+      {
+        url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
   },
 
   twitter: {
@@ -86,11 +84,31 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en"
-  data-scroll-behavior="smooth"
-  suppressHydrationWarning>
-      <body>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Google Analytics / Google tag */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+        />
 
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-RBFDTF7PWV');
+            `,
+          }}
+        />
+      </head>
+
+      <body>
         <LocalBusinessSchema />
 
         <Providers>
@@ -99,7 +117,7 @@ export default function RootLayout({
               <Navbar />
 
               <main className="grow max-w-7xl mx-auto w-full px-4">
-                  {children}
+                {children}
               </main>
 
               <Footer />
@@ -108,13 +126,10 @@ export default function RootLayout({
             </div>
           </PageLoader>
         </Providers>
-         {/* Google Tag Manager */}
-        <GoogleTagManager gtmId="GTM-N6QSC89J" />
 
-        {/* Google Analytics 4 */}
-        <GoogleAnalytics gaId="G-RBFDTF7PWV" />
+        {/* Google Tag Manager */}
+        <GoogleTagManager gtmId="GTM-N6QSC89J" />
       </body>
-     
     </html>
   )
 }
