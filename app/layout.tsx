@@ -1,16 +1,14 @@
 import "@/styles/globals.css"
 import type { Metadata, Viewport } from "next"
-import clsx from "clsx"
 import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
 import { metaKeywords, siteConfig } from "@/config/site"
-import { fontSans } from "@/config/fonts"
 import { Navbar } from "@/components/navbar"
 import Footer from "@/components/footer"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
-import { GoogleTagManager } from "@next/third-parties/google"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -25,7 +23,9 @@ export const metadata: Metadata = {
   keywords: metaKeywords[0].keywords,
 
   authors: [{ name: siteConfig.name }],
+
   creator: siteConfig.name,
+
   publisher: siteConfig.name,
 
   category:
@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+
     images: [
       {
         url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
@@ -90,18 +91,56 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Analytics / Google tag */}
-        <script
+        {/* ================================================== */}
+        {/* Google Tag Manager */}
+        {/* ================================================== */}
+
+        <Script
+          id="google-tag-manager"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({
+                  'gtm.start': new Date().getTime(),
+                  event:'gtm.js'
+                });
+
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-N6QSC89J');
+            `,
+          }}
+        />
+
+        {/* ================================================== */}
+        {/* Google Analytics 4 */}
+        {/* ================================================== */}
+
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
         />
 
-        <script
+        <Script
+          id="google-analytics"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
+
+              function gtag(){
+                dataLayer.push(arguments);
+              }
+
               gtag('js', new Date());
+
               gtag('config', 'G-RBFDTF7PWV');
             `,
           }}
@@ -109,7 +148,32 @@ export default function RootLayout({
       </head>
 
       <body>
+        {/* ================================================== */}
+        {/* Google Tag Manager - noscript */}
+        {/* IMPORTANT: Immediately after opening <body> */}
+        {/* ================================================== */}
+
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-N6QSC89J"
+            height="0"
+            width="0"
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
+          />
+        </noscript>
+
+        {/* ================================================== */}
+        {/* Local Business Schema */}
+        {/* ================================================== */}
+
         <LocalBusinessSchema />
+
+        {/* ================================================== */}
+        {/* Application */}
+        {/* ================================================== */}
 
         <Providers>
           <PageLoader>
@@ -126,9 +190,6 @@ export default function RootLayout({
             </div>
           </PageLoader>
         </Providers>
-
-        {/* Google Tag Manager */}
-        <GoogleTagManager gtmId="GTM-N6QSC89J" />
       </body>
     </html>
   )
