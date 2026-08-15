@@ -43,17 +43,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 
-  /*
-   * Google Search Console verification
-   *
-   * This generates:
-   * <meta
-   *   name="google-site-verification"
-   *   content="szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94"
-   * />
-   *
-   * Use the HTML tag method in Google Search Console.
-   */
   verification: {
     google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
   },
@@ -107,9 +96,8 @@ export default function RootLayout({
     >
       <head>
         {/* ================================================== */}
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager (Must be the FIRST item in head) */}
         {/* ================================================== */}
-
         <Script
           id="google-tag-manager"
           strategy="beforeInteractive"
@@ -117,7 +105,7 @@ export default function RootLayout({
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            j=d.createElement(s),dl=l!='dataLayer'!='&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;
             f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-N6QSC89J');
@@ -127,7 +115,6 @@ export default function RootLayout({
         {/* ================================================== */}
         {/* Google Analytics 4 */}
         {/* ================================================== */}
-
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
           strategy="afterInteractive"
@@ -139,13 +126,10 @@ export default function RootLayout({
         >
           {`
             window.dataLayer = window.dataLayer || [];
-
             function gtag() {
               window.dataLayer.push(arguments);
             }
-
             gtag('js', new Date());
-
             gtag('config', 'G-RBFDTF7PWV');
           `}
         </Script>
@@ -153,9 +137,8 @@ export default function RootLayout({
 
       <body>
         {/* ================================================== */}
-        {/* Google Tag Manager - NOSCRIPT */}
+        {/* Google Tag Manager - NOSCRIPT (Must be immediately after body) */}
         {/* ================================================== */}
-
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-N6QSC89J"
@@ -169,15 +152,7 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* ================================================== */}
-        {/* Local Business Schema */}
-        {/* ================================================== */}
-
         <LocalBusinessSchema />
-
-        {/* ================================================== */}
-        {/* Application */}
-        {/* ================================================== */}
 
         <Providers>
           <PageLoader>
