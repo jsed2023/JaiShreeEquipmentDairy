@@ -22,8 +22,14 @@ export const metadata: Metadata = {
 
   keywords: metaKeywords[0].keywords,
 
-  authors: [{ name: siteConfig.name }],
+  authors: [
+    {
+      name: siteConfig.name,
+    },
+  ],
+
   creator: siteConfig.name,
+
   publisher: siteConfig.name,
 
   category:
@@ -79,9 +85,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
     <html
       lang="en"
@@ -89,41 +95,57 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* ================================================== */}
         {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-              f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-N6QSC89J');
-            `,
-          }}
-        />
+        {/* ================================================== */}
 
-        {/* Google Analytics 4 */}
         <Script
-          async
+          id="google-tag-manager"
+          strategy="beforeInteractive"
+        >
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-N6QSC89J');
+          `}
+        </Script>
+
+        {/* ================================================== */}
+        {/* Google Analytics 4 */}
+        {/* ================================================== */}
+
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+          strategy="afterInteractive"
         />
 
         <Script
           id="google-analytics"
           strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-RBFDTF7PWV');
-            `,
-          }}
-        />
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+              window.dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-RBFDTF7PWV');
+          `}
+        </Script>
       </head>
 
       <body>
+        {/* ================================================== */}
+        {/* Google Tag Manager - NOSCRIPT */}
+        {/* MUST BE THE FIRST BODY ELEMENT */}
+        {/* ================================================== */}
+
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-N6QSC89J"
@@ -136,7 +158,15 @@ export default function RootLayout({
           />
         </noscript>
 
+        {/* ================================================== */}
+        {/* Local Business Schema */}
+        {/* ================================================== */}
+
         <LocalBusinessSchema />
+
+        {/* ================================================== */}
+        {/* Application */}
+        {/* ================================================== */}
 
         <Providers>
           <PageLoader>
