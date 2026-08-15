@@ -43,6 +43,17 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 
+  /*
+   * Google Search Console verification
+   *
+   * This generates:
+   * <meta
+   *   name="google-site-verification"
+   *   content="szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94"
+   * />
+   *
+   * Use the HTML tag method in Google Search Console.
+   */
   verification: {
     google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
   },
@@ -143,7 +154,6 @@ export default function RootLayout({
       <body>
         {/* ================================================== */}
         {/* Google Tag Manager - NOSCRIPT */}
-        {/* MUST BE THE FIRST BODY ELEMENT */}
         {/* ================================================== */}
 
         <noscript>
@@ -155,6 +165,7 @@ export default function RootLayout({
               display: "none",
               visibility: "hidden",
             }}
+            title="Google Tag Manager"
           />
         </noscript>
 
