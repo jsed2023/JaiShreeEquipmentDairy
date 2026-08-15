@@ -39,7 +39,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 
-  <meta name="google-site-verification" content="szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94">
+  verification: {
+    google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
+  },
 
   openGraph: {
     type: "website",
@@ -90,13 +92,26 @@ export default function RootLayout({
     >
       <head>
         {/* Google Tag Manager */}
-        <script
+        <Script
+          id="google-tag-manager"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({
+                  'gtm.start': new Date().getTime(),
+                  event:'gtm.js'
+                });
+
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+                f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','GTM-N6QSC89J');
             `,
           }}
@@ -114,8 +129,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
+
+              function gtag(){
+                dataLayer.push(arguments);
+              }
+
               gtag('js', new Date());
+
               gtag('config', 'G-RBFDTF7PWV');
             `,
           }}
@@ -123,6 +143,7 @@ export default function RootLayout({
       </head>
 
       <body>
+        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-N6QSC89J"
@@ -135,19 +156,25 @@ export default function RootLayout({
           />
         </noscript>
 
+        {/* Local Business Schema */}
         <LocalBusinessSchema />
 
+        {/* Providers */}
         <Providers>
           <PageLoader>
             <div className="relative flex min-h-screen flex-col">
+              {/* Navigation */}
               <Navbar />
 
+              {/* Main Content */}
               <main className="grow max-w-7xl mx-auto w-full px-4">
                 {children}
               </main>
 
+              {/* Footer */}
               <Footer />
 
+              {/* WhatsApp */}
               <WhatsAppButton />
             </div>
           </PageLoader>
