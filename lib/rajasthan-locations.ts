@@ -163,6 +163,110 @@ export const rajasthanLocations = [
     city: "Jaipur",
     updatedAt: "2026-07-25",
   },
+  // =========================
+  // Top 20 High-Priority Rajasthan Locations
+  // =========================
+
+  {
+    slug: "jodhpur",
+    city: "Jodhpur",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "udaipur",
+    city: "Udaipur",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "kota",
+    city: "Kota",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "ajmer",
+    city: "Ajmer",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "alwar",
+    city: "Alwar",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "sikar",
+    city: "Sikar",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "bharatpur",
+    city: "Bharatpur",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "bhilwara",
+    city: "Bhilwara",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "pali",
+    city: "Pali",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "barmer",
+    city: "Barmer",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "chittorgarh",
+    city: "Chittorgarh",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "tonk",
+    city: "Tonk",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "sawai-madhopur",
+    city: "Sawai Madhopur",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "jhunjhunu",
+    city: "Jhunjhunu",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "nagaur",
+    city: "Nagaur",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "bundi",
+    city: "Bundi",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "sirohi",
+    city: "Sirohi",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "jaisalmer",
+    city: "Jaisalmer",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "baran",
+    city: "Baran",
+    updatedAt: "2026-08-17",
+  },
+  {
+    slug: "banswara",
+    city: "Banswara",
+    updatedAt: "2026-08-17",
+  },
 ] as const;
 
 export type RajasthanLocation =
