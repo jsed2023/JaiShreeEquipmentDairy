@@ -1,6 +1,7 @@
 import "@/styles/globals.css"
 
 import type { Metadata, Viewport } from "next"
+import Script from "next/script"
 
 import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
@@ -12,8 +13,6 @@ import Footer from "@/components/footer"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
-
-import { GoogleTagManager } from "@next/third-parties/google"
 
 
 const GTM_ID = "GTM-P3FFNTJ9"
@@ -126,15 +125,59 @@ export default function RootLayout({
 
       <head>
         {/*
-          Google Tag Manager is handled by
-          <GoogleTagManager /> below.
+         * Google Tag Manager
+         *
+         * The GTM script is placed in <head>.
+         */}
 
-          Do NOT manually add GTM scripts here.
-        */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+        >
+          {`
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({
+                'gtm.start': new Date().getTime(),
+                event:'gtm.js'
+              });
+
+              var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),
+                  dl=l!='dataLayer'?'&l='+l:'';
+
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
+          `}
+        </Script>
       </head>
 
 
       <body>
+
+        {/*
+         * Google Tag Manager (noscript)
+         *
+         * IMPORTANT:
+         * This MUST be immediately after <body>
+         * for Google Search Console GTM verification.
+         */}
+
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
+          />
+        </noscript>
+
 
         <LocalBusinessSchema />
 
@@ -165,24 +208,7 @@ export default function RootLayout({
 
         </Providers>
 
-
       </body>
-
-
-      {/*
-        Google Tag Manager
-
-        GTM Container:
-        GTM-P3FFNTJ9
-
-        GA4 should be configured INSIDE GTM
-        using Measurement ID:
-        G-RBFDTF7PWV
-      */}
-
-      <GoogleTagManager
-        gtmId={GTM_ID}
-      />
 
     </html>
   )
