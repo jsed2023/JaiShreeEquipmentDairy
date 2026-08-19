@@ -20,12 +20,15 @@ export default function BlogPage() {
     <main className="min-h-screen overflow-x-hidden bg-white text-black">
       {/* =====================================================
           HERO SECTION
+          SAME LAYOUT ON MOBILE / TABLET / LAPTOP / DESKTOP
       ===================================================== */}
 
       <section
         className="
-          relative overflow-hidden
-          border-b border-gray-200
+          relative
+          overflow-hidden
+          border-b
+          border-gray-200
           bg-linear-to-br
           from-cyan-50
           via-white
@@ -37,7 +40,8 @@ export default function BlogPage() {
         <div
           className="
             pointer-events-none
-            absolute inset-0
+            absolute
+            inset-0
             bg-linear-to-r
             from-cyan-200/20
             via-blue-200/20
@@ -48,8 +52,10 @@ export default function BlogPage() {
 
         <div
           className="
-            relative mx-auto
-            max-w-7xl
+            relative
+            mx-auto
+            w-full
+            max-w-5xl
             px-4
             py-8
 
@@ -61,18 +67,17 @@ export default function BlogPage() {
           "
         >
           {/* =================================================
-              HERO GRID
+              IMPORTANT:
+              ONE COLUMN EVERYWHERE
           ================================================= */}
 
           <div
             className="
               grid
               grid-cols-1
-              items-start
               gap-5
 
-              md:grid-cols-3
-              md:gap-6
+              sm:gap-6
 
               lg:gap-7
             "
@@ -83,13 +88,7 @@ export default function BlogPage() {
 
             <div
               className="
-                flex
-                h-fit
-                min-h-0
                 w-full
-                items-center
-                justify-center
-                self-start
                 rounded-3xl
                 border
                 border-cyan-200
@@ -105,30 +104,32 @@ export default function BlogPage() {
                 sm:p-8
               "
             >
-              <span
-                className="
-                  inline-flex
-                  max-w-full
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-cyan-300
-                  bg-cyan-100
-                  px-5
-                  py-2.5
-                  text-center
-                  text-sm
-                  font-medium
-                  leading-5
-                  text-cyan-700
+              <div className="flex items-center justify-center">
+                <span
+                  className="
+                    inline-flex
+                    max-w-full
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-cyan-300
+                    bg-cyan-100
+                    px-5
+                    py-2.5
+                    text-center
+                    text-sm
+                    font-medium
+                    leading-5
+                    text-cyan-700
 
-                  sm:px-6
-                  sm:text-base
-                "
-              >
-                Jai Shree Equipment Dairy
-              </span>
+                    sm:px-6
+                    sm:text-base
+                  "
+                >
+                  Jai Shree Equipment Dairy
+                </span>
+              </div>
             </div>
 
             {/* =================================================
@@ -137,13 +138,7 @@ export default function BlogPage() {
 
             <div
               className="
-                flex
-                h-fit
-                min-h-0
                 w-full
-                items-center
-                justify-center
-                self-start
                 rounded-3xl
                 border
                 border-blue-200
@@ -161,7 +156,6 @@ export default function BlogPage() {
             >
               <h1
                 className="
-                  w-full
                   text-3xl
                   font-bold
                   leading-tight
@@ -198,13 +192,7 @@ export default function BlogPage() {
 
             <div
               className="
-                flex
-                h-fit
-                min-h-0
                 w-full
-                items-center
-                justify-center
-                self-start
                 rounded-3xl
                 border
                 border-purple-200
@@ -222,8 +210,8 @@ export default function BlogPage() {
             >
               <p
                 className="
-                  w-full
-                  max-w-lg
+                  mx-auto
+                  max-w-3xl
                   text-sm
                   leading-6
                   text-gray-600
@@ -249,12 +237,14 @@ export default function BlogPage() {
 
       {/* =====================================================
           BLOG CARDS
+          SAME ONE-COLUMN LAYOUT EVERYWHERE
       ===================================================== */}
 
       <section
         className="
           mx-auto
-          max-w-7xl
+          w-full
+          max-w-5xl
           px-4
           py-10
 
@@ -273,10 +263,7 @@ export default function BlogPage() {
 
             sm:gap-7
 
-            md:grid-cols-2
-            md:gap-8
-
-            lg:grid-cols-3
+            lg:gap-8
           "
         >
           {blogList.map((blog) => (
@@ -301,9 +288,6 @@ export default function BlogPage() {
                 hover:shadow-xl
 
                 sm:rounded-3xl
-
-                lg:hover:-translate-y-2
-                lg:hover:shadow-2xl
               "
             >
               {/* =================================================
@@ -323,11 +307,7 @@ export default function BlogPage() {
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  sizes="
-                    (max-width: 640px) 100vw,
-                    (max-width: 1024px) 50vw,
-                    33vw
-                  "
+                  sizes="100vw"
                   className="
                     object-contain
                     p-4
@@ -400,7 +380,6 @@ export default function BlogPage() {
                 <h2
                   className="
                     mt-4
-                    line-clamp-3
                     text-xl
                     font-bold
                     leading-snug
@@ -421,8 +400,6 @@ export default function BlogPage() {
                 <p
                   className="
                     mt-3
-                    line-clamp-4
-                    flex-1
                     text-sm
                     leading-6
                     text-gray-600
@@ -473,8 +450,7 @@ export default function BlogPage() {
       </section>
 
       {/* =====================================================
-          FLOATING WHATSAPP BUTTON
-          NO ICON
+          WHATSAPP BUTTON
       ===================================================== */}
 
       <Link
