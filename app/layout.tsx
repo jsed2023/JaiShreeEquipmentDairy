@@ -1,7 +1,6 @@
 import "@/styles/globals.css"
 
 import type { Metadata, Viewport } from "next"
-import Script from "next/script"
 
 import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
@@ -124,51 +123,41 @@ export default function RootLayout({
     >
 
       <head>
-        {/*
-         * Google Tag Manager
-         *
-         * The GTM script is placed in <head>.
-         */}
 
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
-        >
-          {`
-            (function(w,d,s,l,i){
-              w[l]=w[l]||[];
-              w[l].push({
-                'gtm.start': new Date().getTime(),
-                event:'gtm.js'
-              });
+        {/* Google Tag Manager */}
 
-              var f=d.getElementsByTagName(s)[0],
-                  j=d.createElement(s),
-                  dl=l!='dataLayer'?'&l='+l:'';
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({
+                  'gtm.start': new Date().getTime(),
+                  event:'gtm.js'
+                });
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${GTM_ID}');
+            `,
+          }}
+        />
 
-              j.async=true;
-              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        {/* End Google Tag Manager */}
 
-              f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');
-          `}
-        </Script>
       </head>
 
 
       <body>
 
-        {/*
-         * Google Tag Manager (noscript)
-         *
-         * IMPORTANT:
-         * This MUST be immediately after <body>
-         * for Google Search Console GTM verification.
-         */}
+        {/* Google Tag Manager (noscript) */}
 
         <noscript>
           <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
             height="0"
             width="0"
             style={{
@@ -177,6 +166,8 @@ export default function RootLayout({
             }}
           />
         </noscript>
+
+        {/* End Google Tag Manager (noscript) */}
 
 
         <LocalBusinessSchema />
