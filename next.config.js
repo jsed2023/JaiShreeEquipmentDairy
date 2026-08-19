@@ -1,9 +1,13 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
   compress: true,
   reactStrictMode: true,
   poweredByHeader: false,
+
+  // Prevent metadata streaming for Google crawlers.
+  // This makes the server-rendered HTML more predictable
+  // for Google Search Console verification.
+  htmlLimitedBots: /Googlebot|Google-InspectionTool/i,
 
   images: {
     remotePatterns: [
