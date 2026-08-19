@@ -15,6 +15,7 @@ import PageLoader from "@/components/PageLoader"
 
 
 const GTM_ID = "GTM-P3FFNTJ9"
+const GA_ID = "G-RBFDTF7PWV"
 
 
 export const metadata: Metadata = {
@@ -124,7 +125,9 @@ export default function RootLayout({
 
       <head>
 
-        {/* Google Tag Manager */}
+        {/* ================================
+            Google Tag Manager
+            ================================ */}
 
         <script
           dangerouslySetInnerHTML={{
@@ -135,29 +138,63 @@ export default function RootLayout({
                   'gtm.start': new Date().getTime(),
                   event:'gtm.js'
                 });
+
                 var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),
                     dl=l!='dataLayer'?'&l='+l:'';
+
                 j.async=true;
                 j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
                 f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','${GTM_ID}');
             `,
           }}
         />
 
-        {/* End Google Tag Manager */}
+
+        {/* ================================
+            Google tag (gtag.js)
+            GA4 Measurement ID:
+            G-RBFDTF7PWV
+            ================================ */}
+
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+
+              function gtag(){
+                dataLayer.push(arguments);
+              }
+
+              gtag('js', new Date());
+
+              gtag('config', '${GA_ID}');
+            `,
+          }}
+        />
 
       </head>
 
 
       <body>
 
-        {/* Google Tag Manager (noscript) */}
+        {/* ================================
+            Google Tag Manager (noscript)
+
+            MUST be immediately after <body>
+            for GTM Search Console verification.
+            ================================ */}
 
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{
@@ -166,8 +203,6 @@ export default function RootLayout({
             }}
           />
         </noscript>
-
-        {/* End Google Tag Manager (noscript) */}
 
 
         <LocalBusinessSchema />
