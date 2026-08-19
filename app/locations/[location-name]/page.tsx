@@ -19,20 +19,10 @@ type Props = {
 };
 
 /* =========================
-   GENERATE STATIC PARAMS
+   FORCE DYNAMIC
 ========================= */
 
-export async function generateStaticParams() {
-  return rajasthanLocations.map((location) => ({
-    "location-name": `milk-analyzer-${location.slug}`,
-  }));
-}
-
-/* =========================
-   PREVENT RANDOM URLS
-========================= */
-
-export const dynamicParams = false;
+export const dynamic = "force-dynamic";
 
 /* =========================
    WHATSAPP LINK
@@ -141,13 +131,13 @@ export default async function LocationPage({
   ========================= */
 
   const keywords = [
-    `milk analyzer  ${city}`,
-    `milk testing instrument  ${city}`,
-    `milk testing machine  ${city}`,
-    `dairy equipment  ${city}`,
-    `milking machine  ${city}`,
-    `cream separator machine  ${city}`,
-    `automatic milk collection system  ${city}`,
+    `milk analyzer ${city}`,
+    `milk testing instrument ${city}`,
+    `milk testing machine ${city}`,
+    `dairy equipment ${city}`,
+    `milking machine ${city}`,
+    `cream separator machine ${city}`,
+    `automatic milk collection system ${city}`,
   ];
 
   /* =========================
@@ -156,7 +146,6 @@ export default async function LocationPage({
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-10">
-
       {/* =========================
           HERO
       ========================= */}
@@ -200,7 +189,6 @@ export default async function LocationPage({
       ========================= */}
 
       <div className="mb-12 grid gap-8 md:grid-cols-2">
-
         {/* ABOUT MILK ANALYZER */}
 
         <div
