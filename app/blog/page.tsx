@@ -6,89 +6,389 @@ const blogList = Object.values(blogs);
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-white text-black">
-      {/* Hero Section */}
-   <section className="relative overflow-hidden border-b border-gray-200 bg-linear-to-br from-cyan-50 via-white to-blue-50">
-  <div className="absolute inset-0 bg-linear-to-r from-cyan-200/20 via-blue-200/20 to-purple-200/20 blur-3xl" />
+    <main className="min-h-screen overflow-x-hidden bg-white text-black">
+      {/* =========================
+          HERO SECTION
+      ========================= */}
 
-  <div className="relative mx-auto max-w-7xl px-6 py-20">
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-      
-      {/* Box 1 */}
-      <div className="rounded-3xl border border-cyan-200 bg-white p-8 shadow-lg text-center">
-        <span className="inline-block rounded-full border border-cyan-300 bg-cyan-100 px-5 py-2 text-sm font-medium text-cyan-700">
-          Jai Shree Equipment Dairy
-        </span>
-      </div>
+      <section className="relative overflow-hidden border-b border-gray-200 bg-linear-to-br from-cyan-50 via-white to-blue-50">
+        {/* Background Glow */}
 
-      {/* Box 2 */}
-      <div className="rounded-3xl border border-blue-200 bg-white p-8 shadow-lg text-center">
-        <h1 className="text-4xl font-bold leading-tight md:text-5xl">
-          <span className="text-gray-900">Dairy Industry</span>
-          <span className="block bg-linear-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Blogs & Insights
-          </span>
-        </h1>
-      </div>
+        <div
+          className="
+            pointer-events-none absolute
+            -left-20 top-10
+            h-72 w-72
+            rounded-full
+            bg-cyan-300/20
+            blur-3xl
+            sm:h-96 sm:w-96
+          "
+        />
 
-      {/* Box 3 */}
-      <div className="rounded-3xl border border-purple-200 bg-white p-8 shadow-lg text-center">
-        <p className="text-lg leading-8 text-gray-600">
-          Explore expert blogs on milk analyzer machines, automatic milk collection
-  systems (AMCS), dairy weighing scales, cream separators, milk testing
-  equipment, ultrasonic milk stirrers, and modern dairy farming solutions.
-  Get buying guides, maintenance tips, and the latest dairy technology
-  updates from Jai Shree Equipment Dairy.
-        </p>
-      </div>
+        <div
+          className="
+            pointer-events-none absolute
+            -right-20 bottom-0
+            h-72 w-72
+            rounded-full
+            bg-purple-300/20
+            blur-3xl
+            sm:h-96 sm:w-96
+          "
+        />
 
-    </div>
-  </div>
-</section>
+        <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 md:py-16 lg:px-8 lg:py-20">
+          <div
+            className="
+              grid grid-cols-1
+              gap-5
+              md:grid-cols-3
+              md:gap-6
+              lg:gap-8
+            "
+          >
+            {/* =========================
+                BOX 1
+            ========================= */}
 
-      {/* Blog Cards */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div
+              className="
+                flex min-h-35
+                items-center justify-center
+                rounded-2xl
+                border border-cyan-200
+                bg-white/90
+                p-5
+                text-center
+                shadow-md
+                backdrop-blur-sm
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-xl
+                sm:min-h-40
+                sm:rounded-3xl
+                sm:p-7
+                md:min-h-45
+                lg:min-h-52
+                lg:p-8
+              "
+            >
+              <span
+                className="
+                  inline-flex
+                  items-center justify-center
+                  rounded-full
+                  border border-cyan-300
+                  bg-cyan-100
+                  px-4 py-2
+                  text-xs font-semibold
+                  leading-5 text-cyan-700
+                  sm:px-5
+                  sm:text-sm
+                "
+              >
+                Jai Shree Equipment Dairy
+              </span>
+            </div>
+
+            {/* =========================
+                BOX 2
+            ========================= */}
+
+            <div
+              className="
+                flex min-h-40
+                items-center justify-center
+                rounded-2xl
+                border border-blue-200
+                bg-white/90
+                p-5
+                text-center
+                shadow-md
+                backdrop-blur-sm
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-xl
+                sm:min-h-45
+                sm:rounded-3xl
+                sm:p-7
+                md:min-h-45
+                lg:min-h-52
+                lg:p-8
+              "
+            >
+              <h1
+                className="
+                  text-3xl
+                  font-bold
+                  leading-tight
+                  tracking-tight
+                  sm:text-4xl
+                  md:text-4xl
+                  lg:text-5xl
+                  xl:text-6xl
+                "
+              >
+                <span className="text-gray-900">
+                  Dairy Industry
+                </span>
+
+                <span
+                  className="
+                    mt-1 block
+                    bg-linear-to-r
+                    from-cyan-600
+                    via-blue-600
+                    to-purple-600
+                    bg-clip-text
+                    text-transparent
+                  "
+                >
+                  Blogs &amp; Insights
+                </span>
+              </h1>
+            </div>
+
+            {/* =========================
+                BOX 3
+            ========================= */}
+
+            <div
+              className="
+                flex min-h-45
+                items-center
+                rounded-2xl
+                border border-purple-200
+                bg-white/90
+                p-5
+                text-center
+                shadow-md
+                backdrop-blur-sm
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-xl
+                sm:min-h-50
+                sm:rounded-3xl
+                sm:p-7
+                md:min-h-45
+                lg:min-h-52
+                lg:p-8
+              "
+            >
+              <p
+                className="
+                  mx-auto
+                  max-w-xl
+                  text-sm
+                  leading-6
+                  text-gray-600
+                  sm:text-base
+                  sm:leading-7
+                  lg:text-lg
+                  lg:leading-8
+                "
+              >
+                Explore expert blogs on milk analyzer
+                machines, automatic milk collection
+                systems (AMCS), dairy weighing scales,
+                cream separators, milk testing equipment,
+                ultrasonic milk stirrers, and modern dairy
+                farming solutions. Get buying guides,
+                maintenance tips, and the latest dairy
+                technology updates from Jai Shree Equipment
+                Dairy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================
+          BLOG CARDS
+      ========================= */}
+
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 md:py-16 lg:px-8 lg:py-20">
+        <div
+          className="
+            grid
+            grid-cols-1
+            gap-6
+            sm:gap-7
+            md:grid-cols-2
+            md:gap-8
+            lg:grid-cols-3
+          "
+        >
           {blogList.map((blog) => (
             <Link
               key={blog.slug}
               href={`/blog/${blog.slug}`}
-              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="
+                group
+                flex h-full
+                min-w-0
+                flex-col
+                overflow-hidden
+                rounded-2xl
+                border border-gray-200
+                bg-white
+                shadow-sm
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-xl
+                sm:rounded-3xl
+                md:hover:-translate-y-2
+                md:hover:shadow-2xl
+              "
             >
-              {/* Image */}
-              <div className="relative h-72 w-full overflow-hidden bg-white">
+              {/* =========================
+                  IMAGE
+              ========================= */}
+
+              <div
+                className="
+                  relative
+                  h-52
+                  w-full
+                  overflow-hidden
+                  bg-gray-50
+                  sm:h-60
+                  md:h-64
+                  lg:h-68
+                  xl:h-72
+                "
+              >
                 <Image
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-contain p-5 transition duration-700 group-hover:scale-105"
+                  sizes="
+                    (max-width: 640px) 100vw,
+                    (max-width: 1024px) 50vw,
+                    33vw
+                  "
+                  className="
+                    object-contain
+                    p-4
+                    transition-transform
+                    duration-700
+                    group-hover:scale-105
+                    sm:p-5
+                  "
                 />
               </div>
 
-              {/* Content */}
-              <div className="flex flex-1 flex-col p-6">
-                <div className="flex items-center justify-between">
-                  <span className="rounded-full bg-cyan-100 px-4 py-1 text-xs font-semibold text-cyan-700">
+              {/* =========================
+                  CONTENT
+              ========================= */}
+
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                {/* CATEGORY + DATE */}
+
+                <div
+                  className="
+                    flex
+                    flex-wrap
+                    items-center
+                    justify-between
+                    gap-3
+                  "
+                >
+                  <span
+                    className="
+                      max-w-full
+                      rounded-full
+                      bg-cyan-100
+                      px-3 py-1
+                      text-xs
+                      font-semibold
+                      leading-5
+                      text-cyan-700
+                      sm:px-4
+                    "
+                  >
                     {blog.category}
                   </span>
 
-                  <span className="text-sm text-gray-500">
+                  <span
+                    className="
+                      text-xs
+                      text-gray-500
+                      sm:text-sm
+                    "
+                  >
                     {blog.date}
                   </span>
                 </div>
 
-                <h2 className="mt-5 text-2xl font-bold leading-snug text-gray-900 transition-colors duration-300 group-hover:text-cyan-600">
+                {/* TITLE */}
+
+                <h2
+                  className="
+                    mt-4
+                    line-clamp-3
+                    text-xl
+                    font-bold
+                    leading-snug
+                    text-gray-900
+                    transition-colors
+                    duration-300
+                    group-hover:text-cyan-600
+                    sm:mt-5
+                    sm:text-2xl
+                  "
+                >
                   {blog.title}
                 </h2>
 
-                <p className="mt-4 flex-1 leading-7 text-gray-600">
+                {/* DESCRIPTION */}
+
+                <p
+                  className="
+                    mt-3
+                    line-clamp-4
+                    flex-1
+                    text-sm
+                    leading-6
+                    text-gray-600
+                    sm:mt-4
+                    sm:text-base
+                    sm:leading-7
+                  "
+                >
                   {blog.description}
                 </p>
 
-                <div className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600">
-                  Read Full Article
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                {/* READ MORE */}
+
+                <div
+                  className="
+                    mt-5
+                    inline-flex
+                    items-center
+                    gap-2
+                    text-sm
+                    font-semibold
+                    text-blue-600
+                    sm:mt-6
+                    sm:text-base
+                  "
+                >
+                  <span>Read Full Article</span>
+
+                  <span
+                    aria-hidden="true"
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-1
+                    "
+                  >
                     →
                   </span>
                 </div>
