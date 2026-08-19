@@ -1,16 +1,27 @@
 "use client";
+
 import { Image } from "@/components/Image";
 import Link from "next/link";
 import { blogs } from "@/config/blogs";
+import { MessageCircle } from "lucide-react";
 
 const blogList = Object.values(blogs);
+
+function createWhatsAppLink() {
+  const message =
+    "Hello, I want to know more about dairy equipment and milk analyzer machines.";
+
+  return `https://wa.me/917375082341?text=${encodeURIComponent(
+    message
+  )}`;
+}
 
 export default function BlogPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-white text-black">
-      {/* =========================
+      {/* =====================================================
           HERO SECTION
-      ========================= */}
+      ===================================================== */}
 
       <section
         className="
@@ -38,33 +49,48 @@ export default function BlogPage() {
 
         <div
           className="
-            relative mx-auto max-w-7xl
-            px-4 py-10
+            relative mx-auto
+            max-w-7xl
+            px-4
+            py-8
+
             sm:px-6
+            sm:py-10
+
             lg:px-8
             lg:py-12
           "
         >
+          {/* =================================================
+              HERO GRID
+          ================================================= */}
+
           <div
             className="
               grid
               grid-cols-1
+              items-start
               gap-5
+
               md:grid-cols-3
               md:gap-6
+
               lg:gap-7
             "
           >
-            {/* =========================
-                BOX 1
-            ========================= */}
+            {/* =================================================
+                BOX 1 — COMPANY NAME
+            ================================================= */}
 
             <div
               className="
                 flex
-                min-h-52
+                h-fit
+                min-h-0
+                w-full
                 items-center
                 justify-center
+                self-start
                 rounded-3xl
                 border
                 border-cyan-200
@@ -72,15 +98,18 @@ export default function BlogPage() {
                 p-6
                 text-center
                 shadow-lg
-                transition
+                transition-all
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-xl
+
+                sm:p-8
               "
             >
               <span
                 className="
                   inline-flex
+                  max-w-full
                   items-center
                   justify-center
                   rounded-full
@@ -88,26 +117,34 @@ export default function BlogPage() {
                   border-cyan-300
                   bg-cyan-100
                   px-5
-                  py-2
+                  py-2.5
+                  text-center
                   text-sm
                   font-medium
+                  leading-5
                   text-cyan-700
+
+                  sm:px-6
+                  sm:text-base
                 "
               >
                 Jai Shree Equipment Dairy
               </span>
             </div>
 
-            {/* =========================
-                BOX 2
-            ========================= */}
+            {/* =================================================
+                BOX 2 — TITLE
+            ================================================= */}
 
             <div
               className="
                 flex
-                min-h-52
+                h-fit
+                min-h-0
+                w-full
                 items-center
                 justify-center
+                self-start
                 rounded-3xl
                 border
                 border-blue-200
@@ -115,18 +152,23 @@ export default function BlogPage() {
                 p-6
                 text-center
                 shadow-lg
-                transition
+                transition-all
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-xl
+
+                sm:p-8
               "
             >
               <h1
                 className="
+                  w-full
                   text-3xl
                   font-bold
                   leading-tight
+                  tracking-tight
                   text-gray-900
+
                   sm:text-4xl
                 "
               >
@@ -136,7 +178,7 @@ export default function BlogPage() {
 
                 <span
                   className="
-                    mt-1
+                    mt-2
                     block
                     bg-linear-to-r
                     from-cyan-600
@@ -151,16 +193,19 @@ export default function BlogPage() {
               </h1>
             </div>
 
-            {/* =========================
-                BOX 3
-            ========================= */}
+            {/* =================================================
+                BOX 3 — DESCRIPTION
+            ================================================= */}
 
             <div
               className="
                 flex
-                min-h-52
+                h-fit
+                min-h-0
+                w-full
                 items-center
                 justify-center
+                self-start
                 rounded-3xl
                 border
                 border-purple-200
@@ -168,18 +213,22 @@ export default function BlogPage() {
                 p-6
                 text-center
                 shadow-lg
-                transition
+                transition-all
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-xl
+
+                sm:p-8
               "
             >
               <p
                 className="
-                  max-w-md
+                  w-full
+                  max-w-lg
                   text-sm
                   leading-6
                   text-gray-600
+
                   sm:text-base
                   sm:leading-7
                 "
@@ -199,16 +248,22 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* =========================
+      {/* =====================================================
           BLOG CARDS
-      ========================= */}
+      ===================================================== */}
 
       <section
         className="
-          mx-auto max-w-7xl
-          px-4 py-10
-          sm:px-6 sm:py-14
-          lg:px-8 lg:py-16
+          mx-auto
+          max-w-7xl
+          px-4
+          py-10
+
+          sm:px-6
+          sm:py-12
+
+          lg:px-8
+          lg:py-16
         "
       >
         <div
@@ -216,9 +271,12 @@ export default function BlogPage() {
             grid
             grid-cols-1
             gap-6
+
             sm:gap-7
+
             md:grid-cols-2
             md:gap-8
+
             lg:grid-cols-3
           "
         >
@@ -228,7 +286,8 @@ export default function BlogPage() {
               href={`/blog/${blog.slug}`}
               className="
                 group
-                flex h-full
+                flex
+                h-full
                 min-w-0
                 flex-col
                 overflow-hidden
@@ -241,26 +300,24 @@ export default function BlogPage() {
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-xl
+
                 sm:rounded-3xl
-                md:hover:-translate-y-2
-                md:hover:shadow-2xl
+
+                lg:hover:-translate-y-2
+                lg:hover:shadow-2xl
               "
             >
-              {/* =========================
+              {/* =================================================
                   IMAGE
-              ========================= */}
+              ================================================= */}
 
               <div
                 className="
                   relative
-                  h-52
+                  aspect-4/3
                   w-full
                   overflow-hidden
                   bg-gray-50
-                  sm:h-60
-                  md:h-64
-                  lg:h-68
-                  xl:h-72
                 "
               >
                 <Image
@@ -278,16 +335,26 @@ export default function BlogPage() {
                     transition-transform
                     duration-700
                     group-hover:scale-105
+
                     sm:p-5
                   "
                 />
               </div>
 
-              {/* =========================
+              {/* =================================================
                   CONTENT
-              ========================= */}
+              ================================================= */}
 
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
+              <div
+                className="
+                  flex
+                  flex-1
+                  flex-col
+                  p-5
+
+                  sm:p-6
+                "
+              >
                 {/* CATEGORY + DATE */}
 
                 <div
@@ -304,11 +371,13 @@ export default function BlogPage() {
                       max-w-full
                       rounded-full
                       bg-cyan-100
-                      px-3 py-1
+                      px-3
+                      py-1
                       text-xs
                       font-semibold
                       leading-5
                       text-cyan-700
+
                       sm:px-4
                     "
                   >
@@ -319,6 +388,7 @@ export default function BlogPage() {
                     className="
                       text-xs
                       text-gray-500
+
                       sm:text-sm
                     "
                   >
@@ -339,6 +409,7 @@ export default function BlogPage() {
                     transition-colors
                     duration-300
                     group-hover:text-cyan-600
+
                     sm:mt-5
                     sm:text-2xl
                   "
@@ -356,6 +427,7 @@ export default function BlogPage() {
                     text-sm
                     leading-6
                     text-gray-600
+
                     sm:mt-4
                     sm:text-base
                     sm:leading-7
@@ -364,7 +436,7 @@ export default function BlogPage() {
                   {blog.description}
                 </p>
 
-                {/* READ MORE */}
+                {/* READ ARTICLE */}
 
                 <div
                   className="
@@ -375,11 +447,14 @@ export default function BlogPage() {
                     text-sm
                     font-semibold
                     text-blue-600
+
                     sm:mt-6
                     sm:text-base
                   "
                 >
-                  <span>Read Full Article</span>
+                  <span>
+                    Read Full Article
+                  </span>
 
                   <span
                     aria-hidden="true"
@@ -397,6 +472,53 @@ export default function BlogPage() {
           ))}
         </div>
       </section>
+
+      {/* =====================================================
+          FLOATING WHATSAPP BUTTON
+      ===================================================== */}
+
+      <Link
+        href={createWhatsAppLink()}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        className="
+          fixed
+          bottom-5
+          right-5
+          z-50
+          flex
+          h-14
+          w-14
+          items-center
+          justify-center
+          rounded-full
+          bg-green-500
+          text-white
+          shadow-xl
+          transition-all
+          duration-300
+          hover:scale-110
+          hover:bg-green-600
+
+          sm:bottom-6
+          sm:right-6
+          sm:h-16
+          sm:w-16
+        "
+      >
+        <MessageCircle
+          className="
+            h-7
+            w-7
+
+            sm:h-8
+            sm:w-8
+          "
+          strokeWidth={2.2}
+          aria-hidden="true"
+        />
+      </Link>
     </main>
   );
 }
