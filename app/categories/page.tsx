@@ -1,3 +1,4 @@
+"use client";
 import { CATEGORIES } from "@/config/categories";
 import CategoryCard from "@/components/CategoryCard";
 
