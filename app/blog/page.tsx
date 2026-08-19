@@ -11,41 +11,47 @@ export default function BlogPage() {
           HERO SECTION
       ========================= */}
 
-      <section className="relative overflow-hidden border-b border-gray-200 bg-linear-to-br from-cyan-50 via-white to-blue-50">
+      <section
+        className="
+          relative overflow-hidden
+          border-b border-gray-200
+          bg-linear-to-br
+          from-cyan-50
+          via-white
+          to-blue-50
+        "
+      >
         {/* Background Glow */}
 
         <div
           className="
-            pointer-events-none absolute
-            -left-20 top-10
-            h-72 w-72
-            rounded-full
-            bg-cyan-300/20
+            pointer-events-none
+            absolute inset-0
+            bg-linear-to-r
+            from-cyan-200/20
+            via-blue-200/20
+            to-purple-200/20
             blur-3xl
-            sm:h-96 sm:w-96
           "
         />
 
         <div
           className="
-            pointer-events-none absolute
-            -right-20 bottom-0
-            h-72 w-72
-            rounded-full
-            bg-purple-300/20
-            blur-3xl
-            sm:h-96 sm:w-96
+            relative mx-auto max-w-7xl
+            px-4 py-10
+            sm:px-6
+            lg:px-8
+            lg:py-12
           "
-        />
-
-        <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 md:py-16 lg:px-8 lg:py-20">
+        >
           <div
             className="
-              grid grid-cols-1
+              grid
+              grid-cols-1
               gap-5
               md:grid-cols-3
               md:gap-6
-              lg:gap-8
+              lg:gap-7
             "
           >
             {/* =========================
@@ -54,39 +60,37 @@ export default function BlogPage() {
 
             <div
               className="
-                flex min-h-35
-                items-center justify-center
-                rounded-2xl
-                border border-cyan-200
-                bg-white/90
-                p-5
+                flex
+                min-h-52
+                items-center
+                justify-center
+                rounded-3xl
+                border
+                border-cyan-200
+                bg-white
+                p-6
                 text-center
-                shadow-md
-                backdrop-blur-sm
-                transition-all
+                shadow-lg
+                transition
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-xl
-                sm:min-h-40
-                sm:rounded-3xl
-                sm:p-7
-                md:min-h-45
-                lg:min-h-52
-                lg:p-8
               "
             >
               <span
                 className="
                   inline-flex
-                  items-center justify-center
+                  items-center
+                  justify-center
                   rounded-full
-                  border border-cyan-300
+                  border
+                  border-cyan-300
                   bg-cyan-100
-                  px-4 py-2
-                  text-xs font-semibold
-                  leading-5 text-cyan-700
-                  sm:px-5
-                  sm:text-sm
+                  px-5
+                  py-2
+                  text-sm
+                  font-medium
+                  text-cyan-700
                 "
               >
                 Jai Shree Equipment Dairy
@@ -99,25 +103,21 @@ export default function BlogPage() {
 
             <div
               className="
-                flex min-h-40
-                items-center justify-center
-                rounded-2xl
-                border border-blue-200
-                bg-white/90
-                p-5
+                flex
+                min-h-52
+                items-center
+                justify-center
+                rounded-3xl
+                border
+                border-blue-200
+                bg-white
+                p-6
                 text-center
-                shadow-md
-                backdrop-blur-sm
-                transition-all
+                shadow-lg
+                transition
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-xl
-                sm:min-h-45
-                sm:rounded-3xl
-                sm:p-7
-                md:min-h-45
-                lg:min-h-52
-                lg:p-8
               "
             >
               <h1
@@ -125,20 +125,18 @@ export default function BlogPage() {
                   text-3xl
                   font-bold
                   leading-tight
-                  tracking-tight
+                  text-gray-900
                   sm:text-4xl
-                  md:text-4xl
-                  lg:text-5xl
-                  xl:text-6xl
                 "
               >
-                <span className="text-gray-900">
+                <span className="block">
                   Dairy Industry
                 </span>
 
                 <span
                   className="
-                    mt-1 block
+                    mt-1
+                    block
                     bg-linear-to-r
                     from-cyan-600
                     via-blue-600
@@ -158,44 +156,37 @@ export default function BlogPage() {
 
             <div
               className="
-                flex min-h-45
+                flex
+                min-h-52
                 items-center
-                rounded-2xl
-                border border-purple-200
-                bg-white/90
-                p-5
+                justify-center
+                rounded-3xl
+                border
+                border-purple-200
+                bg-white
+                p-6
                 text-center
-                shadow-md
-                backdrop-blur-sm
-                transition-all
+                shadow-lg
+                transition
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-xl
-                sm:min-h-50
-                sm:rounded-3xl
-                sm:p-7
-                md:min-h-45
-                lg:min-h-52
-                lg:p-8
               "
             >
               <p
                 className="
-                  mx-auto
-                  max-w-xl
+                  max-w-md
                   text-sm
                   leading-6
                   text-gray-600
                   sm:text-base
                   sm:leading-7
-                  lg:text-lg
-                  lg:leading-8
                 "
               >
                 Explore expert blogs on milk analyzer
-                machines, automatic milk collection
-                systems (AMCS), dairy weighing scales,
-                cream separators, milk testing equipment,
+                machines, automatic milk collection systems
+                (AMCS), dairy weighing scales, cream
+                separators, milk testing equipment,
                 ultrasonic milk stirrers, and modern dairy
                 farming solutions. Get buying guides,
                 maintenance tips, and the latest dairy
@@ -211,7 +202,14 @@ export default function BlogPage() {
           BLOG CARDS
       ========================= */}
 
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 md:py-16 lg:px-8 lg:py-20">
+      <section
+        className="
+          mx-auto max-w-7xl
+          px-4 py-10
+          sm:px-6 sm:py-14
+          lg:px-8 lg:py-16
+        "
+      >
         <div
           className="
             grid
@@ -234,7 +232,8 @@ export default function BlogPage() {
                 flex-col
                 overflow-hidden
                 rounded-2xl
-                border border-gray-200
+                border
+                border-gray-200
                 bg-white
                 shadow-sm
                 transition-all
