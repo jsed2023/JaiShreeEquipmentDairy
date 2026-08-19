@@ -1,6 +1,7 @@
 import "@/styles/globals.css"
 
 import type { Metadata, Viewport } from "next"
+import { GoogleTagManager } from "@next/third-parties/google"
 
 import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
@@ -51,9 +52,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 
-  /*
-   * Google Search Console HTML verification
-   */
   verification: {
     google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
   },
@@ -122,43 +120,25 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
+      <body>
 
-      <head>
+        {/* Google Tag Manager */}
+        <GoogleTagManager gtmId={GTM_ID} />
 
-        {/* ================================
-            Google Tag Manager
-            ================================ */}
+        {/* Google Tag Manager noscript */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
+          />
+        </noscript>
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({
-                  'gtm.start': new Date().getTime(),
-                  event:'gtm.js'
-                });
-
-                var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),
-                    dl=l!='dataLayer'?'&l='+l:'';
-
-                j.async=true;
-                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-
-                f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${GTM_ID}');
-            `,
-          }}
-        />
-
-
-        {/* ================================
-            Google tag (gtag.js)
-            GA4 Measurement ID:
-            G-RBFDTF7PWV
-            ================================ */}
-
+        {/* Google Analytics 4 */}
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
@@ -180,62 +160,27 @@ export default function RootLayout({
           }}
         />
 
-      </head>
-
-
-      <body>
-
-        {/* ================================
-            Google Tag Manager (noscript)
-
-            MUST be immediately after <body>
-            for GTM Search Console verification.
-            ================================ */}
-
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{
-              display: "none",
-              visibility: "hidden",
-            }}
-          />
-        </noscript>
-
-
         <LocalBusinessSchema />
 
-
         <Providers>
-
           <PageLoader>
-
             <div className="relative flex min-h-screen flex-col">
 
               <Navbar />
 
-
               <main className="grow max-w-7xl mx-auto w-full px-4">
-
                 {children}
-
               </main>
-
 
               <Footer />
 
               <WhatsAppButton />
 
             </div>
-
           </PageLoader>
-
         </Providers>
 
       </body>
-
     </html>
   )
 }
