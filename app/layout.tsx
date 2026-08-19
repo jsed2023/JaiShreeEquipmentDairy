@@ -10,6 +10,9 @@ import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
 import Script from "next/script"
 
+const GTM_ID = "GTM-P3FFNTJ9"
+const GA_ID = "G-RBFDTF7PWV"
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
@@ -29,7 +32,6 @@ export const metadata: Metadata = {
   ],
 
   creator: siteConfig.name,
-
   publisher: siteConfig.name,
 
   category:
@@ -95,28 +97,34 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* ================================================== */}
-        {/* Google Tag Manager (Must be the FIRST item in head) */}
-        {/* ================================================== */}
+        {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
           strategy="beforeInteractive"
         >
           {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({
+                'gtm.start': new Date().getTime(),
+                event:'gtm.js'
+              });
+
+              var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),
+                  dl=l!='dataLayer'?'&l='+l:'';
+
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
           `}
         </Script>
 
-        {/* ================================================== */}
         {/* Google Analytics 4 */}
-        {/* ================================================== */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
         />
 
@@ -126,22 +134,24 @@ export default function RootLayout({
         >
           {`
             window.dataLayer = window.dataLayer || [];
+
             function gtag() {
               window.dataLayer.push(arguments);
             }
+
             gtag('js', new Date());
-            gtag('config', 'G-RBFDTF7PWV');
+            gtag('config', '${GA_ID}');
           `}
         </Script>
       </head>
 
       <body>
-        {/* ================================================== */}
-        {/* Google Tag Manager - NOSCRIPT (Must be immediately after body) */}
-        {/* ================================================== */}
+        {/* IMPORTANT:
+            GTM noscript must be the first element inside body.
+        */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{
