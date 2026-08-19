@@ -1,17 +1,27 @@
 import "@/styles/globals.css"
+
 import type { Metadata, Viewport } from "next"
+
 import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
+
 import { metaKeywords, siteConfig } from "@/config/site"
+
 import { Navbar } from "@/components/navbar"
 import Footer from "@/components/footer"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
-import Script from "next/script"
+
+import {
+  GoogleAnalytics,
+  GoogleTagManager,
+} from "@next/third-parties/google"
+
 
 const GTM_ID = "GTM-P3FFNTJ9"
 const GA_ID = "G-RBFDTF7PWV"
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -32,6 +42,7 @@ export const metadata: Metadata = {
   ],
 
   creator: siteConfig.name,
+
   publisher: siteConfig.name,
 
   category:
@@ -45,6 +56,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 
+  /*
+   * Google Search Console HTML verification
+   */
   verification: {
     google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
   },
@@ -52,16 +66,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
+
     url: siteConfig.url,
+
     title: siteConfig.name,
+
     description: siteConfig.description,
+
     siteName: siteConfig.name,
 
     images: [
       {
-        url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
+        url:
+          "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
+
         width: 1200,
+
         height: 630,
+
         alt: siteConfig.name,
       },
     ],
@@ -69,8 +91,12 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     description: siteConfig.description,
-    images: [cld(`${siteConfig.url}/logo.png`)],
+
+    images: [
+      cld(`${siteConfig.url}/logo.png`),
+    ],
   },
 
   robots: {
@@ -79,11 +105,15 @@ export const metadata: Metadata = {
   },
 }
 
+
 export const viewport: Viewport = {
   width: "device-width",
+
   initialScale: 1,
+
   themeColor: "#ffffff",
 }
+
 
 export default function RootLayout({
   children,
@@ -96,90 +126,76 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
+
       <head>
-        {/* Google Tag Manager */}
-        <Script
-          id="google-tag-manager"
-          strategy="beforeInteractive"
-        >
-          {`
-            (function(w,d,s,l,i){
-              w[l]=w[l]||[];
-              w[l].push({
-                'gtm.start': new Date().getTime(),
-                event:'gtm.js'
-              });
+        {/*
 
-              var f=d.getElementsByTagName(s)[0],
-                  j=d.createElement(s),
-                  dl=l!='dataLayer'?'&l='+l:'';
+          Do NOT manually add GTM script here.
 
-              j.async=true;
-              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          GoogleTagManager component handles GTM.
 
-              f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');
-          `}
-        </Script>
-
-        {/* Google Analytics 4 */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          strategy="afterInteractive"
-        />
-
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-        >
-          {`
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-              window.dataLayer.push(arguments);
-            }
-
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}');
-          `}
-        </Script>
+        */}
       </head>
 
+
       <body>
-        {/* IMPORTANT:
-            GTM noscript must be the first element inside body.
-        */}
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{
-              display: "none",
-              visibility: "hidden",
-            }}
-            title="Google Tag Manager"
-          />
-        </noscript>
 
         <LocalBusinessSchema />
 
+
         <Providers>
+
           <PageLoader>
+
             <div className="relative flex min-h-screen flex-col">
+
               <Navbar />
 
+
               <main className="grow max-w-7xl mx-auto w-full px-4">
+
                 {children}
+
               </main>
+
 
               <Footer />
 
               <WhatsAppButton />
+
             </div>
+
           </PageLoader>
+
         </Providers>
+
+
       </body>
+
+
+      {/*
+        Google Tag Manager
+
+        Container:
+        GTM-P3FFNTJ9
+      */}
+
+      <GoogleTagManager
+        gtmId={GTM_ID}
+      />
+
+
+      {/*
+        Google Analytics 4
+
+        Measurement ID:
+        G-RBFDTF7PWV
+      */}
+
+      <GoogleAnalytics
+        gaId={GA_ID}
+      />
+
     </html>
   )
 }
