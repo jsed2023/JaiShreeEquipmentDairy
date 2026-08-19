@@ -2,6 +2,23 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
+import {
+  MapPin,
+  Milk,
+  Factory,
+  Settings,
+  Wrench,
+  Truck,
+  BadgeCheck,
+  IndianRupee,
+  Headphones,
+  Package,
+  Search,
+  MessageCircle,
+  ArrowRight,
+  ShieldCheck,
+} from "lucide-react";
+
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 import { generateLocationSEOContent } from "@/lib/location-seo-content";
 import { productImages } from "@/lib/product-images";
@@ -65,9 +82,7 @@ export default async function LocationPage({
     notFound();
   }
 
-  const normalizedParam = rawUrlParam
-    .toLowerCase()
-    .trim();
+  const normalizedParam = rawUrlParam.toLowerCase().trim();
 
   const prefix = "milk-analyzer-";
 
@@ -83,9 +98,7 @@ export default async function LocationPage({
      EXTRACT LOCATION SLUG
   ========================= */
 
-  const locationSlug = normalizedParam.slice(
-    prefix.length
-  );
+  const locationSlug = normalizedParam.slice(prefix.length);
 
   if (!locationSlug) {
     notFound();
@@ -97,8 +110,7 @@ export default async function LocationPage({
 
   const validLocation = rajasthanLocations.find(
     (location) =>
-      location.slug.toLowerCase() ===
-      locationSlug.toLowerCase()
+      location.slug.toLowerCase() === locationSlug.toLowerCase()
   );
 
   if (!validLocation) {
@@ -141,6 +153,29 @@ export default async function LocationPage({
   ];
 
   /* =========================
+     FEATURES
+  ========================= */
+
+  const features = [
+    {
+      title: "Fast Delivery",
+      icon: Truck,
+    },
+    {
+      title: "Installation Support",
+      icon: Settings,
+    },
+    {
+      title: "Best Price",
+      icon: IndianRupee,
+    },
+    {
+      title: "Technical Service",
+      icon: Headphones,
+    },
+  ];
+
+  /* =========================
      RETURN
   ========================= */
 
@@ -160,6 +195,32 @@ export default async function LocationPage({
           md:p-10
         "
       >
+        <div
+          className="
+            mb-4 flex h-16 w-16
+            items-center justify-center
+            rounded-full bg-white/80
+            shadow-sm
+          "
+        >
+          <Milk
+            className="h-9 w-9 text-blue-600"
+            strokeWidth={1.8}
+            aria-hidden="true"
+          />
+        </div>
+
+        <div className="mb-3 flex items-center gap-2">
+          <MapPin
+            className="h-5 w-5 text-blue-700"
+            aria-hidden="true"
+          />
+
+          <span className="font-semibold text-blue-800">
+            {city}, Rajasthan
+          </span>
+        </div>
+
         <h1 className="mb-3 text-3xl font-bold md:text-4xl">
           Milk Analyzer Machine in {city}
         </h1>
@@ -173,14 +234,26 @@ export default async function LocationPage({
           target="_blank"
           rel="noopener noreferrer"
           className="
-            mt-6 inline-block rounded-lg
+            mt-6 inline-flex
+            items-center gap-2
+            rounded-lg
             bg-white px-6 py-3
-            font-semibold text-blue-300
+            font-semibold text-blue-600
             transition
             hover:bg-gray-100
           "
         >
+          <MessageCircle
+            className="h-5 w-5"
+            aria-hidden="true"
+          />
+
           WhatsApp Now
+
+          <ArrowRight
+            className="h-4 w-4"
+            aria-hidden="true"
+          />
         </Link>
       </div>
 
@@ -195,19 +268,36 @@ export default async function LocationPage({
           className="
             rounded-xl border border-gray-200
             bg-white p-6 shadow-sm
+            transition-shadow hover:shadow-md
             dark:border-zinc-700
             dark:bg-zinc-800
           "
         >
-          <h2
-            className="
-              mb-4 text-2xl font-semibold
-              text-gray-900
-              dark:text-white
-            "
-          >
-            About Milk Analyzer in {city}
-          </h2>
+          <div className="mb-4 flex items-center gap-3">
+            <div
+              className="
+                flex h-11 w-11
+                shrink-0 items-center justify-center
+                rounded-lg bg-blue-100
+                dark:bg-blue-950
+              "
+            >
+              <Milk
+                className="h-6 w-6 text-blue-600"
+                aria-hidden="true"
+              />
+            </div>
+
+            <h2
+              className="
+                text-2xl font-semibold
+                text-gray-900
+                dark:text-white
+              "
+            >
+              About Milk Analyzer in {city}
+            </h2>
+          </div>
 
           <p
             className="
@@ -225,19 +315,36 @@ export default async function LocationPage({
           className="
             rounded-xl border border-gray-200
             bg-white p-6 shadow-sm
+            transition-shadow hover:shadow-md
             dark:border-zinc-700
             dark:bg-zinc-800
           "
         >
-          <h2
-            className="
-              mb-4 text-2xl font-semibold
-              text-gray-900
-              dark:text-white
-            "
-          >
-            Dairy Industry in {city}
-          </h2>
+          <div className="mb-4 flex items-center gap-3">
+            <div
+              className="
+                flex h-11 w-11
+                shrink-0 items-center justify-center
+                rounded-lg bg-green-100
+                dark:bg-green-950
+              "
+            >
+              <Factory
+                className="h-6 w-6 text-green-600"
+                aria-hidden="true"
+              />
+            </div>
+
+            <h2
+              className="
+                text-2xl font-semibold
+                text-gray-900
+                dark:text-white
+              "
+            >
+              Dairy Industry in {city}
+            </h2>
+          </div>
 
           <p
             className="
@@ -255,19 +362,36 @@ export default async function LocationPage({
           className="
             rounded-xl border border-gray-200
             bg-white p-6 shadow-sm
+            transition-shadow hover:shadow-md
             dark:border-zinc-700
             dark:bg-zinc-800
           "
         >
-          <h2
-            className="
-              mb-4 text-2xl font-semibold
-              text-gray-900
-              dark:text-white
-            "
-          >
-            Dairy Equipment Supplier in {city}
-          </h2>
+          <div className="mb-4 flex items-center gap-3">
+            <div
+              className="
+                flex h-11 w-11
+                shrink-0 items-center justify-center
+                rounded-lg bg-orange-100
+                dark:bg-orange-950
+              "
+            >
+              <Package
+                className="h-6 w-6 text-orange-600"
+                aria-hidden="true"
+              />
+            </div>
+
+            <h2
+              className="
+                text-2xl font-semibold
+                text-gray-900
+                dark:text-white
+              "
+            >
+              Dairy Equipment Supplier in {city}
+            </h2>
+          </div>
 
           <p
             className="
@@ -285,19 +409,36 @@ export default async function LocationPage({
           className="
             rounded-xl border border-gray-200
             bg-white p-6 shadow-sm
+            transition-shadow hover:shadow-md
             dark:border-zinc-700
             dark:bg-zinc-800
           "
         >
-          <h2
-            className="
-              mb-4 text-2xl font-semibold
-              text-gray-900
-              dark:text-white
-            "
-          >
-            Installation &amp; Support in {city}
-          </h2>
+          <div className="mb-4 flex items-center gap-3">
+            <div
+              className="
+                flex h-11 w-11
+                shrink-0 items-center justify-center
+                rounded-lg bg-purple-100
+                dark:bg-purple-950
+              "
+            >
+              <Wrench
+                className="h-6 w-6 text-purple-600"
+                aria-hidden="true"
+              />
+            </div>
+
+            <h2
+              className="
+                text-2xl font-semibold
+                text-gray-900
+                dark:text-white
+              "
+            >
+              Installation &amp; Support in {city}
+            </h2>
+          </div>
 
           <p
             className="
@@ -319,15 +460,31 @@ export default async function LocationPage({
       ========================= */}
 
       <div className="mb-14 text-center">
-        <h2
-          className="
-            mb-8 text-3xl font-bold
-            text-gray-900
-            dark:text-white
-          "
-        >
-          Why Choose Us in {city}
-        </h2>
+        <div className="mb-8 flex flex-col items-center">
+          <div
+            className="
+              mb-3 flex h-12 w-12
+              items-center justify-center
+              rounded-full bg-blue-100
+              dark:bg-blue-950
+            "
+          >
+            <ShieldCheck
+              className="h-7 w-7 text-blue-600"
+              aria-hidden="true"
+            />
+          </div>
+
+          <h2
+            className="
+              text-3xl font-bold
+              text-gray-900
+              dark:text-white
+            "
+          >
+            Why Choose Us in {city}
+          </h2>
+        </div>
 
         <div
           className="
@@ -335,33 +492,47 @@ export default async function LocationPage({
             md:grid-cols-4 md:gap-6
           "
         >
-          {[
-            "Fast Delivery",
-            "Installation Support",
-            "Best Price",
-            "Technical Service",
-          ].map((feature) => (
-            <div
-              key={feature}
-              className="
-                rounded-xl border border-gray-200
-                bg-white p-5 shadow-sm
-                transition-shadow
-                hover:shadow-lg
-                dark:border-zinc-700
-                dark:bg-zinc-800
-              "
-            >
-              <p
+          {features.map((feature) => {
+            const Icon = feature.icon;
+
+            return (
+              <div
+                key={feature.title}
                 className="
-                  font-semibold text-gray-900
-                  dark:text-white
+                  rounded-xl border border-gray-200
+                  bg-white p-5 shadow-sm
+                  transition-all
+                  hover:-translate-y-1
+                  hover:shadow-lg
+                  dark:border-zinc-700
+                  dark:bg-zinc-800
                 "
               >
-                {feature}
-              </p>
-            </div>
-          ))}
+                <div
+                  className="
+                    mx-auto mb-3 flex h-12 w-12
+                    items-center justify-center
+                    rounded-full bg-blue-100
+                    dark:bg-blue-950
+                  "
+                >
+                  <Icon
+                    className="h-6 w-6 text-blue-600"
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <p
+                  className="
+                    font-semibold text-gray-900
+                    dark:text-white
+                  "
+                >
+                  {feature.title}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -370,15 +541,31 @@ export default async function LocationPage({
       ========================= */}
 
       <div className="mb-14">
-        <h2
-          className="
-            mb-8 text-center text-3xl
-            font-bold text-gray-900
-            dark:text-white
-          "
-        >
-          Dairy Machines in {city}
-        </h2>
+        <div className="mb-8 flex flex-col items-center">
+          <div
+            className="
+              mb-3 flex h-12 w-12
+              items-center justify-center
+              rounded-full bg-orange-100
+              dark:bg-orange-950
+            "
+          >
+            <Package
+              className="h-7 w-7 text-orange-600"
+              aria-hidden="true"
+            />
+          </div>
+
+          <h2
+            className="
+              text-center text-3xl
+              font-bold text-gray-900
+              dark:text-white
+            "
+          >
+            Dairy Machines in {city}
+          </h2>
+        </div>
 
         <div
           className="
@@ -394,7 +581,8 @@ export default async function LocationPage({
                 flex flex-col overflow-hidden
                 rounded-xl border border-gray-200
                 bg-white p-3 shadow-sm
-                transition-shadow
+                transition-all
+                hover:-translate-y-1
                 hover:shadow-lg
                 sm:p-4
                 dark:border-zinc-700
@@ -444,7 +632,7 @@ export default async function LocationPage({
               <Link
                 href={item.productUrl}
                 className="
-                  mt-4 block
+                  mt-4 flex items-start justify-center gap-1
                   text-center text-sm
                   font-semibold
                   text-gray-900
@@ -463,7 +651,9 @@ export default async function LocationPage({
               <Link
                 href={item.productUrl}
                 className="
-                  mt-4 rounded-lg
+                  mt-4 inline-flex
+                  items-center justify-center gap-2
+                  rounded-lg
                   bg-blue-600 px-3 py-2
                   text-center text-sm
                   font-semibold text-white
@@ -472,6 +662,11 @@ export default async function LocationPage({
                 "
               >
                 View Product
+
+                <ArrowRight
+                  className="h-4 w-4"
+                  aria-hidden="true"
+                />
               </Link>
             </div>
           ))}
@@ -489,15 +684,31 @@ export default async function LocationPage({
           dark:bg-zinc-900
         "
       >
-        <h2
-          className="
-            mb-6 text-2xl font-semibold
-            text-gray-900
-            dark:text-white
-          "
-        >
-          Popular Searches in {city}
-        </h2>
+        <div className="mb-6 flex items-center gap-3">
+          <div
+            className="
+              flex h-11 w-11
+              shrink-0 items-center justify-center
+              rounded-lg bg-blue-100
+              dark:bg-blue-950
+            "
+          >
+            <Search
+              className="h-6 w-6 text-blue-600"
+              aria-hidden="true"
+            />
+          </div>
+
+          <h2
+            className="
+              text-2xl font-semibold
+              text-gray-900
+              dark:text-white
+            "
+          >
+            Popular Searches in {city}
+          </h2>
+        </div>
 
         <div className="flex flex-wrap gap-3">
           {keywords.map((keyword) => (
@@ -525,15 +736,31 @@ export default async function LocationPage({
       ========================= */}
 
       <div className="mb-14">
-        <h2
-          className="
-            mb-6 text-2xl font-semibold
-            text-gray-900
-            dark:text-white
-          "
-        >
-          Nearby Cities We Serve
-        </h2>
+        <div className="mb-6 flex items-center gap-3">
+          <div
+            className="
+              flex h-11 w-11
+              shrink-0 items-center justify-center
+              rounded-lg bg-green-100
+              dark:bg-green-950
+            "
+          >
+            <MapPin
+              className="h-6 w-6 text-green-600"
+              aria-hidden="true"
+            />
+          </div>
+
+          <h2
+            className="
+              text-2xl font-semibold
+              text-gray-900
+              dark:text-white
+            "
+          >
+            Nearby Cities We Serve
+          </h2>
+        </div>
 
         <div className="flex flex-wrap gap-3">
           {rajasthanLocations
@@ -547,6 +774,8 @@ export default async function LocationPage({
                 key={location.slug}
                 href={`/locations/milk-analyzer-${location.slug}`}
                 className="
+                  inline-flex
+                  items-center gap-2
                   rounded-full
                   bg-blue-100
                   px-4 py-2
@@ -559,6 +788,11 @@ export default async function LocationPage({
                   dark:hover:bg-blue-900
                 "
               >
+                <MapPin
+                  className="h-4 w-4"
+                  aria-hidden="true"
+                />
+
                 {location.city}
               </Link>
             ))}
@@ -576,6 +810,19 @@ export default async function LocationPage({
           md:p-10
         "
       >
+        <div
+          className="
+            mx-auto mb-4 flex h-14 w-14
+            items-center justify-center
+            rounded-full bg-white/80
+          "
+        >
+          <Milk
+            className="h-7 w-7 text-blue-600"
+            aria-hidden="true"
+          />
+        </div>
+
         <h2 className="mb-4 text-2xl font-bold md:text-3xl">
           Buy Milk Analyzer Machine in {city}
         </h2>
@@ -590,14 +837,26 @@ export default async function LocationPage({
           target="_blank"
           rel="noopener noreferrer"
           className="
-            inline-block rounded-lg
+            inline-flex
+            items-center justify-center gap-2
+            rounded-lg
             bg-green-300 px-6 py-3
             font-semibold text-black
             transition
             hover:bg-green-400
           "
         >
+          <MessageCircle
+            className="h-5 w-5"
+            aria-hidden="true"
+          />
+
           WhatsApp Now
+
+          <ArrowRight
+            className="h-4 w-4"
+            aria-hidden="true"
+          />
         </Link>
       </div>
     </section>
