@@ -13,14 +13,10 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
 
-import {
-  GoogleAnalytics,
-  GoogleTagManager,
-} from "@next/third-parties/google"
+import { GoogleTagManager } from "@next/third-parties/google"
 
 
 const GTM_ID = "GTM-P3FFNTJ9"
-const GA_ID = "G-RBFDTF7PWV"
 
 
 export const metadata: Metadata = {
@@ -65,6 +61,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
+
     locale: "en_IN",
 
     url: siteConfig.url,
@@ -129,11 +126,10 @@ export default function RootLayout({
 
       <head>
         {/*
+          Google Tag Manager is handled by
+          <GoogleTagManager /> below.
 
-          Do NOT manually add GTM script here.
-
-          GoogleTagManager component handles GTM.
-
+          Do NOT manually add GTM scripts here.
         */}
       </head>
 
@@ -176,24 +172,16 @@ export default function RootLayout({
       {/*
         Google Tag Manager
 
-        Container:
+        GTM Container:
         GTM-P3FFNTJ9
+
+        GA4 should be configured INSIDE GTM
+        using Measurement ID:
+        G-RBFDTF7PWV
       */}
 
       <GoogleTagManager
         gtmId={GTM_ID}
-      />
-
-
-      {/*
-        Google Analytics 4
-
-        Measurement ID:
-        G-RBFDTF7PWV
-      */}
-
-      <GoogleAnalytics
-        gaId={GA_ID}
       />
 
     </html>
