@@ -1,3 +1,4 @@
+"use client";
 import { Image } from "@/components/Image";
 import Link from "next/link";
 import { blogs } from "@/config/blogs";
