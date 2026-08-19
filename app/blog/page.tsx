@@ -20,7 +20,6 @@ export default function BlogPage() {
     <main className="min-h-screen overflow-x-hidden bg-white text-black">
       {/* =====================================================
           HERO SECTION
-          SAME LAYOUT ON MOBILE / TABLET / LAPTOP / DESKTOP
       ===================================================== */}
 
       <section
@@ -67,8 +66,7 @@ export default function BlogPage() {
           "
         >
           {/* =================================================
-              IMPORTANT:
-              ONE COLUMN EVERYWHERE
+              SAME VERTICAL LAYOUT ON ALL DEVICES
           ================================================= */}
 
           <div
@@ -237,7 +235,6 @@ export default function BlogPage() {
 
       {/* =====================================================
           BLOG CARDS
-          SAME ONE-COLUMN LAYOUT EVERYWHERE
       ===================================================== */}
 
       <section
@@ -291,7 +288,7 @@ export default function BlogPage() {
               "
             >
               {/* =================================================
-                  IMAGE
+                  BLOG IMAGE
               ================================================= */}
 
               <div
@@ -321,7 +318,7 @@ export default function BlogPage() {
               </div>
 
               {/* =================================================
-                  CONTENT
+                  BLOG CONTENT
               ================================================= */}
 
               <div
@@ -375,7 +372,7 @@ export default function BlogPage() {
                   </span>
                 </div>
 
-                {/* TITLE */}
+                {/* BLOG TITLE */}
 
                 <h2
                   className="
@@ -395,7 +392,7 @@ export default function BlogPage() {
                   {blog.title}
                 </h2>
 
-                {/* DESCRIPTION */}
+                {/* BLOG DESCRIPTION */}
 
                 <p
                   className="
@@ -450,10 +447,10 @@ export default function BlogPage() {
       </section>
 
       {/* =====================================================
-          WHATSAPP BUTTON
+          FLOATING WHATSAPP BUTTON
       ===================================================== */}
 
-      <Link
+      <a
         href={createWhatsAppLink()}
         target="_blank"
         rel="noopener noreferrer"
@@ -463,28 +460,79 @@ export default function BlogPage() {
           bottom-5
           right-5
           z-50
+
+          flex
+          h-16
+          w-16
+          items-center
+          justify-center
+
           rounded-full
           bg-green-500
-          px-5
-          py-3
-          text-sm
-          font-semibold
           text-white
+
           shadow-xl
+
           transition-all
           duration-300
-          hover:scale-105
+
+          hover:scale-110
           hover:bg-green-600
 
           sm:bottom-6
           sm:right-6
-          sm:px-6
-          sm:py-3.5
-          sm:text-base
+          sm:h-[68px]
+          sm:w-[68px]
         "
       >
-        WhatsApp
-      </Link>
+        {/* WhatsApp Icon */}
+
+        <svg
+          viewBox="0 0 32 32"
+          className="
+            h-9
+            w-9
+
+            sm:h-10
+            sm:w-10
+          "
+          fill="none"
+          aria-hidden="true"
+        >
+          {/* Outer Circle */}
+
+          <circle
+            cx="16"
+            cy="16"
+            r="13"
+            stroke="currentColor"
+            strokeWidth="2.2"
+          />
+
+          {/* Phone Shape */}
+
+          <path
+            d="
+              M11.6 9.8
+              c.5-.5 1.3-.5 1.8.1
+              l1.5 1.9
+              c.4.5.4 1.2 0 1.7
+              l-.8.9
+              c.9 1.8 2.3 3.2 4.1 4.1
+              l.9-.8
+              c.5-.4 1.2-.4 1.7 0
+              l1.9 1.5
+              c.6.5.6 1.3.1 1.8
+              l-1 1.1
+              c-.7.8-1.8 1.1-2.8.8
+              c-5.1-1.5-9.2-5.6-10.7-10.7
+              c-.3-1 0-2.1.8-2.8
+              l1.1-1Z
+            "
+            fill="currentColor"
+          />
+        </svg>
+      </a>
     </main>
   );
 }
