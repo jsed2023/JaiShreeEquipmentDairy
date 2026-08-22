@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { metaKeywords, siteConfig,} from "@/config/site";
+import { metaKeywords, siteConfig } from "@/config/site";
 
 // =========================
 // SEO Metadata
@@ -56,13 +56,9 @@ export const metadata: Metadata = {
 };
 
 // =========================
-// ISR
-// =========================
-export const revalidate = 86400;
-
-// =========================
 // Layout
 // =========================
+
 export default function LocationsLayout({
   children,
 }: {
