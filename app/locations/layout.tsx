@@ -2,9 +2,6 @@ import { Metadata } from "next";
 
 import { metaKeywords, siteConfig } from "@/config/site";
 
-// =========================
-// SEO Metadata
-// =========================
 
 export const metadata: Metadata = {
   title: "Dairy Equipment Locations | Jai Shree Equipment Dairy",
@@ -55,9 +52,6 @@ export const metadata: Metadata = {
   },
 };
 
-// =========================
-// Layout
-// =========================
 
 export default function LocationsLayout({
   children,
