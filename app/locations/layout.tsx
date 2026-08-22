@@ -4,7 +4,7 @@ import { metaKeywords, siteConfig } from "@/config/site";
 
 
 export const metadata: Metadata = {
-  title: "Dairy Equipment Locations | Jai Shree Equipment Dairy",
+  title: "Dairy Equipment Locations",
 
   description:
     "Jai Shree Equipment Dairy supplies milk analyzer machines, dairy equipment, milking machines, cream separator machines and automatic milk collection systems across Rajasthan.",
