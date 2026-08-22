@@ -15,7 +15,6 @@ import PageLoader from "@/components/PageLoader"
 
 
 const GTM_ID = "GTM-P3FFNTJ9"
-const GA_ID = "G-RBFDTF7PWV"
 
 
 export const metadata: Metadata = {
@@ -37,7 +36,6 @@ export const metadata: Metadata = {
   ],
 
   creator: siteConfig.name,
-
   publisher: siteConfig.name,
 
   category:
@@ -60,26 +58,18 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-
     locale: "en_IN",
-
     url: siteConfig.url,
-
     title: siteConfig.name,
-
     description: siteConfig.description,
-
     siteName: siteConfig.name,
 
     images: [
       {
         url:
           "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
-
         width: 1200,
-
         height: 630,
-
         alt: siteConfig.name,
       },
     ],
@@ -87,7 +77,6 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-
     description: siteConfig.description,
 
     images: [
@@ -104,9 +93,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   width: "device-width",
-
   initialScale: 1,
-
   themeColor: "#ffffff",
 }
 
@@ -122,14 +109,8 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-
       <head>
-
-        {/* =====================================================
-            GOOGLE TAG MANAGER
-            IMPORTANT: GTM script must be inside <head>
-            ===================================================== */}
-
+        {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -152,44 +133,10 @@ export default function RootLayout({
             `,
           }}
         />
-
-        {/* =====================================================
-            GOOGLE ANALYTICS 4
-            ===================================================== */}
-
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-
-              function gtag(){
-                dataLayer.push(arguments);
-              }
-
-              gtag('js', new Date());
-
-              gtag('config', '${GA_ID}');
-            `,
-          }}
-        />
-
       </head>
 
-
       <body>
-
-        {/* =====================================================
-            GOOGLE TAG MANAGER NOSCRIPT
-            IMPORTANT:
-            This MUST be the FIRST element immediately
-            after the opening <body> tag.
-            ===================================================== */}
-
+        {/* IMPORTANT: GTM noscript must be the first body element */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -202,19 +149,11 @@ export default function RootLayout({
           />
         </noscript>
 
-
-        {/* =====================================================
-            WEBSITE CONTENT
-            ===================================================== */}
-
         <LocalBusinessSchema />
 
         <Providers>
-
           <PageLoader>
-
             <div className="relative flex min-h-screen flex-col">
-
               <Navbar />
 
               <main className="grow max-w-7xl mx-auto w-full px-4">
@@ -224,15 +163,10 @@ export default function RootLayout({
               <Footer />
 
               <WhatsAppButton />
-
             </div>
-
           </PageLoader>
-
         </Providers>
-
       </body>
-
     </html>
   )
 }
