@@ -14,8 +14,6 @@ import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
 
 
-const GTM_ID = "GTM-P3FFNTJ9"
-
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
