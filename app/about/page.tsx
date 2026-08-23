@@ -271,20 +271,20 @@ export default function AboutPage() {
           </h3>
 
           <Image
-            src={cld("v1771343933/K_R_Electronics_Industries_Log.webp", {
-              width: 200,
-              height: 120,
-              crop: "fit",
-              quality: "auto",
-              format: "auto",
-            })}
-            alt="K R Electronics Industries Logo"
-            width={200}
-            height={120}
-            sizes="(max-width: 640px) 280px, 400px"
-            className="h-auto w-full max-w-100 object-contain"
-            loading="lazy"
-          />
+  src={cld("v1771343933/K_R_Electronics_Industries_Log.webp", {
+    width: 200,
+    height: 60,
+    crop: "fit",
+    quality: "auto",
+    format: "auto",
+  })}
+  alt="K R Electronics Industries Logo"
+  width={200}
+  height={60}
+  sizes="(max-width: 640px) 160px, 200px"
+  className="h-auto w-40 sm:w-50 object-contain"
+  loading="lazy"
+/>
 
           <span className="rounded-full bg-green-600 px-4 py-1 text-sm font-semibold text-white shadow-md md:text-base">
             Authorized Distributor
