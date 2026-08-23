@@ -2,20 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import {
-  Building2,
-  Landmark,
-  CreditCard,
-  Package,
-  TrendingUp,
-  Users,
-  Award,
-  FileCheck,
-} from "lucide-react";
 
 import { Image } from "@/components/Image";
 import { cld } from "@/utils/cloudinary";
 import { AuthorizedDealerSection } from "@/components/authorized-dealer-section";
+
 import {
   aboutAndStory,
   aboutFactsheet,
@@ -57,6 +48,7 @@ export default function AboutPage() {
               }
               type="video/mp4"
             />
+
             Your browser does not support the video tag.
           </video>
         </div>
@@ -84,12 +76,15 @@ export default function AboutPage() {
                 {item.title}
               </h2>
 
-              <ul className="flex flex-col gap-y-3">
+              <ul className="flex flex-col gap-y-4">
                 {item.descList.map((list) => (
-                  <li key={list.id}>
-                    <span className="font-medium">{list.title}</span>
+                  <li
+                    key={list.id}
+                    className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-700"
+                  >
+                    <span className="font-semibold">{list.title}</span>
 
-                    <p className="pl-4 text-stone-700 max-sm:text-sm dark:text-gray-400">
+                    <p className="mt-1 text-stone-700 max-sm:text-sm dark:text-gray-400">
                       {list.desc}
                     </p>
                   </li>
@@ -115,8 +110,9 @@ export default function AboutPage() {
       {/* Business Factsheet */}
       <section
         id="about-bussiness"
-        className="flex flex-col gap-y-6 rounded-md bg-[rgb(244,244,245)] p-4 dark:bg-[#27272a]"
+        className="flex flex-col gap-y-6 rounded-xl bg-[rgb(244,244,245)] p-4 dark:bg-[#27272a]"
       >
+        {/* Business Intro */}
         <div className="flex flex-col gap-y-4">
           <h2 className="text-center text-lg font-bold underline">
             Year of Establishment :- 2020
@@ -154,47 +150,62 @@ export default function AboutPage() {
           the dairy industry.
         </p>
 
+        {/* Factsheet Title */}
         <div className="pt-2">
-          <p className="text-center font-bold underline">Factsheet</p>
+          <h2 className="text-center text-xl font-bold underline sm:text-2xl">
+            Factsheet
+          </h2>
         </div>
 
-        {/* Factsheet Sections with Icons */}
+        {/* Factsheet Sections */}
         <div className="flex flex-col gap-y-6">
           {aboutFactsheet.map((item) => {
-            const Icon = item.icon;
+            const SectionIcon = item.icon;
 
             return (
               <div
                 key={item.id}
-                className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800/50"
+                className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800/50"
               >
-                {/* Factsheet Heading */}
+                {/* Section Header */}
                 <div className="mb-4 flex items-center gap-3 border-b border-zinc-200 pb-3 dark:border-zinc-700">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                    <Icon className="h-5 w-5 text-primary sm:h-6 sm:w-6" />
+                    <SectionIcon className="h-5 w-5 text-primary sm:h-6 sm:w-6" />
                   </div>
 
-                  <h3 className="font-bold text-base sm:text-lg">
+                  <h3 className="text-base font-bold sm:text-lg">
                     {item.title}
                   </h3>
                 </div>
 
-                {/* Factsheet Information */}
-                <div className="flex flex-col gap-y-3">
-                  {item.information.map((infoItem) => (
-                    <div
-                      key={infoItem.id}
-                      className="flex flex-col gap-1 border-b border-zinc-100 pb-3 last:border-0 last:pb-0 sm:flex-row sm:gap-4 dark:border-zinc-700/60"
-                    >
-                      <p className="w-full shrink-0 font-medium text-stone-900 max-sm:text-sm sm:w-[15rem] dark:text-gray-200">
-                        {infoItem.title}
-                      </p>
+                {/* Information Rows */}
+                <div className="flex flex-col">
+                  {item.information.map((infoItem) => {
+                    const InfoIcon = infoItem.icon;
 
-                      <p className="w-full text-stone-700 max-sm:text-sm dark:text-gray-400">
-                        {infoItem.desc}
-                      </p>
-                    </div>
-                  ))}
+                    return (
+                      <div
+                        key={infoItem.id}
+                        className="flex flex-col gap-3 border-b border-zinc-100 py-3 first:pt-0 last:border-0 last:pb-0 sm:flex-row sm:items-start dark:border-zinc-700/60"
+                      >
+                        {/* Row Icon + Title */}
+                        <div className="flex w-full shrink-0 items-center gap-3 sm:w-[18rem]">
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                            <InfoIcon className="h-4 w-4 text-primary sm:h-5 sm:w-5" />
+                          </div>
+
+                          <p className="font-semibold text-stone-900 max-sm:text-sm dark:text-gray-200">
+                            {infoItem.title}
+                          </p>
+                        </div>
+
+                        {/* Row Description */}
+                        <p className="w-full pt-1 text-stone-700 max-sm:text-sm dark:text-gray-400 sm:pt-2">
+                          {infoItem.desc}
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );
@@ -203,8 +214,8 @@ export default function AboutPage() {
       </section>
 
       {/* MSME Registered */}
-      <div className="flex flex-col items-center gap-2">
-        <span className="mx-auto mb-6 w-11/12 rounded-full bg-[rgb(244,244,245)] py-1 text-center text-lg font-bold dark:bg-[#27272a] sm:w-6/12 md:text-2xl">
+      <section className="flex flex-col items-center gap-2">
+        <span className="mx-auto mb-6 w-11/12 rounded-full bg-[rgb(244,244,245)] py-2 text-center text-lg font-bold dark:bg-[#27272a] sm:w-6/12 md:text-2xl">
           MSME Registered
         </span>
 
@@ -216,15 +227,15 @@ export default function AboutPage() {
           sizes="300px"
           className="h-15 w-auto object-contain transition-transform duration-300 hover:scale-110"
         />
-      </div>
+      </section>
 
       {/* Certificates */}
       <section id="certificates" className="mt-4">
-        <h2 className="mx-auto mb-6 w-11/12 rounded-full bg-[rgb(244,244,245)] py-1 text-center text-lg font-bold dark:bg-[#27272a] sm:w-6/12 md:text-2xl">
+        <h2 className="mx-auto mb-6 w-11/12 rounded-full bg-[rgb(244,244,245)] py-2 text-center text-lg font-bold dark:bg-[#27272a] sm:w-6/12 md:text-2xl">
           OUR CERTIFICATES
         </h2>
 
-        <div className="flex flex-wrap justify-evenly gap-y-8">
+        <div className="flex flex-wrap justify-evenly gap-8">
           <Image
             src="https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902807/lotw093yc0wtqrrjjkoi.jpg"
             alt="Business Certificate"
@@ -232,7 +243,7 @@ export default function AboutPage() {
             width={320}
             height={448}
             sizes="(max-width: 640px) 240px, 320px"
-            className="mr-2 h-auto w-60 object-contain motion-safe:animate-slideInFromLeft sm:w-80"
+            className="h-auto w-60 object-contain motion-safe:animate-slideInFromLeft sm:w-80"
             loading="lazy"
           />
 
@@ -243,7 +254,7 @@ export default function AboutPage() {
             width={320}
             height={448}
             sizes="(max-width: 640px) 240px, 320px"
-            className="ml-2 h-auto w-60 object-contain motion-safe:animate-slideInFromRight sm:w-80"
+            className="h-auto w-60 object-contain motion-safe:animate-slideInFromRight sm:w-80"
             loading="lazy"
           />
         </div>
@@ -252,36 +263,34 @@ export default function AboutPage() {
       {/* K R Electronics Industries */}
       <section
         id="krei-logo-strip"
-        className="bg-[rgb(244,244,245)] py-3 dark:bg-[#1f1f22]"
+        className="rounded-xl bg-[rgb(244,244,245)] py-6 dark:bg-[#1f1f22]"
       >
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-8 px-4">
           <h3 className="animate-title-gradient bg-clip-text text-center text-xl font-bold text-transparent md:text-2xl lg:text-3xl">
             Trusted & Authorized Partner of K R Electronics Industries
           </h3>
 
-          <div className="flex flex-col items-center gap-3">
-            <Image
-              src={cld("v1771343933/K_R_Electronics_Industries_Log.webp", {
-                width: 400,
-                height: 120,
-                crop: "fit",
-                quality: "auto",
-                format: "auto",
-              })}
-              alt="K R Electronics Industries Logo"
-              width={400}
-              height={120}
-              sizes="(max-width: 640px) 280px, 400px"
-              className="h-auto w-full max-w-100 object-contain"
-              loading="lazy"
-            />
-          </div>
+          <Image
+            src={cld("v1771343933/K_R_Electronics_Industries_Log.webp", {
+              width: 400,
+              height: 120,
+              crop: "fit",
+              quality: "auto",
+              format: "auto",
+            })}
+            alt="K R Electronics Industries Logo"
+            width={400}
+            height={120}
+            sizes="(max-width: 640px) 280px, 400px"
+            className="h-auto w-full max-w-100 object-contain"
+            loading="lazy"
+          />
 
           <span className="rounded-full bg-green-600 px-4 py-1 text-sm font-semibold text-white shadow-md md:text-base">
             Authorized Distributor
           </span>
 
-          <p className="max-w-5xl px-6 text-center text-base leading-relaxed text-stone-700 dark:text-gray-300 md:text-lg lg:text-xl">
+          <p className="max-w-5xl px-2 text-center text-base leading-relaxed text-stone-700 dark:text-gray-300 md:text-lg lg:text-xl">
             <strong>JAI SHREE EQUIPMENT DAIRY</strong> is an{" "}
             <strong>
               Authorized Distributor of K R Electronics Industries for the
@@ -293,6 +302,7 @@ export default function AboutPage() {
 
           {/* Trust Icons */}
           <div className="flex flex-wrap justify-center gap-10">
+            {/* Genuine Products */}
             <div className="flex flex-col items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -311,6 +321,7 @@ export default function AboutPage() {
               </span>
             </div>
 
+            {/* Warranty */}
             <div className="flex flex-col items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -329,6 +340,7 @@ export default function AboutPage() {
               </span>
             </div>
 
+            {/* Technical Support */}
             <div className="flex flex-col items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
