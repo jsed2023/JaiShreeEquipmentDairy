@@ -125,15 +125,19 @@ interface Information {
   desc: string;
 }
 
+
+export interface AboutFactsheetInformation {
+  id: string;
+  title: string;
+  desc: string;
+  icon: LucideIcon;
+}
+
 export interface AboutFactsheet {
   id: number;
   title: string;
   icon: LucideIcon;
-  information: {
-    id: string;
-    title: string;
-    desc: string;
-  }[];
+  information: AboutFactsheetInformation[];
 }
 
 // =========================
