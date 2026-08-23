@@ -1,5 +1,5 @@
 import type { ReactNode, SVGProps } from "react";
-
+import type { LucideIcon } from "lucide-react";
 // =========================
 // ICON
 // =========================
@@ -128,7 +128,12 @@ interface Information {
 export interface AboutFactsheet {
   id: number;
   title: string;
-  information: Information[];
+  icon: LucideIcon;
+  information: {
+    id: string;
+    title: string;
+    desc: string;
+  }[];
 }
 
 // =========================
