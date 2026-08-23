@@ -1,7 +1,7 @@
 import "@/styles/globals.css"
 
 import type { Metadata, Viewport } from "next"
-
+import Script from "next/script"
 import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
 
