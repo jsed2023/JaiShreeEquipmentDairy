@@ -1,12 +1,9 @@
 import "@/styles/globals.css"
-
 import type { Metadata, Viewport } from "next"
 import Script from "next/script"
 import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
-
 import { metaKeywords, siteConfig } from "@/config/site"
-
 import { Navbar } from "@/components/navbar"
 import Footer from "@/components/footer"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
