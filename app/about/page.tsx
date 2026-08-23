@@ -272,14 +272,14 @@ export default function AboutPage() {
 
           <Image
             src={cld("v1771343933/K_R_Electronics_Industries_Log.webp", {
-              width: 400,
+              width: 200,
               height: 120,
               crop: "fit",
               quality: "auto",
               format: "auto",
             })}
             alt="K R Electronics Industries Logo"
-            width={400}
+            width={200}
             height={120}
             sizes="(max-width: 640px) 280px, 400px"
             className="h-auto w-full max-w-100 object-contain"
