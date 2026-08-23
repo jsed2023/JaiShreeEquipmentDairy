@@ -1,4 +1,15 @@
 import {
+  Building2,
+  Landmark,
+  CreditCard,
+  Package,
+  TrendingUp,
+  Users,
+  Award,
+  FileCheck,
+} from "lucide-react";
+
+import type {
   AboutAndStory,
   AboutFactsheet,
   ProductRangeAndWhyChooseUs,
@@ -25,56 +36,47 @@ export const productRangeAndWhyChooseUs: ProductRangeAndWhyChooseUs[] = [
       {
         id: "1A",
         title: "1. Vansun Milking Machines",
-        desc:
-          "High-performance automatic milking machines for hygienic and fast milking. Ideal for small and large dairy farms to reduce labor and increase productivity.",
+        desc: "High-performance automatic milking machines for hygienic and fast milking. Ideal for small and large dairy farms to reduce labor and increase productivity.",
       },
       {
         id: "1B",
         title: "2. Paras Cream Separator Machines",
-        desc:
-          "Efficient cream separator machines for accurate cream extraction used in ghee, butter, and dairy production.",
+        desc: "Efficient cream separator machines for accurate cream extraction used in ghee, butter, and dairy production.",
       },
       {
         id: "1C",
         title: "3. Advance Milk Analyzer Machines",
-        desc:
-          "Advance brand milk analyzer machines for accurate testing of Fat, SNF, Protein, and Lactose. Perfect for milk collection centers and dairy businesses to ensure transparency and quality.",
+        desc: "Advance brand milk analyzer machines for accurate testing of Fat, SNF, Protein, and Lactose. Perfect for milk collection centers and dairy businesses to ensure transparency and quality.",
       },
       {
         id: "1D",
         title: "4. Dairy Khata DPU Milk Collection System",
-        desc:
-          "Dairy Khata digital milk collection unit with integrated weighing scale, milk analyzer, and thermal printer for fast, accurate, and transparent milk procurement.",
+        desc: "Dairy Khata digital milk collection unit with integrated weighing scale, milk analyzer, and thermal printer for fast, accurate, and transparent milk procurement.",
       },
       {
         id: "1E",
         title: "5. Dairy Weighing Scales",
-        desc:
-          "High-accuracy electronic weighing scales for milk collection centers and dairy farms.",
+        desc: "High-accuracy electronic weighing scales for milk collection centers and dairy farms.",
       },
       {
         id: "1F",
         title: "6. Milk Testing Equipment",
-        desc:
-          "Complete range of milk testing tools including lactometer, fat testing kits, and SNF testing equipment.",
+        desc: "Complete range of milk testing tools including lactometer, fat testing kits, and SNF testing equipment.",
       },
       {
         id: "1G",
         title: "7. Milking Machine Spare Parts",
-        desc:
-          "All types of spare parts available including liners, pulsators, buckets, vacuum pumps, and rubber parts.",
+        desc: "All types of spare parts available including liners, pulsators, buckets, vacuum pumps, and rubber parts.",
       },
       {
         id: "1H",
         title: "8. Dairy Farm Setup Solutions",
-        desc:
-          "Complete dairy farm setup with machine installation, pipeline system, and technical support.",
+        desc: "Complete dairy farm setup with machine installation, pipeline system, and technical support.",
       },
       {
         id: "1I",
         title: "9. Automatic Milk Collection Center Setup",
-        desc:
-          "End-to-end setup for dairy societies including DPU system, software, analyzer, and operator training.",
+        desc: "End-to-end setup for dairy societies including DPU system, software, analyzer, and operator training.",
       },
     ],
   },
@@ -86,38 +88,32 @@ export const productRangeAndWhyChooseUs: ProductRangeAndWhyChooseUs[] = [
       {
         id: "2A",
         title: "High-Quality Branded Dairy Machines",
-        desc:
-          "We deal in trusted brands like Vansun, Paras, Advance, and Dairy Khata for reliable and long-lasting performance.",
+        desc: "We deal in trusted brands like Vansun, Paras, Advance, and Dairy Khata for reliable and long-lasting performance.",
       },
       {
         id: "2B",
         title: "Complete Technical Support",
-        desc:
-          "Machine installation, training, and full technical guidance.",
+        desc: "Machine installation, training, and full technical guidance.",
       },
       {
         id: "2C",
         title: "Best Price in Market",
-        desc:
-          "Competitive pricing for farmers and dairy businesses.",
+        desc: "Competitive pricing for farmers and dairy businesses.",
       },
       {
         id: "2D",
         title: "Fast & Safe Delivery",
-        desc:
-          "Quick dispatch with secure packaging and reliable transport.",
+        desc: "Quick dispatch with secure packaging and reliable transport.",
       },
       {
         id: "2E",
         title: "Genuine Products Guarantee",
-        desc:
-          "100% original machines with warranty support.",
+        desc: "100% original machines with warranty support.",
       },
       {
         id: "2F",
         title: "After-Sales Service & Spare Parts",
-        desc:
-          "Prompt service support with spare parts availability.",
+        desc: "Prompt service support with spare parts availability.",
       },
     ],
   },
@@ -127,54 +123,83 @@ export const aboutFactsheet: AboutFactsheet[] = [
   {
     id: 1,
     title: "Basic Information",
+    icon: Building2,
     information: [
-      { id: "1A", title: "Company Name", desc: "Jai Shree Equipment Dairy" },
-
+      {
+        id: "1A",
+        title: "Company Name",
+        desc: "Jai Shree Equipment Dairy",
+      },
       {
         id: "1B",
-        title: "Additional of Business",
-        desc:
-          "Supplier & Retailer of Dairy Machines (Milk Analyzer Machine, Milk Collection System, Cream Separator Machine, Milking Machine)",
+        title: "Nature of Business",
+        desc: "Supplier & Retailer of Dairy Machines (Milk Analyzer Machine, Milk Collection System, Cream Separator Machine, Milking Machine)",
       },
-
-      { id: "1C", title: "Year of Establishment", desc: "2020" },
-
+      {
+        id: "1C",
+        title: "Year of Establishment",
+        desc: "2020",
+      },
       {
         id: "1D",
         title: "CEO & Managing Director",
         desc: "Akshay Choudhary",
       },
-
       {
         id: "1E",
         title: "Company Address",
-        desc:
-          "Shop No. B-42, Upper Side, Rohit Udhyog Market, Near HP Gas Agency, Shiv Circle Road, Sri Ganganagar, Rajasthan – 335001",
+        desc: "Shop No. B-42, Upper Side, Rohit Udhyog Market, Near HP Gas Agency, Shiv Circle Road, Sri Ganganagar, Rajasthan – 335001",
       },
-
-      { id: "1F", title: "Number of Employees", desc: "1 to 5 People" },
-
-      { id: "1G", title: "Legal Status of Firm", desc: "Proprietorship" },
-
-      { id: "1H", title: "Annual Turnover", desc: "₹5 Lakh – ₹30 Lakh" }
-       
+      {
+        id: "1F",
+        title: "Number of Employees",
+        desc: "1 to 5 People",
+      },
+      {
+        id: "1G",
+        title: "Legal Status of Firm",
+        desc: "Proprietorship",
+      },
+      {
+        id: "1H",
+        title: "Annual Turnover",
+        desc: "₹5 Lakh – ₹30 Lakh",
+      },
     ],
   },
 
   {
     id: 2,
     title: "Banking Information",
+    icon: Landmark,
     information: [
-      { id: "2A", title: "Bank Name", desc: "Capital Small Finance Bank" },
-      { id: "2B", title: "Branch Name", desc: "Sri Ganganagar" },
-      { id: "2C", title: "IFSC Code", desc: "CLBL0000148" },
-      { id: "2D", title: "Account Number", desc: "148205001344" },
+      {
+        id: "2A",
+        title: "Bank Name",
+        desc: "Capital Small Finance Bank",
+      },
+      {
+        id: "2B",
+        title: "Branch Name",
+        desc: "Sri Ganganagar",
+      },
+      {
+        id: "2C",
+        title: "IFSC Code",
+        desc: "CLBL0000148",
+      },
+      {
+        id: "2D",
+        title: "Account Number",
+        desc: "148205001344",
+      },
     ],
   },
 
   {
     id: 3,
     title: "Payment & Shipping Details",
+    icon: CreditCard,
     information: [
       {
         id: "3A",
@@ -202,19 +227,45 @@ export const aboutFactsheet: AboutFactsheet[] = [
   {
     id: 4,
     title: "Our Product Range",
+    icon: Package,
     information: [
-      { id: "4A", title: "Milk Analyzer Machine", desc: "Available" },
-      { id: "4B", title: "Milk Collection System", desc: "Available" },
-      { id: "4C", title: "Cream Separator Machine", desc: "Available" },
-      { id: "4D", title: "Milking Machine", desc: "Available" },
-      { id: "4E", title: "Dairy Weighing Scale", desc: "Available" },
-      { id: "4F", title: "Milk Testing Equipment", desc: "Available" },
+      {
+        id: "4A",
+        title: "Milk Analyzer Machine",
+        desc: "Available",
+      },
+      {
+        id: "4B",
+        title: "Milk Collection System",
+        desc: "Available",
+      },
+      {
+        id: "4C",
+        title: "Cream Separator Machine",
+        desc: "Available",
+      },
+      {
+        id: "4D",
+        title: "Milking Machine",
+        desc: "Available",
+      },
+      {
+        id: "4E",
+        title: "Dairy Weighing Scale",
+        desc: "Available",
+      },
+      {
+        id: "4F",
+        title: "Milk Testing Equipment",
+        desc: "Available",
+      },
     ],
   },
 
   {
     id: 5,
     title: "Trade & Market",
+    icon: TrendingUp,
     information: [
       {
         id: "5A",
@@ -242,6 +293,7 @@ export const aboutFactsheet: AboutFactsheet[] = [
   {
     id: 6,
     title: "Infrastructure & Team",
+    icon: Users,
     information: [
       {
         id: "6A",
@@ -264,6 +316,7 @@ export const aboutFactsheet: AboutFactsheet[] = [
   {
     id: 7,
     title: "Our Strengths",
+    icon: Award,
     information: [
       {
         id: "7A",
@@ -278,25 +331,26 @@ export const aboutFactsheet: AboutFactsheet[] = [
       {
         id: "7C",
         title: "Why Choose Us",
-        desc:
-          "Genuine Products, Best Price, Wide Product Range, Technical Support & Fast Delivery",
+        desc: "Genuine Products, Best Price, Wide Product Range, Technical Support & Fast Delivery",
       },
     ],
   },
+
   {
-  id: 8,
-  title: "Statutory Profile",
-  information: [
-    {
-      id: "8A",
-      title: "BRN Number",
-      desc: "0644840000000016",
-    },
-    {
-      id: "8B",
-      title: "MSME / Udyam Registration",
-      desc: "UDYAM-RJ-15-0028819",
-    },
-  ],
+    id: 8,
+    title: "Statutory Profile",
+    icon: FileCheck,
+    information: [
+      {
+        id: "8A",
+        title: "BRN Number",
+        desc: "0644840000000016",
+      },
+      {
+        id: "8B",
+        title: "MSME / Udyam Registration",
+        desc: "UDYAM-RJ-15-0028819",
+      },
+    ],
   },
 ];
