@@ -228,7 +228,7 @@ your dairy machines operate efficiently.
               },
               {
                 href: "/dairy-equipment/cream-separator-machine-8-ae-90-lph",
-                src: "v1731935014/CREAM%20SEPARATOR%20MACHINE%208%20HO%2090%20LPH.jpg",
+                src: "v1731401215/CREAM%20SEPARATOR%20MACHINE%208%20AE%2090%20LPH.jpg",
                 label: "Paras Milk Cream Separator 90LPH",
               },
             ].map((item, idx) => (
