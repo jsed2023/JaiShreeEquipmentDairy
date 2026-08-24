@@ -120,8 +120,7 @@ export default function AboutPage() {
 
           <p className="text-center text-stone-700 max-sm:text-sm dark:text-gray-400">
             Nature of Business :- DISTRIBUTOR ADVANCE MILK ANALYZER (PLUS &
-            MAX), MILK COLLECTION UNIT (DAIRY KHATA), VANSUN MILKING MACHINE,
-            PARAS CREAM SEPARATOR MACHINE
+            MAX), MILK COLLECTION UNIT (DAIRY KHATA), PARAS CREAM SEPARATOR MACHINE
           </p>
         </div>
 
@@ -131,15 +130,14 @@ export default function AboutPage() {
               DISTRIBUTOR SERVICE IN BIKANER DIVISION :-
             </span>{" "}
             Advance Milk Analyzer Plus & Max, Lacto Scan, Ekomilk Analyzer
-            Ultra Mb, Milk Collection Unit, Paras Cream Separator Machine,
-            Vansun Milking Machine, Weighing Machine, Milk Ultrasonic Stirrer,
+            Ultra Mb, Milk Collection Unit, Paras Cream Separator Machine, Weighing Machine, Milk Ultrasonic Stirrer,
             Etc. All Items for Sale and Service.
           </p>
 
           <p className="text-stone-700 max-sm:text-sm dark:text-gray-400">
             <span className="font-bold">Jai Shree Equipment Dairy</span>{" "}
             specializes in providing a variety of dairy equipment including
-            milk analyzers, cream separators, milking machines, and milk
+            milk analyzers, milk cream separators,and milk
             collection units.
           </p>
         </div>
