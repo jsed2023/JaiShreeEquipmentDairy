@@ -3,12 +3,11 @@ export function generateLocationSEOContent(locationName: string) {
     intro: `
 We are a trusted supplier of Advance Milk Analyzer, Ultra, Max, Plus, Pro20 and 
 Ekomilk Ultra Analyzer, Ekomilk Ultra Pro, Milk Fat Testing Machines, Milk Collection Units (DPU),
-Data Processing Unit(DPU), Milk Cream Separator Machines and Milking Machines in ${locationName}, Rajasthan.
+Data Processing Unit(DPU), Milk Cream Separator Machines in ${locationName}, Rajasthan.
 `,
 
     about: `
-Jai Shree Equipment Dairy is a leading supplier of milk analyzers, 
-milking machines, and dairy equipment in ${locationName}, Rajasthan. 
+Jai Shree Equipment Dairy is a leading supplier of milk analyzer  in ${locationName}, Rajasthan. 
 We provide high-accuracy milk fat, SNF and CLR testing machines 
 for dairy farms, milk collection centers, and cooperative societies. 
 Our team also offers installation, maintenance and repair services 
