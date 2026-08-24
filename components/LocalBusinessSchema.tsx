@@ -28,7 +28,7 @@ export default function LocalBusinessSchema() {
           "slogan": "Complete Dairy Equipment & Repair Solutions",
 
           "description":
-            "JAI SHREE EQUIPMENT DAIRY, established in 2020, is a leading supplier of dairy farm equipment and repair services in Sri Ganganagar, Rajasthan. The company provides milk analyzer machines, milking machines, cream separators, milk collection units, weighing scales, and dairy equipment solutions for dairy farmers across Rajasthan.",
+            "JAI SHREE EQUIPMENT DAIRY, established in 2020, is a leading supplier of dairy farm equipment and repair services in Sri Ganganagar, Rajasthan. The company provides milk analyzer machines, cream separators, milk collection units, weighing scales, and dairy equipment solutions for dairy farmers across Rajasthan.",
 
           "foundingDate": "2020-10-01",
 
@@ -139,7 +139,6 @@ export default function LocalBusinessSchema() {
           "knowsAbout": [
             "Milk Analyzer Machine",
             "Advance Milk Analyzer",
-            "Milking Machine",
             "Cream Separator Machine",
             "Automatic Milk Collection Unit",
             "Weighing Scale",
@@ -166,7 +165,7 @@ export default function LocalBusinessSchema() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Milking Machine Supplier"
+                "name": "Ekomilk Machine Supplier"
               }
             },
             {
@@ -205,7 +204,6 @@ export default function LocalBusinessSchema() {
             "itemListElement": [
               { "@type": "OfferCatalog", "name": "Advance Milk Analyzer Machine" },
               { "@type": "OfferCatalog", "name": "Milk Analyzer Machine" },
-              { "@type": "OfferCatalog", "name": "Milking Machine" },
               { "@type": "OfferCatalog", "name": "Cream Separator" },
               { "@type": "OfferCatalog", "name": "Milk Collection Unit" },
               { "@type": "OfferCatalog", "name": "Weighing Scale" },
@@ -214,17 +212,44 @@ export default function LocalBusinessSchema() {
           },
 
           "keywords": [
-            "milk analyzer machine in Sri Ganganagar",
-            "milk analyzer supplier Rajasthan",
-            "milking machine supplier",
-            "cream separator machine",
-            "milk testing machine",
-            "dairy equipment supplier",
-            "automatic milk collection unit",
-            "weighing scale supplier",
-            "dairy equipment repair service",
-            "milk analyzer repair"
-          ],
+  "milk analyzer machine in Sri Ganganagar",
+  "milk analyzer supplier Rajasthan",
+  "milk testing machine in Sri Ganganagar",
+  "milk fat testing machine supplier",
+  "dairy equipment supplier Sri Ganganagar",
+  "dairy equipment supplier Rajasthan",
+
+  "automatic milk collection unit",
+  "automatic milk collection system supplier",
+  "milk collection machine supplier",
+  "milk collection center equipment",
+
+  "DPU machine for dairy",
+  "dairy DPU machine supplier",
+  "data processing unit for milk collection",
+  "milk collection DPU machine",
+  "DPU machine in Sri Ganganagar",
+  "DPU supplier in Sri Ganganagar",
+  "DPU machine supplier Rajasthan",
+  "dairy automation equipment Sri Ganganagar",
+
+  "cream separator machine",
+  "cream separator machine supplier",
+  "Paras milk cream separator machine",
+
+  "weighing scale supplier",
+  "dairy weighing scale supplier",
+  "milk testing equipment supplier",
+
+  "dairy equipment repair service",
+  "milk analyzer repair",
+  "milk analyzer repair service",
+  "milk analyzer spare parts",
+  "dairy machine spare parts",
+
+  "dairy equipment dealer in Rajasthan",
+  "milk analyzer machine supplier in India"
+],
 
           "hasDeliveryMethod":
             "https://purl.org/goodrelations/v1#DeliveryModeDirect"
