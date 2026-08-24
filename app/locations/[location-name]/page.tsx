@@ -134,7 +134,7 @@ export default async function LocationPage({
 
       about: `We are a leading supplier of milk analyzer machines and dairy equipment in ${city}.`,
 
-      products: `Milk analyzer machines, milking machines, cream separator machines and dairy equipment are available in ${city}.`,
+      products: `Milk analyzer machines, Milk cream separator machines and dairy equipment are available in ${city}.`,
 
       industry: `Milk collection centers and dairy farms in ${city} use milk analyzer machines for accurate milk testing.`,
     };
@@ -148,7 +148,7 @@ export default async function LocationPage({
     `milk testing instrument ${city}`,
     `milk testing machine ${city}`,
     `dairy equipment ${city}`,
-    `milking machine ${city}`,
+    `ekomilk machine ${city}`,
     `cream separator machine ${city}`,
     `automatic milk collection system ${city}`,
   ];
@@ -449,8 +449,7 @@ export default async function LocationPage({
           >
             We provide installation, maintenance and
             support services for milk analyzer machines,
-            automatic milk collection systems, milking
-            machines and cream separator machines in{" "}
+            automatic milk collection systems, and cream separator machines in{" "}
             {city}.
           </p>
         </div>
