@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import {
-  creamSeparatorMachine,
-  milkingMachine,
-} from "@/config/products";
+import { creamSeparatorMachine } from "@/config/products";
 import { siteConfig } from "@/config/site";
 
 type ProductParams = {
@@ -20,11 +17,8 @@ type ProductLayoutProps = {
   params: Promise<ProductParams>;
 };
 
-// Combine dairy equipment products once
-const allDairyEquipments = [
-  ...creamSeparatorMachine,
-  ...milkingMachine,
-];
+// Dairy equipment products
+const allDairyEquipments = [...creamSeparatorMachine];
 
 export async function generateMetadata({
   params,
@@ -45,8 +39,7 @@ export async function generateMetadata({
   const productName = decodeURIComponent(product_name);
 
   const product = allDairyEquipments.find(
-    (item) =>
-      item.url.toLowerCase() === productName.toLowerCase()
+    (item) => item.url.toLowerCase() === productName.toLowerCase()
   );
 
   if (!product) {
@@ -60,8 +53,7 @@ export async function generateMetadata({
     };
   }
 
-  const productUrl =
-    `${siteConfig.url}/dairy-equipment/${product.url}`;
+  const productUrl = `${siteConfig.url}/dairy-equipment/${product.url}`;
 
   return {
     title: product.name,
@@ -115,17 +107,12 @@ export default async function ProductLayout({
   const productName = decodeURIComponent(product_name);
 
   const product = allDairyEquipments.find(
-    (item) =>
-      item.url.toLowerCase() === productName.toLowerCase()
+    (item) => item.url.toLowerCase() === productName.toLowerCase()
   );
 
   if (!product) {
     notFound();
   }
 
-  return (
-    <div className="overflow-x-hidden">
-      {children}
-    </div>
-  );
+  return <div className="overflow-x-hidden">{children}</div>;
 }
