@@ -181,7 +181,7 @@ your dairy machines operate efficiently.
   collection centers. Our product range includes{" "}
   <strong>
     Milk Analyzer Machines, Milk Collection Units (DPU), Milk Fat Testing
-    Machines, Milking Machines, Cream Separator Machines, and Digital
+    Machines, Cream Separator Machines, and Digital
     Weighing Scales
   </strong>
   . We provide reliable dairy equipment and solutions designed to improve
