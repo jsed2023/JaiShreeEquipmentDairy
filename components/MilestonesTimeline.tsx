@@ -8,7 +8,6 @@ import {
   FaHandshake,
   FaTruck,
   FaChartLine,
-  FaOilCan,
   FaBalanceScale,
   FaWater,
   FaVial,
@@ -20,7 +19,7 @@ type MilestoneType = {
   year: string;
   title: string;
   desc: string;
-  icon: React.ElementType; // ✅ modern & future-proof
+  icon: React.ElementType;
 };
 
 /* ================= YEAR CONFIG ================= */
@@ -40,7 +39,7 @@ const milestones: MilestoneType[] = [
   {
     year: "2021",
     title: "Product Launch & Sales Start",
-    desc: "Introduced milk analyzers, milking machines, DPUs, and cream separators.",
+    desc: "Introduced milk analyzers, DPUs, and cream separators.",
     icon: FaTools,
   },
   {
@@ -122,14 +121,8 @@ const installations: MilestoneType[] = [
   },
   {
     year: "",
-    title: "Milking Machine Setup",
-    desc: "Professional installation of Vansun milking machines for farms.",
-    icon: FaOilCan,
-  },
-  {
-    year: "",
     title: "Milk Collection Unit (DPU)",
-    desc: "End-to-end installation of dairy khata & milk collection units.",
+    desc: "End-to-end installation of dairy khata and milk collection units.",
     icon: FaBalanceScale,
   },
   {
@@ -145,16 +138,13 @@ const installations: MilestoneType[] = [
 export default function MilestonesTimeline() {
   return (
     <section className="relative overflow-hidden">
-
       {/* BACKGROUND */}
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-teal-50 via-white to-white dark:from-[#0f172a] dark:via-[#020617] dark:to-[#020617]" />
 
       <div className="max-w-7xl mx-auto px-6 pb-32">
-
         {/* DESKTOP TIMELINE */}
         <div className="hidden md:block pt-20">
           <div className="relative flex flex-wrap justify-center gap-y-12">
-
             <div className="absolute top-7 left-0 right-0 h-2px bg-linear-to-r from-transparent via-teal-500 to-transparent" />
 
             {finalMilestones.map((item) => {
@@ -176,7 +166,9 @@ export default function MilestonesTimeline() {
                     {item.year}
                   </span>
 
-                  <h3 className="mt-2 text-lg font-semibold">{item.title}</h3>
+                  <h3 className="mt-2 text-lg font-semibold">
+                    {item.title}
+                  </h3>
 
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                     {item.desc}
@@ -189,7 +181,6 @@ export default function MilestonesTimeline() {
 
         {/* MOBILE TIMELINE */}
         <div className="md:hidden mt-20 space-y-12 relative">
-
           <div className="absolute left-5 top-0 bottom-0 w-2px bg-linear-to-b from-transparent via-teal-500 to-transparent" />
 
           {finalMilestones.map((item) => {
@@ -211,7 +202,9 @@ export default function MilestonesTimeline() {
                   {item.year}
                 </span>
 
-                <h3 className="mt-1 text-lg font-semibold">{item.title}</h3>
+                <h3 className="mt-1 text-lg font-semibold">
+                  {item.title}
+                </h3>
 
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                   {item.desc}
@@ -233,7 +226,13 @@ export default function MilestonesTimeline() {
                 className="bg-white/80 dark:bg-[#020617]/80 backdrop-blur-md border rounded-2xl p-6 shadow-lg"
               >
                 <div className="text-3xl font-bold text-teal-600">
-                  <CountUp end={stat.value} duration={2} enableScrollSpy scrollSpyOnce />+
+                  <CountUp
+                    end={stat.value}
+                    duration={2}
+                    enableScrollSpy
+                    scrollSpyOnce
+                  />
+                  +
                 </div>
 
                 <p className="mt-2 text-sm font-medium text-gray-700 dark:text-gray-400">
@@ -250,8 +249,7 @@ export default function MilestonesTimeline() {
             Product Installations
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {installations.map((item) => {
               const Icon = item.icon;
 
@@ -267,7 +265,9 @@ export default function MilestonesTimeline() {
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <h3 className="font-semibold text-lg">{item.title}</h3>
+                  <h3 className="font-semibold text-lg">
+                    {item.title}
+                  </h3>
 
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                     {item.desc}
@@ -275,10 +275,8 @@ export default function MilestonesTimeline() {
                 </motion.div>
               );
             })}
-
           </div>
         </section>
-
       </div>
     </section>
   );
