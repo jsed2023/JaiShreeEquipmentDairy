@@ -142,7 +142,7 @@ Message: ${data.query ?? ""}
           <p className="mx-auto max-w-4xl text-center text-stone-700 dark:text-white/80">
             Get in touch with Jai Shree Equipment Dairy for
             milk analyzers, DPU milk collection units,
-            milking machines and dairy equipment in Sri
+            milk cream separator machines and dairy equipment in Sri
             Ganganagar, Hanumangarh, Suratgarh, Bikaner and
             nearby areas.
           </p>
