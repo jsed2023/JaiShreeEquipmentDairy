@@ -85,7 +85,6 @@ export default function LocationsPage() {
             Milk Fat Testing Machines,
             Milk Collection Units (DPU),
             Milk Cream Separator Machines (Paras),
-            and Milking Machines (Vansun)
           </strong>{" "}
 
           across Rajasthan including
