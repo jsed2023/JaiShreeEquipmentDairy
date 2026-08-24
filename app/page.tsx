@@ -14,7 +14,7 @@ const seoContent = [
 
   "Milk analyzer machines are essential for modern dairy operations because they help measure important milk parameters such as FAT, SNF, density, protein, and added water. Accurate milk testing ensures fair payment systems and improves milk quality standards.",
 
-  "Our product range includes Advance Milk Analyzer, Advance Milk Analyzer Plus, Advance Milk Analyzer Max, Ekomilk Ultra Milk Analyzer, Milk Data Processing Units (DPU), Milking Machines, Cream Separator Machines, Ultrasonic Milk Stirrers, and Digital Weighing Scales.",
+  "Our product range includes Advance Milk Analyzer, Advance Milk Analyzer Plus, Advance Milk Analyzer Max, Ekomilk Ultra Milk Analyzer, Milk Data Processing Units (DPU), Cream Separator Machines, Ultrasonic Milk Stirrers, and Digital Weighing Scales.",
 
   "These dairy machines are designed to improve efficiency, accuracy, and productivity in milk collection centers and dairy farms. With modern dairy automation solutions, milk collection operators can manage milk testing and record keeping digitally.",
 
@@ -70,8 +70,7 @@ export default function Home() {
   Our product range includes{" "}
   <strong>
     Milk Fat Testing Machine, Milk Analyzer Machines,Ekomilk Ultra Milk, Milk Collection Units, Advance Milk Analyzer Max,
-    Advance Milk Analyzer Plus, Milk Analyzer Advance, Milking Machines, Milk
-    Cream Separators, and Digital Weighing Scales
+    Advance Milk Analyzer Plus, Milk Analyzer Advance, Milk Cream Separators, and Digital Weighing Scales
   </strong>
   , designed to improve milk testing accuracy and dairy automation.
 
@@ -228,9 +227,9 @@ your dairy machines operate efficiently.
                 label: "Paras Milk Cream Separator",
               },
               {
-                href: "/dairy-equipment/vansan-trolly-cow-and-buff-milking-machine",
-                src: "v1731935014/Vansan_Trolly_Cow_And_Buff_milking_machine.jpg",
-                label: "Vansun Milking Machine",
+                href: "/dairy-equipment/cream-separator-machine-8-ae-90-lph",
+                src: "v1731935014/CREAM%20SEPARATOR%20MACHINE%208%20HO%2090%20LPH.jpg",
+                label: "Paras Milk Cream Separator 90LPH",
               },
             ].map((item, idx) => (
               <figure
