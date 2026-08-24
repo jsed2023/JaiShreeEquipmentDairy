@@ -24,7 +24,6 @@ import {
   Box,
   Milk,
   Database,
-  Factory,
   Weight,
   TestTube2,
   Store,
@@ -48,12 +47,12 @@ export const aboutAndStory: AboutAndStory[] = [
   {
     id: 1,
     title: "About Us - Jai Shree Equipment Dairy",
-    desc: "Welcome to Jai Shree Equipment Dairy, your trusted source for top-quality dairy equipment. With years of industry experience, we specialize in repairing, retailing, and supplying advanced dairy solutions to meet the diverse needs of farmers, processors, and dairy businesses. From cow and buffalo milking machines, milk cream separator machines, milk analyzer machines and milk collection units, we offer products to enhance efficiency, improve milk quality, and streamline dairy operations.",
+    desc: "Welcome to Jai Shree Equipment Dairy, your trusted source for top-quality dairy equipment. With years of industry experience, we specialize in repairing, retailing, and supplying advanced dairy solutions to meet the diverse needs of farmers, processors, and dairy businesses. From milk cream separator machines, milk analyzer machines, and milk collection units to dairy weighing scales and milk testing equipment, we offer products to enhance efficiency, improve milk quality, and streamline dairy operations.",
   },
   {
     id: 2,
     title: "Our Story",
-    desc: "Founded with a commitment to innovation and quality, Jai Shree Equipment Dairy has grown into a leading supplier of dairy equipment. We understand the importance of reliable and efficient equipment in ensuring optimal productivity and hygiene. With a passion for the dairy industry, we have built a reputation for delivering products that meet the highest standards of performance and durability.",
+    desc: "Founded with a commitment to innovation and quality, Jai Shree Equipment Dairy has grown into a trusted supplier of dairy equipment. We understand the importance of reliable and efficient equipment in ensuring optimal productivity and hygiene. With a passion for the dairy industry, we have built a reputation for delivering products that meet high standards of performance and durability.",
   },
 ];
 
@@ -64,47 +63,42 @@ export const productRangeAndWhyChooseUs: ProductRangeAndWhyChooseUs[] = [
     descList: [
       {
         id: "1A",
-        title: "1. Vansun Milking Machines",
-        desc: "High-performance automatic milking machines for hygienic and fast milking. Ideal for small and large dairy farms to reduce labor and increase productivity.",
-      },
-      {
-        id: "1B",
-        title: "2. Paras Cream Separator Machines",
+        title: "1. Paras Cream Separator Machines",
         desc: "Efficient cream separator machines for accurate cream extraction used in ghee, butter, and dairy production.",
       },
       {
-        id: "1C",
-        title: "3. Advance Milk Analyzer Machines",
+        id: "1B",
+        title: "2. Advance Milk Analyzer Machines",
         desc: "Advance brand milk analyzer machines for accurate testing of Fat, SNF, Protein, and Lactose. Perfect for milk collection centers and dairy businesses to ensure transparency and quality.",
       },
       {
-        id: "1D",
-        title: "4. Dairy Khata DPU Milk Collection System",
+        id: "1C",
+        title: "3. Dairy Khata DPU Milk Collection System",
         desc: "Dairy Khata digital milk collection unit with integrated weighing scale, milk analyzer, and thermal printer for fast, accurate, and transparent milk procurement.",
       },
       {
-        id: "1E",
-        title: "5. Dairy Weighing Scales",
+        id: "1D",
+        title: "4. Dairy Weighing Scales",
         desc: "High-accuracy electronic weighing scales for milk collection centers and dairy farms.",
       },
       {
-        id: "1F",
-        title: "6. Milk Testing Equipment",
+        id: "1E",
+        title: "5. Milk Testing Equipment",
         desc: "Complete range of milk testing tools including lactometer, fat testing kits, and SNF testing equipment.",
       },
       {
+        id: "1F",
+        title: "6. Dairy Machine Spare Parts",
+        desc: "Genuine and reliable spare parts available for dairy machines and equipment.",
+      },
+      {
         id: "1G",
-        title: "7. Milking Machine Spare Parts",
-        desc: "All types of spare parts available including liners, pulsators, buckets, vacuum pumps, and rubber parts.",
+        title: "7. Dairy Equipment Setup Solutions",
+        desc: "Complete dairy equipment setup with installation and technical support.",
       },
       {
         id: "1H",
-        title: "8. Dairy Farm Setup Solutions",
-        desc: "Complete dairy farm setup with machine installation, pipeline system, and technical support.",
-      },
-      {
-        id: "1I",
-        title: "9. Automatic Milk Collection Center Setup",
+        title: "8. Automatic Milk Collection Center Setup",
         desc: "End-to-end setup for dairy societies including DPU system, software, analyzer, and operator training.",
       },
     ],
@@ -116,7 +110,7 @@ export const productRangeAndWhyChooseUs: ProductRangeAndWhyChooseUs[] = [
       {
         id: "2A",
         title: "High-Quality Branded Dairy Machines",
-        desc: "We deal in trusted brands like Vansun, Paras, Advance, and Dairy Khata for reliable and long-lasting performance.",
+        desc: "We deal in trusted dairy equipment brands including Paras, Advance, and Dairy Khata for reliable and long-lasting performance.",
       },
       {
         id: "2B",
@@ -136,7 +130,7 @@ export const productRangeAndWhyChooseUs: ProductRangeAndWhyChooseUs[] = [
       {
         id: "2E",
         title: "Genuine Products Guarantee",
-        desc: "100% original machines with warranty support.",
+        desc: "100% genuine products with warranty support.",
       },
       {
         id: "2F",
@@ -162,7 +156,7 @@ export const aboutFactsheet: AboutFactsheet[] = [
       {
         id: "1B",
         title: "Nature of Business",
-        desc: "Supplier & Retailer of Dairy Machines (Milk Analyzer Machine, Milk Collection System, Cream Separator Machine, Milking Machine)",
+        desc: "Supplier & Retailer of Dairy Machines including Milk Analyzer Machines, Milk Collection Systems, Cream Separator Machines, Dairy Weighing Scales, and Milk Testing Equipment",
         icon: BriefcaseBusiness,
       },
       {
@@ -281,7 +275,7 @@ export const aboutFactsheet: AboutFactsheet[] = [
       },
       {
         id: "4B",
-        title: "Milk Collection System",
+        title: "Milk Collection System / DPU",
         desc: "Available",
         icon: Database,
       },
@@ -293,18 +287,12 @@ export const aboutFactsheet: AboutFactsheet[] = [
       },
       {
         id: "4D",
-        title: "Milking Machine",
-        desc: "Available",
-        icon: Factory,
-      },
-      {
-        id: "4E",
         title: "Dairy Weighing Scale",
         desc: "Available",
         icon: Weight,
       },
       {
-        id: "4F",
+        id: "4E",
         title: "Milk Testing Equipment",
         desc: "Available",
         icon: TestTube2,
@@ -384,7 +372,7 @@ export const aboutFactsheet: AboutFactsheet[] = [
       {
         id: "7B",
         title: "Customer Satisfaction",
-        desc: "100% Client Support",
+        desc: "Dedicated Client Support",
         icon: HeartHandshake,
       },
       {
