@@ -3,7 +3,6 @@ import type { MetadataRoute } from "next";
 import {
   MilkTestingEquipment,
   creamSeparatorMachine,
-  milkingMachine,
   automaticMilkCollectionSystem,
   MilkAnalyzerMachines,
 } from "@/config/products";
@@ -92,14 +91,7 @@ function cleanSegment(value: unknown): string {
     .replace(/^\/+|\/+$/g, "");
 }
 
-/**
- * Normalize URL pathname.
- *
- * "about"     -> "/about"
- * "/about/"   -> "/about"
- * "//about//" -> "/about"
- * "/"         -> "/"
- */
+
 function normalizePath(path: string): string {
   const cleaned = path
     .trim()
@@ -295,10 +287,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dairyEquipment: SitemapItem[] = [
     ...(Array.isArray(creamSeparatorMachine)
       ? (creamSeparatorMachine as SitemapItem[])
-      : []),
-
-    ...(Array.isArray(milkingMachine)
-      ? (milkingMachine as SitemapItem[])
       : []),
   ];
 
