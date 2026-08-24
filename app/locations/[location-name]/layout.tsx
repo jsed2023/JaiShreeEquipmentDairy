@@ -146,7 +146,7 @@ export async function generateMetadata({
   ========================= */
 
   const description =
-    `Jai Shree Equipment Dairy supplies milk analyzer machines, dairy equipment, milking machines and automatic milk collection systems in ${cityName}.`;
+    `Jai Shree Equipment Dairy supplies milk analyzer machines, dairy equipment, milk cream separator machines and automatic milk collection systems in ${cityName}.`;
 
   /* =========================
      METADATA
