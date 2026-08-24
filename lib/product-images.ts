@@ -34,17 +34,7 @@ export const productImages: ProductImage[] = [
     name: "Milk Collection Unit DPU",
     url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",
     productUrl: "/automatic-milk-collection-system/automatic-milk-collection-data-processor-unit",
-  },
-  {
-    name: "Cow Milking Machine",
-    url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902637/Nano%20cow%20milking%20machine.jpg",
-    productUrl: "/dairy-equipment/neno-cow-milking-machine",
-  },
-  {
-    name: "Buffalo Milking Machine",
-    url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1731935014/Vansan_Trolly_Cow_And_Buff_milking_machine.jpg",
-    productUrl: "/dairy-equipment/vansan-trolly-cow-and-buff-milking-machine",
-  },
+  },
   {
     name: "Milk Cream Separator",
     url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1731401214/cream-separator-machine-9-ae-165-lph.jpg",
