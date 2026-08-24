@@ -22,10 +22,6 @@ export default function GalleryCarousel() {
       alt: "DPU Milk Collection Unit Dairy Khata",
     },
     {
-      src: "v1731935014/Vansan_Trolly_Cow_And_Buff_milking_machine.jpg",
-      alt: "Vansan Trolley Cow and Buffalo Milking Machine",
-    },
-    {
       src: "v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg",
       alt: "Paras Milk Cream Separator AED 165 LHP",
     },
