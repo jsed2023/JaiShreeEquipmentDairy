@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dairy Equipment",
     description:
-      "High-quality dairy equipment including milkcream separators.",
+      "High-quality dairy equipment including milk cream separators.",
   },
 
   robots: {
