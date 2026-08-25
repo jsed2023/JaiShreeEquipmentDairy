@@ -10,8 +10,6 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
 
-
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
@@ -43,7 +41,8 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-verification: {
+
+  verification: {
     google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
   },
 
@@ -57,8 +56,7 @@ verification: {
 
     images: [
       {
-        url:
-          "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
+        url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
         width: 1200,
         height: 630,
         alt: siteConfig.name,
@@ -81,13 +79,11 @@ verification: {
   },
 }
 
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#ffffff",
 }
-
 
 export default function RootLayout({
   children,
@@ -101,52 +97,59 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-  {/* Google Analytics */}
-  <Script
-    src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
-    strategy="afterInteractive"
-  />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+          strategy="afterInteractive"
+        />
 
-  <Script id="google-analytics" strategy="afterInteractive">
-    {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RBFDTF7PWV');
-    `}
-  </Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RBFDTF7PWV');
+          `}
+        </Script>
 
-  {/* Google Tag Manager */}
-  <Script id="google-tag-manager" strategy="afterInteractive">
-    {`
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];
-        w[l].push({
-          'gtm.start': new Date().getTime(),
-          event:'gtm.js'
-        });
-
-        var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),
-            dl=l!='dataLayer' ? '&l='+l : '';
-
-        j.async=true;
-        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-        f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
-    `}
-  </Script>
-</head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({
+                  'gtm.start':new Date().getTime(),
+                  event:'gtm.js'
+                });
+                
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
+            `,
+          }}
+        />
+      </head>
 
       <body>
+        {/* Google Tag Manager NoScript */}
         <noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
-    height="0"
-    width="0"
-    style={{ display: "none", visibility: "hidden" }}
-  />
-</noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
+            height="0"
+            width="0"
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
+          />
+        </noscript>
+
         <LocalBusinessSchema />
 
         <Providers>
