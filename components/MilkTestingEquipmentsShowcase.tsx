@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
   HiLightningBolt,
   HiShieldCheck,
@@ -68,15 +68,19 @@ const benefits: CardItem[] = [
 
 /* ================= ANIMATION ================= */
 
-const cardAnim = {
-  hidden: { opacity: 0, y: 40 },
+const cardAnim: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+
   show: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
       delay: i * 0.12,
       duration: 0.6,
-      ease: "easeOut",
+      ease: [0.22, 1, 0.36, 1],
     },
   }),
 };
@@ -101,18 +105,38 @@ function Card({
       whileInView="show"
       viewport={{ once: true }}
       custom={i}
-      whileHover={{ y: -6, scale: 1.02 }}
+      whileHover={{
+        y: -6,
+        scale: 1.02,
+      }}
       className="
-        p-6 rounded-2xl
-        bg-white dark:bg-zinc-900/80
-        border border-zinc-200 dark:border-zinc-800
-        shadow-sm hover:shadow-xl
-        transition-all duration-300
+        p-6
+        rounded-2xl
+        bg-white
+        dark:bg-zinc-900/80
+        border
+        border-zinc-200
+        dark:border-zinc-800
+        shadow-sm
+        hover:shadow-xl
+        transition-all
+        duration-300
       "
     >
       <div
-        className={`w-14 h-14 mb-4 flex items-center justify-center
-        rounded-xl bg-gradient-to-br ${gradient} text-white shadow-lg`}
+        className={`
+          w-14
+          h-14
+          mb-4
+          flex
+          items-center
+          justify-center
+          rounded-xl
+          bg-linear-to-br
+          ${gradient}
+          text-white
+          shadow-lg
+        `}
       >
         <Icon className="text-3xl" />
       </div>
@@ -134,21 +158,34 @@ export default function MilkTestingEquipmentsShowcase() {
   return (
     <div
       className="
-        bg-gradient-to-b from-sky-50 via-white to-indigo-50
-        dark:from-[#05070f] dark:via-zinc-950 dark:to-[#0a0f1f]
-        py-24 transition-colors duration-500
+        bg-linear-to-b
+        from-sky-50
+        via-white
+        to-indigo-50
+        dark:from-[#05070f]
+        dark:via-zinc-950
+        dark:to-[#0a0f1f]
+        py-24
+        transition-colors
+        duration-500
       "
     >
       <div className="max-w-7xl mx-auto px-4 flex flex-col gap-24">
-
         {/* ================= FEATURES ================= */}
 
         <section>
           <h2
             className="
-              text-center text-2xl sm:text-3xl font-bold mb-12
-              bg-gradient-to-r from-sky-500 to-indigo-600
-              bg-clip-text text-transparent
+              text-center
+              text-2xl
+              sm:text-3xl
+              font-bold
+              mb-12
+              bg-linear-to-r
+              from-sky-500
+              to-indigo-600
+              bg-clip-text
+              text-transparent
             "
           >
             Milk Testing Equipment Features
@@ -157,7 +194,7 @@ export default function MilkTestingEquipmentsShowcase() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((item, i) => (
               <Card
-                key={i}
+                key={item.title}
                 item={item}
                 i={i}
                 gradient="from-sky-500 to-indigo-600"
@@ -171,9 +208,16 @@ export default function MilkTestingEquipmentsShowcase() {
         <section>
           <h2
             className="
-              text-center text-2xl sm:text-3xl font-bold mb-12
-              bg-gradient-to-r from-emerald-500 to-teal-600
-              bg-clip-text text-transparent
+              text-center
+              text-2xl
+              sm:text-3xl
+              font-bold
+              mb-12
+              bg-linear-to-r
+              from-emerald-500
+              to-teal-600
+              bg-clip-text
+              text-transparent
             "
           >
             Benefits of Milk Testing Equipments
@@ -182,7 +226,7 @@ export default function MilkTestingEquipmentsShowcase() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((item, i) => (
               <Card
-                key={i}
+                key={item.title}
                 item={item}
                 i={i}
                 gradient="from-emerald-500 to-teal-600"
@@ -190,7 +234,6 @@ export default function MilkTestingEquipmentsShowcase() {
             ))}
           </div>
         </section>
-
       </div>
     </div>
   );
