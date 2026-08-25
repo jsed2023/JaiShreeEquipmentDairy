@@ -772,7 +772,7 @@ export default async function LocationPage({
             .map((location) => (
               <Link
                 key={location.slug}
-                href={`/locations/milk-analyzer-${location.slug}`}
+                href={`/milk-analyzer-${location.slug}`}
                 className="
                   inline-flex
                   items-center gap-2
