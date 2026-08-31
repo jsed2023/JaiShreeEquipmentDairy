@@ -162,11 +162,9 @@ export default function RootLayout({
               </main>
 
               <Footer />
-              <Analytics/>
+             
               <WhatsAppButton />
             </div>
-          </PageLoader>
-        </Providers>
       </body>
     </html>
   )
