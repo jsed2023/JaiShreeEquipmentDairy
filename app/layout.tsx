@@ -9,7 +9,7 @@ import Footer from "@/components/footer"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
-
+import { Analytics } from "@vercel/analytics/next"
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
@@ -162,7 +162,7 @@ export default function RootLayout({
               </main>
 
               <Footer />
-
+              <Analytics/>
               <WhatsAppButton />
             </div>
           </PageLoader>
