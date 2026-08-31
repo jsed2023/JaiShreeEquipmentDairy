@@ -41,6 +41,12 @@ type Props = {
 const PREFIX = "milk-analyzer-";
 
 /* =========================
+   FORCE DYNAMIC
+========================= */
+
+export const dynamic = "force-dynamic";
+
+/* =========================
    WHATSAPP LINK
 ========================= */
 
@@ -73,18 +79,18 @@ function getValidLocation(locationName: string) {
     notFound();
   }
 
-  const location =
+  const validLocation =
     rajasthanLocations.find(
-      (item) =>
-        item.slug.toLowerCase() === locationSlug
+      (location) =>
+        location.slug.toLowerCase() === locationSlug
     );
 
-  if (!location) {
+  if (!validLocation) {
     notFound();
   }
 
   return {
-    location,
+    validLocation,
     locationSlug,
   };
 }
@@ -113,7 +119,7 @@ export default async function LocationPage({
   ========================= */
 
   const {
-    location: validLocation,
+    validLocation,
     locationSlug,
   } = getValidLocation(locationName);
 
@@ -192,7 +198,10 @@ export default async function LocationPage({
 
       <div
         className="
-          mb-10 flex flex-col items-center
+          mb-10
+          flex
+          flex-col
+          items-center
           rounded-2xl
           bg-linear-to-r
           from-blue-400
@@ -205,8 +214,12 @@ export default async function LocationPage({
       >
         <div
           className="
-            mb-4 flex h-16 w-16
-            items-center justify-center
+            mb-4
+            flex
+            h-16
+            w-16
+            items-center
+            justify-center
             rounded-full
             bg-white/80
             shadow-sm
@@ -221,7 +234,10 @@ export default async function LocationPage({
 
         <div
           className="
-            mb-3 flex items-center gap-2
+            mb-3
+            flex
+            items-center
+            gap-2
           "
         >
           <MapPin
@@ -236,7 +252,9 @@ export default async function LocationPage({
 
         <h1
           className="
-            mb-3 text-3xl font-bold
+            mb-3
+            text-3xl
+            font-bold
             md:text-4xl
           "
         >
@@ -260,11 +278,14 @@ export default async function LocationPage({
           rel="noopener noreferrer"
           aria-label={`Contact us on WhatsApp for Milk Analyzer Machine in ${city}`}
           className="
-            mt-6 inline-flex
-            items-center gap-2
+            mt-6
+            inline-flex
+            items-center
+            gap-2
             rounded-lg
             bg-white
-            px-6 py-3
+            px-6
+            py-3
             font-semibold
             text-blue-600
             transition
@@ -291,16 +312,19 @@ export default async function LocationPage({
 
       <div
         className="
-          mb-12 grid gap-8
+          mb-12
+          grid
+          gap-8
           md:grid-cols-2
         "
       >
-        {/* ABOUT MILK ANALYZER */}
+        {/* ABOUT */}
 
         <div
           className="
             rounded-xl
-            border border-gray-200
+            border
+            border-gray-200
             bg-white
             p-6
             shadow-sm
@@ -312,14 +336,20 @@ export default async function LocationPage({
         >
           <div
             className="
-              mb-4 flex items-center gap-3
+              mb-4
+              flex
+              items-center
+              gap-3
             "
           >
             <div
               className="
-                flex h-11 w-11
+                flex
+                h-11
+                w-11
                 shrink-0
-                items-center justify-center
+                items-center
+                justify-center
                 rounded-lg
                 bg-blue-100
                 dark:bg-blue-950
@@ -359,7 +389,8 @@ export default async function LocationPage({
         <div
           className="
             rounded-xl
-            border border-gray-200
+            border
+            border-gray-200
             bg-white
             p-6
             shadow-sm
@@ -371,14 +402,20 @@ export default async function LocationPage({
         >
           <div
             className="
-              mb-4 flex items-center gap-3
+              mb-4
+              flex
+              items-center
+              gap-3
             "
           >
             <div
               className="
-                flex h-11 w-11
+                flex
+                h-11
+                w-11
                 shrink-0
-                items-center justify-center
+                items-center
+                justify-center
                 rounded-lg
                 bg-green-100
                 dark:bg-green-950
@@ -418,7 +455,8 @@ export default async function LocationPage({
         <div
           className="
             rounded-xl
-            border border-gray-200
+            border
+            border-gray-200
             bg-white
             p-6
             shadow-sm
@@ -430,14 +468,20 @@ export default async function LocationPage({
         >
           <div
             className="
-              mb-4 flex items-center gap-3
+              mb-4
+              flex
+              items-center
+              gap-3
             "
           >
             <div
               className="
-                flex h-11 w-11
+                flex
+                h-11
+                w-11
                 shrink-0
-                items-center justify-center
+                items-center
+                justify-center
                 rounded-lg
                 bg-orange-100
                 dark:bg-orange-950
@@ -477,7 +521,8 @@ export default async function LocationPage({
         <div
           className="
             rounded-xl
-            border border-gray-200
+            border
+            border-gray-200
             bg-white
             p-6
             shadow-sm
@@ -489,14 +534,20 @@ export default async function LocationPage({
         >
           <div
             className="
-              mb-4 flex items-center gap-3
+              mb-4
+              flex
+              items-center
+              gap-3
             "
           >
             <div
               className="
-                flex h-11 w-11
+                flex
+                h-11
+                w-11
                 shrink-0
-                items-center justify-center
+                items-center
+                justify-center
                 rounded-lg
                 bg-purple-100
                 dark:bg-purple-950
@@ -542,13 +593,20 @@ export default async function LocationPage({
       <div className="mb-14 text-center">
         <div
           className="
-            mb-8 flex flex-col items-center
+            mb-8
+            flex
+            flex-col
+            items-center
           "
         >
           <div
             className="
-              mb-3 flex h-12 w-12
-              items-center justify-center
+              mb-3
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
               rounded-full
               bg-blue-100
               dark:bg-blue-950
@@ -562,7 +620,8 @@ export default async function LocationPage({
 
           <h2
             className="
-              text-3xl font-bold
+              text-3xl
+              font-bold
               text-gray-900
               dark:text-white
             "
@@ -573,8 +632,11 @@ export default async function LocationPage({
 
         <div
           className="
-            grid grid-cols-2 gap-4
-            md:grid-cols-4 md:gap-6
+            grid
+            grid-cols-2
+            gap-4
+            md:grid-cols-4
+            md:gap-6
           "
         >
           {features.map((feature) => {
@@ -585,7 +647,8 @@ export default async function LocationPage({
                 key={feature.title}
                 className="
                   rounded-xl
-                  border border-gray-200
+                  border
+                  border-gray-200
                   bg-white
                   p-5
                   shadow-sm
@@ -598,9 +661,13 @@ export default async function LocationPage({
               >
                 <div
                   className="
-                    mx-auto mb-3
-                    flex h-12 w-12
-                    items-center justify-center
+                    mx-auto
+                    mb-3
+                    flex
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
                     rounded-full
                     bg-blue-100
                     dark:bg-blue-950
@@ -634,13 +701,20 @@ export default async function LocationPage({
       <div className="mb-14">
         <div
           className="
-            mb-8 flex flex-col items-center
+            mb-8
+            flex
+            flex-col
+            items-center
           "
         >
           <div
             className="
-              mb-3 flex h-12 w-12
-              items-center justify-center
+              mb-3
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
               rounded-full
               bg-orange-100
               dark:bg-orange-950
@@ -654,7 +728,8 @@ export default async function LocationPage({
 
           <h2
             className="
-              text-center text-3xl
+              text-center
+              text-3xl
               font-bold
               text-gray-900
               dark:text-white
@@ -666,7 +741,9 @@ export default async function LocationPage({
 
         <div
           className="
-            grid grid-cols-2 gap-4
+            grid
+            grid-cols-2
+            gap-4
             sm:grid-cols-3
             md:grid-cols-4
             md:gap-6
@@ -676,10 +753,12 @@ export default async function LocationPage({
             <div
               key={`${item.productUrl}-${index}`}
               className="
-                flex flex-col
+                flex
+                flex-col
                 overflow-hidden
                 rounded-xl
-                border border-gray-200
+                border
+                border-gray-200
                 bg-white
                 p-3
                 shadow-sm
@@ -691,8 +770,6 @@ export default async function LocationPage({
                 dark:bg-zinc-800
               "
             >
-              {/* PRODUCT IMAGE */}
-
               <Link
                 href={item.productUrl}
                 aria-label={`View ${item.name}`}
@@ -700,7 +777,8 @@ export default async function LocationPage({
               >
                 <div
                   className="
-                    flex h-44
+                    flex
+                    h-44
                     items-center
                     justify-center
                     overflow-hidden
@@ -736,15 +814,13 @@ export default async function LocationPage({
                 </div>
               </Link>
 
-              {/* PRODUCT NAME */}
-
               <Link
                 href={item.productUrl}
                 className="
-                  mt-4 flex
+                  mt-4
+                  flex
                   items-start
                   justify-center
-                  gap-1
                   text-center
                   text-sm
                   font-semibold
@@ -759,18 +835,18 @@ export default async function LocationPage({
                 </span>
               </Link>
 
-              {/* PRODUCT BUTTON */}
-
               <Link
                 href={item.productUrl}
                 className="
-                  mt-4 inline-flex
+                  mt-4
+                  inline-flex
                   items-center
                   justify-center
                   gap-2
                   rounded-lg
                   bg-blue-600
-                  px-3 py-2
+                  px-3
+                  py-2
                   text-center
                   text-sm
                   font-semibold
@@ -806,14 +882,20 @@ export default async function LocationPage({
       >
         <div
           className="
-            mb-6 flex items-center gap-3
+            mb-6
+            flex
+            items-center
+            gap-3
           "
         >
           <div
             className="
-              flex h-11 w-11
+              flex
+              h-11
+              w-11
               shrink-0
-              items-center justify-center
+              items-center
+              justify-center
               rounded-lg
               bg-blue-100
               dark:bg-blue-950
@@ -827,7 +909,8 @@ export default async function LocationPage({
 
           <h2
             className="
-              text-2xl font-semibold
+              text-2xl
+              font-semibold
               text-gray-900
               dark:text-white
             "
@@ -842,9 +925,11 @@ export default async function LocationPage({
               key={keyword}
               className="
                 rounded-full
-                border border-gray-200
+                border
+                border-gray-200
                 bg-white
-                px-4 py-2
+                px-4
+                py-2
                 text-sm
                 text-gray-700
                 shadow-sm
@@ -866,14 +951,20 @@ export default async function LocationPage({
       <div className="mb-14">
         <div
           className="
-            mb-6 flex items-center gap-3
+            mb-6
+            flex
+            items-center
+            gap-3
           "
         >
           <div
             className="
-              flex h-11 w-11
+              flex
+              h-11
+              w-11
               shrink-0
-              items-center justify-center
+              items-center
+              justify-center
               rounded-lg
               bg-green-100
               dark:bg-green-950
@@ -887,7 +978,8 @@ export default async function LocationPage({
 
           <h2
             className="
-              text-2xl font-semibold
+              text-2xl
+              font-semibold
               text-gray-900
               dark:text-white
             "
@@ -913,7 +1005,8 @@ export default async function LocationPage({
                   gap-2
                   rounded-full
                   bg-blue-100
-                  px-4 py-2
+                  px-4
+                  py-2
                   text-sm
                   font-medium
                   text-blue-700
@@ -951,9 +1044,13 @@ export default async function LocationPage({
       >
         <div
           className="
-            mx-auto mb-4
-            flex h-14 w-14
-            items-center justify-center
+            mx-auto
+            mb-4
+            flex
+            h-14
+            w-14
+            items-center
+            justify-center
             rounded-full
             bg-white/80
           "
@@ -999,7 +1096,8 @@ export default async function LocationPage({
             gap-2
             rounded-lg
             bg-green-300
-            px-6 py-3
+            px-6
+            py-3
             font-semibold
             text-black
             transition
