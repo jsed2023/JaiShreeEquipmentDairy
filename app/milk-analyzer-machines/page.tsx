@@ -47,6 +47,15 @@ export default function MilkAnlayzerMachinesPage() {
           </div>
         </section>
 
+          <div className="bg-sky-100 dark:bg-sky-900 text-sky-900 dark:text-sky-100 py-4xl">
+            <h2
+              className="text-center font-bold underline sm:text-4xl text-lg
+              bg-clip-text text-transparent animate-title-gradient"
+            >
+              Best Milk Analyzer In India
+            </h2>
+          </div>
+
         {/* INTRO */}
         <section className="flex flex-col gap-y-4 dark:bg-[#27272a] bg-[rgb(244,244,245)] rounded-md sm:px-8 px-4 py-8">
           <p className="dark:text-gray-400 text-stone-700">
