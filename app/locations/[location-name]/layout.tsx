@@ -32,6 +32,12 @@ const LOCATION_IMAGE =
   "https://res.cloudinary.com/dddhtbuzs/image/upload/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png";
 
 /* =========================
+   FORCE DYNAMIC
+========================= */
+
+export const dynamic = "force-dynamic";
+
+/* =========================
    LOCATION VALIDATION
 ========================= */
 
@@ -44,47 +50,25 @@ function getValidLocation(locationName: string) {
     notFound();
   }
 
-  const locationSlug = normalizedParam.slice(
-    PREFIX.length
-  );
+  const locationSlug =
+    normalizedParam.slice(PREFIX.length);
 
   if (!locationSlug) {
     notFound();
   }
 
-  const location = rajasthanLocations.find(
-    (item) =>
-      item.slug.toLowerCase() === locationSlug
-  );
+  const validLocation =
+    rajasthanLocations.find(
+      (location) =>
+        location.slug.toLowerCase() === locationSlug
+    );
 
-  if (!location) {
+  if (!validLocation) {
     notFound();
   }
 
-  return location;
+  return validLocation;
 }
-
-/* =========================
-   STATIC PARAMS
-========================= */
-
-export function generateStaticParams() {
-  return rajasthanLocations.map((location) => ({
-    "location-name": `${PREFIX}${location.slug}`,
-  }));
-}
-
-/* =========================
-   PREVENT RANDOM URLS
-========================= */
-
-export const dynamicParams = false;
-
-/* =========================
-   ISR
-========================= */
-
-export const revalidate = 86400;
 
 /* =========================
    DYNAMIC METADATA
@@ -121,28 +105,28 @@ export async function generateMetadata({
     `Milk Analyzer Machine Supplier in ${cityName}`;
 
   /* =========================
-     SEO DESCRIPTION
+     DESCRIPTION
   ========================= */
 
   const description =
     `Jai Shree Equipment Dairy supplies milk analyzer machines, dairy equipment, milk cream separator machines and automatic milk collection systems in ${cityName}.`;
 
   /* =========================
-     OPEN GRAPH DESCRIPTION
+     OPEN GRAPH
   ========================= */
 
   const ogDescription =
     `Buy Milk Analyzer Machines, Milking Machines, Cream Separator Machines and Automatic Milk Collection Systems in ${cityName}.`;
 
   /* =========================
-     TWITTER DESCRIPTION
+     TWITTER
   ========================= */
 
   const twitterDescription =
     `Trusted supplier of Milk Analyzer Machines and Dairy Equipment in ${cityName}.`;
 
   /* =========================
-     METADATA
+     RETURN METADATA
   ========================= */
 
   return {
@@ -154,6 +138,7 @@ export async function generateMetadata({
       `Milk Analyzer Machine ${cityName}`,
       `Milk Analyzer Supplier ${cityName}`,
       `Milk Testing Machine ${cityName}`,
+      `Milk Testing Instrument ${cityName}`,
       `Dairy Equipment ${cityName}`,
       `Automatic Milk Collection System ${cityName}`,
       `Milk Analyzer Dealer ${cityName}`,
@@ -161,22 +146,13 @@ export async function generateMetadata({
       `Milk Collection Machine ${cityName}`,
       `Milk Testing Equipment ${cityName}`,
       `Dairy Machine Supplier ${cityName}`,
-      `milk testing instrument ${cityName}`,
       `Ekomilk Machine ${cityName}`,
       `Cream Separator Machine ${cityName}`,
     ],
 
-    /* =========================
-       CANONICAL
-    ========================= */
-
     alternates: {
       canonical: url,
     },
-
-    /* =========================
-       ROBOTS
-    ========================= */
 
     robots: {
       index: true,
@@ -190,10 +166,6 @@ export async function generateMetadata({
         "max-video-preview": -1,
       },
     },
-
-    /* =========================
-       OPEN GRAPH
-    ========================= */
 
     openGraph: {
       title,
@@ -218,10 +190,6 @@ export async function generateMetadata({
         },
       ],
     },
-
-    /* =========================
-       TWITTER
-    ========================= */
 
     twitter: {
       card: "summary_large_image",
@@ -252,9 +220,10 @@ export default async function LocationLayout({
   }
 
   /*
-   * Validate location.
-   * Invalid location-name automatically gets 404.
+   * Validate the requested location.
+   * Invalid location URLs return 404.
    */
+
   getValidLocation(locationName);
 
   return (
