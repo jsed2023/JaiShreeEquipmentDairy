@@ -164,7 +164,10 @@ export default function RootLayout({
              
               <WhatsAppButton />
             </div>
+ </PageLoader>
+  </Providers>
       </body>
+
     </html>
   )
 }
