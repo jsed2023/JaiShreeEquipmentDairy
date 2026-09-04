@@ -5229,6 +5229,9 @@ desc:
   ],
 
   price: "50,000",
+moreDetails: cld(
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1788506854/ADVANCE_MILK_ANALYZER_MaX-Book.webp"
+  ),
 
   features: [
     { id: "14A", key: "Brand", value: "Advance" },
