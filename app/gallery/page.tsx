@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
 import { cld } from "@/utils/cloudinary";
 
 /* =========================
@@ -154,7 +153,7 @@ export default function GalleryPage() {
             md:text-xl
           "
         >
-          Product Images
+          Dairy Equipment & Milk Analyzer Gallery
         </h1>
       </div>
 
