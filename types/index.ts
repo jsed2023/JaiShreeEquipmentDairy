@@ -173,3 +173,10 @@ export interface BlogType {
   date: string;
   content: string;
 }
+
+interface GalleryImage {
+  src: string;
+  name: string;
+  altText: string;
+  href?: string;
+}
