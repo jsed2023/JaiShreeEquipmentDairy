@@ -6,7 +6,6 @@ import { useState } from "react";
 import type { GalleryImage } from "@/types";
 import { cld } from "@/utils/cloudinary";
 
-
 /* =========================
    GALLERY IMAGES
 ========================= */
@@ -155,7 +154,7 @@ export default function GalleryPage() {
               md:text-xl
             "
           >
-             Milk Analyzer Machines & Milk collection system Gallery
+            Milk Analyzer Machines &amp; Milk Collection Systems Gallery
           </h1>
         </div>
 
@@ -181,19 +180,11 @@ export default function GalleryPage() {
       {/* =========================
           GALLERY SECTION
       ========================= */}
-<section
-        <h2
-          
-          className="
-            mb-4
-            text-center
-            text-xl
-            font-bold
-            text-gray-900
-            dark:text-white
-          "
-        >
-          Milk Analyzer Machines & Milk collection system Gallery Products
+
+      <section>
+
+        <h2>
+          Milk Analyzer Machines &amp; Milk Collection Equipment
         </h2>
 
         {/* =========================
@@ -211,12 +202,6 @@ export default function GalleryPage() {
           {images.map((item, index) => {
             const isActive =
               activeIndex === index;
-
-            /*
-             * Product pages should be crawlable.
-             * If a product URL is not available yet,
-             * the card remains a button.
-             */
 
             const cardContent = (
               <>
@@ -373,6 +358,7 @@ export default function GalleryPage() {
             );
           })}
         </div>
+
       </section>
 
       {/* =========================
@@ -398,6 +384,7 @@ export default function GalleryPage() {
         "
         aria-labelledby="gallery-help"
       >
+
         <h2
           id="gallery-help"
           className="
@@ -435,6 +422,7 @@ export default function GalleryPage() {
             gap-3
           "
         >
+
           <Link
             href="/milk-analyzer-machines"
             className="
@@ -480,7 +468,9 @@ export default function GalleryPage() {
           >
             Contact Us
           </Link>
+
         </div>
+
       </section>
 
     </main>
