@@ -21,7 +21,7 @@ import {
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 import { generateLocationSEOContent } from "@/lib/location-seo-content";
 import { productImages } from "@/lib/product-images";
-
+export const dynamic = "force-dynamic";
 type LocationParams = {
   "location-name": string;
 };
