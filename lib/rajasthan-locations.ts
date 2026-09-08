@@ -1,273 +1,673 @@
+export type RajasthanLocation = {
+  slug: string;
+  city: string;
+  district: string;
+  priority: "primary" | "secondary";
+  updatedAt: string;
+  nearbySlugs: readonly string[];
+};
+
 export const rajasthanLocations = [
-  // =========================
-  // Sri Ganganagar District
-  // =========================
+  // ============================================================
+  // SRI GANGANAGAR DISTRICT
+  // ============================================================
 
   {
     slug: "sri-ganganagar",
     city: "Sri Ganganagar",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "raisinghnagar",
+      "sadulshahar",
+      "padampur",
+      "suratgarh",
+      "anupgarh",
+      "gharsana",
+    ],
   },
+
   {
     slug: "raisinghnagar",
     city: "Raisinghnagar",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "anupgarh",
+      "gharsana",
+      "rawla-mandi",
+    ],
   },
+
   {
     slug: "sadulshahar",
     city: "Sadulshahar",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "padampur",
+      "karanpur",
+      "kesrisinghpur",
+    ],
   },
+
   {
     slug: "padampur",
     city: "Padampur",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "sadulshahar",
+      "suratgarh",
+      "kesrisinghpur",
+    ],
   },
+
   {
     slug: "suratgarh",
     city: "Suratgarh",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "padampur",
+      "anupgarh",
+      "hanumangarh",
+    ],
   },
+
   {
     slug: "anupgarh",
     city: "Anupgarh",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "raisinghnagar",
+      "gharsana",
+      "suratgarh",
+    ],
   },
+
   {
     slug: "gharsana",
     city: "Gharsana",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "anupgarh",
+      "raisinghnagar",
+      "rawla-mandi",
+      "sri-ganganagar",
+    ],
   },
+
   {
     slug: "karanpur",
     city: "Karanpur",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "sadulshahar",
+      "kesrisinghpur",
+    ],
   },
+
   {
     slug: "kesrisinghpur",
     city: "Kesrisinghpur",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "karanpur",
+      "padampur",
+      "sadulshahar",
+    ],
   },
+
   {
     slug: "lalgarh-jatan",
     city: "Lalgarh Jatan",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "sadulshahar",
+      "padampur",
+    ],
   },
+
   {
     slug: "rawla-mandi",
     city: "Rawla Mandi",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "gharsana",
+      "raisinghnagar",
+      "anupgarh",
+    ],
   },
+
   {
     slug: "gajsinghpur",
     city: "Gajsinghpur",
-    updatedAt: "2026-07-25",
+    district: "Sri Ganganagar",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sri-ganganagar",
+      "karanpur",
+      "kesrisinghpur",
+    ],
   },
 
-  // =========================
-  // Hanumangarh District
-  // =========================
+  // ============================================================
+  // HANUMANGARH DISTRICT
+  // ============================================================
 
   {
     slug: "hanumangarh",
     city: "Hanumangarh",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "hanumangarh-junction",
+      "sangaria",
+      "pilibanga",
+      "rawatsar",
+      "tibbi",
+      "suratgarh",
+    ],
   },
+
   {
     slug: "hanumangarh-junction",
     city: "Hanumangarh Junction",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "hanumangarh",
+      "sangaria",
+      "pilibanga",
+    ],
   },
+
   {
     slug: "sangaria",
     city: "Sangaria",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "hanumangarh",
+      "hanumangarh-junction",
+      "pilibanga",
+    ],
   },
+
   {
     slug: "pallu",
     city: "Pallu",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "rawatsar",
+      "nohar",
+      "hanumangarh",
+    ],
   },
+
   {
     slug: "pilibanga",
     city: "Pilibanga",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "hanumangarh",
+      "hanumangarh-junction",
+      "sangaria",
+      "suratgarh",
+    ],
   },
+
   {
     slug: "rawatsar",
     city: "Rawatsar",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "hanumangarh",
+      "pallu",
+      "nohar",
+      "tibbi",
+    ],
   },
+
   {
     slug: "tibbi",
     city: "Tibbi",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "hanumangarh",
+      "pilibanga",
+      "rawatsar",
+    ],
   },
+
   {
     slug: "nohar",
     city: "Nohar",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "bhadra",
+      "rawatsar",
+      "pallu",
+    ],
   },
+
   {
     slug: "bhadra",
     city: "Bhadra",
-    updatedAt: "2026-07-25",
+    district: "Hanumangarh",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "nohar",
+      "pallu",
+    ],
   },
 
-  // =========================
-  // Bikaner District
-  // =========================
+  // ============================================================
+  // BIKANER DISTRICT
+  // ============================================================
 
   {
     slug: "bikaner",
     city: "Bikaner",
-    updatedAt: "2026-07-25",
+    district: "Bikaner",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "nokha",
+      "lunkaransar",
+      "kolayat",
+      "shri-dungargarh",
+    ],
   },
+
   {
     slug: "nokha",
     city: "Nokha",
-    updatedAt: "2026-07-25",
+    district: "Bikaner",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "bikaner",
+      "nagaur",
+      "shri-dungargarh",
+    ],
   },
+
   {
     slug: "kolayat",
     city: "Kolayat",
-    updatedAt: "2026-07-25",
+    district: "Bikaner",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "bikaner",
+      "lunkaransar",
+    ],
   },
+
   {
     slug: "lunkaransar",
     city: "Lunkaransar",
-    updatedAt: "2026-07-25",
+    district: "Bikaner",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "bikaner",
+      "kolayat",
+      "chhatargarh",
+    ],
   },
+
   {
     slug: "khajuwala",
     city: "Khajuwala",
-    updatedAt: "2026-07-25",
+    district: "Bikaner",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "bikaner",
+      "chhatargarh",
+    ],
   },
+
   {
     slug: "shri-dungargarh",
     city: "Shri Dungargarh",
-    updatedAt: "2026-07-25",
+    district: "Bikaner",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "bikaner",
+      "nokha",
+    ],
   },
+
   {
     slug: "chhatargarh",
     city: "Chhatargarh",
-    updatedAt: "2026-07-25",
+    district: "Bikaner",
+    priority: "secondary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "bikaner",
+      "khajuwala",
+      "lunkaransar",
+    ],
   },
 
-  // =========================
-  // Jaipur District
-  // =========================
+  // ============================================================
+  // MAJOR RAJASTHAN CITIES
+  // ============================================================
 
   {
     slug: "jaipur",
     city: "Jaipur",
-    updatedAt: "2026-07-25",
+    district: "Jaipur",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "ajmer",
+      "sikar",
+      "tonk",
+      "alwar",
+    ],
   },
-  // =========================
-  // Top 20 High-Priority Rajasthan Locations
-  // =========================
 
   {
     slug: "jodhpur",
     city: "Jodhpur",
-    updatedAt: "2026-08-17",
+    district: "Jodhpur",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "pali",
+      "nagaur",
+      "barmer",
+    ],
   },
+
   {
     slug: "udaipur",
     city: "Udaipur",
-    updatedAt: "2026-08-17",
+    district: "Udaipur",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sirohi",
+      "chittorgarh",
+      "banswara",
+    ],
   },
+
   {
     slug: "kota",
     city: "Kota",
-    updatedAt: "2026-08-17",
+    district: "Kota",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "bundi",
+      "baran",
+      "sawai-madhopur",
+    ],
   },
+
   {
     slug: "ajmer",
     city: "Ajmer",
-    updatedAt: "2026-08-17",
+    district: "Ajmer",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "jaipur",
+      "pali",
+      "sikar",
+    ],
   },
+
   {
     slug: "alwar",
     city: "Alwar",
-    updatedAt: "2026-08-17",
+    district: "Alwar",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "jaipur",
+      "sikar",
+      "bharatpur",
+      "jhunjhunu",
+    ],
   },
+
   {
     slug: "sikar",
     city: "Sikar",
-    updatedAt: "2026-08-17",
+    district: "Sikar",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "jaipur",
+      "jhunjhunu",
+      "alwar",
+    ],
   },
+
   {
     slug: "bharatpur",
     city: "Bharatpur",
-    updatedAt: "2026-08-17",
+    district: "Bharatpur",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "alwar",
+      "jaipur",
+    ],
   },
+
   {
     slug: "bhilwara",
     city: "Bhilwara",
-    updatedAt: "2026-08-17",
+    district: "Bhilwara",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "chittorgarh",
+      "ajmer",
+      "bundi",
+    ],
   },
+
   {
     slug: "pali",
     city: "Pali",
-    updatedAt: "2026-08-17",
+    district: "Pali",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "jodhpur",
+      "ajmer",
+      "sirohi",
+    ],
   },
+
   {
     slug: "barmer",
     city: "Barmer",
-    updatedAt: "2026-08-17",
+    district: "Barmer",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "jodhpur",
+      "jaisalmer",
+      "sirohi",
+    ],
   },
+
   {
     slug: "chittorgarh",
     city: "Chittorgarh",
-    updatedAt: "2026-08-17",
+    district: "Chittorgarh",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "udaipur",
+      "bhilwara",
+      "bundi",
+    ],
   },
+
   {
     slug: "tonk",
     city: "Tonk",
-    updatedAt: "2026-08-17",
+    district: "Tonk",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "jaipur",
+      "sawai-madhopur",
+      "kota",
+    ],
   },
+
   {
     slug: "sawai-madhopur",
     city: "Sawai Madhopur",
-    updatedAt: "2026-08-17",
+    district: "Sawai Madhopur",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "tonk",
+      "kota",
+      "bundi",
+    ],
   },
+
   {
     slug: "jhunjhunu",
     city: "Jhunjhunu",
-    updatedAt: "2026-08-17",
+    district: "Jhunjhunu",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "sikar",
+      "alwar",
+    ],
   },
+
   {
     slug: "nagaur",
     city: "Nagaur",
-    updatedAt: "2026-08-17",
+    district: "Nagaur",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "jodhpur",
+      "bikaner",
+      "nokha",
+      "pali",
+    ],
   },
+
   {
     slug: "bundi",
     city: "Bundi",
-    updatedAt: "2026-08-17",
+    district: "Bundi",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "kota",
+      "chittorgarh",
+      "sawai-madhopur",
+    ],
   },
+
   {
     slug: "sirohi",
     city: "Sirohi",
-    updatedAt: "2026-08-17",
+    district: "Sirohi",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "pali",
+      "udaipur",
+      "barmer",
+    ],
   },
+
   {
     slug: "jaisalmer",
     city: "Jaisalmer",
-    updatedAt: "2026-08-17",
+    district: "Jaisalmer",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "barmer",
+      "jodhpur",
+    ],
   },
+
   {
     slug: "baran",
     city: "Baran",
-    updatedAt: "2026-08-17",
+    district: "Baran",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "kota",
+      "bundi",
+    ],
   },
+
   {
     slug: "banswara",
     city: "Banswara",
-    updatedAt: "2026-08-17",
+    district: "Banswara",
+    priority: "primary",
+    updatedAt: "2026-09-08",
+    nearbySlugs: [
+      "udaipur",
+      "chittorgarh",
+    ],
   },
 ] as const;
-
-export type RajasthanLocation =
-  (typeof rajasthanLocations)[number];
