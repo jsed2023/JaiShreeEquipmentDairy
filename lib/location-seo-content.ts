@@ -1,5 +1,3 @@
-// lib/location-seo-content.ts
-
 import type { RajasthanLocation } from "@/lib/rajasthan-locations";
 
 export type LocationFAQ = {
