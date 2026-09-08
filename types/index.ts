@@ -174,7 +174,7 @@ export interface BlogType {
   content: string;
 }
 
-interface GalleryImage {
+export interface GalleryImage {
   src: string;
   name: string;
   altText: string;
