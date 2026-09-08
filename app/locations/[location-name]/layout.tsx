@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { siteConfig } from "@/config/site";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
+import { getLocationSEOContent } from "@/lib/location-seo-content";
 
 /* =========================
    TYPES
@@ -32,128 +33,113 @@ const LOCATION_IMAGE =
   "https://res.cloudinary.com/dddhtbuzs/image/upload/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png";
 
 /* =========================
-   FORCE DYNAMIC
-========================= */
-
-export const dynamic = "force-dynamic";
-
-/* =========================
    LOCATION VALIDATION
 ========================= */
 
 function getValidLocation(locationName: string) {
-  const normalizedParam = locationName
-    .toLowerCase()
-    .trim();
+  const normalizedParam = locationName.toLowerCase().trim();
 
   if (!normalizedParam.startsWith(PREFIX)) {
-    notFound();
+    return null;
   }
 
-  const locationSlug =
-    normalizedParam.slice(PREFIX.length);
+  const locationSlug = normalizedParam.slice(PREFIX.length);
 
   if (!locationSlug) {
-    notFound();
+    return null;
   }
 
-  const validLocation =
-    rajasthanLocations.find(
-      (location) =>
-        location.slug.toLowerCase() === locationSlug
-    );
+  const validLocation = rajasthanLocations.find(
+    (location) =>
+      location.slug.toLowerCase() === locationSlug,
+  );
 
-  if (!validLocation) {
-    notFound();
-  }
-
-  return validLocation;
+  return validLocation ?? null;
 }
 
 /* =========================
-   DYNAMIC METADATA
+   STATIC LOCATION PARAMS
+========================= */
+
+export function generateStaticParams() {
+  return rajasthanLocations.map((location) => ({
+    "location-name": `${PREFIX}${location.slug}`,
+  }));
+}
+
+/*
+ * Only locations defined in
+ * rajasthan-locations.ts are valid.
+ */
+export const dynamicParams = false;
+
+/* =========================
+   DYNAMIC SEO METADATA
 ========================= */
 
 export async function generateMetadata({
   params,
 }: MetadataProps): Promise<Metadata> {
-  const {
-    "location-name": locationName,
-  } = await params;
+  const { "location-name": locationName } = await params;
 
   if (!locationName) {
     notFound();
   }
 
-  const validLocation =
-    getValidLocation(locationName);
+  const validLocation = getValidLocation(locationName);
+
+  if (!validLocation) {
+    notFound();
+  }
 
   const cityName = validLocation.city;
+  const locationSlug = validLocation.slug;
+
+  /*
+   * Get location-specific SEO content
+   * from lib/location-seo-content.ts
+   */
+  const seo = getLocationSEOContent(locationSlug);
+
+  if (!seo) {
+    notFound();
+  }
 
   /* =========================
      CANONICAL URL
   ========================= */
 
   const url =
-    `${siteConfig.url}/${PREFIX}${validLocation.slug}`;
-
-  /* =========================
-     SEO TITLE
-  ========================= */
-
-  const title =
-    `Milk Analyzer Machine Supplier in ${cityName}`;
-
-  /* =========================
-     DESCRIPTION
-  ========================= */
-
-  const description =
-    `Jai Shree Equipment Dairy supplies milk analyzer machines, dairy equipment, milk cream separator machines and automatic milk collection systems in ${cityName}.`;
-
-  /* =========================
-     OPEN GRAPH
-  ========================= */
-
-  const ogDescription =
-    `Buy Milk Analyzer Machines, Milking Machines, Cream Separator Machines and Automatic Milk Collection Systems in ${cityName}.`;
-
-  /* =========================
-     TWITTER
-  ========================= */
-
-  const twitterDescription =
-    `Trusted supplier of Milk Analyzer Machines and Dairy Equipment in ${cityName}.`;
+    `${siteConfig.url}/${PREFIX}${locationSlug}`;
 
   /* =========================
      RETURN METADATA
   ========================= */
 
   return {
-    title,
+    /*
+     * SEO title
+     */
+    title: seo.title,
 
-    description,
+    /*
+     * Meta description
+     */
+    description: seo.description,
 
-    keywords: [
-      `Milk Analyzer Machine ${cityName}`,
-      `Milk Analyzer Supplier ${cityName}`,
-      `Milk Testing Machine ${cityName}`,
-      `Milk Testing Instrument ${cityName}`,
-      `Dairy Equipment ${cityName}`,
-      `Automatic Milk Collection System ${cityName}`,
-      `Milk Analyzer Dealer ${cityName}`,
-      `Milk Analyzer Price ${cityName}`,
-      `Milk Collection Machine ${cityName}`,
-      `Milk Testing Equipment ${cityName}`,
-      `Dairy Machine Supplier ${cityName}`,
-      `Ekomilk Machine ${cityName}`,
-      `Cream Separator Machine ${cityName}`,
-    ],
+    /*
+     * Avoid unnecessary meta keyword stuffing.
+     * Google does not use the meta keywords tag
+     * for ranking.
+     */
 
     alternates: {
       canonical: url,
     },
 
+    /*
+     * Robots
+     */
     robots: {
       index: true,
       follow: true,
@@ -167,10 +153,13 @@ export async function generateMetadata({
       },
     },
 
+    /*
+     * Open Graph
+     */
     openGraph: {
-      title,
+      title: seo.title,
 
-      description: ogDescription,
+      description: seo.description,
 
       url,
 
@@ -185,21 +174,38 @@ export async function generateMetadata({
           url: LOCATION_IMAGE,
           width: 1200,
           height: 630,
-          alt:
-            `Milk Analyzer Machine Supplier in ${cityName}`,
+          alt: seo.title,
         },
       ],
     },
 
+    /*
+     * Twitter / X
+     */
     twitter: {
       card: "summary_large_image",
 
-      title,
+      title: seo.title,
 
-      description: twitterDescription,
+      description: seo.description,
 
       images: [LOCATION_IMAGE],
     },
+
+    /*
+     * Additional metadata
+     */
+    authors: [
+      {
+        name: "Jai Shree Equipment Dairy",
+      },
+    ],
+
+    creator: "Jai Shree Equipment Dairy",
+
+    publisher: "Jai Shree Equipment Dairy",
+
+    category: "Dairy Equipment",
   };
 }
 
@@ -211,20 +217,17 @@ export default async function LocationLayout({
   children,
   params,
 }: LayoutProps) {
-  const {
-    "location-name": locationName,
-  } = await params;
+  const { "location-name": locationName } = await params;
 
   if (!locationName) {
     notFound();
   }
 
-  /*
-   * Validate the requested location.
-   * Invalid location URLs return 404.
-   */
+  const validLocation = getValidLocation(locationName);
 
-  getValidLocation(locationName);
+  if (!validLocation) {
+    notFound();
+  }
 
   return (
     <section
