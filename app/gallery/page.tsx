@@ -73,28 +73,28 @@ const images: GalleryImage[] = [
     name: "Advance Milk Analyzer",
     altText:
       "Advance Milk Analyzer for daily milk quality testing on dairy farms.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/milk-analyzer-machines/advance-milk-analyzer",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766092196/Milk_Analyzer_PCB_Motherboard_Front.png",
     name: "Milk Analyzer PCB Motherboard Front",
     altText:
       "Front view of a replacement PCB motherboard for milk analyzer repair.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/milk-testing-machine-spare-parts",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766091579/Milk_Analyzer_PCB_Motherboard_back.png",
     name: "Milk Analyzer PCB Motherboard Back",
     altText:
       "Back view of a replacement PCB motherboard for milk analyzer servicing.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/milk-testing-machine-spare-parts",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766090508/Milk_Analyzer_Plastic_Body_Cabinet.png",
     name: "Milk Analyzer Plastic Body Cabinet",
     altText:
       "Plastic body cabinet replacement part for Ekomilk and Advance milk analyzers.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/milk-testing-machine-spare-parts",
   },
 ];
 
@@ -440,7 +440,7 @@ export default function GalleryPage() {
           "
         >
           <Link
-            href="/products"
+            href="/milk-analyzer-machines"
             className="
               rounded-lg
               bg-purple-600
