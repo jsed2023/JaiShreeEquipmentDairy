@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import type { GalleryImage } from "@/TYPES";
 import { cld } from "@/utils/cloudinary";
 
 
