@@ -155,7 +155,7 @@ export default function GalleryPage() {
               md:text-xl
             "
           >
-            Dairy Equipment &amp; Milk Analyzer Gallery
+             Milk Analyzer Machines & Milk collection system Gallery
           </h1>
         </div>
 
@@ -182,12 +182,8 @@ export default function GalleryPage() {
           GALLERY SECTION
       ========================= */}
 
-      <section
-        aria-labelledby="dairy-equipment-gallery"
-      >
-
         <h2
-          id="dairy-equipment-gallery"
+          
           className="
             mb-4
             text-center
@@ -197,7 +193,7 @@ export default function GalleryPage() {
             dark:text-white
           "
         >
-          Dairy Equipment Products
+          Milk Analyzer Machines & Milk collection system Gallery Products
         </h2>
 
         {/* =========================
