@@ -17,56 +17,56 @@ const images: GalleryImage[] = [
     name: "Advance Milk Analyzer Plus",
     altText:
       "Advance Milk Analyzer Plus for milk fat and SNF testing in dairy farms.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/milk-testing-equipment/advance-milk-analyzer-plus",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",
     name: "DPU Milk Collection Unit",
     altText:
       "DPU Milk Collection Unit Dairy Khata for automated milk collection and digital records.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/automatic-milk-collection-system/dpu-for-milk-collection",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1751737335/advance_milk_analyzer_max.png",
     name: "Advance Milk Analyzer Max",
     altText:
       "Advance Milk Analyzer Max for fast milk measurement at collection centers.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/automatic-milk-collection-system/advance-milk-analyzer-max",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1765479086/Advance_Milk_Analyzer_Pro20.png",
-    name: "Advance Milk Analyzer Pro",
+    name: "Advance Milk Analyzer Pro20",
     altText:
-      "Advance Milk Analyzer Pro for commercial dairy milk testing and quality control.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+      "Advance Milk Analyzer Pro20 for commercial dairy milk testing and quality control.",
+    href: "/milk-testing-equipment/advance-milk-analyzer-pro20",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902688/Ultrasonic-Milk-Stirrer-Normal.jpg",
     name: "Ultrasonic Milk Stirrer Normal",
     altText:
       "Ultrasonic Milk Stirrer for preparing milk samples before testing.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/automatic-milk-collection-system/ultrasonic-milk-stirrer-normal",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902601/Ekomilk%20ULTRA%20PRO.jpg",
     name: "Ekomilk ULTRA PRO",
     altText:
       "Ekomilk ULTRA PRO milk analyzer for dairy milk quality testing.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/milk-testing-equipment/ekomilk-ultra-pro",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766061561/Ekomilk-Ultra-Analyzer.jpg",
     name: "Ekomilk Ultra Analyzer",
     altText:
       "Ekomilk Ultra Analyzer for testing milk parameters including density and added water.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/milk-analyzer-machines/ekomilk-ultra-analyzer",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",
     name: "KREI Ultrasonic Milk Stirrer",
     altText:
       "KREI Ultrasonic Milk Stirrer for preparing milk samples at collection centers.",
-    href: "/YOUR-ACTUAL-PRODUCT-URL",
+    href: "/automatic-milk-collection-system/ultrasonic-milk-stirrer",
   },
   {
     src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902682/Advance%20Milk%20Analyzer.jpg",
