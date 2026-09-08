@@ -181,7 +181,7 @@ export default function GalleryPage() {
       {/* =========================
           GALLERY SECTION
       ========================= */}
-
+<section
         <h2
           
           className="
