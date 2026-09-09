@@ -175,17 +175,8 @@ export default async function LocationLayout({
   }
 
   return (
-    <section
-      className="
-        min-h-screen
-        bg-linear-to-b
-        from-slate-50
-        to-white
-        dark:from-zinc-950
-        dark:to-zinc-900
-      "
-    >
+        <div className="overflow-x-hidden">
       {children}
-    </section>
+    </div>
   );
 }
