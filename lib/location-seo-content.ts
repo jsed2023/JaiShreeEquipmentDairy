@@ -1,10 +1,5 @@
 import type { RajasthanLocation } from "@/lib/rajasthan-locations";
 
-export type LocationFAQ = {
-  question: string;
-  answer: string;
-};
-
 export type LocationSEOContent = {
   title: string;
   description: string;
@@ -28,38 +23,6 @@ type LocationContentInput = {
 const COMMON_PRODUCTS =
   "Milk Analyzer Machines, Milk Fat Testing Machines, Milk Testing Equipment, Automatic Milk Collection Units, Data Processing Units (DPU), Milk Cream Separator Machines, Digital Weighing Scales, and related dairy equipment";
 
-function createFAQs(
-  city: string,
-  focus: string,
-): LocationFAQ[] {
-  return [
-    {
-      question: `Do you supply milk analyzer machines in ${city}?`,
-      answer:
-        `Yes. Jai Shree Equipment Dairy supplies milk analyzer machines and milk testing equipment for dairy farms, milk collection centers, milk procurement points and other dairy applications in ${city}, Rajasthan.`,
-    },
-    {
-      question: `Which milk testing equipment is available in ${city}?`,
-      answer:
-        `Customers in ${city} can enquire about milk analyzer machines, milk fat testing machines, milk testing instruments and related equipment depending on their testing requirements and application.`,
-    },
-    {
-      question: `Do you provide dairy equipment for ${focus.toLowerCase()}?`,
-      answer:
-        `Yes. We can help customers select suitable dairy equipment for ${focus.toLowerCase()}, including milk testing, collection and processing-related requirements.`,
-    },
-    {
-      question: `Do you provide installation and service support in ${city}?`,
-      answer:
-        `Jai Shree Equipment Dairy provides product guidance, installation assistance, troubleshooting, maintenance and after-sales support for suitable equipment supplied in ${city} and its service areas.`,
-    },
-    {
-      question: `Can I get spare parts and repair support for milk testing equipment?`,
-      answer:
-        `Yes. Compatible spare parts and selected repair or troubleshooting support are available for milk testing and dairy equipment, subject to the equipment model and service requirement.`,
-    },
-  ];
-}
 
 function createLocationContent({
   city,
