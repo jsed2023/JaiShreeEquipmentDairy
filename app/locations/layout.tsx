@@ -59,8 +59,8 @@ export default function LocationsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white min-h-screen">
+        <div className="overflow-x-hidden">
       {children}
-    </section>
+    </div>
   );
 }
