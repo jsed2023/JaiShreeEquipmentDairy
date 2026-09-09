@@ -14,7 +14,7 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
     const showTimer: ReturnType<typeof setTimeout> = setTimeout(() => {
       setMounted(true);
       setVisible(true);
-    }, 12); // prevents flicker
+    }, 60); // prevents flicker
 
     const hideTimer: ReturnType<typeof setTimeout> = setTimeout(() => {
       setVisible(false);
@@ -22,10 +22,10 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
       // wait for fade-out before unmount
       const unmountTimer = setTimeout(() => {
         setMounted(false);
-      }, 30);
+      }, 120);
 
       return () => clearTimeout(unmountTimer);
-    }, 60);
+    }, 240);
 
     return () => {
       clearTimeout(showTimer);
