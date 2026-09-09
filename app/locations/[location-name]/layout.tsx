@@ -6,9 +6,6 @@ import { siteConfig } from "@/config/site";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 import { getLocationSEOContent } from "@/lib/location-seo-content";
 
-/* =========================
-   TYPES
-========================= */
 
 type LocationParams = {
   "location-name": string;
@@ -23,18 +20,12 @@ type MetadataProps = {
   params: Promise<LocationParams>;
 };
 
-/* =========================
-   CONSTANTS
-========================= */
 
 const PREFIX = "milk-analyzer-";
 
 const LOCATION_IMAGE =
   "https://res.cloudinary.com/dddhtbuzs/image/upload/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png";
 
-/* =========================
-   LOCATION VALIDATION
-========================= */
 
 function getValidLocation(locationName: string) {
   const normalizedParam = locationName.toLowerCase().trim();
@@ -57,25 +48,14 @@ function getValidLocation(locationName: string) {
   return validLocation ?? null;
 }
 
-/* =========================
-   STATIC LOCATION PARAMS
-========================= */
 
 export function generateStaticParams() {
   return rajasthanLocations.map((location) => ({
     "location-name": `${PREFIX}${location.slug}`,
   }));
 }
-
-/*
- * Only locations defined in
- * rajasthan-locations.ts are valid.
- */
 export const dynamicParams = false;
 
-/* =========================
-   DYNAMIC SEO METADATA
-========================= */
 
 export async function generateMetadata({
   params,
@@ -95,51 +75,26 @@ export async function generateMetadata({
   const cityName = validLocation.city;
   const locationSlug = validLocation.slug;
 
-  /*
-   * Get location-specific SEO content
-   * from lib/location-seo-content.ts
-   */
   const seo = getLocationSEOContent(locationSlug);
 
   if (!seo) {
     notFound();
   }
 
-  /* =========================
-     CANONICAL URL
-  ========================= */
 
   const url =
     `${siteConfig.url}/${PREFIX}${locationSlug}`;
 
-  /* =========================
-     RETURN METADATA
-  ========================= */
 
   return {
-    /*
-     * SEO title
-     */
+    
     title: seo.title,
-
-    /*
-     * Meta description
-     */
     description: seo.description,
 
-    /*
-     * Avoid unnecessary meta keyword stuffing.
-     * Google does not use the meta keywords tag
-     * for ranking.
-     */
-
+    
     alternates: {
       canonical: url,
     },
-
-    /*
-     * Robots
-     */
     robots: {
       index: true,
       follow: true,
@@ -152,10 +107,6 @@ export async function generateMetadata({
         "max-video-preview": -1,
       },
     },
-
-    /*
-     * Open Graph
-     */
     openGraph: {
       title: seo.title,
 
@@ -179,9 +130,7 @@ export async function generateMetadata({
       ],
     },
 
-    /*
-     * Twitter / X
-     */
+    
     twitter: {
       card: "summary_large_image",
 
@@ -191,10 +140,6 @@ export async function generateMetadata({
 
       images: [LOCATION_IMAGE],
     },
-
-    /*
-     * Additional metadata
-     */
     authors: [
       {
         name: "Jai Shree Equipment Dairy",
