@@ -9,7 +9,6 @@ export type LocationSEOContent = {
   industry: string;
   support: string;
   serviceAreas: string[];
-  faqs: LocationFAQ[];
 };
 
 type LocationContentInput = {
