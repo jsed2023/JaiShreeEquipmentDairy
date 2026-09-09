@@ -53,22 +53,10 @@ function createLocationContent({
       `Jai Shree Equipment Dairy provides product guidance, installation assistance, testing support, maintenance, troubleshooting, compatible spare parts and selected repair services for suitable dairy equipment supplied in ${city}.`,
 
     serviceAreas,
-
-    faqs: createFAQs(city, focus),
   };
 }
 
-/*
-|--------------------------------------------------------------------------
-| Location-specific SEO content
-|--------------------------------------------------------------------------
-|
-| IMPORTANT:
-| Keep every slug from rajasthan-locations.ts here.
-| This record is intentionally typed against RajasthanLocation["slug"]
-| so TypeScript can catch missing locations.
-|
-*/
+
 
 const LOCATION_CONTENT: Record<
   RajasthanLocation["slug"],
