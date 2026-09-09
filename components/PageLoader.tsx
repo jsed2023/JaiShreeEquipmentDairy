@@ -14,7 +14,7 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
     const showTimer: ReturnType<typeof setTimeout> = setTimeout(() => {
       setMounted(true);
       setVisible(true);
-    }, 120); // prevents flicker
+    }, 12); // prevents flicker
 
     const hideTimer: ReturnType<typeof setTimeout> = setTimeout(() => {
       setVisible(false);
@@ -22,10 +22,10 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
       // wait for fade-out before unmount
       const unmountTimer = setTimeout(() => {
         setMounted(false);
-      }, 300);
+      }, 30);
 
       return () => clearTimeout(unmountTimer);
-    }, 600);
+    }, 60);
 
     return () => {
       clearTimeout(showTimer);
@@ -37,7 +37,7 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
     <>
       {mounted && (
         <div
-          className={`fixed inset-0 z-9999 transition-opacity duration-300 ${
+          className={`fixed inset-0 z-[9999] transition-opacity duration-300 ${
             visible ? "opacity-100" : "opacity-0"
           }`}
         >
