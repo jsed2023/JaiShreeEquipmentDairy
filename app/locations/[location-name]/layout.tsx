@@ -150,7 +150,7 @@ export async function generateMetadata({
 
     publisher: "Jai Shree Equipment Dairy",
 
-    category: "Dairy Equipment",
+    category: "Dairy Milk Testing Machines",
   };
 }
 
