@@ -183,50 +183,90 @@ export const spareParts= [
     Condition: "New"
   }
 },
-  {
+ {
   id: 4,
   slug: "thermal-printer",
-  name: "Thermal Printer",
+  name: "RP203 58mm Panel Thermal Printer",
   keywords: [
     "thermal printer",
+    "RP203 thermal printer",
+    "58mm thermal printer",
     "milk analyzer printer",
     "milk collection printer",
     "receipt printer",
-    "58mm thermal printer",
-    "amcu thermal printer",
+    "AMCU thermal printer",
     "milk testing machine printer",
     "milk analyzer accessories",
     "dairy thermal printer",
     "serial thermal printer",
+    "TTL thermal printer",
+    "RS232 thermal printer",
     "thermal receipt printer",
     "milk collection center printer",
     "automatic milk collection printer",
-    "buy thermal printer",
-    "dairy equipment printer"
+    "dairy equipment printer",
+    "embedded thermal printer",
+    "Arduino thermal printer",
+    "Raspberry Pi thermal printer",
+    "ESP8266 thermal printer"
   ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Thermal_Printer.webp",
-  sku: "TP-004",
+
+  photo:
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Thermal_Printer.webp",
+
+  sku: "TIFAC0083",
   price: "₹3,800",
   category: "Printer",
   stockStatus: "In Stock",
   warranty: "6 Months",
 
-  metaTitle: "Thermal Printer for Milk Analyzer & Milk Collection System",
+  metaTitle:
+    "RP203 58mm Thermal Printer for Milk Analyzer & Milk Collection System",
 
   metaDescription:
-    "Buy high-quality Thermal Printer for milk analyzers and automatic milk collection systems. 58mm receipt printer with fast printing and reliable performance.",
+    "Buy RP203 58mm panel thermal printer for milk analyzers, automatic milk collection systems, AMCU machines and embedded projects. Supports TTL/RS232 interface, fast direct thermal printing and 58mm paper.",
 
-  alt: "Thermal Printer for Milk Analyzer Machine",
+  alt:
+    "RP203 58mm Panel Thermal Printer for Milk Analyzer and Milk Collection System",
 
   description:
-    "This Thermal Printer is specially designed for milk analyzer machines and automatic milk collection systems. It delivers fast, clear, and reliable receipt printing for dairy farms, milk collection centres, cooperative societies, and dairy plants. The printer supports 58 mm thermal paper and provides high-speed printing with low maintenance requirements. Built for continuous operation, it is an ideal choice for printing milk collection receipts, customer records, and transaction details with excellent print quality and dependable performance.",
+    "The RP203 58mm Panel Thermal Printer is a compact and reliable direct thermal printer designed for milk analyzer machines, automatic milk collection systems, AMCU machines, embedded systems and receipt printing applications. It supports TTL and RS232 connectivity, making it suitable for microcontrollers and platforms such as Arduino, ESP8266, NodeMCU and Raspberry Pi. The printer uses 58mm thermal paper and provides fast, low-noise printing without requiring ink or toner. With automatic paper detection and memory printing support, it is suitable for printing milk collection receipts, transaction records, bills, labels and other compact receipts.",
+
+  keyFeatures: [
+    "58mm thermal paper support",
+    "Direct thermal printing technology",
+    "Automatic paper detection",
+    "Automatic memory printing",
+    "TTL and RS232 interface support",
+    "ESC/POS-style printer command support",
+    "Compatible with Arduino, Raspberry Pi, ESP8266 and NodeMCU",
+    "Low-noise printing",
+    "Maximum printing speed up to 85 mm/s",
+    "Compact panel-mount design",
+    "No ink or toner required",
+    "Suitable for milk analyzers and automatic milk collection systems"
+  ],
 
   specifications: {
-    Method: "Direct Thermal",
+    Model: "RP203 Thermal Printer Panel",
+    PrintingMethod: "Direct Thermal",
+    MaxSpeed: "85 mm/s",
+    DotDistance: "0.125 mm",
     PaperWidth: "58 mm",
-    Resolution: "203 DPI",
-    Interface: "Serial"
-  }
+    PaperRollDiameter: "30 mm",
+    Interface: "TTL / RS232",
+    CommandSystem: "ESC Printer Command / WH Printing Command",
+    WorkingVoltage: "DC 3.5V - 9V",
+    NominalCurrent: "1.5 A",
+    PeakCurrent: "3 A",
+    RecommendedPowerSupply: "5V 3A SMPS",
+    Dimensions: "76.8 × 77.4 × 43.5 mm",
+    Weight: "50 g"
+  },
+
+  packageIncludes: [
+    "1 × RP203 58mm Panel Thermal Printer"
+  ]
 },
 {
   id: 5,
