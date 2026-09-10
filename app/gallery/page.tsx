@@ -189,7 +189,7 @@ export default function GalleryPage() {
               text-center
               text-lg
               font-bold
-              text-transparent
+              text-black
               md:text-xl
             "
           >
