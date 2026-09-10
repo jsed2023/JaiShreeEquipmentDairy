@@ -57,10 +57,5 @@
     "development": [
       "last 1 Chrome version"
     ]
-  },
-  "lavamoat": {
-    "allowScripts": {
-      "unrs-resolver": true
-    }
   }
 }
