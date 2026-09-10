@@ -229,22 +229,8 @@ export const spareParts= [
     "RP203 58mm Panel Thermal Printer for Milk Analyzer and Milk Collection System",
 
   description:
-    "The RP203 58mm Panel Thermal Printer is a compact and reliable direct thermal printer designed for milk analyzer machines, automatic milk collection systems, AMCU machines, embedded systems and receipt printing applications. It supports TTL and RS232 connectivity, making it suitable for microcontrollers and platforms such as Arduino, ESP8266, NodeMCU and Raspberry Pi. The printer uses 58mm thermal paper and provides fast, low-noise printing without requiring ink or toner. With automatic paper detection and memory printing support, it is suitable for printing milk collection receipts, transaction records, bills, labels and other compact receipts.",
+    "The RP203 58mm Panel Thermal Printer is a compact and reliable direct thermal printer designed for milk analyzer machines, automatic milk collection systems, AMCU machines, embedded systems and receipt printing applications. It supports TTL and RS232 connectivity, making it suitable for microcontrollers and platforms. The printer uses 58mm thermal paper and provides fast, low-noise printing without requiring ink or toner. With automatic paper detection and memory printing support, it is suitable for printing milk collection receipts, transaction records, bills, labels and other compact receipts.",
 
-  keyFeatures: [
-    "58mm thermal paper support",
-    "Direct thermal printing technology",
-    "Automatic paper detection",
-    "Automatic memory printing",
-    "TTL and RS232 interface support",
-    "ESC/POS-style printer command support",
-    "Compatible with Arduino, Raspberry Pi, ESP8266 and NodeMCU",
-    "Low-noise printing",
-    "Maximum printing speed up to 85 mm/s",
-    "Compact panel-mount design",
-    "No ink or toner required",
-    "Suitable for milk analyzers and automatic milk collection systems"
-  ],
 
   specifications: {
     Model: "RP203 Thermal Printer Panel",
@@ -262,10 +248,6 @@ export const spareParts= [
     Dimensions: "76.8 × 77.4 × 43.5 mm",
     Weight: "50 g"
   },
-
-  packageIncludes: [
-    "1 × RP203 58mm Panel Thermal Printer"
-  ]
 },
 {
   id: 5,
