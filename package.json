@@ -6,9 +6,7 @@
     "dev": "next dev Turbopack",
     "build": "next build",
     "start": "next start",
-     "lint": "eslint .",
-     "postinstall": "node postinstall.js"
-   
+     "lint": "eslint ."
   },
   "dependencies": {
     "@heroui/react": "^3.2.4",
@@ -60,4 +58,6 @@
       "last 1 Chrome version"
     ]
   }
+
 }
+
