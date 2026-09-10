@@ -6,7 +6,7 @@
     "dev": "next dev Turbopack",
     "build": "next build",
     "start": "next start",
-     "lint": "eslint ."
+    "lint": "eslint ."
   },
   "dependencies": {
     "@heroui/react": "^3.2.4",
@@ -57,7 +57,10 @@
     "development": [
       "last 1 Chrome version"
     ]
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "unrs-resolver@1.12.2": true
+    }
   }
-
 }
-
