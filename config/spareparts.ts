@@ -1,4 +1,3 @@
-
 export const spareParts= [
   {
   id: 14,
