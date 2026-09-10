@@ -1,669 +1,772 @@
-export const spareParts= [
+export const spareParts = [
   {
-  id: 14,
-  slug: "ekomilk-ultra-milk-analyzer",
-  name: "Ekomilk Ultra Milk Analyzer",
-  keywords: [
-    "ekomilk ultra",
-    "ekomilk ultra milk analyzer",
-    "milk analyzer",
-    "milk testing machine",
-    "automatic milk analyzer",
-    "ultrasonic milk analyzer",
-    "dairy milk analyzer",
-    "milk fat analyzer",
-    "snf analyzer",
-    "milk analyzer machine",
-    "ekomilk machine",
-    "buy ekomilk ultra",
-    "milk testing equipment",
-    "digital milk analyzer",
-    "dairy equipment"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Ekomilk_Ultra_Milk_Analyzer.webp",
-  sku: "EKO-ULTRA-014",
-  price: "Contact for Price",
-  category: "Milk Analyzer",
-  stockStatus: "In Stock",
-  warranty: "1 Year",
+    id: 1,
+    slug: "ekomilk-motor-assembly",
+    name: "Ekomilk Motor Assembly Complete",
+    sku: "EKO-PMA-001",
+    price: "₹5,500",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
 
-  metaTitle: "Ekomilk Ultra Milk Analyzer | Automatic Milk Testing Machine",
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848853/Ekomilk_Motor_Assembly_Complete.webp",
 
-  metaDescription:
-    "Buy Ekomilk Ultra Milk Analyzer for fast and accurate milk testing. Measures Fat, SNF, Density, Protein, Added Water and more with reliable ultrasonic technology.",
+    keywords: [
+      "ekomilk motor",
+      "motor assembly",
+      "milk analyzer motor",
+      "peristaltic pump motor",
+      "ekomilk spare parts",
+      "milk analyzer spare parts"
+    ],
 
-  alt: "Ekomilk Ultra Milk Analyzer",
+    metaTitle:
+      "Ekomilk Motor Assembly Complete | Milk Analyzer Spare Part",
 
-  description:
-    "The Ekomilk Ultra Milk Analyzer is a high-performance ultrasonic milk testing machine designed for rapid and accurate milk analysis. It measures Fat, SNF, Density, Protein, Lactose, Added Water, Salts, Freezing Point, and Temperature within seconds. Ideal for dairy farms, milk collection centres, cooperative societies, dairy laboratories, and dairy processing plants, the Ekomilk Ultra delivers reliable performance, user-friendly operation, and low maintenance for daily milk quality testing.",
+    metaDescription:
+      "Buy Ekomilk Motor Assembly for milk analyzer machines. Reliable replacement motor for smooth sample suction and accurate milk testing.",
 
-  specifications: {
-    ProductType: "Milk Analyzer",
-    Model: "Ekomilk Ultra",
-    Technology: "Ultrasonic",
-    Parameters: "Fat, SNF, Density, Protein, Lactose, Added Water, Salts, Freezing Point, Temperature",
-    TestingTime: "Approx. 30 Seconds",
-    Display: "LCD Display",
-    Interface: "USB / RS232",
-    PowerSupply: "12V DC",
-    Condition: "New",
-    Warranty: "1 Year"
-  }
-},
-{
-  id: 1,
-  slug: "ekomilk-motor-assembly",
-  name: "Ekomilk Motor Assembly Complete",
-  keywords: [
-    "ekomilk motor assembly",
-    "ekomilk motor",
-    "milk analyzer motor",
-    "milk analyzer motor assembly",
-    "peristaltic pump motor",
-    "ekomilk spare parts",
-    "milk analyzer spare parts",
-    "milk testing machine motor",
-    "ekomilk replacement motor",
-    "ekomilk ultra motor",
-    "buy ekomilk motor",
-    "dairy milk analyzer motor"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848853/Ekomilk_Motor_Assembly_Complete.webp",
-  sku: "EKO-PMA-001",
-  price: "₹5,500",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "6 Months",
-  metaTitle: "Ekomilk Motor Assembly Complete | Milk Analyzer Spare Parts",
-  metaDescription: "Buy genuine Ekomilk Motor Assembly for Milk Analyzer. High-quality replacement motor with fast delivery across India.",
-  alt: "Ekomilk Motor Assembly Complete",
-  description: "Original Ekomilk Motor Assembly designed for reliable sample suction and accurate milk testing. Compatible with Ekomilk Milk Analyzer machines, this genuine spare part ensures smooth motor performance, long service life, and precise operation. Suitable for dairy plants, milk collection centers, and service engineers looking for dependable replacement parts.",
-  specifications: {
-    ProductType: "Motor Assembly",
-    Compatibility: "Ekomilk Milk Analyzer",
-    Voltage: "12V DC",
-    MotorType: "DC Geared Motor",
-    Weight: "500 g",
-    Condition: "New"
-  }
-},
-{
-  id: 2,
-  slug: "ekomilk-analyzer-sensor",
-  name: "Ekomilk Analyzer Sensor",
-  keywords: [
-    "ekomilk analyzer sensor",
-    "ekomilk sensor",
-    "milk analyzer sensor",
-    "milk testing machine sensor",
-    "ultrasonic milk analyzer sensor",
-    "ekomilk spare parts",
-    "milk analyzer spare parts",
-    "replacement milk analyzer sensor",
-    "ekomilk ultra sensor",
-    "buy ekomilk sensor",
-    "dairy milk analyzer sensor",
-    "milk analyzer ultrasonic sensor",
-    "milk testing equipment sensor",
-    "ekomilk replacement parts",
-    "milk analyzer repair parts"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Ekomilk_Analyzer_Sensor.webp",
-  sku: "EKO-SEN-002",
-  price: "₹3,300",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "6 Months",
+    alt: "Ekomilk Motor Assembly Complete",
 
-  metaTitle: "Ekomilk Analyzer Sensor | Genuine Milk Analyzer Spare Parts",
+    description:
+      "Original Ekomilk Motor Assembly designed for reliable sample suction and smooth milk analyzer operation. Suitable for Ekomilk milk analyzer machines and dairy testing applications.",
 
-  metaDescription:
-    "Buy genuine Ekomilk Analyzer Sensor for accurate milk testing. High-quality ultrasonic sensor compatible with Ekomilk Ultra and Pro milk analyzers. Fast delivery across India.",
+    keyFeatures: [
+      "Complete motor assembly",
+      "Compatible with Ekomilk milk analyzers",
+      "12V DC geared motor",
+      "Smooth sample suction",
+      "Reliable continuous operation",
+      "Low maintenance design",
+      "Durable construction",
+      "Easy replacement"
+    ],
 
-  alt: "Ekomilk Analyzer Sensor for Milk Analyzer Machine",
-
-  description:
-    "Ekomilk Analyzer Sensor is a genuine replacement spare part designed for Ekomilk milk analyzer machines. It delivers highly accurate milk analysis by ensuring precise ultrasonic measurement of milk parameters. Manufactured using premium-quality components, this sensor offers reliable performance, long service life, and stable operation in dairy laboratories, milk collection centres, and dairy plants. Compatible with Ekomilk Ultra and Pro models, it is an ideal solution for replacing damaged or worn-out sensors and maintaining accurate milk testing results.",
-
-  specifications: {
-    ProductType: "Milk Analyzer Sensor",
-    Compatibility: "Ekomilk Ultra / Pro",
-    Technology: "Ultrasonic",
-    Accuracy: "High Precision",
-    Weight: "250 g",
-    Condition: "New"
-  }
-},
-
-  {
-  id: 3,
-  slug: "ekomilk-ultra-v17-pcb-board",
-  name: "Ekomilk Ultra V17 PCB Control Board",
-  keywords: [
-    "ekomilk pcb board",
-    "ekomilk ultra v17 pcb",
-    "milk analyzer pcb board",
-    "milk analyzer control board",
-    "ekomilk motherboard",
-    "ekomilk spare parts",
-    "milk analyzer spare parts",
-    "replacement pcb board",
-    "milk testing machine pcb",
-    "ekomilk ultra pcb",
-    "dairy analyzer pcb",
-    "milk analyzer main board",
-    "ekomilk control board",
-    "buy ekomilk pcb board",
-    "milk analyzer repair parts"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848855/Ekomilk_Ultra_V17_PCB_Control_Board.webp",
-  sku: "EKO-PCB-V17-003",
-  price: "₹12,000",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "1 Year",
-
-  metaTitle: "Ekomilk Ultra V17 PCB Control Board | Genuine Milk Analyzer PCB",
-
-  metaDescription:
-    "Buy genuine Ekomilk Ultra V17 PCB Control Board for milk analyzer machines. Original replacement PCB with reliable performance and fast delivery across India.",
-
-  alt: "Ekomilk Ultra V17 PCB Control Board for Milk Analyzer",
-
-  description:
-    "The Ekomilk Ultra V17 PCB Control Board is a genuine replacement motherboard designed for Ekomilk Ultra milk analyzer machines. It manages sensor communication, data processing, display functions, and overall analyzer performance with high reliability. Manufactured using premium electronic components, this PCB provides stable operation, accurate milk testing, and long service life. It is ideal for replacing damaged or faulty control boards in dairy laboratories, milk collection centres, and dairy plants. Easy to install and fully compatible with Ekomilk Ultra V17 models.",
-
-  specifications: {
-    ProductType: "PCB Control Board",
-    Model: "Ultra V17",
-    Compatibility: "Ekomilk Ultra",
-    Voltage: "12V DC",
-    Interface: "USB / RS232",
-    Condition: "New"
-  }
-},
- {
-  id: 4,
-  slug: "thermal-printer",
-  name: "RP203 58mm Panel Thermal Printer",
-  keywords: [
-    "thermal printer",
-    "RP203 thermal printer",
-    "58mm thermal printer",
-    "milk analyzer printer",
-    "milk collection printer",
-    "receipt printer",
-    "AMCU thermal printer",
-    "milk testing machine printer",
-    "milk analyzer accessories",
-    "dairy thermal printer",
-    "serial thermal printer",
-    "TTL thermal printer",
-    "RS232 thermal printer",
-    "thermal receipt printer",
-    "milk collection center printer",
-    "automatic milk collection printer",
-    "dairy equipment printer",
-    "embedded thermal printer",
-    "Arduino thermal printer",
-    "Raspberry Pi thermal printer",
-    "ESP8266 thermal printer"
-  ],
-
-  photo:
-    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Thermal_Printer.webp",
-
-  sku: "TIFAC0083",
-  price: "₹3,800",
-  category: "Printer",
-  stockStatus: "In Stock",
-  warranty: "6 Months",
-
-  metaTitle:
-    "RP203 58mm Thermal Printer for Milk Analyzer & Milk Collection System",
-
-  metaDescription:
-    "Buy RP203 58mm panel thermal printer for milk analyzers, automatic milk collection systems, AMCU machines and embedded projects. Supports TTL/RS232 interface, fast direct thermal printing and 58mm paper.",
-
-  alt:
-    "RP203 58mm Panel Thermal Printer for Milk Analyzer and Milk Collection System",
-
-  description:
-    "The RP203 58mm Panel Thermal Printer is a compact and reliable direct thermal printer designed for milk analyzer machines, automatic milk collection systems, AMCU machines, embedded systems and receipt printing applications. It supports TTL and RS232 connectivity, making it suitable for microcontrollers and platforms. The printer uses 58mm thermal paper and provides fast, low-noise printing without requiring ink or toner. With automatic paper detection and memory printing support, it is suitable for printing milk collection receipts, transaction records, bills, labels and other compact receipts.",
-
-
-  specifications: {
-    Model: "RP203 Thermal Printer Panel",
-    PrintingMethod: "Direct Thermal",
-    MaxSpeed: "85 mm/s",
-    DotDistance: "0.125 mm",
-    PaperWidth: "58 mm",
-    PaperRollDiameter: "30 mm",
-    Interface: "TTL / RS232",
-    CommandSystem: "ESC Printer Command / WH Printing Command",
-    WorkingVoltage: "DC 3.5V - 9V",
-    NominalCurrent: "1.5 A",
-    PeakCurrent: "3 A",
-    RecommendedPowerSupply: "5V 3A SMPS",
-    Dimensions: "76.8 × 77.4 × 43.5 mm",
-    Weight: "50 g"
+    specifications: {
+      ProductType: "Motor Assembly",
+      Compatibility: "Ekomilk Milk Analyzer",
+      Voltage: "12V DC",
+      MotorType: "DC Geared Motor",
+      Weight: "500 g",
+      Condition: "New"
+    }
   },
-},
-{
-  id: 5,
-  slug: "milk-analyzer-consumables-kit",
-  name: "Syringes, Beakers & Plungers",
-  keywords: [
-    "milk analyzer consumables",
-    "milk analyzer syringes",
-    "milk analyzer beakers",
-    "milk analyzer plungers",
-    "milk analyzer accessories",
-    "milk testing consumables",
-    "ekomilk syringe",
-    "lactoscan beaker",
-    "milk analyzer spare parts",
-    "milk analyzer sample beaker",
-    "laboratory plastic syringe",
-    "milk sample testing accessories",
-    "milk analyzer replacement parts",
-    "buy milk analyzer consumables",
-    "dairy equipment accessories"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848850/Ekomilk_Syringes_Beakers_Plungers.webp",
-  sku: "MAC-005",
-  price: "₹140 / Piece",
-  category: "Milk Analyzer Consumables",
-  stockStatus: "In Stock",
-  warranty: "No Warranty",
 
-  metaTitle: "Milk Analyzer Syringes, Beakers & Plungers | Dairy Consumables",
+  {
+    id: 2,
+    slug: "ekomilk-analyzer-sensor",
+    name: "Ekomilk Analyzer Sensor",
+    sku: "EKO-SEN-002",
+    price: "₹3,300",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
 
-  metaDescription:
-    "Buy premium milk analyzer syringes, beakers and plungers compatible with Ekomilk, Lactoscan and other milk analyzer machines. Fast delivery across India.",
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Ekomilk_Analyzer_Sensor.webp",
 
-  alt: "Milk Analyzer Syringes Beakers and Plungers",
+    keywords: [
+      "ekomilk sensor",
+      "milk analyzer sensor",
+      "ultrasonic sensor",
+      "ekomilk ultra sensor",
+      "ekomilk pro sensor",
+      "milk analyzer spare parts"
+    ],
 
-  description:
-    "Premium-quality syringes, beakers, and plungers designed for milk analyzer machines to ensure accurate milk sample collection and testing. These laboratory-grade consumables are compatible with Ekomilk, Lactoscan, and other leading milk analyzer brands. Manufactured from durable, high-quality plastic, they provide reliable performance, easy handling, and long-lasting use in dairy laboratories, milk collection centres, and dairy plants. Ideal for routine milk analysis, these consumables help maintain testing accuracy and hygienic sample handling. Minimum order quantity: 50 pieces.",
+    metaTitle:
+      "Ekomilk Analyzer Sensor | Genuine Milk Analyzer Spare Part",
 
-  specifications: {
-    ProductType: "Milk Analyzer Consumables",
-    ItemsIncluded: "Syringes, Beakers, Plungers",
-    Compatibility: "Ekomilk, Lactoscan & Other Milk Analyzers",
-    Material: "Laboratory Grade Plastic",
-    MinimumOrderQuantity: "50 Pieces",
-    UnitPrice: "₹140 Per Piece",
-    Condition: "New"
-  } },
-{
-  id: 6,
-  slug: "ekomilk-daily-cleaning-solution-200ml",
-  name: "Ekomilk Daily Cleaning Solution (200 ml)",
-  keywords: [
-    "ekomilk daily cleaning solution",
-    "ekomilk cleaning solution",
-    "milk analyzer cleaning solution",
-    "milk analyzer cleaner",
-    "daily cleaning solution",
-    "milk testing machine cleaner",
-    "milk analyzer maintenance",
-    "milk analyzer cleaning liquid",
-    "ekomilk maintenance solution",
-    "milk analyzer cleaning chemical",
-    "buy ekomilk cleaning solution",
-    "dairy equipment cleaning solution",
-    "milk analyzer spare parts",
-    "milk analyzer accessories",
-    "milk analyzer service kit"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848852/Ekomilk_Daily_Cleaning_Solution_200_ml.webp",
-  sku: "EKO-DCS-200",
-  price: "₹300",
-  category: "Cleaning Solution",
-  stockStatus: "In Stock",
-  warranty: "No Warranty",
+    metaDescription:
+      "Buy Ekomilk Analyzer Sensor for accurate milk testing. Compatible with Ekomilk Ultra and Pro milk analyzers.",
 
-  metaTitle: "Ekomilk Daily Cleaning Solution 200 ml | Milk Analyzer Cleaner",
+    alt: "Ekomilk Analyzer Sensor",
 
-  metaDescription:
-    "Buy Ekomilk Daily Cleaning Solution 200 ml for effective milk analyzer maintenance. Removes milk residue and helps maintain accurate milk testing performance.",
+    description:
+      "Genuine replacement sensor designed for Ekomilk milk analyzer machines. Provides reliable ultrasonic measurement and stable analyzer performance.",
 
-  alt: "Ekomilk Daily Cleaning Solution 200 ml",
+    keyFeatures: [
+      "Ultrasonic sensing technology",
+      "Compatible with Ekomilk Ultra / Pro",
+      "High-precision measurement",
+      "Reliable milk analysis",
+      "Stable sensor performance",
+      "Durable construction",
+      "Suitable for dairy laboratories",
+      "Easy replacement"
+    ],
 
-  description:
-    "Ekomilk Daily Cleaning Solution (200 ml) is specially formulated to remove milk residue, fat deposits, and protein buildup from milk analyzer machines. Regular daily cleaning helps maintain accurate milk testing results, extends the life of internal components, and reduces maintenance costs. Suitable for Ekomilk and other compatible milk analyzer models, this cleaning solution is ideal for dairy laboratories, milk collection centres, cooperative societies, and dairy plants. Easy to use and highly effective, it supports reliable analyzer performance and consistent testing accuracy.",
+    specifications: {
+      ProductType: "Milk Analyzer Sensor",
+      Compatibility: "Ekomilk Ultra / Pro",
+      Technology: "Ultrasonic",
+      Accuracy: "High Precision",
+      Weight: "250 g",
+      Condition: "New"
+    }
+  },
 
-  specifications: {
-    Quantity: "200 ml",
-    Usage: "Daily Cleaning",
-    Form: "Liquid",
-    ShelfLife: "12 Months"
+  {
+    id: 3,
+    slug: "ekomilk-ultra-v17-pcb-board",
+    name: "Ekomilk Ultra V17 PCB Control Board",
+    sku: "EKO-PCB-V17-003",
+    price: "₹12,000",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "1 Year",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848855/Ekomilk_Ultra_V17_PCB_Control_Board.webp",
+
+    keywords: [
+      "ekomilk pcb",
+      "ekomilk ultra v17 pcb",
+      "milk analyzer pcb",
+      "control board",
+      "ekomilk motherboard",
+      "ekomilk spare parts"
+    ],
+
+    metaTitle:
+      "Ekomilk Ultra V17 PCB Control Board | Milk Analyzer PCB",
+
+    metaDescription:
+      "Buy Ekomilk Ultra V17 PCB Control Board for milk analyzer machines. Reliable replacement control board.",
+
+    alt: "Ekomilk Ultra V17 PCB Control Board",
+
+    description:
+      "Replacement PCB control board for Ekomilk Ultra V17 milk analyzer machines. Designed for reliable sensor communication, data processing and analyzer control.",
+
+    keyFeatures: [
+      "Genuine replacement control board",
+      "Compatible with Ekomilk Ultra V17",
+      "Reliable sensor communication",
+      "Stable data processing",
+      "Supports analyzer control functions",
+      "USB / RS232 interface",
+      "High-quality electronic components",
+      "Ready for replacement"
+    ],
+
+    specifications: {
+      ProductType: "PCB Control Board",
+      Model: "Ultra V17",
+      Compatibility: "Ekomilk Ultra",
+      Voltage: "12V DC",
+      Interface: "USB / RS232",
+      Condition: "New"
+    }
+  },
+
+  {
+    id: 4,
+    slug: "thermal-printer",
+    name: "RP203 58mm Panel Thermal Printer",
+    sku: "TIFAC0083",
+    price: "₹3,800",
+    category: "Printer",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Thermal_Printer.webp",
+
+    keywords: [
+      "RP203 thermal printer",
+      "58mm thermal printer",
+      "milk analyzer printer",
+      "milk collection printer",
+      "AMCU printer",
+      "TTL thermal printer",
+      "RS232 thermal printer",
+      "receipt printer"
+    ],
+
+    metaTitle:
+      "RP203 58mm Thermal Printer | Milk Analyzer & AMCU Printer",
+
+    metaDescription:
+      "RP203 58mm panel thermal printer with TTL/RS232 interface, direct thermal printing and up to 85 mm/s speed.",
+
+    alt: "RP203 58mm Panel Thermal Printer",
+
+    description:
+      "RP203 58mm Panel Thermal Printer designed for milk analyzers, automatic milk collection systems, AMCU machines and embedded applications. Supports TTL and RS232 communication with fast, low-noise direct thermal printing.",
+
+    keyFeatures: [
+      "58mm thermal paper support",
+      "Direct thermal printing",
+      "Automatic paper detection",
+      "Automatic memory printing",
+      "TTL / RS232 interface",
+      "Low-noise printing",
+      "Printing speed up to 85 mm/s",
+      "No ink or toner required",
+      "Compact panel design",
+      "Suitable for milk analyzer and AMCU systems"
+    ],
+
+    specifications: {
+      Model: "RP203 Thermal Printer Panel",
+      PrintingMethod: "Direct Thermal",
+      MaxSpeed: "85 mm/s",
+      DotDistance: "0.125 mm",
+      PaperWidth: "58 mm",
+      PaperRollDiameter: "30 mm",
+      Interface: "TTL / RS232",
+      CommandSystem: "ESC Printer Command / WH Printing Command",
+      WorkingVoltage: "DC 3.5V - 9V",
+      NominalCurrent: "1.5 A",
+      PeakCurrent: "3 A",
+      RecommendedPowerSupply: "5V 3A SMPS",
+      Dimensions: "76.8 × 77.4 × 43.5 mm",
+      Weight: "50 g"
+    },
+
+    packageIncludes: [
+      "1 × RP203 58mm Panel Thermal Printer"
+    ]
+  },
+
+  {
+    id: 5,
+    slug: "milk-analyzer-consumables-kit",
+    name: "Syringes, Beakers & Plungers",
+    sku: "MAC-005",
+    price: "₹140 / Piece",
+    category: "Milk Analyzer Consumables",
+    stockStatus: "In Stock",
+    warranty: "No Warranty",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848850/Ekomilk_Syringes_Beakers_Plungers.webp",
+
+    keywords: [
+      "milk analyzer consumables",
+      "milk analyzer syringe",
+      "milk analyzer beaker",
+      "milk analyzer plunger",
+      "ekomilk consumables",
+      "lactoscan consumables"
+    ],
+
+    metaTitle:
+      "Milk Analyzer Syringes, Beakers & Plungers | Consumables",
+
+    metaDescription:
+      "Milk analyzer syringes, beakers and plungers compatible with Ekomilk, Lactoscan and other milk analyzers.",
+
+    alt: "Milk Analyzer Syringes Beakers and Plungers",
+
+    description:
+      "Laboratory-grade syringes, beakers and plungers for milk analyzer machines. Suitable for routine milk sample collection and testing.",
+
+    keyFeatures: [
+      "Syringes, beakers and plungers",
+      "Laboratory-grade plastic",
+      "Compatible with Ekomilk analyzers",
+      "Compatible with Lactoscan analyzers",
+      "Suitable for milk sample collection",
+      "Easy to handle and clean",
+      "Designed for routine testing",
+      "Minimum order 50 pieces"
+    ],
+
+    specifications: {
+      ProductType: "Milk Analyzer Consumables",
+      ItemsIncluded: "Syringes, Beakers, Plungers",
+      Compatibility: "Ekomilk, Lactoscan & Other Milk Analyzers",
+      Material: "Laboratory Grade Plastic",
+      MinimumOrderQuantity: "50 Pieces",
+      UnitPrice: "₹140 Per Piece",
+      Condition: "New"
+    }
+  },
+
+  {
+    id: 6,
+    slug: "ekomilk-daily-cleaning-solution-200ml",
+    name: "Ekomilk Daily Cleaning Solution (200 ml)",
+    sku: "EKO-DCS-200",
+    price: "₹300",
+    category: "Cleaning Solution",
+    stockStatus: "In Stock",
+    warranty: "No Warranty",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848852/Ekomilk_Daily_Cleaning_Solution_200_ml.webp",
+
+    keywords: [
+      "ekomilk daily cleaning solution",
+      "milk analyzer cleaner",
+      "daily analyzer cleaning",
+      "ekomilk cleaning liquid",
+      "milk analyzer maintenance"
+    ],
+
+    metaTitle:
+      "Ekomilk Daily Cleaning Solution 200 ml | Milk Analyzer Cleaner",
+
+    metaDescription:
+      "Ekomilk Daily Cleaning Solution 200 ml for regular milk analyzer cleaning and maintenance.",
+
+    alt: "Ekomilk Daily Cleaning Solution 200 ml",
+
+    description:
+      "Daily cleaning solution designed to help remove milk residue, fat deposits and buildup from compatible milk analyzer machines.",
+
+    keyFeatures: [
+      "200 ml cleaning solution",
+      "Designed for daily cleaning",
+      "Helps remove milk residue",
+      "Helps remove fat deposits",
+      "Supports analyzer maintenance",
+      "Helps maintain testing performance",
+      "Easy liquid application",
+      "Suitable for compatible milk analyzers"
+    ],
+
+    specifications: {
+      Quantity: "200 ml",
+      Usage: "Daily Cleaning",
+      Form: "Liquid",
+      ShelfLife: "12 Months"
+    }
+  },
+
+  {
+    id: 7,
+    slug: "ekomilk-weekly-cleaning-solution-200ml",
+    name: "Ekomilk Weekly Cleaning Solution (200 ml)",
+    sku: "EKO-WCS-200",
+    price: "₹350",
+    category: "Cleaning Solution",
+    stockStatus: "In Stock",
+    warranty: "No Warranty",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848852/Ekomilk_Weekly_Cleaning_Solution_200_ml.webp",
+
+    keywords: [
+      "ekomilk weekly cleaning solution",
+      "deep cleaning solution",
+      "milk analyzer cleaner",
+      "protein deposit remover",
+      "mineral deposit remover"
+    ],
+
+    metaTitle:
+      "Ekomilk Weekly Cleaning Solution 200 ml | Deep Cleaner",
+
+    metaDescription:
+      "Ekomilk Weekly Cleaning Solution 200 ml for deep cleaning and maintenance of milk analyzer machines.",
+
+    alt: "Ekomilk Weekly Cleaning Solution 200 ml",
+
+    description:
+      "Deep cleaning solution designed to help remove protein, fat and mineral deposits from compatible milk analyzer machines.",
+
+    keyFeatures: [
+      "200 ml deep cleaning solution",
+      "Designed for weekly cleaning",
+      "Helps remove protein deposits",
+      "Helps remove fat buildup",
+      "Helps remove mineral deposits",
+      "Supports sensor performance",
+      "Helps maintain analyzer accuracy",
+      "Suitable for compatible milk analyzers"
+    ],
+
+    specifications: {
+      Quantity: "200 ml",
+      Usage: "Weekly Deep Cleaning",
+      Form: "Liquid",
+      ShelfLife: "12 Months"
+    }
+  },
+
+  {
+    id: 8,
+    slug: "lactoscan-milk-analyzer-pcb-board",
+    name: "Lactoscan Milk Analyzer PCB Board",
+    sku: "LAC-PCB-008",
+    price: "₹13,500",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "1 Year",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848851/Lactoscan_Milk_Analyzer_PCB_Board.webp",
+
+    keywords: [
+      "lactoscan pcb",
+      "lactoscan milk analyzer pcb",
+      "SL30 pcb",
+      "LS30 pcb",
+      "lactoscan control board",
+      "milk analyzer pcb"
+    ],
+
+    metaTitle:
+      "Lactoscan Milk Analyzer PCB Board | Control Board",
+
+    metaDescription:
+      "Lactoscan Milk Analyzer PCB Board compatible with SL30 and LS30 models.",
+
+    alt: "Lactoscan Milk Analyzer PCB Board",
+
+    description:
+      "Replacement control PCB for compatible Lactoscan milk analyzer machines. Designed for stable analyzer control and reliable operation.",
+
+    keyFeatures: [
+      "Lactoscan replacement PCB",
+      "Compatible with SL30 / LS30",
+      "Stable control board operation",
+      "Reliable sensor communication",
+      "USB / Serial interface",
+      "Quality electronic components",
+      "Ready-to-install replacement",
+      "1-year warranty"
+    ],
+
+    specifications: {
+      ProductType: "PCB Control Board",
+      BrandCompatibility: "Lactoscan",
+      ModelCompatibility: "SL30 / LS30",
+      OperatingVoltage: "12V DC",
+      Interface: "USB / Serial",
+      Application: "Milk Analyzer Control System",
+      Condition: "New",
+      Installation: "Ready to Install",
+      Warranty: "1 Year",
+      Weight: "250 g"
+    }
+  },
+
+  {
+    id: 9,
+    slug: "ekomilk-lcd-display-module",
+    name: "Ekomilk LCD Display Module",
+    sku: "EKO-LCD-008",
+    price: "₹1,500",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848853/Ekomilk_LCD_Display.webp",
+
+    keywords: [
+      "ekomilk lcd display",
+      "milk analyzer display",
+      "ekomilk screen",
+      "ekomilk ultra display",
+      "ekomilk dps display",
+      "ekomilk pro display"
+    ],
+
+    metaTitle:
+      "Ekomilk LCD Display Module | Milk Analyzer Display",
+
+    metaDescription:
+      "Genuine Ekomilk LCD Display Module compatible with Ultra, DPS and Pro milk analyzer models.",
+
+    alt: "Ekomilk LCD Display Module",
+
+    description:
+      "Replacement LCD display module for compatible Ekomilk milk analyzer machines. Provides clear display of test results and system information.",
+
+    keyFeatures: [
+      "Clear LCD display",
+      "LED backlight",
+      "Compatible with Ekomilk Ultra",
+      "Compatible with Ekomilk DPS",
+      "Compatible with Ekomilk Pro",
+      "Clear result visibility",
+      "Reliable display performance",
+      "Easy replacement"
+    ],
+
+    specifications: {
+      ProductType: "LCD Display Module",
+      Compatibility: "Ekomilk Ultra / DPS / Pro",
+      Backlight: "LED",
+      Condition: "New"
+    }
+  },
+
+  {
+    id: 10,
+    slug: "ekomilk-keypad",
+    name: "Ekomilk Keypad",
+    sku: "EKO-KPD-009",
+    price: "₹1,000",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "3 Months",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Milk_Analyzer_Keypad.webp",
+
+    keywords: [
+      "ekomilk keypad",
+      "milk analyzer keypad",
+      "ekomilk keyboard",
+      "ekomilk ultra keypad",
+      "ekomilk dps keypad",
+      "ekomilk pro keypad"
+    ],
+
+    metaTitle:
+      "Ekomilk Keypad | Milk Analyzer Keypad Replacement",
+
+    metaDescription:
+      "Replacement Ekomilk membrane keypad compatible with Ultra, DPS and Pro milk analyzer machines.",
+
+    alt: "Ekomilk Keypad",
+
+    description:
+      "Durable membrane keypad designed for compatible Ekomilk milk analyzer machines. Suitable for menu navigation and analyzer operation.",
+
+    keyFeatures: [
+      "Membrane keypad design",
+      "Compatible with Ekomilk Ultra",
+      "Compatible with Ekomilk DPS",
+      "Compatible with Ekomilk Pro",
+      "Responsive key operation",
+      "Durable membrane material",
+      "Easy replacement",
+      "Suitable for daily operation"
+    ],
+
+    specifications: {
+      ProductType: "Keypad",
+      Compatibility: "Ekomilk Ultra / DPS / Pro",
+      Material: "Industrial Grade Membrane",
+      Condition: "New"
+    }
+  },
+
+  {
+    id: 11,
+    slug: "ekomilk-motor-pcb",
+    name: "Ekomilk Motor PCB",
+    sku: "EKO-MPCB-010",
+    price: "₹3,000",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Ekomilk_Motor_PCB.webp",
+
+    keywords: [
+      "ekomilk motor pcb",
+      "motor control pcb",
+      "milk analyzer motor board",
+      "ekomilk ultra motor pcb",
+      "ekomilk ultra pro motor pcb"
+    ],
+
+    metaTitle:
+      "Ekomilk Motor PCB | Motor Control Board",
+
+    metaDescription:
+      "Ekomilk Motor PCB for Ultra and Ultra Pro milk analyzers. Replacement motor control board.",
+
+    alt: "Ekomilk Motor PCB",
+
+    description:
+      "Replacement motor control PCB designed for compatible Ekomilk Ultra and Ultra Pro milk analyzer machines.",
+
+    keyFeatures: [
+      "Motor control PCB",
+      "Compatible with Ekomilk Ultra",
+      "Compatible with Ultra Pro",
+      "12V DC operation",
+      "Controls motor functions",
+      "Stable motor performance",
+      "Quality electronic components",
+      "Easy replacement"
+    ],
+
+    specifications: {
+      ProductType: "Motor PCB",
+      Compatibility: "Ekomilk Ultra / Ultra Pro",
+      Voltage: "12V DC",
+      Condition: "New"
+    }
+  },
+
+  {
+    id: 12,
+    slug: "lactoscan-motor",
+    name: "Lactoscan Motor",
+    sku: "LAC-MTR-013",
+    price: "₹4,500",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Lactoscan_Motor.webp",
+
+    keywords: [
+      "lactoscan motor",
+      "lactoscan dc motor",
+      "milk analyzer motor",
+      "12V lactoscan motor",
+      "lactoscan spare parts"
+    ],
+
+    metaTitle:
+      "Lactoscan Motor | Milk Analyzer Replacement Motor",
+
+    metaDescription:
+      "12V DC replacement motor for compatible Lactoscan milk analyzer machines.",
+
+    alt: "Lactoscan Motor",
+
+    description:
+      "Replacement 12V DC geared motor for compatible Lactoscan milk analyzer machines, designed for reliable sample suction and smooth operation.",
+
+    keyFeatures: [
+      "12V DC geared motor",
+      "Compatible with Lactoscan analyzers",
+      "Smooth sample suction",
+      "Reliable motor operation",
+      "Low-noise performance",
+      "Durable construction",
+      "Suitable for continuous use",
+      "Easy replacement"
+    ],
+
+    specifications: {
+      ProductType: "Motor",
+      Compatibility: "Lactoscan",
+      Voltage: "12V DC",
+      MotorType: "DC Geared Motor",
+      Condition: "New"
+    }
+  },
+
+  {
+    id: 13,
+    slug: "milk-analyzer-plastic-body-cabinet",
+    name: "Milk Analyzer Plastic Body Cabinet",
+    sku: "EKO-CAB-013",
+    price: "₹2,500",
+    category: "Milk Analyzer Spare Parts",
+    stockStatus: "In Stock",
+    warranty: "6 Months",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Milk_Analyzer_Plastic_Body_Cabinet.webp",
+
+    keywords: [
+      "milk analyzer cabinet",
+      "ekomilk cabinet",
+      "milk analyzer body",
+      "milk analyzer housing",
+      "ekomilk plastic body",
+      "milk analyzer cover"
+    ],
+
+    metaTitle:
+      "Milk Analyzer Plastic Body Cabinet | Ekomilk Spare Part",
+
+    metaDescription:
+      "Durable replacement plastic body cabinet for compatible Ekomilk milk analyzer machines.",
+
+    alt: "Milk Analyzer Plastic Body Cabinet",
+
+    description:
+      "Replacement ABS plastic outer cabinet designed for compatible Ekomilk milk analyzer machines. Helps protect internal components and restore the external housing.",
+
+    keyFeatures: [
+      "Durable ABS plastic body",
+      "Compatible with Ekomilk analyzers",
+      "Protects internal components",
+      "Replacement for damaged housing",
+      "Original-style cabinet design",
+      "White finish",
+      "Ready to install",
+      "Suitable for dairy environments"
+    ],
+
+    specifications: {
+      ProductType: "Plastic Body Cabinet",
+      Compatibility: "Ekomilk Milk Analyzer",
+      Material: "High-Quality ABS Plastic",
+      Color: "White",
+      Condition: "New",
+      Installation: "Ready to Install"
+    }
+  },
+
+  {
+    id: 14,
+    slug: "ekomilk-ultra-milk-analyzer",
+    name: "Ekomilk Ultra Milk Analyzer",
+    sku: "EKO-ULTRA-014",
+    price: "Contact for Price",
+    category: "Milk Analyzer",
+    stockStatus: "In Stock",
+    warranty: "1 Year",
+
+    photo:
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Ekomilk_Ultra_Milk_Analyzer.webp",
+
+    keywords: [
+      "ekomilk ultra",
+      "ekomilk ultra milk analyzer",
+      "milk analyzer",
+      "milk testing machine",
+      "ultrasonic milk analyzer",
+      "milk fat analyzer",
+      "SNF analyzer",
+      "dairy milk analyzer"
+    ],
+
+    metaTitle:
+      "Ekomilk Ultra Milk Analyzer | Automatic Milk Testing Machine",
+
+    metaDescription:
+      "Ekomilk Ultra ultrasonic milk analyzer for fast milk testing. Measures Fat, SNF, Density, Protein and other milk parameters.",
+
+    alt: "Ekomilk Ultra Milk Analyzer",
+
+    description:
+      "High-performance ultrasonic milk analyzer designed for rapid milk quality testing. Measures Fat, SNF, Density, Protein, Lactose, Added Water, Salts, Freezing Point and Temperature.",
+
+    keyFeatures: [
+      "Ultrasonic milk analysis technology",
+      "Fast milk testing",
+      "Measures Fat and SNF",
+      "Measures Density and Protein",
+      "Measures Lactose and Added Water",
+      "Measures Salts and Freezing Point",
+      "Temperature measurement",
+      "LCD display",
+      "USB / RS232 connectivity",
+      "Approx. 30-second testing"
+    ],
+
+    specifications: {
+      ProductType: "Milk Analyzer",
+      Model: "Ekomilk Ultra",
+      Technology: "Ultrasonic",
+      Parameters:
+        "Fat, SNF, Density, Protein, Lactose, Added Water, Salts, Freezing Point, Temperature",
+      TestingTime: "Approx. 30 Seconds",
+      Display: "LCD Display",
+      Interface: "USB / RS232",
+      PowerSupply: "12V DC",
+      Condition: "New",
+      Warranty: "1 Year"
+    }
   }
-},
-{
-  id: 7,
-  slug: "ekomilk-weekly-cleaning-solution-200ml",
-  name: "Ekomilk Weekly Cleaning Solution (200 ml)",
-  keywords: [
-    "ekomilk weekly cleaning solution",
-    "weekly cleaning solution",
-    "milk analyzer cleaning solution",
-    "milk analyzer cleaner",
-    "milk analyzer maintenance",
-    "deep cleaning solution",
-    "milk testing machine cleaner",
-    "protein deposit remover",
-    "mineral deposit remover",
-    "ekomilk cleaning chemical",
-    "milk analyzer cleaning liquid",
-    "buy ekomilk weekly cleaning solution",
-    "dairy equipment cleaning solution",
-    "milk analyzer accessories",
-    "milk analyzer service kit"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848852/Ekomilk_Weekly_Cleaning_Solution_200_ml.webp",
-  sku: "EKO-WCS-200",
-  price: "₹350",
-  category: "Cleaning Solution",
-  stockStatus: "In Stock",
-  warranty: "No Warranty",
-
-  metaTitle: "Ekomilk Weekly Cleaning Solution 200 ml | Deep Cleaner for Milk Analyzer",
-
-  metaDescription:
-    "Buy Ekomilk Weekly Cleaning Solution 200 ml for deep cleaning of milk analyzer machines. Effectively removes protein and mineral deposits for accurate milk testing.",
-
-  alt: "Ekomilk Weekly Cleaning Solution 200 ml",
-
-  description:
-    "Ekomilk Weekly Cleaning Solution (200 ml) is a high-performance deep cleaning liquid developed for milk analyzer machines. It effectively removes stubborn protein, fat, and mineral deposits that accumulate during regular use and may affect testing accuracy. Weekly maintenance with this solution helps extend the lifespan of the analyzer, improves sensor performance, and ensures consistent, reliable milk analysis. Suitable for Ekomilk and other compatible milk analyzer models, it is widely used in dairy plants, milk collection centres, dairy laboratories, and cooperative societies for preventive maintenance.",
-
-  specifications: {
-    Quantity: "200 ml",
-    Usage: "Weekly Deep Cleaning",
-    Form: "Liquid",
-    ShelfLife: "12 Months"
-  }
-},
-{
-  id: 8,
-  slug: "lactoscan-milk-analyzer-pcb-board",
-  name: "Lactoscan Milk Analyzer PCB Board",
-  keywords: [
-    "lactoscan pcb board",
-    "lactoscan milk analyzer pcb",
-    "milk analyzer pcb board",
-    "lactoscan control board",
-    "lactoscan motherboard",
-    "lactoscan spare parts",
-    "milk analyzer spare parts",
-    "milk testing machine pcb",
-    "lactoscan sl30 pcb",
-    "lactoscan ls30 pcb",
-    "replacement lactoscan pcb",
-    "milk analyzer main board",
-    "buy lactoscan pcb board",
-    "dairy analyzer pcb",
-    "milk analyzer repair parts"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848851/Lactoscan_Milk_Analyzer_PCB_Board.webp",
-  sku: "LAC-PCB-008",
-  price: "₹13,500",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "1 Year",
-
-  metaTitle: "Lactoscan Milk Analyzer PCB Board | Genuine Control Board",
-
-  metaDescription:
-    "Buy genuine Lactoscan Milk Analyzer PCB Board compatible with SL30 and LS30 models. Original replacement control board with fast delivery across India.",
-
-  alt: "Lactoscan Milk Analyzer PCB Control Board",
-
-  description:
-    "The Lactoscan Milk Analyzer PCB Board is a genuine replacement control board designed for reliable performance in Lactoscan milk analyzer machines. It efficiently manages sensor communication, data processing, display functions, and overall analyzer operation to ensure accurate milk testing. Built with high-quality electronic components, this PCB provides stable performance, long service life, and dependable operation in dairy laboratories, milk collection centres, dairy plants, and cooperative societies. Compatible with Lactoscan SL30 and LS30 models, it is an ideal solution for replacing damaged or faulty control boards and restoring your analyzer to optimal working condition.",
-
-  specifications: {
-    ProductType: "PCB Control Board",
-    BrandCompatibility: "Lactoscan",
-    ModelCompatibility: "SL30 / LS30",
-    OperatingVoltage: "12V DC",
-    Interface: "USB / Serial",
-    Application: "Milk Analyzer Control System",
-    Condition: "New",
-    Installation: "Ready to Install",
-    Warranty: "1 Year",
-    Weight: "250 g"
-  }
-},
-{
-  id: 9,
-  slug: "ekomilk-lcd-display-module",
-  name: "Ekomilk LCD Display Module",
-  keywords: [
-    "ekomilk lcd display",
-    "ekomilk display module",
-    "milk analyzer lcd display",
-    "milk analyzer display",
-    "ekomilk screen",
-    "lcd display for milk analyzer",
-    "milk analyzer spare parts",
-    "ekomilk spare parts",
-    "replacement lcd display",
-    "ekomilk ultra display",
-    "ekomilk pro display",
-    "milk testing machine display",
-    "lcd module for ekomilk",
-    "buy ekomilk lcd display",
-    "milk analyzer repair parts"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848853/Ekomilk_LCD_Display.webp",
-  sku: "EKO-LCD-008",
-  price: "₹1,500",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "6 Months",
-
-  metaTitle: "Ekomilk LCD Display Module | Genuine Milk Analyzer Display",
-
-  metaDescription:
-    "Buy genuine Ekomilk LCD Display Module compatible with Ekomilk Ultra, DPS and Pro milk analyzers. High-quality replacement display with fast delivery across India.",
-
-  alt: "Ekomilk LCD Display Module for Milk Analyzer",
-
-  description:
-    "The Ekomilk LCD Display Module is a genuine replacement display designed for Ekomilk milk analyzer machines. It provides a bright, clear, and easy-to-read screen for displaying milk testing results, menu options, and system information. Built with high-quality components, this LCD module ensures reliable performance, long service life, and accurate visual output. Compatible with Ekomilk Ultra, DPS, and Pro models, it is the ideal replacement for damaged or non-functional displays used in dairy laboratories, milk collection centres, cooperative societies, and dairy plants.",
-
-  specifications: {
-    ProductType: "LCD Display Module",
-    Compatibility: "Ekomilk Ultra / DPS / Pro",
-    Backlight: "LED",
-    Condition: "New"
-  }
-},
-
-{
-  id: 10,
-  slug: "ekomilk-keypad",
-  name: "Ekomilk Keypad",
-  keywords: [
-    "ekomilk keypad",
-    "ekomilk keyboard",
-    "milk analyzer keypad",
-    "milk analyzer keyboard",
-    "milk analyzer spare parts",
-    "ekomilk spare parts",
-    "replacement keypad for ekomilk",
-    "ekomilk ultra keypad",
-    "ekomilk dps keypad",
-    "milk testing machine keypad",
-    "membrane keypad for milk analyzer",
-    "buy ekomilk keypad",
-    "milk analyzer control keypad",
-    "dairy equipment keypad",
-    "milk analyzer repair parts"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Milk_Analyzer_Keypad.webp",
-  sku: "EKO-KPD-009",
-  price: "₹1,000",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "3 Months",
-
-  metaTitle: "Ekomilk Keypad | Genuine Milk Analyzer Keypad Replacement",
-
-  metaDescription:
-    "Buy genuine Ekomilk Keypad compatible with Ekomilk Ultra, DPS and Pro milk analyzers. Durable replacement keypad with fast delivery across India.",
-
-  alt: "Ekomilk Keypad for Milk Analyzer Machine",
-
-  description:
-    "The Ekomilk Keypad is a genuine replacement membrane keypad designed for Ekomilk milk analyzer machines. It provides smooth, responsive key operation for entering commands, navigating menus, and operating the analyzer efficiently. Manufactured using high-quality materials, the keypad offers excellent durability, reliable performance, and long service life. Compatible with Ekomilk Ultra, DPS, and Pro models, it is an ideal replacement for worn, damaged, or non-responsive keypads used in dairy laboratories, milk collection centres, cooperative societies, and dairy plants.",
-
-  specifications: {
-    ProductType: "Keypad",
-    Compatibility: "Ekomilk Ultra / DPS / Pro",
-    Material: "Industrial Grade Membrane",
-    Condition: "New"
-  }
-},
-{
-  id: 11,
-  slug: "ekomilk-motor-pcb",
-  name: "Ekomilk Motor PCB",
-  keywords: [
-    "ekomilk motor pcb",
-    "ekomilk motor control pcb",
-    "motor pcb for ekomilk",
-    "milk analyzer motor pcb",
-    "milk analyzer motor board",
-    "motor control board",
-    "ekomilk spare parts",
-    "milk analyzer spare parts",
-    "milk testing machine pcb",
-    "ekomilk ultra motor pcb",
-    "replacement motor pcb",
-    "buy ekomilk motor pcb",
-    "milk analyzer repair parts",
-    "dairy analyzer motor pcb",
-    "ekomilk pcb board"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Ekomilk_Motor_PCB.webp",
-  sku: "EKO-MPCB-010",
-  price: "₹3,000",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "6 Months",
-
-  metaTitle: "Ekomilk Motor PCB | Genuine Motor Control Board for Milk Analyzer",
-
-  metaDescription:
-    "Buy genuine Ekomilk Motor PCB for Ekomilk Ultra and Ultra Pro milk analyzers. High-quality replacement motor control board with fast delivery across India.",
-
-  alt: "Ekomilk Motor PCB for Milk Analyzer",
-
-  description:
-    "The Ekomilk Motor PCB is a genuine motor control board designed for Ekomilk milk analyzer machines. It controls motor operation to ensure smooth sample suction, accurate milk analysis, and reliable analyzer performance. Manufactured using premium electronic components, this replacement PCB offers stable operation, long service life, and dependable performance in dairy laboratories, milk collection centres, dairy plants, and cooperative societies. Compatible with Ekomilk Ultra and Ultra Pro models, it is the ideal solution for replacing damaged or faulty motor PCBs and restoring your analyzer to optimal working condition.",
-
-  specifications: {
-    ProductType: "Motor PCB",
-    Compatibility: "Ekomilk Ultra / Ultra Pro",
-    Voltage: "12V DC",
-    Condition: "New"
-  }
-},
-{
-  id: 12,
-  slug: "lactoscan-motor",
-  name: "Lactoscan Motor",
-  keywords: [
-    "lactoscan motor",
-    "lactoscan milk analyzer motor",
-    "milk analyzer motor",
-    "milk testing machine motor",
-    "lactoscan spare parts",
-    "milk analyzer spare parts",
-    "replacement lactoscan motor",
-    "lactoscan dc motor",
-    "12V dc motor for lactoscan",
-    "lactoscan analyzer motor",
-    "buy lactoscan motor",
-    "dairy analyzer motor",
-    "milk analyzer replacement motor",
-    "lactoscan repair parts",
-    "genuine lactoscan motor"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848854/Lactoscan_Motor.webp",
-  sku: "LAC-MTR-013",
-  price: "₹4,500",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "6 Months",
-
-  metaTitle: "Lactoscan Motor | Genuine Milk Analyzer Replacement Motor",
-
-  metaDescription:
-    "Buy genuine Lactoscan Motor for milk analyzer machines. High-quality 12V DC replacement motor compatible with Lactoscan analyzers. Fast delivery across India.",
-
-  alt: "Lactoscan Motor for Milk Analyzer Machine",
-
-  description:
-    "The Lactoscan Motor is a genuine replacement motor designed for reliable operation in Lactoscan milk analyzer machines. It provides smooth and efficient sample suction, ensuring accurate milk testing and consistent analyzer performance. Built with high-quality components, this 12V DC motor offers low noise, long service life, and dependable operation under continuous use. It is an ideal replacement for damaged or worn motors in dairy laboratories, milk collection centres, cooperative societies, and dairy plants. Easy to install and fully compatible with Lactoscan milk analyzers, this motor helps restore the performance and accuracy of your milk testing equipment.",
-
-  specifications: {
-    ProductType: "Motor",
-    Compatibility: "Lactoscan",
-    Voltage: "12V DC",
-    MotorType: "DC Geared Motor",
-    Condition: "New"
-  }
-},
-{
-  id: 13,
-  slug: "milk-analyzer-plastic-body-cabinet",
-  name: "Milk Analyzer Plastic Body Cabinet",
-  keywords: [
-    "milk analyzer plastic body",
-    "milk analyzer cabinet",
-    "ekomilk plastic body",
-    "ekomilk cabinet",
-    "milk analyzer outer body",
-    "milk analyzer housing",
-    "milk analyzer enclosure",
-    "milk analyzer spare parts",
-    "ekomilk spare parts",
-    "replacement milk analyzer body",
-    "plastic cabinet for milk analyzer",
-    "milk testing machine body",
-    "buy milk analyzer cabinet",
-    "dairy equipment spare parts",
-    "milk analyzer cover"
-  ],
-  photo: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1784890742/Milk_Analyzer_Plastic_Body_Cabinet.webp",
-  sku: "EKO-CAB-013",
-  price: "₹2,500",
-  category: "Milk Analyzer Spare Parts",
-  stockStatus: "In Stock",
-  warranty: "6 Months",
-
-  metaTitle: "Milk Analyzer Plastic Body Cabinet | Genuine Ekomilk Spare Part",
-
-  metaDescription:
-    "Buy genuine Milk Analyzer Plastic Body Cabinet compatible with Ekomilk milk analyzer machines. Durable replacement outer body with fast delivery across India.",
-
-  alt: "Milk Analyzer Plastic Body Cabinet",
-
-  description:
-    "The Milk Analyzer Plastic Body Cabinet is a genuine replacement outer housing designed for Ekomilk milk analyzer machines. Manufactured from high-quality durable ABS plastic, it provides excellent protection for internal electronic components while maintaining the original appearance and structural strength of the analyzer. Ideal for replacing cracked, damaged, or worn cabinets in dairy laboratories, milk collection centres, cooperative societies, and dairy plants. Easy to install and fully compatible with Ekomilk milk analyzer models.",
-
-  specifications: {
-    ProductType: "Plastic Body Cabinet",
-    Compatibility: "Ekomilk Milk Analyzer",
-    Material: "High-Quality ABS Plastic",
-    Color: "White",
-    Condition: "New",
-    Installation: "Ready to Install"
-  }
-}
 ];
