@@ -3,10 +3,12 @@
   "version": "1.2.2",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev Turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+     "lint": "eslint .",
+     "postinstall": "node postinstall.js"
+   
   },
   "dependencies": {
     "@heroui/react": "^3.2.4",
