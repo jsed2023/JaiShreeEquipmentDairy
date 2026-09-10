@@ -183,7 +183,16 @@ export default function GalleryPage() {
 
       <section>
 
-        <h2>
+        <h2  className="
+              bg-linear-to-r
+              bg-clip-text
+              text-center
+              text-lg
+              font-bold
+              text-transparent
+              md:text-xl
+            "
+          >
           Milk Analyzer Machines &amp; Milk Collection Equipment
         </h2>
 
