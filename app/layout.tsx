@@ -9,6 +9,7 @@ import Footer from "@/components/footer"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
@@ -67,9 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     description: siteConfig.description,
 
-    images: [
-      cld(`${siteConfig.url}/logo.png`),
-    ],
+    images: [cld(`${siteConfig.url}/logo.png`)],
   },
 
   robots: {
@@ -96,39 +95,41 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-         {/* Google tag (gtag.js) */}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+        />
 
-  gtag('config', 'G-RBFDTF7PWV');
-</script>
-
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RBFDTF7PWV');
+          `}
+        </Script>
 
         {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({
-                  'gtm.start':new Date().getTime(),
-                  event:'gtm.js'
-                });
-                
-                var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),
-                    dl=l!='dataLayer'?'&l='+l:'';
-                
-                j.async=true;
-                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
-            `,
-          }}
-        />
+        <Script id="google-tag-manager">
+          {`
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({
+                'gtm.start':new Date().getTime(),
+                event:'gtm.js'
+              });
+
+              var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),
+                  dl=l!='dataLayer'?'&l='+l:'';
+
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
+          `}
+        </Script>
       </head>
 
       <body>
@@ -157,13 +158,12 @@ export default function RootLayout({
               </main>
 
               <Footer />
-             
+
               <WhatsAppButton />
             </div>
- </PageLoader>
-  </Providers>
+          </PageLoader>
+        </Providers>
       </body>
-
     </html>
   )
 }
