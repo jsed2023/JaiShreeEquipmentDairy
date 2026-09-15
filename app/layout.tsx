@@ -42,6 +42,13 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 
+  /*
+   * Google Search Console HTML-tag verification.
+   *
+   * This is separate from Google Analytics verification.
+   * It provides a reliable Search Console verification method
+   * for the Next.js App Router.
+   */
   verification: {
     google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
   },
@@ -94,22 +101,35 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Analytics */}
+        {/*
+         * Google Analytics 4
+         *
+         * This is the direct Google tag.
+         * Keep this implementation as the ONLY direct GA4
+         * implementation if using Google Analytics verification
+         * in Search Console.
+         */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
 
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-RBFDTF7PWV');
           `}
         </Script>
 
-        {/* Google Tag Manager */}
+        {/*
+         * Google Tag Manager
+         *
+         * Keep GTM for other tags.
+         * DO NOT create another GA4 configuration tag inside GTM
+         * if GA4 is already running through the gtag.js block above.
+         */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){
@@ -121,10 +141,11 @@ export default function RootLayout({
 
               var f=d.getElementsByTagName(s)[0],
                   j=d.createElement(s),
-                  dl=l!='dataLayer'?'&l='+i:'';
+                  dl=l!='dataLayer'?'&l='+l:'';
 
               j.async=true;
               j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
               f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
           `}
@@ -132,7 +153,12 @@ export default function RootLayout({
       </head>
 
       <body>
-        {/* Google Tag Manager NoScript */}
+        {/*
+         * Google Tag Manager noscript fallback.
+         *
+         * This must be immediately after <body>.
+         * Do not put another element before this block.
+         */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
