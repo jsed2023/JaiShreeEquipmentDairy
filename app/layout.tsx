@@ -67,7 +67,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     description: siteConfig.description,
-
     images: [cld(`${siteConfig.url}/logo.png`)],
   },
 
@@ -97,32 +96,32 @@ export default function RootLayout({
       <head>
         {/* Google Analytics */}
         <Script
-          async
           src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+          strategy="afterInteractive"
         />
 
-        <Script id="google-analytics">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-RBFDTF7PWV');
           `}
         </Script>
 
         {/* Google Tag Manager */}
-        <Script id="google-tag-manager">
+        <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){
               w[l]=w[l]||[];
               w[l].push({
-                'gtm.start':new Date().getTime(),
+                'gtm.start': new Date().getTime(),
                 event:'gtm.js'
               });
 
               var f=d.getElementsByTagName(s)[0],
                   j=d.createElement(s),
-                  dl=l!='dataLayer'?'&l='+l:'';
+                  dl=l!='dataLayer'?'&l='+i:'';
 
               j.async=true;
               j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
