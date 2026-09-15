@@ -42,13 +42,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 
-  /*
-   * Google Search Console HTML-tag verification.
-   *
-   * This is separate from Google Analytics verification.
-   * It provides a reliable Search Console verification method
-   * for the Next.js App Router.
-   */
+  // Google Search Console verification
   verification: {
     google: "szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94",
   },
@@ -101,36 +95,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/*
-         * Google Analytics 4
-         *
-         * This is the direct Google tag.
-         * Keep this implementation as the ONLY direct GA4
-         * implementation if using Google Analytics verification
-         * in Search Console.
-         */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
-          strategy="beforeInteractive"
-        />
-
-        <Script id="google-analytics" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RBFDTF7PWV');
-          `}
-        </Script>
-
-        {/*
-         * Google Tag Manager
-         *
-         * Keep GTM for other tags.
-         * DO NOT create another GA4 configuration tag inside GTM
-         * if GA4 is already running through the gtag.js block above.
-         */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        {/* Google Tag Manager */}
+        <Script id="google-tag-manager">
           {`
             (function(w,d,s,l,i){
               w[l]=w[l]||[];
@@ -153,12 +119,7 @@ export default function RootLayout({
       </head>
 
       <body>
-        {/*
-         * Google Tag Manager noscript fallback.
-         *
-         * This must be immediately after <body>.
-         * Do not put another element before this block.
-         */}
+        {/* Google Tag Manager noscript MUST be first */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
