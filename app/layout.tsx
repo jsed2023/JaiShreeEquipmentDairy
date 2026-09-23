@@ -113,7 +113,7 @@ export default function RootLayout({
               j.async=true;
               j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
               f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GT-NN6ZDZ45');
+            })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
           `}
         </Script>
       </head>
@@ -122,7 +122,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GT-NN6ZDZ45"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
             height="0"
             width="0"
             style={{
