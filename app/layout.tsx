@@ -97,7 +97,7 @@ export default function RootLayout({
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         >
           {`
             (function(w,d,s,l,i){
@@ -115,14 +115,18 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
           `}
         </Script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<Script  src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+  strategy="afterInteractive"
+/>
 
-  gtag('config', 'G-RBFDTF7PWV');
-</script>
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RBFDTF7PWV');
+  `}
+</Script>
       </head>
 
       <body>
