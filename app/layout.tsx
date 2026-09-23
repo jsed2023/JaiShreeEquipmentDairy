@@ -1,7 +1,6 @@
 import "@/styles/globals.css"
 import type { Metadata, Viewport } from "next"
 import Script from "next/script"
-
 import { cld } from "@/utils/cloudinary"
 import { Providers } from "./providers"
 import { metaKeywords, siteConfig } from "@/config/site"
@@ -116,6 +115,14 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-P3FFNTJ9');
           `}
         </Script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RBFDTF7PWV');
+</script>
       </head>
 
       <body>
