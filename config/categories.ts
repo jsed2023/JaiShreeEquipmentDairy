@@ -75,7 +75,7 @@ export const CATEGORIES: Category[] = [
       title:
         "Automatic Milk Collection System | AMCS Supplier in India",
       description:
-        "Set up an automatic milk collection system with milk analyzer, electronic weighing scale, milk stirrer, billing printer, DPU and dairy software for accurate milk procurement and efficient collection center management.",
+        "Automatic milk collection system with milk analyzer, electronic weighing scale, milk stirrer, billing printer, DPU and dairy software for accurate milk procurement and efficient collection center management.",
       keywords:
         "automatic milk collection system, AMCS, AMCS system, automatic milk collection system India, milk collection system, milk collection machine, dairy milk collection system, milk procurement system, milk collection center equipment, automatic milk collection unit, dairy automation system, milk collection software, milk collection billing software, dairy management system, milk data management system, milk analyzer for AMCS, milk weighing machine, electronic weighing scale, dairy weighing scale, ultrasonic milk stirrer, milk receipt printer, DPU machine, DPU milk collection unit, Dairy Khata DPU, digital milk collection system, village milk collection system, AMCS supplier India, AMCS supplier Rajasthan",
     },
