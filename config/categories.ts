@@ -1,16 +1,3 @@
-export type Category = {
-  slug: string;
-  name: string;
-  priority?: number;
-  url: string;
-  gradient?: string;
-  seo: {
-    title: string;
-    description: string;
-    keywords: string;
-  };
-};
-
 export const CATEGORIES: Category[] = [
   {
     slug: "dairy-equipment",
