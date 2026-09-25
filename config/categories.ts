@@ -1,4 +1,5 @@
 import type { Category } from "@/types";
+
 export const CATEGORIES: Category[] = [
   {
     slug: "dairy-equipment",
@@ -8,11 +9,11 @@ export const CATEGORIES: Category[] = [
     gradient: "linear-gradient(to right,#22c55e,#06b6d4,#3b82f6)",
     seo: {
       title:
-        "Dairy Equipment Supplier in India | Cream Separators & Dairy Machinery",
+        "Dairy Equipment Supplier in India | Dairy Machinery & Cream Separators",
       description:
-        "Buy high-quality dairy equipment including Paras cream separator machine, milk cream separator machine, dairy machinery. Trusted supplier serving Rajasthan and across India.",
+        "Explore dairy equipment and machinery for dairy farms, milk collection centers and dairy businesses, including cream separator machines, milk analyzers, milk testing equipment and automatic milk collection systems.",
       keywords:
-        "dairy equipment, dairy equipment supplier india, dairy machinery india, dairy farm equipment, dairy machinery supplier, paras cream separator machine, paras cream separator, paras milk cream separator machine, paras dairy equipment, cream separator machine, milk cream separator machine, dairy cream separator, electric cream separator machine, hand operated cream separator machine, cream separator price india, milk separator machine, cream separator supplier india, cream separator machine rajasthan, cream separator machine sri ganganagar, cream separator machine hanumangarh, cream separator machine bikaner, milk analyzer machine, milk testing equipment, automatic milk collection system, AMCS system, dairy khata DPU, milk collection unit, dairy weighing scale, milk testing machine, dairy farm machinery"
+        "dairy equipment, dairy equipment supplier, dairy equipment supplier india, dairy machinery, dairy machinery supplier, dairy farm equipment, dairy farm machinery, dairy machines, cream separator machine, milk cream separator machine, cream separator supplier india, cream separator machine price india, electric cream separator machine, hand operated cream separator, Paras cream separator, Paras cream separator machine, milk separator machine, milk analyzer machine, milk testing equipment, automatic milk collection system, AMCS system, dairy weighing scale, milk collection unit, dairy equipment Rajasthan",
     },
   },
 
@@ -24,11 +25,11 @@ export const CATEGORIES: Category[] = [
     gradient: "linear-gradient(to right,#f97316,#ec4899,#8b5cf6)",
     seo: {
       title:
-        "Milk Testing Equipment Supplier in India | Milk Analyzer & Fat Testing Machines",
+        "Milk Testing Equipment Supplier in India | Milk Analyzer & Fat Testing",
       description:
-        "Accurate milk testing equipment including Advance Milk Analyzer, Ekomilk, Lactoscan analyzers, fat testing machines, and dairy laboratory instruments for dairy farms and milk collection centers.",
+        "Buy milk testing equipment for dairy farms, laboratories and milk collection centers, including milk analyzers, fat testing machines and milk quality testing instruments for accurate milk analysis.",
       keywords:
-        "milk testing equipment, milk analyzer machine, milk analyzer machine price india, digital milk analyzer, automatic milk analyzer, advance milk analyzer, advance milk analyzer machine, advance milk analyzer price, advance milk analyzer supplier india, milk fat testing machine, milk fat analyzer, milk quality testing equipment, dairy testing equipment, milk analyzer supplier india, milk purity testing machine, milk SNF testing machine, milk composition analyzer, portable milk analyzer, dairy milk testing solutions, milk analyzer rajasthan, ekomilk analyzer, lactoscan analyzer, milk testing machine"
+        "milk testing equipment, milk testing machine, milk analyzer, milk analyzer machine, milk analyzer supplier india, milk quality testing machine, milk fat testing machine, milk fat analyzer, milk SNF testing machine, milk composition analyzer, milk purity testing machine, digital milk analyzer, automatic milk analyzer, portable milk analyzer, dairy testing equipment, dairy laboratory equipment, milk testing instruments, Advance Milk Analyzer, Advance Milk Analyzer machine, Ekomilk analyzer, Lactoscan analyzer, milk analyzer Rajasthan, milk testing equipment India",
     },
   },
 
@@ -40,11 +41,27 @@ export const CATEGORIES: Category[] = [
     gradient: "linear-gradient(to right,#0ea5e9,#6366f1,#8b5cf6)",
     seo: {
       title:
-        "Advance Milk Analyzer, Ekomilk & Lactoscan Machines Supplier in India",
+        "Milk Analyzer Machine in India | Advance, Ekomilk & Lactoscan",
       description:
-        "Buy Advance Milk Analyzer, Ekomilk, and Lactoscan milk analyzer machines for accurate milk fat, SNF, density, and quality testing. Sales, service, calibration, repair, and spare parts available across India.",
+        "Find milk analyzer machines for accurate testing of milk fat, SNF, protein, lactose and density. Explore Advance Milk Analyzer, Ekomilk and Lactoscan machines with sales, service, calibration and spare parts support.",
       keywords:
-        "milk analyzer machine, milk analyzer machines, advance milk analyzer, advance milk analyzer machine, advance milk analyzer price, advance milk analyzer supplier india, digital milk analyzer, automatic milk analyzer, milk testing machine, milk fat analyzer, milk quality testing machine, dairy milk analyzer, milk analyzer supplier india, milk analyzer price india, milk analyzer rajasthan, ekomilk analyzer, ekomilk ultra pro, ekomilk ultra analyzer, lactoscan analyzer, lactoscan milk analyzer, portable milk analyzer, dairy testing equipment, milk analyzer calibration, milk analyzer repair service, milk analyzer spare parts, milk analyzer dealer india, milk analyzer sri ganganagar, milk analyzer hanumangarh, milk analyzer bikaner"
+        "milk analyzer machine, milk analyzer machines, milk analyzer, milk analyzer price india, milk analyzer supplier india, milk analyzer dealer india, Advance Milk Analyzer, Advance Milk Analyzer machine, Advance Milk Analyzer price, Advance Milk Analyzer supplier, Ekomilk analyzer, Ekomilk Ultra Pro, Ekomilk Ultra analyzer, Lactoscan analyzer, Lactoscan milk analyzer, milk fat analyzer, milk SNF analyzer, milk composition analyzer, milk quality analyzer, digital milk analyzer, automatic milk analyzer, portable milk analyzer, dairy milk analyzer, milk testing machine, milk analyzer calibration, milk analyzer repair, milk analyzer spare parts, milk analyzer Rajasthan",
+    },
+  },
+
+  {
+    slug: "milk-testing-machine-spare-parts",
+    name: "Milk Testing Machine Spare Parts",
+    priority: 0.9,
+    url: "https://jaishreeequipmentdairy.in/milk-testing-machine-spare-parts",
+    gradient: "linear-gradient(to right,#14b8a6,#0ea5e9,#6366f1)",
+    seo: {
+      title:
+        "Milk Analyzer Spare Parts Supplier in Rajasthan | Sensors & PCB",
+      description:
+        "Get milk analyzer and milk testing machine spare parts including sensors, PCB boards, motors, displays, pumps, keypads and replacement components. Service and spare parts support available across Rajasthan.",
+      keywords:
+        "milk analyzer spare parts, milk analyzer spare parts India, milk analyzer spare parts Rajasthan, milk testing machine spare parts, milk analyzer parts, milk analyzer sensor, milk analyzer PCB, milk analyzer motor, milk analyzer display, milk analyzer pump, milk analyzer keypad, milk analyzer accessories, milk analyzer replacement parts, milk testing machine parts, milk testing machine sensor, milk testing machine PCB, Ekomilk spare parts, Ekomilk sensor, Ekomilk PCB, Ekomilk motor, Ekomilk display, Ekomilk pump, Lactoscan spare parts, Lactoscan sensor, Lactoscan PCB, milk analyzer repair parts, dairy equipment spare parts, milk analyzer spare parts Sri Ganganagar, milk analyzer spare parts Hanumangarh, milk analyzer spare parts Anupgarh, milk analyzer spare parts Bikaner",
     },
   },
 
@@ -56,11 +73,11 @@ export const CATEGORIES: Category[] = [
     gradient: "linear-gradient(to right,#38bdf8,#8b5cf6,#6366f1)",
     seo: {
       title:
-        "Automatic Milk Collection System (AMCS) Supplier in India",
+        "Automatic Milk Collection System | AMCS Supplier in India",
       description:
-        "Advanced AMCS and Dairy Khata DPU solutions with milk analyzer, weighing scale, milk stirrer, billing printer, and software for efficient milk procurement and dairy management.",
+        "Set up an automatic milk collection system with milk analyzer, electronic weighing scale, milk stirrer, billing printer, DPU and dairy software for accurate milk procurement and efficient collection center management.",
       keywords:
-        "automatic milk collection system, AMCS system india, milk collection system india, dairy milk collection system, milk procurement system, milk collection software, dairy management system india, automatic milk collection unit, bulk milk collection system, milk collection center equipment, dairy automation system, milk collection billing software, milk data management system, village milk collection system, milk collection system price india, milk analyzer for AMCS, advance milk analyzer, digital milk analyzer, milk weighing machine, electronic weighing scale dairy, ultrasonic milk stirrer, milk receipt printer, dairy khata DPU, dairy khata milk collection system, DPU machine, DPU milk collection unit, AMCS supplier rajasthan, smart dairy solutions india, digital milk collection system"
+        "automatic milk collection system, AMCS, AMCS system, automatic milk collection system India, milk collection system, milk collection machine, dairy milk collection system, milk procurement system, milk collection center equipment, automatic milk collection unit, dairy automation system, milk collection software, milk collection billing software, dairy management system, milk data management system, milk analyzer for AMCS, milk weighing machine, electronic weighing scale, dairy weighing scale, ultrasonic milk stirrer, milk receipt printer, DPU machine, DPU milk collection unit, Dairy Khata DPU, digital milk collection system, village milk collection system, AMCS supplier India, AMCS supplier Rajasthan",
     },
   },
 ];
