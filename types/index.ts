@@ -180,3 +180,15 @@ export interface GalleryImage {
   altText: string;
   href?: string;
 }
+export Category = {
+  slug: string;
+  name: string;
+  priority?: number;
+  url: string;
+  gradient?: string;
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
+};
