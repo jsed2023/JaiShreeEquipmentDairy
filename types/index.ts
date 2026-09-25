@@ -191,4 +191,4 @@ export Category = {
     description: string;
     keywords: string;
   };
-};
+}
