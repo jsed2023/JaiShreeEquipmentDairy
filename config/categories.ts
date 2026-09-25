@@ -11,7 +11,7 @@ export const CATEGORIES: Category[] = [
       title:
         "Dairy Equipment Supplier in India | Dairy Machinery & Cream Separators",
       description:
-        "Explore dairy equipment and machinery for dairy farms, including cream separator machine.",
+  "Dairy equipment supplier in India offering dairy machinery and cream separator machines for dairy farms, milk collection centers and dairy businesses, with reliable equipment for efficient milk processing and handling.",
       keywords:
         "dairy equipment, dairy equipment supplier, dairy equipment supplier india, dairy machinery, dairy machinery supplier, dairy farm equipment, dairy farm machinery, dairy machines, cream separator machine, milk cream separator machine, cream separator supplier india, cream separator machine price india, electric cream separator machine, hand operated cream separator, Paras cream separator, Paras cream separator machine, milk separator machine, dairy equipment Rajasthan",
     },
