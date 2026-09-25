@@ -180,7 +180,7 @@ export interface GalleryImage {
   altText: string;
   href?: string;
 }
-export interface Category = {
+export type Category = {
   slug: string;
   name: string;
   priority?: number;
