@@ -24,7 +24,6 @@ We offer a range of dairy equipment, including:
 
 - 🥛 Milk Analyzer Machines — Ekomilk / Lactoscan / Advance
 - ⚙️ Advanced Milk Analyzer Machines — Max / Plus / Advance
-- 🐄 Milking Machines
 - 🧈 Milk Cream Separators — Paras
 - ⚖️ Digital Weighing Scales
 - 🧾 Milk Collection Units
@@ -111,4 +110,3 @@ Sri Ganganagar, Rajasthan, India 🇮🇳
 
 «To empower dairy farmers with reliable, accurate, and affordable dairy equipment.»
 
----
