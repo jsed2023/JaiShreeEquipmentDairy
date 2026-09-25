@@ -11,9 +11,9 @@ export const CATEGORIES: Category[] = [
       title:
         "Dairy Equipment Supplier in India | Dairy Machinery & Cream Separators",
       description:
-        "Explore dairy equipment and machinery for dairy farms, milk collection centers and dairy businesses, including cream separator machines, milk analyzers, milk testing equipment and automatic milk collection systems.",
+        "Explore dairy equipment and machinery for dairy farms, including cream separator machine.",
       keywords:
-        "dairy equipment, dairy equipment supplier, dairy equipment supplier india, dairy machinery, dairy machinery supplier, dairy farm equipment, dairy farm machinery, dairy machines, cream separator machine, milk cream separator machine, cream separator supplier india, cream separator machine price india, electric cream separator machine, hand operated cream separator, Paras cream separator, Paras cream separator machine, milk separator machine, milk analyzer machine, milk testing equipment, automatic milk collection system, AMCS system, dairy weighing scale, milk collection unit, dairy equipment Rajasthan",
+        "dairy equipment, dairy equipment supplier, dairy equipment supplier india, dairy machinery, dairy machinery supplier, dairy farm equipment, dairy farm machinery, dairy machines, cream separator machine, milk cream separator machine, cream separator supplier india, cream separator machine price india, electric cream separator machine, hand operated cream separator, Paras cream separator, Paras cream separator machine, milk separator machine, dairy equipment Rajasthan",
     },
   },
 
