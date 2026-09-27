@@ -65,8 +65,7 @@ export default function CategoriesPage() {
         </h2>
 
         <p>
-          Our platform offers a wide range of dairy equipment including milking machines,
-          milk cream separator machine, milk analyzer machines, and automatic milk collection systems.
+          Our platform offers a wide range of dairy equipment including milk cream separator machine, milk analyzer machines, and automatic milk collection systems, weight scale.
           These solutions are designed to improve efficiency, ensure accurate milk testing,
           and provide transparent billing for dairy businesses.
         </p>
