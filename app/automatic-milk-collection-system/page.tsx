@@ -105,7 +105,7 @@ export default function AutomaticMilkCollectionSystemPage() {
   <p className="dark:text-gray-400 text-stone-700 flex flex-col gap-4 leading-8">
     <span>
       <b>Automatic Milk Collection System (AMCS)</b> by <b>Jai Shree Equipment Dairy</b>
-      is an advanced solution designed to simplify and automate the milk
+       is an advanced solution designed to simplify and automate the milk
       collection process for dairy farms, milk collection centers, and dairy
       cooperative societies. It ensures fast, accurate, and transparent milk
       procurement while minimizing manual errors.
