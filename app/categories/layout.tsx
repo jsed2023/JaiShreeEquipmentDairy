@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Categories",
 
   description:
-    "Explore advanced dairy equipment machines and milk testing solutions from Jai Shree Equipment Dairy including milk analyzers, milking machines, cream separators, and automation systems.",
+    "Explore dairy equipment, milk analyzers, spare parts, cream separators, milk collection systems, and automation. Find the right solution today!",
 
   keywords: metaKeywords[12].keywords,
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dairy Equipment Categories | Jai Shree Equipment Dairy",
     description:
-      "Browse dairy equipment categories including milk testing machines, milking machines, cream separators and dairy automation systems.",
+      "Explore milk analyzers, testing machine spare parts, cream separators, milk collection systems, and dairy automation solutions.",
     url: `${siteConfig.url}/categories`,
     siteName: siteConfig.name,
     locale: "en_IN",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Dairy Equipment Categories",
+    title: "Dairy Equipment Categories | Jai Shree Equipment Dairy",
     description:
-      "Explore categories of dairy equipment and milk testing machines from Jai Shree Equipment Dairy.",
+      "Explore dairy equipment, milk analyzers, spare parts, cream separators, milk collection systems, and automation solutions.",
   },
 
   robots: {
