@@ -1669,12 +1669,23 @@ smallDesc:
 images: [
   {
     src: cld(
-      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png"
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1791018945/1000634037_rrpt97.webp"
     ),
-    alt: "Automatic Milk Collection System with LactoTrack Milk Collection Application",
+    alt: "AMCS Android-Based Automatic Milk Collection System with LactoTrack Milk Collection Application",
+  },
+  {
+    src: cld(
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1791018946/IMG-20261003-WA0012_zs0kyv.webp"
+    ),
+    alt: "AMCS Android-Based Automatic Milk Collection System",
+  },
+  {
+    src: cld(
+      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1791018946/Screenshot_2026_1003_140731_yco2ic.webp"
+    ),
+    alt: "AMCS Android-Based LactoTrack Milk Collection Application",
   },
 ],
-
 price: "46,000",
 
 features: [
