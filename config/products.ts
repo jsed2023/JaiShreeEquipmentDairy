@@ -1655,9 +1655,9 @@ If you are searching for a Data Processor Unit for Milk Collection, Automatic Mi
     "Data Processor Unit for Milk Collection, Milk Collection Data Processor Unit, Dairy Khata Data Processor Unit, Automatic Milk Collection Data Processor Unit, DPU for Milk Collection, Milk Billing Machine, Automatic Milk Collection System, Milk Collection Machine, Dairy Data Processor, Dairy Khata DPU, Dairy Billing Machine, Milk Collection Software, Dairy Automation Equipment, Milk Procurement System, Milk Analyzer Compatible DPU, Weighing Scale Compatible DPU, Thermal Receipt Printing Machine, FAT SNF Billing Machine, Dairy Society Billing Machine, Milk Collection Center Machine, Dairy Farm Equipment, Dairy Cooperative Equipment, Digital Milk Collection Machine, Dairy Machine India, Dairy Machine Rajasthan, Milk Collection Machine Rajasthan, Milk Collection Machine Sri Ganganagar, Dairy Machine Hanumangarh, Dairy Machine Bikaner, Dairy Machine Suratgarh, Village Milk Collection Machine, Bulk Milk Collection System, Customer Ledger Milk Collection Software, Dairy Procurement Equipment, Milk Collection Data Management, Buy Data Processor Unit for Milk Collection",
 },
 {id: 16,
-url: "android-based-automatic-milk-collection-system",
+url: "android-based-amcs",
 
-name: "Automatic Milk Collection System – Android Based",
+name: "Amcs – Android Based",
 
 updatedAt: "2026-10-03",
 
