@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { spareParts } from "@/config/spareparts";
 
+export const dynamic = "force-dynamic";
+
 type PageProps = {
   params: Promise<{
     "spare-parts-name": string;
