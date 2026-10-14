@@ -9,26 +9,14 @@ import {
 
 import { blogs } from "@/config/blogs";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
-
+import { spareParts } from "@/config/spareparts";
 /**
  * Production canonical domain.
  */
 const BASE_URL = "https://jaishreeequipmentdairy.co.in";
 
-/**
- * Next.js will revalidate the sitemap every hour.
- *
- * NOTE:
- * This does not mean Google will crawl/index URLs every hour.
- */
 export const revalidate = 3600;
 
-/**
- * Last meaningful update date for static pages.
- *
- * Change this only when these static/category pages
- * have actually received meaningful content updates.
- */
 const STATIC_LAST_MODIFIED = "2026-07-09";
 
 type SitemapItem = {
@@ -48,11 +36,7 @@ type LocationItem = {
   updatedAt?: string | Date;
 };
 
-/**
- * Safely convert a date into a valid Date object.
- *
- * Invalid or missing dates are excluded from sitemap.xml.
- */
+
 function parseDate(
   value?: string | Date
 ): Date | undefined {
@@ -72,15 +56,6 @@ function parseDate(
   return date;
 }
 
-/**
- * Clean individual URL segments.
- *
- * Examples:
- *
- * "/abc/"   -> "abc"
- * " abc "   -> "abc"
- * "//abc//" -> "abc"
- */
 function cleanSegment(value: unknown): string {
   if (typeof value !== "string") {
     return "";
@@ -104,9 +79,7 @@ function normalizePath(path: string): string {
   return `/${cleaned}`;
 }
 
-/**
- * Build an absolute canonical URL.
- */
+
 function buildUrl(path: string): string {
   const normalizedPath = normalizePath(path);
 
@@ -123,17 +96,10 @@ function buildUrl(path: string): string {
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  /**
-   * Prevent duplicate URLs.
-   */
+
   const addedUrls = new Set<string>();
 
-  /**
-   * Add a URL to sitemap.
-   *
-   * lastModified should represent a genuine
-   * content modification date.
-   */
+ 
   const addUrl = (
     path: string,
     lastModified?: string | Date
@@ -368,6 +334,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       );
     });
   }
+
+// ==================================================
+// MILK TESTING MACHINE SPARE PARTS
+// ==================================================
+
+if (Array.isArray(spareParts)) {
+  spareParts.forEach((product) => {
+    const name =
+      typeof product?.name === "string"
+        ? product.name
+        : "";
+
+    const slug = name
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+    if (!slug) {
+      return;
+    }
+
+    addUrl(
+      `/milk-testing-machine-spare-parts/${slug}`,
+      new Date("2026-10-14")
+    );
+  });
+}
 
   // ==================================================
   // RAJASTHAN LOCATION LANDING PAGES
