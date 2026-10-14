@@ -110,7 +110,7 @@ export const spareParts = [
   {
     id: 3,
     slug: "ekomilk-ultra-v17-pcb-board",
-    name: "Ekomilk Ultra V17 PCB Control Board",
+    name: "Ekomilk Ultra V17 PCB Board",
     sku: "EKO-PCB-V17-003",
     price: "₹12,000",
     category: "Milk Analyzer Spare Parts",
@@ -164,7 +164,7 @@ export const spareParts = [
   {
     id: 4,
     slug: "thermal-printer",
-    name: "RP203 58mm Panel Thermal Printer",
+    name: "thermal-printer",
     sku: "TIFAC0083",
     price: "₹3,800",
     category: "Printer",
@@ -768,5 +768,57 @@ export const spareParts = [
       Condition: "New",
       Warranty: "1 Year"
     }
+  },
+  {
+  id: 15,
+  slug: "ekomilk-ultra-v22-pcb-board",
+  name: "Milk Analyzer V22 PCB Board",
+  sku: "MLPL22-KE",
+  price: "₹15,000",
+  category: "Milk Analyzer Spare Parts",
+  stockStatus: "In Stock",
+  warranty: "1 Year",
+
+  photo:
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1791967232/milk-analyzer-v22-pcb-board.webp",
+
+  keywords: [
+    "ekomilk v22 pcb",
+    "ekomilk ultra v22 pcb board",
+    "milk analyzer pcb",
+    "ekomilk control board",
+    "Milk Analyzer V22 PCB Board",
+    "ekomilk spare parts"
+  ],
+
+  metaTitle:
+    "Milk Analyzer V22 PCB Board",
+
+  metaDescription:
+    "Buy Milk Analyzer V22 PCB Board for compatible milk analyzer machines. Contact Jai Shree Equipment Dairy for availability and compatibility.",
+
+  alt: "Milk Analyzer V22 PCB Board",
+
+  description:
+    "Replacement PCB control board for compatible Ekomilk Ultra V22 milk analyzer machines. Verify the exact model and board revision before ordering.",
+
+  keyFeatures: [
+    "Replacement PCB control board",
+    "Designed for compatible V22 models",
+    "Supports analyzer control functions",
+    "Quality electronic components",
+    "Confirm compatibility before installation",
+    "inbilud printer",
+    "model number printer "
+  ],
+
+  specifications: {
+    ProductType: "PCB Control Board",
+    Model: "Ultra V22",
+    Compatibility: "Confirm exact Ekomilk model",
+    Voltage: "Confirm before installation",
+    Interface: "Confirm board revision",
+    Condition: "New"
   }
+},
 ];
