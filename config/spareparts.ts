@@ -164,7 +164,7 @@ export const spareParts = [
   {
     id: 4,
     slug: "thermal-printer",
-    name: "thermal-printer",
+    name: "Thermal Printer",
     sku: "TIFAC0083",
     price: "₹3,800",
     category: "Printer",
