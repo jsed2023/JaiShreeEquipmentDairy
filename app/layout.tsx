@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "dairy equipment, milk testing equipment, milk analyzer machines, automatic milk collection system",
 
   alternates: {
-    canonical: siteConfig.url,
+    canonical:"https://jaishreeequipmentdairy.co.in",
   },
 
   icons: {
