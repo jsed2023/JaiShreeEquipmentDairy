@@ -769,9 +769,10 @@ export const spareParts = [
       Warranty: "1 Year"
     }
   },
-  {
+  
+{
   id: 15,
-  slug: "ekomilk-ultra-v22-pcb-board",
+  slug: "milk-analyzer-v22-pcb-board",
   name: "Milk Analyzer V22 PCB Board",
   sku: "MLPL22-KE",
   price: "₹15,000",
@@ -783,42 +784,53 @@ export const spareParts = [
     "https://res.cloudinary.com/dddhtbuzs/image/upload/v1791967232/milk-analyzer-v22-pcb-board.webp",
 
   keywords: [
-    "ekomilk v22 pcb",
-    "ekomilk ultra v22 pcb board",
-    "milk analyzer pcb",
-    "ekomilk control board",
+    "milk analyzer v22 pcb board",
+    "Ekomilk Ultra V22 PCB board",
+    "Ekomilk V22 PCB available",
+    "new milk analyzer PCB board",
+    "Ekomilk control board",
+    "milk analyzer spare parts",
+    "buy Ekomilk V22 PCB",
     "Milk Analyzer V22 PCB Board",
-    "ekomilk spare parts"
+    "Ekomilk PCB board price",
+    "Ekomilk spare parts India",
+    "Jai Shree Equipment Dairy"
   ],
 
   metaTitle:
-    "Milk Analyzer V22 PCB Board",
+    "Milk Analyzer V22 PCB Board | Jai Shree Equipment Dairy",
 
   metaDescription:
-    "Buy Milk Analyzer V22 PCB Board for compatible milk analyzer machines. Contact Jai Shree Equipment Dairy for availability and compatibility.",
+    "Milk Analyzer V22 PCB Board available at Jai Shree Equipment Dairy for ₹15,000 with a 1-year warranty. Contact us to confirm model compatibility and availability.",
 
-  alt: "Milk Analyzer V22 PCB Board",
+  alt: "Milk Analyzer V22 PCB Board for Ekomilk Ultra V22",
 
   description:
-    "Replacement PCB control board for compatible Ekomilk Ultra V22 milk analyzer machines. Verify the exact model and board revision before ordering.",
+    "New replacement PCB control board for compatible Ekomilk Ultra V22 milk analyzer machines. Available from Jai Shree Equipment Dairy at ₹15,000 with a 1-year warranty. Please confirm your exact machine model, PCB revision, voltage, and connector compatibility before ordering or installation.",
 
   keyFeatures: [
-    "Replacement PCB control board",
-    "Designed for compatible V22 models",
-    "Supports analyzer control functions",
-    "Quality electronic components",
-    "Confirm compatibility before installation",
-    "inbilud printer",
-    "model number printed "
+    "New replacement PCB control board",
+    "For compatible Ekomilk Ultra V22 milk analyzer models",
+    "Designed for milk analyzer control functions",
+    "PCB model and revision verification recommended",
+    "Confirm voltage and connector compatibility before installation",
+    "Printer compatibility to be confirmed",
+    "Model identification printed on the board, where applicable",
+    "1-year warranty",
+    "Available from Jai Shree Equipment Dairy"
   ],
 
   specifications: {
     ProductType: "PCB Control Board",
-    Model: "Ultra V22",
-    Compatibility: "Confirm exact Ekomilk model",
-    Voltage: "Confirm before installation",
-    Interface: "Confirm board revision",
-    Condition: "New"
+    Model: "Ekomilk Ultra V22",
+    Compatibility: "Confirm exact machine model before ordering",
+    Voltage: "Confirm from PCB label or manufacturer",
+    Interface: "Confirm connector and board revision",
+    PrinterCompatibility: "Confirm before ordering",
+    Condition: "New",
+    StockStatus: "In Stock",
+    Warranty: "1 Year",
+    Price: "₹15,000"
   }
 },
 ];
