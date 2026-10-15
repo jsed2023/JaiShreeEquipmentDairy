@@ -809,7 +809,7 @@ export const spareParts = [
     "Quality electronic components",
     "Confirm compatibility before installation",
     "inbilud printer",
-    "model number printer "
+    "model number printed "
   ],
 
   specifications: {
