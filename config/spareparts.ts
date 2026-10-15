@@ -822,7 +822,7 @@ export const spareParts = [
 
   specifications: {
     ProductType: "PCB Control Board",
-    Model: "Ekomilk Ultra V22",
+    Model: "Advance Milk Ultra V22",
     Compatibility: "Confirm exact machine model before ordering",
     Voltage: "Confirm from PCB label or manufacturer",
     Interface: "Confirm connector and board revision",
