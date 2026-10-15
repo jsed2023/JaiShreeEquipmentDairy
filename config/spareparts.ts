@@ -810,7 +810,7 @@ export const spareParts = [
 
   keyFeatures: [
     "New replacement PCB control board",
-    "For compatible Ekomilk Ultra V22 milk analyzer models",
+    "For compatible All milk Analyzer Machine Ultra board add in latest version PCB-V22 milk analyzer models",
     "Designed for milk analyzer control functions",
     "PCB model and revision verification recommended",
     "Confirm voltage and connector compatibility before installation",
