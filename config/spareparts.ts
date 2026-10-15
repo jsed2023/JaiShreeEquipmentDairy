@@ -769,7 +769,6 @@ export const spareParts = [
       Warranty: "1 Year"
     }
   },
-  
 {
   id: 15,
   slug: "milk-analyzer-v22-pcb-board",
@@ -785,37 +784,40 @@ export const spareParts = [
 
   keywords: [
     "milk analyzer v22 pcb board",
-    "Ekomilk Ultra V22 PCB board",
-    "Ekomilk V22 PCB available",
+    "latest version PCB-V22",
+    "Advance Milk Ultra V22 PCB",
+    "milk analyzer latest version PCB board",
+    "all milk analyzer machine ultra PCB",
     "new milk analyzer PCB board",
-    "Ekomilk control board",
+    "Ekomilk Ultra V22 PCB board",
+    "milk analyzer control board",
     "milk analyzer spare parts",
-    "buy Ekomilk V22 PCB",
+    "buy milk analyzer PCB board",
     "Milk Analyzer V22 PCB Board",
-    "Ekomilk PCB board price",
-    "Ekomilk spare parts India",
     "Jai Shree Equipment Dairy"
   ],
 
   metaTitle:
-    "Milk Analyzer V22 PCB Board | Jai Shree Equipment Dairy",
+    "Latest Milk Analyzer V22 PCB Board | Jai Shree Equipment Dairy",
 
   metaDescription:
-    "Milk Analyzer V22 PCB Board available at Jai Shree Equipment Dairy for ₹15,000 with a 1-year warranty. Contact us to confirm model compatibility and availability.",
+    "Buy the latest version Milk Analyzer V22 PCB Board for compatible Ultra milk analyzer machines. Price ₹15,000 with a 1-year warranty. Contact Jai Shree Equipment Dairy to confirm compatibility.",
 
-  alt: "Milk Analyzer V22 PCB Board for Ekomilk Ultra V22",
+  alt:
+    "Latest Version V22 PCB Control Board for Milk Analyzer Machine",
 
   description:
-    "New replacement PCB control board for compatible Ekomilk Ultra V22 milk analyzer machines. Available from Jai Shree Equipment Dairy at ₹15,000 with a 1-year warranty. Please confirm your exact machine model, PCB revision, voltage, and connector compatibility before ordering or installation.",
+    "New latest-version PCB control board for compatible milk analyzer machines, including applicable Ultra models using the PCB-V22 board. The Advance Milk Ultra V22 PCB board is available from Jai Shree Equipment Dairy for ₹15,000 with a 1-year warranty. Please confirm your machine model, PCB revision, voltage, and connector compatibility before ordering or installation.",
 
   keyFeatures: [
-    "New replacement PCB control board",
-    "For compatible All milk Analyzer Machine Ultra board add in latest version PCB-V22 milk analyzer models",
+    "New latest-version PCB-V22 control board",
+    "For compatible Ultra milk analyzer machines",
     "Designed for milk analyzer control functions",
-    "PCB model and revision verification recommended",
-    "Confirm voltage and connector compatibility before installation",
-    "Printer compatibility to be confirmed",
-    "Model identification printed on the board, where applicable",
+    "Suitable for applicable machines using the V22 PCB version",
+    "Confirm exact machine model and PCB revision before ordering",
+    "Verify voltage and connector compatibility before installation",
+    "Printer compatibility should be confirmed before ordering",
+    "New product condition",
     "1-year warranty",
     "Available from Jai Shree Equipment Dairy"
   ],
@@ -823,10 +825,15 @@ export const spareParts = [
   specifications: {
     ProductType: "PCB Control Board",
     Model: "Advance Milk Ultra V22",
-    Compatibility: "Confirm exact machine model before ordering",
-    Voltage: "Confirm from PCB label or manufacturer",
-    Interface: "Confirm connector and board revision",
-    PrinterCompatibility: "Confirm before ordering",
+    PCBVersion: "Latest Version PCB-V22",
+    Compatibility:
+      "Compatible models only; confirm exact machine model before ordering",
+    Voltage:
+      "Confirm from PCB label or manufacturer",
+    Interface:
+      "Confirm connector and board revision",
+    PrinterCompatibility:
+      "Confirm before ordering",
     Condition: "New",
     StockStatus: "In Stock",
     Warranty: "1 Year",
