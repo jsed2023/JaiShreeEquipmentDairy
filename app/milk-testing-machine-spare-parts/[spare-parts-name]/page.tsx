@@ -5,6 +5,13 @@ import { notFound } from "next/navigation";
 import { spareParts } from "@/config/spareparts";
 
 /* =========================
+   STATIC RENDERING
+========================= */
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+/* =========================
    TYPES
 ========================= */
 
@@ -20,7 +27,7 @@ type PageProps = {
 
 export function generateStaticParams() {
   return spareParts.map((product) => ({
-    "spare-parts-name": product.slug,
+    "spare-parts-name": product.url,
   }));
 }
 
@@ -28,13 +35,17 @@ export function generateStaticParams() {
    GET SPARE PART
 ========================= */
 
-function getSparePart(slug: string) {
-  const normalizedSlug = decodeURIComponent(slug)
-    .trim()
-    .toLowerCase();
+function getSparePart(url: string) {
+  let normalizedUrl: string;
+
+  try {
+    normalizedUrl = decodeURIComponent(url).trim().toLowerCase();
+  } catch {
+    return undefined;
+  }
 
   return spareParts.find(
-    (item) => item.slug.trim().toLowerCase() === normalizedSlug
+    (item) => item.url.trim().toLowerCase() === normalizedUrl
   );
 }
 
@@ -55,9 +66,9 @@ function getWhatsAppUrl(productName: string) {
 export default async function SparePartDetailPage({
   params,
 }: PageProps) {
-  const { "spare-parts-name": slug } = await params;
+  const { "spare-parts-name": url } = await params;
 
-  const product = getSparePart(slug);
+  const product = getSparePart(url);
 
   if (!product) {
     notFound();
@@ -67,10 +78,8 @@ export default async function SparePartDetailPage({
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-8 sm:py-12">
-
       {/* PRODUCT DETAILS */}
       <section className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-
         {/* PRODUCT IMAGE */}
         <div className="relative min-h-72 overflow-hidden rounded-3xl border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900 sm:min-h-96">
           <Image
@@ -85,7 +94,6 @@ export default async function SparePartDetailPage({
 
         {/* PRODUCT INFORMATION */}
         <div className="flex flex-col justify-center">
-
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-sky-600">
             {product.category}
           </p>
@@ -112,7 +120,6 @@ export default async function SparePartDetailPage({
 
           {/* SKU AND WARRANTY */}
           <div className="mt-6 grid grid-cols-2 gap-4">
-
             <div className="rounded-xl bg-zinc-100 p-4 dark:bg-zinc-800">
               <p className="text-sm text-zinc-500 dark:text-zinc-400">
                 Product SKU
@@ -132,7 +139,6 @@ export default async function SparePartDetailPage({
                 {product.warranty}
               </p>
             </div>
-
           </div>
 
           {/* WHATSAPP ENQUIRY */}
@@ -146,13 +152,11 @@ export default async function SparePartDetailPage({
               Enquire on WhatsApp
             </a>
           </div>
-
         </div>
       </section>
 
       {/* PRODUCT DESCRIPTION */}
       <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900 sm:mt-16 sm:p-8">
-
         <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">
           Product Description
         </h2>
@@ -160,13 +164,11 @@ export default async function SparePartDetailPage({
         <p className="mt-4 whitespace-pre-line leading-8 text-zinc-600 dark:text-zinc-300">
           {product.description}
         </p>
-
       </section>
 
       {/* KEY FEATURES */}
       {product.keyFeatures?.length > 0 && (
         <section className="mt-8 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900 sm:p-8">
-
           <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">
             Key Features
           </h2>
@@ -185,7 +187,6 @@ export default async function SparePartDetailPage({
               </li>
             ))}
           </ul>
-
         </section>
       )}
 
@@ -193,7 +194,6 @@ export default async function SparePartDetailPage({
       {product.specifications &&
         Object.keys(product.specifications).length > 0 && (
           <section className="mt-8 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900 sm:p-8">
-
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">
               Technical Specifications
             </h2>
@@ -223,19 +223,16 @@ export default async function SparePartDetailPage({
                 </tbody>
               </table>
             </div>
-
           </section>
         )}
 
       {/* ADDITIONAL PRODUCT INFORMATION */}
       <section className="mt-8 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900 sm:p-8">
-
         <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">
           Additional Product Information
         </h2>
 
         <dl className="mt-5 divide-y divide-zinc-200 dark:divide-zinc-700">
-
           <div className="flex flex-wrap justify-between gap-3 py-4">
             <dt className="font-semibold text-zinc-700 dark:text-zinc-300">
               Product Name
@@ -285,13 +282,11 @@ export default async function SparePartDetailPage({
               {product.warranty}
             </dd>
           </div>
-
         </dl>
       </section>
 
       {/* FINAL CTA */}
-      <section className="mt-12 rounded-3xl bg-gradient-to-r from-sky-600 to-blue-700 p-7 text-center text-white sm:mt-16 sm:p-12">
-
+      <section className="mt-12 rounded-3xl bg-gradient-to-r from-sky-300 to-blue-300 p-7 text-center text-black sm:mt-16 sm:p-12">
         <h2 className="text-2xl font-extrabold sm:text-4xl">
           Need This Spare Part?
         </h2>
@@ -305,11 +300,10 @@ export default async function SparePartDetailPage({
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-7 inline-block rounded-xl bg-white px-8 py-4 font-bold text-green-700 transition hover:scale-105"
+          className="mt-7 inline-block rounded-xl bg-white px-8 py-4 font-bold text-green-500 transition hover:scale-105"
         >
           Get Price on WhatsApp
         </a>
-
       </section>
 
       {/* BACK TO PRODUCTS */}
@@ -321,7 +315,6 @@ export default async function SparePartDetailPage({
           ← Browse All Milk Testing Machine Spare Parts
         </Link>
       </div>
-
     </main>
   );
 }

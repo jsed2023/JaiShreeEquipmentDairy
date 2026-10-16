@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-
 import { spareParts } from "@/config/spareparts";
 import { siteConfig } from "@/config/site";
 
@@ -14,16 +13,28 @@ type LayoutProps = {
 };
 
 /* =========================
+   STATIC GENERATION
+========================= */
+
+export const dynamicParams = false;
+
+export function generateStaticParams(): Params[] {
+  return spareParts.map((item) => ({
+    "spare-parts-name": item.url,
+  }));
+}
+
+/* =========================
    GET SPARE PART
 ========================= */
 
-function getSparePart(slug: string) {
-  const normalizedSlug = decodeURIComponent(slug)
+function getSparePart(url: string) {
+  const normalizedUrl = decodeURIComponent(url)
     .trim()
     .toLowerCase();
 
   return spareParts.find(
-    (item) => item.slug.trim().toLowerCase() === normalizedSlug
+    (item) => item.url.trim().toLowerCase() === normalizedUrl
   );
 }
 
@@ -47,20 +58,16 @@ const notFoundMetadata: Metadata = {
 export async function generateMetadata({
   params,
 }: LayoutProps): Promise<Metadata> {
-  const { "spare-parts-name": slug } = await params;
+  const { "spare-parts-name": url } = await params;
 
-  if (!slug) {
-    return notFoundMetadata;
-  }
-
-  const product = getSparePart(slug);
+  const product = getSparePart(url);
 
   if (!product) {
     return notFoundMetadata;
   }
 
   const productUrl =
-    `${siteConfig.url}/milk-testing-machine-spare-parts/${product.slug}`;
+    `${siteConfig.url}/milk-testing-machine-spare-parts/${product.url}`;
 
   return {
     title: product.metaTitle,
@@ -84,12 +91,6 @@ export async function generateMetadata({
       siteName: siteConfig.name,
       locale: "en_IN",
       type: "website",
-      images: [
-        {
-          url: product.photo,
-          alt: product.alt || product.name,
-        },
-      ],
     },
 
     twitter: {
@@ -114,15 +115,11 @@ export default async function SparePartsDetailLayout({
   children,
   params,
 }: LayoutProps) {
-  const { "spare-parts-name": slug } = await params;
+  const { "spare-parts-name": url } = await params;
 
-  if (!getSparePart(slug)) {
+  if (!getSparePart(url)) {
     notFound();
   }
 
-  return (
-    <div className="overflow-x-hidden">
-      {children}
-    </div>
-  );
+  return <div className="overflow-x-hidden">{children}</div>;
 }

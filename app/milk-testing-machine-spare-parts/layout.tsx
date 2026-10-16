@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Milk Testing Machine Spare Parts - Jai Shree Equipment Dairy",
+    title: "Milk Testing Machine Spare Parts",
     description:
       "Premium quality milk analyzer spare parts, dairy equipment spare parts, AMCU spare parts and milk testing machine accessories available across India.",
     url: `${siteConfig.url}/milk-testing-machine-spare-parts`,
