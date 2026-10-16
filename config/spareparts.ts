@@ -1,7 +1,7 @@
 export const spareParts = [
   {
     id: 1,
-    slug: "ekomilk-motor-assembly",
+    slug: "ekomilk-motor-assembly-complete",
     name: "Ekomilk Motor Assembly Complete",
     sku: "EKO-PMA-001",
     price: "₹5,500",
@@ -22,7 +22,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Motor Assembly Complete | Milk Analyzer Spare Part",
+      "Ekomilk Motor Assembly Complete",
 
     metaDescription:
       "Buy Ekomilk Motor Assembly for milk analyzer machines. Reliable replacement motor for smooth sample suction and accurate milk testing.",
@@ -76,7 +76,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Analyzer Sensor | Genuine Milk Analyzer Spare Part",
+      "Ekomilk Analyzer Sensor",
 
     metaDescription:
       "Buy Ekomilk Analyzer Sensor for accurate milk testing. Compatible with Ekomilk Ultra and Pro milk analyzers.",
@@ -130,7 +130,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Ultra V17 PCB Control Board | Milk Analyzer PCB",
+      "Ekomilk Ultra V17 PCB Control Board",
 
     metaDescription:
       "Buy Ekomilk Ultra V17 PCB Control Board for milk analyzer machines. Reliable replacement control board.",
@@ -186,7 +186,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "RP203 58mm Thermal Printer | Milk Analyzer & AMCU Printer",
+      "Thermal Printer",
 
     metaDescription:
       "RP203 58mm panel thermal printer with TTL/RS232 interface, direct thermal printing and up to 85 mm/s speed.",
@@ -254,7 +254,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Milk Analyzer Syringes, Beakers & Plungers | Consumables",
+      "Milk Analyzer Syringes, Beakers & Plungers",
 
     metaDescription:
       "Milk analyzer syringes, beakers and plungers compatible with Ekomilk, Lactoscan and other milk analyzers.",
@@ -308,7 +308,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Daily Cleaning Solution 200 ml | Milk Analyzer Cleaner",
+      "Ekomilk Daily Cleaning Solution 200 ml",
 
     metaDescription:
       "Ekomilk Daily Cleaning Solution 200 ml for regular milk analyzer cleaning and maintenance.",
@@ -359,7 +359,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Weekly Cleaning Solution 200 ml | Deep Cleaner",
+      "Ekomilk Weekly Cleaning Solution 200 ml",
 
     metaDescription:
       "Ekomilk Weekly Cleaning Solution 200 ml for deep cleaning and maintenance of milk analyzer machines.",
@@ -411,7 +411,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Lactoscan Milk Analyzer PCB Board | Control Board",
+      "Lactoscan Milk Analyzer PCB Board",
 
     metaDescription:
       "Lactoscan Milk Analyzer PCB Board compatible with SL30 and LS30 models.",
@@ -469,7 +469,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk LCD Display Module | Milk Analyzer Display",
+      "Ekomilk LCD Display Module",
 
     metaDescription:
       "Genuine Ekomilk LCD Display Module compatible with Ultra, DPS and Pro milk analyzer models.",
@@ -521,7 +521,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Keypad | Milk Analyzer Keypad Replacement",
+      "Ekomilk Keypad",
 
     metaDescription:
       "Replacement Ekomilk membrane keypad compatible with Ultra, DPS and Pro milk analyzer machines.",
@@ -572,7 +572,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Motor PCB | Motor Control Board",
+      "Ekomilk Motor PCB",
 
     metaDescription:
       "Ekomilk Motor PCB for Ultra and Ultra Pro milk analyzers. Replacement motor control board.",
@@ -623,7 +623,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Lactoscan Motor | Milk Analyzer Replacement Motor",
+      "Lactoscan Motor",
 
     metaDescription:
       "12V DC replacement motor for compatible Lactoscan milk analyzer machines.",
@@ -676,7 +676,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Milk Analyzer Plastic Body Cabinet | Ekomilk Spare Part",
+      "Milk Analyzer Plastic Body Cabinet",
 
     metaDescription:
       "Durable replacement plastic body cabinet for compatible Ekomilk milk analyzer machines.",
@@ -732,7 +732,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Ultra Milk Analyzer | Automatic Milk Testing Machine",
+      "Ekomilk Ultra Milk Analyzer",
 
     metaDescription:
       "Ekomilk Ultra ultrasonic milk analyzer for fast milk testing. Measures Fat, SNF, Density, Protein and other milk parameters.",
@@ -798,7 +798,7 @@ export const spareParts = [
   ],
 
   metaTitle:
-    "Latest Milk Analyzer V22 PCB Board | Jai Shree Equipment Dairy",
+    "Milk Analyzer V22 PCB Board",
 
   metaDescription:
     "Buy the latest version Milk Analyzer V22 PCB Board for compatible Ultra milk analyzer machines. Price ₹15,000 with a 1-year warranty. Contact Jai Shree Equipment Dairy to confirm compatibility.",
