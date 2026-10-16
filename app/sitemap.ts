@@ -7,7 +7,6 @@ import {
   MilkAnalyzerMachines,
 } from "@/config/products";
 
-import { blogs } from "@/config/blogs";
 import { rajasthanLocations } from "@/lib/rajasthan-locations";
 import { spareParts } from "@/config/spareparts";
 /**
@@ -153,11 +152,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   addUrl(
     "/contact",
-    STATIC_LAST_MODIFIED
-  );
-
-  addUrl(
-    "/blog",
     STATIC_LAST_MODIFIED
   );
 
@@ -311,29 +305,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // ==================================================
-  // BLOG POSTS
-  // ==================================================
-
-  if (
-    blogs &&
-    typeof blogs === "object"
-  ) {
-    Object.values(
-      blogs as Record<string, BlogItem>
-    ).forEach((blog) => {
-      const slug = cleanSegment(blog?.slug);
-
-      if (!slug) {
-        return;
-      }
-
-      addUrl(
-        `/blog/${slug}`,
-        blog.updatedAt
-      );
-    });
-  }
 
 // ==================================================
 // MILK TESTING MACHINE SPARE PARTS
