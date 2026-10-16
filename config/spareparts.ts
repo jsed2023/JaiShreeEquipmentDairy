@@ -1,7 +1,7 @@
 export const spareParts = [
   {
     id: 1,
-    slug: "ekomilk-motor-assembly-complete",
+    url: "ekomilk-motor-assembly-complete",
     name: "Ekomilk Motor Assembly Complete",
     sku: "EKO-PMA-001",
     price: "₹5,500",
@@ -55,7 +55,7 @@ export const spareParts = [
 
   {
     id: 2,
-    slug: "ekomilk-analyzer-sensor",
+    url: "ekomilk-analyzer-sensor",
     name: "Ekomilk Analyzer Sensor",
     sku: "EKO-SEN-002",
     price: "₹3,300",
@@ -109,7 +109,7 @@ export const spareParts = [
 
   {
     id: 3,
-    slug: "ekomilk-ultra-v17-pcb-board",
+    url: "ekomilk-ultra-v17-pcb-board",
     name: "Ekomilk Ultra V17 PCB Board",
     sku: "EKO-PCB-V17-003",
     price: "₹12,000",
@@ -163,7 +163,7 @@ export const spareParts = [
 
   {
     id: 4,
-    slug: "thermal-printer",
+    url: "thermal-printer",
     name: "Thermal Printer",
     sku: "TIFAC0083",
     price: "₹3,800",
@@ -233,7 +233,7 @@ export const spareParts = [
 
   {
     id: 5,
-    slug: "milk-analyzer-Syringes-Beakers-Plungers",
+    url: "milk-analyzer-Syringes-Beakers-Plungers",
     name: "Milk Analyzer Syringes, Beakers, Plungers",
     sku: "MAC-005",
     price: "₹140 / Piece",
@@ -288,7 +288,7 @@ export const spareParts = [
 
   {
     id: 6,
-    slug: "ekomilk-daily-cleaning-solution-200ml",
+    url: "ekomilk-daily-cleaning-solution-200ml",
     name: "Ekomilk Daily Cleaning Solution 200ml",
     sku: "EKO-DCS-200",
     price: "₹300",
@@ -339,7 +339,7 @@ export const spareParts = [
 
   {
     id: 7,
-    slug: "ekomilk-weekly-cleaning-solution-200ml",
+    url: "ekomilk-weekly-cleaning-solution-200ml",
     name: "Ekomilk Weekly Cleaning Solution 200ml",
     sku: "EKO-WCS-200",
     price: "₹350",
@@ -390,7 +390,7 @@ export const spareParts = [
 
   {
     id: 8,
-    slug: "lactoscan-milk-analyzer-pcb-board",
+    url: "lactoscan-milk-analyzer-pcb-board",
     name: "Lactoscan Milk Analyzer PCB Board",
     sku: "LAC-PCB-008",
     price: "₹13,500",
@@ -448,7 +448,7 @@ export const spareParts = [
 
   {
     id: 9,
-    slug: "ekomilk-lcd-display-module",
+    url: "ekomilk-lcd-display-module",
     name: "Ekomilk LCD Display Module",
     sku: "EKO-LCD-008",
     price: "₹1,500",
@@ -500,7 +500,7 @@ export const spareParts = [
 
   {
     id: 10,
-    slug: "ekomilk-keypad",
+    url: "ekomilk-keypad",
     name: "Ekomilk Keypad",
     sku: "EKO-KPD-009",
     price: "₹1,000",
@@ -552,7 +552,7 @@ export const spareParts = [
 
   {
     id: 11,
-    slug: "ekomilk-motor-pcb",
+    url: "ekomilk-motor-pcb",
     name: "Ekomilk Motor PCB",
     sku: "EKO-MPCB-010",
     price: "₹3,000",
@@ -603,7 +603,7 @@ export const spareParts = [
 
   {
     id: 12,
-    slug: "lactoscan-motor",
+    url: "lactoscan-motor",
     name: "Lactoscan Motor",
     sku: "LAC-MTR-013",
     price: "₹4,500",
@@ -655,7 +655,7 @@ export const spareParts = [
 
   {
     id: 13,
-    slug: "milk-analyzer-plastic-body-cabinet",
+    url: "milk-analyzer-plastic-body-cabinet",
     name: "Milk Analyzer Plastic Body Cabinet",
     sku: "EKO-CAB-013",
     price: "₹2,500",
@@ -709,7 +709,7 @@ export const spareParts = [
 
   {
     id: 14,
-    slug: "ekomilk-ultra-milk-analyzer",
+    url: "ekomilk-ultra-milk-analyzer",
     name: "Ekomilk Ultra Milk Analyzer",
     sku: "EKO-ULTRA-014",
     price: "Contact for Price",
@@ -771,7 +771,7 @@ export const spareParts = [
   },
 {
   id: 15,
-  slug: "milk-analyzer-v22-pcb-board",
+  url: "milk-analyzer-v22-pcb-board",
   name: "Milk Analyzer V22 PCB Board",
   sku: "MLPL22-KE",
   price: "₹15,000",
