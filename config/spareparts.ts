@@ -234,7 +234,7 @@ export const spareParts = [
   {
     id: 5,
     slug: "milk-analyzer-consumables-kit",
-    name: "Syringes, Beakers & Plungers",
+    name: "Milk Analyzer Syringes, Beakers & Plungers",
     sku: "MAC-005",
     price: "₹140 / Piece",
     category: "Milk Analyzer Consumables",
@@ -308,7 +308,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Daily Cleaning Solution 200 ml",
+      "Ekomilk Daily Cleaning Solution (200 ml)",
 
     metaDescription:
       "Ekomilk Daily Cleaning Solution 200 ml for regular milk analyzer cleaning and maintenance.",
@@ -359,7 +359,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Weekly Cleaning Solution 200 ml",
+      "Ekomilk Weekly Cleaning Solution (200 ml)",
 
     metaDescription:
       "Ekomilk Weekly Cleaning Solution 200 ml for deep cleaning and maintenance of milk analyzer machines.",
