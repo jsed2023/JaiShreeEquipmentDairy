@@ -11,7 +11,7 @@ import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase:(siteConfig.url),
 
   title: {
     default: siteConfig.name,
