@@ -233,8 +233,8 @@ export const spareParts = [
 
   {
     id: 5,
-    slug: "milk-analyzer-consumables-kit",
-    name: "Milk Analyzer Syringes, Beakers & Plungers",
+    slug: "milk-analyzer-Syringes-Beakers-Plungers",
+    name: "Milk Analyzer Syringes, Beakers, Plungers",
     sku: "MAC-005",
     price: "₹140 / Piece",
     category: "Milk Analyzer Consumables",
@@ -254,7 +254,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Milk Analyzer Syringes, Beakers & Plungers",
+      "Milk Analyzer Syringes, Beakers, Plungers",
 
     metaDescription:
       "Milk analyzer syringes, beakers and plungers compatible with Ekomilk, Lactoscan and other milk analyzers.",
@@ -289,7 +289,7 @@ export const spareParts = [
   {
     id: 6,
     slug: "ekomilk-daily-cleaning-solution-200ml",
-    name: "Ekomilk Daily Cleaning Solution (200 ml)",
+    name: "Ekomilk Daily Cleaning Solution 200ml",
     sku: "EKO-DCS-200",
     price: "₹300",
     category: "Cleaning Solution",
@@ -308,7 +308,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Daily Cleaning Solution (200 ml)",
+      "Ekomilk Daily Cleaning Solution 200ml",
 
     metaDescription:
       "Ekomilk Daily Cleaning Solution 200 ml for regular milk analyzer cleaning and maintenance.",
@@ -340,7 +340,7 @@ export const spareParts = [
   {
     id: 7,
     slug: "ekomilk-weekly-cleaning-solution-200ml",
-    name: "Ekomilk Weekly Cleaning Solution (200 ml)",
+    name: "Ekomilk Weekly Cleaning Solution 200ml",
     sku: "EKO-WCS-200",
     price: "₹350",
     category: "Cleaning Solution",
@@ -359,7 +359,7 @@ export const spareParts = [
     ],
 
     metaTitle:
-      "Ekomilk Weekly Cleaning Solution (200 ml)",
+      "Ekomilk Weekly Cleaning Solution 200ml",
 
     metaDescription:
       "Ekomilk Weekly Cleaning Solution 200 ml for deep cleaning and maintenance of milk analyzer machines.",
