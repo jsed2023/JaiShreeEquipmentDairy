@@ -19,9 +19,14 @@ export const metadata: Metadata = {
   },
 
   description: siteConfig.description,
+
   keywords: metaKeywords[0].keywords,
 
-  authors: [{ name: siteConfig.name }],
+  authors: [
+    {
+      name: siteConfig.name,
+    },
+  ],
 
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -48,6 +53,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+
     images: [
       {
         url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
@@ -88,8 +94,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Tag Manager: keep script high in head */}
-        <script
+        {/* Google Tag Manager: main script in head */}
+        <Script
+          id="google-tag-manager"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -102,7 +110,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics 4: load before hydration */}
+        {/* Google Analytics 4: preserve existing Measurement ID */}
         <Script
           id="google-analytics-loader"
           src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
@@ -125,7 +133,7 @@ export default function RootLayout({
       </head>
 
       <body>
-        {/* Google Tag Manager: immediately after opening body */}
+        {/* GTM noscript: immediately after opening body */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
@@ -139,6 +147,7 @@ export default function RootLayout({
           />
         </noscript>
 
+        {/* Existing website components preserved */}
         <LocalBusinessSchema />
 
         <Providers>
