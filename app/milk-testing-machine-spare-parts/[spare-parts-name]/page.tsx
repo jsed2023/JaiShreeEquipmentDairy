@@ -9,7 +9,6 @@ import { spareParts } from "@/config/spareparts";
 ========================= */
 
 export const dynamic = "force-static";
-export const dynamicParams = false;
 
 /* =========================
    TYPES
