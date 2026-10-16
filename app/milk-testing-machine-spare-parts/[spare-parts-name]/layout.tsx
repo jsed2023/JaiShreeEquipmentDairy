@@ -1,65 +1,114 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+
 import { spareParts } from "@/config/spareparts";
 import { siteConfig } from "@/config/site";
 
-type LayoutProps = {
-  children: React.ReactNode;
-  params: Promise<{
-    "spare-parts-name": string;
-  }>;
+type Params = {
+  "spare-parts-name": string;
 };
 
-function getSlug(name: string) {
-  return name
-    .toLowerCase()
+type LayoutProps = {
+  children: React.ReactNode;
+  params: Promise<Params>;
+};
+
+/* =========================
+   GET SPARE PART
+========================= */
+
+function getSparePart(slug: string) {
+  const normalizedSlug = decodeURIComponent(slug)
     .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
+    .toLowerCase();
+
+  return spareParts.find(
+    (item) => item.slug.trim().toLowerCase() === normalizedSlug
+  );
 }
+
+/* =========================
+   NOT FOUND METADATA
+========================= */
+
+const notFoundMetadata: Metadata = {
+  title: "Spare Part Not Found",
+  description: "The requested spare part could not be found.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
+/* =========================
+   GENERATE METADATA
+========================= */
 
 export async function generateMetadata({
   params,
 }: LayoutProps): Promise<Metadata> {
   const { "spare-parts-name": slug } = await params;
 
-  const part = spareParts.find(
-    (item) => getSlug(item.name) === slug
-  );
-
-  if (!part) {
-    return {
-      title: "Spare Part Not Found",
-      robots: {
-        index: false,
-        follow: false,
-      },
-    };
+  if (!slug) {
+    return notFoundMetadata;
   }
 
-  const title = `${part.name}`;
+  const product = getSparePart(slug);
 
-  const description = `Buy ${part.name} for milk testing machines. Contact Jai Shree Equipment Dairy for pricing, availability and product details.`;
+  if (!product) {
+    return notFoundMetadata;
+  }
+
+  const productUrl =
+    `${siteConfig.url}/milk-testing-machine-spare-parts/${product.slug}`;
 
   return {
-    title,
-    description,
+    title: product.metaTitle,
+    description: product.metaDescription,
+    keywords: product.keywords,
+
+    authors: [
+      {
+        name: `${product.name} - ${siteConfig.name}`,
+      },
+    ],
+
+    alternates: {
+      canonical: productUrl,
+    },
+
+    openGraph: {
+      title: product.metaTitle,
+      description: product.metaDescription,
+      url: productUrl,
+      siteName: siteConfig.name,
+      locale: "en_IN",
+      type: "website",
+      images: [
+        {
+          url: product.photo,
+          alt: product.alt || product.name,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: product.metaTitle,
+      description: product.metaDescription,
+      images: [product.photo],
+    },
+
     robots: {
       index: true,
       follow: true,
     },
-    alternates: {
-      canonical: `${siteConfig.url}/spare-parts/${slug}`,
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${siteConfig.url}/spare-parts/${slug}`,
-      siteName: "Jai Shree Equipment Dairy",
-      type: "website",
-    },
   };
 }
+
+/* =========================
+   LAYOUT
+========================= */
 
 export default async function SparePartsDetailLayout({
   children,
@@ -67,13 +116,13 @@ export default async function SparePartsDetailLayout({
 }: LayoutProps) {
   const { "spare-parts-name": slug } = await params;
 
-  const part = spareParts.find(
-    (item) => getSlug(item.name) === slug
-  );
-
-  if (!part) {
+  if (!getSparePart(slug)) {
     notFound();
   }
 
-  return <>{children}</>;
+  return (
+    <div className="overflow-x-hidden">
+      {children}
+    </div>
+  );
 }
