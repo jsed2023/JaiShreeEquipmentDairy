@@ -19,14 +19,9 @@ export const metadata: Metadata = {
   },
 
   description: siteConfig.description,
-
   keywords: metaKeywords[0].keywords,
 
-  authors: [
-    {
-      name: siteConfig.name,
-    },
-  ],
+  authors: [{ name: siteConfig.name }],
 
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -53,7 +48,6 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-
     images: [
       {
         url: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902101/bp2mmtxztn5xuzjdeuop.png",
@@ -94,7 +88,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Tag Manager: place as high as possible in head */}
+        {/* Google Tag Manager: keep script high in head */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -108,18 +102,24 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4: load before hydration */}
         <Script
+          id="google-analytics-loader"
           src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
 
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script
+          id="google-analytics"
+          strategy="beforeInteractive"
+        >
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RBFDTF7PWV');
+            window.gtag = window.gtag || function gtag() {
+              window.dataLayer.push(arguments);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config', 'G-RBFDTF7PWV');
           `}
         </Script>
       </head>
