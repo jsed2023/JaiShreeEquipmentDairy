@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   description:
     "Explore advance Milk Analyzer Machines, Milk Fat Testing Machines , Lactoscan Milk Analyzers, Ekomilk Ultra Machines, FAT & SNF Testing Machines, and Dairy Quality Testing Equipment from Jai Shree Equipment Dairy. Get accurate milk analysis, fast testing results, dairy automation solutions, and reliable milk testing machines for dairy farms, milk collection centers, laboratories, and dairy processing units across Rajasthan and India.",
 
-  keywords: metaKeywords[14].keywords,
+  keywords: metaKeywords[13].keywords,
 
   authors: [
     {
-      name: metaKeywords[14].name,
+      name: metaKeywords[13].name,
     },
   ],
 

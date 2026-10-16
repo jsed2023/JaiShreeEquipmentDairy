@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   description:
     "Buy genuine milk testing machine spare parts including PCB boards, thermal printers, sensors, displays and accessories for Ekomilk, Advance and Lactoscan analyzers. Available across Rajasthan and India.",
 
-  keywords: metaKeywords[15].keywords,
+  keywords: metaKeywords[14].keywords,
 
   authors: [
     {
-      name: metaKeywords[15].name,
+      name: metaKeywords[14].name,
     },
   ],
 
