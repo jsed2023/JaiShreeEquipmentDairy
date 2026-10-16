@@ -8,7 +8,7 @@ import { spareParts } from "@/config/spareparts";
    STATIC RENDERING
 ========================= */
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 /* =========================
    TYPES
