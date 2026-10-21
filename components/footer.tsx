@@ -95,10 +95,6 @@ export default function Footer() {
                 name: "About Us",
                 href: "/about",
               },
-             {
-                name: "Blog",
-                href: "/blog",
-              },
               {
                 name: "Contact Us",
                 href: "/contact",
