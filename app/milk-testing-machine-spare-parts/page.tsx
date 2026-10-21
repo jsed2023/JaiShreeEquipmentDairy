@@ -108,13 +108,18 @@ export default function SparePartsPage() {
               >
                 <div className="relative h-64 overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:h-72">
                   <Image
-                    src={product.photo}
-                    alt={product.alt || product.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                    className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-                    priority={product.id <= 3}
-                  />
+  src={product.photo}
+  alt={
+    product.alt ||
+    "${product.name}"
+  }
+  title={"${product.name}"}
+  fill
+  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+  className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+  priority={product.id <= 2}
+  fetchPriority={product.id <= 2 ? "high" : "auto"}
+/>
                 </div>
               </Link>
 

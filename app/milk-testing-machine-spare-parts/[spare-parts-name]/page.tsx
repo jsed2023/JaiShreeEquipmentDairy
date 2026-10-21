@@ -80,16 +80,21 @@ export default async function SparePartDetailPage({
       {/* PRODUCT DETAILS */}
       <section className="grid gap-8 lg:grid-cols-2 lg:gap-12">
         {/* PRODUCT IMAGE */}
-        <div className="relative min-h-72 overflow-hidden rounded-3xl border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900 sm:min-h-96">
-          <Image
-            src={product.photo}
-            alt={product.alt || product.name}
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-contain p-6 sm:p-10"
-          />
-        </div>
+       
+<div className="relative min-h-72 overflow-hidden rounded-3xl border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900 sm:min-h-96">
+  <Image
+    src={product.photo}
+    alt={
+      product.alt?.trim() ||
+      "${product.name} - ${product.category}"
+    }
+    fill
+    priority
+    sizes="(max-width: 1024px) 100vw, 50vw"
+    className="object-contain p-6 sm:p-10"
+  />
+</div>
+
 
         {/* PRODUCT INFORMATION */}
         <div className="flex flex-col justify-center">

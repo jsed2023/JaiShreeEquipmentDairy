@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { spareParts } from "@/config/spareparts";
@@ -7,9 +8,12 @@ type Params = {
   "spare-parts-name": string;
 };
 
-type LayoutProps = {
-  children: React.ReactNode;
+type RouteProps = {
   params: Promise<Params>;
+};
+
+type LayoutProps = RouteProps & {
+  children: React.ReactNode;
 };
 
 /* =========================
@@ -29,13 +33,25 @@ export function generateStaticParams(): Params[] {
 ========================= */
 
 function getSparePart(url: string) {
-  const normalizedUrl = decodeURIComponent(url)
-    .trim()
-    .toLowerCase();
+  let normalizedUrl: string;
+
+  try {
+    normalizedUrl = decodeURIComponent(url).trim().toLowerCase();
+  } catch {
+    return undefined;
+  }
 
   return spareParts.find(
     (item) => item.url.trim().toLowerCase() === normalizedUrl
   );
+}
+
+/* =========================
+   IMAGE URL
+========================= */
+
+function getAbsoluteImageUrl(photo: string): string {
+  return new URL(photo, `${siteConfig.url}/`).toString();
 }
 
 /* =========================
@@ -57,9 +73,8 @@ const notFoundMetadata: Metadata = {
 
 export async function generateMetadata({
   params,
-}: LayoutProps): Promise<Metadata> {
+}: RouteProps): Promise<Metadata> {
   const { "spare-parts-name": url } = await params;
-
   const product = getSparePart(url);
 
   if (!product) {
@@ -69,40 +84,62 @@ export async function generateMetadata({
   const productUrl =
     `${siteConfig.url}/milk-testing-machine-spare-parts/${product.url}`;
 
-  return {
-    title: product.metaTitle,
-    description: product.metaDescription,
-    keywords: product.keywords,
+  const imageUrl = getAbsoluteImageUrl(product.photo);
 
-    authors: [
-      {
-        name: `${product.name} - ${siteConfig.name}`,
-      },
-    ],
+  const imageAlt =
+    product.alt?.trim() ||
+    `${product.name} - ${product.category} spare part from ${siteConfig.name}`;
+
+  const title = product.metaTitle || product.name;
+
+  const description =
+    product.metaDescription ||
+    `Explore ${product.name} spare parts from ${siteConfig.name}. Contact us for pricing and compatibility.`;
+
+  return {
+    title,
+    description,
+    keywords: product.keywords,
 
     alternates: {
       canonical: productUrl,
     },
 
     openGraph: {
-      title: product.metaTitle,
-      description: product.metaDescription,
+      type: "website",
+      title,
+      description,
       url: productUrl,
       siteName: siteConfig.name,
       locale: "en_IN",
-      type: "website",
+      images: [
+        {
+          url: imageUrl,
+          alt: imageAlt,
+        },
+      ],
     },
 
     twitter: {
       card: "summary_large_image",
-      title: product.metaTitle,
-      description: product.metaDescription,
-      images: [product.photo],
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          alt: imageAlt,
+        },
+      ],
     },
 
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
     },
   };
 }
