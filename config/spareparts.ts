@@ -112,7 +112,7 @@ export const spareParts = [
     url: "ekomilk-ultra-v17-pcb-board",
     name: "Ekomilk Ultra V17 PCB Board",
     sku: "EKO-PCB-V17-003",
-    price: "₹12,000",
+    price: "₹12,500",
     category: "Milk Analyzer Spare Parts",
     stockStatus: "In Stock",
     warranty: "1 Year",
