@@ -13,8 +13,7 @@ const nextConfig = {
         pathname: "/dddhtbuzs/image/upload/**",
       },
     ],
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 31536000,
+    minimumCacheTTL: 3600,
   },
 
   async rewrites() {
