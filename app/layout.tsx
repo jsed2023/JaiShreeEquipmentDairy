@@ -11,7 +11,7 @@ import WhatsAppButton from "@/components/WhatsAppButton"
 import PageLoader from "@/components/PageLoader"
 
 export const metadata: Metadata = {
-  metadataBase:(siteConfig.url),
+  metadataBase: new URL(siteConfig.url),
 
   title: {
     default: siteConfig.name,
@@ -94,10 +94,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Tag Manager: main script in head */}
-        <Script
-          id="google-tag-manager"
-          strategy="beforeInteractive"
+        {/* Google Tag Manager: place as high as possible in head */}
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -110,30 +108,24 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics 4: preserve existing Measurement ID */}
+        {/* Google Analytics 4 */}
         <Script
-          id="google-analytics-loader"
           src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
 
-        <Script
-          id="google-analytics"
-          strategy="beforeInteractive"
-        >
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            window.gtag = window.gtag || function gtag() {
-              window.dataLayer.push(arguments);
-            };
-            window.gtag('js', new Date());
-            window.gtag('config', 'G-RBFDTF7PWV');
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RBFDTF7PWV');
           `}
         </Script>
       </head>
 
       <body>
-        {/* GTM noscript: immediately after opening body */}
+        {/* Google Tag Manager: immediately after opening body */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
@@ -147,7 +139,6 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* Existing website components preserved */}
         <LocalBusinessSchema />
 
         <Providers>

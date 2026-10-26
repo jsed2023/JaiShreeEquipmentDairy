@@ -322,22 +322,25 @@ Dairy Equipment & Milk Analyzer Machines in Rajasthan
 
     {/* Logo + Badge */}
     <div className="flex flex-col items-center gap-3">
-  <Image
-    src={cld(
-      "v1771343933/K_R_Electronics_Industries_Log.webp",
-      {
-        width: 300,
-        height: 100,
-        crop: "fit",
-      }
-    )}
-    alt="K R Electronics Industries Logo"
-    width={300}
-    height={100}
-    loading="lazy"
-    sizes="300px"
-    className="h-12 w-auto object-contain"
-  />
+  
+<Image
+  src={cld(
+    "v1771343933/K_R_Electronics_Industries_Log.webp",
+    {
+      width: 300,
+      height: 100,
+      crop: "fit",
+      quality: "auto",
+      format: "auto",
+    }
+  )}
+  alt="K R Electronics Industries Logo"
+  width={300}
+  height={100}
+  loading="lazy"
+  sizes="200px"
+  className="w-auto h-[200px] object-contain"
+/>
 
   <span className="animate-title-gradient rounded-full bg-green-600 px-4 py-1 text-sm font-semibold text-transparent shadow-md md:text-base">
     Authorized Distributor
