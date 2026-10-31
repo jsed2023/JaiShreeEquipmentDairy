@@ -211,8 +211,9 @@ const siteUrl = siteConfig.url.replace(/\/$/, "");
     <PageLoader>
       <Navbar />
 
-      <main id="main-content" class="min-h-screen">
-        <slot />
+      <main id="main-content" class="min-h-screen w-full">
+  <div class="w-full px-3 sm:px-4 md:px-6 lg:px-8">
+        <slot /></div>
       </main>
 
       <Footer />
