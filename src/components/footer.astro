@@ -36,7 +36,8 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="relative w-full overflow-hidden border-t border-cyan-900/40 bg-[#001719] text-slate-300">
-  <!-- Background effects -->
+
+  <!-- Background Effects -->
   <div
     aria-hidden="true"
     class="pointer-events-none absolute -left-20 -top-20 h-40 w-40 rounded-full bg-cyan-500/5 blur-3xl"
@@ -47,22 +48,23 @@ const currentYear = new Date().getFullYear();
     class="pointer-events-none absolute -bottom-20 right-0 h-40 w-40 rounded-full bg-teal-400/5 blur-3xl"
   ></div>
 
-  <div class="relative mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+  <div class="relative mx-auto w-full max-w-7xl px-2 py-6 sm:px-5 sm:py-9 lg:px-8 lg:py-10">
 
-    <!-- Main Footer Grid -->
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:grid-cols-4 lg:gap-8">
+    <!-- Always 4 Columns -->
+    <div class="grid w-full grid-cols-4 gap-2 sm:gap-4 lg:gap-8">
 
       <!-- Brand -->
-      <div class="min-w-0 space-y-4">
-        <a href="/" class="group inline-flex max-w-full items-center gap-2">
+      <div class="min-w-0 space-y-2 sm:space-y-4">
+
+        <a href="/" class="group flex min-w-0 items-center gap-1 sm:gap-2">
           <span
-            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 transition duration-300 group-hover:border-cyan-300 group-hover:bg-cyan-400/20"
+            class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 transition duration-300 group-hover:border-cyan-300 group-hover:bg-cyan-400/20 sm:h-9 sm:w-9"
             aria-hidden="true"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -77,12 +79,12 @@ const currentYear = new Date().getFullYear();
             </svg>
           </span>
 
-          <span class="min-w-0 text-base font-bold leading-tight tracking-tight text-white sm:text-lg">
+          <span class="min-w-0 text-[10px] font-bold leading-tight tracking-tight text-white sm:text-base lg:text-lg">
             <span class="text-cyan-400">Jai Shree Equipment Dairy</span>
           </span>
         </a>
 
-        <p class="max-w-sm text-sm leading-relaxed text-slate-400">
+        <p class="text-[9px] leading-relaxed text-slate-400 sm:text-xs lg:text-sm">
           Your trusted partner for milk analyzer machines, dairy equipment,
           automatic milk collection systems and professional dairy solutions.
           Serving dairy farmers and milk collection centers with quality
@@ -90,18 +92,18 @@ const currentYear = new Date().getFullYear();
         </p>
 
         <!-- Social Links -->
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-1 sm:gap-2">
           <a
             href="https://www.facebook.com/Jaishreeequipmentdairy"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Jai Shree Equipment Dairy on Facebook"
-            class="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-900/60 bg-[#002629] text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-white"
+            class="flex h-6 w-6 items-center justify-center rounded-md border border-cyan-900/60 bg-[#002629] text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-white sm:h-9 sm:w-9"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="17"
-              height="17"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="currentColor"
               aria-hidden="true"
@@ -115,12 +117,12 @@ const currentYear = new Date().getFullYear();
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Jai Shree Equipment Dairy on YouTube"
-            class="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-900/60 bg-[#002629] text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-white"
+            class="flex h-6 w-6 items-center justify-center rounded-md border border-cyan-900/60 bg-[#002629] text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-white sm:h-9 sm:w-9"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="17"
-              height="17"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="currentColor"
               aria-hidden="true"
@@ -133,20 +135,20 @@ const currentYear = new Date().getFullYear();
 
       <!-- Quick Links -->
       <div class="min-w-0">
-        <h3 class="mb-4 text-lg font-semibold text-white">
+        <h3 class="mb-2 text-[10px] font-semibold leading-tight text-white sm:mb-4 sm:text-base lg:text-lg">
           Quick Links
-          <span class="mt-2 block h-0.5 w-9 rounded-full bg-cyan-400"></span>
+          <span class="mt-1 block h-0.5 w-5 rounded-full bg-cyan-400 sm:w-9"></span>
         </h3>
 
-        <ul class="space-y-2.5">
+        <ul class="space-y-1.5 sm:space-y-2.5">
           {quickLinks.map((link) => (
             <li>
               <a
                 href={link.href}
-                class="group inline-flex max-w-full items-start gap-2 text-sm leading-relaxed text-slate-400 transition-colors duration-300 hover:text-cyan-300"
+                class="group flex min-w-0 items-start gap-1 text-[9px] leading-relaxed text-slate-400 transition-colors duration-300 hover:text-cyan-300 sm:gap-2 sm:text-xs lg:text-sm"
               >
-                <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-cyan-500/70 transition-all duration-300 group-hover:h-1.5 group-hover:w-1.5"></span>
-                <span>{link.name}</span>
+                <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-cyan-500/70"></span>
+                <span class="min-w-0 break-words">{link.name}</span>
               </a>
             </li>
           ))}
@@ -155,20 +157,20 @@ const currentYear = new Date().getFullYear();
 
       <!-- Products -->
       <div class="min-w-0">
-        <h3 class="mb-4 text-lg font-semibold text-white">
+        <h3 class="mb-2 text-[10px] font-semibold leading-tight text-white sm:mb-4 sm:text-base lg:text-lg">
           Our Products
-          <span class="mt-2 block h-0.5 w-9 rounded-full bg-cyan-400"></span>
+          <span class="mt-1 block h-0.5 w-5 rounded-full bg-cyan-400 sm:w-9"></span>
         </h3>
 
-        <ul class="space-y-2.5">
+        <ul class="space-y-1.5 sm:space-y-2.5">
           {products.map((product) => (
             <li>
               <a
                 href={product.href}
-                class="group inline-flex max-w-full items-start gap-2 text-sm leading-relaxed text-slate-400 transition-colors duration-300 hover:text-cyan-300"
+                class="group flex min-w-0 items-start gap-1 text-[9px] leading-relaxed text-slate-400 transition-colors duration-300 hover:text-cyan-300 sm:gap-2 sm:text-xs lg:text-sm"
               >
-                <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-cyan-500/70 transition-all duration-300 group-hover:h-1.5 group-hover:w-1.5"></span>
-                <span>{product.name}</span>
+                <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-cyan-500/70"></span>
+                <span class="min-w-0 break-words">{product.name}</span>
               </a>
             </li>
           ))}
@@ -177,26 +179,26 @@ const currentYear = new Date().getFullYear();
 
       <!-- Contact Information -->
       <div class="min-w-0">
-        <h3 class="mb-4 text-lg font-semibold text-white">
-          Contact Information
-          <span class="mt-2 block h-0.5 w-9 rounded-full bg-cyan-400"></span>
+        <h3 class="mb-2 text-[10px] font-semibold leading-tight text-white sm:mb-4 sm:text-base lg:text-lg">
+          Contact Info
+          <span class="mt-1 block h-0.5 w-5 rounded-full bg-cyan-400 sm:w-9"></span>
         </h3>
 
-        <ul class="space-y-4 text-sm leading-relaxed text-slate-400">
+        <ul class="space-y-2 text-[9px] leading-relaxed text-slate-400 sm:space-y-4 sm:text-xs lg:text-sm">
 
           <!-- Address -->
-          <li class="flex min-w-0 items-start gap-3">
+          <li class="flex min-w-0 items-start gap-1 sm:gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="1.7"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="mt-0.5 shrink-0 text-cyan-400"
+              class="mt-0.5 shrink-0 text-cyan-400 sm:h-[18px] sm:w-[18px]"
               aria-hidden="true"
             >
               <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
@@ -206,19 +208,19 @@ const currentYear = new Date().getFullYear();
             <span class="min-w-0 break-words">{contact.address}</span>
           </li>
 
-          <!-- Phone: single line on all screens -->
-          <li class="flex min-w-0 items-center gap-3">
+          <!-- Phone: one line on all screens -->
+          <li class="flex min-w-0 items-center gap-1 sm:gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="1.7"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="shrink-0 text-cyan-400"
+              class="shrink-0 text-cyan-400 sm:h-[18px] sm:w-[18px]"
               aria-hidden="true"
             >
               <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z" />
@@ -226,25 +228,25 @@ const currentYear = new Date().getFullYear();
 
             <a
               href={contact.phoneLink}
-              class="whitespace-nowrap text-sm font-medium text-slate-400 transition-colors duration-300 hover:text-cyan-300"
+              class="whitespace-nowrap text-[8px] font-medium text-slate-400 transition-colors duration-300 hover:text-cyan-300 sm:text-xs lg:text-sm"
             >
               {contact.phone}
             </a>
           </li>
 
           <!-- Email -->
-          <li class="flex min-w-0 items-start gap-3">
+          <li class="flex min-w-0 items-start gap-1 sm:gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="1.7"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="mt-0.5 shrink-0 text-cyan-400"
+              class="mt-0.5 shrink-0 text-cyan-400 sm:h-[18px] sm:w-[18px]"
               aria-hidden="true"
             >
               <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -253,7 +255,7 @@ const currentYear = new Date().getFullYear();
 
             <a
               href={contact.emailLink}
-              class="min-w-0 break-all text-sm text-slate-400 transition-colors duration-300 hover:text-cyan-300"
+              class="min-w-0 break-all text-[9px] text-slate-400 transition-colors duration-300 hover:text-cyan-300 sm:text-xs lg:text-sm"
             >
               {contact.email}
             </a>
@@ -263,22 +265,22 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <!-- Copyright -->
-    <div class="mt-10 border-t border-cyan-900/40 pt-5 text-center">
-      <p class="text-sm leading-relaxed text-slate-400">
+    <div class="mt-6 border-t border-cyan-900/40 pt-4 text-center sm:mt-10 sm:pt-5">
+      <p class="text-[10px] leading-relaxed text-slate-400 sm:text-sm">
         © {currentYear}
         <span class="font-semibold text-cyan-300">Jai Shree Equipment Dairy</span>.
         All Rights Reserved.
       </p>
 
-      <p class="mt-2 text-xs leading-relaxed text-slate-500 sm:text-sm">
+      <p class="mt-1 text-[9px] leading-relaxed text-slate-500 sm:mt-2 sm:text-sm">
         Trusted Dairy Equipment &amp; Milk Analyzer Supplier in Rajasthan, India.
       </p>
     </div>
   </div>
 
   <!-- Developer Credit -->
-  <div class="relative border-t border-cyan-900/40 bg-[#001214] px-4 py-3 text-center">
-    <p class="text-xs leading-relaxed text-slate-400 sm:text-sm">
+  <div class="relative border-t border-cyan-900/40 bg-[#001214] px-2 py-2 text-center sm:px-4 sm:py-3">
+    <p class="text-[10px] leading-relaxed text-slate-400 sm:text-sm">
       Designed &amp; Developed by
       <a
         href="https://developerchoudhary.vercel.app/"
