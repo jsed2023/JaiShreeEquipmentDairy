@@ -1,0 +1,44 @@
+
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+const title =
+  "Milk Analyzer Repair & Dairy Equipment Services in Rajasthan";
+
+const description =
+  "Jai Shree Equipment Dairy provides expert milk analyzer repair, AMCS installation, dairy equipment maintenance, calibration, and dairy machinery services in Rajasthan. Get fast, reliable, and affordable support for milk testing machines, ultrasonic milk stirrers, weighing scales, and dairy automation systems in Sri Ganganagar, Bikaner, Hanumangarh, Suratgarh, and nearby areas.";
+
+const keywords = metaKeywords[4].keywords;
+const author = metaKeywords[4].name;
+
+const canonical = `${siteConfig.url}/services`;
+
+const openGraphDescription =
+  "Expert milk analyzer repair, AMCS installation, dairy equipment maintenance, calibration, and dairy machinery services in Rajasthan.";
+
+const twitterDescription =
+  "Professional milk analyzer repair, dairy equipment installation, calibration, and maintenance services in Rajasthan.";
+---
+
+<MainLayout title={title} description={description}>
+  <link slot="head" rel="canonical" href={canonical} />
+
+  <meta slot="head" name="keywords" content={keywords} />
+  <meta slot="head" name="author" content={author} />
+
+  <meta slot="head" property="og:title" content={title} />
+  <meta slot="head" property="og:description" content={openGraphDescription} />
+  <meta slot="head" property="og:url" content={canonical} />
+  <meta slot="head" property="og:site_name" content={siteConfig.name} />
+  <meta slot="head" property="og:locale" content="en_IN" />
+  <meta slot="head" property="og:type" content="website" />
+
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={title} />
+  <meta slot="head" name="twitter:description" content={twitterDescription} />
+
+  <div class="overflow-x-hidden">
+    <slot />
+  </div>
+</MainLayout>

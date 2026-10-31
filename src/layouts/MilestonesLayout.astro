@@ -1,0 +1,43 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+const title = "Milestones";
+
+const description =
+  "Explore the growth journey of Jai Shree Equipment Dairy, trusted supplier of dairy equipment, milk analyzers, milking machines, paras milk cream separator machine, and AMCS systems in Rajasthan since 2020.";
+
+const keywords = metaKeywords[11].keywords;
+const author = metaKeywords[11].name;
+const canonical = `${siteConfig.url}/milestones`;
+
+const openGraphDescription =
+  "Discover the key milestones, achievements, and growth journey of Jai Shree Equipment Dairy.";
+
+const twitterDescription =
+  "The journey and achievements of Jai Shree Equipment Dairy supporting dairy farmers with modern equipment.";
+---
+
+<MainLayout title={title} description={description}>
+  <link slot="head" rel="canonical" href={canonical} />
+
+  <meta slot="head" name="keywords" content={keywords} />
+  <meta slot="head" name="author" content={author} />
+
+  <meta slot="head" property="og:title" content="Milestones - Jai Shree Equipment Dairy" />
+  <meta slot="head" property="og:description" content={openGraphDescription} />
+  <meta slot="head" property="og:url" content={canonical} />
+  <meta slot="head" property="og:site_name" content={siteConfig.name} />
+  <meta slot="head" property="og:locale" content="en_IN" />
+  <meta slot="head" property="og:type" content="website" />
+
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={title} />
+  <meta slot="head" name="twitter:description" content={twitterDescription} />
+
+  <meta slot="head" name="robots" content="index, follow" />
+
+  <section class="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <slot />
+  </section>
+</MainLayout>

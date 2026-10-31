@@ -1,0 +1,43 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+const title = "Gallery";
+
+const description =
+  "Explore the gallery of Jai Shree Equipment Dairy showcasing dairy equipment, installation work, machinery setup, and service activities in Sri Ganganagar, Rajasthan.";
+
+const keywords = metaKeywords[8].keywords;
+const author = metaKeywords[8].name;
+const canonical = `${siteConfig.url}/gallery`;
+
+const openGraphDescription =
+  "View photos of dairy equipment installations, machinery, and services by Jai Shree Equipment Dairy.";
+
+const twitterDescription =
+  "Gallery of dairy equipment installations and machinery services by Jai Shree Equipment Dairy.";
+---
+
+<MainLayout title={title} description={description}>
+  <link slot="head" rel="canonical" href={canonical} />
+
+  <meta slot="head" name="keywords" content={keywords} />
+  <meta slot="head" name="author" content={author} />
+
+  <meta slot="head" property="og:title" content="Dairy Equipment Gallery" />
+  <meta slot="head" property="og:description" content={openGraphDescription} />
+  <meta slot="head" property="og:url" content={canonical} />
+  <meta slot="head" property="og:site_name" content={siteConfig.name} />
+  <meta slot="head" property="og:locale" content="en_IN" />
+  <meta slot="head" property="og:type" content="website" />
+
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content="Dairy Equipment Gallery" />
+  <meta slot="head" name="twitter:description" content={twitterDescription} />
+
+  <meta slot="head" name="robots" content="index, follow" />
+
+  <div class="overflow-x-hidden">
+    <slot />
+  </div>
+</MainLayout>

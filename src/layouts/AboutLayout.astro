@@ -1,0 +1,36 @@
+
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords } from "@/config/site";
+
+const title = "About Jai Shree Equipment Dairy";
+
+const description =
+  "Founded with a commitment to innovation and quality, Jai Shree Equipment Dairy is a trusted supplier of dairy equipment across Rajasthan, delivering reliable, efficient, and durable solutions for dairy farms and milk collection centers.";
+
+const keywords = metaKeywords[7].keywords;
+const author = metaKeywords[7].name;
+
+const openGraphDescription =
+  "Learn about the journey, mission, and expertise of Jai Shree Equipment Dairy in providing high-quality dairy equipment solutions.";
+
+const twitterDescription =
+  "Discover the story and mission behind Jai Shree Equipment Dairy and its commitment to the dairy industry.";
+---
+
+<MainLayout title="About" description={description}>
+  <meta slot="head" name="keywords" content={keywords} />
+  <meta slot="head" name="author" content={author} />
+
+  <meta slot="head" property="og:title" content={title} />
+  <meta slot="head" property="og:description" content={openGraphDescription} />
+  <meta slot="head" property="og:site_name" content="Jai Shree Equipment Dairy" />
+  <meta slot="head" property="og:locale" content="en_IN" />
+
+  <meta slot="head" name="twitter:title" content={title} />
+  <meta slot="head" name="twitter:description" content={twitterDescription} />
+
+  <div class="overflow-x-hidden">
+    <slot />
+  </div>
+</MainLayout>

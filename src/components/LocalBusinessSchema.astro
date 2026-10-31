@@ -1,0 +1,168 @@
+
+---
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "Store"],
+
+  "@id": "https://jaishreeequipmentdairy.co.in/#localbusiness",
+  "mainEntityOfPage": "https://jaishreeequipmentdairy.co.in/",
+
+  "name": "Jai Shree Equipment Dairy",
+  "alternateName": "Jai Shree Equipment Dairy Sri Ganganagar",
+
+  "url": "https://jaishreeequipmentdairy.co.in/",
+  "logo": "https://jaishreeequipmentdairy.co.in/favicon.ico",
+
+  "image": [
+    "https://jaishreeequipmentdairy.co.in/"
+  ],
+
+  "brand": {
+    "@type": "Brand",
+    "name": "Jai Shree Equipment Dairy"
+  },
+
+  "slogan": "Complete Dairy Equipment & Repair Solutions",
+
+  "description": "JAI SHREE EQUIPMENT DAIRY, established in 2020, supplies dairy farm equipment and repair services in Sri Ganganagar, Rajasthan.",
+
+  "foundingDate": "2020-10-01",
+
+  "founder": {
+    "@type": "Person",
+    "name": "Akshay Choudhary"
+  },
+
+  "telephone": "+91-7375082341",
+  "priceRange": "₹₹",
+
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday",
+        "Thursday", "Friday", "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "10:00",
+      "closes": "14:00"
+    }
+  ],
+
+  "inLanguage": "en-IN",
+  "currenciesAccepted": "INR",
+
+  "knowsLanguage": ["Hindi", "English", "Punjabi"],
+
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-7375082341",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": ["Hindi", "English", "Punjabi"]
+  },
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop No B-42, Upper Side, Rohit Udhyog Market, Near HP Gas Agency, Shiv Circle Road",
+    "addressLocality": "Sri Ganganagar",
+    "addressRegion": "Rajasthan",
+    "postalCode": "335001",
+    "addressCountry": "IN"
+  },
+
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 29.9038,
+    "longitude": 73.8772
+  },
+
+  "hasMap": "https://www.google.com/maps?q=29.9038,73.8772",
+
+  "paymentAccepted": ["Cash", "UPI", "NFC Mobile Payments"],
+
+  "sameAs": [
+    "https://wa.me/917375082341"
+  ],
+
+  "areaServed": [
+    "Sri Ganganagar",
+    "Hanumangarh",
+    "Suratgarh",
+    "Anupgarh",
+    "Padampur",
+    "Raisingh Nagar",
+    "Sri Vijaynagar"
+  ].map((name) => ({
+    "@type": "AdministrativeArea",
+    "name": `${name}, Rajasthan, India`
+  })),
+
+  "knowsAbout": [
+    "Milk Analyzer Machine",
+    "Advance Milk Analyzer",
+    "Cream Separator Machine",
+    "Automatic Milk Collection Unit",
+    "Weighing Scale",
+    "Milk Testing Equipment",
+    "Dairy Equipment Repair"
+  ],
+
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Dairy Machines",
+    "itemListElement": [
+      "Advance Milk Analyzer Machine",
+      "Milk Analyzer Machine",
+      "Cream Separator",
+      "Milk Collection Unit",
+      "Weighing Scale",
+      "Milk Testing Machine"
+    ].map((name) => ({
+      "@type": "OfferCatalog",
+      "name": name
+    }))
+  },
+
+  "keywords": [
+    "milk analyzer machine in Sri Ganganagar",
+    "milk analyzer supplier Rajasthan",
+    "milk testing machine in Sri Ganganagar",
+    "milk fat testing machine supplier",
+    "dairy equipment supplier Sri Ganganagar",
+    "dairy equipment supplier Rajasthan",
+    "automatic milk collection unit",
+    "automatic milk collection system supplier",
+    "milk collection machine supplier",
+    "milk collection center equipment",
+    "DPU machine for dairy",
+    "dairy DPU machine supplier",
+    "data processing unit for milk collection",
+    "milk collection DPU machine",
+    "DPU machine in Sri Ganganagar",
+    "DPU supplier in Sri Ganganagar",
+    "DPU machine supplier Rajasthan",
+    "dairy automation equipment Sri Ganganagar",
+    "cream separator machine",
+    "cream separator machine supplier",
+    "Paras milk cream separator machine",
+    "weighing scale supplier",
+    "dairy weighing scale supplier",
+    "milk testing equipment supplier",
+    "dairy equipment repair service",
+    "milk analyzer repair",
+    "milk analyzer repair service",
+    "milk analyzer spare parts",
+    "dairy machine spare parts",
+    "dairy equipment dealer in Rajasthan",
+    "milk analyzer machine supplier in India"
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

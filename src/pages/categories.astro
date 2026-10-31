@@ -1,0 +1,87 @@
+---
+import CategoriesLayout from "@/layouts/CategoriesLayout.astro";
+import { CATEGORIES } from "@/config/categories";
+import CategoryCard from "@/components/CategoryCard";
+
+const sortedCategories = [...CATEGORIES].sort(
+  (a, b) => (b.priority ?? 0) - (a.priority ?? 0)
+);
+---
+
+<CategoriesLayout>
+  <main class="relative mx-auto max-w-6xl overflow-hidden px-4 pt-6 py-24">
+
+    <!-- LIGHT BACKGROUND -->
+    <div class="fixed inset-0 -z-10 overflow-hidden bg-white">
+      <div
+        class="absolute inset-0 animate-ambientFloat opacity-40"
+        style="
+          background:
+            radial-gradient(circle at 12% 18%, rgba(56,189,248,0.25) 0%, transparent 38%),
+            radial-gradient(circle at 82% 22%, rgba(167,139,250,0.25) 0%, transparent 38%),
+            radial-gradient(circle at 50% 82%, rgba(99,102,241,0.25) 0%, transparent 42%);
+        "
+      ></div>
+
+      <div
+        class="absolute inset-0 animate-slowPulse opacity-30 blur-3xl"
+        style="
+          background:
+            radial-gradient(circle at 30% 40%, rgba(99,102,241,0.2), transparent 45%),
+            radial-gradient(circle at 70% 65%, rgba(56,189,248,0.2), transparent 45%);
+        "
+      ></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="mx-auto mb-16 max-w-3xl text-center">
+      <div class="mt-4 space-y-3 rounded-lg border p-4 text-sm text-stone-600 dark:text-white/90 sm:text-base">
+        <h1 class="animate-slideInFromTop8 text-xl font-bold tracking-tight text-sky-600 sm:text-2xl lg:text-3xl">
+          Automatic Milk Collection System (AMCS), Milk Testing Machines & Dairy Equipment in Rajasthan
+        </h1>
+      </div>
+
+      <p class="mt-4 text-base leading-relaxed text-slate-700">
+        Explore our complete range of dairy solutions including dairy equipment,
+        milk testing machines, and automatic milk collection systems (AMCS).
+        We provide high-quality machinery for dairy farms, milk collection centers,
+        and processing units across India.
+      </p>
+    </header>
+
+    <!-- CATEGORY GRID -->
+    <section class="grid grid-cols-1 gap-12 md:grid-cols-3">
+      {sortedCategories.map((cat, index) => (
+        <CategoryCard client:visible cat={cat} index={index} />
+      ))}
+    </section>
+
+    <!-- SEO CONTENT BLOCK -->
+    <section class="mx-auto mt-20 max-w-3xl space-y-4 text-sm leading-relaxed text-slate-700">
+      <h2 class="text-xl font-semibold text-slate-900">
+        Complete Dairy Machinery Solutions in India
+      </h2>
+
+      <p>
+        Our platform offers a wide range of dairy equipment including milk cream
+        separator machine, milk analyzer machines, and automatic milk collection
+        systems, weight scale. These solutions are designed to improve efficiency,
+        ensure accurate milk testing, and provide transparent billing for dairy
+        businesses.
+      </p>
+
+      <p>
+        Whether you are setting up a new dairy farm or upgrading your milk
+        collection center, our products help streamline operations with modern
+        technology such as digital milk analyzers, weighing machines, ultrasonic
+        stirrers, and billing printers.
+      </p>
+
+      <p>
+        We serve dairy farmers, cooperatives, and commercial dairy units across
+        Rajasthan and India with reliable and cost-effective machinery.
+      </p>
+    </section>
+
+  </main>
+</CategoriesLayout>

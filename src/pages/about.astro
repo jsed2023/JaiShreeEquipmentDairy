@@ -1,0 +1,466 @@
+---
+import { cld } from "@/utils/cloudinary";
+import AuthorizedDealerSection from "@/components/authorized-dealer-section.astro";
+import AboutLayout from "@/layouts/AboutLayout.astro";
+import {
+  aboutAndStory,
+  aboutFactsheet,
+  productRangeAndWhyChooseUs,
+} from "@/config/about";
+
+// Derive types directly from configuration data.
+// This avoids the unresolved "@/types" import in this page.
+type AboutStoryItem = (typeof aboutAndStory)[number];
+
+type ProductSection =
+  (typeof productRangeAndWhyChooseUs)[number];
+
+type ProductDescription =
+  ProductSection["descList"][number];
+
+type FactsheetSection =
+  (typeof aboutFactsheet)[number];
+
+type FactsheetInfo =
+  FactsheetSection["information"][number];
+
+// Theme videos
+const lightVideo =
+  "https://res.cloudinary.com/dddhtbuzs/video/upload/v1729414810/d7hhv3vhvqt2wukbyous.mp4";
+
+const darkVideo =
+  "https://res.cloudinary.com/dddhtbuzs/video/upload/v1729414860/vjpv4mrejpkw3btib071.mp4";
+
+// MSME logo
+const msmeLogo = cld("v1728902741/msme-logo.png", {
+  width: 300,
+  quality: "auto",
+  format: "auto",
+} as const);
+
+// KREI logo
+const kreiLogo = cld(
+  "v1771343933/K_R_Electronics_Industries_Log.webp",
+  {
+    width: 200,
+    height: 60,
+    crop: "fit",
+    quality: "auto",
+    format: "auto",
+  } as const
+);
+
+// Certificates
+const certificateImages = [
+  {
+    id: "san",
+    src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902807/lotw093yc0wtqrrjjkoi.jpg",
+    alt: "Jai Shree Equipment Dairy Business Certificate",
+    animation: "motion-safe:animate-slideInFromLeft",
+  },
+  {
+    id: "msme",
+    src: "https://res.cloudinary.com/dddhtbuzs/image/upload/v1728902819/byekcougfnmu1jtpgwwt.jpg",
+    alt: "Jai Shree Equipment Dairy MSME Certificate",
+    animation: "motion-safe:animate-slideInFromRight",
+  },
+];
+---
+<AboutLayout>
+<main id="about" class="my-6 mb-8 flex flex-col gap-y-10">
+
+  <!-- Hero Video + About Content -->
+  <section class="relative flex h-full flex-col gap-y-4 sm:gap-y-10">
+
+    <!-- Hero Video -->
+    <div class="h-full overflow-hidden rounded-xl lg:h-[480px]">
+      <video
+        id="about-hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        class="h-full w-full object-cover"
+        aria-label="Jai Shree Equipment Dairy introduction video"
+      >
+        <source
+          id="about-video-source"
+          src={lightVideo}
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- About Us + Story -->
+    <div class="flex flex-col gap-y-4 sm:gap-y-10">
+      {aboutAndStory.map((item: AboutStoryItem) => (
+        <article class="flex flex-col gap-y-4">
+          <h2 class="text-center text-lg font-bold">
+            {item.title}
+          </h2>
+
+          <p class="text-stone-700 max-sm:text-sm dark:text-gray-400">
+            {item.desc}
+          </p>
+        </article>
+      ))}
+    </div>
+
+    <!-- Product Range + Why Choose Us -->
+    <div class="flex flex-col gap-y-8">
+      {productRangeAndWhyChooseUs.map(
+        (item: ProductSection) => (
+          <section class="flex flex-col gap-y-4">
+            <h2 class="text-center text-lg font-bold">
+              {item.title}
+            </h2>
+
+            <ul class="flex flex-col gap-y-4">
+              {item.descList.map(
+                (list: ProductDescription) => (
+                  <li class="rounded-lg border border-zinc-200 p-3 dark:border-zinc-700">
+                    <span class="font-semibold">
+                      {list.title}
+                    </span>
+
+                    <p class="mt-1 text-stone-700 max-sm:text-sm dark:text-gray-400">
+                      {list.desc}
+                    </p>
+                  </li>
+                )
+              )}
+            </ul>
+          </section>
+        )
+      )}
+    </div>
+
+    <!-- Vision -->
+    <section class="flex flex-col gap-y-4">
+      <h2 class="text-center text-lg font-bold">
+        Our Vision
+      </h2>
+
+      <p class="text-stone-700 max-sm:text-sm dark:text-gray-400">
+        Our vision is to be the global leader in providing state-of-the-art
+        dairy equipment solutions that support sustainable, efficient, and
+        profitable dairy farming. We strive to contribute to the growth and
+        development of the dairy industry, one farm at a time.
+      </p>
+    </section>
+  </section>
+
+  <!-- Business Factsheet -->
+  <section
+    id="about-bussiness"
+    class="flex flex-col gap-y-6 rounded-xl bg-[rgb(244,244,245)] p-4 dark:bg-[#27272a]"
+  >
+
+    <!-- Business Intro -->
+    <div class="flex flex-col gap-y-4">
+      <h2 class="text-center text-lg font-bold underline">
+        Year of Establishment :- 2020
+      </h2>
+
+      <p class="text-center text-stone-700 max-sm:text-sm dark:text-gray-400">
+        Nature of Business :- DISTRIBUTOR ADVANCE MILK ANALYZER (PLUS &
+        MAX), MILK COLLECTION UNIT (DAIRY KHATA), PARAS CREAM SEPARATOR MACHINE
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-y-4">
+      <p class="text-stone-700 max-sm:text-sm dark:text-gray-400">
+        <span class="font-bold">
+          DISTRIBUTOR SERVICE IN BIKANER DIVISION :-
+        </span>
+        Advance Milk Analyzer Plus & Max, Lacto Scan, Ekomilk Analyzer
+        Ultra Mb, Milk Collection Unit, Paras Cream Separator Machine,
+        Weighing Machine, Milk Ultrasonic Stirrer, Etc. All Items for
+        Sale and Service.
+      </p>
+
+      <p class="text-stone-700 max-sm:text-sm dark:text-gray-400">
+        <span class="font-bold">
+          Jai Shree Equipment Dairy
+        </span>
+        specializes in providing a variety of dairy equipment including
+        milk analyzers, milk cream separators, and milk collection units.
+      </p>
+    </div>
+
+    <p class="text-stone-700 max-sm:text-sm dark:text-gray-400">
+      Established in 2020 and based in Sri Ganganagar, Rajasthan, the
+      company is dedicated to offering reliable products and services for
+      the dairy industry.
+    </p>
+
+    <!-- Factsheet Title -->
+    <div class="pt-2">
+      <h2 class="text-center text-xl font-bold underline sm:text-2xl">
+        Factsheet
+      </h2>
+    </div>
+
+    <!-- Factsheet Sections -->
+    <div class="flex flex-col gap-y-6">
+      {aboutFactsheet.map((item: FactsheetSection) => {
+        const SectionIcon = item.icon;
+
+        return (
+          <article class="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800/50">
+
+            <!-- Section Header -->
+            <div class="mb-4 flex items-center gap-3 border-b border-zinc-200 pb-3 dark:border-zinc-700">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                <SectionIcon
+                  className="h-5 w-5 text-primary sm:h-6 sm:w-6"
+                  aria-hidden="true"
+                />
+              </div>
+
+              <h3 class="text-base font-bold sm:text-lg">
+                {item.title}
+              </h3>
+            </div>
+
+            <!-- Information Rows -->
+            <div class="flex flex-col">
+              {item.information.map(
+                (infoItem: FactsheetInfo) => {
+                  const InfoIcon = infoItem.icon;
+
+                  return (
+                    <div class="flex flex-col gap-3 border-b border-zinc-100 py-3 first:pt-0 last:border-0 last:pb-0 sm:flex-row sm:items-start dark:border-zinc-700/60">
+
+                      <!-- Row Icon + Title -->
+                      <div class="flex w-full shrink-0 items-center gap-3 sm:w-[18rem]">
+                        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                          <InfoIcon
+                            className="h-4 w-4 text-primary sm:h-5 sm:w-5"
+                            aria-hidden="true"
+                          />
+                        </div>
+
+                        <p class="font-semibold text-stone-900 max-sm:text-sm dark:text-gray-200">
+                          {infoItem.title}
+                        </p>
+                      </div>
+
+                      <!-- Row Description -->
+                      <p class="w-full pt-1 text-stone-700 max-sm:text-sm dark:text-gray-400 sm:pt-2">
+                        {infoItem.desc}
+                      </p>
+                    </div>
+                  );
+                }
+              )}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- MSME Registered -->
+  <section class="flex flex-col items-center gap-2">
+    <span class="mx-auto mb-6 w-11/12 rounded-full bg-[rgb(244,244,245)] py-2 text-center text-lg font-bold dark:bg-[#27272a] sm:w-6/12 md:text-2xl">
+      MSME Registered
+    </span>
+
+    <img
+      src={msmeLogo}
+      alt="MSME Registered Business"
+      width="300"
+      height="120"
+      loading="lazy"
+      decoding="async"
+      class="h-[60px] w-auto object-contain transition-transform duration-300 hover:scale-110"
+    />
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="mt-4">
+    <h2 class="mx-auto mb-6 w-11/12 rounded-full bg-[rgb(244,244,245)] py-2 text-center text-lg font-bold dark:bg-[#27272a] sm:w-6/12 md:text-2xl">
+      OUR CERTIFICATES
+    </h2>
+
+    <div class="flex flex-wrap justify-evenly gap-8">
+      {certificateImages.map((certificate) => (
+        <img
+          src={certificate.src}
+          alt={certificate.alt}
+          width="320"
+          height="448"
+          loading="lazy"
+          decoding="async"
+          class:list={[
+            "h-auto w-60 object-contain sm:w-80",
+            certificate.animation,
+          ]}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- K R Electronics Industries -->
+  <section
+    id="krei-logo-strip"
+    class="rounded-xl bg-[rgb(244,244,245)] py-6 dark:bg-[#1f1f22]"
+  >
+    <div class="flex flex-col items-center gap-8 px-4">
+
+      <h3 class="animate-title-gradient bg-clip-text text-center text-xl font-bold text-transparent md:text-2xl lg:text-3xl">
+        Trusted & Authorized Partner of K R Electronics Industries
+      </h3>
+
+      <img
+            src={cld("v1771343933/K_R_Electronics_Industries_Log.webp", {
+              width: 600,
+              height: 100,
+              crop: "fit",
+              quality: "auto",
+              format: "auto",
+            })}
+            alt="K R Electronics Industries Logo"
+            width="600"
+            height="100"
+            loading="lazy"
+            sizes="200px"
+            class="h[200px] w-auto object-contain"
+          />
+      <span class="animate-title-gradient rounded-full bg-green-600 px-4 py-1 text-sm font-semibold text-transparent shadow-md md:text-base">
+            Authorized Distributor
+          </span>
+
+      <p class="max-w-5xl px-2 text-center text-base leading-relaxed text-stone-700 dark:text-gray-300 md:text-lg lg:text-xl">
+        <strong>JAI SHREE EQUIPMENT DAIRY</strong> is an
+        <strong>
+          Authorized Distributor of K R Electronics Industries for the
+          Bikaner Division
+        </strong>,
+        supplying genuine products, original spare parts, and
+        manufacturer-supported solutions.
+      </p>
+
+      <!-- Trust Icons -->
+      <div class="flex flex-wrap justify-center gap-10">
+
+        <!-- Genuine Products -->
+        <div class="flex flex-col items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="h-12 w-12 text-green-600 transition-transform duration-300 hover:scale-110"
+            aria-hidden="true"
+          >
+            <path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+
+          <span class="text-sm font-medium md:text-base">
+            Genuine Products
+          </span>
+        </div>
+
+        <!-- Warranty -->
+        <div class="flex flex-col items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="h-12 w-12 text-blue-600 transition-transform duration-300 hover:scale-110"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="8" r="6" />
+            <path d="M9 14v8l3-2 3 2v-8" />
+          </svg>
+
+          <span class="text-sm font-medium md:text-base">
+            Manufacturer Warranty
+          </span>
+        </div>
+
+        <!-- Technical Support -->
+        <div class="flex flex-col items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="h-12 w-12 text-purple-600 transition-transform duration-300 hover:scale-110"
+            aria-hidden="true"
+          >
+            <path d="M4 12a8 8 0 0 1 16 0" />
+            <rect x="3" y="12" width="4" height="6" rx="2" />
+            <rect x="17" y="12" width="4" height="6" rx="2" />
+            <path d="M17 19c0 1.5-1.5 3-4 3" />
+          </svg>
+
+          <span class="text-sm font-medium md:text-base">
+            Technical Support
+          </span>
+        </div>
+      </div>
+
+      <AuthorizedDealerSection />
+    </div>
+  </section>
+</main>
+
+<!-- Theme-aware video -->
+<script>
+  const video = document.querySelector<HTMLVideoElement>(
+    "#about-hero-video"
+  );
+
+  const videoSource = document.querySelector<HTMLSourceElement>(
+    "#about-video-source"
+  );
+
+  const lightVideo =
+    "https://res.cloudinary.com/dddhtbuzs/video/upload/v1729414810/d7hhv3vhvqt2wukbyous.mp4";
+
+  const darkVideo =
+    "https://res.cloudinary.com/dddhtbuzs/video/upload/v1729414860/vjpv4mrejpkw3btib071.mp4";
+
+  function updateAboutVideo() {
+    if (!video || !videoSource) return;
+
+    const isDark =
+      document.documentElement.classList.contains("dark") ||
+      document.documentElement.dataset.theme === "dark";
+
+    const newSource = isDark ? darkVideo : lightVideo;
+
+    if (videoSource.getAttribute("src") !== newSource) {
+      videoSource.src = newSource;
+      video.load();
+
+      const playPromise = video.play();
+
+      if (playPromise) {
+        playPromise.catch(() => {
+          // Ignore browser autoplay restrictions.
+        });
+      }
+    }
+  }
+
+  updateAboutVideo();
+
+  const themeObserver = new MutationObserver(updateAboutVideo);
+
+  themeObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class", "data-theme"],
+  });
+</script>
+</AboutLayout>

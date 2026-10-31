@@ -1,0 +1,75 @@
+
+---
+import JSEDLoader from "./JSEDLoader.astro";
+---
+
+<div class="page-loader-overlay" id="page-loader" aria-hidden="true">
+  <JSEDLoader />
+</div>
+
+<slot />
+
+<style>
+  .page-loader-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 300ms ease, visibility 300ms ease;
+  }
+
+  .page-loader-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .page-loader-overlay {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  let showTimer: ReturnType<typeof setTimeout> | undefined;
+  let hideTimer: ReturnType<typeof setTimeout> | undefined;
+
+  const showLoader = () => {
+    const loader = document.querySelector<HTMLElement>("#page-loader");
+    if (!loader) return;
+
+    if (showTimer) clearTimeout(showTimer);
+    if (hideTimer) clearTimeout(hideTimer);
+
+    loader.classList.add("is-visible");
+  };
+
+  const hideLoader = () => {
+    const loader = document.querySelector<HTMLElement>("#page-loader");
+    if (!loader) return;
+
+    if (showTimer) clearTimeout(showTimer);
+    if (hideTimer) clearTimeout(hideTimer);
+
+    hideTimer = setTimeout(() => {
+      loader.classList.remove("is-visible");
+    }, 120);
+  };
+
+  // Initial page load
+  showTimer = setTimeout(() => {
+    showLoader();
+    hideTimer = setTimeout(hideLoader, 240);
+  }, 60);
+
+  // Astro navigation
+  document.addEventListener("astro:before-preparation", showLoader);
+  document.addEventListener("astro:page-load", hideLoader);
+</script>

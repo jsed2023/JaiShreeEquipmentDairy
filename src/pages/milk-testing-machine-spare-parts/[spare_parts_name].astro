@@ -1,0 +1,49 @@
+---
+import ProductLayout from "@/layouts/ProductLayout.astro";
+import SparePartDetail from "@/components/products/spare-parts/SparePartDetail";
+import { spareParts } from "@/config/spareparts";
+import type { SparePart } from "@/types";
+interface Props {
+  product: (typeof spareParts)[number];
+}
+
+// Generate static pages for all spare parts
+export function getStaticPaths() {
+  return spareParts.map((product) => ({
+    params: {
+      "spare_parts_name": product.url,
+    },
+    props: {
+      product,
+    },
+  }));
+}
+
+const { product } = Astro.props as Props;
+
+// SEO metadata
+const title = product.metaTitle || product.name;
+
+const description =
+  product.metaDescription ||
+  product.description ||
+  `${product.name} spare part supplied by Jai Shree Equipment Dairy, Rajasthan.`;
+
+const keywords = product.keywords || "";
+
+// Open Graph image
+const ogImage =
+  typeof product.photo === "string"
+    ? product.photo
+    : undefined;
+---
+
+<ProductLayout
+  productName={title}
+  description={description}
+  productUrl={`/milk-testing-machine-spare-parts/${product.url}`}
+  keywords={keywords}
+  ogImage={ogImage}
+>
+  <SparePartDetail client:load product={product} />
+</ProductLayout>

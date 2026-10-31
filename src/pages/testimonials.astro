@@ -1,0 +1,112 @@
+
+---
+import TestimonialsLayout from "@/layouts/TestimonialsLayout.astro";
+import TestimonialCard from "@/components/TestimonialCard";
+import { testimonials } from "@/lib/testimonials";
+---
+
+<TestimonialsLayout>
+  <main class="relative mx-auto min-h-screen max-w-7xl overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
+
+    <!-- Background Glow -->
+    <div class="pointer-events-none absolute left-1/2 top-0 -z-10 h-80 w-80 -translate-x-1/2 rounded-full bg-purple-600/20 blur-[120px]"></div>
+
+    <section class="flex flex-col gap-y-12">
+
+      <!-- HEADER -->
+      <header class="text-center">
+        <div class="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-5 py-2 backdrop-blur-xl">
+          <span class="h-2 w-2 animate-pulse rounded-full bg-purple-400"></span>
+
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-purple-800">
+            Customer Reviews
+          </span>
+        </div>
+
+        <h1 class="mx-auto max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
+          Customer Testimonials
+        </h1>
+
+        <div class="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+
+        <p class="mx-auto mt-6 max-w-2xl text-sm leading-7 text-gray-500 sm:text-base">
+          Trusted feedback from dairy farmers and processing units across
+          Rajasthan who rely on Jai Shree Equipment Dairy.
+        </p>
+      </header>
+
+      <!-- TESTIMONIAL STATS -->
+      <section aria-label="Customer satisfaction statistics">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+          <div class="rounded-2xl border border-purple-400/20 bg-white/[0.04] p-5 text-center shadow-lg shadow-purple-950/20 backdrop-blur-xl transition duration-300 hover:border-purple-400/50 hover:shadow-purple-500/10">
+            <div class="text-3xl font-bold tracking-wider text-amber-500">
+              ★★★★★
+            </div>
+
+            <p class="mt-2 text-sm font-medium text-gray-800">
+              Customer Satisfaction
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-purple-400/20 bg-white/[0.04] p-5 text-center shadow-lg shadow-purple-950/20 backdrop-blur-xl transition duration-300 hover:border-purple-400/50 hover:shadow-purple-500/10">
+            <div class="text-3xl font-bold text-purple-800">
+              Trusted
+            </div>
+
+            <p class="mt-2 text-sm font-medium text-gray-800">
+              By Dairy Businesses
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-purple-400/20 bg-white/[0.04] p-5 text-center shadow-lg shadow-purple-950/20 backdrop-blur-xl transition duration-300 hover:border-purple-400/50 hover:shadow-purple-500/10">
+            <div class="text-3xl font-bold text-purple-800">
+              Rajasthan
+            </div>
+
+            <p class="mt-2 text-sm font-medium text-gray-800">
+              Our Service Region
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TESTIMONIAL CARDS -->
+      <section aria-label="Customer reviews">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((t) => (
+            <TestimonialCard
+              client:visible
+              name={t.name}
+              role={t.role}
+              location={t.location}
+              message={t.message}
+              rating={t.rating}
+            />
+          ))}
+        </div>
+      </section>
+
+      <!-- BOTTOM CTA -->
+      <section class="rounded-3xl border border-purple-400/20 bg-gradient-to-br from-purple-500/10 to-fuchsia-500/5 px-6 py-10 text-center backdrop-blur-xl sm:px-10">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">
+          Your Trust Is Our Achievement
+        </h2>
+
+        <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-gray-800 sm:text-base">
+          Thank you for trusting Jai Shree Equipment Dairy.
+          We continue to deliver reliable dairy equipment and customer support.
+        </p>
+
+        <a
+          href="/contact"
+          class="mt-7 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 px-7 py-3 font-bold text-white shadow-lg shadow-purple-950/30 transition hover:-translate-y-1 hover:from-purple-500 hover:to-fuchsia-500"
+        >
+          Contact Us
+        </a>
+      </section>
+
+    </section>
+  </main>
+</TestimonialsLayout>

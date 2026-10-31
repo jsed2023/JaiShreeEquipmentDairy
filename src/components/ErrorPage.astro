@@ -1,0 +1,38 @@
+---
+interface Props {
+  error?: string;
+}
+
+const { error = "An unexpected error occurred. Please try again." } =
+  Astro.props;
+---
+
+<main class="flex min-h-[50vh] items-center justify-center px-4">
+  <div class="text-center">
+
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+      Something went wrong!
+    </h2>
+
+    <p class="mt-2 text-gray-600 dark:text-gray-400">
+      {error}
+    </p>
+
+    <button
+      type="button"
+      id="retry-button"
+      class="mt-6 cursor-pointer rounded-lg bg-sky-600 px-5 py-2.5 font-medium text-white transition-colors hover:bg-sky-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+    >
+      Try again
+    </button>
+
+  </div>
+</main>
+
+<script>
+  const retryButton = document.getElementById("retry-button");
+
+  retryButton?.addEventListener("click", () => {
+    window.location.reload();
+  });
+</script>

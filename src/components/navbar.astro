@@ -1,0 +1,992 @@
+
+---
+const logoUrl =
+  "https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_100,h_100,c_fit/v1728902101/bp2mmtxztn5xuzjdeuop.png";
+
+const productLinks = [
+  {
+    label: "Automatic Milk Collection System",
+    href: "/automatic-milk-collection-system",
+  },
+  {
+    label: "Dairy Equipment",
+    href: "/dairy-equipment",
+  },
+  {
+    label: "Milk Testing Equipment",
+    href: "/milk-testing-equipment",
+  },
+  {
+    label: "Milk Analyzer Machines",
+    href: "/milk-analyzer-machines",
+  },
+  {
+    label: "Dairy Spare Parts",
+    href: "/milk-testing-machine-spare-parts",
+  },
+];
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Categories", href: "/categories" },
+  { label: "Milk Rate Chart", href: "/milk-rate-chart" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Our Locations", href: "/locations" },
+  { label: "Milestones", href: "/milestones" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "About Us", href: "/about" },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+
+const isActive = (href: string) =>
+  href === "/"
+    ? currentPath === "/"
+    : currentPath === href || currentPath.startsWith(`${href}/`);
+
+const isProductsActive = productLinks.some((item) =>
+  isActive(item.href)
+);
+---
+
+<header class="site-header" id="site-header">
+  <div class="navbar">
+
+    <!-- BRAND -->
+    <a
+      href="/"
+      class="brand"
+      aria-label="Jai Shree Equipment Dairy Home"
+    >
+      <img
+        src={logoUrl}
+        alt="Jai Shree Equipment Dairy Logo"
+        width="52"
+        height="52"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+
+      <span class="brand-text">
+        <strong>
+          <span>Jai Shree Equipment Dairy</span>
+        </strong>
+        <small>Complete Dairy Equipment Solutions</small>
+      </span>
+    </a>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a
+        href="/"
+        class:list={["nav-link", { active: currentPath === "/" }]}
+        aria-current={currentPath === "/" ? "page" : undefined}
+      >
+        Home
+      </a>
+
+      <!-- DESKTOP PRODUCTS DROPDOWN -->
+      <div class="dropdown">
+        <button
+          type="button"
+          class:list={[
+            "nav-link",
+            "dropdown-trigger",
+            { active: isProductsActive },
+          ]}
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="desktop-products-menu"
+        >
+          Products
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+
+        <div
+          class="dropdown-menu"
+          id="desktop-products-menu"
+          aria-label="Product categories"
+          hidden
+        >
+          {
+            productLinks.map((item) => (
+              <a
+                href={item.href}
+                class:list={[{ active: isActive(item.href) }]}
+                aria-current={isActive(item.href) ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- OTHER NAVIGATION LINKS -->
+      {
+        navLinks.slice(1).map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "nav-link",
+              { active: isActive(item.href) },
+            ]}
+            aria-current={isActive(item.href) ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <!-- MOBILE ACTIONS -->
+    <div class="nav-actions">
+      <button
+        class="mobile-toggle"
+        id="mobile-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOBILE NAVIGATION -->
+  <nav
+    class="mobile-menu"
+    id="mobile-menu"
+    aria-label="Mobile navigation"
+    hidden
+  >
+    <a
+      href="/"
+      class:list={[
+        "mobile-link",
+        { active: currentPath === "/" },
+      ]}
+      aria-current={currentPath === "/" ? "page" : undefined}
+    >
+      Home
+    </a>
+
+    <!-- MOBILE PRODUCTS DROPDOWN -->
+    <button
+      class:list={[
+        "mobile-products-toggle",
+        { active: isProductsActive },
+      ]}
+      id="mobile-products-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-products-menu"
+    >
+      <span>Products</span>
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </button>
+
+    <div
+      class="mobile-products-menu"
+      id="mobile-products-menu"
+      hidden
+    >
+      {
+        productLinks.map((item) => (
+          <a
+            href={item.href}
+            class:list={[{ active: isActive(item.href) }]}
+            aria-current={isActive(item.href) ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- OTHER MOBILE LINKS -->
+    {
+      navLinks.slice(1).map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            "mobile-link",
+            { active: isActive(item.href) },
+          ]}
+          aria-current={isActive(item.href) ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<style>
+/* =========================================
+   PREMIUM NAVBAR
+   DARK NAVY + CYAN + BLUE
+========================================= */
+
+.site-header {
+  --nav-bg: #001014;
+  --nav-surface: #001b22;
+  --nav-text: #eafaff;
+  --nav-muted: #9ab4c0;
+  --nav-border: rgb(0 213 223 / 18%);
+  --nav-hover: #063b48;
+  --nav-cyan: #00d5df;
+  --nav-blue: #087cff;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+
+  color: var(--nav-text);
+  background: rgb(0 16 20 / 94%);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 8px 30px rgb(0 0 0 / 22%);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+/* NAVBAR CONTAINER */
+
+.navbar {
+  width: min(100% - 40px, 1440px);
+  min-height: 82px;
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+/* =========================================
+   BRAND / LOGO
+========================================= */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+  padding: 4px 8px;
+
+  background: #ffffff;
+  border-radius: 8px;
+
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand img {
+  display: block;
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1.2;
+}
+
+.brand-text strong {
+  color: #087cff;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.brand-text strong span {
+  background: linear-gradient(
+    110deg,
+    #00d5df 0%,
+    #32baff 50%,
+    #087cff 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-text small {
+  color: #9ab4c0;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(9px, 1vw, 16px);
+}
+
+.nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 10px 0;
+  border: 0;
+  background: transparent;
+
+  color: var(--nav-muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: color 180ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+
+  height: 2px;
+  content: "";
+
+  background: linear-gradient(
+    90deg,
+    #00d5df,
+    #32baff,
+    #087cff
+  );
+
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link.active {
+  color: var(--nav-cyan);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* =========================================
+   DESKTOP PRODUCTS DROPDOWN
+========================================= */
+
+.dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dropdown-trigger {
+  appearance: none;
+}
+
+.dropdown-trigger svg,
+.mobile-products-toggle svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 180ms ease;
+}
+
+.dropdown-trigger[aria-expanded="true"] svg,
+.mobile-products-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -14px;
+  z-index: 20;
+
+  display: flex;
+  min-width: 260px;
+  padding: 8px;
+
+  flex-direction: column;
+  gap: 3px;
+
+  background: #001b22;
+  border: 1px solid var(--nav-border);
+  border-radius: 13px;
+  box-shadow: 0 16px 45px rgb(0 0 0 / 35%);
+
+  animation: dropdownEnter 160ms ease both;
+}
+
+.dropdown-menu[hidden] {
+  display: none;
+}
+
+.dropdown-menu::before {
+  position: absolute;
+  top: -13px;
+  right: 0;
+  left: 0;
+  height: 14px;
+  content: "";
+}
+
+.dropdown:hover .dropdown-menu:not([hidden]),
+.dropdown:focus-within .dropdown-menu:not([hidden]) {
+  display: flex;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 11px 12px;
+
+  border-radius: 8px;
+  color: var(--nav-muted);
+
+  font-size: 13px;
+  font-weight: 550;
+  line-height: 1.45;
+  text-decoration: none;
+
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
+  color: var(--nav-cyan);
+  background: var(--nav-hover);
+}
+
+/* DROPDOWN ANIMATION */
+
+@keyframes dropdownEnter {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   NAVIGATION ACTIONS
+========================================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* MOBILE MENU BUTTON */
+
+.mobile-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  border: 1px solid var(--nav-border);
+  border-radius: 10px;
+
+  background: var(--nav-surface);
+  color: var(--nav-text);
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.mobile-toggle:hover {
+  color: var(--nav-cyan);
+  border-color: var(--nav-cyan);
+  box-shadow: 0 0 25px rgb(0 213 223 / 18%);
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  border-radius: 5px;
+  background: currentColor;
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.mobile-toggle.is-open span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.is-open span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+.mobile-menu {
+  width: min(100% - 32px, 600px);
+
+  max-height: calc(100dvh - 90px);
+  margin-inline: auto;
+  padding: 12px 0 22px;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  border-top: 1px solid var(--nav-border);
+}
+
+.mobile-menu[hidden],
+.mobile-products-menu[hidden] {
+  display: none;
+}
+
+.mobile-link,
+.mobile-products-toggle {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 12px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+  color: var(--nav-muted);
+
+  text-align: left;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.mobile-link:hover,
+.mobile-link.active,
+.mobile-products-toggle:hover,
+.mobile-products-toggle.active {
+  color: var(--nav-cyan);
+  background: var(--nav-hover);
+}
+
+.mobile-products-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 2px 0 8px 14px;
+}
+
+.mobile-products-menu a {
+  display: block;
+  padding: 11px 13px;
+
+  border-left: 2px solid var(--nav-border);
+  border-radius: 0 8px 8px 0;
+
+  color: var(--nav-muted);
+  font-size: 13px;
+  font-weight: 550;
+  text-decoration: none;
+
+  transition: all 160ms ease;
+}
+
+.mobile-products-menu a:hover,
+.mobile-products-menu a.active {
+  color: var(--nav-cyan);
+  background: var(--nav-hover);
+  border-left-color: var(--nav-cyan);
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.site-header a:focus-visible,
+.site-header button:focus-visible {
+  outline: 2px solid var(--nav-cyan);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1250px) {
+  .navbar {
+    gap: 12px;
+  }
+
+  .desktop-nav {
+    gap: 9px;
+  }
+
+  .nav-link {
+    font-size: 11px;
+  }
+
+  .brand-text strong {
+    font-size: 16px;
+  }
+
+  .brand-text small {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 1050px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .navbar {
+    min-height: 74px;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    width: calc(100% - 24px);
+    min-height: 68px;
+    gap: 8px;
+  }
+
+  .brand {
+    gap: 6px;
+    padding: 4px 6px;
+  }
+
+  .brand img {
+    width: 43px;
+    height: 43px;
+  }
+
+  .brand-text {
+    gap: 3px;
+  }
+
+  .brand-text strong {
+    font-size: 15px;
+    letter-spacing: -0.3px;
+  }
+
+  .brand-text small {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .mobile-toggle {
+    width: 37px;
+    height: 37px;
+  }
+
+  .mobile-menu {
+    width: calc(100% - 24px);
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header *,
+  .site-header *::before,
+  .site-header *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+
+<script>
+  const initializeNavbar = () => {
+    const header =
+      document.querySelector<HTMLElement>("#site-header");
+
+    if (!header || header.dataset.initialized === "true") return;
+
+    const mobileToggle =
+      header.querySelector<HTMLButtonElement>("#mobile-toggle");
+
+    const mobileMenu =
+      header.querySelector<HTMLElement>("#mobile-menu");
+
+    const productsToggle =
+      header.querySelector<HTMLButtonElement>(
+        "#mobile-products-toggle"
+      );
+
+    const productsMenu =
+      header.querySelector<HTMLElement>(
+        "#mobile-products-menu"
+      );
+
+    const desktopProductsToggle =
+      header.querySelector<HTMLButtonElement>(
+        ".dropdown-trigger"
+      );
+
+    const desktopProductsMenu =
+      header.querySelector<HTMLElement>(
+        "#desktop-products-menu"
+      );
+
+    if (!mobileToggle || !mobileMenu) return;
+
+    header.dataset.initialized = "true";
+
+    /* CLOSE MOBILE MENU */
+
+    const closeMobileMenu = () => {
+      mobileMenu.hidden = true;
+
+      mobileToggle.classList.remove("is-open");
+      mobileToggle.setAttribute("aria-expanded", "false");
+      mobileToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+      );
+
+      productsToggle?.setAttribute("aria-expanded", "false");
+
+      if (productsMenu) {
+        productsMenu.hidden = true;
+      }
+    };
+
+    /* CLOSE DESKTOP PRODUCTS */
+
+    const closeDesktopProducts = () => {
+      desktopProductsToggle?.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      if (desktopProductsMenu) {
+        desktopProductsMenu.hidden = true;
+      }
+    };
+
+    /* MOBILE MENU TOGGLE */
+
+    mobileToggle.addEventListener("click", () => {
+      const isOpen =
+        mobileToggle.getAttribute("aria-expanded") === "true";
+
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        mobileMenu.hidden = false;
+
+        mobileToggle.classList.add("is-open");
+        mobileToggle.setAttribute("aria-expanded", "true");
+        mobileToggle.setAttribute(
+          "aria-label",
+          "Close navigation menu"
+        );
+      }
+    });
+
+    /* MOBILE PRODUCTS DROPDOWN */
+
+    productsToggle?.addEventListener("click", () => {
+      if (!productsMenu) return;
+
+      const isOpen =
+        productsToggle.getAttribute("aria-expanded") === "true";
+
+      productsMenu.hidden = isOpen;
+
+      productsToggle.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+    });
+
+    /* DESKTOP PRODUCTS DROPDOWN */
+
+    desktopProductsToggle?.addEventListener("click", () => {
+      if (!desktopProductsMenu) return;
+
+      const isOpen =
+        desktopProductsToggle.getAttribute("aria-expanded") ===
+        "true";
+
+      desktopProductsMenu.hidden = isOpen;
+
+      desktopProductsToggle.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+    });
+
+    /* CLOSE MOBILE MENU AFTER NAVIGATION */
+
+    mobileMenu
+      .querySelectorAll<HTMLAnchorElement>("a")
+      .forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+    /* OUTSIDE CLICK */
+
+    const handleOutsideClick = (event: MouseEvent) => {
+      const target = event.target;
+
+      if (!(target instanceof Node)) return;
+
+      if (!header.contains(target)) {
+        closeMobileMenu();
+        closeDesktopProducts();
+        return;
+      }
+
+      const desktopDropdown =
+        desktopProductsToggle?.closest(".dropdown");
+
+      if (
+        desktopDropdown &&
+        !desktopDropdown.contains(target)
+      ) {
+        closeDesktopProducts();
+      }
+
+      if (
+        !mobileMenu.contains(target) &&
+        !mobileToggle.contains(target)
+      ) {
+        closeMobileMenu();
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+
+    /* ESCAPE KEY */
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+
+      closeMobileMenu();
+      closeDesktopProducts();
+      mobileToggle.focus();
+    };
+
+    document.addEventListener("keydown", handleEscape);
+  };
+
+  /* INITIAL PAGE LOAD */
+
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializeNavbar,
+      { once: true }
+    );
+  } else {
+    initializeNavbar();
+  }
+
+  /* ASTRO VIEW TRANSITIONS */
+
+  document.addEventListener(
+    "astro:page-load",
+    initializeNavbar
+  );
+</script>

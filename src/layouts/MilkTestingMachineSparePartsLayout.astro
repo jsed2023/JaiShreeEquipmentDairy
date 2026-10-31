@@ -1,0 +1,39 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Milk Testing Machine Spare Parts",
+  description =
+    "Buy genuine milk testing machine spare parts including PCB boards, thermal printers, sensors, displays and accessories for Ekomilk, Advance and Lactoscan analyzers. Available across Rajasthan and India.",
+} = Astro.props;
+
+const pageUrl = `${siteConfig.url}/milk-testing-machine-spare-parts`;
+
+const fullTitle = `${title} | ${siteConfig.name}`;
+
+const ogDescription =
+  "Premium quality milk analyzer spare parts, dairy equipment spare parts, AMCU spare parts and milk testing machine accessories available across India.";
+
+const twitterDescription =
+  "Shop milk analyzer spare parts, sensors, pumps, PCB boards, thermal printers, LCD displays and dairy equipment components.";
+---
+
+<MainLayout
+  title={fullTitle}
+  description={description}
+  canonical={pageUrl}
+  keywords={metaKeywords[14].keywords}
+  author={metaKeywords[14].name}
+  ogTitle={fullTitle}
+  ogDescription={ogDescription}
+>
+  <section class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100">
+    <slot />
+  </section>
+</MainLayout>

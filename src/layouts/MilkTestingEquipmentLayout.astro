@@ -1,0 +1,39 @@
+
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Milk Testing Equipment",
+  description =
+    "Milk testing equipment including milk analyzers and dairy quality testing machines supplied by Jai Shree Equipment Dairy.",
+} = Astro.props;
+
+const pageUrl = `${siteConfig.url}/milk-testing-equipment`;
+
+const fullTitle = `${title} | Jai Shree Equipment Dairy`;
+
+const ogDescription =
+  "High-quality milk testing machines and analyzers for accurate dairy quality testing supplied by Jai Shree Equipment Dairy.";
+
+const image =
+  `${siteConfig.url}/images/milk-testing-equipment.webp`;
+---
+
+<MainLayout
+  title={fullTitle}
+  description={description}
+  canonical={pageUrl}
+  keywords={metaKeywords[3].keywords}
+  author={metaKeywords[3].name}
+  ogTitle={fullTitle}
+  ogDescription={ogDescription}
+  ogImage={image}
+>
+  <slot />
+</MainLayout>

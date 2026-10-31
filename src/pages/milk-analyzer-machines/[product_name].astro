@@ -1,0 +1,30 @@
+---
+import ProductLayout from "@/layouts/ProductLayout.astro";
+import ProductDetail from "@/components/products/milk-analyzer-machines/ProductDetail";
+import { MilkAnalyzerMachines } from "@/config/products";
+
+export function getStaticPaths() {
+  return MilkAnalyzerMachines.map((product) => ({
+    params: {
+      product_name: product.url,
+    },
+    props: {
+      product,
+    },
+  }));
+}
+
+const { product } = Astro.props;
+---
+
+<ProductLayout
+  productName={product.name}
+  description={product.metaDescription || product.smallDesc}
+  productUrl={`/milk-analyzer-machines/${product.url}`}
+  keywords={product.keywords || ""}
+>
+  <ProductDetail
+    client:load
+    productSlug={product.url}
+  />
+</ProductLayout>

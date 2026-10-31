@@ -1,0 +1,207 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { rajasthanLocations } from "@/lib/rajasthan-locations";
+---
+
+<MainLayout
+  title="Dairy Equipment Locations"
+  description="Jai Shree Equipment Dairy supplies milk analyzer machines, dairy equipment, milking machines, cream separator machines and automatic milk collection systems across Rajasthan."
+>
+
+  <section class="container mx-auto px-4 py-10">
+
+    <!-- HEADER -->
+    <div
+      class="flex items-center justify-center rounded-full px-3 py-2.5 mb-8
+      bg-linear-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10
+      border border-purple-400/30 backdrop-blur-sm"
+    >
+      <h1
+        class="text-2xl md:text-3xl font-bold text-center
+        bg-clip-text text-transparent bg-linear-to-r
+        from-blue-600 to-purple-600"
+      >
+        Milk Analyzer Machine Service Locations in Rajasthan
+      </h1>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="flex justify-center my-8">
+      <img
+        src="https://res.cloudinary.com/dddhtbuzs/image/upload/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png"
+        alt="Milk Analyzer Machine and Dairy Machine Service Locations in Rajasthan"
+        width="1000"
+        height="300"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="w-full max-w-[1000px] rounded-xl object-cover shadow-lg"
+      />
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div
+      class="bg-gray-100 dark:bg-[#1f1f22]
+      text-gray-900 dark:text-gray-50
+      p-6 rounded-xl mb-12 shadow-sm"
+    >
+      <p class="text-gray-800 dark:text-gray-200 leading-7">
+        <strong>Jai Shree Equipment Dairy</strong> supplies
+
+        <strong>
+          Advance Milk Analyzer Max, Plus, Pro,
+          Ekomilk Ultra Analyzer,
+          Milk Fat Testing Machines,
+          Milk Collection Units (DPU),
+          Milk Cream Separator Machines (Paras)
+        </strong>
+
+        across Rajasthan including Sri Ganganagar,
+        Hanumangarh, Bikaner, Suratgarh, Anupgarh
+        and nearby areas.
+      </p>
+    </div>
+
+    <!-- LOCATIONS GRID -->
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
+      lg:grid-cols-5 gap-6"
+    >
+      {
+        rajasthanLocations.map((location, index) => (
+          <a
+            href={`/milk-analyzer-${location.slug}`}
+            class="location-card relative group block rounded-xl overflow-hidden
+            bg-linear-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10
+            border border-gray-200 dark:border-gray-700
+            hover:border-blue-500 transition-all duration-300
+            shadow-sm hover:shadow-xl hover:-translate-y-1"
+            style={`--card-index: ${index}`}
+          >
+            <!-- Glow Effect -->
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100
+              transition duration-500
+              bg-linear-to-r from-blue-500/20 via-purple-500/20
+              to-cyan-500/20 blur-xl"
+            ></div>
+
+            <div class="relative p-5 text-center">
+
+              <h2
+                class="text-lg md:text-xl font-bold
+                bg-clip-text text-transparent
+                bg-linear-to-r from-blue-600 to-purple-600"
+              >
+                {location.city}
+              </h2>
+
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                Milk Analyzer Machine in {location.city}
+              </p>
+
+              <div
+                class="mt-4 inline-block px-4 py-2 rounded-full
+                bg-blue-600 text-white text-sm font-medium
+                group-hover:bg-purple-600 transition"
+              >
+                View Details →
+              </div>
+
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- POPULAR LOCATIONS -->
+    <div class="mt-16 text-center">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Popular Milk Analyzer Locations
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <a href="/milk-analyzer-jaipur" class="text-blue-600 hover:underline">
+          Milk Analyzer Jaipur
+        </a>
+
+        <a href="/milk-analyzer-bikaner" class="text-blue-600 hover:underline">
+          Milk Analyzer Bikaner
+        </a>
+
+        <a
+          href="/milk-analyzer-hanumangarh-junction"
+          class="text-blue-600 hover:underline"
+        >
+          Milk Analyzer Hanumangarh
+        </a>
+
+        <a href="/milk-analyzer-suratgarh" class="text-blue-600 hover:underline">
+          Milk Analyzer Suratgarh
+        </a>
+
+        <a
+          href="/milk-analyzer-sri-ganganagar"
+          class="text-blue-600 hover:underline"
+        >
+          Milk Analyzer Sri Ganganagar
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SCROLL ANIMATION -->
+  <script>
+    const cards = document.querySelectorAll(".location-card");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const card = entry.target as HTMLElement;
+
+            card.classList.add("card-visible");
+
+            observer.unobserve(card);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+  </script>
+
+  <style>
+    .location-card {
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .location-card.card-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .location-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+
+</MainLayout>

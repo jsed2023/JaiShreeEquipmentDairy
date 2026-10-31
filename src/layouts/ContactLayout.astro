@@ -1,0 +1,28 @@
+
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords } from "@/config/site";
+
+const description =
+  "Reach out to Jai Shree Equipment Dairy for milk analyzers, DPU milk collection units, milking machines and dairy equipment in Sri Ganganagar, Bikaner, Hanumangarh and Anupgarh. Call or WhatsApp for price and service support.";
+
+const keywords = metaKeywords[5].keywords;
+const author = metaKeywords[5].name;
+
+const openGraphDescription =
+  "Contact for milk analyzer, DPU and dairy equipment sales & service across Rajasthan.";
+---
+
+<MainLayout title="Contact" description={description}>
+  <meta slot="head" name="keywords" content={keywords} />
+  <meta slot="head" name="author" content={author} />
+
+  <meta slot="head" property="og:title" content="Contact" />
+  <meta slot="head" property="og:description" content={openGraphDescription} />
+  <meta slot="head" property="og:site_name" content="Jai Shree Equipment Dairy" />
+  <meta slot="head" property="og:locale" content="en_IN" />
+  
+  <div class="overflow-x-hidden">
+    <slot />
+  </div>
+</MainLayout>

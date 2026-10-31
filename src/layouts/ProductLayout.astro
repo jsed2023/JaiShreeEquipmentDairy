@@ -1,0 +1,48 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { siteConfig } from "@/config/site";
+
+interface Props {
+  productName: string;
+  description: string;
+  productUrl: string;
+  keywords?: string | string[];
+  ogImage?: string;
+}
+
+const {
+  productName,
+  description,
+  productUrl,
+  keywords = "",
+  ogImage,
+} = Astro.props;
+
+const canonicalURL = new URL(
+  productUrl,
+  siteConfig.url
+).href;
+
+// Convert keywords array into string
+const keywordsContent = Array.isArray(keywords)
+  ? keywords.filter(Boolean).join(", ")
+  : keywords;
+
+const author = `${productName} - ${siteConfig.name}`;
+---
+
+<MainLayout
+  title={productName}
+  description={description}
+  canonical={canonicalURL}
+  keywords={keywordsContent}
+  author={author}
+  ogTitle={productName}
+  ogDescription={description}
+  ogImage={ogImage}
+  ogType="product"
+>
+  <div class="overflow-x-hidden">
+    <slot />
+  </div>
+</MainLayout>

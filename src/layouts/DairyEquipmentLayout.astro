@@ -1,0 +1,39 @@
+
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Dairy Equipment",
+  description =
+    "Explore high-quality dairy equipment including cream separator machines, Paras milk cream separator machines, and dairy automation systems supplied by Jai Shree Equipment Dairy.",
+} = Astro.props;
+
+const pageUrl = `${siteConfig.url}/dairy-equipment`;
+
+const fullTitle = `${title} | Jai Shree Equipment Dairy`;
+
+const ogDescription =
+  "Buy reliable dairy equipment such as Paras milk cream separator machines from Jai Shree Equipment Dairy.";
+
+const image =
+  `${siteConfig.url}/images/dairy-equipment.webp`;
+---
+
+<MainLayout
+  title={fullTitle}
+  description={description}
+  canonical={pageUrl}
+  keywords={metaKeywords[2].keywords}
+  author={metaKeywords[2].name}
+  ogTitle={fullTitle}
+  ogDescription={ogDescription}
+  ogImage={image}
+>
+  <slot />
+</MainLayout>

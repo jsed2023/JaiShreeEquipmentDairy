@@ -1,0 +1,54 @@
+---
+import ProductLayout from "@/layouts/ProductLayout.astro";
+import ProductDetail from "@/components/products/automatic-milk-collection-system/ProductDetail";
+import { automaticMilkCollectionSystem } from "@/config/products";
+
+export function getStaticPaths() {
+  return automaticMilkCollectionSystem.map((product) => ({
+    params: {
+      product_name: product.url,
+    },
+    props: {
+      productSlug: product.url,
+    },
+  }));
+}
+
+interface Props {
+  productSlug: string;
+}
+
+const { productSlug } = Astro.props as Props;
+
+const product = automaticMilkCollectionSystem.find(
+  (item) => item.url.toLowerCase() === productSlug.toLowerCase()
+);
+
+if (!product) {
+  throw new Error(`Product not found: ${productSlug}`);
+}
+
+const description =
+  product.desc ||
+  product.smallDesc ||
+  `${product.name} - Quality dairy equipment supplied by Jai Shree Equipment Dairy, Rajasthan.`;
+
+const firstImage = product.images?.[0];
+
+const ogImage =
+  typeof firstImage === "string"
+    ? firstImage
+    : firstImage?.src || undefined;
+
+const keywords = product.keywords || [];
+---
+
+<ProductLayout
+  productName={product.name}
+  description={description}
+  productUrl={`/automatic-milk-collection-system/${product.url}`}
+  keywords={keywords}
+  ogImage={ogImage}
+>
+  <ProductDetail client:load productSlug={productSlug} />
+</ProductLayout>

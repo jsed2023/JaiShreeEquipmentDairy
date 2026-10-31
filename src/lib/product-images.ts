@@ -1,0 +1,69 @@
+
+export type ProductImage = {
+  name: string;
+  url: string;
+  productUrl: string;
+};
+
+const CLOUDINARY_BASE =
+  "https://res.cloudinary.com/dddhtbuzs/image/upload";
+
+export const productImages: ProductImage[] = [
+  {
+    name: "Advance Milk Analyzer Max",
+    url: `${CLOUDINARY_BASE}/v1766063713/advance_milk_analyzer_max.png`,
+    productUrl:
+      "/automatic-milk-collection-system/advance-milk-analyzer-max/",
+  },
+  {
+    name: "Advance Milk Analyzer Plus",
+    url: `${CLOUDINARY_BASE}/v1757013349/Advance_Milk_Analyzer_plus.png`,
+    productUrl: "/milk-testing-equipment/advance-milk-analyzer-plus/",
+  },
+  {
+    name: "Advance Milk Analyzer Pro",
+    url: `${CLOUDINARY_BASE}/v1765479086/Advance_Milk_Analyzer_Pro20.png`,
+    productUrl: "/milk-testing-equipment/advance-milk-analyzer-pro20/",
+  },
+  {
+    name: "Ekomilk Ultra Milk Analyzer",
+    url: `${CLOUDINARY_BASE}/v1766061561/Ekomilk-Ultra-Analyzer.jpg`,
+    productUrl: "/milk-testing-equipment/ekomilk-ultra-milk-analyzer/",
+  },
+  {
+    name: "Advance Milk Analyzer",
+    url: `${CLOUDINARY_BASE}/v1728902682/Advance%20Milk%20Analyzer.jpg`,
+    productUrl: "/milk-testing-equipment/milk-analyzer-advance/",
+  },
+  {
+    name: "Milk Collection Unit DPU",
+    url: `${CLOUDINARY_BASE}/v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png`,
+    productUrl:
+      "/automatic-milk-collection-system/automatic-milk-collection-data-processor-unit/",
+  },
+  {
+    name: "Milk Cream Separator",
+    url: `${CLOUDINARY_BASE}/v1731401214/cream-separator-machine-9-ae-165-lph.jpg`,
+    productUrl:
+      "/dairy-equipment/cream-separator-machine-9-ae-165-lph/",
+  },
+  {
+    name: "Paras Milk Cream Separator",
+    url: `${CLOUDINARY_BASE}/v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg`,
+    productUrl:
+      "/dairy-equipment/paras-milk-cream-separator-aed-165-lph/",
+  },
+  {
+    name: "All In One Milk Analyzer",
+    // Original image URL retained; replace if this product has a separate image.
+    url: `${CLOUDINARY_BASE}/v1766063713/advance_milk_analyzer_max.png`,
+    productUrl:
+      "/automatic-milk-collection-system/all-in-one-milk-analyzer/",
+  },
+  {
+    name: "Digital Ultrasonic Milk Stirrer",
+    url: `${CLOUDINARY_BASE}/v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg`,
+    productUrl:
+      "/automatic-milk-collection-system/ultrasonic-milk-stirrer/",
+  },
+];

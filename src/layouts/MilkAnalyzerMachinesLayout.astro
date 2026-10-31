@@ -1,0 +1,40 @@
+
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Milk Analyzer Machines",
+  description = "Explore advance Milk Analyzer Machines, Milk Fat Testing Machines, Lactoscan Milk Analyzers, Ekomilk Ultra Machines, FAT & SNF Testing Machines, and Dairy Quality Testing Equipment from Jai Shree Equipment Dairy. Get accurate milk analysis, fast testing results, dairy automation solutions, and reliable milk testing machines for dairy farms, milk collection centers, laboratories, and dairy processing units across Rajasthan and India.",
+} = Astro.props;
+
+const pageUrl = `${siteConfig.url}/milk-analyzer-machines`;
+
+const author = metaKeywords[13].name;
+const keywords = metaKeywords[13].keywords;
+
+const ogTitle = "Milk Analyzer Machines | Jai Shree Equipment Dairy";
+
+const ogDescription =
+  "High-quality milk testing machines and analyzers for accurate dairy quality testing supplied by Jai Shree Equipment Dairy.";
+---
+
+<MainLayout
+  title={`${title} | Jai Shree Equipment Dairy`}
+  description={description}
+  canonical={pageUrl}
+  keywords={keywords}
+  author={author}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogImage={`${siteConfig.url}/og-image.jpg`}
+>
+  <div class="overflow-x-hidden">
+    <slot />
+  </div>
+</MainLayout>

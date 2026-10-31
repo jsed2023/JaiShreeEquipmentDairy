@@ -1,0 +1,53 @@
+
+<div class="loader-container">
+  <div class="loader-spinner"></div>
+
+  <img
+    src="/logo.png"
+    alt="JSED Logo"
+    width="48"
+    height="48"
+    class="loader-logo"
+    loading="eager"
+    fetchpriority="high"
+  />
+</div>
+
+<style>
+  .loader-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+  }
+
+  .loader-spinner {
+    width: 80px;
+    height: 80px;
+    border: 4px solid #d1d5db;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: jsed-spin 1s linear infinite;
+  }
+
+  .loader-logo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  @keyframes jsed-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .loader-spinner {
+      animation: none;
+    }
+  }
+</style>

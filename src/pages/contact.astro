@@ -1,0 +1,339 @@
+---
+import ContactLayout from "@/layouts/ContactLayout.astro";
+import GoogleMapIframe from "@/components/GoogleMapIframe";
+---
+
+<ContactLayout>
+  <main id="contact" class="w-full overflow-x-hidden">
+
+    <!-- Header -->
+    <div class="my-5 mt-4 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:border-zinc-700 dark:text-white/90">
+      <h1 class="bg-linear-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-center text-lg font-bold text-transparent underline sm:text-4xl">
+        Contact
+      </h1>
+    </div>
+
+    <!-- Intro -->
+    <section class="flex flex-col gap-y-5 rounded-xl bg-[rgb(244,244,245)] p-4 dark:bg-[#27272a]">
+      <div class="mt-4 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:border-zinc-700 dark:text-white/90">
+        <p class="mx-auto max-w-4xl text-center text-stone-700 dark:text-white/80">
+          Get in touch with Jai Shree Equipment Dairy for
+          milk analyzers, DPU milk collection units,
+          milk cream separator machines and dairy equipment in Sri
+          Ganganagar, Hanumangarh, Suratgarh, Bikaner and
+          nearby areas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="flex w-full justify-between gap-8 max-md:flex-col">
+
+      <!-- Contact Details -->
+      <section class="my-5 flex flex-col gap-y-5 rounded-xl bg-[rgb(244,244,245)] p-4 dark:bg-[#27272a] md:min-w-72">
+
+        <!-- Email -->
+        <div>
+          <div class="flex items-center gap-2 font-bold">
+            <span class="text-2xl text-stone-400" aria-hidden="true">✉</span>
+            <h2>Chat with Us</h2>
+          </div>
+
+          <a
+            href="mailto:choudharydairy@outlook.com"
+            class="break-all text-stone-500 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+          >
+            choudharydairy@outlook.com
+          </a>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <div class="flex items-center gap-2 font-bold">
+            <span class="text-2xl text-stone-400" aria-hidden="true">🌍</span>
+            <h2>Visit Us</h2>
+          </div>
+
+          <address class="text-stone-500 not-italic dark:text-gray-400">
+            Shop No:-B-42, Rohit Udhyog Market,
+            <br />
+            Near HP Gas Agency, Shiv Circle Road,
+            <br />
+            Sri Ganganagar, Rajasthan - 335001
+          </address>
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <div class="flex items-center gap-2 font-bold">
+            <span class="text-2xl text-stone-400" aria-hidden="true">☎</span>
+            <h2>Call Us</h2>
+          </div>
+
+          <a
+            href="tel:+917375082341"
+            class="text-stone-500 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+          >
+            +91 7375082341
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="w-full rounded-xl border p-7 sm:p-10 md:p-12 lg:p-16 dark:border-zinc-700">
+
+        <h2 class="mb-2 text-2xl font-bold">
+          Need milk analyzer and dairy equipment?
+        </h2>
+
+        <p class="mb-6 text-stone-500 dark:text-white/60">
+          Reach out to Jai Shree Equipment Dairy for
+          inquiries about dairy equipment in Sri
+          Ganganagar, Bikaner, Hanumangarh, and Anupgarh.
+        </p>
+
+        <form id="contact-form" class="flex flex-col gap-5">
+
+          <!-- Name -->
+          <div class="flex gap-4 max-sm:flex-col">
+
+            <div class="w-full">
+              <label for="firstName" class="mb-1.5 block text-sm font-semibold">
+                First Name <span class="ml-1 text-red-500">*</span>
+              </label>
+
+              <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="Enter first name"
+                autocomplete="given-name"
+                required
+                class="contact-input"
+              />
+            </div>
+
+            <div class="w-full">
+              <label for="lastName" class="mb-1.5 block text-sm font-semibold">
+                Last Name
+              </label>
+
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Enter last name"
+                autocomplete="family-name"
+                class="contact-input"
+              />
+            </div>
+
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="mb-1.5 block text-sm font-semibold">
+              Email
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter email address"
+              autocomplete="email"
+              class="contact-input"
+            />
+          </div>
+
+          <!-- Mobile -->
+          <div>
+            <label for="mobileNumber" class="mb-1.5 block text-sm font-semibold">
+              Mobile Number <span class="ml-1 text-red-500">*</span>
+            </label>
+
+            <input
+              id="mobileNumber"
+              name="mobileNumber"
+              type="tel"
+              inputmode="tel"
+              placeholder="Enter mobile number"
+              autocomplete="tel"
+              required
+              pattern="[0-9+\s()-]{10,16}"
+              title="Please enter a valid mobile number"
+              class="contact-input"
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="query" class="mb-1.5 block text-sm font-semibold">
+              Description
+            </label>
+
+            <textarea
+              id="query"
+              name="query"
+              rows="7"
+              placeholder="Tell us which dairy equipment you need..."
+              class="contact-input resize-y"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="mt-4 block w-full">
+            <button
+              id="contact-submit"
+              type="submit"
+              class="flex min-h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 font-bold text-white shadow-md transition hover:bg-[#1DA851] sm:w-fit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                <path d="M22 2 11 13"></path>
+              </svg>
+
+              <span id="submit-text">Send via WhatsApp</span>
+            </button>
+          </div>
+
+        </form>
+      </section>
+    </div>
+
+    <!-- Service Areas -->
+    <div class="mt-4 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:border-zinc-700 dark:text-white/90">
+      <section class="flex flex-col gap-y-5 rounded-xl bg-[rgb(244,244,245)] p-4 dark:bg-[#27272a]">
+
+        <h2 class="mb-2 text-xl font-bold">
+          Areas We Service
+        </h2>
+
+        <p>
+          Sri Ganganagar, Hanumangarh, Suratgarh,
+          Raisinghnagar, Padampur, Kesrisinghpur,
+          Anupgarh and Bikaner.
+        </p>
+
+      </section>
+    </div>
+
+    <!-- Google Map -->
+    <section class="mt-10">
+      <h2 class="mb-4 text-xl font-bold">
+        Our Location
+      </h2>
+
+      <GoogleMapIframe />
+    </section>
+
+  </main>
+</ContactLayout>
+
+<!-- Input Styling -->
+<style>
+  .contact-input {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    background: white;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #111827;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .contact-input::placeholder {
+    color: #9ca3af;
+  }
+
+  .contact-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgb(59 130 246 / 20%);
+  }
+
+  :global(.dark) .contact-input {
+    border-color: #52525b;
+    background: #27272a;
+    color: white;
+  }
+
+  :global(.dark) .contact-input::placeholder {
+    color: #71717a;
+  }
+
+  :global(.dark) .contact-input:focus {
+    border-color: #60a5fa;
+  }
+</style>
+
+<!-- WhatsApp Form Script -->
+<script>
+  const form = document.querySelector<HTMLFormElement>("#contact-form");
+
+  const submitButton = document.querySelector<HTMLButtonElement>(
+    "#contact-submit"
+  );
+
+  const submitText = document.querySelector<HTMLSpanElement>(
+    "#submit-text"
+  );
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    const formData = new FormData(form);
+
+    const firstName = String(formData.get("firstName") ?? "");
+    const lastName = String(formData.get("lastName") ?? "");
+    const email = String(formData.get("email") ?? "");
+    const mobileNumber = String(formData.get("mobileNumber") ?? "");
+    const query = String(formData.get("query") ?? "");
+
+    const phoneNumber = "917375082341";
+
+    const message = [
+      "New Contact Request",
+      "──────────────────────",
+      `Name: ${firstName} ${lastName}`.trim(),
+      `Mobile: ${mobileNumber}`,
+      `Email: ${email}`,
+      `Message: ${query}`,
+    ].join("\n");
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    if (submitText) {
+      submitText.textContent = "Opening WhatsApp...";
+    }
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
+
+    if (submitButton) {
+      submitButton.disabled = false;
+    }
+
+    if (submitText) {
+      submitText.textContent = "Send via WhatsApp";
+    }
+  });
+</script>

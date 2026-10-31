@@ -1,0 +1,44 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+const title = "Milk Rate Chart & DPU Milk Rate Create";
+
+const description =
+  "Milk Rate Chart – Upload your Excel file and instantly convert it into a digital FAT & SNF milk rate chart for DPU & Generate and download fat & SNF milk rate charts, DPU dairy khata rates, and use automated milk rate calculators for dairy management systems | Jai Shree Equipment Dairy.";
+
+const canonicalUrl = `${siteConfig.url.replace(/\/$/, "")}/milk-rate-chart`;
+
+const ogDescription =
+  "Upload your Excel file and generate FAT & SNF milk rate chart instantly for DPU & dairy software.";
+
+const twitterDescription =
+  "Convert Excel into digital FAT & SNF milk rate chart for dairy software instantly.";
+---
+
+<MainLayout title={title} description={description}>
+  <!-- SEO -->
+  <meta slot="head" name="keywords" content={metaKeywords[6].keywords} />
+  <meta slot="head" name="author" content={metaKeywords[6].name} />
+  <meta slot="head" name="robots" content="index, follow" />
+
+  <!-- CANONICAL -->
+  <link slot="head" rel="canonical" href={canonicalUrl} />
+
+  <!-- OPEN GRAPH -->
+  <meta slot="head" property="og:title" content="Milk Rate Chart" />
+  <meta slot="head" property="og:description" content={ogDescription} />
+  <meta slot="head" property="og:url" content={canonicalUrl} />
+  <meta slot="head" property="og:site_name" content={siteConfig.name} />
+  <meta slot="head" property="og:locale" content="en_IN" />
+  <meta slot="head" property="og:type" content="website" />
+
+  <!-- TWITTER -->
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content="Milk Rate Chart" />
+  <meta slot="head" name="twitter:description" content={twitterDescription} />
+
+  <div class="min-h-screen bg-gray-80">
+    <slot />
+  </div>
+</MainLayout>
