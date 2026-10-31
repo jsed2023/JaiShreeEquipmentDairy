@@ -1,0 +1,47 @@
+
+# Dependencies
+/node_modules/
+/.pnp/
+/.pnp.js
+.yarn/install-state.gz
+
+# Astro
+/.astro/
+
+# Build output
+/dist/
+/build/
+/out/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Testing
+/coverage/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Deployment
+.vercel/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.pem
+
+# Editor settings
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Package manager
+# Keep package.json and package-lock.json tracked
