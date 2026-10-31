@@ -1,4 +1,4 @@
-import { Services } from "@/types";
+import type { Services } from "@/types";
 import { cld } from "@/utils/cloudinary";
 export const services: Services[] = [
   {
