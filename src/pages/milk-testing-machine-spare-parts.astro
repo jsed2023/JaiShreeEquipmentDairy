@@ -2,14 +2,67 @@
 ---
 import MilkTestingMachineSparePartsLayout from "@/layouts/MilkTestingMachineSparePartsLayout.astro";
 import { spareParts } from "@/config/spareparts";
+
+const getSlug = (name: string): string =>
+  name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const benefits = [
+  {
+    icon: "✅",
+    title: "Genuine Parts",
+    description: "Quality replacement parts for dairy equipment.",
+  },
+  {
+    icon: "🚚",
+    title: "Fast Delivery",
+    description: "Delivery options for customers across India.",
+  },
+  {
+    icon: "🛠️",
+    title: "Technical Support",
+    description: "Installation guidance and product assistance.",
+  },
+  {
+    icon: "💯",
+    title: "Wide Compatibility",
+    description: "Parts for compatible milk analyzers and dairy systems.",
+  },
+];
+
+const applications = [
+  {
+    icon: "🥛",
+    title: "Dairy Farms",
+    description:
+      "Replacement parts for milk analyzers, milking machines and dairy equipment used on dairy farms.",
+  },
+  {
+    icon: "🏭",
+    title: "Milk Collection Centers",
+    description:
+      "Spare parts for compatible AMCS systems, thermal printers, weighing systems and milk testing equipment.",
+  },
+  {
+    icon: "⚙️",
+    title: "Dairy Processing Plants",
+    description:
+      "Replacement components for dairy processing and milk quality testing applications.",
+  },
+];
 ---
 
 <MilkTestingMachineSparePartsLayout>
+
   <main class="mx-auto max-w-7xl px-4 py-8 sm:py-10">
 
     <!-- HERO -->
     <section class="mb-8 sm:mb-12">
       <div class="rounded-3xl bg-gradient-to-r from-sky-100 to-blue-100 p-6 shadow dark:from-sky-900 dark:to-zinc-900 sm:p-10">
+
         <h1 class="bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-5xl">
           Milk Testing Machine Spare Parts
         </h1>
@@ -18,12 +71,15 @@ import { spareParts } from "@/config/spareparts";
           Genuine spare parts for milk analyzers, automatic milk
           collection systems and dairy testing equipment.
         </p>
+
       </div>
     </section>
 
     <!-- INTRODUCTION -->
     <section class="mb-10 sm:mb-12">
+
       <div class="rounded-3xl bg-gradient-to-r from-sky-100 to-blue-100 p-6 shadow dark:from-sky-900 dark:to-zinc-900 sm:p-10">
+
         <p class="mx-auto max-w-4xl text-center text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg sm:leading-8">
           Jai Shree Equipment Dairy supplies genuine spare parts for
           Milk Analyzer Machines, Automatic Milk Collection Systems,
@@ -33,12 +89,16 @@ import { spareParts } from "@/config/spareparts";
           printers, LCD displays, motors, power supplies and
           replacement components with delivery across India.
         </p>
+
       </div>
+
     </section>
 
     <!-- ABOUT -->
     <section class="rounded-2xl bg-zinc-100 p-6 shadow-sm dark:bg-zinc-900 sm:p-8">
+
       <div class="space-y-4 leading-7 text-stone-700 dark:text-gray-300 sm:leading-8">
+
         <p>
           <strong>Jai Shree Equipment Dairy</strong> supplies dairy
           equipment spare parts in Rajasthan and across India. We
@@ -56,12 +116,16 @@ import { spareParts } from "@/config/spareparts";
           Contact our team for product availability, pricing,
           installation guidance and technical support.
         </p>
+
       </div>
+
     </section>
 
     <!-- PRODUCTS TITLE -->
     <section class="mb-8 mt-12">
+
       <div class="rounded-2xl border border-zinc-200 bg-white p-5 shadow dark:border-zinc-700 dark:bg-zinc-900">
+
         <h2 class="animate-title-gradient bg-clip-text text-center text-xl font-bold text-transparent underline sm:text-4xl">
           Available Milk Analyzer Spare Parts
         </h2>
@@ -70,38 +134,37 @@ import { spareParts } from "@/config/spareparts";
           Browse spare parts, accessories and testing equipment
           for dairy applications.
         </p>
+
       </div>
+
     </section>
 
     <!-- PRODUCTS GRID -->
-    <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 xl:grid-cols-3">
+    <section
+      aria-label="Available milk analyzer spare parts"
+      class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 xl:grid-cols-3"
+    >
+
       {spareParts.map((product) => {
-        const getSlug = (name: string): string =>
-          name
-            .toLowerCase()
-            .trim()
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-+|-+$/g, "");
 
         const productUrl =
           `/milk-testing-machine-spare-parts/${getSlug(product.name)}`;
 
-        const message = `Hello, I am interested in ${product.name}`;
-
-        const whatsappUrl =
-          `https://wa.me/917375082341?text=${encodeURIComponent(message)}`;
-
         return (
+
           <article
             class="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl dark:border-zinc-700 dark:bg-zinc-900"
           >
+
             <!-- PRODUCT IMAGE -->
             <a
               href={productUrl}
               aria-label={`View ${product.name} details`}
               class="block"
             >
+
               <div class="relative flex h-64 items-center justify-center overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:h-72">
+
                 <img
                   src={product.photo}
                   alt={product.alt || product.name}
@@ -113,7 +176,9 @@ import { spareParts } from "@/config/spareparts";
                   decoding="async"
                   class="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                 />
+
               </div>
+
             </a>
 
             <!-- PRODUCT CONTENT -->
@@ -121,163 +186,180 @@ import { spareParts } from "@/config/spareparts";
 
               <!-- PRODUCT NAME -->
               <h3 class="text-center text-lg font-bold leading-7 text-zinc-900 dark:text-white sm:text-xl">
+
                 <a
                   href={productUrl}
                   class="transition-colors hover:text-sky-600"
                 >
                   {product.name}
                 </a>
+
               </h3>
 
               <!-- PRICE -->
               <p class="mt-3 text-center text-xl font-bold text-sky-600 sm:text-2xl">
-                {product.price}
+                {product.price || "Contact for Price"}
               </p>
 
               <!-- STOCK STATUS -->
-              <div class="mt-3 flex justify-center">
-                <span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 dark:bg-green-900/30 dark:text-green-400">
-                  <span class="mr-1" aria-hidden="true">●</span>
-                  {product.stockStatus}
-                </span>
-              </div>
+              {product.stockStatus && (
+                <div class="mt-3 flex justify-center">
+
+                  <span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 dark:bg-green-900/30 dark:text-green-400">
+
+                    <span class="mr-1" aria-hidden="true">
+                      ●
+                    </span>
+
+                    {product.stockStatus}
+
+                  </span>
+
+                </div>
+              )}
 
               <!-- DESCRIPTION -->
               <p class="mt-4 line-clamp-3 text-center text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-                {product.metaDescription}
+                {product.metaDescription || product.description}
               </p>
 
               <!-- PRODUCT INFORMATION -->
               <div class="mt-5 grid grid-cols-2 gap-2 text-xs sm:text-sm">
-                <div class="rounded-lg bg-zinc-100 p-2 dark:bg-zinc-800">
-                  <span class="block text-zinc-500 dark:text-zinc-400">
-                    SKU
-                  </span>
 
-                  <span class="break-all font-semibold text-zinc-800 dark:text-zinc-200">
-                    {product.sku}
-                  </span>
-                </div>
+                {product.sku && (
+                  <div class="rounded-lg bg-zinc-100 p-2 dark:bg-zinc-800">
 
-                <div class="rounded-lg bg-zinc-100 p-2 dark:bg-zinc-800">
-                  <span class="block text-zinc-500 dark:text-zinc-400">
-                    Warranty
-                  </span>
+                    <span class="block text-zinc-500 dark:text-zinc-400">
+                      SKU
+                    </span>
 
-                  <span class="font-semibold text-zinc-800 dark:text-zinc-200">
-                    {product.warranty}
-                  </span>
-                </div>
+                    <span class="break-all font-semibold text-zinc-800 dark:text-zinc-200">
+                      {product.sku}
+                    </span>
+
+                  </div>
+                )}
+
+                {product.warranty && (
+                  <div class="rounded-lg bg-zinc-100 p-2 dark:bg-zinc-800">
+
+                    <span class="block text-zinc-500 dark:text-zinc-400">
+                      Warranty
+                    </span>
+
+                    <span class="font-semibold text-zinc-800 dark:text-zinc-200">
+                      {product.warranty}
+                    </span>
+
+                  </div>
+                )}
+
               </div>
 
               <!-- ACTION BUTTONS -->
               <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+
+                <!-- VIEW DETAILS -->
                 <a
                   href={productUrl}
+                  aria-label={`View details of ${product.name}`}
                   class="flex-1 rounded-xl bg-sky-600 px-4 py-3 text-center font-semibold text-white transition hover:bg-sky-700 active:scale-[0.98]"
                 >
                   View Details
                 </a>
 
+                <!-- ENQUIRE NOW -->
                 <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1 rounded-xl border border-green-600 px-4 py-3 text-center font-semibold text-green-600 transition hover:bg-green-600 hover:text-white"
+                  href={`${productUrl}#enquiry-form`}
+                  aria-label={`Enquire about ${product.name}`}
+                  class="flex-1 rounded-xl border border-green-600 px-4 py-3 text-center font-semibold text-green-600 transition hover:bg-green-600 hover:text-white active:scale-[0.98]"
                 >
-                  Enquire
+                  Enquire Now
                 </a>
+
               </div>
+
             </div>
+
           </article>
+
         );
+
       })}
+
     </section>
 
     <!-- WHY CHOOSE US -->
     <section class="mt-16 sm:mt-20">
+
       <h2 class="mb-8 text-center text-2xl font-bold sm:mb-10 sm:text-3xl">
         Why Choose Our Dairy Equipment Spare Parts?
       </h2>
 
       <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-        {[
-          {
-            icon: "✅",
-            title: "Genuine Parts",
-            description: "Quality replacement parts for dairy equipment.",
-          },
-          {
-            icon: "🚚",
-            title: "Fast Delivery",
-            description: "Delivery options for customers across India.",
-          },
-          {
-            icon: "🛠️",
-            title: "Technical Support",
-            description: "Installation guidance and product assistance.",
-          },
-          {
-            icon: "💯",
-            title: "Wide Compatibility",
-            description: "Parts for compatible milk analyzers and dairy systems.",
-          },
-        ].map((item) => (
+
+        {benefits.map((item) => (
+
           <div
             class="rounded-2xl border border-zinc-200 bg-white p-6 text-center shadow dark:border-zinc-700 dark:bg-zinc-900"
           >
-            <div class="mb-4 text-5xl">{item.icon}</div>
-            <h3 class="text-lg font-bold">{item.title}</h3>
+
+            <div class="mb-4 text-5xl">
+              {item.icon}
+            </div>
+
+            <h3 class="text-lg font-bold">
+              {item.title}
+            </h3>
+
             <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
               {item.description}
             </p>
+
           </div>
+
         ))}
+
       </div>
+
     </section>
 
     <!-- APPLICATIONS -->
     <section class="mt-16 sm:mt-20">
+
       <h2 class="mb-8 text-center text-2xl font-bold sm:mb-10 sm:text-3xl">
         Applications of Milk Testing Machine Spare Parts
       </h2>
 
       <div class="grid gap-6 sm:gap-8 md:grid-cols-3">
-        <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow dark:border-zinc-700 dark:bg-zinc-900">
-          <h3 class="mb-3 text-xl font-bold">
-            🥛 Dairy Farms
-          </h3>
-          <p class="leading-7 text-zinc-600 dark:text-zinc-400">
-            Replacement parts for milk analyzers, milking machines
-            and dairy equipment used on dairy farms.
-          </p>
-        </div>
 
-        <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow dark:border-zinc-700 dark:bg-zinc-900">
-          <h3 class="mb-3 text-xl font-bold">
-            🏭 Milk Collection Centers
-          </h3>
-          <p class="leading-7 text-zinc-600 dark:text-zinc-400">
-            Spare parts for compatible AMCS systems, thermal
-            printers, weighing systems and milk testing equipment.
-          </p>
-        </div>
+        {applications.map((item) => (
 
-        <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow dark:border-zinc-700 dark:bg-zinc-900">
-          <h3 class="mb-3 text-xl font-bold">
-            ⚙️ Dairy Processing Plants
-          </h3>
-          <p class="leading-7 text-zinc-600 dark:text-zinc-400">
-            Replacement components for dairy processing and
-            milk quality testing applications.
-          </p>
-        </div>
+          <div
+            class="rounded-2xl border border-zinc-200 bg-white p-6 shadow dark:border-zinc-700 dark:bg-zinc-900"
+          >
+
+            <h3 class="mb-3 text-xl font-bold">
+              {item.icon} {item.title}
+            </h3>
+
+            <p class="leading-7 text-zinc-600 dark:text-zinc-400">
+              {item.description}
+            </p>
+
+          </div>
+
+        ))}
+
       </div>
+
     </section>
 
     <!-- FINAL CTA -->
     <section class="mt-16 sm:mt-20">
+
       <div class="rounded-3xl bg-gradient-to-r from-sky-600 to-blue-700 p-7 text-center text-white sm:p-12">
+
         <h2 class="text-2xl font-bold sm:text-4xl">
           Looking for Genuine Dairy Spare Parts?
         </h2>
@@ -289,15 +371,16 @@ import { spareParts } from "@/config/spareparts";
         </p>
 
         <a
-          href="https://wa.me/917375082341?text=Hello%2C%20I%20am%20interested%20in%20dairy%20equipment%20spare%20parts."
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/milk-testing-machine-spare-parts#products"
           class="mt-7 inline-block rounded-xl bg-white px-8 py-3.5 font-bold text-sky-700 transition hover:scale-105 sm:mt-8 sm:px-10 sm:py-4"
         >
-          Get Free Quote
+          Browse Spare Parts
         </a>
+
       </div>
+
     </section>
 
   </main>
+
 </MilkTestingMachineSparePartsLayout>
