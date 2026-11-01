@@ -24,13 +24,31 @@ function getPublicId(src: string): string {
 
   // Support complete Cloudinary URLs.
   if (value.includes("/upload/")) {
-    publicId = value.split("/upload/").slice(1).join("/upload/");
+    const marker = "/upload/";
+    const uploadIndex = value.indexOf(marker);
+
+    const hostname = new URL(value).hostname;
+
+    if (
+      hostname !== "res.cloudinary.com" ||
+      !value.startsWith("https://")
+    ) {
+      throw new Error("Invalid Cloudinary URL");
+    }
+
+    publicId = value.slice(uploadIndex + marker.length);
+
+    // Remove existing transformations and version prefix.
+    publicId = publicId.replace(
+      /^(?:[a-z0-9_.,-]+\/)*(v\d+\/)/i,
+      "$1"
+    );
   }
 
-  // Remove leading slash.
-  publicId = publicId.replace(/^\/+/, "");
+  // Remove leading and trailing slashes.
+  publicId = publicId.replace(/^\/+|\/+$/g, "");
 
-  if (!publicId) {
+  if (!publicId || publicId.includes("..")) {
     throw new Error("Invalid Cloudinary public ID");
   }
 
@@ -95,4 +113,24 @@ export const cld = (
   }
 
   return `${BASE_URL}/${transformations.join(",")}/${publicId}`;
+};
+
+// Responsive Cloudinary image candidates.
+export const cldSrcSet = (
+  src: string,
+  widths: number[] = [400, 640, 800, 1200, 1600],
+  options: CloudinaryOptions = {}
+): string => {
+  const uniqueWidths = [...new Set(widths)].sort((a, b) => a - b);
+
+  return uniqueWidths
+    .map((width) => {
+      const url = cld(src, {
+        ...options,
+        width,
+      });
+
+      return `${url} ${width}w`;
+    })
+    .join(", ");
 };

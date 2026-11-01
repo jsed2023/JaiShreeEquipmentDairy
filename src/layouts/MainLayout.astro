@@ -1,18 +1,19 @@
 ---
-import "../styles/globals.css";
+import "@/styles/globals.css";
 
-import Navbar from "../components/navbar.astro";
-import Footer from "../components/footer.astro";
-import LocalBusinessSchema from "../components/LocalBusinessSchema.astro";
-import WhatsAppButton from "../components/WhatsAppButton.astro";
-import PageLoader from "../components/PageLoader.astro";
-import { siteConfig } from "../config/site";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema.astro";
+import WhatsAppButton from "@/components/WhatsAppButton.astro";
+import PageLoader from "@/components/PageLoader.astro";
+
+import { metaKeywords, siteConfig } from "@/config/site";
 
 interface Props {
   title?: string;
   description?: string;
   canonical?: string;
-  keywords?: string;
+  keywords?: string | string[];
   author?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -20,10 +21,11 @@ interface Props {
   ogType?: "website" | "article";
   robots?: string;
   lang?: string;
+  noindex?: boolean;
 }
 
 const {
-  title = siteConfig.name,
+  title = siteConfig.name || siteConfig.name,
   description = siteConfig.description,
   canonical,
   keywords,
@@ -32,52 +34,71 @@ const {
   ogDescription,
   ogImage = "https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_1200/v1728902101/bp2mmtxztn5xuzjdeuop.png",
   ogType = "website",
-  robots = "index, follow",
+  robots,
   lang = "en",
+  noindex = false,
 } = Astro.props;
 
-// SEO title
-const pageTitle =
-  title === siteConfig.name || title.includes(siteConfig.name)
-    ? title
-    : `${title} | ${siteConfig.name}`;
+const pageTitle = title.includes(siteConfig.name)
+  ? title
+  : `${title} - ${siteConfig.name}`;
 
-// Canonical URL
-const canonicalUrl = new URL(
-  canonical || Astro.url.pathname,
-  siteConfig.url
-).href;
+const defaultKeywords = Array.isArray(metaKeywords)
+  ? metaKeywords
+      .map((item) =>
+        typeof item === "string" ? item : item.keywords || ""
+      )
+      .filter(Boolean)
+      .join(", ")
+  : "";
 
-// Open Graph
+const finalKeywords = Array.isArray(keywords)
+  ? keywords.join(", ")
+  : keywords || defaultKeywords;
+
+const siteUrl = siteConfig.url.replace(/\/+$/, "");
+
+const canonicalUrl = canonical
+  ? new URL(canonical, `${siteUrl}/`).href
+  : new URL(Astro.url.pathname, `${siteUrl}/`).href;
+
 const finalOgTitle = ogTitle || pageTitle;
 const finalOgDescription = ogDescription || description;
 
-// Website URL
-const siteUrl = siteConfig.url.replace(/\/$/, "");
+const finalRobots =
+  robots || (noindex ? "noindex, nofollow" : "index, follow");
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} data-scroll-behavior="smooth">
   <head>
     <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{pageTitle}</title>
 
-    <!-- SEO -->
+    <!-- Primary SEO -->
     <meta name="description" content={description} />
-    <meta name="robots" content={robots} />
+    <meta name="robots" content={finalRobots} />
     <meta name="author" content={author} />
 
-    {keywords && <meta name="keywords" content={keywords} />}
+    {finalKeywords && (
+      <meta name="keywords" content={finalKeywords} />
+    )}
 
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
 
+    <!-- Google Search Console -->
+    <meta
+      name="google-site-verification"
+      content="szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94"
+    />
+
     <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
 
@@ -90,14 +111,15 @@ const siteUrl = siteConfig.url.replace(/\/$/, "");
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content={siteConfig.name} />
     <meta property="og:title" content={finalOgTitle} />
     <meta property="og:description" content={finalOgDescription} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:site_name" content={siteConfig.name} />
-    <meta property="og:locale" content="en_IN" />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={pageTitle} />
     <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -107,7 +129,7 @@ const siteUrl = siteConfig.url.replace(/\/$/, "");
     <meta name="twitter:image:alt" content={pageTitle} />
 
     <!-- Theme -->
-    <meta name="theme-color" content="#001014" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light dark" />
 
     <!-- Performance -->
@@ -115,11 +137,6 @@ const siteUrl = siteConfig.url.replace(/\/$/, "");
       rel="preconnect"
       href="https://res.cloudinary.com"
       crossorigin="anonymous"
-    />
-
-    <link
-      rel="preconnect"
-      href="https://www.googletagmanager.com"
     />
 
     <!-- Theme initialization -->
@@ -186,12 +203,31 @@ const siteUrl = siteConfig.url.replace(/\/$/, "");
       );
     </script>
 
-    <!-- Local Business Schema -->
+    <!-- Google Analytics 4 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+    ></script>
+
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "G-RBFDTF7PWV");
+    </script>
+
+    <!-- Local Business Structured Data -->
     <LocalBusinessSchema />
+
+    <slot name="head" />
   </head>
 
   <body class="min-h-screen bg-background text-foreground antialiased">
-    <!-- GTM NoScript -->
+    <!-- Google Tag Manager NoScript -->
     <noscript>
       <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-P3FFNTJ9"
@@ -209,16 +245,22 @@ const siteUrl = siteConfig.url.replace(/\/$/, "");
 
     <!-- Website Layout -->
     <PageLoader>
-      <Navbar />
+      <div class="relative flex min-h-screen flex-col">
+        <Navbar />
 
-      <main id="main-content" class="min-h-screen w-full">
-  <div class="w-full px-3 sm:px-4 md:px-6 lg:px-8">
-        <slot /></div>
-      </main>
+        <main
+          id="main-content"
+          class="grow w-full"
+        >
+          <div class="mx-auto w-full max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
+            <slot />
+          </div>
+        </main>
 
-      <Footer />
+        <Footer />
 
-      <WhatsAppButton />
+        <WhatsAppButton />
+      </div>
     </PageLoader>
   </body>
 </html>
@@ -242,7 +284,6 @@ const siteUrl = siteConfig.url.replace(/\/$/, "");
 
   :global(main) {
     width: 100%;
-    min-height: 100vh;
   }
 
   .skip-to-content {

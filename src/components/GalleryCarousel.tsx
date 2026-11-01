@@ -1,3 +1,4 @@
+
 import { Image } from "@/components/Image";
 import { cld } from "@/utils/cloudinary";
 
@@ -20,7 +21,7 @@ const imageData = [
   },
   {
     src: "v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg",
-    alt: "Paras Milk Cream Separator AED 165 LHP",
+    alt: "Paras Milk Cream Separator AED 165 LPH",
   },
   {
     src: "v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",
@@ -38,40 +39,55 @@ const imageData = [
 
 const IMAGE_WIDTH = 320;
 const IMAGE_HEIGHT = 260;
-
 const imageWidths = [320, 480, 640];
 
-const images = imageData.map((item) => ({
-  alt: item.alt,
-
-  src: cld(item.src, {
-    width: IMAGE_WIDTH,
-    height: IMAGE_HEIGHT,
-    crop: "fit",
-    quality: "auto",
-    format: "auto",
-    dpr: "auto",
-  }),
-
-  srcSet: imageWidths
-    .map((width) => {
-      const height = Math.round(
-        (width * IMAGE_HEIGHT) / IMAGE_WIDTH
-      );
-
-      const url = cld(item.src, {
-        width,
-        height,
-        crop: "fit",
-        quality: "auto",
-        format: "auto",
-        dpr: "auto",
-      });
-
-      return `${url} ${width}w`;
+// Encode each path segment to prevent spaces breaking srcSet URLs.
+function encodeCloudinaryPath(path: string) {
+  return path
+    .split("/")
+    .map((segment) => {
+      try {
+        return encodeURIComponent(decodeURIComponent(segment));
+      } catch {
+        return encodeURIComponent(segment);
+      }
     })
-    .join(", "),
-}));
+    .join("/");
+}
+
+const images = imageData.map((item) => {
+  const safeSrc = encodeCloudinaryPath(item.src);
+
+  return {
+    alt: item.alt,
+
+    src: cld(safeSrc, {
+      width: IMAGE_WIDTH,
+      height: IMAGE_HEIGHT,
+      crop: "fit",
+      quality: "auto",
+      format: "auto",
+    }),
+
+    srcSet: imageWidths
+      .map((width) => {
+        const height = Math.round(
+          (width * IMAGE_HEIGHT) / IMAGE_WIDTH
+        );
+
+        const url = cld(safeSrc, {
+          width,
+          height,
+          crop: "fit",
+          quality: "auto",
+          format: "auto",
+        });
+
+        return `${url} ${width}w`;
+      })
+      .join(", "),
+  };
+});
 
 export default function GalleryCarousel() {
   return (
@@ -90,29 +106,29 @@ export default function GalleryCarousel() {
         className="overflow-hidden"
         aria-label="Dairy equipment product images"
       >
-        <div className="gallery-marquee-track flex w-max gap-0">
+        <div className="gallery-marquee-track flex w-max gap-8">
           {/* Original images */}
           <div className="flex shrink-0 gap-8">
             {images.map((image) => (
               <div
                 key={image.alt}
-                className="flex min-w-72 items-center justify-center"
+                className="flex w-80 shrink-0 items-center justify-center"
               >
                 <Image
                   src={image.src}
+                  srcSet={image.srcSet}
                   alt={image.alt}
                   width={IMAGE_WIDTH}
                   height={IMAGE_HEIGHT}
                   loading="lazy"
                   sizes="320px"
-                  className="max-h-65 max-w-80 rounded-xl object-contain shadow-lg transition-transform duration-300 hover:scale-105"
-                  srcSet={image.srcSet}
+                  className="max-h-[260px] max-w-80 rounded-xl object-contain shadow-lg transition-transform duration-300 hover:scale-105"
                 />
               </div>
             ))}
           </div>
 
-          {/* Duplicate images for seamless animation */}
+          {/* Decorative duplicate images */}
           <div
             className="flex shrink-0 gap-8"
             aria-hidden="true"
@@ -120,17 +136,17 @@ export default function GalleryCarousel() {
             {images.map((image) => (
               <div
                 key={`duplicate-${image.alt}`}
-                className="flex min-w-72 items-center justify-center"
+                className="flex w-80 shrink-0 items-center justify-center"
               >
                 <Image
                   src={image.src}
+                  srcSet={image.srcSet}
                   alt=""
                   width={IMAGE_WIDTH}
                   height={IMAGE_HEIGHT}
                   loading="lazy"
                   sizes="320px"
-                  className="max-h-65 max-w-80 rounded-xl object-contain shadow-lg"
-                  srcSet={image.srcSet}
+                  className="max-h-[260px] max-w-80 rounded-xl object-contain shadow-lg"
                 />
               </div>
             ))}

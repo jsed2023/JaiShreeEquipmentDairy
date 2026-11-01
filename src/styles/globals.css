@@ -713,3 +713,28 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 }
+
+.gallery-marquee-track {
+  width: max-content;
+  animation: gallery-marquee 45s linear infinite;
+}
+
+.gallery-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes gallery-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-marquee-track {
+    animation: none;
+  }
+}
