@@ -1,3 +1,4 @@
+
 ---
 import ProductLayout from "@/layouts/ProductLayout.astro";
 import ProductDetail from "@/components/products/milk-analyzer-machines/ProductDetail";
@@ -15,13 +16,28 @@ export function getStaticPaths() {
 }
 
 const { product } = Astro.props;
+
+const description =
+  product.metaDescription ||
+  product.smallDesc ||
+  `${product.name} - Quality milk analyzer machines supplied by Jai Shree Equipment Dairy, Rajasthan.`;
+
+const firstImage = product.images?.[0];
+
+const ogImage =
+  typeof firstImage === "string"
+    ? firstImage
+    : firstImage?.src || undefined;
+
+const keywords = product.keywords || [];
 ---
 
 <ProductLayout
   productName={product.name}
-  description={product.metaDescription || product.smallDesc}
+  description={description}
   productUrl={`/milk-analyzer-machines/${product.url}`}
-  keywords={product.keywords || ""}
+  keywords={keywords}
+  ogImage={ogImage}
 >
   <ProductDetail
     client:load

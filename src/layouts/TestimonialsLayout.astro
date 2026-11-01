@@ -20,7 +20,13 @@ const twitterDescription =
   "Real customer reviews and testimonials for dairy equipment supplied by Jai Shree Equipment Dairy.";
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title=title={title}
+  description={description}
+  canonical={canonical}
+  keywords={keywords}
+  author={author}
+  ogTitle={title}
+  ogDescription={openGraphDescription}>
   <link slot="head" rel="canonical" href={canonical} />
 
   <meta slot="head" name="keywords" content={keywords} />

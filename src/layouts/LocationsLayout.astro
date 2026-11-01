@@ -1,0 +1,84 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Dairy Equipment Locations",
+  description = "Jai Shree Equipment Dairy supplies milk analyzer machines, dairy equipment, milking machines, cream separator machines and automatic milk collection systems across Rajasthan.",
+} = Astro.props;
+
+// Locations SEO keywords
+const keywordData = metaKeywords?.[10];
+
+const keywords = Array.isArray(keywordData?.keywords)
+  ? keywordData.keywords.join(", ")
+  : keywordData?.keywords ?? "";
+
+const author = Array.isArray(keywordData?.name)
+  ? keywordData.name.join(", ")
+  : keywordData?.name ?? "Jai Shree Equipment Dairy";
+
+// Canonical URL
+const baseUrl = siteConfig.url.replace(/\/+$/, "");
+const canonical = `${baseUrl}/locations`;
+
+// Open Graph image
+const LOCATION_IMAGE =
+  "https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_1200/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png";
+
+const twitterDescription =
+  "Find milk analyzer machines and dairy equipment services across Rajasthan.";
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  keywords={keywords}
+  author={author}
+  ogTitle={title}
+  ogDescription={description}
+  ogImage={LOCATION_IMAGE}
+  ogType="website"
+>
+  <!-- Robots -->
+  <meta
+    slot="head"
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+
+  <meta
+    slot="head"
+    name="googlebot"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+
+  <!-- Open Graph -->
+  <meta slot="head" property="og:site_name" content={siteConfig.name} />
+  <meta slot="head" property="og:locale" content="en_IN" />
+  <meta slot="head" property="og:image:alt" content={title} />
+
+  <!-- Twitter -->
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={title} />
+  <meta
+    slot="head"
+    name="twitter:description"
+    content={twitterDescription}
+  />
+  <meta slot="head" name="twitter:image" content={LOCATION_IMAGE} />
+
+  <!-- Additional metadata -->
+  <meta slot="head" name="publisher" content="Jai Shree Equipment Dairy" />
+  <meta slot="head" name="category" content="Dairy Equipment Locations" />
+
+  <div class="w-full overflow-x-hidden">
+    <slot />
+  </div>
+</MainLayout>

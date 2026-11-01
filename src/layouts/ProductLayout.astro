@@ -1,3 +1,4 @@
+
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import { siteConfig } from "@/config/site";
@@ -18,31 +19,51 @@ const {
   ogImage,
 } = Astro.props;
 
+const baseUrl = siteConfig.url.replace(/\/$/, "");
+
+// Generate absolute canonical URL
 const canonicalURL = new URL(
-  productUrl,
-  siteConfig.url
+  productUrl.startsWith("/") ? productUrl : `/${productUrl}`,
+  baseUrl
 ).href;
 
-// Convert keywords array into string
+// Convert keyword array into a string
 const keywordsContent = Array.isArray(keywords)
   ? keywords.filter(Boolean).join(", ")
   : keywords;
 
-const author = `${productName} - ${siteConfig.name}`;
+const author = siteConfig.name;
+const productTitle = `${productName} | ${siteConfig.name}`;
 ---
 
 <MainLayout
-  title={productName}
+  title={productTitle}
   description={description}
   canonical={canonicalURL}
   keywords={keywordsContent}
   author={author}
-  ogTitle={productName}
+  ogTitle={productTitle}
   ogDescription={description}
   ogImage={ogImage}
-  ogType="product"
+  ogType="website"
 >
-  <div class="overflow-x-hidden">
+  <meta slot="head" property="og:url" content={canonicalURL} />
+  <meta slot="head" property="og:site_name" content={siteConfig.name} />
+  <meta slot="head" property="og:locale" content="en_IN" />
+  <meta slot="head" property="og:type" content="product" />
+
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={productTitle} />
+  <meta slot="head" name="twitter:description" content={description} />
+
+  {ogImage && (
+    <>
+      <meta slot="head" property="og:image" content={ogImage} />
+      <meta slot="head" name="twitter:image" content={ogImage} />
+    </>
+  )}
+
+  <div class="w-full overflow-x-hidden">
     <slot />
   </div>
 </MainLayout>

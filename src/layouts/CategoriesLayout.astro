@@ -7,9 +7,18 @@ const title = "Dairy Equipment Categories | Jai Shree Equipment Dairy";
 const description =
   "Explore dairy equipment, milk analyzers, spare parts, cream separators, milk collection systems, and automation. Find the right solution today!";
 
-const keywords = metaKeywords[12].keywords;
-const author = metaKeywords[12].name;
-const canonical = `${siteConfig.url}/categories`;
+const keywordData = metaKeywords[12];
+
+const keywords = Array.isArray(keywordData.keywords)
+  ? keywordData.keywords.join(", ")
+  : keywordData.keywords;
+
+const author = Array.isArray(keywordData.name)
+  ? keywordData.name[12]
+  : keywordData.name;
+
+const baseUrl = siteConfig.url.replace(/\/$/, "");
+const canonical = `${baseUrl}/categories`;
 
 const openGraphDescription =
   "Explore milk analyzers, testing machine spare parts, cream separators, milk collection systems, and dairy automation solutions.";
@@ -18,14 +27,15 @@ const twitterDescription =
   "Explore dairy equipment, milk analyzers, spare parts, cream separators, milk collection systems, and automation solutions.";
 ---
 
-<MainLayout title="Categories" description={description}>
-  <link slot="head" rel="canonical" href={canonical} />
-
-  <meta slot="head" name="keywords" content={keywords} />
-  <meta slot="head" name="author" content={author} />
-
-  <meta slot="head" property="og:title" content={title} />
-  <meta slot="head" property="og:description" content={openGraphDescription} />
+<MainLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  keywords={keywords}
+  author={author}
+  ogTitle={title}
+  ogDescription={openGraphDescription}
+>
   <meta slot="head" property="og:url" content={canonical} />
   <meta slot="head" property="og:site_name" content={siteConfig.name} />
   <meta slot="head" property="og:locale" content="en_IN" />
@@ -35,7 +45,7 @@ const twitterDescription =
   <meta slot="head" name="twitter:title" content={title} />
   <meta slot="head" name="twitter:description" content={twitterDescription} />
 
-  <div class="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+  <div class="min-h-screen w-full bg-gradient-to-b from-slate-50 to-white">
     <slot />
   </div>
 </MainLayout>

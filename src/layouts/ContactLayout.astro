@@ -1,28 +1,48 @@
-
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import { metaKeywords } from "@/config/site";
+import { metaKeywords, siteConfig } from "@/config/site";
+
+const title = "Contact Jai Shree Equipment Dairy";
 
 const description =
   "Reach out to Jai Shree Equipment Dairy for milk analyzers, DPU milk collection units, milking machines and dairy equipment in Sri Ganganagar, Bikaner, Hanumangarh and Anupgarh. Call or WhatsApp for price and service support.";
 
-const keywords = metaKeywords[5].keywords;
-const author = metaKeywords[5].name;
+const keywordData = metaKeywords[5];
+
+const keywords = Array.isArray(keywordData.keywords)
+  ? keywordData.keywords.join(", ")
+  : keywordData.keywords;
+
+const author = Array.isArray(keywordData.name)
+  ? keywordData.name[5]
+  : keywordData.name;
+
+const baseUrl = siteConfig.url.replace(/\/$/, "");
+const canonical = `${baseUrl}/contact-us`;
 
 const openGraphDescription =
   "Contact for milk analyzer, DPU and dairy equipment sales & service across Rajasthan.";
 ---
 
-<MainLayout title="Contact" description={description}>
-  <meta slot="head" name="keywords" content={keywords} />
-  <meta slot="head" name="author" content={author} />
-
-  <meta slot="head" property="og:title" content="Contact" />
-  <meta slot="head" property="og:description" content={openGraphDescription} />
-  <meta slot="head" property="og:site_name" content="Jai Shree Equipment Dairy" />
+<MainLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  keywords={keywords}
+  author={author}
+  ogTitle={title}
+  ogDescription={openGraphDescription}
+>
+  <meta slot="head" property="og:url" content={canonical} />
+  <meta slot="head" property="og:site_name" content={siteConfig.name} />
   <meta slot="head" property="og:locale" content="en_IN" />
-  
-  <div class="overflow-x-hidden">
+  <meta slot="head" property="og:type" content="website" />
+
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={title} />
+  <meta slot="head" name="twitter:description" content={openGraphDescription} />
+
+  <div class="w-full overflow-x-hidden">
     <slot />
   </div>
 </MainLayout>

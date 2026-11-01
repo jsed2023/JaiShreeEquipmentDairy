@@ -21,7 +21,13 @@ const twitterDescription =
   "Professional milk analyzer repair, dairy equipment installation, calibration, and maintenance services in Rajasthan.";
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title}
+  description={description}
+  canonical={canonical}
+  keywords={keywords}
+  author={author}
+  ogTitle={title}
+  ogDescription={openGraphDescription}>
   <link slot="head" rel="canonical" href={canonical} />
 
   <meta slot="head" name="keywords" content={keywords} />

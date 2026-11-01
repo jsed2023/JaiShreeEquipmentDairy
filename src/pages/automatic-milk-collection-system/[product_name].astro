@@ -1,3 +1,4 @@
+
 ---
 import ProductLayout from "@/layouts/ProductLayout.astro";
 import ProductDetail from "@/components/products/automatic-milk-collection-system/ProductDetail";
@@ -9,24 +10,12 @@ export function getStaticPaths() {
       product_name: product.url,
     },
     props: {
-      productSlug: product.url,
+      product,
     },
   }));
 }
 
-interface Props {
-  productSlug: string;
-}
-
-const { productSlug } = Astro.props as Props;
-
-const product = automaticMilkCollectionSystem.find(
-  (item) => item.url.toLowerCase() === productSlug.toLowerCase()
-);
-
-if (!product) {
-  throw new Error(`Product not found: ${productSlug}`);
-}
+const { product } = Astro.props;
 
 const description =
   product.desc ||
@@ -50,5 +39,8 @@ const keywords = product.keywords || [];
   keywords={keywords}
   ogImage={ogImage}
 >
-  <ProductDetail client:load productSlug={productSlug} />
+  <ProductDetail
+    client:load
+    productSlug={product.url}
+  />
 </ProductLayout>

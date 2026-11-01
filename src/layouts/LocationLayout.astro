@@ -1,68 +1,118 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import { siteConfig } from "@/config/site";
+import { getLocationKeywords } from "@/config/location-keywords";
+import { getLocationSEOContent } from "@/lib/location-seo-content";
+import { rajasthanLocations } from "@/lib/rajasthan-locations";
 
 interface Props {
-  location: {
-    city: string;
-    slug: string;
-  };
-  seo: {
-    title: string;
-    description: string;
-  };
+  locationName: string;
 }
 
-const { location, seo } = Astro.props;
+const { locationName } = Astro.props;
 
+const SITE_URL = "https://jaishreeequipmentdairy.co.in";
+const SITE_NAME = "Jai Shree Equipment Dairy";
+const AUTHOR = "Jai Shree Equipment Dairy";
 const PREFIX = "milk-analyzer-";
 
-const LOCATION_IMAGE =
-  "https://res.cloudinary.com/dddhtbuzs/image/upload/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png";
+// Validate location slug
+const normalizedName =
+  typeof locationName === "string"
+    ? locationName.trim().toLowerCase()
+    : "";
 
-const url = `${siteConfig.url.replace(/\/$/, "")}/${PREFIX}${location.slug}`;
+const locationSlug = normalizedName.startsWith(PREFIX)
+  ? normalizedName.slice(PREFIX.length)
+  : normalizedName;
+
+// Find location
+const location = rajasthanLocations.find(
+  (item) => item.slug.toLowerCase() === locationSlug
+);
+
+// Set 404 status for invalid location
+if (!location) {
+  Astro.response.status = 404;
+}
+
+// City name
+const city = location?.city ?? "Rajasthan";
+
+// Location SEO content
+const seo = location
+  ? getLocationSEOContent(location.slug)
+  : null;
+
+// Page title
+const title = location
+  ? `Milk Analyzer Machine Supplier in ${city}, Rajasthan`
+  : "Location Not Found";
+
+// Meta description
+const description = location
+  ? seo?.intro ??
+    `Buy milk analyzer machines and dairy equipment in ${city}, Rajasthan from Jai Shree Equipment Dairy.`
+  : "The requested service location could not be found.";
+
+// City-specific SEO keywords
+const keywords = getLocationKeywords(city).join(", ");
+
+// Canonical URL
+const baseUrl = SITE_URL.replace(/\/+$/, "");
+
+const canonical = location
+  ? `${baseUrl}/${PREFIX}${location.slug}`
+  : `${baseUrl}/404`;
+
+// Open Graph image
+const ogImage =
+  "https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_1200/v1767698484/Our_Service_Locations_in_Rajasthan_y9d4qn.png";
 ---
 
-<MainLayout title={seo.title} description={seo.description}>
-
-  <link slot="head" rel="canonical" href={url} />
-
-  <meta slot="head" name="robots" content="index, follow" />
-
-  <meta
-    slot="head"
-    name="googlebot"
-    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-  />
-
-  <!-- OPEN GRAPH -->
-  <meta slot="head" property="og:title" content={seo.title} />
-  <meta slot="head" property="og:description" content={seo.description} />
-  <meta slot="head" property="og:url" content={url} />
-  <meta slot="head" property="og:site_name" content={siteConfig.name} />
+<MainLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  keywords={keywords}
+  author={AUTHOR}
+  ogTitle={title}
+  ogDescription={description}
+  ogImage={ogImage}
+  ogType="website"
+>
+  <!-- Open Graph Metadata -->
+  <meta slot="head" property="og:site_name" content={SITE_NAME} />
   <meta slot="head" property="og:locale" content="en_IN" />
-  <meta slot="head" property="og:type" content="website" />
+  <meta slot="head" property="og:image:alt" content={title} />
 
-  <meta slot="head" property="og:image" content={LOCATION_IMAGE} />
-  <meta slot="head" property="og:image:width" content="1200" />
-  <meta slot="head" property="og:image:height" content="630" />
-  <meta slot="head" property="og:image:alt" content={seo.title} />
-
-  <!-- TWITTER -->
+  <!-- Twitter Metadata -->
   <meta slot="head" name="twitter:card" content="summary_large_image" />
-  <meta slot="head" name="twitter:title" content={seo.title} />
-  <meta slot="head" name="twitter:description" content={seo.description} />
-  <meta slot="head" name="twitter:image" content={LOCATION_IMAGE} />
+  <meta slot="head" name="twitter:title" content={title} />
+  <meta slot="head" name="twitter:description" content={description} />
+  <meta slot="head" name="twitter:image" content={ogImage} />
 
-  <!-- AUTHOR -->
-  <meta
-    slot="head"
-    name="author"
-    content="Jai Shree Equipment Dairy"
-  />
+  {
+    location && seo ? (
+      <div class="w-full overflow-x-hidden">
+        <slot />
+      </div>
+    ) : (
+      <main class="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">
+        <h1 class="text-3xl font-bold">
+          Location Not Found
+        </h1>
 
-  <div class="overflow-x-hidden">
-    <slot />
-  </div>
+        <p class="mt-3 text-gray-600">
+          The requested service location does not exist.
+        </p>
 
+        <a
+          href="/locations"
+          class="mt-6 rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-cyan-600"
+        >
+          View All Locations
+        </a>
+      </main>
+    )
+  }
 </MainLayout>
