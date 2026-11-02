@@ -1,5 +1,4 @@
 ---
-
 import "@/styles/globals.css";
 
 import Navbar from "@/components/navbar.astro";
@@ -11,62 +10,61 @@ import PageLoader from "@/components/PageLoader.astro";
 import { metaKeywords, siteConfig } from "@/config/site";
 
 interface Props {
-title?: string;
-description?: string;
-canonical?: string;
-keywords?: string | string[];
-author?: string;
-ogTitle?: string;
-ogDescription?: string;
-ogImage?: string;
-ogType?: "website" | "article";
-robots?: string;
-lang?: string;
-noindex?: boolean;
+  title?: string;
+  description?: string;
+  canonical?: string;
+  keywords?: string | string[];
+  author?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: "website" | "article";
+  robots?: string;
+  lang?: string;
+  noindex?: boolean;
 }
 
 const {
-title = siteConfig.name,
-description = siteConfig.description,
-canonical,
-keywords,
-author = siteConfig.name,
-ogTitle,
-ogDescription,
-ogImage = "https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_1200/v1728902101/bp2mmtxztn5xuzjdeuop.png",
-ogType = "website",
-robots,
-lang = "en",
-noindex = false,
+  title = siteConfig.name,
+  description = siteConfig.description,
+  canonical,
+  keywords,
+  author = siteConfig.name,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogType = "website",
+  robots,
+  lang = "en",
+  noindex = false,
 } = Astro.props;
 
-// SEO Keywords: Only metaKeywords[0]
 const keywordData = metaKeywords[0];
 
 const finalKeywords = Array.isArray(keywords)
-? keywords.join(", ")
-: keywords || keywordData?.keywords || "";
+  ? keywords.join(", ")
+  : keywords || keywordData?.keywords || "";
 
-// Page Title
 const pageTitle = title.includes(siteConfig.name)
-? title
-: "${title} - ${siteConfig.name}";
+  ? title
+  : `${title} - ${siteConfig.name}`;
 
-// Site URL
-const siteUrl = siteConfig.url.replace(//+$/, "");
+const siteUrl = siteConfig.url.replace(/\/+$/, "");
 
-// Canonical URL
 const canonicalUrl = canonical
-? new URL(canonical, "${siteUrl}/").href
-: new URL(Astro.url.pathname, "${siteUrl}/").href;
+  ? new URL(canonical, `${siteUrl}/`).href
+  : new URL(Astro.url.pathname, `${siteUrl}/`).href;
 
-// Open Graph
 const finalOgTitle = ogTitle || pageTitle;
 const finalOgDescription = ogDescription || description;
 
-// Robots
+const finalOgImage =
+  ogImage ||
+  "https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_1200/v1728902101/bp2mmtxztn5xuzjdeuop.png";
+
 const finalRobots =
-robots || (noindex ? "noindex, nofollow" : "index, follow");
+  robots || (noindex ? "noindex, nofollow" : "index, follow");
+---
 
 <!doctype html>
 
