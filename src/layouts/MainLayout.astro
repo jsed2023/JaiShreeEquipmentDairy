@@ -1,4 +1,5 @@
 ---
+
 import "@/styles/globals.css";
 
 import Navbar from "@/components/navbar.astro";
@@ -10,223 +11,219 @@ import PageLoader from "@/components/PageLoader.astro";
 import { metaKeywords, siteConfig } from "@/config/site";
 
 interface Props {
-  title?: string;
-  description?: string;
-  canonical?: string;
-  keywords?: string | string[];
-  author?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: "website" | "article";
-  robots?: string;
-  lang?: string;
-  noindex?: boolean;
+title?: string;
+description?: string;
+canonical?: string;
+keywords?: string | string[];
+author?: string;
+ogTitle?: string;
+ogDescription?: string;
+ogImage?: string;
+ogType?: "website" | "article";
+robots?: string;
+lang?: string;
+noindex?: boolean;
 }
 
 const {
-  title = siteConfig.name || siteConfig.name,
-  description = siteConfig.description,
-  canonical,
-  keywords,
-  author = siteConfig.name,
-  ogTitle,
-  ogDescription,
-  ogImage = "https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_1200/v1728902101/bp2mmtxztn5xuzjdeuop.png",
-  ogType = "website",
-  robots,
-  lang = "en",
-  noindex = false,
+title = siteConfig.name,
+description = siteConfig.description,
+canonical,
+keywords,
+author = siteConfig.name,
+ogTitle,
+ogDescription,
+ogImage = "https://res.cloudinary.com/dddhtbuzs/image/upload/f_auto,q_auto,w_1200/v1728902101/bp2mmtxztn5xuzjdeuop.png",
+ogType = "website",
+robots,
+lang = "en",
+noindex = false,
 } = Astro.props;
 
-const pageTitle = title.includes(siteConfig.name)
-  ? title
-  : `${title} - ${siteConfig.name}`;
-
-const defaultKeywords = Array.isArray(metaKeywords)
-  ? metaKeywords
-      .map((item) =>
-        typeof item === "string" ? item : item.keywords || ""
-      )
-      .filter(Boolean)
-      .join(", ")
-  : "";
+// SEO Keywords: Only metaKeywords[0]
+const keywordData = metaKeywords[0];
 
 const finalKeywords = Array.isArray(keywords)
-  ? keywords.join(", ")
-  : keywords || defaultKeywords;
+? keywords.join(", ")
+: keywords || keywordData?.keywords || "";
 
-const siteUrl = siteConfig.url.replace(/\/+$/, "");
+// Page Title
+const pageTitle = title.includes(siteConfig.name)
+? title
+: "${title} - ${siteConfig.name}";
 
+// Site URL
+const siteUrl = siteConfig.url.replace(//+$/, "");
+
+// Canonical URL
 const canonicalUrl = canonical
-  ? new URL(canonical, `${siteUrl}/`).href
-  : new URL(Astro.url.pathname, `${siteUrl}/`).href;
+? new URL(canonical, "${siteUrl}/").href
+: new URL(Astro.url.pathname, "${siteUrl}/").href;
 
+// Open Graph
 const finalOgTitle = ogTitle || pageTitle;
 const finalOgDescription = ogDescription || description;
 
+// Robots
 const finalRobots =
-  robots || (noindex ? "noindex, nofollow" : "index, follow");
----
+robots || (noindex ? "noindex, nofollow" : "index, follow");
 
 <!doctype html>
+
 <html lang={lang} data-scroll-behavior="smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>{pageTitle}</title>
 
-    <title>{pageTitle}</title>
+<!-- Primary SEO -->
+<meta name="description" content={description} />
+<meta name="robots" content={finalRobots} />
+<meta name="author" content={author} />
 
-    <!-- Primary SEO -->
-    <meta name="description" content={description} />
-    <meta name="robots" content={finalRobots} />
-    <meta name="author" content={author} />
+{finalKeywords && (
+  <meta name="keywords" content={finalKeywords} />
+)}
 
-    {finalKeywords && (
-      <meta name="keywords" content={finalKeywords} />
-    )}
+<meta name="generator" content={Astro.generator} />
 
-    <meta name="generator" content={Astro.generator} />
+<!-- Canonical -->
+<link rel="canonical" href={canonicalUrl} />
 
-    <!-- Canonical -->
-    <link rel="canonical" href={canonicalUrl} />
+<!-- Google Search Console -->
+<meta
+  name="google-site-verification"
+  content="szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94"
+/>
 
-    <!-- Google Search Console -->
-    <meta
-      name="google-site-verification"
-      content="szRN11DRRCd9NtuijX2dAAtPfaV_EGAfuwSv_iM7t94"
-    />
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+<!-- Sitemap -->
+<link
+  rel="sitemap"
+  type="application/xml"
+  href={`${siteUrl}/sitemap.xml`}
+/>
 
-    <!-- Sitemap -->
-    <link
-      rel="sitemap"
-      type="application/xml"
-      href={`${siteUrl}/sitemap.xml`}
-    />
+<!-- Open Graph -->
+<meta property="og:type" content={ogType} />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:site_name" content={siteConfig.name} />
+<meta property="og:title" content={finalOgTitle} />
+<meta property="og:description" content={finalOgDescription} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:alt" content={pageTitle} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content={ogType} />
-    <meta property="og:locale" content="en_IN" />
-    <meta property="og:site_name" content={siteConfig.name} />
-    <meta property="og:title" content={finalOgTitle} />
-    <meta property="og:description" content={finalOgDescription} />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content={pageTitle} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={finalOgTitle} />
+<meta name="twitter:description" content={finalOgDescription} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={pageTitle} />
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={finalOgTitle} />
-    <meta name="twitter:description" content={finalOgDescription} />
-    <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content={pageTitle} />
+<!-- Theme -->
+<meta name="theme-color" content="#ffffff" />
+<meta name="color-scheme" content="light dark" />
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="color-scheme" content="light dark" />
+<!-- Performance -->
+<link
+  rel="preconnect"
+  href="https://res.cloudinary.com"
+  crossorigin="anonymous"
+/>
 
-    <!-- Performance -->
-    <link
-      rel="preconnect"
-      href="https://res.cloudinary.com"
-      crossorigin="anonymous"
-    />
+<!-- Theme Initialization -->
+<script is:inline>
+  (() => {
+    try {
+      const savedTheme = localStorage.getItem("theme");
 
-    <!-- Theme initialization -->
-    <script is:inline>
-      (() => {
-        try {
-          const savedTheme = localStorage.getItem("theme");
+      const systemDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
 
-          const systemDark = window.matchMedia(
-            "(prefers-color-scheme: dark)"
-          ).matches;
+      const theme =
+        savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : systemDark
+            ? "dark"
+            : "light";
 
-          const theme =
-            savedTheme === "light" || savedTheme === "dark"
-              ? savedTheme
-              : systemDark
-                ? "dark"
-                : "light";
-
-          document.documentElement.classList.toggle(
-            "dark",
-            theme === "dark"
-          );
-
-          document.documentElement.dataset.theme = theme;
-        } catch {
-          document.documentElement.classList.remove("dark");
-          document.documentElement.dataset.theme = "light";
-        }
-      })();
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script is:inline>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-
-        const firstScript = d.getElementsByTagName(s)[0];
-        const script = d.createElement(s);
-        const dataLayerParam = l !== "dataLayer" ? "&l=" + l : "";
-
-        script.async = true;
-        script.src =
-          "https://www.googletagmanager.com/gtm.js?id=" +
-          i +
-          dataLayerParam;
-
-        if (firstScript?.parentNode) {
-          firstScript.parentNode.insertBefore(script, firstScript);
-        } else {
-          d.head.appendChild(script);
-        }
-      })(
-        window,
-        document,
-        "script",
-        "dataLayer",
-        "GTM-P3FFNTJ9"
+      document.documentElement.classList.toggle(
+        "dark",
+        theme === "dark"
       );
-    </script>
 
-    <!-- Google Analytics 4 -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
-    ></script>
+      document.documentElement.dataset.theme = theme;
+    } catch {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.dataset.theme = "light";
+    }
+  })();
+</script>
 
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
+<!-- Google Tag Manager -->
+<script is:inline>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
 
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
+    w[l].push({
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js",
+    });
 
-      gtag("js", new Date());
-      gtag("config", "G-RBFDTF7PWV");
-    </script>
+    const firstScript = d.getElementsByTagName(s)[0];
+    const script = d.createElement(s);
+    const dataLayerParam = l !== "dataLayer" ? "&l=" + l : "";
 
-    <!-- Local Business Structured Data -->
-    <LocalBusinessSchema />
+    script.async = true;
+    script.src =
+      "https://www.googletagmanager.com/gtm.js?id=" +
+      i +
+      dataLayerParam;
 
-    <slot name="head" />
-  </head>
+    if (firstScript?.parentNode) {
+      firstScript.parentNode.insertBefore(script, firstScript);
+    } else {
+      d.head.appendChild(script);
+    }
+  })(
+    window,
+    document,
+    "script",
+    "dataLayer",
+    "GTM-P3FFNTJ9"
+  );
+</script>
 
-  <body class="min-h-screen bg-background text-foreground antialiased">
+<!-- Google Analytics 4 -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-RBFDTF7PWV"
+></script>
+
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "G-RBFDTF7PWV");
+</script>
+
+<!-- Local Business Structured Data -->
+<LocalBusinessSchema />
+
+<slot name="head" />
+
+  </head>  <body class="min-h-screen bg-background text-foreground antialiased">
     <!-- Google Tag Manager NoScript -->
     <noscript>
       <iframe
@@ -236,36 +233,30 @@ const finalRobots =
         style="display:none;visibility:hidden"
         title="Google Tag Manager"
       ></iframe>
-    </noscript>
+    </noscript><!-- Accessibility -->
+<a href="#main-content" class="skip-to-content">
+  Skip to main content
+</a>
 
-    <!-- Accessibility -->
-    <a href="#main-content" class="skip-to-content">
-      Skip to main content
-    </a>
+<!-- Website Layout -->
+<PageLoader>
+  <div class="relative flex min-h-screen flex-col">
+    <Navbar />
 
-    <!-- Website Layout -->
-    <PageLoader>
-      <div class="relative flex min-h-screen flex-col">
-        <Navbar />
-
-        <main
-          id="main-content"
-          class="grow w-full"
-        >
-          <div class="mx-auto w-full max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
-            <slot />
-          </div>
-        </main>
-
-        <Footer />
-
-        <WhatsAppButton />
+    <main id="main-content" class="grow w-full">
+      <div class="mx-auto w-full max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
+        <slot />
       </div>
-    </PageLoader>
-  </body>
-</html>
+    </main>
 
-<style>
+    <Footer />
+
+    <WhatsAppButton />
+  </div>
+</PageLoader>
+
+  </body>
+</html><style>
   :global(html) {
     min-height: 100%;
     scroll-behavior: smooth;
