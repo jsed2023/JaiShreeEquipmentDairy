@@ -1,10 +1,87 @@
-
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import { cld } from "@/utils/cloudinary";
 import GalleryCarousel from "@/components/GalleryCarousel";
 
 const HERO_IMAGE = "v1737653135/jai_shree_eq.jpg";
+
+const seoContent = [
+  "Jai Shree Equipment Dairy is a dairy equipment supplier and service provider based in Sri Ganganagar, Rajasthan. Established in 2020, we provide milk analyzer machines, dairy automation equipment, spare parts and technical repair services for dairy farmers, milk collection centers and dairy businesses.",
+
+  "Milk analyzer machines are used to measure important milk parameters such as FAT, SNF, protein and density. These measurements help milk collection centers evaluate milk quality and maintain accurate records for their milk procurement operations.",
+
+  "Our product range includes Advance Milk Analyzer, Advance Milk Analyzer Plus, Advance Milk Analyzer Max, Ekomilk Ultra Milk Analyzer, Milk Data Processing Units (DPU), automatic milk collection systems, cream separator machines, ultrasonic milk stirrers and digital weighing scales.",
+
+  "We also provide technical support and repair services for milk analyzer machines. Our services include PCB inspection, sensor troubleshooting, display replacement, spare parts support and equipment maintenance, depending on the machine model and service requirements.",
+
+  "Our dairy equipment solutions support milk collection centers and dairy farms in managing milk testing, weighing and collection operations. We help customers select suitable equipment according to their operational needs and budget.",
+
+  "Based in Sri Ganganagar, Rajasthan, Jai Shree Equipment Dairy serves customers in Bikaner, Hanumangarh, Anupgarh, Raisinghnagar, Suratgarh, Gharsana, Padampur and other nearby locations, subject to delivery and service availability.",
+
+  "Whether you are establishing a new milk collection center or upgrading an existing dairy business, our team can help you choose suitable milk testing machines, dairy equipment and automation solutions."
+];
+
+const repairItems = [
+  {
+    src: "v1766092196/Milk_Analyzer_PCB_Motherboard_Front.png",
+    label: "Ekomilk PCB Motherboard",
+  },
+  {
+    src: "v1728902733/Ekomilk-Sensor.jpg",
+    label: "Ekomilk Milk Analyzer Sensor",
+  },
+  {
+    src: "v1728906592/Milk%20Analyzer%20Display.jpg",
+    label: "Milk Analyzer Display",
+  },
+  {
+    src: "v1728906816/Milk%20Analyzer%20Service.png",
+    label: "Milk Analyzer Spare Parts",
+  },
+];
+
+const products = [
+  {
+    href: "/milk-analyzer-machines/ekomilk-ultra-analyzer",
+    src: "v1766061561/Ekomilk-Ultra-Analyzer.jpg",
+    label: "Ekomilk Ultra Milk Analyzer",
+  },
+  {
+    href: "/milk-analyzer-machines/advance-milk-analyzer",
+    src: "v1728902682/Advance%20Milk%20Analyzer.jpg",
+    label: "Advance Milk Analyzer",
+  },
+  {
+    href: "/automatic-milk-collection-system/milk-collection-unit",
+    src: "v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",
+    label: "DPU Milk Collection Unit (Dairy Khata)",
+  },
+  {
+    href: "/automatic-milk-collection-system/weingh-scale",
+    src: "v1728902744/weighing-scale.jpg",
+    label: "Dairy Digital Weighing Scale 300kg",
+  },
+  {
+    href: "/milk-analyzer-machines/advance-milk-bond-machine",
+    src: "v1785947314/Advance_Milk_Bond_Machine.webp",
+    label: "Advance Milk Bond Machine",
+  },
+  {
+    href: "/automatic-milk-collection-system/ultrasonic-milk-stirrer",
+    src: "v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",
+    label: "KREI Ultrasonic Milk Stirrer",
+  },
+  {
+    href: "/dairy-equipment/paras-milk-cream-separator-aed-165-lph",
+    src: "v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg",
+    label: "Paras Milk Cream Separator 165 LPH",
+  },
+  {
+    href: "/dairy-equipment/cream-separator-machine-8-ae-90-lph",
+    src: "v1731401215/CREAM%20SEPARATOR%20MACHINE%208%20AE%2090%20LPH.jpg",
+    label: "Paras Milk Cream Separator 90 LPH",
+  },
+];
 
 const cloudOptions = {
   width: 600,
@@ -14,117 +91,17 @@ const cloudOptions = {
   format: "auto",
 } as const;
 
-const repairItems = [
-  {
-    src: "v1766092196/Milk_Analyzer_PCB_Motherboard_Front.png",
-    label: "Ekomilk PCB Motherboard",
-    alt: "Milk analyzer PCB motherboard repair and replacement",
-  },
-  {
-    src: "v1728902733/Ekomilk-Sensor.jpg",
-    label: "Ekomilk Sensor",
-    alt: "Ekomilk milk analyzer sensor spare part",
-  },
-  {
-    src: "v1728906592/Milk%20Analyzer%20Display.jpg",
-    label: "Milk Analyzer Display",
-    alt: "Milk analyzer digital display spare part",
-  },
-  {
-    src: "v1728906816/Milk%20Analyzer%20Service.png",
-    label: "Ekomilk Spare Parts",
-    alt: "Milk analyzer service and spare parts",
-  },
-];
-
-const products = [
-  {
-    href: "/milk-analyzer-machines/ekomilk-ultra-analyzer",
-    src: "v1766061561/Ekomilk-Ultra-Analyzer.jpg",
-    label: "Ekomilk Ultra Analyzer",
-    alt: "Ekomilk Ultra milk analyzer machine",
-    description:
-      "Milk testing equipment for measuring important milk quality parameters.",
-  },
-  {
-    href: "/milk-analyzer-machines/advance-milk-analyzer",
-    src: "v1728902682/Advance%20Milk%20Analyzer.jpg",
-    label: "Advance Milk Analyzer",
-    alt: "Advance milk analyzer machine",
-    description:
-      "Milk analyzer machine for dairy testing and milk collection centers.",
-  },
-  {
-    href: "/automatic-milk-collection-system/milk-collection-unit",
-    src: "v1736160426/DPU_Milk_Collection_Unit_%28DAIRY%20KHATA%29.png",
-    label: "DPU Milk Collection Unit",
-    alt: "Dairy Khata milk collection DPU unit",
-    description:
-      "Digital milk collection and data processing equipment for dairy centers.",
-  },
-  {
-    href: "/automatic-milk-collection-system/weingh-scale",
-    src: "v1728902744/weighing-scale.jpg",
-    label: "Dairy Weighing Machine 300kg",
-    alt: "300 kg digital dairy milk weighing machine",
-    description:
-      "Digital weighing equipment for milk collection and dairy operations.",
-  },
-  {
-    href: "/milk-analyzer-machines/advance-milk-bond-machine",
-    src: "v1785947314/Advance_Milk_Bond_Machine.webp",
-    label: "Advance Milk Bond Machine",
-    alt: "Advance milk bond machine for dairy operations",
-    description:
-      "Dairy equipment for milk testing and collection applications.",
-  },
-  {
-    href: "/automatic-milk-collection-system/ultrasonic-milk-stirrer",
-    src: "v1766085143/KREI_Ultrasonic_Milk_Stirrer.jpg",
-    label: "KREI Ultrasonic Milk Stirrer",
-    alt: "KREI ultrasonic milk stirrer machine",
-    description:
-      "Ultrasonic milk stirring equipment for milk testing applications.",
-  },
-  {
-    href: "/dairy-equipment/paras-milk-cream-separator-aed-165-lph",
-    src: "v1731934091/Paras_Milk_Cream_Separator_AED_165_LHP.jpg",
-    label: "Paras Cream Separator 165 LPH",
-    alt: "Paras milk cream separator 165 litres per hour",
-    description:
-      "Milk cream separation equipment for dairy farms and businesses.",
-  },
-  {
-    href: "/dairy-equipment/cream-separator-machine-8-ae-90-lph",
-    src: "v1731401215/CREAM%20SEPARATOR%20MACHINE%208%20AE%2090%20LPH.jpg",
-    label: "Paras Cream Separator 90 LPH",
-    alt: "Paras milk cream separator 90 litres per hour",
-    description:
-      "Cream separator machine for small and medium dairy operations.",
-  },
-];
-
-const serviceLocations = [
-  "Sri Ganganagar",
-  "Bikaner",
-  "Hanumangarh",
-  "Anupgarh",
-  "Raisinghnagar",
-  "Suratgarh",
-  "Gharsana",
-  "Padampur",
-];
 ---
 
 <MainLayout ogImage={cld(HERO_IMAGE)}>
-  <main id="main-content" class="space-y-12">
+  <main id="main-content">
 
     <!-- ================= HERO BANNER ================= -->
 
     <section
       id="hero-banner-section"
-      aria-label="Jai Shree Equipment Dairy banner"
       class="mt-4 w-full px-3"
+      aria-label="Jai Shree Equipment Dairy banner"
     >
       <img
         src={cld(HERO_IMAGE, {
@@ -139,7 +116,7 @@ const serviceLocations = [
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        sizes="(max-width: 768px) 100vw, 1024px"
+        sizes="100vw"
         class="mx-auto block h-auto w-full max-w-5xl rounded-lg"
       />
     </section>
@@ -147,112 +124,119 @@ const serviceLocations = [
     <!-- ================= HERO WELCOME ================= -->
 
     <section
-      id="hero-welcome-section"
-      class="bg-gray-100 py-8 text-gray-900 dark:bg-[#1f1f22] dark:text-gray-50"
+      class="my-10 bg-gray-100 py-6 text-gray-900 dark:bg-[#1f1f22] dark:text-gray-50"
+      aria-labelledby="main-heading"
     >
-      <div class="mx-auto max-w-6xl space-y-6 px-4">
 
-        <header class="space-y-3 text-center">
-          <h1 class="animate-title-gradient bg-clip-text text-2xl font-bold text-transparent md:text-3xl">
-            Milk Analyzer Machine Supplier in Rajasthan
-          </h1>
-
-          <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 md:text-xl">
-            Trusted Milk Fat Testing Machine Supplier in Sri Ganganagar
-          </h2>
-        </header>
-
-        <div class="space-y-4 text-base leading-8 text-stone-700 dark:text-gray-300">
-
-          <p>
-            <strong>JAI SHREE EQUIPMENT DAIRY</strong> is a supplier
-            and service provider of milk analyzer machines and dairy
-            equipment based in Sri Ganganagar, Rajasthan.
-            Established in <strong>2020</strong>, we provide dairy
-            machinery and technical support for dairy farmers,
-            milk collection centers and dairy businesses.
-          </p>
-
-          <p>
-            Our product range includes
-            <strong>Advance Milk Analyzer, Advance Milk Analyzer Plus,
-            Advance Milk Analyzer Max, Ekomilk Ultra Milk Analyzer,
-            Milk Collection Units, Milk Cream Separators and
-            Digital Weighing Scales</strong>.
-            We also provide ultrasonic milk stirrers and dairy
-            automation equipment.
-          </p>
-
-          <p>
-            Our equipment supports milk testing, milk collection,
-            weighing and dairy operations. We also provide
-            technical assistance and repair services for selected
-            milk analyzer models.
-          </p>
-
-          <p>
-            Based in Sri Ganganagar, we serve customers across
-            nearby locations of Rajasthan, including Bikaner,
-            Hanumangarh, Anupgarh and Suratgarh.
-            Contact our team to confirm product delivery and
-            service availability in your area.
-          </p>
-
-        </div>
+      <div class="mt-4 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:text-white/90">
+        <h1
+          id="main-heading"
+          class="animate-title-gradient bg-clip-text text-center text-xl font-bold text-transparent md:text-2xl"
+        >
+          Milk Analyzer Machine Supplier in Rajasthan
+        </h1>
       </div>
+
+      <section
+        id="hero-welcome-section"
+        class="flex flex-col gap-6"
+        aria-labelledby="welcome-heading"
+      >
+
+        <div class="mt-4 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:text-white/90">
+          <h2
+            id="welcome-heading"
+            class="animate-title-gradient bg-clip-text text-center text-xl font-bold text-transparent md:text-2xl"
+          >
+            Trusted Milk Fat Testing Machine Supplier in Sri Ganganagar, Rajasthan
+          </h2>
+        </div>
+
+        <p class="px-2 text-stone-700 dark:text-gray-400">
+          <strong>JAI SHREE EQUIPMENT DAIRY</strong> is a supplier and service
+          provider of milk analyzer machines and dairy equipment, based in
+          Sri Ganganagar, Rajasthan. Established in <strong>2020</strong>,
+          we provide equipment and technical support for dairy farmers,
+          milk collection centers and dairy businesses.
+
+          Our product range includes
+          <strong>
+            Milk Fat Testing Machines, Advance Milk Analyzer,
+            Advance Milk Analyzer Plus, Advance Milk Analyzer Max,
+            Ekomilk Ultra Milk Analyzer, Milk Collection Units,
+            Cream Separator Machines and Digital Weighing Scales
+          </strong>.
+
+          Our solutions help dairy businesses manage milk testing,
+          weighing and collection operations efficiently.
+
+          We serve customers across Sri Ganganagar, Bikaner,
+          Hanumangarh, Anupgarh and other nearby areas of Rajasthan,
+          subject to product delivery and service availability.
+        </p>
+
+      </section>
     </section>
 
     <!-- ================= EQUIPMENT REPAIR ================= -->
 
     <section
       id="hero-equipment-repair-section"
+      class="flex flex-col gap-y-4"
       aria-labelledby="repair-heading"
-      class="space-y-6"
     >
-      <header class="space-y-4 bg-gray-100 py-8 text-center dark:bg-[#1f1f22]">
 
-        <div class="mx-auto max-w-4xl space-y-3 px-4">
+      <div class="bg-gray-100 py-8 text-gray-900 dark:bg-[#1f1f22] dark:text-gray-50">
+
+        <div class="mt-4 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:text-white/90">
           <h2
             id="repair-heading"
-            class="text-xl font-bold text-gray-900 dark:text-white md:text-2xl"
+            class="animate-title-gradient mx-auto mb-6 w-11/12 rounded-lg bg-[rgb(244,244,245)] bg-clip-text py-1 text-center text-lg font-bold text-transparent dark:bg-[#27272a] md:w-6/12 md:text-2xl"
           >
-            Milk Analyzer Sales, Repair and Spare Parts Services
+            Milk Analyzer Machine Sales and Expert Repair Services
           </h2>
-
-          <p class="text-base leading-8 text-gray-700 dark:text-gray-300">
-            We supply milk analyzer machines and provide technical
-            repair services for selected dairy equipment.
-            Our repair services include PCB inspection, sensor
-            troubleshooting, display repair and spare parts support.
-          </p>
         </div>
 
-      </header>
+        <p class="px-2 text-stone-700 dark:text-gray-400">
+          At <strong>JAI SHREE EQUIPMENT DAIRY</strong>, we supply milk
+          analyzer machines and provide technical repair and maintenance
+          services for dairy testing equipment.
 
-      <div class="grid grid-cols-2 gap-4 px-3 md:grid-cols-4">
+          Our services include
+          <strong>
+            PCB inspection and repair, sensor troubleshooting,
+            display replacement and spare parts support
+          </strong>,
+          depending on the machine model and service requirements.
+
+          Our aim is to help dairy businesses maintain the performance
+          and reliability of their milk testing equipment.
+        </p>
+
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
 
         {repairItems.map((item) => (
           <figure
-            class="flex w-full flex-col items-center gap-3 rounded-lg bg-gray-100 p-4 text-center dark:bg-[#27272a]"
+            class="flex w-full flex-col items-center gap-2 rounded-md bg-gray-100 p-4 font-bold dark:bg-[#27272a]"
           >
-            <div class="flex h-36 w-full items-center justify-center overflow-hidden sm:h-44 md:h-52 lg:h-60">
 
+            <div class="flex h-36 w-full items-center justify-center overflow-hidden sm:h-44 md:h-52 lg:h-60 xl:h-64">
               <img
                 src={cld(item.src, cloudOptions)}
-                alt={item.alt}
+                alt={item.label + " - Milk Analyzer Repair and Spare Parts"}
                 width="600"
                 height="600"
                 loading="lazy"
                 decoding="async"
-                sizes="(max-width: 640px) 45vw, (max-width: 768px) 40vw, (max-width: 1024px) 30vw, 25vw"
+                sizes="(max-width: 640px) 45vw, (max-width: 768px) 40vw, (max-width: 1024px) 30vw, (max-width: 1280px) 25vw, 300px"
                 class="h-auto w-auto max-h-full max-w-full object-contain"
               />
-
             </div>
 
-            <figcaption class="text-sm font-semibold text-gray-900 dark:text-white md:text-base">
-              {item.label}
-            </figcaption>
+            <figcaption>{item.label}</figcaption>
+
           </figure>
         ))}
 
@@ -264,76 +248,68 @@ const serviceLocations = [
     <section
       id="hero-our-product-section"
       aria-labelledby="products-heading"
-      class="space-y-6"
     >
 
-      <header class="space-y-4 bg-gray-100 py-8 dark:bg-[#1f1f22]">
+      <section class="my-10 bg-gray-100 py-6 text-gray-900 dark:bg-[#1f1f22] dark:text-gray-50">
 
-        <div class="mx-auto max-w-4xl space-y-3 px-4 text-center">
+        <div class="mt-4 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:text-white/90">
           <h2
             id="products-heading"
-            class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl"
+            class="animate-title-gradient mx-auto mb-6 w-11/12 rounded-lg bg-[rgb(244,244,245)] bg-clip-text py-1 text-center text-lg font-bold text-transparent dark:bg-[#27272a] sm:w-6/12 md:text-2xl"
           >
-            Our Dairy Equipment Products
+            OUR PRODUCTS
           </h2>
-
-          <p class="text-base leading-8 text-gray-700 dark:text-gray-300">
-            Explore our range of milk analyzer machines,
-            automatic milk collection units, milk testing
-            equipment, cream separators and dairy automation
-            solutions for milk collection centers and dairy farms.
-          </p>
         </div>
 
-      </header>
+        <p class="px-2 text-stone-700 dark:text-gray-400">
+          Explore our range of
+          <strong>milk analyzer machines and dairy equipment</strong>
+          for milk collection centers and dairy farms.
 
-      <div class="grid grid-cols-2 justify-items-center gap-4 px-3 md:grid-cols-4 md:gap-6">
+          Our products include
+          <strong>
+            Milk Analyzer Machines, Milk Collection Units (DPU),
+            Milk Fat Testing Machines, Cream Separator Machines,
+            Ultrasonic Milk Stirrers and Digital Weighing Scales
+          </strong>.
+
+          We also provide technical assistance, repair services
+          and spare parts support to help customers maintain
+          their dairy equipment.
+        </p>
+
+      </section>
+
+      <div class="grid grid-cols-2 justify-items-center gap-6 md:grid-cols-4">
 
         {products.map((item) => (
           <figure
-            class="flex w-full flex-col items-center gap-3 rounded-lg bg-gray-100 p-3 text-center dark:bg-[#27272a] md:p-4"
+            class="flex w-full flex-col items-center gap-2 rounded-md bg-gray-100 p-4 dark:bg-[#27272a]"
           >
 
             <a
               href={item.href}
               data-product={item.label}
               aria-label={`View ${item.label}`}
-              class="block w-full rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+              class="block w-full"
             >
-
-              <div class="flex h-36 w-full items-center justify-center overflow-hidden sm:h-44 md:h-52 lg:h-60">
+              <div class="flex h-36 w-full items-center justify-center overflow-hidden sm:h-44 md:h-52 lg:h-60 xl:h-64">
 
                 <img
                   src={cld(item.src, cloudOptions)}
-                  alt={item.alt}
+                  alt={item.label + " - Jai Shree Equipment Dairy"}
                   width="600"
                   height="600"
                   loading="lazy"
                   decoding="async"
-                  sizes="(max-width: 640px) 45vw, (max-width: 768px) 40vw, (max-width: 1024px) 30vw, 25vw"
-                  class="h-auto w-auto max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105"
+                  sizes="(max-width: 640px) 45vw, (max-width: 768px) 40vw, (max-width: 1024px) 30vw, (max-width: 1280px) 25vw, 300px"
+                  class="h-auto w-auto max-h-full max-w-full object-contain"
                 />
 
               </div>
-
             </a>
 
-            <figcaption class="w-full space-y-2">
-
-              <h3 class="text-sm font-semibold text-gray-900 dark:text-white md:text-base">
-                <a
-                  href={item.href}
-                  class="hover:text-blue-600 hover:underline"
-                >
-                  {item.label}
-                </a>
-              </h3>
-
-              <p class="text-xs leading-6 text-gray-600 dark:text-gray-400 sm:text-sm">
-                {item.description}
-              </p>
-
-            </figcaption>
+            <figcaption>{item.label}</figcaption>
 
           </figure>
         ))}
@@ -345,153 +321,34 @@ const serviceLocations = [
     <!-- ================= GALLERY ================= -->
 
     <section
-      id="gallery-section"
-      aria-labelledby="gallery-heading"
-      class="space-y-5 py-8"
+      class="py-8"
+      aria-label="Jai Shree Equipment Dairy product and installation gallery"
     >
-      <header class="mx-auto max-w-4xl space-y-3 px-4 text-center">
-        <h2
-          id="gallery-heading"
-          class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl"
-        >
-          Our Dairy Equipment Gallery
-        </h2>
-
-        <p class="text-base leading-7 text-gray-600 dark:text-gray-400">
-          Explore our dairy equipment, milk analyzer machines,
-          spare parts and related products.
-        </p>
-      </header>
-
       <GalleryCarousel client:only="react" />
     </section>
 
     <!-- ================= SEO CONTENT ================= -->
 
     <section
-      id="dairy-equipment-information"
+      class="my-10 bg-gray-100 py-10 dark:bg-[#1f1f22]"
       aria-labelledby="seo-content-heading"
-      class="bg-gray-100 py-12 dark:bg-[#1f1f22]"
     >
 
-      <div class="mx-auto max-w-6xl space-y-8 px-4">
+      <div class="mx-auto max-w-6xl space-y-6 px-4 text-stone-700 dark:text-gray-300">
 
-        <header class="mx-auto max-w-4xl space-y-4 text-center">
+        <h2
+          id="seo-content-heading"
+          class="text-center text-2xl font-bold md:text-3xl"
+        >
+          Dairy Equipment and Milk Analyzer Machines in Rajasthan
+        </h2>
 
-          <h2
-            id="seo-content-heading"
-            class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl"
-          >
-            Dairy Equipment and Milk Analyzer Machines in Rajasthan
-          </h2>
-
-          <p class="text-base leading-8 text-gray-700 dark:text-gray-300">
-            Find milk testing machines, dairy automation equipment
-            and technical support for milk collection centers and
-            dairy businesses.
+        {seoContent.map((text) => (
+          <p class="text-base leading-7">
+            {text}
           </p>
+        ))}
 
-        </header>
-
-        <div class="space-y-7 text-base leading-8 text-stone-700 dark:text-gray-300">
-
-          <section class="space-y-3">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              About Jai Shree Equipment Dairy
-            </h3>
-
-            <p>
-              Jai Shree Equipment Dairy is a dairy equipment supplier
-              based in Sri Ganganagar, Rajasthan. Established in 2020,
-              our business provides milk analyzer machines, dairy
-              equipment and technical repair services for dairy
-              farmers and milk collection centers.
-            </p>
-          </section>
-
-          <section class="space-y-3">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Milk Analyzer Machines and Milk Quality Testing
-            </h3>
-
-            <p>
-              Milk analyzer machines help measure important milk
-              parameters such as FAT, SNF, protein and density.
-              Depending on the machine model, additional testing
-              parameters may also be available. These measurements
-              help milk collection centers maintain digital testing
-              records and manage milk procurement operations.
-            </p>
-          </section>
-
-          <section class="space-y-3">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Dairy Automation and Milk Collection Equipment
-            </h3>
-
-            <p>
-              Our dairy equipment range includes Milk Data Processing
-              Units (DPU), automatic milk collection units, digital
-              weighing scales, ultrasonic milk stirrers and milk
-              cream separator machines. These products support
-              milk collection, weighing and dairy management tasks.
-            </p>
-          </section>
-
-          <section class="space-y-3">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Milk Analyzer Repair and Spare Parts
-            </h3>
-
-            <p>
-              We provide technical assistance for selected milk
-              analyzer machines, including PCB inspection, sensor
-              troubleshooting, display repair and spare parts
-              support. Contact us with your machine model and
-              problem details to discuss service availability.
-            </p>
-          </section>
-
-          <section class="space-y-3">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Our Service Locations in Rajasthan
-            </h3>
-
-            <p>
-              Based in Sri Ganganagar, we serve customers in
-              nearby Rajasthan locations, including:
-            </p>
-
-            <ul class="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {serviceLocations.map((location) => (
-                <li class="rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-800 dark:bg-[#27272a] dark:text-gray-200">
-                  {location}
-                </li>
-              ))}
-            </ul>
-
-            <p>
-              Contact our team to confirm product delivery,
-              installation and repair service availability
-              for your location.
-            </p>
-          </section>
-
-          <section class="space-y-3">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Dairy Equipment Solutions for Your Business
-            </h3>
-
-            <p>
-              Whether you are setting up a new milk collection
-              center or upgrading an existing dairy operation,
-              selecting suitable equipment is important.
-              Our team can help you explore available products
-              according to your dairy business requirements.
-            </p>
-          </section>
-
-        </div>
       </div>
 
     </section>
@@ -500,31 +357,26 @@ const serviceLocations = [
 
     <section
       id="krei-logo-strip"
+      class="bg-[rgb(244,244,245)] py-8 dark:bg-[#1f1f22]"
       aria-labelledby="krei-heading"
-      class="bg-gray-100 py-12 dark:bg-[#1f1f22]"
     >
 
-      <div class="mx-auto flex max-w-6xl flex-col items-center gap-8 px-4">
+      <div class="flex flex-col items-center gap-8">
 
-        <header class="max-w-4xl space-y-3 text-center">
+        <div class="mt-4 max-h-100 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:text-white/90">
 
           <h2
             id="krei-heading"
-            class="text-xl font-bold text-gray-900 dark:text-white md:text-2xl lg:text-3xl"
+            class="animate-title-gradient bg-clip-text text-center text-xl font-bold text-transparent md:text-2xl lg:text-3xl"
           >
             Trusted and Authorized Partner of K R Electronics Industries
           </h2>
 
-          <p class="text-sm leading-7 text-gray-600 dark:text-gray-400 md:text-base">
-            Genuine products, original spare parts and
-            manufacturer-supported solutions.
-          </p>
+        </div>
 
-        </header>
+        <!-- Logo + Badge -->
 
-        <!-- Partner Logo -->
-
-        <div class="flex flex-col items-center gap-4">
+        <div class="flex flex-col items-center gap-3">
 
           <img
             src={cld("v1771343933/K_R_Electronics_Industries_Log.webp", {
@@ -534,42 +386,44 @@ const serviceLocations = [
               quality: "auto",
               format: "auto",
             })}
-            alt="K R Electronics Industries company logo"
+            alt="K R Electronics Industries Official Logo"
             width="600"
             height="100"
             loading="lazy"
             decoding="async"
-            sizes="(max-width: 640px) 80vw, 400px"
-            class="h-auto max-h-40 w-auto object-contain"
+            sizes="200px"
+            class="h-[200px] w-auto object-contain"
           />
 
-          <span class="rounded-full bg-green-600 px-5 py-2 text-sm font-semibold text-white shadow-md md:text-base">
+          <span class="animate-title-gradient rounded-full bg-green-600 px-4 py-1 text-sm font-semibold text-transparent shadow-md md:text-base">
             Authorized Distributor
           </span>
 
         </div>
 
-        <!-- Partner Description -->
+        <!-- Description -->
 
-        <div class="w-full rounded-lg border p-5 text-center">
+        <div class="mt-4 max-h-100 space-y-3 rounded-lg border p-4 text-sm text-stone-600 sm:text-base dark:text-white/90">
 
-          <p class="mx-auto max-w-4xl text-base leading-8 text-gray-700 dark:text-gray-300 md:text-lg">
+          <p class="max-w-5xl px-6 text-center text-base leading-relaxed text-stone-700 md:text-lg lg:text-xl dark:text-gray-300">
 
             <strong>JAI SHREE EQUIPMENT DAIRY</strong> is an
             <strong>
               Authorized Distributor of K R Electronics Industries
               for the Bikaner Division
             </strong>.
-            We supply genuine products, original spare parts
-            and manufacturer-supported solutions.
+
+            We supply products and spare parts with manufacturer-supported
+            solutions. Customers can contact us for product information,
+            availability and technical assistance.
 
           </p>
 
         </div>
 
-        <!-- Trust Features -->
+        <!-- Trust Icons -->
 
-        <div class="flex flex-wrap justify-center gap-8">
+        <div class="animate-title-gradient mt-4 flex flex-wrap justify-center gap-8 bg-clip-text text-transparent">
 
           <!-- Genuine Products -->
 
@@ -588,7 +442,7 @@ const serviceLocations = [
               <path d="M9 12l2 2 4-4" />
             </svg>
 
-            <span class="text-sm font-medium text-gray-800 dark:text-gray-200 md:text-base">
+            <span class="text-sm font-medium md:text-base">
               Genuine Products
             </span>
 
@@ -611,7 +465,7 @@ const serviceLocations = [
               <path d="M9 14v8l3-2 3 2v-8" />
             </svg>
 
-            <span class="text-sm font-medium text-gray-800 dark:text-gray-200 md:text-base">
+            <span class="text-sm font-medium md:text-base">
               Manufacturer Warranty
             </span>
 
@@ -627,7 +481,7 @@ const serviceLocations = [
               fill="none"
               stroke="currentColor"
               stroke-width="2"
-              class="h-12 w-12 text-purple-600"
+              class="h-12 w-12 text-purple-600 transition-transform duration-300 hover:scale-110"
               aria-hidden="true"
             >
               <path d="M4 12a8 8 0 0 1 16 0" />
@@ -636,7 +490,7 @@ const serviceLocations = [
               <path d="M17 19c0 1.5-1.5 3-4 3" />
             </svg>
 
-            <span class="text-sm font-medium text-gray-800 dark:text-gray-200 md:text-base">
+            <span class="text-sm font-medium md:text-base">
               Technical Support
             </span>
 
