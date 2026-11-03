@@ -392,7 +392,7 @@ export const aboutFactsheet: AboutFactsheet[] = [
       {
         id: "8A",
         title: "BRN Number",
-        desc: "0644840000000016",
+        desc: "8004460020000304",
         icon: FileText,
       },
       {
