@@ -391,7 +391,7 @@ export const aboutFactsheet: AboutFactsheet[] = [
     information: [
       {
         id: "8A",
-        title: "BRN Number",
+        title: "SAN Number",
         desc: "8004460020000304",
         icon: FileText,
       },
