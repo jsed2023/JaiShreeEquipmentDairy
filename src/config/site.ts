@@ -1,4 +1,3 @@
-
 export type Product = {
   product: string;
   href: string;
@@ -7,38 +6,27 @@ export type Product = {
 export type NavItem = {
   label: string;
   href: string;
-  items?: Product[];
+  
+  items: Product[];
 };
 
 export type SiteConfig = {
   name: string;
   description: string;
-  url: string;
+  
   navItems: NavItem[];
-  contact: {
-    phone: string;
-    whatsapp: string;
-    email?: string;
-  };
 };
 
-export const siteConfig: SiteConfig = {
+export const siteConfig = {
   name: "Jai Shree Equipment Dairy",
-
   description:
     "Jai Shree Equipment Dairy is a trusted supplier of milk analyzer machines and dairy equipment in Sri Ganganagar, Rajasthan. Established in 2020, we provide high-quality milk testing machines, automatic milk collection units, and dairy automation solutions.",
-
   url: "https://jaishreeequipmentdairy.co.in",
-
-  contact: {
-    phone: "+917375082341",
-    whatsapp: "917375082341",
-  },
-
   navItems: [
     {
       label: "Home",
       href: "/",
+      items: [],
     },
     {
       label: "Products",
@@ -46,62 +34,77 @@ export const siteConfig: SiteConfig = {
       items: [
         {
           product: "Automatic Milk Collection System",
-          href: "/products/automatic-milk-collection-system",
+          href: "automatic-milk-collection-system",
         },
         {
           product: "Dairy Equipment",
-          href: "/products/dairy-equipment",
+          href: "dairy-equipment",
         },
         {
           product: "Milk Testing Equipment",
-          href: "/products/milk-testing-equipment",
+          href: "milk-testing-equipment",
         },
         {
           product: "Milk Analyzer Machines",
-          href: "/products/milk-analyzer-machines",
+          href: "milk-analyzer-machines",
         },
       ],
     },
     {
       label: "Categories",
       href: "/categories",
+      items: [],
+    },
+    {
+      label: "Blog",
+      href: "/blog",
+      items: [],
     },
     {
       label: "Services",
       href: "/services",
+      items: [],
     },
-    {
+{
       label: "Spare Parts",
       href: "/milk-testing-machine-spare-parts",
+      items: [],
     },
     {
       label: "Milk Rate Chart",
       href: "/milk-rate-chart",
+      items: [],
     },
     {
       label: "Gallery",
       href: "/gallery",
+      items: [],
     },
     {
       label: "Testimonials",
       href: "/testimonials",
+      items: [],
     },
     {
       label: "Locations",
       href: "/locations",
+      items: [],
     },
     {
       label: "Milestones",
       href: "/milestones",
+      items: [],
     },
     {
-      label: "Contact Us",
+      label: "Contact-Us",
       href: "/contact",
+      items: [],
     },
     {
-      label: "About Us",
+      label: "About-Us",
       href: "/about",
-    },
+      items: [],
+    }
   ],
 };
 
