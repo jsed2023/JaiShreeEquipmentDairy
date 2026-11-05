@@ -230,63 +230,64 @@ export const spareParts: SparePart[] = [
     packageIncludes: [
       "1 × RP203 58mm Panel Thermal Printer"
     ]
-  },
+  },  
+{
+  id: 5,
+  url: "milk-analyzer-syringes-beakers-plungers",
+  name: "Milk Analyzer Syringes, Beakers & Plungers",
+  sku: "MAC-005",
+  price: "₹140 / Piece",
+  category: "Milk Analyzer Consumables",
+  stockStatus: "In Stock",
+  warranty: "No Warranty",
 
-  {
-    id: 5,
-    url: "milk-analyzer-Syringes-Beakers-Plungers",
-    name: "Milk Analyzer Syringes, Beakers, Plungers",
-    sku: "MAC-005",
-    price: "₹140 / Piece",
-    category: "Milk Analyzer Consumables",
-    stockStatus: "In Stock",
-    warranty: "No Warranty",
+  photo:
+    "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848850/Ekomilk_Syringes_Beakers_Plungers.webp",
 
-    photo:
-      "https://res.cloudinary.com/dddhtbuzs/image/upload/v1781848850/Ekomilk_Syringes_Beakers_Plungers.webp",
+  keywords: [
+    "milk analyzer consumables",
+    "milk analyzer syringe",
+    "milk analyzer beaker",
+    "milk analyzer plunger",
+    "ekomilk consumables",
+    "lactoscan consumables",
+    "milk analyzer spare parts",
+    "milk analyzer accessories"
+  ],
 
-    keywords: [
-      "milk analyzer consumables",
-      "milk analyzer syringe",
-      "milk analyzer beaker",
-      "milk analyzer plunger",
-      "ekomilk consumables",
-      "lactoscan consumables"
-    ],
+  metaTitle:
+    "Milk Analyzer Syringes, Beakers & Plungers | Jai Shree Equipment Dairy",
 
-    metaTitle:
-      "Milk Analyzer Syringes, Beakers, Plungers",
+  metaDescription:
+    "Buy milk analyzer syringes, beakers and plungers at ₹140 per piece. Compatible with Ekomilk, Lactoscan and other milk analyzers. Minimum order 50 pieces.",
 
-    metaDescription:
-      "Milk analyzer syringes, beakers and plungers compatible with Ekomilk, Lactoscan and other milk analyzers.",
+  alt:
+    "Milk Analyzer Syringes, Beakers and Plungers for Ekomilk and Lactoscan",
 
-    alt: "Milk Analyzer Syringes Beakers and Plungers",
+  description:
+    "High-quality laboratory-grade plastic syringes, beakers and plungers for milk analyzer machines. Suitable for routine milk sample collection and testing. Compatible with Ekomilk, Lactoscan and other compatible milk analyzers.",
 
-    description:
-      "Laboratory-grade syringes, beakers and plungers for milk analyzer machines. Suitable for routine milk sample collection and testing.",
+  keyFeatures: [
+    "Syringes, beakers and plungers",
+    "Laboratory-grade plastic material",
+    "Compatible with Ekomilk analyzers",
+    "Compatible with Lactoscan analyzers",
+    "Suitable for milk sample collection",
+    "Easy to handle and clean",
+    "Designed for routine milk testing",
+    "Minimum order quantity: 50 pieces"
+  ],
 
-    keyFeatures: [
-      "Syringes, beakers and plungers",
-      "Laboratory-grade plastic",
-      "Compatible with Ekomilk analyzers",
-      "Compatible with Lactoscan analyzers",
-      "Suitable for milk sample collection",
-      "Easy to handle and clean",
-      "Designed for routine testing",
-      "Minimum order 50 pieces"
-    ],
-
-    specifications: {
-      ProductType: "Milk Analyzer Consumables",
-      ItemsIncluded: "Syringes, Beakers, Plungers",
-      Compatibility: "Ekomilk, Lactoscan & Other Milk Analyzers",
-      Material: "Laboratory Grade Plastic",
-      MinimumOrderQuantity: "50 Pieces",
-      UnitPrice: "₹140 Per Piece",
-      Condition: "New"
-    }
-  },
-
+  specifications: {
+    ProductType: "Milk Analyzer Consumables",
+    ItemsIncluded: "Syringes, Beakers, Plungers",
+    Compatibility: "Ekomilk, Lactoscan & Other Compatible Milk Analyzers",
+    Material: "Laboratory-Grade Plastic",
+    MinimumOrderQuantity: "50 Pieces",
+    UnitPrice: "₹140 Per Piece",
+    Condition: "New"
+  }
+},
   {
     id: 6,
     url: "ekomilk-daily-cleaning-solution-200ml",
