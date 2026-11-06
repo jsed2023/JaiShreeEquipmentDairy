@@ -1968,7 +1968,7 @@ images: [
     alt: "LactoTrack AMCS official logo for dairy automation and milk collection management"
   },
   {
-    src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1794001750/LactoTrack_AMCS_system_for_automatic_milk_collection_and_dairy_automation.webp"),
+    src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1794002771/LactoTrack_AMCS_system_for_automatic_milk_collection_and_dairy_automation.webp"),
     alt: "LactoTrack AMCS system for automatic milk collection and dairy automation"
   },
   {
@@ -1976,7 +1976,7 @@ images: [
     alt: "LactoTrack AMCS system management software dashboard with farmer records, billing and reports"
   },
   {
-    src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1794001741/LactoTrack_AMCS_electronic_milk_weighing_scale_with_built-in_thermal_printer_for_milk_collection.webp"),
+    src: cld("https://res.cloudinary.com/dddhtbuzs/image/upload/v1794002994/LactoTrack_AMCS_electronic_milk_weighing_scale_with_built-in_thermal_printer_for_milk_collection.webp"),
     alt: "LactoTrack AMCS electronic milk weighing scale with built-in thermal printer for milk collection"
   }
 ],
