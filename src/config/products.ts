@@ -1981,222 +1981,222 @@ images: [
   }
 ],
 
-  price: "16,000",
+  price: "12,000",
 
   features: [
     {
       id: "17A",
-      label: "Product Name",
+      key: "Product Name",
       value: "LactoTrack AMCS – All-in-One Dairy Automation Platform"
     },
     {
       id: "17B",
-      label: "Product Type",
+      key: "Product Type",
       value: "Complete Dairy Automation System"
     },
     {
       id: "17C",
-      label: "Machine Type",
+      key: "Machine Type",
       value: "Electronic Milk Weighing Scale with Built-in Thermal Printer"
     },
     {
       id: "17D",
-      label: "Application",
+      key: "Application",
       value: "LactoTrack Dairy Management Mobile Application"
     },
     {
       id: "17E",
-      label: "Application Type",
+      key: "Application Type",
       value: "Mobile Application and Web-Based Dairy Management Software"
     },
     {
       id: "17F",
-      label: "Operating System",
+      key: "Operating System",
       value: "Android and Web Browser"
     },
     {
       id: "17G",
-      label: "Milk Collection",
+      key: "Milk Collection",
       value: "Farmer-Wise Daily Milk Collection Management"
     },
     {
       id: "17H",
-      label: "Milk Weighing",
+      key: "Milk Weighing",
       value: "Electronic Milk Weighing Integration"
     },
     {
       id: "17I",
-      label: "Weighing Scale",
+      key: "Weighing Scale",
       value: "Electronic Milk Weighing Scale with Digital Display"
     },
     {
       id: "17J",
-      label: "Thermal Printer",
+      key: "Thermal Printer",
       value: "Built-in Thermal Printer for Milk Collection Receipts"
     },
     {
       id: "17K",
-      label: "Milk Quality",
+      key: "Milk Quality",
       value: "Milk Quality Testing and Analyzer Data Management"
     },
     {
       id: "17L",
-      label: "Milk Analyzer",
+      key: "Milk Analyzer",
       value: "Multi-Brand Milk Analyzer Integration"
     },
     {
       id: "17M",
-      label: "Supported Milk Analyzer Brands",
+      key: "Supported Milk Analyzer Brands",
       value: "Ekomilk, Advance, Lactoscan, Essae and other compatible milk analyzer brands"
     },
     {
       id: "17N",
-      label: "Analyzer Integration",
+      key: "Analyzer Integration",
       value: "Configurable integration for automatic transfer of milk testing readings, subject to analyzer model and communication interface compatibility"
     },
     {
       id: "17O",
-      label: "Milk Testing Parameters",
+      key: "Milk Testing Parameters",
       value: "FAT, SNF, CLR, Density and other parameters provided by the connected analyzer"
     },
     {
       id: "17P",
-      label: "Milk Type",
+      key: "Milk Type",
       value: "Cow Milk, Buffalo Milk and Other Configured Milk Categories"
     },
     {
       id: "17Q",
-      label: "Farmer Management",
+      key: "Farmer Management",
       value: "Farmer Registration, Profile and Account Management"
     },
     {
       id: "17R",
-      label: "Collection Centers",
+      key: "Collection Centers",
       value: "Multiple Milk Collection Center Management"
     },
     {
       id: "17S",
-      label: "Rate Charts",
+      key: "Rate Charts",
       value: "Configurable Milk Rate Charts Based on FAT, SNF and Other Defined Parameters"
     },
     {
       id: "17T",
-      label: "Milk Billing",
+      key: "Milk Billing",
       value: "Automatic Farmer-Wise Milk Billing"
     },
     {
       id: "17U",
-      label: "Payment Bills",
+      key: "Payment Bills",
       value: "Farmer Payment Statements and Billing Records"
     },
     {
       id: "17V",
-      label: "Receipt Printing",
+      key: "Receipt Printing",
       value: "Milk Collection Receipt Printing Through Compatible Thermal Printer"
     },
     {
       id: "17W",
-      label: "Collection Reports",
+      key: "Collection Reports",
       value: "Daily, Weekly and Monthly Milk Collection Reports"
     },
     {
       id: "17X",
-      label: "Shift Reports",
+      key: "Shift Reports",
       value: "Morning and Evening Shift Collection Reports"
     },
     {
       id: "17Y",
-      label: "Shift Timing",
+      key: "Shift Timing",
       value: "Configurable Morning and Evening Milk Collection Shifts"
     },
     {
       id: "17Z",
-      label: "Inventory Management",
+      key: "Inventory Management",
       value: "Dairy Inventory and Stock Management"
     },
     {
       id: "17AA",
-      label: "Product Management",
+      key: "Product Management",
       value: "Dairy Product Management"
     },
     {
       id: "17AB",
-      label: "Purchase Management",
+      key: "Purchase Management",
       value: "Purchase and Supplier Management"
     },
     {
       id: "17AC",
-      label: "Sales Management",
+      key: "Sales Management",
       value: "Dairy Sales and Transaction Management"
     },
     {
       id: "17AD",
-      label: "Dispatch Management",
+      key: "Dispatch Management",
       value: "Milk Dispatch and Delivery Records"
     },
     {
       id: "17AE",
-      label: "Reports",
+      key: "Reports",
       value: "Collection, Billing, Payment, Quality and Business Reports"
     },
     {
       id: "17AF",
-      label: "Admin Reports",
+      key: "Admin Reports",
       value: "Centralized Dairy Administration and Performance Reports"
     },
     {
       id: "17AG",
-      label: "Settings",
+      key: "Settings",
       value: "Configurable Dairy, Farmer, Rate and Machine Settings"
     },
     {
       id: "17AH",
-      label: "Data Management",
+      key: "Data Management",
       value: "Centralized Dairy Data and Record Management"
     },
     {
       id: "17AI",
-      label: "Interface",
+      key: "Interface",
       value: "User-Friendly Mobile and Web Interface"
     },
     {
       id: "17AJ",
-      label: "Automation",
+      key: "Automation",
       value: "Automated Milk Collection, Quality Data Entry, Billing and Reporting"
     },
     {
       id: "17AK",
-      label: "Performance",
+      key: "Performance",
       value: "Designed for Efficient Daily Dairy Operations"
     },
     {
       id: "17AL",
-      label: "Language Support",
+      key: "Language Support",
       value: "Language Configuration as Supported by the Application"
     },
     {
       id: "17AM",
-      label: "Connectivity",
+      key: "Connectivity",
       value: "Connectivity Depends on Supported Scale, Analyzer and Device Interfaces"
     },
     {
       id: "17AN",
-      label: "Suitable For",
+      key: "Suitable For",
       value: "Milk Collection Centers, Dairy Societies, Milk Cooperatives and Dairy Businesses"
     },
     {
       id: "17AO",
-      label: "Installation",
+      key: "Installation",
       value: "Application Setup and Supported Device Configuration"
     },
     {
       id: "17AP",
-      label: "Maintenance",
+      key: "Maintenance",
       value: "Software Support and Device Maintenance as per Service Terms"
     },
     {
       id: "17AQ",
-      label: "Customization",
+      key: "Customization",
       value: "Configurable Dairy Workflows, Rate Charts and Reports"
     },
     {
@@ -2206,23 +2206,23 @@ images: [
     },
     {
       id: "17AS",
-      label: "Industry",
+      key: "Industry",
       value: "Dairy and Milk Collection Automation"
     },
     {
       id: "17AT",
-      label: "Popular Locations",
+      key: "Popular Locations",
       value: "India and Other Dairy-Producing Regions"
     },
     {
       id: "17AU",
-      label: "Warranty",
+      key: "Warranty",
       value: "As Per Applicable Product and Service Terms"
     },
     {
       id: "17AV",
-      label: "Price",
-      value: "₹16,000"
+      key: "Price",
+      value: "₹12,000"
     }
   ],
 
