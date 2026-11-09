@@ -1,5 +1,6 @@
 
 {
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/robots.txt",
