@@ -2,7 +2,6 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
-import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://jaishreeequipmentdairy.co.in",
@@ -11,9 +10,6 @@ export default defineConfig({
 
   integrations: [
     react(),
-    sitemap({
-      filter: (page) => !page.includes("/404"),
-    }),
   ],
 
   vite: {
