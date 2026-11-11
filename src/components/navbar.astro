@@ -41,6 +41,68 @@ const navLinks = [
 
 const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 
+/* =========================================
+   BREADCRUMB CONFIGURATION
+========================================= */
+
+const breadcrumbName: Record<string, string> = {
+  "/": "Home",
+  "/contact": "Contact Us",
+  "/about": "About Us",
+  "/services": "Services",
+  "/categories": "Categories",
+  "/gallery": "Gallery",
+  "/testimonials": "Testimonials",
+  "/locations": "Our Locations",
+  "/milestones": "Milestones",
+  "/milk-rate-chart": "Milk Rate Chart",
+  "/automatic-milk-collection-system": "Automatic Milk Collection System",
+  "/dairy-equipment": "Dairy Equipment",
+  "/milk-testing-equipment": "Milk Testing Equipment",
+  "/milk-analyzer-machines": "Milk Analyzer Machines",
+  "/milk-testing-machine-spare-parts": "Dairy Spare Parts",
+};
+
+const breadcrumbParents: Record<string, string[]> = {
+  "/automatic-milk-collection-system": ["/categories"],
+  "/dairy-equipment": ["/categories"],
+  "/milk-testing-equipment": ["/categories"],
+  "/milk-analyzer-machines": ["/categories"],
+  "/milk-testing-machine-spare-parts": ["/categories"],
+};
+
+const getBreadcrumbName = (path: string) => {
+  if (breadcrumbName[path]) return breadcrumbName[path];
+
+  const slug = path.split("/").filter(Boolean).pop() || "";
+
+  return slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+};
+
+const breadcrumbPaths = [
+  "/",
+  ...(breadcrumbParents[currentPath] || []),
+  ...(currentPath === "/" ? [] : [currentPath]),
+].filter((path, index, array) => array.indexOf(path) === index);
+
+const breadcrumbItems = breadcrumbPaths.map((path) => ({
+  name: getBreadcrumbName(path),
+  href: path,
+}));
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbItems.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": new URL(item.href, Astro.site ?? Astro.url.origin).href,
+  })),
+};
+
 const isActive = (href: string) =>
   href === "/"
     ? currentPath === "/"
@@ -233,10 +295,42 @@ const isProductsActive = productLinks.some((item) =>
   </nav>
 </header>
 
+<!-- =========================================
+     AUTOMATIC BREADCRUMBS
+========================================= -->
+
+{currentPath !== "/" && (
+  <>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      {breadcrumbItems.map((item, index) => (
+        <>
+          {index > 0 && (
+            <span class="breadcrumb-separator" aria-hidden="true">
+              ›
+            </span>
+          )}
+
+          {index === breadcrumbItems.length - 1 ? (
+            <span class="breadcrumb-current" aria-current="page">
+              {item.name}
+            </span>
+          ) : (
+            <a href={item.href}>{item.name}</a>
+          )}
+        </>
+      ))}
+    </nav>
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  </>
+)}
+
 <style>
 /* =========================================
    PREMIUM NAVBAR
-   DARK NAVY + CYAN + BLUE
 ========================================= */
 
 .site-header {
@@ -281,21 +375,17 @@ const isProductsActive = productLinks.some((item) =>
   gap: 18px;
 }
 
-/* =========================================
-   BRAND / LOGO
-========================================= */
+/* BRAND */
 
 .brand {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
   padding: 4px 8px;
 
   background: #ffffff;
   border-radius: 8px;
-
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -304,7 +394,6 @@ const isProductsActive = productLinks.some((item) =>
   display: block;
   width: 52px;
   height: 52px;
-
   object-fit: contain;
   background: #ffffff;
   border-radius: 4px;
@@ -332,7 +421,6 @@ const isProductsActive = productLinks.some((item) =>
   -webkit-text-fill-color: #075985;
 }
 
-
 .brand-text small {
   color: #334155;
   font-size: 10px;
@@ -341,9 +429,7 @@ const isProductsActive = productLinks.some((item) =>
   white-space: nowrap;
 }
 
-/* =========================================
-   DESKTOP NAVIGATION
-========================================= */
+/* DESKTOP NAVIGATION */
 
 .desktop-nav {
   display: flex;
@@ -354,24 +440,19 @@ const isProductsActive = productLinks.some((item) =>
 
 .nav-link {
   position: relative;
-
   display: inline-flex;
   align-items: center;
   gap: 5px;
-
   padding: 10px 0;
   border: 0;
   background: transparent;
-
   color: var(--nav-muted);
   font-family: inherit;
   font-size: 12px;
   font-weight: 650;
-
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-
   transition: color 180ms ease;
 }
 
@@ -380,17 +461,9 @@ const isProductsActive = productLinks.some((item) =>
   right: 0;
   bottom: 3px;
   left: 0;
-
   height: 2px;
   content: "";
-
-  background: linear-gradient(
-    90deg,
-    #00d5df,
-    #32baff,
-    #087cff
-  );
-
+  background: linear-gradient(90deg, #00d5df, #32baff, #087cff);
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
@@ -408,9 +481,7 @@ const isProductsActive = productLinks.some((item) =>
   transform: scaleX(1);
 }
 
-/* =========================================
-   DESKTOP PRODUCTS DROPDOWN
-========================================= */
+/* DESKTOP DROPDOWN */
 
 .dropdown {
   position: relative;
@@ -427,13 +498,11 @@ const isProductsActive = productLinks.some((item) =>
   width: 15px;
   height: 15px;
   flex-shrink: 0;
-
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-
   transition: transform 180ms ease;
 }
 
@@ -447,19 +516,15 @@ const isProductsActive = productLinks.some((item) =>
   top: calc(100% + 12px);
   left: -14px;
   z-index: 20;
-
   display: flex;
   min-width: 260px;
   padding: 8px;
-
   flex-direction: column;
   gap: 3px;
-
   background: #001b22;
   border: 1px solid var(--nav-border);
   border-radius: 13px;
   box-shadow: 0 16px 45px rgb(0 0 0 / 35%);
-
   animation: dropdownEnter 160ms ease both;
 }
 
@@ -484,18 +549,13 @@ const isProductsActive = productLinks.some((item) =>
 .dropdown-menu a {
   display: block;
   padding: 11px 12px;
-
   border-radius: 8px;
   color: var(--nav-muted);
-
   font-size: 13px;
   font-weight: 550;
   line-height: 1.45;
   text-decoration: none;
-
-  transition:
-    background 160ms ease,
-    color 160ms ease;
+  transition: background 160ms ease, color 160ms ease;
 }
 
 .dropdown-menu a:hover,
@@ -504,23 +564,18 @@ const isProductsActive = productLinks.some((item) =>
   background: var(--nav-hover);
 }
 
-/* DROPDOWN ANIMATION */
-
 @keyframes dropdownEnter {
   from {
     opacity: 0;
     transform: translateY(7px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* =========================================
-   NAVIGATION ACTIONS
-========================================= */
+/* NAV ACTIONS */
 
 .nav-actions {
   display: flex;
@@ -529,32 +584,23 @@ const isProductsActive = productLinks.some((item) =>
   flex-shrink: 0;
 }
 
-/* MOBILE MENU BUTTON */
+/* MOBILE TOGGLE */
 
 .mobile-toggle {
   display: none;
-
   width: 42px;
   height: 42px;
-
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-
   border: 1px solid var(--nav-border);
   border-radius: 10px;
-
   background: var(--nav-surface);
   color: var(--nav-text);
-
   cursor: pointer;
-
-  transition:
-    color 180ms ease,
-    background 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
+  transition: color 180ms ease, background 180ms ease,
+    border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .mobile-toggle:hover {
@@ -569,10 +615,7 @@ const isProductsActive = productLinks.some((item) =>
   height: 2px;
   border-radius: 5px;
   background: currentColor;
-
-  transition:
-    transform 180ms ease,
-    opacity 180ms ease;
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
 .mobile-toggle.is-open span:first-child {
@@ -587,20 +630,15 @@ const isProductsActive = productLinks.some((item) =>
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* =========================================
-   MOBILE NAVIGATION
-========================================= */
+/* MOBILE NAVIGATION */
 
 .mobile-menu {
   width: min(100% - 32px, 600px);
-
   max-height: calc(100dvh - 90px);
   margin-inline: auto;
   padding: 12px 0 22px;
-
   overflow-y: auto;
   overscroll-behavior: contain;
-
   border-top: 1px solid var(--nav-border);
 }
 
@@ -612,30 +650,21 @@ const isProductsActive = productLinks.some((item) =>
 .mobile-link,
 .mobile-products-toggle {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 13px 12px;
-
   border: 0;
   border-radius: 9px;
-
   background: transparent;
   color: var(--nav-muted);
-
   text-align: left;
   text-decoration: none;
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
-
   cursor: pointer;
-
-  transition:
-    color 160ms ease,
-    background 160ms ease;
+  transition: color 160ms ease, background 160ms ease;
 }
 
 .mobile-link:hover,
@@ -656,15 +685,12 @@ const isProductsActive = productLinks.some((item) =>
 .mobile-products-menu a {
   display: block;
   padding: 11px 13px;
-
   border-left: 2px solid var(--nav-border);
   border-radius: 0 8px 8px 0;
-
   color: var(--nav-muted);
   font-size: 13px;
   font-weight: 550;
   text-decoration: none;
-
   transition: all 160ms ease;
 }
 
@@ -676,8 +702,42 @@ const isProductsActive = productLinks.some((item) =>
 }
 
 /* =========================================
-   ACCESSIBILITY
+   BREADCRUMBS
 ========================================= */
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  width: min(100% - 40px, 1440px);
+  margin: 0 auto;
+  padding: 13px 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.breadcrumbs a {
+  color: #087cff;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.breadcrumbs a:hover {
+  color: #00bcca;
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: #94a3b8;
+}
+
+.breadcrumb-current {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ACCESSIBILITY */
 
 .site-header a:focus-visible,
 .site-header button:focus-visible {
@@ -685,9 +745,7 @@ const isProductsActive = productLinks.some((item) =>
   outline-offset: 4px;
 }
 
-/* =========================================
-   TABLET
-========================================= */
+/* TABLET */
 
 @media (max-width: 1250px) {
   .navbar {
@@ -711,9 +769,7 @@ const isProductsActive = productLinks.some((item) =>
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+/* MOBILE */
 
 @media (max-width: 1050px) {
   .desktop-nav {
@@ -729,9 +785,7 @@ const isProductsActive = productLinks.some((item) =>
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* SMALL MOBILE */
 
 @media (max-width: 480px) {
   .navbar {
@@ -772,11 +826,15 @@ const isProductsActive = productLinks.some((item) =>
   .mobile-menu {
     width: calc(100% - 24px);
   }
+
+  .breadcrumbs {
+    width: calc(100% - 24px);
+    padding: 11px 0;
+    font-size: 12px;
+  }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .site-header *,
@@ -826,8 +884,6 @@ const isProductsActive = productLinks.some((item) =>
 
     header.dataset.initialized = "true";
 
-    /* CLOSE MOBILE MENU */
-
     const closeMobileMenu = () => {
       mobileMenu.hidden = true;
 
@@ -845,8 +901,6 @@ const isProductsActive = productLinks.some((item) =>
       }
     };
 
-    /* CLOSE DESKTOP PRODUCTS */
-
     const closeDesktopProducts = () => {
       desktopProductsToggle?.setAttribute(
         "aria-expanded",
@@ -857,8 +911,6 @@ const isProductsActive = productLinks.some((item) =>
         desktopProductsMenu.hidden = true;
       }
     };
-
-    /* MOBILE MENU TOGGLE */
 
     mobileToggle.addEventListener("click", () => {
       const isOpen =
@@ -878,8 +930,6 @@ const isProductsActive = productLinks.some((item) =>
       }
     });
 
-    /* MOBILE PRODUCTS DROPDOWN */
-
     productsToggle?.addEventListener("click", () => {
       if (!productsMenu) return;
 
@@ -893,8 +943,6 @@ const isProductsActive = productLinks.some((item) =>
         String(!isOpen)
       );
     });
-
-    /* DESKTOP PRODUCTS DROPDOWN */
 
     desktopProductsToggle?.addEventListener("click", () => {
       if (!desktopProductsMenu) return;
@@ -911,15 +959,11 @@ const isProductsActive = productLinks.some((item) =>
       );
     });
 
-    /* CLOSE MOBILE MENU AFTER NAVIGATION */
-
     mobileMenu
       .querySelectorAll<HTMLAnchorElement>("a")
       .forEach((link) => {
         link.addEventListener("click", closeMobileMenu);
       });
-
-    /* OUTSIDE CLICK */
 
     const handleOutsideClick = (event: MouseEvent) => {
       const target = event.target;
@@ -952,8 +996,6 @@ const isProductsActive = productLinks.some((item) =>
 
     document.addEventListener("click", handleOutsideClick);
 
-    /* ESCAPE KEY */
-
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
 
@@ -965,8 +1007,6 @@ const isProductsActive = productLinks.some((item) =>
     document.addEventListener("keydown", handleEscape);
   };
 
-  /* INITIAL PAGE LOAD */
-
   if (document.readyState === "loading") {
     document.addEventListener(
       "DOMContentLoaded",
@@ -976,8 +1016,6 @@ const isProductsActive = productLinks.some((item) =>
   } else {
     initializeNavbar();
   }
-
-  /* ASTRO VIEW TRANSITIONS */
 
   document.addEventListener(
     "astro:page-load",
