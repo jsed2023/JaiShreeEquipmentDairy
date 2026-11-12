@@ -23,8 +23,8 @@ Our mission is to provide reliable, accurate, and affordable equipment that help
 We offer a range of dairy equipment, including:
 
 - 🥛 **Milk Analyzer Machines** — Ekomilk, Lactoscan and Advance
-- ⚙️ **Advanced Milk Analyzers** — Ultra, Max, Plus and Advance
-- 🧈 **Milk Cream Separators** — Paras Cream Separator
+- ⚙️ **Advance Milk Analyzers** — Ultra, Max, Plus, Bond,
+- 🧈 **Milk Cream Separators** — Paras Cream Separator 60,90,165,300,600,900, 
 - ⚖️ **Digital Weighing Scales**
 - 🧾 **Automatic Milk Collection Units** — Dairy khata dpu
 - 🔧 **Dairy Equipment Spare Parts and Repair Services**
@@ -116,7 +116,6 @@ JaiShreeEquipmentDairy-main/
 │   ├── layouts/
 │   ├── pages/
 │   ├── styles/
-│   ├── data/
 │   ├── types/
 │   └── utils/
 ├── astro.config.mjs
