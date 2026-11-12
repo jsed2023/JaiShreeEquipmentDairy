@@ -2693,7 +2693,7 @@ updatedAt: "2026-07-09",
       alt: "Paras Milk Cream Separator Machine AED 165 LHP",
       },
     ],
-    price: "30,000",
+    price: "31,500",
     moreDetails: undefined,
     features: [
       {
@@ -2744,12 +2744,12 @@ updatedAt: "2026-07-09",
       {
         id: "7J",
         key: "price",
-        value: "₹ 30,000",
+        value: "₹ 31,500",
       },
     ],
     desc: "Experience efficient milk processing with  JAI SHREE EQUIPMENT DAIRY, your premier destination for high-quality Milk Cream Separators in Sri ganganagar. As esteemed Milk Cream Separator DISTRIBUTOR in Sri ganganagar, we specialize in crafting state-of-the-art machines designed to separate milk into cream and skim milk components. Our range of milk cream separators in Sri ganganagar is meticulously designed to meet the highest standards of functionality, durability, and performance. Whether you're managing a dairy farm, milk processing facility, or any business in Sri ganganagar, our milk cream separators cater to the diverse needs of businesses, delivering reliable and high-performance solutions for your milk processing requirements.",
     keywords:
-      "milk cream separator machine, Paras Milk Cream Separator Machine, cream separator machine, milk separator machine, Paras cream separator machine, Paras milk cream separator, Paras 165 LPH cream separator, Jai Shree Equipment dairy equipment, best milk cream separator machine, best milk cream separator machine near me, best milk cream separator machine in Sri Ganganagar,  buy Paras cream separator machine, buy Paras cream separator machine in Hanumangarh, where to buy milk separator machine in Anupgarh, milk fat separation machine, Stainless steel milk separator, electric milk separator, 165 LPH milk separator, Paras milk cream separator, Paras milk processing machinery, Paras milk separator, paras milk separator, Paras cream separator",
+      "milk cream separator machine 165 LPH, Paras Milk Cream Separator Machine,Paras Milk Cream Separator Machine 165 LPH, cream separator machine, milk separator machine, Paras cream separator machine, Paras milk cream separator, Paras 165 LPH cream separator, Jai Shree Equipment dairy equipment, best milk cream separator machine, best milk cream separator machine near me, best milk cream separator machine in Sri Ganganagar,  buy Paras cream separator machine, buy Paras cream separator machine in Hanumangarh, where to buy milk separator machine in Anupgarh, milk fat separation machine, Stainless steel milk separator, electric milk separator, 165 LPH milk separator, Paras milk cream separator, Paras milk processing machinery, Paras milk separator, paras milk separator, Paras cream separator",
     },
     {    id: 8,
     name: "Paras Milk Cream Separator Machine 11 AE 300 LHP",
