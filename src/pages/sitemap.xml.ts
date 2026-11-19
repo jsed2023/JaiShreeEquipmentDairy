@@ -85,7 +85,7 @@ export const GET: APIRoute = () => {
   };
 
   // HOME PAGE
-  addUrl("/", STATIC_LAST_MODIFIED);
+  addUrl("", STATIC_LAST_MODIFIED);
 
   // STATIC PAGES
   const staticPages = [
