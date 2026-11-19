@@ -51,9 +51,14 @@ const pageTitle = title.includes(siteConfig.name)
 
 const siteUrl = siteConfig.url.replace(/\/+$/, "");
 
-const canonicalUrl = canonical
+const rawCanonical = canonical
   ? new URL(canonical, `${siteUrl}/`).href
   : new URL(Astro.url.pathname, `${siteUrl}/`).href;
+
+const canonicalUrl =
+  rawCanonical === `${siteUrl}/`
+    ? `${siteUrl}/`
+    : rawCanonical.replace(/\/+$/, "");
 
 const finalOgTitle = ogTitle || pageTitle;
 const finalOgDescription = ogDescription || description;
