@@ -42,7 +42,7 @@ function cleanSegment(value: unknown): string {
 
 function normalizePath(path: string): string {
   const cleaned = path.trim().replace(/^\/+|\/+$/g, "");
-  return cleaned ? `/${cleaned}` : "/";
+  return cleaned ? `/${cleaned}` : " ";
 }
 
 function buildUrl(path: string): string {
