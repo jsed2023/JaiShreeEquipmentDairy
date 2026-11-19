@@ -1,5 +1,4 @@
-
-import type { APIRoute } from "astro";
+import type { APIRoute } from "astro";
 
 import {
   MilkTestingEquipment,
@@ -85,7 +84,7 @@ export const GET: APIRoute = () => {
   };
 
   // HOME PAGE
-  addUrl("", STATIC_LAST_MODIFIED);
+  addUrl(" ", STATIC_LAST_MODIFIED);
 
   // STATIC PAGES
   const staticPages = [
