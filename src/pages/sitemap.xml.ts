@@ -42,7 +42,7 @@ function cleanSegment(value: unknown): string {
 
 function normalizePath(path: string): string {
   const cleaned = path.trim().replace(/^\/+|\/+$/g, "");
-  return cleaned ? `/${cleaned}` : " ";
+  return cleaned ? `/${cleaned}` : "";
 }
 
 function buildUrl(path: string): string {
@@ -85,7 +85,7 @@ export const GET: APIRoute = () => {
   };
 
   // HOME PAGE
-  addUrl(" ", STATIC_LAST_MODIFIED);
+  addUrl("", STATIC_LAST_MODIFIED);
 
   // STATIC PAGES
   const staticPages = [
