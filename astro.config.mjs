@@ -7,9 +7,7 @@ export default defineConfig({
 
   trailingSlash: "never",
 
-  integrations: [
-    react(),
-  ],
+  integrations: [react()],
 
   vite: {
     plugins: [
